@@ -13,14 +13,7 @@ jobs:
           python-version: "3.12"
       - run: pip install requests playwright
       - run: playwright install --with-deps chromium
-      - run: python check_access.py
+      - run: python check_ir.py
         env:
-          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
-      - run: python check_edisclosure.py
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: edisclosure-screenshot
-          path: edisclosure.png
