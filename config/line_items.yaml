@@ -1,0 +1,483 @@
+# Канонические статьи отчётности: id → синонимы в МСФО (рус./англ.) и коды РСБУ (Приказ Минфина №66н).
+#
+# statement:    balance / income / cash_flow
+# sign:         как хранить нормализованное значение (value_norm):
+#                 natural — со знаком, как по смыслу статьи (прибыль может быть отрицательной);
+#                 outflow — расход / отток хранится положительной величиной (в отчёте часто в скобках);
+#               исходное значение (value) — всегда как в отчёте.
+# rsbu_codes:   строки форм РСБУ; пусто — в основных формах РСБУ статьи нет.
+# component_of: необязательная составляющая другой статьи (для проверки сумм, agent/checks/validate.py).
+#               "debt" = debt_long_term + debt_short_term.
+# Отсутствующая статья — None, не 0.
+
+items:
+  # ---------- Баланс ----------
+  - id: total_assets
+    statement: balance
+    name: Итого активы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого активы, Всего активы, Активы, итого]
+      en: [Total assets]
+    rsbu_codes: ["1600"]
+
+  - id: non_current_assets
+    statement: balance
+    name: Внеоборотные активы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого внеоборотные активы, Долгосрочные активы]
+      en: [Total non-current assets]
+    rsbu_codes: ["1100"]
+
+  - id: ppe
+    statement: balance
+    name: Основные средства
+    sign: natural
+    ifrs_synonyms:
+      ru: [Основные средства]
+      en: [Property, plant and equipment]
+    rsbu_codes: ["1150"]
+
+  - id: right_of_use_assets
+    statement: balance
+    name: Активы в форме права пользования
+    sign: natural
+    ifrs_synonyms:
+      ru: [Активы в форме права пользования, Права пользования активами]
+      en: [Right-of-use assets]
+    rsbu_codes: []
+
+  - id: intangible_assets
+    statement: balance
+    name: Нематериальные активы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Нематериальные активы]
+      en: [Intangible assets]
+    rsbu_codes: ["1110"]
+
+  - id: goodwill
+    statement: balance
+    name: Гудвил
+    sign: natural
+    ifrs_synonyms:
+      ru: [Гудвил, Деловая репутация]
+      en: [Goodwill]
+    rsbu_codes: []
+
+  - id: current_assets
+    statement: balance
+    name: Оборотные активы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого оборотные активы, Краткосрочные активы, Итого краткосрочные активы]
+      en: [Total current assets]
+    rsbu_codes: ["1200"]
+
+  - id: inventories
+    statement: balance
+    name: Запасы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Запасы, Товарно-материальные запасы]
+      en: [Inventories]
+    rsbu_codes: ["1210"]
+
+  - id: trade_receivables
+    statement: balance
+    name: Дебиторская задолженность
+    sign: natural
+    ifrs_synonyms:
+      ru: [Торговая и прочая дебиторская задолженность, Дебиторская задолженность]
+      en: [Trade and other receivables, Trade receivables]
+    rsbu_codes: ["1230"]
+
+  - id: short_term_investments
+    statement: balance
+    name: Краткосрочные финансовые вложения (включая депозиты)
+    sign: natural
+    ifrs_synonyms:
+      ru: [Краткосрочные финансовые вложения, Краткосрочные инвестиции, Прочие финансовые активы краткосрочные]
+      en: [Short-term investments, Other current financial assets]
+    rsbu_codes: ["1240"]
+
+  - id: short_term_deposits
+    statement: balance
+    name: Краткосрочные депозиты
+    sign: natural
+    notes: В чистый долг не входят (CLAUDE.md, раздел 7) — хранятся отдельно.
+    ifrs_synonyms:
+      ru: [Краткосрочные депозиты, Банковские депозиты]
+      en: [Short-term deposits, Bank deposits]
+    rsbu_codes: []
+
+  - id: cash_and_equivalents
+    statement: balance
+    name: Денежные средства и их эквиваленты
+    sign: natural
+    ifrs_synonyms:
+      ru: [Денежные средства и их эквиваленты, Денежные средства и эквиваленты денежных средств]
+      en: [Cash and cash equivalents]
+    rsbu_codes: ["1250"]
+
+  - id: equity_total
+    statement: balance
+    name: Итого капитал
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого капитал, Итого собственный капитал, Капитал и резервы]
+      en: [Total equity]
+    rsbu_codes: ["1300"]
+
+  - id: equity_parent
+    statement: balance
+    name: Капитал акционеров материнской компании
+    sign: natural
+    ifrs_synonyms:
+      ru: [Капитал, приходящийся на акционеров материнской компании, Капитал акционеров Компании]
+      en: [Equity attributable to owners of the parent, Equity attributable to shareholders of the Company]
+    rsbu_codes: []
+
+  - id: non_controlling_interests
+    statement: balance
+    name: Неконтролирующие доли
+    sign: natural
+    ifrs_synonyms:
+      ru: [Неконтролирующие доли участия, Доля неконтролирующих акционеров]
+      en: [Non-controlling interests]
+    rsbu_codes: []
+
+  - id: non_current_liabilities
+    statement: balance
+    name: Долгосрочные обязательства
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого долгосрочные обязательства]
+      en: [Total non-current liabilities]
+    rsbu_codes: ["1400"]
+
+  - id: debt_long_term
+    statement: balance
+    name: Долгосрочные кредиты, займы и облигации
+    sign: natural
+    notes: Без аренды. Кредиты + займы + облигации, долгосрочная часть.
+    ifrs_synonyms:
+      ru: [Долгосрочные кредиты и займы, Кредиты и займы (долгосрочные), Долгосрочные заёмные средства]
+      en: [Long-term borrowings, Non-current borrowings, Loans and borrowings, non-current]
+    rsbu_codes: ["1410"]
+
+  - id: lease_liabilities_long
+    statement: balance
+    name: Долгосрочные обязательства по аренде
+    sign: natural
+    ifrs_synonyms:
+      ru: [Долгосрочные обязательства по аренде, Обязательства по аренде (долгосрочные)]
+      en: [Non-current lease liabilities, Lease liabilities, non-current]
+    rsbu_codes: []
+
+  - id: current_liabilities
+    statement: balance
+    name: Краткосрочные обязательства
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого краткосрочные обязательства]
+      en: [Total current liabilities]
+    rsbu_codes: ["1500"]
+
+  - id: debt_short_term
+    statement: balance
+    name: Краткосрочные кредиты, займы и облигации
+    sign: natural
+    notes: Без аренды. Включает текущую часть долгосрочного долга.
+    ifrs_synonyms:
+      ru: [Краткосрочные кредиты и займы, Кредиты и займы (краткосрочные), Текущая часть долгосрочных кредитов и займов]
+      en: [Short-term borrowings, Current borrowings, Current portion of long-term borrowings]
+    rsbu_codes: ["1510"]
+
+  - id: lease_liabilities_short
+    statement: balance
+    name: Краткосрочные обязательства по аренде
+    sign: natural
+    ifrs_synonyms:
+      ru: [Краткосрочные обязательства по аренде, Текущая часть обязательств по аренде]
+      en: [Current lease liabilities, Lease liabilities, current]
+    rsbu_codes: []
+
+  - id: trade_payables
+    statement: balance
+    name: Кредиторская задолженность
+    sign: natural
+    ifrs_synonyms:
+      ru: [Торговая и прочая кредиторская задолженность, Кредиторская задолженность]
+      en: [Trade and other payables, Trade payables]
+    rsbu_codes: ["1520"]
+
+  - id: total_equity_and_liabilities
+    statement: balance
+    name: Итого капитал и обязательства
+    sign: natural
+    ifrs_synonyms:
+      ru: [Итого капитал и обязательства, Итого обязательства и капитал]
+      en: [Total equity and liabilities]
+    rsbu_codes: ["1700"]
+
+  # Составляющие долга (необязательные, из примечания «Кредиты и займы»).
+  # Сумма по долгосрочной и краткосрочной частям = debt_long_term + debt_short_term.
+  - id: bank_loans
+    statement: balance
+    name: Банковские кредиты
+    sign: natural
+    component_of: debt
+    optional: true
+    ifrs_synonyms:
+      ru: [Банковские кредиты, Кредиты банков]
+      en: [Bank loans]
+    rsbu_codes: []
+
+  - id: bonds
+    statement: balance
+    name: Облигации
+    sign: natural
+    component_of: debt
+    optional: true
+    ifrs_synonyms:
+      ru: [Облигации, Облигационные займы, Биржевые облигации]
+      en: [Bonds, Notes]
+    rsbu_codes: []
+
+  - id: other_borrowings
+    statement: balance
+    name: Прочие займы
+    sign: natural
+    component_of: debt
+    optional: true
+    ifrs_synonyms:
+      ru: [Прочие займы, Займы от связанных сторон]
+      en: [Other borrowings, Loans from related parties]
+    rsbu_codes: []
+
+  # ---------- Отчёт о прибылях и убытках ----------
+  - id: revenue
+    statement: income
+    name: Выручка
+    sign: natural
+    ifrs_synonyms:
+      ru: [Выручка, Выручка от реализации, Выручка по договорам с покупателями]
+      en: [Revenue, Revenue from contracts with customers]
+    rsbu_codes: ["2110"]
+
+  - id: cost_of_sales
+    statement: income
+    name: Себестоимость продаж
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Себестоимость продаж, Себестоимость реализации]
+      en: [Cost of sales, Cost of revenue]
+    rsbu_codes: ["2120"]
+
+  - id: gross_profit
+    statement: income
+    name: Валовая прибыль
+    sign: natural
+    ifrs_synonyms:
+      ru: [Валовая прибыль]
+      en: [Gross profit]
+    rsbu_codes: ["2100"]
+
+  - id: selling_expenses
+    statement: income
+    name: Коммерческие расходы
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Коммерческие расходы, Расходы на продажу]
+      en: [Selling expenses, Selling and distribution expenses]
+    rsbu_codes: ["2210"]
+
+  - id: admin_expenses
+    statement: income
+    name: Управленческие расходы
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Общехозяйственные и административные расходы, Управленческие расходы]
+      en: [General and administrative expenses, Administrative expenses]
+    rsbu_codes: ["2220"]
+
+  - id: operating_profit
+    statement: income
+    name: Операционная прибыль (EBIT)
+    sign: natural
+    notes: >-
+      РСБУ 2200 — «прибыль (убыток) от продаж», это НЕ операционная прибыль МСФО
+      (не включает прочие доходы и расходы). Для РСБУ EBIT/EBITDA не считаем.
+    ifrs_synonyms:
+      ru: [Операционная прибыль, Прибыль от операционной деятельности, Операционный убыток]
+      en: [Operating profit, Operating income, Profit from operations]
+    rsbu_codes: []
+
+  - id: d_and_a
+    statement: income
+    name: Амортизация (ОС, НМА, права пользования)
+    sign: outflow
+    notes: Источник — ОДДС (корректировки) или примечания. В основных формах РСБУ нет.
+    ifrs_synonyms:
+      ru: [Амортизация, Износ и амортизация, Амортизация основных средств и нематериальных активов]
+      en: [Depreciation and amortisation, Depreciation and amortization, D&A]
+    rsbu_codes: []
+
+  - id: impairment_noncurrent
+    statement: income
+    name: Обесценение внеоборотных активов (в составе операционной прибыли)
+    sign: outflow
+    notes: Включается в EBITDA, только если отражено в операционной прибыли и раскрыто.
+    ifrs_synonyms:
+      ru: [Обесценение основных средств, Обесценение внеоборотных активов, Обесценение гудвила]
+      en: [Impairment of property, plant and equipment, Impairment of non-current assets, Impairment of goodwill]
+    rsbu_codes: []
+
+  - id: interest_income
+    statement: income
+    name: Процентные доходы
+    sign: natural
+    ifrs_synonyms:
+      ru: [Процентные доходы, Финансовые доходы]
+      en: [Interest income, Finance income]
+    rsbu_codes: ["2320"]
+
+  - id: interest_expense
+    statement: income
+    name: Процентные расходы
+    sign: outflow
+    notes: Расход по ОПУ/примечаниям; отличается от interest_paid (капитализация по IAS 23).
+    ifrs_synonyms:
+      ru: [Процентные расходы, Финансовые расходы]
+      en: [Interest expense, Finance costs]
+    rsbu_codes: ["2330"]
+
+  - id: profit_before_tax
+    statement: income
+    name: Прибыль до налогообложения
+    sign: natural
+    ifrs_synonyms:
+      ru: [Прибыль до налогообложения, Прибыль до налога на прибыль, Убыток до налогообложения]
+      en: [Profit before tax, Profit before income tax]
+    rsbu_codes: ["2300"]
+
+  - id: income_tax
+    statement: income
+    name: Налог на прибыль
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Расход по налогу на прибыль, Налог на прибыль]
+      en: [Income tax expense]
+    rsbu_codes: ["2410"]
+
+  - id: net_profit
+    statement: income
+    name: Чистая прибыль
+    sign: natural
+    ifrs_synonyms:
+      ru: [Чистая прибыль, Прибыль за год, Прибыль за период, Чистый убыток]
+      en: [Net profit, Profit for the year, Profit for the period]
+    rsbu_codes: ["2400"]
+
+  - id: net_profit_parent
+    statement: income
+    name: Чистая прибыль акционеров материнской компании
+    sign: natural
+    ifrs_synonyms:
+      ru: [Прибыль, приходящаяся на акционеров материнской компании, Акционерам Компании]
+      en: [Profit attributable to owners of the parent, Attributable to shareholders of the Company]
+    rsbu_codes: []
+
+  # ---------- Отчёт о движении денежных средств ----------
+  - id: cfo
+    statement: cash_flow
+    name: Денежный поток от операционной деятельности
+    sign: natural
+    ifrs_synonyms:
+      ru: [Чистые денежные средства от операционной деятельности, Чистый денежный поток от операционной деятельности]
+      en: [Net cash from operating activities, Net cash generated from operating activities]
+    rsbu_codes: ["4100"]
+
+  - id: capex_ppe
+    statement: cash_flow
+    name: Приобретение основных средств
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Приобретение основных средств, Покупка основных средств]
+      en: [Purchase of property, plant and equipment, Acquisition of property, plant and equipment]
+    rsbu_codes: []
+
+  - id: capex_intangibles
+    statement: cash_flow
+    name: Приобретение нематериальных активов
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Приобретение нематериальных активов]
+      en: [Purchase of intangible assets, Acquisition of intangible assets]
+    rsbu_codes: []
+
+  - id: cfi
+    statement: cash_flow
+    name: Денежный поток от инвестиционной деятельности
+    sign: natural
+    ifrs_synonyms:
+      ru: [Чистые денежные средства, использованные в инвестиционной деятельности]
+      en: [Net cash used in investing activities]
+    rsbu_codes: ["4200"]
+
+  - id: cff
+    statement: cash_flow
+    name: Денежный поток от финансовой деятельности
+    sign: natural
+    ifrs_synonyms:
+      ru: [Чистые денежные средства от финансовой деятельности, Чистые денежные средства, использованные в финансовой деятельности]
+      en: [Net cash from financing activities, Net cash used in financing activities]
+    rsbu_codes: ["4300"]
+
+  - id: interest_paid
+    statement: cash_flow
+    name: Проценты уплаченные
+    sign: outflow
+    notes: Хранить с пометкой, в каком разделе ОДДС классифицированы (CFO или CFF) — нужно для FCF акционерам.
+    ifrs_synonyms:
+      ru: [Проценты уплаченные, Уплаченные проценты]
+      en: [Interest paid]
+    rsbu_codes: ["4123"]
+
+  - id: lease_principal_paid
+    statement: cash_flow
+    name: Погашение основной суммы обязательств по аренде
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Погашение основной суммы обязательств по аренде, Платежи по аренде (основная сумма)]
+      en: [Repayment of principal portion of lease liabilities, Principal elements of lease payments]
+    rsbu_codes: []
+
+  - id: dividends_paid
+    statement: cash_flow
+    name: Дивиденды уплаченные
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Дивиденды уплаченные, Выплата дивидендов акционерам]
+      en: [Dividends paid]
+    rsbu_codes: ["4322"]
+
+  - id: debt_proceeds
+    statement: cash_flow
+    name: Привлечение кредитов, займов и облигаций
+    sign: natural
+    ifrs_synonyms:
+      ru: [Поступления от кредитов и займов, Привлечение кредитов и займов, Поступления от выпуска облигаций]
+      en: [Proceeds from borrowings, Proceeds from bonds issued]
+    rsbu_codes: []
+
+  - id: debt_repayments
+    statement: cash_flow
+    name: Погашение кредитов, займов и облигаций
+    sign: outflow
+    ifrs_synonyms:
+      ru: [Погашение кредитов и займов, Погашение облигаций]
+      en: [Repayment of borrowings, Repayment of bonds]
+    rsbu_codes: []

@@ -1,0 +1,59 @@
+# Список наблюдения. ИНН не вписывать по памяти — только после поиска в ГИР БО
+# (python -m agent.tools.find_inn) и подтверждения пользователем.
+#
+# recognition — как определять тип документа на IR-странице:
+#   link_text       — по тексту ссылки;
+#   pdf_first_page  — по тексту первой страницы PDF (у ссылок нет текста).
+# industry.confirmed: false — отрасль предложена, но не подтверждена пользователем;
+# подтверждённое значение имеет приоритет над автоматическим определением.
+
+companies:
+  - ticker: MTSS
+    name: МТС
+    legal_name: ПАО «Мобильные ТелеСистемы»
+    inn: null
+    ir_pages:
+      - url: https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost
+        recognition: link_text
+    standards: [IFRS, RSBU]
+    industry:
+      id: telecom
+      confirmed: false
+      segments: [Телеком, Финтех (МТС Банк), Медиа, Экосистема]
+    notes:
+      - >-
+        Банк консолидирован: банковские активы и обязательства искажают ликвидность и долг.
+        Долг — корпоративные кредиты, займы, облигации; показатели без банка — по сегментной
+        информации, если позволяет; иначе явная пометка.
+
+  - ticker: MVID
+    name: М.Видео
+    legal_name: ПАО «М.видео»
+    inn: null
+    ir_pages:
+      - url: https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting
+        recognition: link_text   # в папке /IFRS/ лежит и РСБУ — тип только по тексту ссылки
+    standards: [IFRS, RSBU]
+    industry:
+      id: retail
+      confirmed: false
+      segments: [Розничная торговля электроникой, Онлайн-продажи]
+    notes:
+      - Крупная аренда (МСФО 16) — метрики с арендой и без.
+      - Раскрывает GMV — не приравнивать к выручке.
+
+  - ticker: SGZH
+    name: Сегежа
+    legal_name: ПАО «Сегежа Групп»
+    inn: null
+    ir_pages:
+      - url: https://segezha-group.com/investors/report/financial-results/
+        recognition: pdf_first_page   # у ссылок нет текста; пресс-релизы и отчётность вперемешку
+    standards: [IFRS, RSBU]
+    industry:
+      id: forestry
+      confirmed: false
+      segments: []   # заполнить по сегментной информации МСФО
+    notes:
+      - Высокая долговая нагрузка; при EBITDA ≤ 0 Долг/EBITDA не считать — пометка.
+      - Часть PDF зашифрована (AES без пароля на чтение) — нужен cryptography.

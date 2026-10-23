@@ -1,0 +1,8 @@
+# Прямые зависимости, версии зафиксированы. Python 3.11+ (локально и в Actions — 3.12).
+requests==2.34.2
+PyYAML==6.0.3
+python-dotenv==1.2.4
+pypdf==6.21.2
+cryptography==50.0.2     # для зашифрованных PDF (AES) в pypdf
+gigachat==0.2.3
+pytest==9.1.1

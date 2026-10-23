@@ -1,0 +1,27 @@
+{
+ "content": [
+  {
+   "id": 1001,
+   "inn": "<strong>7700000001</strong>",
+   "shortName": "ПАО \"<strong>ТЕСТ</strong> <strong>ГРУПП</strong>\"",
+   "ogrn": "1000000000001",
+   "region": "МОСКВА",
+   "okved2": "70.22",
+   "statusCode": "ACTIVE",
+   "hasKfo": true,
+   "bfo": {"period": "2025", "actualBfoDate": "2026-03-31"}
+  },
+  {
+   "id": 1002,
+   "inn": "7700000002",
+   "shortName": "ООО \"УК \"<strong>ТЕСТ</strong>\"",
+   "ogrn": "1000000000002",
+   "region": "КАРЕЛИЯ",
+   "okved2": "70.10.1",
+   "statusCode": "INACTIVE",
+   "hasKfo": false
+  }
+ ],
+ "totalElements": 2,
+ "totalPages": 1
+}

@@ -1,0 +1,230 @@
+# Справочник отраслей: 20 категорий из docs/requirements.md (раздел 2) + «Лесная и ЦБП».
+#
+# detect.okved     — префиксы кодов ОКВЭД (сравнение по началу кода: "47" ловит 47.41, 47.91 ...);
+# detect.keywords  — слова в описании деятельности / сегментной информации (для LLM-подсказки);
+# common_groups    — какие группы общих показателей применимы (agent/metrics/common/);
+# exclude_metrics  — общие показатели, которые для отрасли не считаются, даже если группа применима;
+# metrics          — отраслевые показатели (agent/metrics/industries/<id>.py):
+#                    kind: calculated — считает Python; disclosed — берётся из раскрытий как есть.
+#
+# Добавление отрасли = новая запись здесь (+ модуль с отраслевыми показателями).
+
+all_common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+
+industries:
+  - id: banks
+    name: Банки
+    detect:
+      okved: ["64.19", "64.1"]
+      keywords: [банк, кредитная организация, чистый процентный доход, лицензия Банка России]
+    common_groups: [growth, profitability, market]
+    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    notes: Нормативы достаточности капитала — только из регуляторных данных (Н1.0 и т.д.).
+    metrics: []  # TODO: NIM, ЧПД, ЧКД, CoR, NPL, покрытие резервами, Н1.0, CIR
+
+  - id: insurance
+    name: Страховые компании
+    detect:
+      okved: ["65"]
+      keywords: [страхов, страховые премии, страховые выплаты, перестрахование]
+    common_groups: [growth, profitability, market]
+    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    metrics: []  # TODO: премии, выплаты, убыточность, расходы, комбинированный коэффициент
+
+  - id: oil_gas
+    name: Нефтегазовые компании
+    detect:
+      okved: ["06", "09.1", "19.2", "49.5"]
+      keywords: [нефть, газ, добыча углеводородов, нефтепереработка]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: добыча, себестоимость добычи на единицу, выручка по сегментам
+
+  - id: mining_metals
+    name: Горнодобывающие компании и металлургия
+    detect:
+      okved: ["05", "07", "08", "09.9", "24"]
+      keywords: [добыча руды, металлург, сталь, уголь, золото, цветные металлы]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: объёмы производства и продаж, себестоимость единицы, рентабельность сегментов
+
+  - id: developers
+    name: Девелоперы и строительные компании
+    detect:
+      okved: ["41", "42", "43", "68.10"]
+      keywords: [девелопер, жилищное строительство, ввод жилья, эскроу]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, market]
+    exclude_metrics: []
+    notes: Выручка и денежные поступления могут существенно различаться (признание выручки, эскроу).
+    metrics: []  # TODO: продажи м², поступления от покупателей, портфель проектов, ввод
+
+  - id: retail
+    name: Розничная торговля
+    detect:
+      okved: ["47"]
+      keywords: [розничн, магазин, торговая площадь, сопоставимые продажи, LFL]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    notes: Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.
+    metrics:
+      - {id: lfl_sales_growth, name: Рост сопоставимых продаж (LFL), kind: disclosed}
+      - {id: stores_count, name: Количество магазинов, kind: disclosed}
+      - {id: selling_space, name: Торговая площадь, kind: disclosed}
+      - {id: selling_space_growth, name: Рост торговой площади, kind: calculated}
+      - {id: revenue_per_sqm, name: Выручка на м² торговой площади, kind: calculated}
+      - {id: gmv, name: GMV (не выручка), kind: disclosed}
+      - {id: online_share_gmv, name: Доля онлайн-продаж в GMV, kind: disclosed}
+      - {id: ebitda_pre_ifrs16, name: EBITDA без учёта МСФО 16, kind: calculated}
+
+  - id: fmcg
+    name: Производители товаров повседневного спроса
+    detect:
+      okved: ["10", "11", "12", "20.4"]
+      keywords: [продукты питания, напитки, товары повседневного спроса, FMCG]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: объёмы продаж, доля рынка, если раскрывается
+
+  - id: it_software
+    name: IT-компании и разработчики программного обеспечения
+    detect:
+      okved: ["62", "63.1", "58.2"]
+      keywords: [программное обеспечение, лицензии, SaaS, разработка ПО]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, market]
+    exclude_metrics: []
+    notes: ARR/MRR/клиентские метрики — только если раскрыты; из косвенных данных не выводить.
+    metrics: []  # TODO: доля повторяющейся выручки, ARR/MRR (если раскрыты), R&D / выручка
+
+  - id: telecom
+    name: Телекоммуникации
+    detect:
+      okved: ["61"]
+      keywords: [связь, мобильная связь, абонент, ARPU, широкополосный доступ]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, market]
+    exclude_metrics: []
+    notes: >-
+      При консолидированном банке (МТС Банк) долг и ликвидность группы искажены —
+      показатели без банка по сегментной информации либо явная пометка.
+    metrics:
+      - {id: subscribers, name: Количество абонентов, kind: disclosed}
+      - {id: arpu, name: ARPU, kind: disclosed}
+      - {id: capex_to_revenue, name: CapEx / выручка, kind: calculated}
+      - {id: segment_revenue_share, name: Доля сегментов в выручке, kind: calculated}
+
+  - id: utilities
+    name: Электроэнергетика и коммунальная инфраструктура
+    detect:
+      okved: ["35", "36", "37"]
+      keywords: [электроэнергия, генерация, сетевая компания, теплоснабжение, тариф]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, market]
+    exclude_metrics: []
+    metrics: []  # TODO: выработка/передача, тарифы, износ ОС
+
+  - id: pharma
+    name: Фармацевтика и биотехнологии
+    detect:
+      okved: ["21", "72.11"]
+      keywords: [лекарственные препараты, фармацевт, биотехнолог]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: R&D, R&D / выручка, продуктовый портфель
+
+  - id: machinery
+    name: Машиностроение и автомобилестроение
+    detect:
+      okved: ["28", "29", "30"]
+      keywords: [машиностроение, автомобили, оборудование, производство техники]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: произведено и продано единиц
+
+  - id: transport
+    name: Транспорт и авиаперевозки
+    detect:
+      okved: ["49", "50", "51", "52"]
+      keywords: [перевозки, авиакомпания, пассажиропоток, грузооборот, логистика]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, market]
+    exclude_metrics: []
+    notes: Существенные арендные обязательства — долговые метрики с арендой и без.
+    metrics: []  # TODO: пассажирооборот, загрузка, доход на пкм, топливо
+
+  - id: rental_real_estate
+    name: Владельцы арендной недвижимости
+    detect:
+      okved: ["68.20"]
+      keywords: [арендный бизнес, торговые центры, офисная недвижимость, заполняемость]
+    common_groups: [growth, profitability, cash_flow, leverage, market]
+    exclude_metrics: []
+    metrics: []  # TODO: арендная выручка, заполняемость, NOI, FFO/AFFO
+
+  - id: asset_management
+    name: Управляющие компании и инвестиционные компании
+    detect:
+      okved: ["64.3", "64.99", "66.3"]
+      keywords: [управление активами, паевые фонды, AUM, инвестиционная компания]
+    common_groups: [growth, profitability, market]
+    exclude_metrics: [ebitda, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    metrics: []  # TODO: AUM, чистые притоки, комиссионные доходы
+
+  - id: brokers
+    name: Брокеры и инвестиционные банки
+    detect:
+      okved: ["66.12"]
+      keywords: [брокерск, инвестиционный банк, клиентские активы]
+    common_groups: [growth, profitability, market]
+    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    metrics: []  # TODO: комиссионные и процентные доходы, клиенты, регуляторные нормативы
+
+  - id: exchanges
+    name: Биржи и финансовая инфраструктура
+    detect:
+      okved: ["66.11"]
+      keywords: [биржа, клиринг, депозитарий, объём торгов]
+    common_groups: [growth, profitability, market]
+    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    metrics: []  # TODO: объём торгов, комиссионные доходы, доля процентных доходов
+
+  - id: marketplaces
+    name: Маркетплейсы и электронная коммерция
+    detect:
+      okved: ["47.91", "63.12"]
+      keywords: [маркетплейс, интернет-магазин, GMV, заказы, пункты выдачи]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    notes: GMV не приравнивать к выручке; take rate — только при сопоставимых показателях.
+    metrics: []  # TODO: GMV, take rate, заказы, средний чек, логистика
+
+  - id: agriculture
+    name: Сельское хозяйство
+    detect:
+      okved: ["01", "03"]
+      keywords: [сельскохозяйственн, растениеводство, животноводство, биологические активы]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    notes: Сезонность и биологические активы.
+    metrics: []  # TODO: объёмы производства и реализации, себестоимость
+
+  - id: fertilizers
+    name: Производители удобрений
+    detect:
+      okved: ["20.15"]
+      keywords: [удобрения, азотные, фосфорные, калийные]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    metrics: []  # TODO: объёмы производства и продаж, себестоимость, цены на сырьё
+
+  - id: forestry
+    name: Лесная и целлюлозно-бумажная промышленность
+    detect:
+      okved: ["02", "16", "17"]
+      keywords: [лесозаготовка, пиломатериалы, фанера, целлюлоза, бумага, мешки, лесопиление]
+    common_groups: [growth, profitability, cash_flow, leverage, liquidity, turnover, market]
+    exclude_metrics: []
+    notes: Высокая долговая нагрузка у Сегежи; при EBITDA ≤ 0 Долг/EBITDA не считать.
+    metrics:
+      - {id: production_volume, name: Объёмы производства по продуктам, kind: disclosed}
+      - {id: sales_volume, name: Объёмы продаж по продуктам, kind: disclosed}
+      - {id: segment_ebitda_margin, name: Рентабельность EBITDA по сегментам, kind: calculated}
+      - {id: unit_cost, name: Себестоимость единицы продукции (если раскрыта), kind: disclosed}
+      - {id: capex_to_revenue, name: CapEx / выручка, kind: calculated}

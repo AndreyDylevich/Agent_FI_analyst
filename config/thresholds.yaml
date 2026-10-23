@@ -1,0 +1,90 @@
+# Пороги тревожных сигналов (CLAUDE.md, раздел 9). Стартовые значения, настраиваются здесь.
+# Числа — строками, чтобы читать их как Decimal без потери точности.
+# Применяются к нефинансовым компаниям; для банков и страховых — свои сигналы (позже).
+
+quantitative:
+  - id: net_debt_to_ebitda_high
+    metric: net_debt_to_ebitda
+    condition: gt
+    threshold: "3.0"
+    severity: warning
+    message: Чистый долг / EBITDA LTM выше 3,0x
+
+  - id: net_debt_to_ebitda_jump
+    metric: net_debt_to_ebitda
+    condition: yoy_increase_gt   # рост год к году, в «иксах»
+    threshold: "1.0"
+    severity: warning
+    message: Чистый долг / EBITDA LTM вырос более чем на 1,0x год к году
+
+  - id: interest_coverage_low
+    metric: interest_coverage
+    condition: lt
+    threshold: "2.0"
+    severity: warning
+    message: EBITDA / проценты ниже 2,0x
+
+  - id: interest_coverage_critical
+    metric: interest_coverage
+    condition: lt
+    threshold: "1.0"
+    severity: critical
+    message: EBITDA / проценты ниже 1,0x
+
+  - id: current_ratio_low
+    metric: current_ratio
+    condition: lt
+    threshold: "1.0"
+    severity: warning
+    message: Текущая ликвидность ниже 1,0
+
+  - id: cash_to_short_debt_low
+    metric: cash_to_short_term_debt
+    condition: lt
+    threshold: "1.0"
+    severity: warning
+    message: Денежные средства / краткосрочный долг ниже 1,0
+
+  - id: short_term_debt_share_high
+    metric: short_term_debt_share
+    condition: gt
+    threshold: "0.5"
+    severity: warning
+    message: Доля краткосрочного долга выше 50%
+
+  - id: negative_equity
+    metric: equity_total
+    condition: lt
+    threshold: "0"
+    severity: critical
+    message: Отрицательный капитал
+
+  - id: ebitda_non_positive
+    metric: ebitda
+    condition: le
+    threshold: "0"
+    severity: critical
+    message: EBITDA LTM ≤ 0
+
+  - id: fcf_negative_twice
+    metric: fcf_simple
+    condition: lt_consecutive
+    threshold: "0"
+    periods: 2
+    severity: warning
+    message: FCF отрицательный два периода подряд
+
+# Качественные сигналы — ищет LLM в тексте отчётности (с указанием страницы).
+qualitative:
+  - id: going_concern
+    severity: critical
+    message: Существенная неопределённость в отношении непрерывности деятельности
+  - id: covenant_breach_reclassification
+    severity: critical
+    message: Реклассификация долгосрочного долга в краткосрочный из-за нарушения ковенантов
+  - id: modified_audit_opinion
+    severity: critical
+    message: Модифицированное мнение аудитора
+  - id: auditor_change
+    severity: warning
+    message: Смена аудитора
