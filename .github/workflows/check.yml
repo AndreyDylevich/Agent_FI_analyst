@@ -1,0 +1,21 @@
+# Положить в репозиторий по пути .github/workflows/check.yml
+# Запуск: вкладка Actions → "Проверка доступа" → Run workflow
+name: Проверка доступа
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python check_access.py
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
