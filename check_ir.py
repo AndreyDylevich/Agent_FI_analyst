@@ -3,6 +3,7 @@
 import io
 import os
 import re
+import time
 import requests
 from urllib.parse import urljoin
 from pypdf import PdfReader
@@ -19,11 +20,17 @@ PAGES = {
 }
 KEYWORDS = ["мсфо", "ifrs", "msfo", "консолидир", "konsolid", "consolidated"]
 CAPTCHA_SIGNS = ["captcha", "не с ботом", "http-equiv=\"refresh\""]
-PROBE_PDFS = 3   # сколько PDF скачать для проверки по содержимому
+PROBE_PDFS = 3               # сколько PDF скачать для проверки по содержимому
+MAX_PDF_BYTES = 20_000_000   # не качаем PDF больше 20 МБ
+MAX_PDF_SECONDS = 60         # и дольше 60 секунд
+
+
+def log(msg):
+    print(msg, flush=True)
 
 
 def fetch_simple(url):
-    r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
+    r = requests.get(url, headers={"User-Agent": UA}, timeout=(10, 30))
     return r.status_code, r.text
 
 
@@ -32,7 +39,7 @@ def fetch_browser(url):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(locale="ru-RU", user_agent=UA)
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
         page.wait_for_timeout(5000)
         html = page.content()
         browser.close()
@@ -57,23 +64,39 @@ def find_pdfs(base_url, html):
     return links, ifrs
 
 
+def download_limited(url):
+    """Скачиваем файл кусками, обрываем по размеру или времени."""
+    start, chunks, size = time.time(), [], 0
+    with requests.get(url, headers={"User-Agent": UA}, timeout=(10, 30), stream=True) as r:
+        for chunk in r.iter_content(64 * 1024):
+            chunks.append(chunk)
+            size += len(chunk)
+            if size > MAX_PDF_BYTES:
+                raise RuntimeError(f"файл больше {MAX_PDF_BYTES // 1_000_000} МБ")
+            if time.time() - start > MAX_PDF_SECONDS:
+                raise RuntimeError(f"скачивание дольше {MAX_PDF_SECONDS} с")
+    return b"".join(chunks), size
+
+
 def pdf_first_page(url):
     """Скачиваем PDF и берём начало текста первой страницы."""
+    log(f"  качаю {url}")
     try:
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
-        reader = PdfReader(io.BytesIO(r.content))
+        data, size = download_limited(url)
+        reader = PdfReader(io.BytesIO(data))
         text = re.sub(r"\s+", " ", reader.pages[0].extract_text() or "").strip()
-        pages = len(reader.pages)
+        info = f"{len(reader.pages)} стр., {size // 1000} КБ"
         if not text:
-            return f"{pages} стр., текста нет (скан?)", False
-        return f"{pages} стр.: {text[:150]}", any(k in text.lower() for k in KEYWORDS)
+            return f"{info}, текста нет (скан?)", False
+        return f"{info}: {text[:150]}", any(k in text.lower() for k in KEYWORDS)
     except Exception as e:
-        return f"не удалось прочитать: {e.__class__.__name__}", False
+        return f"не удалось: {e}", False
 
 
 def check_url(url):
     notes = []
     for method, fetch in [("requests", fetch_simple), ("браузер", fetch_browser)]:
+        log(f"  {method}: открываю {url}")
         try:
             status, html = fetch(url)
         except Exception as e:
@@ -98,20 +121,21 @@ def check_url(url):
 
 
 if __name__ == "__main__":
-    print("check_ir v3\n")
+    log("check_ir v4\n")
     lines = []
     for company, urls in PAGES.items():
+        log(f"{company}:")
         for url in urls:
             ok, result = check_url(url)
             lines.append(f"{'OK ' if ok else 'НЕТ'} {company}:\n    {result}")
             if ok:
                 break
-    report = "Проверка IR-страниц v3\n\n" + "\n\n".join(lines)
-    print(report)
+    report = "Проверка IR-страниц v4\n\n" + "\n\n".join(lines)
+    log("\n" + report)
 
     token, chat_id = os.environ.get("TG_TOKEN"), os.environ.get("TG_CHAT_ID")
     if token and chat_id:
         r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
                           data={"chat_id": chat_id, "text": report[:4000],
                                 "disable_web_page_preview": "true"}, timeout=30)
-        print(f"\nTelegram: HTTP {r.status_code}")
+        log(f"\nTelegram: HTTP {r.status_code}")
