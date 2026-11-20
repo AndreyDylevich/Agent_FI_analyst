@@ -142,13 +142,13 @@ def test_search_schema_or_html_not_treated_as_success(monkeypatch, response):
 
 
 def test_failure_of_search_does_not_skip_pdf_checks_and_protocol(tmp_path, monkeypatch):
-    monkeypatch.setattr(check, 'ORGANIZATION_REFERENCES', ())
     def failed_search(query):
         raise requests.ConnectionError('connection refused')
     monkeypatch.setattr(check, 'check_search', failed_search)
+    monkeypatch.setattr(check, 'check_reporting_metadata', lambda org, target: {'pdf_url': URL})
     monkeypatch.setattr(check, 'download_reference', lambda url, target: {'url': url, 'file': target.name})
     result = check.run_checks(tmp_path, 'Тест')
-    assert len(result['checks']) == 3
+    assert len(result['checks']) == 5
     assert result['checks'][0]['status'] == 'error'
     assert all(r['status'] == 'ok' for r in result['checks'][1:])
     assert result['all_accessible'] is False
@@ -156,14 +156,14 @@ def test_failure_of_search_does_not_skip_pdf_checks_and_protocol(tmp_path, monke
 
 
 def test_missing_sources_produce_nonzero_exit_code_and_machine_readable_report(tmp_path, monkeypatch):
-    monkeypatch.setattr(check, 'ORGANIZATION_REFERENCES', ())
     def fail(*args, **kwargs):
         raise RuntimeError('source unavailable')
     monkeypatch.setattr(check, 'check_search', fail)
+    monkeypatch.setattr(check, 'check_reporting_metadata', fail)
     monkeypatch.setattr(check, 'download_reference', fail)
     assert check.main(['--output', str(tmp_path)]) == 1
     report = json.loads((tmp_path / 'girbo_check.json').read_text())
-    assert len(report['checks']) == 3
+    assert len(report['checks']) == 5
     assert not report['all_accessible']
 
 
@@ -193,3 +193,17 @@ def test_http_does_not_retry_403(monkeypatch):
         http.get(URL)
     assert len(calls) == 1
     assert response.closed
+
+
+def test_pdf_reference_uses_bfo_id_and_published_version():
+    data = [{'id': 100, 'period': '2025', 'published': True, 'publishedCorrectionNumber': 1,
+             'typeCorrections': [{'type': 12, 'correction': {'id': 201, 'correctionVersion': 0}},
+                                 {'type': 12, 'correction': {'id': 202, 'correctionVersion': 1}}]}]
+    result = check.latest_pdf_reference(data)
+    assert result['pdf_url'] == 'https://bo.nalog.gov.ru/download/bfo/pdf/100?detailId=202&period=2025'
+
+
+def test_ambiguous_report_is_not_selected_by_list_order():
+    row = {'id': 100, 'period': '2025', 'published': True}
+    with pytest.raises(ValueError, match='Несколько'):
+        check.latest_pdf_reference([row, row])

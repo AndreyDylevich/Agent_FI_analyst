@@ -67,11 +67,37 @@ def check_reporting_metadata(organization_id: int, target: Path) -> dict:
         if 'json' not in response.headers.get('Content-Type', '').lower():
             raise ValueError('Метаданные БФО вернули не JSON')
         payload = response.json()
-        if not isinstance(payload, (list, dict)):
+        if not isinstance(payload, list):
             raise ValueError('Неожиданный формат метаданных БФО')
-        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        # Сохраняем оригинальные байты JSON: числа из финансовых форм не проходят через float/dumps.
+        target.write_bytes(response.content)
+        reference = latest_pdf_reference(payload)
         return {'url': response.url, 'http_status': response.status_code,
-                'file': target.name, 'financial_values_verified': False}
+                'file': target.name, 'sha256': hashlib.sha256(response.content).hexdigest(),
+                'financial_values_verified': False, **reference}
+
+
+def latest_pdf_reference(records: list) -> dict:
+    """Ссылка на последний опубликованный годовой отчёт; BFO id не равен organization id."""
+    eligible = [r for r in records if r.get('published') is True and str(r.get('period', '')).isdigit()]
+    if not eligible:
+        raise ValueError('Нет опубликованного годового отчёта')
+    year = max(int(r['period']) for r in eligible)
+    annual = [r for r in eligible if int(r['period']) == year]
+    if len(annual) != 1:
+        raise ValueError('Несколько наборов БФО за один год — нужен ручной выбор')
+    report = annual[0]
+    versions = [r['correction'] for r in report.get('typeCorrections', [])
+                if r.get('type') == 12 and isinstance(r.get('correction'), dict)
+                and r['correction'].get('correctionVersion') == report.get('publishedCorrectionNumber')]
+    if len(versions) != 1:
+        raise ValueError('Не определена однозначная опубликованная годовая версия отчёта')
+    bfo_id, detail_id = report['id'], versions[0]['id']
+    if type(bfo_id) is not int or type(detail_id) is not int:
+        raise ValueError('Некорректные идентификаторы отчёта')
+    url = f'https://bo.nalog.gov.ru/download/bfo/pdf/{bfo_id}?detailId={detail_id}&period={year}'
+    validate_pdf_url(url)
+    return {'bfo_id': bfo_id, 'detail_id': detail_id, 'period': year, 'pdf_url': url}
 
 
 def download_reference(url: str, target: Path, clock: Callable[[], float] = time.monotonic) -> dict:
@@ -138,8 +164,13 @@ def run_checks(output: Path, query: str) -> dict:
     tasks = [('organization_search', lambda: check_search(query))]
     tasks += [(f'{name}_bfo_metadata', lambda name=name, org=org: check_reporting_metadata(
         org, output / f'{name}_bfo_metadata.json')) for name, org in ORGANIZATION_REFERENCES]
-    tasks += [(name, lambda url=url, name=name: download_reference(url, output / f'{name}.pdf'))
-              for name, url in PDF_REFERENCES]
+    def download_discovered(name):
+        metadata = next((row for row in report['checks'] if row['name'] == f'{name}_bfo_metadata'), None)
+        if metadata is None or metadata['status'] != 'ok':
+            raise ValueError('Для загрузки PDF нужны успешно полученные актуальные метаданные БФО')
+        return download_reference(metadata['pdf_url'], output / f'{name}_rsbu_latest.pdf')
+    tasks += [(f'{name}_pdf', lambda name=name: download_discovered(name))
+              for name, org in ORGANIZATION_REFERENCES]
     for name, action in tasks:
         print(f'ГИР БО: проверка {name}', flush=True)
         try:
