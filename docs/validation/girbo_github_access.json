@@ -1,0 +1,57 @@
+{
+  "successful_data_run": {
+    "url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44819181214",
+    "search": "ok",
+    "mts_bfo_metadata": "ok",
+    "mvideo_bfo_metadata": "ok",
+    "pdf": "HTTP 400 по прежним ссылкам"
+  },
+  "latest_run": {
+    "url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44819528104",
+    "checks": {
+      "checked_at_utc": "2026-11-20T21:21:11.809000+00:00",
+      "purpose": "Проверка доступности, не подтверждение финансовых значений",
+      "checks": [
+        {
+          "name": "organization_search",
+          "status": "error",
+          "error_type": "RuntimeError",
+          "message": "Не удалось получить https://bo.nalog.gov.ru/advanced-search/organizations/search за 3 попытки"
+        },
+        {
+          "name": "mts_bfo_metadata",
+          "status": "error",
+          "error_type": "RuntimeError",
+          "message": "Не удалось получить https://bo.nalog.gov.ru/nbo/organizations/7155648/bfo/ за 3 попытки"
+        },
+        {
+          "name": "mvideo_bfo_metadata",
+          "status": "error",
+          "error_type": "RuntimeError",
+          "message": "Не удалось получить https://bo.nalog.gov.ru/nbo/organizations/5155604/bfo/ за 3 попытки"
+        },
+        {
+          "name": "mts_pdf",
+          "status": "error",
+          "error_type": "ValueError",
+          "message": "Для загрузки PDF нужны успешно полученные актуальные метаданные БФО"
+        },
+        {
+          "name": "mvideo_pdf",
+          "status": "error",
+          "error_type": "ValueError",
+          "message": "Для загрузки PDF нужны успешно полученные актуальные метаданные БФО"
+        }
+      ],
+      "all_accessible": false,
+      "frontend_inspection": {
+        "status": "error",
+        "message": "Не удалось получить https://bo.nalog.gov.ru/ за 3 попытки"
+      }
+    }
+  },
+  "pdf_route_source": "https://bo.nalog.gov.ru/static/js/main.0958b9bc.js",
+  "pdf_route_status": "Формат /download/bfo/pdf/{id} обнаружен в публичном клиенте. Загрузка по новому адресу не проверена: последний запуск не получил метаданные.",
+  "financial_values_verified": false,
+  "unit_test_run": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44818785274"
+}

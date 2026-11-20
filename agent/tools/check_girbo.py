@@ -12,7 +12,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import urljoin, urlparse
 
 import requests
 from pypdf import PdfReader
@@ -21,12 +21,7 @@ from pypdf.errors import PyPdfError
 from agent.sources import http
 from agent.sources.girbo import SEARCH_URL, parse_search
 
-# Ссылки обнаружены в публичной поисковой выдаче официального ГИР БО.
-# Они не подтверждают ИНН в watchlist и не гарантируют доступность файла из конкретной среды.
-PDF_REFERENCES = (
-    ('mvideo_rsbu_2025', 'https://bo.nalog.gov.ru/download/bfo/pdf/5155604?detailId=57656029&period=2025'),
-    ('mts_rsbu_2024', 'https://bo.nalog.gov.ru/download/bfo/pdf/7155648?detailId=52478931&period=2024'),
-)
+# Организации-кандидаты для диагностики. ИНН в watchlist остаются неподтверждёнными.
 ORGANIZATION_REFERENCES = (('mts', 7155648), ('mvideo', 5155604))
 MAX_PDF_BYTES = 20 * 1024 * 1024
 MAX_SECONDS = 60
@@ -36,12 +31,9 @@ def validate_pdf_url(url: str) -> None:
     """Принимает только публичный HTTPS-адрес PDF-выгрузки официального ГИР БО."""
     parts = urlparse(url)
     suffix = parts.path.removeprefix('/download/bfo/pdf/')
-    params = parse_qs(parts.query, keep_blank_values=True)
     if (parts.scheme != 'https' or parts.netloc != 'bo.nalog.gov.ru' or parts.fragment
             or not parts.path.startswith('/download/bfo/pdf/') or not suffix.isdigit()
-            or (params and (set(params) != {'detailId', 'period'}
-                or any(len(values) != 1 or not values[0].isdigit() for values in params.values())
-                or not 2019 <= int(params['period'][0]) <= 9999))):
+            or parts.query):
         raise ValueError('Нужна официальная ссылка ГИР БО на PDF опубликованной версии')
 
 

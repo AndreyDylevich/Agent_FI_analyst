@@ -11,7 +11,7 @@ from pypdf import PdfWriter
 from agent.sources import http
 from agent.tools import check_girbo as check
 
-URL = check.PDF_REFERENCES[0][1]
+URL = 'https://bo.nalog.gov.ru/download/bfo/pdf/200'
 
 
 class Response:
@@ -243,3 +243,20 @@ def test_pdf_reference_ignores_newer_unpublished_reporting():
              'typeCorrections': [{'type': 12, 'correction': {'id': 200, 'correctionVersion': 0}}]}
     result = check.latest_pdf_reference([dict(known, id=101, period='2026', published=False), known])
     assert result['period'] == 2025
+
+
+@pytest.mark.parametrize('name,bfo_id,detail_id', [('mts', 28452021, 55869659), ('mvideo', 30236354, 57656029)])
+def test_real_fns_metadata_snapshot_published_identifiers(name, bfo_id, detail_id):
+    from pathlib import Path
+
+    folder = Path(__file__).parent / 'fixtures' / 'girbo'
+    manifest = json.loads((folder / 'manifest.json').read_text())
+    filename = f'{name}_bfo_metadata.json'
+    snapshot = (folder / filename).read_bytes()
+    provenance = next(row for row in manifest['sources'] if row['file'] == filename)
+    assert hashlib.sha256(snapshot).hexdigest() == provenance['sha256']
+    result = check.latest_pdf_reference(json.loads(snapshot))
+    assert result['period'] == 2025
+    assert result['bfo_id'] == bfo_id
+    assert result['detail_id'] == detail_id
+    assert provenance['financial_values_verified'] is False

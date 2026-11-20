@@ -1,0 +1,20 @@
+{
+  "description": "Оригинальные публичные JSON-ответы ФНС, полученные в GitHub Actions. Финансовые значения пока не сверены с PDF.",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44819181214",
+  "sources": [
+    {
+      "file": "mts_bfo_metadata.json",
+      "url": "https://bo.nalog.gov.ru/nbo/organizations/7155648/bfo/",
+      "sha256": "ef8a932dc6527f55bc32f53c659ff47bd83ce04d26b88c84a947934e10035f9f",
+      "identity_confirmed_for_watchlist": false,
+      "financial_values_verified": false
+    },
+    {
+      "file": "mvideo_bfo_metadata.json",
+      "url": "https://bo.nalog.gov.ru/nbo/organizations/5155604/bfo/",
+      "sha256": "bc254128ff4dc992aa3e06d4e5726306661a11b71df2dd308fd3a9918d347cd8",
+      "identity_confirmed_for_watchlist": false,
+      "financial_values_verified": false
+    }
+  ]
+}

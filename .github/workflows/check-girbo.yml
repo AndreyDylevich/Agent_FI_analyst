@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Проверить поиск и официальные ссылки PDF
-        run: python -m agent.tools.check_girbo --output validation/girbo --inspect-frontend
+      - name: Проверить поиск, данные БФО и PDF
+        run: python -m agent.tools.check_girbo --output validation/girbo
       - name: Сохранить протокол и доступные документы
         if: always()
         uses: actions/upload-artifact@v4
