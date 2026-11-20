@@ -5,4 +5,4 @@
 """
 
 from agent.metrics import registry  # noqa: F401  — сначала реестр, затем модули с показателями
-from agent.metrics.common import leverage, liquidity, profitability  # noqa: F401
+from agent.metrics.common import cash_flow, growth, leverage, liquidity, profitability, turnover  # noqa: F401

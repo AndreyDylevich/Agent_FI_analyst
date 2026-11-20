@@ -1,0 +1,12 @@
+# Номинальная ставка используется для аналитического ROIC, если эффективная не определяется.
+# Это допущение на дату окончания периода, не расчёт налогового обязательства компании.
+version: 1
+nominal_profit_tax_rates:
+  - from: "2020-01-01"
+    through: "2024-12-31"
+    percent: "20"
+    source: https://www.nalog.gov.ru/rn91/ifns/ifns7/info/15477747/
+  - from: "2025-01-01"
+    through: null
+    percent: "25"
+    source: https://www.nalog.gov.ru/new2025/

@@ -73,3 +73,22 @@ def test_thresholds():
     assert {q["id"] for q in data["qualitative"]} == {
         "going_concern", "covenant_breach_reclassification", "modified_audit_opinion", "auditor_change",
     }
+
+
+def test_methodology_tax_rates():
+    from datetime import date
+
+    data = config.load('methodology')
+    assert type(data['version']) is int and data['version'] >= 1
+    rows = data['nominal_profit_tax_rates']
+    previous_end = None
+    for row in rows:
+        assert isinstance(row['percent'], str)
+        assert 0 <= Decimal(row['percent']) <= 100
+        start = date.fromisoformat(row['from'])
+        end = date.fromisoformat(row['through']) if row['through'] else date.max
+        assert start <= end
+        if previous_end is not None:
+            assert start > previous_end
+        previous_end = end
+        assert row['source'].startswith('https://www.nalog.gov.ru/')

@@ -4,7 +4,7 @@
 данных, смысл, ограничения) + функция расчёта. Показатели не зашиваются в условия: добавление
 показателя = новая функция с декоратором @metric в agent/metrics/common/ или agent/metrics/industries/.
 
-Реестр сам ничего не достаёт из БД и не преобразует периоды. Движок (этап 2) готовит входы по правилам
+Реестр сам ничего не достаёт из БД и не преобразует периоды. Движок engine.py готовит входы по правилам
 периода из MetricDef.inputs (на дату / поток / LTM / средний остаток) и передаёт их в evaluate().
 """
 
@@ -52,7 +52,7 @@ class MetricDef:
     group: str                                 # группа: liquidity, leverage, profitability, ...
     formula: str                               # формула текстом (названия статей)
     expression: str                            # шаблон подстановки чисел: "{net_debt} / {ebitda}"
-    inputs: Mapping[str, PeriodRule]           # обязательные входы: id статьи/показателя → правило периода
+    inputs: Mapping[str, PeriodRule]           # обязательные входы: id либо псевдоним → правило периода
     unit: str                                  # единица результата: "руб.", "x", ...
     result_period: PeriodRule                  # к какому периоду относится результат
     missing_data_rule: str                     # что происходит, если входа нет
@@ -62,6 +62,16 @@ class MetricDef:
     calculate: Callable[[Values], Decimal]     # расчёт по готовым входам, без округления
     optional_inputs: Mapping[str, PeriodRule] = field(default_factory=dict)  # нет — не учитываются, пометка
     applicable: Callable[[Values], str | None] | None = None  # причина неприменимости или None
+    standards: tuple[str, ...] = ("IFRS", "RSBU")  # допустимые стандарты; проверяются движком
+    positive_inputs: tuple[str, ...] = ()  # положительные остатки на обеих границах среднего
+    nonnegative_inputs: tuple[str, ...] = ()  # нулевые остатки допустимы, отрицательные — нет
+    input_items: Mapping[str, str] = field(default_factory=dict)  # псевдоним → id статьи/показателя
+    input_year_offsets: Mapping[str, int] = field(default_factory=dict)  # сдвиг периода входа: −1 = год назад
+    period_kinds: tuple[str, ...] = ("FY", "Q1", "H1", "9M", "LTM")  # допустимые периоды результата
+    parameter_inputs: Mapping[str, str] = field(default_factory=dict)  # вход → провайдер допущения из конфига
+    input_units: Mapping[str, str] = field(default_factory=dict)  # единицы входов-допущений
+    input_fallbacks: Mapping[str, str] = field(default_factory=dict)  # вход → резервный показатель
+    input_cash_flow_sections: Mapping[str, tuple[str, ...]] = field(default_factory=dict)  # разделы включаемых платежей
 
 
 @dataclass(frozen=True)
@@ -89,6 +99,20 @@ def register(definition: MetricDef) -> MetricDef:
     overlap = set(definition.inputs) & set(definition.optional_inputs)
     if overlap:
         raise ValueError(f"{definition.id}: вход одновременно обязательный и необязательный: {sorted(overlap)}")
+    names = set(definition.inputs) | set(definition.optional_inputs)
+    unknown = (set(definition.input_items) | set(definition.input_year_offsets)
+               | set(definition.positive_inputs) | set(definition.nonnegative_inputs)
+               | set(definition.parameter_inputs) | set(definition.input_units)
+               | set(definition.input_fallbacks) | set(definition.input_cash_flow_sections)) - names
+    if unknown:
+        raise ValueError(f"{definition.id}: настройки неизвестных входов: {sorted(unknown)}")
+    if any(type(offset) is not int or offset > 0 for offset in definition.input_year_offsets.values()):
+        raise ValueError(f"{definition.id}: сдвиг периода должен быть целым числом ≤ 0")
+    if not definition.period_kinds or set(definition.period_kinds) - {"FY", "Q1", "H1", "9M", "LTM"}:
+        raise ValueError(f"{definition.id}: неизвестные или пустые допустимые периоды")
+    for name, sections in definition.input_cash_flow_sections.items():
+        if not sections or set(sections) - {'operating', 'investing', 'financing'}:
+            raise ValueError(f"{definition.id}: неизвестные или пустые разделы ОДДС входа {name}")
     REGISTRY[definition.id] = definition
     return definition
 
@@ -126,6 +150,8 @@ def evaluate(metric_id: str, values: Mapping[str, Decimal | None]) -> MetricResu
     for name, value in values.items():
         if value is not None and not isinstance(value, Decimal):
             raise TypeError(f"{metric_id}: вход {name} должен быть Decimal, получен {type(value).__name__}")
+        if value is not None and not value.is_finite():
+            raise ValueError(f"{metric_id}: вход {name} должен быть конечным числом")
 
     missing = tuple(name for name in d.inputs if values.get(name) is None)
     if missing:
@@ -193,12 +219,15 @@ def explain(d: MetricDef, used: Mapping[str, Decimal], value: Decimal) -> str:
     «Чистый долг / EBITDA = 412 300,0 / 151 800,0 = 2,72 (суммы в млн руб.)».
     Нераскрытый необязательный вход показывается как «н/д».
     """
-    shown = {name: format_number(v, input_unit(name)) for name, v in used.items()}
+    units = {name: d.input_units.get(name, input_unit(d.input_items.get(name, name))) for name in used}
+    shown = {name: format_number(v, units[name]) for name, v in used.items()}
     shown.update({name: "н/д" for name in d.optional_inputs if name not in used})
     text = f"{d.name} = {d.expression.format_map(shown)} = {format_number(value, d.unit)}"
     if d.unit == MONEY_UNIT:
         return f"{text} млн руб."
-    if any(input_unit(name) == MONEY_UNIT for name in used):
+    if d.unit not in (RATIO_UNIT, MONEY_UNIT):
+        text += f" {d.unit}"
+    if MONEY_UNIT in units.values():
         return f"{text} (суммы в млн руб.)"
     return text
 
@@ -226,11 +255,27 @@ def validate_registry(line_items: Mapping[str, Mapping[str, Any]]) -> list[str]:
     """
     errors = []
     for d in REGISTRY.values():
+        for name, fallback in d.input_fallbacks.items():
+            source = d.input_items.get(name, name)
+            if fallback not in REGISTRY:
+                errors.append(f"{d.id}: резервный показатель {fallback!r} не найден")
+            elif source not in REGISTRY or REGISTRY[source].unit != REGISTRY[fallback].unit:
+                errors.append(f"{d.id}: единицы основного и резервного показателей не согласованы")
         for name, rule in {**d.inputs, **d.optional_inputs}.items():
-            if name in line_items:
-                is_stock = line_items[name]["statement"] == "balance"
-            elif name in REGISTRY:
-                is_stock = REGISTRY[name].result_period in STOCK_RULES
+            if name in d.input_cash_flow_sections:
+                item = line_items.get(d.input_items.get(name, name))
+                if item is None or item['statement'] != 'cash_flow' or rule not in FLOW_RULES:
+                    errors.append(f"{d.id}: отбор разделов ОДДС применим только к исходному денежному потоку {name!r}")
+            if name in d.parameter_inputs:
+                from agent.metrics.parameters import PROVIDERS
+                if d.parameter_inputs[name] not in PROVIDERS or name not in d.input_units:
+                    errors.append(f"{d.id}: неизвестный провайдер или единица допущения {name!r}")
+                continue
+            item_id = d.input_items.get(name, name)
+            if item_id in line_items:
+                is_stock = line_items[item_id]["statement"] == "balance"
+            elif item_id in REGISTRY:
+                is_stock = REGISTRY[item_id].result_period in STOCK_RULES
             else:
                 errors.append(f"{d.id}: вход {name!r} не найден ни в line_items.yaml, ни в реестре")
                 continue

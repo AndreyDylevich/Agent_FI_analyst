@@ -18,7 +18,7 @@ industries:
       okved: ["64.19", "64.1"]
       keywords: [банк, кредитная организация, чистый процентный доход, лицензия Банка России]
     common_groups: [growth, profitability, market]
-    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    exclude_metrics: [roic, invested_capital, ebitda_margin, ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
     notes: Нормативы достаточности капитала — только из регуляторных данных (Н1.0 и т.д.).
     metrics: []  # TODO: NIM, ЧПД, ЧКД, CoR, NPL, покрытие резервами, Н1.0, CIR
 
@@ -28,7 +28,7 @@ industries:
       okved: ["65"]
       keywords: [страхов, страховые премии, страховые выплаты, перестрахование]
     common_groups: [growth, profitability, market]
-    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    exclude_metrics: [roic, invested_capital, ebitda_margin, ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
     metrics: []  # TODO: премии, выплаты, убыточность, расходы, комбинированный коэффициент
 
   - id: oil_gas
@@ -164,7 +164,7 @@ industries:
       okved: ["64.3", "64.99", "66.3"]
       keywords: [управление активами, паевые фонды, AUM, инвестиционная компания]
     common_groups: [growth, profitability, market]
-    exclude_metrics: [ebitda, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    exclude_metrics: [roic, invested_capital, ebitda_margin, ebitda, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
     metrics: []  # TODO: AUM, чистые притоки, комиссионные доходы
 
   - id: brokers
@@ -173,7 +173,7 @@ industries:
       okved: ["66.12"]
       keywords: [брокерск, инвестиционный банк, клиентские активы]
     common_groups: [growth, profitability, market]
-    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    exclude_metrics: [roic, invested_capital, ebitda_margin, ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
     metrics: []  # TODO: комиссионные и процентные доходы, клиенты, регуляторные нормативы
 
   - id: exchanges
@@ -182,7 +182,7 @@ industries:
       okved: ["66.11"]
       keywords: [биржа, клиринг, депозитарий, объём торгов]
     common_groups: [growth, profitability, market]
-    exclude_metrics: [ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
+    exclude_metrics: [roic, invested_capital, ebitda_margin, ebitda, net_debt, net_debt_incl_leases, net_debt_to_ebitda, ev_to_ebitda, current_ratio]
     metrics: []  # TODO: объём торгов, комиссионные доходы, доля процентных доходов
 
   - id: marketplaces

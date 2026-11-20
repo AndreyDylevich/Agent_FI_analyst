@@ -18,18 +18,25 @@ ATTEMPTS = 3
 PAUSE_SECONDS = 5       # пауза растёт: 5, 10 секунд
 
 
-def get(url: str, params: dict[str, Any] | None = None, headers: dict[str, str] | None = None) -> requests.Response:
+def get(url: str, params: dict[str, Any] | None = None, headers: dict[str, str] | None = None,
+        *, stream: bool = False, timeout: tuple[int, int] = TIMEOUT) -> requests.Response:
     """GET с повторами. Возвращает ответ с кодом 2xx/3xx или выбрасывает исключение."""
     last_error: Exception | None = None
     for attempt in range(1, ATTEMPTS + 1):
         try:
             response = requests.get(
-                url, params=params, headers={"User-Agent": USER_AGENT, **(headers or {})}, timeout=TIMEOUT
+                url, params=params, headers={"User-Agent": USER_AGENT, **(headers or {})},
+                timeout=timeout, stream=stream,
             )
             if response.status_code < 500:
-                response.raise_for_status()   # 4xx — повтор не поможет
+                try:
+                    response.raise_for_status()   # 4xx — повтор не поможет
+                except requests.HTTPError:
+                    response.close()
+                    raise
                 return response
             last_error = requests.HTTPError(f"HTTP {response.status_code}", response=response)
+            response.close()
         except (requests.ConnectionError, requests.Timeout) as e:
             last_error = e
         print(f"  попытка {attempt}/{ATTEMPTS} не удалась: {last_error.__class__.__name__}", flush=True)

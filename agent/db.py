@@ -13,7 +13,7 @@ import sqlite3
 from pathlib import Path
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "agent.db"
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS meta (
@@ -81,6 +81,7 @@ CREATE TABLE IF NOT EXISTS source_values (
     unit           TEXT NOT NULL,        -- руб. / тыс. руб. / млн руб. / тыс. т / млн абонентов / шт.
     value_norm     TEXT,                 -- нормализовано (руб. для денежных)
     currency       TEXT,
+    cash_flow_section TEXT CHECK (cash_flow_section IN ('operating', 'investing', 'financing', 'mixed')),
     period_start   TEXT,                 -- NULL для балансовых (на дату)
     period_end     TEXT NOT NULL,
     period_type    TEXT CHECK (period_type IN ('FY', 'Q1', 'H1', '9M')),
@@ -181,9 +182,21 @@ def init_db(path: Path | str = DB_PATH) -> sqlite3.Connection:
     conn = sqlite3.connect(path)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
+    # Не менять базу от более новой версии приложения.
+    if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='meta'").fetchone():
+        version = conn.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
+        if version and version[0] not in ("1", SCHEMA_VERSION):
+            conn.close()
+            raise ValueError(f"Неподдерживаемая версия схемы: {version[0]}")
     conn.executescript(SCHEMA)
+    columns = {row['name'] for row in conn.execute('PRAGMA table_info(source_values)')}
+    if 'cash_flow_section' not in columns:
+        # Миграция 1 → 2: только новое nullable-поле, исходные значения и история сохраняются.
+        conn.execute("ALTER TABLE source_values ADD COLUMN cash_flow_section TEXT "
+                     "CHECK (cash_flow_section IN ('operating', 'investing', 'financing', 'mixed'))")
     conn.execute(
-        "INSERT OR IGNORE INTO meta (key, value) VALUES ('schema_version', ?)", (SCHEMA_VERSION,)
+        "INSERT INTO meta (key, value) VALUES ('schema_version', ?) "
+        "ON CONFLICT(key) DO UPDATE SET value=excluded.value", (SCHEMA_VERSION,)
     )
     conn.commit()
     return conn

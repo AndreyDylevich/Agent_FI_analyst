@@ -1,0 +1,27 @@
+{
+  "checked_at_utc": "2026-11-20T20:55:19.469785+00:00",
+  "purpose": "Проверка доступности, не подтверждение финансовых значений",
+  "checks": [
+    {
+      "name": "organization_search",
+      "status": "error",
+      "error_type": "ConnectionError",
+      "message": "HTTPSConnectionPool(host='bo.nalog.gov.ru', port=443): Max retries exceeded with url: /advanced-search/organizations/search?query=%D0%9F%D0%90%D0%9E+%D0%9C%D0%A2%D0%A1&page=0 (Caused by NewConnectionError(\"HTTPSConnection(host='bo.nalog.gov.ru', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "name": "mvideo_rsbu_2025",
+      "status": "error",
+      "error_type": "ConnectionError",
+      "message": "HTTPSConnectionPool(host='bo.nalog.gov.ru', port=443): Max retries exceeded with url: /download/bfo/pdf/5155604?detailId=57656029&period=2025 (Caused by NewConnectionError(\"HTTPSConnection(host='bo.nalog.gov.ru', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "name": "mts_rsbu_2024",
+      "status": "error",
+      "error_type": "ConnectionError",
+      "message": "HTTPSConnectionPool(host='bo.nalog.gov.ru', port=443): Max retries exceeded with url: /download/bfo/pdf/7155648?detailId=52478931&period=2024 (Caused by NewConnectionError(\"HTTPSConnection(host='bo.nalog.gov.ru', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    }
+  ],
+  "all_accessible": false,
+  "environment": "local_workspace",
+  "limitation": "Connection refused при поиске и загрузке PDF; финансовые данные не получены и не сверены."
+}
