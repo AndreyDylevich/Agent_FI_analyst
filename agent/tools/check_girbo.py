@@ -7,11 +7,12 @@ python -m agent.tools.check_girbo --output /tmp/girbo-check --query "ПАО МТ
 import argparse
 import hashlib
 import json
+import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
 from pypdf import PdfReader
@@ -156,7 +157,28 @@ def download_reference(url: str, target: Path, clock: Callable[[], float] = time
         temporary.unlink(missing_ok=True)
 
 
-def run_checks(output: Path, query: str) -> dict:
+def inspect_frontend_routes() -> dict:
+    """Читает публичные JS-ресурсы сайта ФНС для проверки штатного адреса выгрузки, не исполняя JS."""
+    base = 'https://bo.nalog.gov.ru/'
+    with http.get(base) as response:
+        scripts = re.findall(r'<script[^>]+src=[\"\x27]([^\"\x27]+)', response.text)
+    main_scripts = [src for src in scripts if 'main' in src.lower() or 'app.' in src.lower()]
+    sources = []
+    for src in (main_scripts or scripts[-3:])[:3]:
+        url = urljoin(base, src)
+        if urlparse(url).netloc != 'bo.nalog.gov.ru' or urlparse(url).scheme != 'https':
+            continue
+        with http.get(url) as response:
+            text = response.text
+            snippets = []
+            for marker in ('bfo/pdf', '/download', 'detailId', 'downloadBfo'):
+                snippets += [text[max(0, m.start()-250):m.end()+350]
+                             for m in list(re.finditer(re.escape(marker), text))[:8]]
+            sources.append({'url': url, 'snippets': snippets})
+    return {'scripts': scripts, 'sources': sources}
+
+
+def run_checks(output: Path, query: str, inspect_frontend: bool = False) -> dict:
     """Каждый источник проверяется независимо: сбой поиска не мешает проверке известных ссылок."""
     output.mkdir(parents=True, exist_ok=True)
     report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(),
@@ -182,6 +204,13 @@ def run_checks(output: Path, query: str) -> dict:
                                      'message': str(error)})
             print(f'  {name}: {type(error).__name__}', flush=True)
     report['all_accessible'] = all(row['status'] == 'ok' for row in report['checks'])
+    if inspect_frontend:
+        try:
+            details = inspect_frontend_routes()
+            (output / 'frontend_pdf_routes.json').write_text(json.dumps(details, ensure_ascii=False, indent=2), encoding='utf-8')
+            report['frontend_inspection'] = {'status': 'ok', 'file': 'frontend_pdf_routes.json'}
+        except (requests.RequestException, ValueError, OSError, RuntimeError) as error:
+            report['frontend_inspection'] = {'status': 'error', 'message': str(error)}
     (output / 'girbo_check.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return report
 
@@ -191,8 +220,9 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True, help='Каталог отдельного протокола и PDF')
     parser.add_argument('--query', default='ПАО МТС')
+    parser.add_argument('--inspect-frontend', action='store_true', help='Исследовать публичный код штатной PDF-выгрузки')
     args = parser.parse_args(argv)
-    return 0 if run_checks(args.output, args.query)['all_accessible'] else 1
+    return 0 if run_checks(args.output, args.query, args.inspect_frontend)['all_accessible'] else 1
 
 
 if __name__ == '__main__':
