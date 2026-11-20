@@ -26,6 +26,7 @@ PDF_REFERENCES = (
     ('mvideo_rsbu_2025', 'https://bo.nalog.gov.ru/download/bfo/pdf/5155604?detailId=57656029&period=2025'),
     ('mts_rsbu_2024', 'https://bo.nalog.gov.ru/download/bfo/pdf/7155648?detailId=52478931&period=2024'),
 )
+ORGANIZATION_REFERENCES = (('mts', 7155648), ('mvideo', 5155604))
 MAX_PDF_BYTES = 20 * 1024 * 1024
 MAX_SECONDS = 60
 
@@ -54,7 +55,23 @@ def check_search(query: str) -> dict:
         if not isinstance(payload, dict) or not isinstance(payload.get('content'), list):
             raise ValueError('Неожиданный формат поиска ГИР БО')
         return {'url': response.url, 'http_status': response.status_code,
-                'organizations': parse_search(payload), 'identity_confirmed': False}
+                'organizations': parse_search(payload), 'identity_confirmed': False,
+                'bfo_metadata': [{'organization_id': row.get('id'), 'bfo': row.get('bfo')}
+                                 for row in payload['content'][:1]]}
+
+
+def check_reporting_metadata(organization_id: int, target: Path) -> dict:
+    """Исследует публичный ответ ФНС по наборам БФО; формат пока не используется для расчётов."""
+    url = f'https://bo.nalog.gov.ru/nbo/organizations/{organization_id}/bfo/'
+    with http.get(url, headers={'Accept': 'application/json'}) as response:
+        if 'json' not in response.headers.get('Content-Type', '').lower():
+            raise ValueError('Метаданные БФО вернули не JSON')
+        payload = response.json()
+        if not isinstance(payload, (list, dict)):
+            raise ValueError('Неожиданный формат метаданных БФО')
+        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        return {'url': response.url, 'http_status': response.status_code,
+                'file': target.name, 'financial_values_verified': False}
 
 
 def download_reference(url: str, target: Path, clock: Callable[[], float] = time.monotonic) -> dict:
@@ -119,6 +136,8 @@ def run_checks(output: Path, query: str) -> dict:
     report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(),
               'purpose': 'Проверка доступности, не подтверждение финансовых значений', 'checks': []}
     tasks = [('organization_search', lambda: check_search(query))]
+    tasks += [(f'{name}_bfo_metadata', lambda name=name, org=org: check_reporting_metadata(
+        org, output / f'{name}_bfo_metadata.json')) for name, org in ORGANIZATION_REFERENCES]
     tasks += [(name, lambda url=url, name=name: download_reference(url, output / f'{name}.pdf'))
               for name, url in PDF_REFERENCES]
     for name, action in tasks:

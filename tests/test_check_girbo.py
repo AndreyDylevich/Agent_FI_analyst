@@ -142,6 +142,7 @@ def test_search_schema_or_html_not_treated_as_success(monkeypatch, response):
 
 
 def test_failure_of_search_does_not_skip_pdf_checks_and_protocol(tmp_path, monkeypatch):
+    monkeypatch.setattr(check, 'ORGANIZATION_REFERENCES', ())
     def failed_search(query):
         raise requests.ConnectionError('connection refused')
     monkeypatch.setattr(check, 'check_search', failed_search)
@@ -155,6 +156,7 @@ def test_failure_of_search_does_not_skip_pdf_checks_and_protocol(tmp_path, monke
 
 
 def test_missing_sources_produce_nonzero_exit_code_and_machine_readable_report(tmp_path, monkeypatch):
+    monkeypatch.setattr(check, 'ORGANIZATION_REFERENCES', ())
     def fail(*args, **kwargs):
         raise RuntimeError('source unavailable')
     monkeypatch.setattr(check, 'check_search', fail)
