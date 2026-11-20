@@ -92,3 +92,15 @@ def test_methodology_tax_rates():
             assert start > previous_end
         previous_end = end
         assert row['source'].startswith('https://www.nalog.gov.ru/')
+
+
+def test_rsbu_routing_metadata_is_consistent():
+    items = config.line_items()
+    for item in items.values():
+        if 'rsbu_positive_item' in item:
+            alternate = items[item['rsbu_positive_item']]
+            assert alternate['statement'] == item['statement']
+            assert alternate['sign'] == 'natural'
+        if 'rsbu_cash_flow_section' in item:
+            assert item['statement'] == 'cash_flow'
+            assert item['rsbu_cash_flow_section'] in ('operating', 'investing', 'financing')

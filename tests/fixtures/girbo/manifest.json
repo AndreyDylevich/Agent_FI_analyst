@@ -1,5 +1,5 @@
 {
-  "description": "Оригинальные публичные JSON-ответы ФНС, полученные в GitHub Actions. Финансовые значения пока не сверены с PDF.",
+  "description": "Оригинальные публичные JSON-ответы ФНС, полученные в GitHub Actions. Выборочная сверка М.Видео 2025 — в отдельном эталоне; полной сверки всех статей и лет нет.",
   "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44819181214",
   "sources": [
     {
@@ -14,7 +14,8 @@
       "url": "https://bo.nalog.gov.ru/nbo/organizations/5155604/bfo/",
       "sha256": "bc254128ff4dc992aa3e06d4e5726306661a11b71df2dd308fd3a9918d347cd8",
       "identity_confirmed_for_watchlist": false,
-      "financial_values_verified": false
+      "financial_values_verified": false,
+      "selected_verification_file": "mvideo_2025_reference.json"
     }
   ]
 }

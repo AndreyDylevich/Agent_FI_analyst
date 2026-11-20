@@ -364,6 +364,7 @@ items:
     rsbu_codes: ["2300"]
 
   - id: income_tax
+    rsbu_positive_item: income_tax_benefit
     statement: income
     name: Налог на прибыль
     sign: outflow
@@ -374,6 +375,16 @@ items:
       ru: [Расход по налогу на прибыль, Налог на прибыль]
       en: [Income tax expense]
     rsbu_codes: ["2410"]
+
+  - id: income_tax_benefit
+    statement: income
+    name: Доход по налогу на прибыль
+    sign: natural
+    notes: Положительная строка 2410 ГИР БО — доход по налогу, не расход; хранится отдельно.
+    ifrs_synonyms:
+      ru: [Доход по налогу на прибыль]
+      en: [Income tax benefit]
+    rsbu_codes: []
 
   - id: net_profit
     statement: income
@@ -395,6 +406,7 @@ items:
 
   # ---------- Отчёт о движении денежных средств ----------
   - id: cfo
+    rsbu_cash_flow_section: operating
     statement: cash_flow
     name: Денежный поток от операционной деятельности
     sign: natural
@@ -422,6 +434,7 @@ items:
     rsbu_codes: []
 
   - id: cfi
+    rsbu_cash_flow_section: investing
     statement: cash_flow
     name: Денежный поток от инвестиционной деятельности
     sign: natural
@@ -431,6 +444,7 @@ items:
     rsbu_codes: ["4200"]
 
   - id: cff
+    rsbu_cash_flow_section: financing
     statement: cash_flow
     name: Денежный поток от финансовой деятельности
     sign: natural
@@ -440,6 +454,7 @@ items:
     rsbu_codes: ["4300"]
 
   - id: interest_paid
+    rsbu_cash_flow_section: operating
     statement: cash_flow
     name: Проценты уплаченные
     sign: outflow
@@ -463,6 +478,7 @@ items:
     rsbu_codes: []
 
   - id: dividends_paid
+    rsbu_cash_flow_section: financing
     statement: cash_flow
     name: Дивиденды уплаченные
     sign: outflow

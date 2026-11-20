@@ -1,0 +1,76 @@
+{
+  "reference_pdf": "https://bo.nalog.gov.ru/download/bfo/pdf/57656029",
+  "json_source": "https://bo.nalog.gov.ru/nbo/organizations/5155604/bfo/",
+  "json_sha256": "bc254128ff4dc992aa3e06d4e5726306661a11b71df2dd308fd3a9918d347cd8",
+  "unit": "тыс. руб.",
+  "unit_page": 1,
+  "balance_pages": [
+    2,
+    3
+  ],
+  "income_page": 4,
+  "verification": "Строки сверены по текстовому представлению официального PDF. Скриншоты страниц получить не удалось.",
+  "scope": "entity",
+  "year": 2025,
+  "limitation": "Выборочная сверка полей и расчётов, не аудит всей отчётности и не анализ группы.",
+  "ratio_baselines": {
+    "current_ratio": {
+      "numerator": "33217459",
+      "denominator": "12654580",
+      "rounded_value": "2.62",
+      "matched": true
+    },
+    "quick_ratio": {
+      "numerator": "33209487",
+      "denominator": "12654580",
+      "rounded_value": "2.62",
+      "matched": true
+    },
+    "absolute_ratio": {
+      "numerator": "1191",
+      "denominator": "12654580",
+      "rounded_value": "0.00",
+      "matched": true
+    },
+    "debt_to_equity": {
+      "numerator": "4107336",
+      "denominator": "1583735",
+      "rounded_value": "2.59",
+      "matched": true
+    },
+    "equity_ratio": {
+      "numerator": "12669880",
+      "denominator": "45607237",
+      "rounded_value": "0.28",
+      "matched": true
+    },
+    "short_term_debt_share": {
+      "numerator": "314397775",
+      "denominator": "8214672",
+      "rounded_value": "38.27",
+      "matched": true
+    },
+    "revenue_yoy": {
+      "numerator": "-1020325",
+      "denominator": "56387",
+      "rounded_value": "-18.10",
+      "matched": true
+    },
+    "net_margin": {
+      "numerator": "738500",
+      "denominator": "36947",
+      "rounded_value": "19.99",
+      "matched": true
+    },
+    "roa": {
+      "numerator": "7385000",
+      "denominator": "58296019",
+      "rounded_value": "0.13",
+      "matched": true
+    }
+  },
+  "money_baselines_rub": {
+    "total_debt": "32858688000",
+    "net_debt": "32857497000"
+  }
+}

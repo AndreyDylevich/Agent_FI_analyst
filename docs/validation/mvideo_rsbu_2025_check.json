@@ -1,0 +1,428 @@
+{
+  "name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"М.ВИДЕО\"",
+  "inn": "7707602010",
+  "standard": "RSBU",
+  "scope": "entity",
+  "adapter_version": 1,
+  "year": 2025,
+  "source_url": "https://bo.nalog.gov.ru/nbo/organizations/5155604/bfo/",
+  "sha256": "bc254128ff4dc992aa3e06d4e5726306661a11b71df2dd308fd3a9918d347cd8",
+  "unit_context": {
+    "unit": "тыс. руб.",
+    "source": "https://bo.nalog.gov.ru/download/bfo/pdf/57656029#page=1 (единица подтверждена по тексту PDF)",
+    "confirmed": true,
+    "currency": "RUB"
+  },
+  "import": {
+    "company_id": 1,
+    "document_id": 1,
+    "inserted": 58,
+    "conflicts": []
+  },
+  "checks": [
+    {
+      "name": "balance",
+      "form": "balance",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0",
+      "missing": []
+    },
+    {
+      "name": "assets",
+      "form": "balance",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0",
+      "missing": []
+    },
+    {
+      "name": "liabilities",
+      "form": "balance",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0",
+      "missing": []
+    },
+    {
+      "name": "gross_profit",
+      "form": "financialResult",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "net_profit",
+      "form": "financialResult",
+      "column": "current",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "current2460"
+      ]
+    },
+    {
+      "name": "cfo",
+      "form": "fundsMovement",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "cfi",
+      "form": "fundsMovement",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "cff",
+      "form": "fundsMovement",
+      "column": "current",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "current4310",
+        "current4320",
+        "current4300"
+      ]
+    },
+    {
+      "name": "cash_rollforward",
+      "form": "fundsMovement",
+      "column": "current",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "balance",
+      "form": "balance",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0",
+      "missing": []
+    },
+    {
+      "name": "assets",
+      "form": "balance",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "liabilities",
+      "form": "balance",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "gross_profit",
+      "form": "financialResult",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "net_profit",
+      "form": "financialResult",
+      "column": "previous",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "previous2460"
+      ]
+    },
+    {
+      "name": "cfo",
+      "form": "fundsMovement",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "cfi",
+      "form": "fundsMovement",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "cff",
+      "form": "fundsMovement",
+      "column": "previous",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "previous4310",
+        "previous4320",
+        "previous4300"
+      ]
+    },
+    {
+      "name": "cash_rollforward",
+      "form": "fundsMovement",
+      "column": "previous",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "balance",
+      "form": "balance",
+      "column": "beforePrevious",
+      "status": "пройдено",
+      "delta": "0",
+      "missing": []
+    },
+    {
+      "name": "assets",
+      "form": "balance",
+      "column": "beforePrevious",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "liabilities",
+      "form": "balance",
+      "column": "beforePrevious",
+      "status": "пройдено",
+      "delta": "0.0",
+      "missing": []
+    },
+    {
+      "name": "gross_profit",
+      "form": "financialResult",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious2110",
+        "beforePrevious2120",
+        "beforePrevious2100"
+      ]
+    },
+    {
+      "name": "net_profit",
+      "form": "financialResult",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious2300",
+        "beforePrevious2410",
+        "beforePrevious2460",
+        "beforePrevious2400"
+      ]
+    },
+    {
+      "name": "cfo",
+      "form": "fundsMovement",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious4110",
+        "beforePrevious4120",
+        "beforePrevious4100"
+      ]
+    },
+    {
+      "name": "cfi",
+      "form": "fundsMovement",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious4210",
+        "beforePrevious4220",
+        "beforePrevious4200"
+      ]
+    },
+    {
+      "name": "cff",
+      "form": "fundsMovement",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious4310",
+        "beforePrevious4320",
+        "beforePrevious4300"
+      ]
+    },
+    {
+      "name": "cash_rollforward",
+      "form": "fundsMovement",
+      "column": "beforePrevious",
+      "status": "недостаточно_данных",
+      "delta": null,
+      "missing": [
+        "beforePrevious4450",
+        "beforePrevious4400",
+        "beforePrevious4490",
+        "beforePrevious4500"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "current_ratio",
+      "status": "рассчитан",
+      "value": "2.624935714974341305677470133",
+      "unit": "x",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Текущая ликвидность = 33 217,5 / 12 654,6 = 2,62 (суммы в млн руб.)",
+      "saved_id": 1
+    },
+    {
+      "metric_id": "quick_ratio",
+      "status": "рассчитан",
+      "value": "2.624305745429717936114829572",
+      "unit": "x",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Быстрая ликвидность = (33 208,3 + 0,0 + 1,2) / 12 654,6 = 2,62 (суммы в млн руб.)",
+      "saved_id": 2
+    },
+    {
+      "metric_id": "absolute_ratio",
+      "status": "рассчитан",
+      "value": "0.00009411612238414866396198056356",
+      "unit": "x",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Абсолютная ликвидность = (0,0 + 1,2) / 12 654,6 = 0,00 (суммы в млн руб.)",
+      "saved_id": 3
+    },
+    {
+      "metric_id": "total_debt",
+      "status": "рассчитан",
+      "value": "32858688000",
+      "unit": "руб.",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Общий долг без аренды = 20 282,8 + 12 575,9 = 32 858,7 млн руб.",
+      "saved_id": 4
+    },
+    {
+      "metric_id": "net_debt",
+      "status": "рассчитан",
+      "value": "32857497000.0",
+      "unit": "руб.",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Чистый долг = 20 282,8 + 12 575,9 − 1,2 = 32 857,5 млн руб.",
+      "saved_id": 5
+    },
+    {
+      "metric_id": "debt_to_equity",
+      "status": "рассчитан",
+      "value": "2.593449030298629505567534973",
+      "unit": "x",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Долг / капитал = 32 858,7 / 12 669,9 = 2,59 (суммы в млн руб.)",
+      "saved_id": 6
+    },
+    {
+      "metric_id": "equity_ratio",
+      "status": "рассчитан",
+      "value": "0.2778041563886012213368680940",
+      "unit": "x",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Коэффициент автономии = 12 669,9 / 45 607,2 = 0,28 (суммы в млн руб.)",
+      "saved_id": 8
+    },
+    {
+      "metric_id": "short_term_debt_share",
+      "status": "рассчитан",
+      "value": "38.27271192325147005260830865",
+      "unit": "%",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Доля краткосрочного долга = 12 575,9 / 32 858,7 × 100 = 38,27 % (суммы в млн руб.)",
+      "saved_id": 9
+    },
+    {
+      "metric_id": "revenue_yoy",
+      "status": "рассчитан",
+      "value": "-18.09503963679571532445421817",
+      "unit": "%",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "revenue_current: revenue, 2025-01-01 — 2025-12-31 (FY)",
+        "revenue_previous: revenue, 2024-01-01 — 2024-12-31 (FY)",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Рост выручки год к году = (184,7 / 225,5 − 1) × 100 = −18,10 % (суммы в млн руб.)",
+      "saved_id": 11
+    },
+    {
+      "metric_id": "net_margin",
+      "status": "рассчитан",
+      "value": "19.98809104934094784420927274",
+      "unit": "%",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Чистая рентабельность = 36,9 / 184,7 × 100 = 19,99 % (суммы в млн руб.)",
+      "saved_id": 12
+    },
+    {
+      "metric_id": "roa",
+      "status": "рассчитан",
+      "value": "0.1266810346003215073742857124",
+      "unit": "%",
+      "reason": null,
+      "notes": [
+        "Крупная аренда (МСФО 16) — долговые метрики с арендой и без. GMV ≠ выручка.",
+        "Отчётность отдельного юрлица, не группы"
+      ],
+      "explanation": "Рентабельность активов (ROA) = 36,9 / 29 148,0 × 100 = 0,13 % (суммы в млн руб.)",
+      "saved_id": 13
+    }
+  ],
+  "limitation": "Проверена арифметика JSON; это не аудит всех статей и не анализ группы."
+}
