@@ -39,10 +39,10 @@ def validate_pdf_url(url: str) -> None:
     params = parse_qs(parts.query, keep_blank_values=True)
     if (parts.scheme != 'https' or parts.netloc != 'bo.nalog.gov.ru' or parts.fragment
             or not parts.path.startswith('/download/bfo/pdf/') or not suffix.isdigit()
-            or set(params) != {'detailId', 'period'}
-            or any(len(values) != 1 or not values[0].isdigit() for values in params.values())
-            or not 2019 <= int(params['period'][0]) <= 9999):
-        raise ValueError('Нужна официальная ссылка ГИР БО на PDF с detailId и period')
+            or (params and (set(params) != {'detailId', 'period'}
+                or any(len(values) != 1 or not values[0].isdigit() for values in params.values())
+                or not 2019 <= int(params['period'][0]) <= 9999))):
+        raise ValueError('Нужна официальная ссылка ГИР БО на PDF опубликованной версии')
 
 
 def check_search(query: str) -> dict:
@@ -79,7 +79,7 @@ def check_reporting_metadata(organization_id: int, target: Path) -> dict:
 
 
 def latest_pdf_reference(records: list) -> dict:
-    """Ссылка на последний опубликованный годовой отчёт; BFO id не равен organization id."""
+    """Ссылка на опубликованную годовую версию; текущий клиент ФНС использует /bfo/pdf/{detail_id}."""
     eligible = [r for r in records if r.get('published') is True and str(r.get('period', '')).isdigit()]
     if not eligible:
         raise ValueError('Нет опубликованного годового отчёта')
@@ -96,7 +96,7 @@ def latest_pdf_reference(records: list) -> dict:
     bfo_id, detail_id = report['id'], versions[0]['id']
     if type(bfo_id) is not int or type(detail_id) is not int:
         raise ValueError('Некорректные идентификаторы отчёта')
-    url = f'https://bo.nalog.gov.ru/download/bfo/pdf/{bfo_id}?detailId={detail_id}&period={year}'
+    url = f'https://bo.nalog.gov.ru/download/bfo/pdf/{detail_id}'
     validate_pdf_url(url)
     return {'bfo_id': bfo_id, 'detail_id': detail_id, 'period': year, 'pdf_url': url}
 
@@ -171,7 +171,7 @@ def inspect_frontend_routes() -> dict:
         with http.get(url) as response:
             text = response.text
             snippets = []
-            for marker in ('bfo/pdf', '/download', 'detailId', 'downloadBfo'):
+            for marker in ('bfo/pdf', '/download', 'detailId', 'downloadBfo', '.downloadPdf(', 'this.download=function'):
                 snippets += [text[max(0, m.start()-250):m.end()+350]
                              for m in list(re.finditer(re.escape(marker), text))[:8]]
             sources.append({'url': url, 'snippets': snippets})

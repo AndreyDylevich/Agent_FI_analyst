@@ -17,6 +17,7 @@ URL = check.PDF_REFERENCES[0][1]
 class Response:
     def __init__(self, data=b'', *, content_type='application/pdf', payload=None, status=200, headers=None):
         self.data = data
+        self.content = data
         self.headers = {'Content-Type': content_type, **(headers or {})}
         self.payload = payload
         self.status_code = status
@@ -200,10 +201,45 @@ def test_pdf_reference_uses_bfo_id_and_published_version():
              'typeCorrections': [{'type': 12, 'correction': {'id': 201, 'correctionVersion': 0}},
                                  {'type': 12, 'correction': {'id': 202, 'correctionVersion': 1}}]}]
     result = check.latest_pdf_reference(data)
-    assert result['pdf_url'] == 'https://bo.nalog.gov.ru/download/bfo/pdf/100?detailId=202&period=2025'
+    assert result['pdf_url'] == 'https://bo.nalog.gov.ru/download/bfo/pdf/202'
 
 
 def test_ambiguous_report_is_not_selected_by_list_order():
     row = {'id': 100, 'period': '2025', 'published': True}
     with pytest.raises(ValueError, match='Несколько'):
         check.latest_pdf_reference([row, row])
+
+
+def test_frontend_inspection_reads_only_official_main_bundle(monkeypatch):
+    class TextResponse(Response):
+        @property
+        def text(self):
+            return self.data.decode()
+    calls = []
+    def get(url, **kwargs):
+        calls.append(url)
+        if url.endswith('/'):
+            return TextResponse(b'<script src="/static/js/main.abc.js"></script><script src="https://third.example/main.js"></script>')
+        return TextResponse(b'var route="/download/bfo/pdf/";var parameter="detailId";')
+    monkeypatch.setattr(http, 'get', get)
+    result = check.inspect_frontend_routes()
+    assert calls == ['https://bo.nalog.gov.ru/', 'https://bo.nalog.gov.ru/static/js/main.abc.js']
+    assert result['sources'][0]['snippets']
+
+
+def test_metadata_keeps_exact_raw_response_numbers(tmp_path, monkeypatch):
+    body = b'[{"id":100,"period":"2025","published":true,"publishedCorrectionNumber":0,"amount":123.1234567890123456789,"typeCorrections":[{"type":12,"correction":{"id":200,"correctionVersion":0}}]}]'
+    response = Response(body, content_type='application/json', payload=json.loads(body))
+    monkeypatch.setattr(http, 'get', lambda *args, **kwargs: response)
+    target = tmp_path / 'metadata.json'
+    result = check.check_reporting_metadata(1, target)
+    assert target.read_bytes() == body
+    assert result['sha256'] == hashlib.sha256(body).hexdigest()
+    assert result['pdf_url'] == 'https://bo.nalog.gov.ru/download/bfo/pdf/200'
+
+
+def test_pdf_reference_ignores_newer_unpublished_reporting():
+    known = {'id': 100, 'period': '2025', 'published': True, 'publishedCorrectionNumber': 0,
+             'typeCorrections': [{'type': 12, 'correction': {'id': 200, 'correctionVersion': 0}}]}
+    result = check.latest_pdf_reference([dict(known, id=101, period='2026', published=False), known])
+    assert result['period'] == 2025
