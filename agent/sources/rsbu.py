@@ -14,6 +14,7 @@ from decimal import Decimal, InvalidOperation
 from typing import Any
 from urllib.parse import urlparse
 
+from agent.checks.validate import reconcile
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 
 FORMS = {'balance': ('balance', '0710001'), 'income': ('financialResult', '0710002'),
@@ -115,16 +116,16 @@ def _checks(correction: dict) -> tuple[Check, ...]:
     for column in COLUMNS:
         for name, form, terms in equations:
             fields = correction.get(form) or {}
-            missing = tuple(column + code for code in terms if fields.get(column + code) is None)
-            if missing:
-                result.append(Check(name, form, column, 'недостаточно_данных', missing=missing))
-                continue
             # Проверка: сумма слагаемых с указанными знаками = 0, в единице отчётности.
             outflows = {'2120', '4120', '4220', '4320'}
-            delta = sum(((abs(_number(fields[column + code])) if code in outflows
-                          else _number(fields[column + code])) * sign
-                         for code, sign in terms.items()), Decimal('0'))
-            result.append(Check(name, form, column, 'пройдено' if delta == 0 else 'расхождение', str(delta)))
+            values = {}
+            for code in terms:
+                raw = fields.get(column + code)
+                value = _number(raw) if raw is not None else None
+                values[column + code] = abs(value) if value is not None and code in outflows else value
+            check = reconcile(name, values, {column + code: sign for code, sign in terms.items()})
+            result.append(Check(name, form, column, check.status,
+                                str(check.delta) if check.delta is not None else None, check.missing))
     return tuple(result)
 
 
