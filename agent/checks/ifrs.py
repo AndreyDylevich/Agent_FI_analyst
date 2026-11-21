@@ -15,6 +15,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
+    version: int = 1
 
 
 RULES = {

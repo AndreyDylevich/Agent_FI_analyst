@@ -14,6 +14,8 @@ from agent.metrics.engine import Period
 def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: str, name: str,
                      source_url: str, period: Period, local_path: str) -> dict:
     """Транзакция у вызывающего. Разные ответы не перезаписывают историю и не создают рестейтмент."""
+    if len(run.facts) != len(run.statuses):
+        raise ValueError('Количество исходных значений и статусов проверки различается')
     conn.execute('INSERT OR IGNORE INTO companies (ticker,name) VALUES (?,?)', (ticker, name))
     company_id = conn.execute('SELECT id FROM companies WHERE ticker=?', (ticker,)).fetchone()['id']
     row = conn.execute('SELECT * FROM documents WHERE url=? AND sha256=?', (source_url, run.pdf_sha256)).fetchone()

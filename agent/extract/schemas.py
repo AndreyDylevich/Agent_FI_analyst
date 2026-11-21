@@ -10,7 +10,7 @@ from agent.extract.pdf_text import Page
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 2
+VERSION = 3
 
 
 def _object(properties: dict) -> dict:
@@ -114,7 +114,12 @@ def citation(data: dict, pages: dict[int, Page]) -> Citation:
         matches = [n for n, page in pages.items() if normalized_text(quote) in normalized_text(page.text)]
         hint = f'; точное совпадение на странице {matches[0]}' if len(matches) == 1 else ''
         raise ValueError(f'Цитата не найдена на странице {number}{hint}')
-    return Citation(number, quote)
+    # Восстанавливаем исходные пробелы PDF: межколоночный промежуток нельзя принять за разделитель тысяч.
+    pattern = r'\s+'.join(re.escape(part) for part in quote.split())
+    original = re.search(pattern, pages[number].text)
+    if original is None:
+        raise ValueError('Не удалось восстановить исходный фрагмент страницы')
+    return Citation(number, original.group())
 
 
 @dataclass(frozen=True)
@@ -190,9 +195,13 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         if not all(isinstance(v, str) and v.strip() for v in (name, raw, row['column_header'])):
             raise ValueError('Нужны подпись строки, число и заголовок колонки')
         quote = normalized_text(evidence.quote)
-        body = r'(?:\d{1,3}(?:[ ,]\d{3})+|\d+)(?:[.,]\d+)?'
+        if row['number_format'] == 'comma_grouped_dot_decimal':
+            body = r'(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
+        else:
+            body = r'(?:\d{1,3}(?: \d{3})+|\d+)(?:[.,]\d+)?'
         number_pattern = r'(?<![\w.,])(?:\(' + body + r'\)|[+\-−]?' + body + r')(?![\w.,])'
-        tokens = [match.group() for match in re.finditer(number_pattern, quote)]
+        original_numbers = evidence.quote.replace('\u00a0', ' ').replace('\u202f', ' ')
+        tokens = [match.group() for match in re.finditer(number_pattern, original_numbers)]
         if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
             raise ValueError('Подпись/число отсутствуют в цитате строки')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():

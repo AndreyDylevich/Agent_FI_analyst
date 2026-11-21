@@ -145,3 +145,14 @@ def test_balance_point_date_and_group_subsidiaries_are_valid_contexts():
     data['scope_evidence'] = cite('ПАО Тест и дочерние предприятия')
     result = parse(data,(Page(1,TEXT+'\nПАО Тест и дочерние предприятия'),))
     assert result.facts[0].start is None and result.facts[0].period_type == 'H1'
+
+
+@pytest.mark.parametrize('left,right,fmt', [('480,620','450,572','comma_grouped_dot_decimal'),
+                                          ('200','200','space_grouped_decimal')])
+def test_column_gap_not_mistaken_for_thousands(left,right,fmt):
+    data = payload();row=data['facts'][0]
+    row.update(raw_value=left,number_format=fmt,evidence=cite(f'Итого активы {left} {right}'))
+    source=TEXT+f'\nИтого активы {left}             {right}\n'
+    result=parse(data,(Page(1,source),))
+    assert result.facts[0].value == D(left.replace(',',''))
+    assert '             ' in result.facts[0].evidence.quote
