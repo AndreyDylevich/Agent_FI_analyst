@@ -44,7 +44,7 @@ def main(argv: list[str] | None = None) -> int:
     source_url = checked_url(args.source_url, hosts)
     month, day = {'FY': (12,31), 'Q1': (3,31), 'H1': (6,30), '9M': (9,30)}[args.period]
     period = Period(date(args.year,1,1), date(args.year,month,day), args.period)
-    entity_token = {'MTSS': 'телесистем', 'MVID': 'видео', 'SGZH': 'сегеж'}[args.ticker]
+    entity_token = company.get('document_identity_token', company['legal_name'])
     if args.item:
         items = {key: items[key] for key in args.item}
     report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0}

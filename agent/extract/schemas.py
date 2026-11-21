@@ -28,7 +28,8 @@ def extraction_schema(item_ids: list[str], *, stock_only: bool = False) -> dict:
                     'raw_value': STRING,
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
-                    'unit_evidence': CITATION, 'evidence': CITATION, 'column_header': STRING,
+                    'unit_evidence': CITATION, 'evidence': CITATION,
+                    'column_header': {'type': 'string', 'pattern': '^20[0-9]{2}$'} if stock_only else STRING,
                     'period_start': {'type': 'null'} if stock_only else NULLABLE_STRING, 'period_end': STRING,
                     'period_type': {'type': 'string', 'enum': ['AT_DATE'] if stock_only else ['AT_DATE', 'FY', 'Q1', 'H1', '9M']},
                     'statement': {'type': 'string', 'enum': ['balance', 'income', 'cash_flow', 'notes', 'equity']},
@@ -195,7 +196,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
             raise ValueError('Подпись/число отсутствуют в цитате строки')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
-            raise ValueError('Заголовок колонки не найден на странице значения')
+            raise ValueError(f"{item_id}: фрагмент заголовка колонки не найден; используй дословный фрагмент с годом, например '2025', не собирай дату из разнесённых строк")
         if unit not in units or not re.search(units[unit], unit_evidence.quote, re.I):
             raise ValueError('Единица не подтверждена цитатой')
         if unit == 'руб.' and re.search(r'тыс|миллион|млн|thousand|million', unit_evidence.quote, re.I):

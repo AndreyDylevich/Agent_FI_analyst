@@ -8,6 +8,7 @@ from typing import Protocol
 
 from gigachat import GigaChat
 from gigachat.models import Chat, Messages, MessagesRole
+from dotenv import load_dotenv
 
 MODEL = 'GigaChat-2-Max'
 BASE_URL = 'https://api.giga.chat/v1'
@@ -53,6 +54,7 @@ class GigaChatProvider:
     @classmethod
     def from_env(cls, ca_path: Path = CA_PATH):
         """Ключ остаётся внутри процесса; публичные протоколы не содержат его даже при сбоях."""
+        load_dotenv(Path(__file__).resolve().parents[2]/'.env', override=False)
         return cls(os.environ.get('GIGACHAT_KEY', ''), ca_path)
 
     def __enter__(self):

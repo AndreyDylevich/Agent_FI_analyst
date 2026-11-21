@@ -11,6 +11,7 @@ companies:
   - ticker: MTSS
     name: МТС
     legal_name: ПАО «Мобильные ТелеСистемы»
+    document_identity_token: телесистем
     inn: null
     ir_pages:
       - url: https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost
@@ -30,6 +31,7 @@ companies:
   - ticker: MVID
     name: М.Видео
     legal_name: ПАО «М.видео»
+    document_identity_token: видео
     inn: null
     ir_pages:
       - url: https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting
@@ -47,6 +49,7 @@ companies:
   - ticker: SGZH
     name: Сегежа
     legal_name: ПАО «Сегежа Групп»
+    document_identity_token: сегеж
     inn: null
     ir_pages:
       - url: https://segezha-group.com/investors/report/financial-results/
