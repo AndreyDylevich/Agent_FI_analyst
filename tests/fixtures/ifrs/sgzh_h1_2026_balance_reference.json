@@ -1,0 +1,178 @@
+{
+  "source_url": "https://segezha-group.com/upload/iblock/533/oa7qag8inv5wt638zq0q06dio1eal5zm.pdf",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "standard": "IFRS",
+  "scope": "group",
+  "method": "14 итогов вручную переписаны с физической страницы 6, отрендеренной Poppler и просмотренной. Отрицательный капитал сохранён со знаком. Эталон не получен из ответа LLM.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "value": "142255",
+      "normalized_value": "142255000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "105745",
+      "normalized_value": "105745000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "36510",
+      "normalized_value": "36510000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "-15008",
+      "normalized_value": "-15008000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "48750",
+      "normalized_value": "48750000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "108513",
+      "normalized_value": "108513000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "142255",
+      "normalized_value": "142255000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_assets",
+      "value": "141745",
+      "normalized_value": "141745000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "107499",
+      "normalized_value": "107499000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "34246",
+      "normalized_value": "34246000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "255",
+      "normalized_value": "255000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "64582",
+      "normalized_value": "64582000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "76908",
+      "normalized_value": "76908000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "141745",
+      "normalized_value": "141745000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "metrics": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2026-06-30",
+      "numerator": 36510,
+      "denominator": 108513
+    }
+  ]
+}

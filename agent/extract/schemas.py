@@ -260,21 +260,25 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         item = line_items[item_id]
         evidence, unit_evidence = citation(row['evidence'], by_number), citation(row['unit_evidence'], by_number)
         name, raw, unit = row['original_name'], row['raw_value'], row['unit']
+        amount_evidence=evidence.quote
         if row['statement']=='equity' and item.get('date_role') in ('period_opening','period_closing'):
             expected_date=date.fromisoformat(row['period_end'])
-            if not date_is_cited(evidence.quote,expected_date):
+            dated_lines=[line for line in evidence.quote.splitlines() if date_is_cited(line,expected_date)]
+            if not dated_lines:
                 raise ValueError(f'{item_id}: цитата должна содержать строку САЛЬДО на дату {expected_date}; начало и конец разных годовых блоков нельзя подменять')
+            # Чужая строка внутри широкого диапазона цитаты не доказывает число нужной даты.
+            amount_evidence='\n'.join(dated_lines)
         if not all(isinstance(v, str) and v.strip() for v in (name, raw, row['column_header'])):
             raise ValueError('Нужны подпись строки, число и заголовок колонки')
         if raw.strip() in ('-','—','–','n/a','N/A'):
             raise ValueError(f'{item_id}: прочерк не является числовым фактом. Пропусти эту запись facts, не заменяй нулём')
-        quote = normalized_text(evidence.quote)
+        quote = normalized_text(amount_evidence)
         if row['number_format'] == 'comma_grouped_dot_decimal':
             body = r'(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
         else:
             body = r'(?:\d{1,3}(?: \d{3})+|\d+)(?:[.,]\d+)?'
         number_pattern = r'(?<![\w.,])(?:\(' + body + r'\)|[+\-−]?' + body + r')(?![\w.,])'
-        original_numbers = evidence.quote.replace('\u00a0', ' ').replace('\u202f', ' ')
+        original_numbers = amount_evidence.replace('\u00a0', ' ').replace('\u202f', ' ')
         tokens = [match.group() for match in re.finditer(number_pattern, original_numbers)]
         model_raw = raw
         if normalized_text(raw) not in tokens:

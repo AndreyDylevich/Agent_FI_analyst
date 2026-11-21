@@ -189,3 +189,35 @@ def test_amortization_can_be_requested_from_cash_flow(tmp_path):
                     line_items={'d_and_a':config.line_items()['d_and_a']},output=tmp_path,sections=('cash_flow',))
     assert len(provider.calls)==1 and run.facts[0].item_id=='d_and_a'
     assert set(provider.calls[0]['line_items'])=={'d_and_a'}
+
+
+def test_equity_stock_packets_have_one_explicit_date_each(tmp_path):
+    values=[('2024-12-31','eq_opening_total','Сальдо на 31 декабря 2024 года','100','2025'),
+            ('2025-06-30','eq_closing_total','Сальдо на 30 июня 2025 года','120','2025'),
+            ('2025-12-31','eq_opening_total','Сальдо на 31 декабря 2025 года','110','2026'),
+            ('2026-06-30','eq_closing_total','Сальдо на 30 июня 2026 года','130','2026')]
+    text='Консолидированный отчет об изменениях капитала\n'+TEXT+'\n'+'\n'.join(row[2]+' '+row[3] for row in values)
+    responses=[]
+    for end,item,label,value,column in values:
+        data=pipeline_answer();data['facts'][0].update(item_id=item,original_name=label,raw_value=value,
+            evidence={'page':2,'quote':label+' '+value},statement='equity',period_end=end,
+            period_type='AT_DATE',column_header=column)
+        responses.append(data)
+    provider=Provider(responses)
+    items={key:config.line_items()[key] for key in ('eq_opening_total','eq_closing_total')}
+    run=extract_pdf(PDFText('a'*64,(Page(1,TEXT),Page(2,text))),provider,ticker='TEST',entity_token='Тест',
+                    period=PERIOD,line_items=items,output=tmp_path,sections=('equity',))
+    assert len(run.facts)==len(provider.calls)==4
+    for call,schema in zip(provider.calls,provider.schemas):
+        plan=call['requested_observations']
+        assert len(plan)==1 and plan[0]['dated_row_hints']
+        assert schema['properties']['facts']['items']['properties']['period_end']['enum']==[plan[0]['period_end']]
+
+
+def test_unrequested_balance_date_does_not_enter_run(tmp_path):
+    wrong=pipeline_answer();wrong['facts'][0].update(period_end='2025-06-30',period_type='H1',column_header='2025')
+    provider=Provider([wrong,wrong])
+    with pytest.raises(ValueError):
+        extract_pdf(pipeline_pdf(),provider,ticker='TEST',entity_token='Тест',period=PERIOD,
+                    line_items={'total_assets':config.line_items()['total_assets']},output=tmp_path,sections=('balance',))
+    assert all('незапрошенная' in row['error'] for row in json.loads((tmp_path/'attempts.json').read_text()))

@@ -37,6 +37,8 @@ def verify(conn: sqlite3.Connection, reference: dict) -> dict:
 
 def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
     """Сверка выбранных строк/статусов нескольких форм; не изменяет статусы в БД."""
+    if not reference.get('rows'):
+        raise ValueError('Эталон должен содержать исходные значения; пустой набор не считается сверкой')
     results=[]
     for expected in reference['rows']:
         rows=conn.execute("SELECT s.*,d.sha256 FROM source_values s JOIN documents d ON d.id=s.document_id "
@@ -51,9 +53,16 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
     checks=[check for context in contexts for check in context['checks']]
     check_results={name:any(check['rule']==name and check['result']['status']=='пройдено' for check in checks)
                    for name in reference['checks_required']}
+    metric_results={}
+    for expected in reference.get('metrics',[]):
+        row=conn.execute('SELECT value,status FROM metric_values WHERE metric_id=? AND period_end=? ORDER BY id DESC LIMIT 1',
+                         (expected['metric_id'],expected['period_end'])).fetchone()
+        fraction=Fraction(expected['numerator'],expected['denominator'])
+        metric_results[expected['metric_id']]=bool(row and row['status']=='рассчитан' and row['value'] is not None
+            and abs(Fraction(row['value'])-fraction)<=Fraction(1,10**27))
     return {'all_selected_values_verified':all(r['passed'] for r in results),'selected_values':results,
-            'checks':check_results,'financial_audit_complete':False,
-            'ok':all(r['passed'] for r in results) and all(check_results.values())}
+            'checks':check_results,'metrics':metric_results,'financial_audit_complete':False,
+            'ok':all(r['passed'] for r in results) and all(check_results.values()) and all(metric_results.values())}
 
 
 def main(argv: list[str] | None = None) -> int:

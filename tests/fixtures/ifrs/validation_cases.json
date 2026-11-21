@@ -1,0 +1,53 @@
+{
+  "mts_balance": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance"
+    ],
+    "reference": "mts_h1_2026_reference.json"
+  },
+  "mts_statements": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "income",
+      "cash_flow"
+    ],
+    "reference": "mts_h1_2026_statements_reference.json"
+  },
+  "mts_equity": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance",
+      "income",
+      "equity"
+    ],
+    "reference": "mts_h1_2026_equity_reference.json"
+  },
+  "mts_notes": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance",
+      "debt",
+      "leases",
+      "interest"
+    ],
+    "reference": "mts_h1_2026_notes_reference.json"
+  },
+  "sgzh_balance": {
+    "ticker": "SGZH",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance"
+    ],
+    "reference": "sgzh_h1_2026_balance_reference.json"
+  }
+}

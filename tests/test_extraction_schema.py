@@ -256,3 +256,5 @@ def test_equity_opening_requires_its_actual_dated_row_not_previous_june_closing(
     row.update(original_name='Сальдо на 30 июня 2025 года',raw_value='(45,293)',
                evidence=cite('Сальдо на 30 июня 2025 года (45,293)'))
     with pytest.raises(ValueError,match='САЛЬДО'):parse(data,pages)
+    row.update(original_name=label,evidence=cite(label+' 11,234\nСальдо на 30 июня 2025 года (45,293)'))
+    with pytest.raises(ValueError,match='отсутствуют'):parse(data,pages)

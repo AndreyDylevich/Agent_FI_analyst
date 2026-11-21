@@ -1,0 +1,38 @@
+name: Проверка эталона МСФО
+on:
+  workflow_dispatch:
+    inputs:
+      case_id:
+        description: Эталон и форма отчётности
+        required: true
+        default: sgzh_balance
+        type: choice
+        options: [sgzh_balance, mts_balance, mts_statements, mts_equity, mts_notes]
+concurrency:
+  group: gigachat-provider
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Проверить официальный PDF и независимый эталон
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+        run: python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' --output validation/ifrs-case
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-case-check
+          path: validation/ifrs-case/
+          retention-days: 14

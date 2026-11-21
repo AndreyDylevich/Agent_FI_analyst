@@ -37,7 +37,8 @@ def ocr_page(path: Path, number: int) -> str:
         prefix = Path(directory)/'page'
         subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', '200', '-png', str(path), str(prefix)],
                        check=True, capture_output=True, timeout=45)
-        result = subprocess.run(['tesseract', str(prefix.with_suffix('.png')), 'stdout', '-l', 'rus+eng', '--psm', '6'],
+        result = subprocess.run(['tesseract', str(prefix.with_suffix('.png')), 'stdout', '-l', 'rus+eng', '--psm', '6',
+                                 '-c', 'preserve_interword_spaces=1'],
                                 check=True, capture_output=True, text=True, timeout=60)
         return result.stdout
 
@@ -78,15 +79,15 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
 
 HEADINGS = {
     'balance': r'отчет.{0,80}финансовом положении|statement.{0,80}financial position',
-    'income': r'отчет.{0,80}прибылях|statement.{0,80}(?:profit|income)',
+    'income': r'отчет.{0,80}(?:прибылях|прибыли)|statement.{0,80}(?:profit|income)',
     'cash_flow': r'отчет.{0,80}движении денежных средств|statement.{0,80}cash flows',
     'equity': r'отчет.{0,80}изменени.{0,15}капитал|statement.{0,80}changes in equity',
-    'debt': r'долговые обязательства|кредиты и займы|заемные средства|loans and borrowings',
+    'debt': r'долговые обязательства|кредиты и займы|кредиты и прочие финансовые обязательства|заемные средства|loans and borrowings',
     'leases': r'активы в форме права пользования|обязательства по аренде|lease liabilities|leases',
     'interest': r'финансовые доходы и расходы|finance income and costs|finance costs|interest expense',
     'perimeter': r'выбытие компаний|приобретение компаний|объединени.{0,10}бизнес|disposal of subsidiar|business combinations|acquisitions',
     'segments': r'сегментная информация|информация по сегментам|операционные сегменты|segment information|operating segments',
-    'basis': r'основа подготовки|основы подготовки|принцип.{0,20}учетной политик|международн.{0,60}стандарт|international financial reporting|basis of preparation|accounting policies',
+    'basis': r'основа подготовки|основы подготовки|принципы подготовки|принцип.{0,20}учетной политик|положени.{0,20}учетной политик|международн.{0,60}стандарт|international financial reporting|basis of preparation|accounting policies',
 }
 
 
@@ -102,10 +103,18 @@ def _note_topics(pdf: PDFText) -> dict[str, set[int]]:
             continue
         # Начало страницы может продолжать прежнее примечание до нового заголовка.
         encountered = set(active)
-        for line in page.text.splitlines():
+        lines=page.text.splitlines()
+        for index,line in enumerate(lines):
             title = re.match(r'^\s*\d{1,2}\.\s+([^\d].{3,180})$', line)
             if title:
-                name = ' '.join(title[1].lower().replace('ё','е').split())
+                parts=[title[1]]
+                for following in lines[index+1:index+3]:
+                    following=following.strip()
+                    if following and following.isupper() and not re.search(r'\d',following):
+                        parts.append(following)
+                    else:
+                        break
+                name = ' '.join(' '.join(parts).lower().replace('ё','е').split())
                 active = {key for key in topics if re.search(HEADINGS[key],name)}
                 encountered.update(active)
         for key in encountered:

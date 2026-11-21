@@ -71,3 +71,11 @@ def test_notes_include_continuations_and_exclude_related_party_subset():
     selected=find_sections(pdf)
     assert selected.groups['debt']==(10,11,12)
     assert selected.groups['interest']==(12,13)
+
+
+def test_singular_profit_heading_and_wrapped_policy_note_are_found():
+    selected=find_sections(PDFText('sha',(
+        Page(6,'Промежуточный консолидированный отчет о прибыли или убытке и прочем совокупном доходе'),
+        Page(10,'Примечания к отчетности\n2. ПРИНЦИПЫ ПОДГОТОВКИ И СУЩЕСТВЕННЫЕ ПОЛОЖЕНИЯ УЧЕТНОЙ\nПОЛИТИКИ'),
+        Page(11,'Примечания к отчетности\nПродолжение учётной политики'))))
+    assert selected.groups['income']==(6,) and selected.groups['basis']==(10,11)
