@@ -10,7 +10,7 @@ from agent.extract.pdf_text import Page
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 1
+VERSION = 2
 
 
 def _object(properties: dict) -> dict:
@@ -30,7 +30,7 @@ def extraction_schema(item_ids: list[str], *, stock_only: bool = False) -> dict:
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': CITATION, 'evidence': CITATION, 'column_header': STRING,
                     'period_start': {'type': 'null'} if stock_only else NULLABLE_STRING, 'period_end': STRING,
-                    'period_type': {'type': 'string', 'enum': ['FY', 'Q1', 'H1', '9M']},
+                    'period_type': {'type': 'string', 'enum': ['AT_DATE'] if stock_only else ['AT_DATE', 'FY', 'Q1', 'H1', '9M']},
                     'statement': {'type': 'string', 'enum': ['balance', 'income', 'cash_flow', 'notes', 'equity']},
                     'cash_flow_section': {'type': ['string', 'null'],
                                           'enum': [None, 'operating', 'investing', 'financing', 'mixed']}})
@@ -167,7 +167,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         raise ValueError('Название компании не подтверждено титулом')
     if not re.search(r'мсфо|\bifrs\b|международн.{0,30}стандарт.{0,45}финансов.{0,25}отчет|international financial reporting', contexts['standard_evidence'].quote, re.I|re.S):
         raise ValueError('Нет явного подтверждения МСФО')
-    if not re.search(r'консолидир|consolidated|групп|group', contexts['scope_evidence'].quote, re.I):
+    if not re.search(r'консолидир|consolidated|групп|group|и (?:его |ее |её )?дочерни|and.{0,15}subsidiar', contexts['scope_evidence'].quote, re.I):
         raise ValueError('Нет подтверждения группового охвата')
     if not re.search(r'руб|rouble|ruble|RUB', contexts['currency_evidence'].quote, re.I):
         raise ValueError('Нет подтверждения валюты RUB')
@@ -213,8 +213,12 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Остаток/поток не соответствует периоду статьи')
         if start:
             Period(start, end, row['period_type'])
+            kind = row['period_type']
         else:
-            Period(date(end.year, 1, 1), end, row['period_type'])
+            kind = row['period_type']
+            if kind == 'AT_DATE':
+                kind = {(3,31):'Q1',(6,30):'H1',(9,30):'9M',(12,31):'FY'}.get((end.month,end.day))
+            Period(date(end.year, 1, 1), end, kind)
         allowed = {item['statement'], 'notes'}
         if item_id == 'd_and_a':
             allowed.add('cash_flow')
@@ -228,7 +232,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Повтор статьи/периода: нельзя молча складывать итог и компоненты')
         seen.add(key)
         facts.append(ExtractedFact(item_id, name, raw, row['number_format'], value, normalize_money(str(value), unit, item['sign']), unit,
-                                   start, end, row['period_type'], row['statement'], evidence, unit_evidence,
+                                   start, end, kind, row['statement'], evidence, unit_evidence,
                                    row['column_header'], section, by_number[evidence.page].method == 'ocr'))
     if not isinstance(data['warnings'], list) or any(not isinstance(w, str) for w in data['warnings']):
         raise ValueError('Неверный список ограничений извлечения')

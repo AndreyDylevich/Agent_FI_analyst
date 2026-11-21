@@ -113,3 +113,5 @@ def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path)
         extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
                     line_items=config.line_items(), output=tmp_path, sections=('balance',))
     assert len(provider.calls) == 2
+    attempts = json.loads((tmp_path/'attempts.json').read_text())
+    assert len(attempts) == 2 and all(a['accepted'] is False for a in attempts)

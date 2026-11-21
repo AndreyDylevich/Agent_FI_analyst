@@ -138,3 +138,10 @@ def test_positive_neutral_tax_not_silently_normalized_as_expense():
     with pytest.raises(ValueError): parse(data,pages)
     row['item_id'] = 'income_tax_benefit'
     assert parse(data,pages).facts[0].normalized == D('50000000')
+
+
+def test_balance_point_date_and_group_subsidiaries_are_valid_contexts():
+    data = payload();data['facts'][0]['period_type'] = 'AT_DATE'
+    data['scope_evidence'] = cite('ПАО Тест и дочерние предприятия')
+    result = parse(data,(Page(1,TEXT+'\nПАО Тест и дочерние предприятия'),))
+    assert result.facts[0].start is None and result.facts[0].period_type == 'H1'
