@@ -59,3 +59,15 @@ def test_batches_keep_page_numbers_and_full_text():
     assert sum(len(p.text) for batch in result for p in batch) == 160
     with pytest.raises(ValueError): page_batches((Page(1, 'a'*100),), max_chars=90)
     with pytest.raises(ValueError): page_batches((Page(1, '', 'unreadable'),))
+
+
+def test_notes_include_continuations_and_exclude_related_party_subset():
+    prefix='Примечания к консолидированной отчетности\n'
+    pdf=PDFText('sha',(Page(10,prefix+'9. ДОЛГОВЫЕ ОБЯЗАТЕЛЬСТВА\nКредиты и облигации'),
+        Page(11,prefix+'Продолжение таблицы. Облигации и курсовые разницы'),
+        Page(12,prefix+'10. ФИНАНСОВЫЕ ДОХОДЫ И РАСХОДЫ\nПроценты'),
+        Page(13,prefix+'11. АРЕНДА\nПрочее'),
+        Page(14,prefix+'16. СВЯЗАННЫЕ СТОРОНЫ\nКредиты и займы связанным сторонам')))
+    selected=find_sections(pdf)
+    assert selected.groups['debt']==(10,11,12)
+    assert selected.groups['interest']==(12,13)

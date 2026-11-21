@@ -81,10 +81,36 @@ HEADINGS = {
     'income': r'отчет.{0,80}прибылях|statement.{0,80}(?:profit|income)',
     'cash_flow': r'отчет.{0,80}движении денежных средств|statement.{0,80}cash flows',
     'equity': r'отчет.{0,80}изменени.{0,15}капитал|statement.{0,80}changes in equity',
-    'debt': r'кредиты и займы|заемные средства|loans and borrowings|lease liabilities|обязательства по аренде',
-    'segments': r'сегментная информация|операционные сегменты|segment information|operating segments',
-    'basis': r'основа подготовки|основы подготовки|международн.{0,60}стандарт|international financial reporting|basis of preparation',
+    'debt': r'долговые обязательства|кредиты и займы|заемные средства|loans and borrowings',
+    'leases': r'активы в форме права пользования|обязательства по аренде|lease liabilities|leases',
+    'interest': r'финансовые доходы и расходы|finance income and costs|finance costs|interest expense',
+    'perimeter': r'выбытие компаний|приобретение компаний|объединени.{0,10}бизнес|disposal of subsidiar|business combinations|acquisitions',
+    'segments': r'сегментная информация|информация по сегментам|операционные сегменты|segment information|operating segments',
+    'basis': r'основа подготовки|основы подготовки|принцип.{0,20}учетной политик|международн.{0,60}стандарт|international financial reporting|basis of preparation|accounting policies',
 }
+
+
+def _note_topics(pdf: PDFText) -> dict[str, set[int]]:
+    """Находит нумерованные заголовки примечаний и их продолжения, без разбора финансовых таблиц."""
+    topics = {key: set() for key in HEADINGS if key not in ('balance','income','cash_flow','equity')}
+    active: set[str] = set()
+    for page in pdf.pages:
+        if page.method == 'unreadable':
+            active = set()
+            continue
+        if not re.search(r'примечания к|notes to',page.text[:700],re.I):
+            continue
+        # Начало страницы может продолжать прежнее примечание до нового заголовка.
+        encountered = set(active)
+        for line in page.text.splitlines():
+            title = re.match(r'^\s*\d{1,2}\.\s+([^\d].{3,180})$', line)
+            if title:
+                name = ' '.join(title[1].lower().replace('ё','е').split())
+                active = {key for key in topics if re.search(HEADINGS[key],name)}
+                encountered.update(active)
+        for key in encountered:
+            topics[key].add(page.number)
+    return topics
 
 
 @dataclass(frozen=True)
@@ -112,6 +138,11 @@ def find_sections(pdf: PDFText) -> Selection:
                 candidate = full if key == 'basis' else heading
             if re.search(pattern, candidate):
                 groups[key].append(page.number)
+    # При явных заголовках примечаний не считаем каждое упоминание аренды/долга полным раскрытием.
+    # В частности, таблица связанных сторон не заменяет долговое примечание всей группы.
+    for key,numbers in _note_topics(pdf).items():
+        if numbers:
+            groups[key] = sorted(numbers)
     return Selection({k: tuple(v) for k, v in groups.items()},
                      tuple(k for k in ('balance', 'income', 'cash_flow', 'equity') if not groups[k]))
 

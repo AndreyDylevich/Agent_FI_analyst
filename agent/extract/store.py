@@ -51,6 +51,7 @@ def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: st
             conn.executemany("UPDATE source_values SET check_status='расхождение' WHERE id=?", [(i,) for i in ids])
             conflicts.append({'item_id': fact.item_id, 'period_end': str(fact.end), 'previous_source_ids': ids})
         location = json.dumps({'page': fact.evidence.page, 'quote': fact.evidence.quote,
+                               'start_line':fact.evidence.start_line,'end_line':fact.evidence.end_line,
                                'column_header': fact.column_header, 'unit_evidence': asdict(fact.unit_evidence),
                                'raw_value': fact.raw_value, 'number_format': fact.number_format,
                                'text_method': 'ocr' if fact.from_ocr else 'native',

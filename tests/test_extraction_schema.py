@@ -198,3 +198,13 @@ def test_partial_interest_payment_not_accepted_as_complete_interest_paid():
                                         statement='cash_flow',cash_flow_section='operating')
     with pytest.raises(ValueError,match='частичный платёж'):
         parse(data,(Page(1,TEXT+'\n'+label+' (50)'),))
+
+
+def test_explicit_document_context_is_copied_and_fully_revalidated():
+    from agent.extract.schemas import source_context
+    context=source_context(PAGES,ticker='TEST',period=PERIOD,entity_token='Тест',line_items=config.line_items())
+    assert context['entity_name']==TEXT.splitlines()[0]
+    extracted=parse({**context,'facts':[],'warnings':[]})
+    assert extracted.context['standard_evidence']['quote']==TEXT.splitlines()[0]
+    assert extracted.context['period_evidence']['quote'].startswith('ПАО Тест')
+    assert not extracted.facts

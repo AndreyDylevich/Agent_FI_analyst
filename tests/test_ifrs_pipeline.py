@@ -10,7 +10,7 @@ import pytest
 from agent import config
 from agent.checks.ifrs import validate_financials
 from agent.db import init_db
-from agent.extract.llm import Completion
+from agent.extract.llm import Completion, ProviderError
 from agent.extract.pdf_text import PDFText, Page
 from agent.extract.pipeline import ExtractionRun, extract_pdf
 from agent.extract.store import store_extraction
@@ -77,11 +77,17 @@ def test_store_is_idempotent_and_keeps_conflicting_history(tmp_path):
 
 
 class Provider:
-    def __init__(self, responses): self.responses = responses; self.calls = []; self.schemas = []
+    def __init__(self, responses, obey_context=True):
+        self.responses = responses; self.calls = []; self.schemas = []; self.obey_context=obey_context
     def extract(self, system, text, schema):
         self.schemas.append(schema)
         self.calls.append(json.loads(text.split('\nПовторная проверка')[0]))
-        return Completion(json.dumps(self.responses.pop(0), ensure_ascii=False), 'test-model', 10)
+        response=copy.deepcopy(self.responses.pop(0))
+        if self.obey_context:
+            for key,field in schema['properties'].items():
+                if 'enum' in field and len(field['enum'])==1 and key in response:
+                    response[key]=field['enum'][0]
+        return Completion(json.dumps(response, ensure_ascii=False), 'test-model', 10)
 
 
 def pipeline_pdf():
@@ -105,27 +111,25 @@ def test_one_retry_and_original_responses_preserved(tmp_path):
     assert run.batches[0]['accepted'] is False and run.batches[1]['accepted'] is True
     assert provider.calls[0]['target_pages'] == [2]
     assert {p['page'] for p in provider.calls[0]['pages']} == {1,2}
-    assert provider.calls[1]['verified_context']['scope_evidence'] == correct['scope_evidence']
-    assert provider.schemas[1]['properties']['scope_evidence']['enum'] == [correct['scope_evidence']]
+    assert provider.calls[1]['verified_context']['scope_evidence'] == provider.calls[0]['verified_context']['scope_evidence']
+    assert provider.schemas[1]['properties']['scope_evidence']['enum'] == [provider.calls[0]['verified_context']['scope_evidence']]
     assert provider.calls[1]['previous_facts'] == wrong['facts']
 
 
 def test_retry_must_not_change_previously_verified_context(tmp_path):
     wrong = pipeline_answer();wrong['facts'][0]['raw_value'] = '-'
     changed = pipeline_answer();changed['scope_evidence'] = changed['identity_evidence']
-    provider = Provider([wrong, changed])
+    provider = Provider([wrong, changed],obey_context=False)
     with pytest.raises(ValueError):
         extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
                     line_items=config.line_items(), output=tmp_path, sections=('balance',))
-    assert provider.calls[1]['verified_context']['scope_evidence'] == wrong['scope_evidence']
+    assert provider.calls[1]['verified_context']['scope_evidence'] == provider.calls[0]['verified_context']['scope_evidence']
 
 
-def test_invalid_context_is_not_frozen_on_retry(tmp_path):
-    wrong = pipeline_answer();wrong['scope_evidence'] = wrong['identity_evidence']
-    provider = Provider([wrong, pipeline_answer()])
-    run = extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
-                      line_items=config.line_items(), output=tmp_path, sections=('balance',))
-    assert run.facts and 'verified_context' not in provider.calls[1]
+def test_missing_context_not_invented():
+    from agent.extract.schemas import source_context
+    assert source_context((Page(1,'ПАО Тест\nВыручка 100'),),ticker='TEST',period=PERIOD,
+                          entity_token='Тест',line_items=config.line_items())=={}
 
 
 def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path):
@@ -137,6 +141,18 @@ def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path)
     assert len(provider.calls) == 2
     attempts = json.loads((tmp_path/'attempts.json').read_text())
     assert len(attempts) == 2 and all(a['accepted'] is False for a in attempts)
+
+
+def test_provider_timeout_still_leaves_request_audit(tmp_path):
+    class TimedOut:
+        def extract(self,*args): raise ProviderError('Извлечение GigaChat: ReadTimeout')
+    with pytest.raises(ProviderError):
+        extract_pdf(pipeline_pdf(),TimedOut(),ticker='TEST',entity_token='Тест',period=PERIOD,
+                    line_items=config.line_items(),output=tmp_path,sections=('balance',))
+    attempts=json.loads((tmp_path/'attempts.json').read_text())
+    assert len(attempts)==1 and attempts[0]['provider_error'].endswith('ReadTimeout')
+    assert attempts[0]['request_sha256'] and not attempts[0]['accepted']
+    assert not list(tmp_path.glob('batch*.json'))
 
 
 def test_equity_reconciles_same_dates_and_profit_without_assuming_movements():

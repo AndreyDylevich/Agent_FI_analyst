@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 6
+VERSION = 7
 
 
 def _object(properties: dict) -> dict:
@@ -65,6 +65,47 @@ def period_is_cited(quote: str, period: Period) -> bool:
                 '9M': r'9\s+месяц|девять\s+месяц|nine.month',
                 'FY': rf'за\s+{end.year}\s*год|годов|год.{{0,15}}закончивш|year ended'}[period.kind]
     return (bool(re.search(date_pattern, text)) or str(end.year) in text) and bool(re.search(duration, text))
+
+
+def source_context(pages: tuple[Page, ...], *, ticker: str, period: Period,
+                   entity_token: str, line_items: dict) -> dict:
+    """Подбирает дословные адреса явных метаданных. Финансовые строки и числа здесь не извлекаются.
+
+    Кандидаты проходят тот же валидатор, что ответ модели. Ненайденный/неоднозначный контекст
+    остаётся задачей модели, а не дополняется предположениями.
+    """
+    candidates = {}
+    patterns = {'identity_evidence': re.escape(entity_token),
+                'standard_evidence': r'мсфо|\bifrs\b|международн.{0,30}стандарт.{0,45}финансов.{0,25}отчет|international financial reporting',
+                'scope_evidence': r'консолидир|consolidated|групп|group|и (?:его |ее |её )?дочерни|and.{0,15}subsidiar',
+                'currency_evidence': r'руб|rouble|ruble|\bRUB\b'}
+    for page in pages:
+        if page.method == 'unreadable':
+            continue
+        lines = page.text.splitlines()
+        for index,line in enumerate(lines):
+            for key,pattern in patterns.items():
+                if key not in candidates and re.search(pattern,line,re.I):
+                    first = index
+                    if key=='identity_evidence' and index and re.search(r'\bПАО\b|\bPJSC\b|публичное акционерное',lines[index-1],re.I):
+                        first = index-1
+                    candidates[key] = {'page':page.number,'start_line':first+1,'end_line':index+1}
+                    if key=='identity_evidence':
+                        candidates['entity_name'] = normalized_text('\n'.join(lines[first:index+1]))
+            if 'period_evidence' not in candidates:
+                # Заголовок длительности и дата могут занимать соседние строки.
+                last = min(index+4,len(lines))
+                if period_is_cited('\n'.join(lines[index:last]),period):
+                    candidates['period_evidence'] = {'page':page.number,'start_line':index+1,'end_line':last}
+    root = {'ticker':ticker,'standard':'IFRS','scope':'group','currency':'RUB',
+            'period_start':str(period.start),'period_end':str(period.end),'period_type':period.kind,
+            **candidates}
+    try:
+        parse_extraction(json.dumps({**root,'facts':[],'warnings':[]},ensure_ascii=False),pages,
+                         ticker=ticker,period=period,entity_token=entity_token,line_items=line_items)
+    except (ValueError,TypeError,KeyError):
+        return {}
+    return root
 
 
 def parse_amount(raw: str, number_format: str = 'space_grouped_decimal') -> Decimal:
