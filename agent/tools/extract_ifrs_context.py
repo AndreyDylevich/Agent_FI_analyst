@@ -46,7 +46,7 @@ def main(argv=None) -> int:
             raise ValueError('Не подтверждены компания, МСФО, групповой охват, RUB и период документа')
         with GigaChatProvider.from_env() as provider:
             disclosures=extract_disclosures(pdf,provider,output=args.output/'responses')
-        report.update(ok=True,source_context=context,pdf_warnings=pdf.warnings,**disclosures)
+        report.update(ok=True,source_context=context,pdf_warnings=pdf.warnings,text_processing=pdf.processing,**disclosures)
         serialized=json.dumps(report,ensure_ascii=False,sort_keys=True)
         digest=hashlib.sha256(serialized.encode()).hexdigest()
         conn=db.init_db(args.db)

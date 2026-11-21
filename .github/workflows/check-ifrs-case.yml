@@ -7,7 +7,7 @@ on:
         required: true
         default: sgzh_balance
         type: choice
-        options: [sgzh_balance, mts_balance, mts_statements, mts_equity, mts_notes]
+        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_notes]
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
@@ -26,6 +26,9 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: pytest -q
+      - name: Установить OCR для скана М.Видео
+        if: inputs.case_id == 'mvid_balance'
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
       - name: Проверить официальный PDF и независимый эталон
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}

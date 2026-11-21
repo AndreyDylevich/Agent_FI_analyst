@@ -5,10 +5,11 @@ import re
 import shutil
 import subprocess
 import tempfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from pypdf import PdfReader
+from importlib.metadata import version
 
 from agent.sources.files import MAX_PDF_BYTES
 
@@ -27,6 +28,7 @@ class PDFText:
     sha256: str
     pages: tuple[Page, ...]
     warnings: tuple[str, ...] = ()
+    processing: dict = field(default_factory=dict)
 
 
 def ocr_page(path: Path, number: int) -> str:
@@ -35,7 +37,7 @@ def ocr_page(path: Path, number: int) -> str:
         raise ValueError('Для OCR нужны pdftoppm и tesseract с языками rus+eng')
     with tempfile.TemporaryDirectory(prefix='fi-ocr-') as directory:
         prefix = Path(directory)/'page'
-        subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', '200', '-png', str(path), str(prefix)],
+        subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', '320', '-png', str(path), str(prefix)],
                        check=True, capture_output=True, timeout=45)
         result = subprocess.run(['tesseract', str(prefix.with_suffix('.png')), 'stdout', '-l', 'rus+eng', '--psm', '6',
                                  '-c', 'preserve_interword_spaces=1'],
@@ -74,7 +76,11 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
                 if method == 'unreadable':
                     warnings.append(f'Страница {number}: недостаточно читаемого текста; требуется OCR/ручная проверка')
             pages.append(Page(number, text, method))
-    return PDFText(hashlib.sha256(raw).hexdigest(), tuple(pages), tuple(warnings))
+    processing={'pypdf':version('pypdf'),'native_mode':'layout','ocr_requested':use_ocr}
+    if use_ocr:
+        processing['ocr']={'version':2,'dpi':320,'languages':'rus+eng','psm':6,'preserve_interword_spaces':True,
+                           'max_pages':max_ocr_pages,'attempted_pages':used}
+    return PDFText(hashlib.sha256(raw).hexdigest(), tuple(pages), tuple(warnings),processing)
 
 
 HEADINGS = {

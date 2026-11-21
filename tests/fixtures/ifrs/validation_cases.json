@@ -49,5 +49,16 @@
       "balance"
     ],
     "reference": "sgzh_h1_2026_balance_reference.json"
+  },
+  "mvid_balance": {
+    "ticker": "MVID",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance"
+    ],
+    "reference": "mvid_h1_2026_balance_reference.json",
+    "ocr": true,
+    "max_ocr_pages": 5
   }
 }

@@ -35,6 +35,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--metric', choices=sorted(REGISTRY), action='append')
     parser.add_argument('--ocr', action='store_true')
     parser.add_argument('--max-ocr-pages', type=int, default=20)
+    parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
     args = parser.parse_args(argv)
     if args.output.exists() and any(args.output.iterdir()):
         parser.error('Каталог вывода должен быть новым/пустым: история ответов не перезаписывается')
@@ -50,8 +51,10 @@ def main(argv: list[str] | None = None) -> int:
     report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0}
     try:
         text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages)
+        report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
         with GigaChatProvider.from_env(args.certificate) as provider:
             options = {'sections': tuple(args.sections)} if args.sections else {}
+            if args.reuse_from:options['reuse_from']=tuple(args.reuse_from)
             run = extract_pdf(text, provider, ticker=args.ticker, entity_token=entity_token, period=period,
                               line_items=items, output=args.output, **options)
         report.update(pdf_sha256=run.pdf_sha256, batches=run.batches, contexts=run.contexts,

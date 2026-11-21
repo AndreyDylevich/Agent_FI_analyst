@@ -60,6 +60,10 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
         fraction=Fraction(expected['numerator'],expected['denominator'])
         metric_results[expected['metric_id']]=bool(row and row['status']=='рассчитан' and row['value'] is not None
             and abs(Fraction(row['value'])-fraction)<=Fraction(1,10**27))
+    for expected in reference.get('metric_states',[]):
+        row=conn.execute('SELECT value,status FROM metric_values WHERE metric_id=? AND period_end=? ORDER BY id DESC LIMIT 1',
+                         (expected['metric_id'],expected['period_end'])).fetchone()
+        metric_results[expected['metric_id']]=bool(row and row['status']==expected['status'] and row['value'] is None)
     return {'all_selected_values_verified':all(r['passed'] for r in results),'selected_values':results,
             'checks':check_results,'metrics':metric_results,'financial_audit_complete':False,
             'ok':all(r['passed'] for r in results) and all(check_results.values()) and all(metric_results.values())}

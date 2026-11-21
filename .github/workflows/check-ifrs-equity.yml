@@ -1,12 +1,18 @@
 name: Проверка капитала между формами МСФО
 on:
   workflow_dispatch:
+    inputs:
+      reuse_run_id:
+        description: Необязательный ID прежнего прогона капитала для повторной проверки ответов
+        required: false
+        default: ''
 # API физлица: один одновременный поток на все диагностики GigaChat.
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
 permissions:
   contents: read
+  actions: read
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -20,6 +26,14 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: pytest -q
+      - name: Получить прежние ответы и оригинальный PDF
+        if: inputs.reuse_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-equity-check
+          path: validation/reuse
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.reuse_run_id }}
       - name: Получить официальный PDF МТС 1П2026
         run: |
           python - <<'PY'
@@ -35,6 +49,8 @@ jobs:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
         shell: bash
         run: |
+          reuse_args=()
+          if [ -d validation/reuse ]; then reuse_args=(--reuse-from validation/reuse); fi
           python -m agent.tools.extract_ifrs "$(cat validation/equity/selected_path.txt)" \
             --ticker MTSS --year 2026 --period H1 --db validation/equity/check.db \
             --source-url https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf \
@@ -45,7 +61,7 @@ jobs:
             --item eq_closing_total --item eq_closing_parent --item eq_closing_nci --item eq_profit_total \
             --item eq_profit_parent --item eq_profit_nci --item net_profit --item net_profit_parent \
             --item net_profit_nci \
-            --metric current_ratio
+            --metric current_ratio "${reuse_args[@]}"
       - name: Сверить 42 значения и статусы с независимым эталоном
         run: >-
           python -m agent.tools.verify_ifrs_reference --db validation/equity/check.db

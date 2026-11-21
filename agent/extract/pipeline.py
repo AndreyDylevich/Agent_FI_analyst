@@ -3,13 +3,14 @@
 import hashlib
 import json
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date, timedelta
 from pathlib import Path
 
 from agent.checks.ifrs import FinancialCheck, validate_financials
 from agent.config import is_stock, opening_stock, source_forms
 from agent.extract.llm import ExtractionProvider, ProviderError
+from agent.extract.cache import ResponseCache
 from agent.extract.pdf_text import PDFText, Page, find_sections, page_batches
 from agent.extract.schemas import Extraction, ExtractedFact, extraction_schema, parse_extraction, source_context, date_is_cited
 from agent.metrics.engine import Period
@@ -99,6 +100,7 @@ class ExtractionRun:
     checks: tuple[FinancialCheck, ...]
     statuses: tuple[str, ...]
     warnings: tuple[str, ...]
+    text_processing: dict = field(default_factory=dict)
 
 
 def observation_plan(items: dict, period: Period) -> list[dict]:
@@ -123,12 +125,14 @@ def observation_plan(items: dict, period: Period) -> list[dict]:
 
 def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, entity_token: str,
                 period: Period, line_items: dict, output: Path,
-                sections: tuple[str, ...] = ('balance', 'income', 'cash_flow', 'equity', 'debt', 'leases', 'interest', 'segments')) -> ExtractionRun:
+                sections: tuple[str, ...] = ('balance', 'income', 'cash_flow', 'equity', 'debt', 'leases', 'interest', 'segments'),
+                reuse_from: tuple[Path,...] = ()) -> ExtractionRun:
     """На неудачную проверку пакета — один повтор. История обоих ответов остаётся в output.
 
     Неполное покрытие форм явно возвращается; успешный JSON не делает этап извлечения завершённым.
     """
     output.mkdir(parents=True, exist_ok=True)
+    cache=ResponseCache(reuse_from,pdf.sha256)
     selected = find_sections(pdf)
     if set(sections) - set(selected.groups):
         raise ValueError('Неизвестная группа страниц')
@@ -186,6 +190,7 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                  for key,value in subset.items()}
         target_set = {p.number for p in target}
         pages = tuple(by_number[n] for n in sorted(target_set | context_numbers))
+        page_hash=hashlib.sha256(json.dumps([asdict(p) for p in pages],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
         request = {'ticker': ticker, 'expected_entity_token': entity_token, 'scope': 'group',
                    'expected_period': {'start': str(period.start), 'end': str(period.end), 'kind': period.kind},
                    'target_pages': sorted(target_set), 'line_items': items,
@@ -223,10 +228,19 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                 schema['properties'][key] = {**schema['properties'][key], 'enum': [value]}
             record = {'batch': batch_index, 'attempt': attempt, 'target_pages': sorted(target_set),
                       'context_pages': sorted(context_numbers), 'prompt_version': PROMPT_VERSION,
-                      'request_sha256': hashlib.sha256(request_text.encode()).hexdigest()}
+                      'request_sha256': hashlib.sha256(request_text.encode()).hexdigest(),
+                      'page_text_sha256':page_hash,'pdf_sha256':pdf.sha256,'item_ids':sorted(subset),
+                      'contract_sha256':hashlib.sha256(json.dumps({'system':SYSTEM,'text':request_text,'schema':schema},ensure_ascii=False,sort_keys=True).encode()).hexdigest()}
             batches.append(record)
             try:
-                completion = provider.extract(SYSTEM, request_text, schema)
+                reused=cache.take(target_set,set(subset),page_hash,any(p.method=='ocr' for p in pages)) if attempt==1 else None
+                if reused:
+                    completion=reused.completion
+                    record.update(reused_from=reused.source,original_tokens=reused.record.get('tokens'),
+                                  original_request_sha256=reused.record.get('request_sha256'),
+                                  original_prompt_version=reused.record.get('prompt_version'))
+                else:
+                    completion = provider.extract(SYSTEM, request_text, schema)
             except ProviderError as error:
                 # У провайдера уже обезличенная ошибка; сохраняем происхождение даже без ответа API.
                 record.update(accepted=False, provider_error=str(error))
@@ -291,4 +305,5 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                         ', '.join(f'{item}@{end}' for item,_,end in missing[:20])+
                         (f'; ещё {len(missing)-20}' if len(missing)>20 else ''))
     checks, statuses = validate_financials(all_facts)
-    return ExtractionRun(pdf.sha256, tuple(batches), tuple(contexts), all_facts, checks, statuses, tuple(dict.fromkeys(warnings)))
+    return ExtractionRun(pdf.sha256, tuple(batches), tuple(contexts), all_facts, checks, statuses,
+                         tuple(dict.fromkeys(warnings)),pdf.processing)

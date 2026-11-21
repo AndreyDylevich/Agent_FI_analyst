@@ -1,0 +1,177 @@
+{
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_2026/pao-mvideo-msfo-6-mes-2026.pdf",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "14 итогов переписаны из изображения физической страницы 5 независимо от OCR/LLM; итог долгосрочных обязательств 2025 дополнительно просмотрен увеличенным фрагментом. В первом OCR 200dpi он распознан неверно как 46532 вместо 46632; такое значение не принималось и не исправлялось по балансовой разнице. Статусы OCR остаются непроверенными для автоматических расчётов, сверка эталона не повышает их.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "value": "256504",
+      "normalized_value": "256504000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "164758",
+      "normalized_value": "164758000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "91746",
+      "normalized_value": "91746000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "-81714",
+      "normalized_value": "-81714000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "61834",
+      "normalized_value": "61834000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "276384",
+      "normalized_value": "276384000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "256504",
+      "normalized_value": "256504000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "total_assets",
+      "value": "288701",
+      "normalized_value": "288701000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "164699",
+      "normalized_value": "164699000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "124002",
+      "normalized_value": "124002000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "-45596",
+      "normalized_value": "-45596000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "46632",
+      "normalized_value": "46632000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "287665",
+      "normalized_value": "287665000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "288701",
+      "normalized_value": "288701000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "не_проверено"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "metric_states": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2026-06-30",
+      "status": "недостаточно_данных"
+    }
+  ]
+}

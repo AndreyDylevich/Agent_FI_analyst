@@ -1,0 +1,133 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44961206119",
+  "head_sha": "2a17f81d02ddf1adcd5780824bd7ce51d66c1be7",
+  "ticker": "SGZH",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "reference": "tests/fixtures/ifrs/sgzh_h1_2026_balance_reference.json",
+  "selected_values_count": 14,
+  "statuses": [
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто"
+  ],
+  "batches": [
+    {
+      "batch": 1,
+      "attempt": 1,
+      "target_pages": [
+        6
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 12,
+      "request_sha256": "9c8160744b2c3468a334bed335a77e3d7524e112980cdf70383b586850b6525e",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 8091,
+      "response_sha256": "a00c3e729de80f394b0389dc2385a52c8b3973c00874aef3e2cae43308fdde63",
+      "file": "batch_1_attempt_1.json",
+      "accepted": true
+    }
+  ],
+  "reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "total_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "assets_components": true,
+      "balance": true,
+      "balance_totals": true
+    },
+    "metrics": {
+      "current_ratio": true
+    },
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "financial_audit_complete": false,
+  "messages_sent": 0,
+  "limitation": "Выбранные итоги группового баланса, не полная сверка форм и примечаний. Отрицательный капитал сохранён со знаком."
+}
