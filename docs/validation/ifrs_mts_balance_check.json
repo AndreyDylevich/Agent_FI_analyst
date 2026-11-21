@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-11-21",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44914776876",
+  "code_commit": "751cba3b4d81bf1b6b31fe49fb15a589fc8a6b1b",
+  "ok": true,
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "facts": 14,
+  "source_pages": [
+    5,
+    6
+  ],
+  "context_pages": [
+    1,
+    3
+  ],
+  "model": "GigaChat-2-Max:2.0.30.01",
+  "attempts": 1,
+  "tokens": 7506,
+  "statuses": [
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто"
+  ],
+  "reference": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "total_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      }
+    ],
+    "current_ratio_verified": true,
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "financial_audit_complete": false,
+  "messages_sent": 0
+}
