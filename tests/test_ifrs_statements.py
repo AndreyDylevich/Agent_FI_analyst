@@ -116,3 +116,15 @@ def test_annual_flow_not_accepted_as_half_year_comparative():
     row.update(item_id='revenue',original_name='Выручка',raw_value='90',evidence=cite('Выручка 100 90'),
                statement='income',period_start='2025-01-01',period_end='2025-12-31',period_type='FY',column_header='2025')
     with pytest.raises(ValueError):parse(data)
+
+
+def test_observation_plan_supplies_dates_without_supplying_financial_values():
+    from agent.extract.pipeline import observation_plan
+    from tests.test_extraction_schema import PERIOD
+    items=config.line_items()
+    plan=observation_plan({key:items[key] for key in ('cf_cash_opening','cf_cash_closing_gross','cf_starting_net_profit')},PERIOD)
+    assert plan[0]=={'item_id':'cf_cash_opening','column_header':'2026','period_start':None,'period_end':'2025-12-31','period_type':'AT_DATE'}
+    assert plan[1]['period_end']=='2024-12-31' and plan[1]['column_header']=='2025'
+    assert plan[2]['period_end']=='2026-06-30' and plan[3]['period_end']=='2025-06-30'
+    assert plan[4]['period_start']=='2026-01-01' and plan[4]['period_type']=='H1'
+    assert all('value' not in record for record in plan)

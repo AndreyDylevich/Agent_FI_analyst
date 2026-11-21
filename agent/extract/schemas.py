@@ -195,6 +195,8 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         name, raw, unit = row['original_name'], row['raw_value'], row['unit']
         if not all(isinstance(v, str) and v.strip() for v in (name, raw, row['column_header'])):
             raise ValueError('Нужны подпись строки, число и заголовок колонки')
+        if raw.strip() in ('-','—','–','n/a','N/A'):
+            raise ValueError(f'{item_id}: прочерк не является числовым фактом. Пропусти эту запись facts, не заменяй нулём')
         quote = normalized_text(evidence.quote)
         if row['number_format'] == 'comma_grouped_dot_decimal':
             body = r'(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
@@ -204,7 +206,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         original_numbers = evidence.quote.replace('\u00a0', ' ').replace('\u202f', ' ')
         tokens = [match.group() for match in re.finditer(number_pattern, original_numbers)]
         if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
-            raise ValueError('Подпись/число отсутствуют в цитате строки')
+            raise ValueError(f'{item_id}: подпись/число {raw!r} отсутствуют в цитате строки; скопируй исходную запись целиком')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
             raise ValueError(f"{item_id}: фрагмент заголовка колонки не найден; используй дословный фрагмент с годом, например '2025', не собирай дату из разнесённых строк")
         if unit not in units or not re.search(units[unit], unit_evidence.quote, re.I):
