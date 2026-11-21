@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from datetime import date
 
-VERSION = 1
+VERSION = 2
 
 
 @dataclass(frozen=True)
@@ -23,16 +23,37 @@ class Classification:
 
 def _period(text: str) -> tuple[str | None, str | None, str | None]:
     """Период берётся из описания отчётности, не из имени файла или даты публикации."""
-    years = set(re.findall(r'\b20\d{2}\b', text))
+    # Явный период в заголовке сильнее года публикации и сравнительных колонок ниже.
+    heading = text[:500]
+    explicit = []
+    for kind, pattern in (
+        ('H1', r'за\s+(?:(?:1|первое)\s+)?полугодие\s+(20\d{2})'),
+        ('9M', r'за\s+(?:9|девять)\s+месяц[а-я]*\s+(20\d{2})'),
+        ('Q1', r'за\s+(?:3|три)\s+месяца\s+(20\d{2})'),
+        ('FY', r'за\s+(20\d{2})\s*год'),
+    ):
+        explicit.extend((kind, year) for year in re.findall(pattern, heading))
+    if explicit:
+        if len(set(explicit)) != 1:
+            return None, None, None
+        kind, year = explicit[0]
+        month, day = {'Q1': (3, 31), 'H1': (6, 30), '9M': (9, 30), 'FY': (12, 31)}[kind]
+        return date(int(year), 1, 1).isoformat(), date(int(year), month, day).isoformat(), kind
+    if (re.search(r'three.month|(?:3|три)\s+месяц', heading)
+            and not re.search(r'six.month|nine.month|(?:6|9|шесть|девять)\s+месяц|полугод', heading)
+            and not re.search(r'31\s*(?:март|march)|31[./]03', heading)):
+        # Отдельные Q2/Q3/Q4 не являются накопленными H1/9M/FY.
+        return None, None, None
+    years = set(re.findall(r'\b20\d{2}\b', heading))
     # Несколько лет часто означают сравнительные колонки; титул требует ручного уточнения.
     if len(years) != 1:
         return None, None, None
     year = int(next(iter(years)))
     patterns = [('9M', r'9\s*(?:месяц|months)|девять\s+месяц|nine.month|30\s*(?:сентябр|september)|30[./]09'),
                 ('H1', r'полугод|6\s*(?:месяц|months)|шесть\s+месяц|six.month|half.year|1[ -]?h|h1|30\s*(?:июн|june)|30[./]06'),
-                ('Q1', r'3\s*(?:месяц|months)|три\s+месяц|three.month|перв[а-я]*\s+квартал|first.quarter|q1|31\s*(?:март|march)|31[./]03'),
+                ('Q1', r'перв[а-я]*\s+квартал|first.quarter|q1|31\s*(?:март|march)|31[./]03'),
                 ('FY', r'годов|annual|за\s+20\d{2}\s*год|for.the.year|31\s*(?:декабр|december)|31[./]12')]
-    kinds = {kind for kind, pattern in patterns if re.search(pattern, text)}
+    kinds = {kind for kind, pattern in patterns if re.search(pattern, heading)}
     # Годовой отчёт не становится промежуточным из-за упоминания сопоставимых периодов.
     if len(kinds) != 1:
         return None, None, None

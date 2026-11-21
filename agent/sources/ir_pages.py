@@ -182,7 +182,7 @@ def monitor(conn: sqlite3.Connection, companies: list[dict], directory: Path, *,
     if max_downloads < 1:
         raise ValueError('Лимит загрузок должен быть положительным')
     report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'pages': [], 'files': []}
-    remaining = max_downloads
+    queue = []
     for company in companies:
         with conn:
             conn.execute('INSERT OR IGNORE INTO companies (ticker,name) VALUES (?,?)', (company['ticker'], company['name']))
@@ -205,21 +205,22 @@ def monitor(conn: sqlite3.Connection, companies: list[dict], directory: Path, *,
                 if snapshot['is_baseline']:
                     continue
                 rows = conn.execute('SELECT * FROM ir_links WHERE page_id=? AND last_seen_at=? '
-                                    "AND (state IN ('pending','error') OR ?) ORDER BY "
-                                    "CASE WHEN state='pending' THEN 0 WHEN state='error' THEN 1 ELSE 2 END,last_fetched_at,id",
+                                    "AND (state IN ('pending','error') OR ?)",
                                     (page_id, now, recheck_known)).fetchall()
-                count = min(remaining, len(rows))
-                for row in rows[:count]:
-                    report['files'].append({'ticker': company['ticker'], **process_link(
-                        conn, row, company_id=company_id, recognition=page['recognition'], directory=directory,
-                        allowed_hosts=hosts, now=now, downloader=downloader)})
-                remaining -= count
-                item['deferred'] = len(rows) - count
+                item['deferred'] = len(rows)
+                queue.extend((row, company_id, company['ticker'], page['recognition'], hosts, now, item) for row in rows)
             except (requests.RequestException, ValueError, OSError, RuntimeError) as error:
                 item['error'] = f'{type(error).__name__}: {error}'
                 with conn:
                     conn.execute('UPDATE ir_pages SET last_checked_at=?,last_error=? WHERE id=?', (now, item['error'], page_id))
                 report['pages'].append(item)
+    # Общая очередь не даёт первой большой странице постоянно вытеснять остальные при аудите.
+    queue.sort(key=lambda task: (task[0]['state'] != 'pending', task[0]['last_fetched_at'] or '', task[0]['id']))
+    for row, company_id, ticker, recognition, hosts, now, item in queue[:max_downloads]:
+        report['files'].append({'ticker': ticker, **process_link(
+            conn, row, company_id=company_id, recognition=recognition, directory=directory,
+            allowed_hosts=hosts, now=now, downloader=downloader)})
+        item['deferred'] -= 1
     report['ok'] = (all(p['status'] == 'ok' and not p.get('deferred') for p in report['pages'])
                     and all(f['status'] != 'error' for f in report['files']))
     return report

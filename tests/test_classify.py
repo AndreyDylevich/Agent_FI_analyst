@@ -40,9 +40,24 @@ def test_first_page_press_release_overrides_link_ifrs_label():
     assert result.doc_type == 'press_release'
 
 
-def test_unknown_or_ambiguous_period_needs_review():
+def test_publication_year_does_not_replace_explicit_report_year():
     result = classify('Бухгалтерская отчетность за 2025 год, опубликовано 01.04.2026')
-    assert result.standard == 'RSBU' and result.period_end is None and result.needs_review
+    assert result.standard == 'RSBU' and result.period_end == '2025-12-31'
+
+
+def test_ambiguous_period_needs_review():
+    assert classify('Бухгалтерская отчетность за 2025 год и за 2024 год').period_end is None
+
+
+def test_press_release_comparative_table_does_not_replace_heading_period():
+    text = 'Компания объявляет результаты по МСФО за 1 полугодие 2026 г. ' + 'Текст. '*100
+    text += 'Данные МСФО, 6м 2026, 6м 2025'
+    result = classify('', text, recognition='pdf_first_page')
+    assert result.period_end == '2026-06-30' and result.doc_type == 'press_release'
+
+
+def test_three_months_ended_september_are_not_first_quarter():
+    assert classify('IFRS financial statements for the three months ended 30 September 2026').period_type is None
 
 
 def test_simultaneous_standards_not_guessed():

@@ -14,7 +14,7 @@ from agent.sources.ir_pages import discover_links, monitor
 
 
 def run_check(output: Path, companies: list[dict]) -> dict:
-    """Скрывает 1–2 реальные ссылки в первом снимке и возвращает их во втором.
+    """Скрывает 1–3 реальные ссылки в первом снимке и возвращает их во втором.
 
     Это контролируемое воспроизведение, а не утверждение, что эмитент опубликовал документ во время
     проверки. В первом прогоне PDF не скачиваются; во втором скачиваются реальные документы;
@@ -48,7 +48,7 @@ def run_check(output: Path, companies: list[dict]) -> dict:
         for standard in ('IFRS', 'RSBU'):
             selected += [link for link in links if classify_document(link.title).standard == standard][:1]
         if not selected:
-            selected = links[:2]
+            selected = links[:3]
         selected = selected[:len(links)-1]
         withheld[url] = [link.url for link in selected]
         filtered = [link for link in links if link not in selected]

@@ -136,3 +136,25 @@ def test_future_schema_version_is_not_overwritten(tmp_path):
     with pytest.raises(ValueError, match='Неподдерживаемая версия'):
         init_db(path)
     assert path.read_bytes() == before
+
+
+def test_v2_to_v3_migration_preserves_documents_and_financial_rows(tmp_path):
+    from pathlib import Path
+
+    path = tmp_path/'v2.db'
+    old = sqlite3.connect(path)
+    old.executescript((Path(__file__).parent/'fixtures'/'schema_v1.sql').read_text())
+    old.execute('ALTER TABLE source_values ADD COLUMN cash_flow_section TEXT')
+    old.execute("INSERT INTO meta VALUES ('schema_version','2')")
+    old.execute("INSERT INTO companies (id,ticker,name,inn) VALUES (1,'TEST','Тест','0000000000')")
+    add_value(old, '123')
+    old.execute("INSERT INTO documents (company_id,url,sha256,status) VALUES (1,'https://example.test/old.pdf','abc','downloaded')")
+    old.commit()
+    old.close()
+    migrated = init_db(path)
+    assert migrated.execute('SELECT value FROM source_values').fetchone()[0] == '123'
+    assert migrated.execute('SELECT sha256 FROM documents').fetchone()[0] == 'abc'
+    assert migrated.execute('SELECT inn FROM companies').fetchone()[0] == '0000000000'
+    assert migrated.execute('SELECT count(*) FROM ir_pages').fetchone()[0] == 0
+    assert migrated.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()[0] == '3'
+    migrated.close()

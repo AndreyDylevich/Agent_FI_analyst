@@ -202,3 +202,38 @@ def test_parser_relative_queries_nested_text_duplicates_and_untrusted_hosts():
 def test_empty_or_only_unsafe_pdf_is_not_baseline():
     with pytest.raises(ValueError):
         discover_links('<a href="https://evil.test/a.pdf">Отчёт</a>', PAGE, {'example.test'})
+
+
+def test_audit_limit_eventually_reaches_other_company(conn, tmp_path):
+    site = Site(tmp_path)
+    companies = [COMPANY, {**COMPANY, 'ticker': 'SECOND', 'ir_pages': [{'url': 'https://second.test/', 'recognition': 'link_text'}]}]
+    def fetch(url, hosts):
+        return html('a', 'b'), url
+    monitor(conn, companies, tmp_path, fetcher=fetch)
+    for _ in range(4):
+        monitor(conn, companies, tmp_path, fetcher=fetch, downloader=site.download,
+                recheck_known=True, max_downloads=1)
+    assert {urlsplit_host(url) for url, _ in site.calls} == {'example.test', 'second.test'}
+
+
+def urlsplit_host(url):
+    from urllib.parse import urlsplit
+    return urlsplit(url).hostname
+
+
+def test_cli_persists_baseline_and_reports_source_error_without_losing_history(monkeypatch, tmp_path):
+    from agent.tools import monitor_ir
+    site = Site(tmp_path)
+    monkeypatch.setattr(monitor_ir.config, 'load', lambda name: {'companies': [COMPANY]})
+    real_monitor = monitor_ir.monitor
+    monkeypatch.setattr(monitor_ir, 'monitor', lambda conn, companies, directory, **kw:
+                        real_monitor(conn, companies, directory, fetcher=site.fetch, downloader=site.download, **kw))
+    args = ['--db', str(tmp_path/'cli.db'), '--files', str(tmp_path/'pdf'), '--output', str(tmp_path/'result.json')]
+    assert monitor_ir.main(args) == 0
+    result = json.loads((tmp_path/'result.json').read_text())
+    assert result['pages'][0]['is_baseline']
+    site.error = True
+    assert monitor_ir.main(args) == 1
+    connection = init_db(tmp_path/'cli.db')
+    assert connection.execute('SELECT count(*) FROM ir_links').fetchone()[0] == 1
+    connection.close()
