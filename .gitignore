@@ -6,3 +6,4 @@ __pycache__/
 
 # Результаты сетевой диагностики (PDF и протоколы — артефакты Actions)
 /validation/
+/data/documents/

@@ -1,0 +1,26 @@
+name: Проверка IR-источников
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Проверить реальные страницы и загрузку PDF в отдельной БД
+        run: python -m agent.tools.check_ir --output validation/ir
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ir-source-check
+          path: validation/ir/
+          retention-days: 14

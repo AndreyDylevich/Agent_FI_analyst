@@ -15,6 +15,7 @@ companies:
     ir_pages:
       - url: https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost
         recognition: link_text
+        allowed_hosts: [moskva.mts.ru, static.mts.ru]
     standards: [IFRS, RSBU]
     industry:
       id: telecom
@@ -33,6 +34,7 @@ companies:
     ir_pages:
       - url: https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting
         recognition: link_text   # в папке /IFRS/ лежит и РСБУ — тип только по тексту ссылки
+        allowed_hosts: [www.mvideoeldorado.ru, mvideoeldorado.ru]
     standards: [IFRS, RSBU]
     industry:
       id: retail
@@ -49,6 +51,7 @@ companies:
     ir_pages:
       - url: https://segezha-group.com/investors/report/financial-results/
         recognition: pdf_first_page   # у ссылок нет текста; пресс-релизы и отчётность вперемешку
+        allowed_hosts: [segezha-group.com, www.segezha-group.com]
     standards: [IFRS, RSBU]
     industry:
       id: forestry

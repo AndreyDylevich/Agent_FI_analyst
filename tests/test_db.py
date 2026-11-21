@@ -31,7 +31,7 @@ def test_all_tables_created(tmp_path):
     assert set(TABLES) <= names
     views = {r["name"] for r in conn.execute("SELECT name FROM sqlite_master WHERE type = 'view'")}
     assert "source_values_current" in views
-    assert conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()["value"] == "2"
+    assert conn.execute("SELECT value FROM meta WHERE key = 'schema_version'").fetchone()["value"] == "3"
 
 
 def test_init_db_is_idempotent(tmp_path):
@@ -109,7 +109,7 @@ def test_schema_v1_migration_preserves_sources_history_and_results(tmp_path):
     original_sources = [dict(row) for row in old.execute('SELECT * FROM source_values ORDER BY id')]
     old.close()
     migrated = init_db(path)
-    assert migrated.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()[0] == '2'
+    assert migrated.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()[0] == '3'
     rows = migrated.execute('SELECT * FROM source_values ORDER BY id').fetchall()
     assert [dict(row) for row in rows] == [dict(row, cash_flow_section=None) for row in original_sources]
     assert rows[0]['superseded_by'] == b

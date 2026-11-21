@@ -1,0 +1,63 @@
+name: Мониторинг IR вручную
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: 'Тикер (пусто — весь watchlist)'
+        type: choice
+        options: ['', MTSS, MVID, SGZH]
+      recheck_known:
+        description: 'Проверить замену PDF по прежним URL (включая архив базовой линии)'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: agent-database
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Проверить IR-страницы
+        env:
+          SELECTED_TICKER: ${{ inputs.ticker }}
+          RECHECK_KNOWN: ${{ inputs.recheck_known }}
+        shell: bash
+        run: |
+          args=()
+          if [[ -n "$SELECTED_TICKER" ]]; then args+=(--ticker "$SELECTED_TICKER"); fi
+          if [[ "$RECHECK_KNOWN" == 'true' ]]; then args+=(--recheck-known); fi
+          python -m agent.tools.monitor_ir --output validation/monitor/ir.json "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ir-monitor-result
+          path: |
+            validation/monitor/
+            data/documents/
+          retention-days: 30
+      - name: Сохранить очередь и историю SQLite, в том числе при ошибке источника
+        if: ${{ always() && !cancelled() }}
+        shell: bash
+        run: |
+          if [[ -f data/agent.db ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/agent.db
+            if ! git diff --cached --quiet; then
+              git commit -m 'Сохранить состояние мониторинга IR'
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+          fi

@@ -13,7 +13,7 @@ import sqlite3
 from pathlib import Path
 
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "agent.db"
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS meta (
@@ -54,6 +54,45 @@ CREATE TABLE IF NOT EXISTS documents (
     UNIQUE (url, sha256)
 );
 CREATE INDEX IF NOT EXISTS ix_documents_company_url ON documents(company_id, url);
+
+-- Состояние каждого источника отдельно: сбой страницы не создаёт ложную базовую линию.
+CREATE TABLE IF NOT EXISTS ir_pages (
+    id INTEGER PRIMARY KEY,
+    company_id INTEGER NOT NULL REFERENCES companies(id),
+    url TEXT NOT NULL,
+    initialized_at TEXT,
+    last_checked_at TEXT,
+    last_error TEXT,
+    UNIQUE(company_id, url)
+);
+CREATE TABLE IF NOT EXISTS ir_links (
+    id INTEGER PRIMARY KEY,
+    page_id INTEGER NOT NULL REFERENCES ir_pages(id),
+    url TEXT NOT NULL,
+    title TEXT NOT NULL,
+    first_seen_at TEXT NOT NULL,
+    last_seen_at TEXT NOT NULL,
+    last_fetched_at TEXT,
+    state TEXT NOT NULL CHECK(state IN ('baseline', 'pending', 'ready', 'error')),
+    document_id INTEGER REFERENCES documents(id),
+    etag TEXT,
+    last_modified TEXT,
+    last_error TEXT,
+    UNIQUE(page_id, url)
+);
+-- Каждая версия сохраняется; ссылка может позже указывать на другой файл.
+CREATE TABLE IF NOT EXISTS ir_observations (
+    id INTEGER PRIMARY KEY,
+    link_id INTEGER NOT NULL REFERENCES ir_links(id),
+    document_id INTEGER NOT NULL REFERENCES documents(id),
+    observed_at TEXT NOT NULL,
+    UNIQUE(link_id, document_id)
+);
+CREATE TABLE IF NOT EXISTS document_classifications (
+    document_id INTEGER PRIMARY KEY REFERENCES documents(id),
+    version INTEGER NOT NULL,
+    evidence TEXT NOT NULL
+);
 
 -- Отрасль компании: история предложений и подтверждений, не перезапись.
 CREATE TABLE IF NOT EXISTS company_industry (
@@ -172,7 +211,8 @@ CREATE TABLE IF NOT EXISTS alerts (
 
 TABLES = (
     "meta", "companies", "documents", "company_industry", "source_values",
-    "metric_values", "metric_inputs", "market_data", "alerts",
+    "metric_values", "metric_inputs", "market_data", "alerts", "ir_pages", "ir_links",
+    "ir_observations", "document_classifications",
 )
 
 
@@ -185,7 +225,7 @@ def init_db(path: Path | str = DB_PATH) -> sqlite3.Connection:
     # Не менять базу от более новой версии приложения.
     if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='meta'").fetchone():
         version = conn.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
-        if version and version[0] not in ("1", SCHEMA_VERSION):
+        if version and version[0] not in ("1", "2", SCHEMA_VERSION):
             conn.close()
             raise ValueError(f"Неподдерживаемая версия схемы: {version[0]}")
     conn.executescript(SCHEMA)
