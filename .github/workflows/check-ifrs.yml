@@ -1,0 +1,50 @@
+name: Проверка извлечения МСФО
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Загрузить официальный PDF МСФО МТС 1П2026
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from agent.sources.files import download_pdf
+          from agent.tools.check_gigachat import download_certificate
+          out=Path('validation/ifrs');out.mkdir(parents=True,exist_ok=True)
+          download_certificate(out/'root.cer')
+          source='https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf'
+          pdf=download_pdf(source,out/'pdf',{'static.mts.ru'})
+          (out/'source.json').write_text(json.dumps({'url':source,'sha256':pdf.sha256,'pages':pdf.pages}))
+          (out/'selected_path.txt').write_text(pdf.path)
+          PY
+      - name: Извлечь баланс, проверить и сохранить в отдельной SQLite
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+        shell: bash
+        run: |
+          python -m agent.tools.extract_ifrs "$(cat validation/ifrs/selected_path.txt)" \
+            --ticker MTSS --year 2026 --period H1 --db validation/ifrs/check.db \
+            --source-url https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf \
+            --certificate validation/ifrs/root.cer --output validation/ifrs/extraction --sections balance \
+            --item total_assets --item current_assets --item non_current_assets \
+            --item equity_total --item non_current_liabilities --item current_liabilities \
+            --item total_equity_and_liabilities --metric current_ratio
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-extraction-check
+          path: validation/ifrs/
+          retention-days: 14
