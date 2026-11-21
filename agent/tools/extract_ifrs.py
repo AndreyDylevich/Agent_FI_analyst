@@ -36,6 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--ocr', action='store_true')
     parser.add_argument('--max-ocr-pages', type=int, default=20)
     parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
+    parser.add_argument('--compact-contract',action='store_true',help='ИИ возвращает значения по фиксированным ключам статья/дата')
     args = parser.parse_args(argv)
     if args.output.exists() and any(args.output.iterdir()):
         parser.error('Каталог вывода должен быть новым/пустым: история ответов не перезаписывается')
@@ -55,6 +56,7 @@ def main(argv: list[str] | None = None) -> int:
         with GigaChatProvider.from_env(args.certificate) as provider:
             options = {'sections': tuple(args.sections)} if args.sections else {}
             if args.reuse_from:options['reuse_from']=tuple(args.reuse_from)
+            if args.compact_contract:options['compact']=True
             run = extract_pdf(text, provider, ticker=args.ticker, entity_token=entity_token, period=period,
                               line_items=items, output=args.output, **options)
         report.update(pdf_sha256=run.pdf_sha256, batches=run.batches, contexts=run.contexts,

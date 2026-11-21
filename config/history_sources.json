@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "discovered_at": "2026-11-22",
+  "purpose": "Кандидаты годовой истории. Подпись/атрибут/имя файла не подтверждают стандарт, период, сопоставимость и финансовые значения.",
+  "documents": [
+    {
+      "ticker": "MTSS",
+      "expected_year": 2021,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
+      "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2021 г.",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2022,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_21_22_rus.pdf",
+      "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2022 г.",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2023,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_22_23_r.pdf",
+      "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2023 г.",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2024,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_23-24-r_05.03_final_processed.pdf",
+      "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» по состоянию на 31.12.2024 г.",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2025,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+      "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» по состоянию на 31.12.2025 г.",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2023,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_FY_2023/IFRS_FY2023_RUS.pdf",
+      "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
+      "discovery_hint": "Консолидированная финансовая отчетность специального назначения ПАО «М.видео» за год, закончившийся 31 декабря 2023 года 31.12.2023",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2024,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-finansovaya-otchetnost-pa-mvideo-za-024.pdf",
+      "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
+      "discovery_hint": "Консолидированная финансовая отчетность ПАО «М.видео» за 2024 год 30.12.2024",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2025,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+      "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
+      "discovery_hint": "Консолидированная финансовая отчетность ПАО «М.видео» за 2025 год 31.12.2025",
+      "discovery_basis": "IR link text; document verification required"
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2021,
+      "source_url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
+      "source_page": "https://segezha-group.com/investors/report/financial-results/",
+      "discovery_hint": "Segezha_IFRS_Cons_FS_2021-rus_signed.pdf",
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2022,
+      "source_url": "https://segezha-group.com/upload/iblock/91d/0r3xa6k330atuj72rx7prs6hbixb65st.pdf",
+      "source_page": "https://segezha-group.com/investors/report/financial-results/",
+      "discovery_hint": "Segezha_IFRS_Cons_FS_2022-rus (issued).pdf",
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2023,
+      "source_url": "https://segezha-group.com/upload/iblock/399/6ve7zm02as87k84ecttdmefp48n1yhu1.pdf",
+      "source_page": "https://segezha-group.com/investors/report/financial-results/",
+      "discovery_hint": "Segezha_IFRS_Cons_SP_FS_2023-r_signed.pdf",
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2024,
+      "source_url": "https://segezha-group.com/upload/iblock/38d/6yw7bqqt7e2b5jwtp6wh2b3tlnm629ej.pdf",
+      "source_page": "https://segezha-group.com/investors/report/financial-results/",
+      "discovery_hint": "Финансовая отчетность_Segezha_IFRS_Cons_SP_FS_24-rus_signed.pdf",
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2025,
+      "source_url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
+      "source_page": "https://segezha-group.com/investors/report/financial-results/",
+      "discovery_hint": "Segezha_IFRS_Cons_SP_FS_25-r.pdf",
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+    }
+  ],
+  "known_gaps": [
+    {
+      "ticker": "MVID",
+      "years": [
+        2021,
+        2022
+      ],
+      "reason": "Отдельные годовые PDF этих лет не найдены в текущей IR-базовой линии. Сравнительные колонки более поздних отчётов требуют отдельного извлечения/проверки."
+    }
+  ]
+}

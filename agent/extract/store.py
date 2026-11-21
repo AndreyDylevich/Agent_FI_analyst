@@ -55,6 +55,7 @@ def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: st
                                'column_header': fact.column_header, 'unit_evidence': asdict(fact.unit_evidence),
                                'raw_value': fact.raw_value, 'number_format': fact.number_format,
                                'model_raw_value':fact.model_raw_value,
+                               'model_observation_key':fact.model_observation_key,
                                'text_method': 'ocr' if fact.from_ocr else 'native',
                                'extraction_sha256': digest, 'fact_index': index}, ensure_ascii=False)
         conn.execute('INSERT INTO source_values (company_id,item_id,original_name,value,unit,value_norm,currency,'

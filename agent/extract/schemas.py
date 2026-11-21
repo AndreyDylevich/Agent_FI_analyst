@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 9
+VERSION = 10
 
 
 def _object(properties: dict) -> dict:
@@ -208,6 +208,7 @@ class ExtractedFact:
     cash_flow_section: str | None
     from_ocr: bool
     model_raw_value: str | None = None
+    model_observation_key: str | None = None
 
 
 @dataclass(frozen=True)

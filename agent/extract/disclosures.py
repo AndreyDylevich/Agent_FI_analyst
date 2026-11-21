@@ -77,7 +77,9 @@ def parse_disclosures(content: str, pages) -> tuple[Disclosure,...]:
 
 def extract_disclosures(pdf: PDFText,provider: ExtractionProvider,*,output: Path) -> dict:
     """Тематические страницы с продолжениями; один повтор при неверном адресе, история сохраняется."""
+    if output.exists() and any(output.iterdir()):raise ValueError('Каталог раскрытий не должен содержать прежние файлы')
     output.mkdir(parents=True,exist_ok=True)
+    (output/'pages.json').write_text(json.dumps(asdict(pdf),ensure_ascii=False,indent=2)+'\n')
     selected=find_sections(pdf)
     numbers={n for topic in ('basis','perimeter','leases','interest','debt','segments') for n in selected.groups[topic]}
     pages=tuple(p for p in pdf.pages if p.number in numbers)

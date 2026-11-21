@@ -1,0 +1,29 @@
+name: Загрузка годового архива МСФО
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Скачать 13 кандидатов годовой истории в отдельную БД
+        run: >-
+          python -m agent.tools.backfill_ifrs --db validation/history/check.db
+          --files validation/history/pdf --output validation/history/history_check.json
+          --from-year 2021 --through-year 2025 --max-downloads 20
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-history-download
+          path: validation/history/
+          retention-days: 14

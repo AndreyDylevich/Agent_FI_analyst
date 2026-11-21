@@ -61,7 +61,7 @@ jobs:
             --item eq_closing_total --item eq_closing_parent --item eq_closing_nci --item eq_profit_total \
             --item eq_profit_parent --item eq_profit_nci --item net_profit --item net_profit_parent \
             --item net_profit_nci \
-            --metric current_ratio "${reuse_args[@]}"
+            --metric current_ratio --compact-contract "${reuse_args[@]}"
       - name: Сверить 42 значения и статусы с независимым эталоном
         run: >-
           python -m agent.tools.verify_ifrs_reference --db validation/equity/check.db

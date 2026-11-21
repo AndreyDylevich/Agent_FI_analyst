@@ -45,7 +45,7 @@ jobs:
             --item note_lease_current --item note_lease_noncurrent --item note_interest_borrowings --item note_interest_leases \
             --item note_interest_unwinding --item note_interest_total --item note_finance_other_expense --item note_finance_expense_gross \
             --item note_capitalized_interest_expense --item note_finance_modification_expense --item note_finance_expense_net \
-            --metric current_ratio
+            --metric current_ratio --compact-contract
       - name: Сверить 46 значений и статусы с независимым эталоном
         run: >-
           python -m agent.tools.verify_ifrs_reference --db validation/notes/check.db

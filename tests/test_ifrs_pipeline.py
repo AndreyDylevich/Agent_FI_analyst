@@ -155,6 +155,19 @@ def test_provider_timeout_still_leaves_request_audit(tmp_path):
     assert not list(tmp_path.glob('batch*.json'))
 
 
+def test_incomplete_model_text_is_audited_without_becoming_facts(tmp_path):
+    from agent.extract.llm import IncompleteResponse
+    class Partial:
+        def extract(self,*args):raise IncompleteResponse(Completion('{"facts":[','model-v1',123),'length')
+    with pytest.raises(IncompleteResponse):
+        extract_pdf(pipeline_pdf(),Partial(),ticker='TEST',entity_token='Тест',period=PERIOD,
+                    line_items={'total_assets':config.line_items()['total_assets']},output=tmp_path,sections=('balance',))
+    attempts=json.loads((tmp_path/'attempts.json').read_text())
+    assert attempts[0]['finish_reason']=='length' and not attempts[0]['accepted']
+    assert (tmp_path/attempts[0]['file']).read_text()=='{"facts":['
+    assert (tmp_path/'pages.json').exists()
+
+
 def test_equity_reconciles_same_dates_and_profit_without_assuming_movements():
     source = parse(payload()).facts[0]
     rows = tuple(replace(source, item_id=key, normalized=D(value), value=D(value), statement=form,

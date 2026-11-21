@@ -41,7 +41,7 @@ class ResponseCache:
                 if hashlib.sha256(content.encode()).hexdigest()!=record.get('response_sha256'):
                     raise ValueError('Контрольная сумма сохранённого ответа модели не совпадает')
                 data=json.loads(content)
-                item_ids=frozenset(row['item_id'] for row in data['facts'])
+                item_ids=frozenset(record['item_ids']) if record.get('item_ids') else frozenset(row['item_id'] for row in data['facts'])
                 self.entries.append(CachedResponse(Completion(content,record['model'],0),record,str(path),item_ids))
 
     def take(self, target_pages: set[int], item_ids: set[str], page_hash: str, has_ocr: bool):

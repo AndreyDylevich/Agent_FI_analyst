@@ -45,6 +45,15 @@ def test_truncated_response_rejected(provider):
         provider.extract('Инструкция', 'Текст', {})
 
 
+def test_incomplete_response_reason_and_model_text_retained_without_http_headers(provider):
+    provider.client.finish='blacklist'
+    with pytest.raises(llm.IncompleteResponse) as error:
+        provider.extract('Инструкция','Текст',{})
+    assert error.value.reason=='blacklist'
+    assert error.value.completion.content=='{"status":"ready"}'
+    assert 'SECRET' not in str(error.value)
+
+
 def test_sdk_exception_does_not_expose_key(provider):
     def bad(*a): raise RuntimeError('Authorization: SECRET')
     provider.client.chat = bad

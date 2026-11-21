@@ -28,6 +28,15 @@ class Completion:
     tokens: int
 
 
+class IncompleteResponse(ProviderError):
+    """Незавершённый текст модели можно сохранить в аудит, но нельзя принимать как извлечение."""
+
+    def __init__(self,completion: Completion,reason: str):
+        self.completion=completion
+        self.reason=reason if reason in ('length','blacklist','function_call','error') else 'unknown'
+        super().__init__(f'Модель не завершила JSON-ответ полностью: {self.reason}')
+
+
 class ExtractionProvider(Protocol):
     def extract(self, system: str, text: str, schema: dict) -> Completion:
         """Возвращает JSON-строку; статус проверки никогда не задаётся моделью."""
@@ -79,9 +88,12 @@ class GigaChatProvider:
                 model=MODEL, messages=[Messages(role=MessagesRole.SYSTEM, content=system),
                                        Messages(role=MessagesRole.USER, content=text)],
                 temperature=0, max_tokens=12000, response_format={'type': 'json_schema', 'schema': schema, 'strict': True}))
-            if len(result.choices) != 1 or result.choices[0].finish_reason != 'stop':
-                raise ProviderError('Модель не завершила JSON-ответ полностью')
+            if len(result.choices) != 1:
+                raise ProviderError('Модель вернула неоднозначное количество ответов')
             content = result.choices[0].message.content
+            if result.choices[0].finish_reason != 'stop':
+                raise IncompleteResponse(Completion(content if isinstance(content,str) else '',result.model,
+                                                     result.usage.total_tokens),result.choices[0].finish_reason)
             if not isinstance(content, str) or not content.strip():
                 raise ProviderError('Модель не вернула текст JSON')
             return Completion(content, result.model, result.usage.total_tokens)

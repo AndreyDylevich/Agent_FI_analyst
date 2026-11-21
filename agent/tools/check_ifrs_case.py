@@ -39,6 +39,7 @@ def main(argv=None) -> int:
                  '--source-url',reference['source_url'],'--db',str(db_path),'--output',str(args.output/'extraction'),
                  '--sections',*case['sections'],'--metric','current_ratio']
         for item in items:command.extend(['--item',item])
+        if case.get('compact',True):command.append('--compact-contract')
         if case.get('ocr'):command.extend(['--ocr','--max-ocr-pages',str(case.get('max_ocr_pages',50))])
         code=extract_main(command)
         if code:
