@@ -1,0 +1,293 @@
+{
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "25 значений ОПУ/ОДДС переписаны из физических страниц 7/10/11 независимо от LLM. Знаки и даты сохранены; прочерк текущей HFS-корректировки не заменён нулём.",
+  "rows": [
+    {
+      "item_id": "net_profit",
+      "value": "75858",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "75858000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "74030",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "74030000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "1828",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1828000000"
+    },
+    {
+      "item_id": "net_profit",
+      "value": "8867",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8867000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "7695",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "7695000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "1172",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1172000000"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "value": "75858",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "75858000000"
+    },
+    {
+      "item_id": "cfo",
+      "value": "-1595",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        10
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-1595000000"
+    },
+    {
+      "item_id": "cfi",
+      "value": "-43806",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        10
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-43806000000"
+    },
+    {
+      "item_id": "cff",
+      "value": "32216",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        11
+      ],
+      "status": "не_проверено",
+      "normalized_value": "32216000000"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "value": "-294",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        11
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-294000000"
+    },
+    {
+      "item_id": "cf_cash_change",
+      "value": "-13479",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-13479000000"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "value": "8867",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8867000000"
+    },
+    {
+      "item_id": "cfo",
+      "value": "117071",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        10
+      ],
+      "status": "не_проверено",
+      "normalized_value": "117071000000"
+    },
+    {
+      "item_id": "cfi",
+      "value": "-191574",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        10
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-191574000000"
+    },
+    {
+      "item_id": "cff",
+      "value": "36347",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "не_проверено",
+      "normalized_value": "36347000000"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "value": "-311",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-311000000"
+    },
+    {
+      "item_id": "cf_cash_change",
+      "value": "-38467",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-38467000000"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "value": "77966",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "77966000000"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "value": "109776",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "109776000000"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "value": "64487",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64487000000"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "value": "71309",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "71309000000"
+    },
+    {
+      "item_id": "cf_cash_held_for_sale",
+      "value": "-55",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "55000000"
+    },
+    {
+      "item_id": "cf_cash_closing_after_hfs",
+      "value": "64487",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        11
+      ],
+      "status": "не_проверено",
+      "normalized_value": "64487000000"
+    },
+    {
+      "item_id": "cf_cash_closing_after_hfs",
+      "value": "71254",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "71254000000"
+    }
+  ],
+  "checks_required": [
+    "profit_attribution",
+    "profit_vs_cash_flow_base",
+    "cash_rollforward",
+    "cash_held_for_sale_bridge"
+  ],
+  "limitation": "Числа CFO/CFI/CFF/FX сверены эталоном, но полный состав корректировок не подтверждён универсальной автоматикой. Их статусы в БД автоматически не повышаются."
+}

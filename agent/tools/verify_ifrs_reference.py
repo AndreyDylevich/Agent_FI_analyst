@@ -10,6 +10,8 @@ from pathlib import Path
 
 def verify(conn: sqlite3.Connection, reference: dict) -> dict:
     """Проверяет конкретный эталон; не означает проверки всех данных отчётности."""
+    if 'rows' in reference:
+        return verify_statements(conn,reference)
     results = []
     for end, values in reference['raw_values_decimal'].items():
         for item, expected in values.items():
@@ -31,6 +33,27 @@ def verify(conn: sqlite3.Connection, reference: dict) -> dict:
     return {'all_selected_values_verified': all(r['passed'] for r in results), 'selected_values': results,
             'current_ratio_verified': ratio_passed, 'financial_audit_complete': False,
             'ok': all(r['passed'] for r in results) and ratio_passed}
+
+
+def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
+    """Сверка выбранных строк/статусов нескольких форм; не изменяет статусы в БД."""
+    results=[]
+    for expected in reference['rows']:
+        rows=conn.execute("SELECT s.*,d.sha256 FROM source_values s JOIN documents d ON d.id=s.document_id "
+                          "WHERE s.item_id=? AND s.period_start IS ? AND s.period_end=? AND s.standard='IFRS' AND s.scope='group'",
+                          (expected['item_id'],expected['start'],expected['end'])).fetchall()
+        passed=bool(rows) and all(row['sha256']==reference['pdf_sha256'] and row['unit']==reference['unit']
+                                and row['check_status']==expected['status'] and Decimal(row['value'])==Decimal(expected['value'])
+                                and Decimal(row['value_norm'])==Decimal(expected.get('normalized_value',str(Decimal(expected['value'])*Decimal(reference['multiplier']))))
+                                and json.loads(row['location'])['page'] in expected['pages'] for row in rows)
+        results.append({'item_id':expected['item_id'],'period_end':expected['end'],'passed':passed})
+    contexts=[json.loads(row[0]) for row in conn.execute("SELECT value FROM meta WHERE key LIKE 'ifrs_extraction:%'")]
+    checks=[check for context in contexts for check in context['checks']]
+    check_results={name:any(check['rule']==name and check['result']['status']=='пройдено' for check in checks)
+                   for name in reference['checks_required']}
+    return {'all_selected_values_verified':all(r['passed'] for r in results),'selected_values':results,
+            'checks':check_results,'financial_audit_complete':False,
+            'ok':all(r['passed'] for r in results) and all(check_results.values())}
 
 
 def main(argv: list[str] | None = None) -> int:

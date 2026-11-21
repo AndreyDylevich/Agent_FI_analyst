@@ -3,14 +3,15 @@
 import json
 import re
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, timedelta
 from decimal import Decimal
 
 from agent.extract.pdf_text import Page
+from agent.config import is_stock
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 3
+VERSION = 4
 
 
 def _object(properties: dict) -> dict:
@@ -22,16 +23,16 @@ NULLABLE_STRING = {'type': ['string', 'null']}
 CITATION = _object({'page': {'type': 'integer'}, 'quote': STRING})
 
 
-def extraction_schema(item_ids: list[str], *, stock_only: bool = False) -> dict:
+def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_only: bool = False) -> dict:
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
                     'raw_value': STRING,
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': CITATION, 'evidence': CITATION,
-                    'column_header': {'type': 'string', 'pattern': '^20[0-9]{2}$'} if stock_only else STRING,
-                    'period_start': {'type': 'null'} if stock_only else NULLABLE_STRING, 'period_end': STRING,
-                    'period_type': {'type': 'string', 'enum': ['AT_DATE'] if stock_only else ['AT_DATE', 'FY', 'Q1', 'H1', '9M']},
+                    'column_header': {'type': 'string', 'pattern': '^20[0-9]{2}$'},
+                    'period_start': {'type': 'null'} if stock_only else (STRING if flow_only else NULLABLE_STRING), 'period_end': STRING,
+                    'period_type': {'type': 'string', 'enum': ['AT_DATE'] if stock_only else (['FY', 'Q1', 'H1', '9M'] if flow_only else ['AT_DATE', 'FY', 'Q1', 'H1', '9M'])},
                     'statement': {'type': 'string', 'enum': ['balance', 'income', 'cash_flow', 'notes', 'equity']},
                     'cash_flow_section': {'type': ['string', 'null'],
                                           'enum': [None, 'operating', 'investing', 'financing', 'mixed']}})
@@ -217,13 +218,21 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Отрицательная строка не подтверждает положительный налоговый доход')
         start = date.fromisoformat(row['period_start']) if row['period_start'] is not None else None
         end = date.fromisoformat(row['period_end'])
-        if end > period.end or str(end.year) not in row['column_header']:
-            raise ValueError('Дата колонки не подтверждает период значения')
-        if (item['statement'] == 'balance') != (start is None):
+        column_year = end.year + 1 if item.get('date_role') == 'cash_opening' else end.year
+        if end > period.end or str(column_year) not in row['column_header']:
+            raise ValueError(f'{item_id}: дата {end} требует года колонки {column_year}; проверь reporting_windows/cash_stock_dates')
+        if is_stock(item) != (start is None):
             raise ValueError('Остаток/поток не соответствует периоду статьи')
+        if item.get('date_role'):
+            windows = (period, period.shift_years(-1))
+            allowed_dates = {w.start - timedelta(days=1) if item['date_role']=='cash_opening' else w.end for w in windows}
+            if end not in allowed_dates:
+                raise ValueError('Дата остатка ОДДС не соответствует началу/концу отчётного окна')
         if start:
             Period(start, end, row['period_type'])
             kind = row['period_type']
+            if (start,end,kind) not in {(w.start,w.end,w.kind) for w in (period,period.shift_years(-1))}:
+                raise ValueError('Поток не относится к отчётному или аналогичному сравнительному окну')
         else:
             kind = row['period_type']
             if kind == 'AT_DATE':
@@ -235,7 +244,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         if row['statement'] not in allowed:
             raise ValueError('Статья извлечена из несовместимой формы')
         section = row['cash_flow_section']
-        if section not in (None, 'operating', 'investing', 'financing', 'mixed') or (section and item['statement'] != 'cash_flow'):
+        if section not in (None, 'operating', 'investing', 'financing', 'mixed') or (section and (item['statement'] != 'cash_flow' or is_stock(item))):
             raise ValueError('Несогласованный раздел ОДДС')
         key = (item_id, start, end, section)
         if key in seen:
@@ -243,7 +252,8 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         seen.add(key)
         facts.append(ExtractedFact(item_id, name, raw, row['number_format'], value, normalize_money(str(value), unit, item['sign']), unit,
                                    start, end, kind, row['statement'], evidence, unit_evidence,
-                                   row['column_header'], section, by_number[evidence.page].method == 'ocr'))
+                                   row['column_header'], section,
+                                   any(by_number[c.page].method == 'ocr' for c in (evidence, unit_evidence, *contexts.values()))))
     if not isinstance(data['warnings'], list) or any(not isinstance(w, str) for w in data['warnings']):
         raise ValueError('Неверный список ограничений извлечения')
     return Extraction({k: v for k, v in data.items() if k not in ('facts', 'warnings')}, tuple(facts), tuple(data['warnings']))

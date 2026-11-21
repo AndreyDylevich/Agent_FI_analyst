@@ -22,3 +22,8 @@ def line_items() -> dict[str, dict[str, Any]]:
 def industries() -> dict[str, dict[str, Any]]:
     """Справочник отраслей: id → описание отрасли."""
     return {ind["id"]: ind for ind in load("industries")["industries"]}
+
+
+def is_stock(item: dict[str, Any]) -> bool:
+    """Остаток определяется природой величины, а не только названием формы (деньги начала ОДДС)."""
+    return item.get('value_kind', 'stock' if item['statement'] == 'balance' else 'flow') == 'stock'

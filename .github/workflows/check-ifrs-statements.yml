@@ -1,0 +1,52 @@
+name: Проверка ОПУ и ОДДС МСФО
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Получить официальный PDF МТС 1П2026
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from agent.sources.files import download_pdf
+          out=Path('validation/statements');out.mkdir(parents=True,exist_ok=True)
+          source='https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf'
+          pdf=download_pdf(source,out/'pdf',{'static.mts.ru'})
+          (out/'selected_path.txt').write_text(pdf.path)
+          PY
+      - name: Извлечь прибыль и сверки денежных средств в отдельной SQLite
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+        shell: bash
+        run: |
+          python -m agent.tools.extract_ifrs "$(cat validation/statements/selected_path.txt)" \
+            --ticker MTSS --year 2026 --period H1 --db validation/statements/check.db \
+            --source-url https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf \
+            --output validation/statements/extraction --sections income cash_flow \
+            --item net_profit --item net_profit_parent --item net_profit_nci \
+            --item cf_starting_net_profit --item cfo --item cfi --item cff --item cf_fx_effect --item cf_cash_change \
+            --item cf_cash_opening --item cf_cash_closing_gross --item cf_cash_held_for_sale --item cf_cash_closing_after_hfs \
+            --metric current_ratio
+      - name: Сверить 25 значений и статусы с независимым эталоном
+        run: >-
+          python -m agent.tools.verify_ifrs_reference --db validation/statements/check.db
+          --reference tests/fixtures/ifrs/mts_h1_2026_statements_reference.json
+          --output validation/statements/reference_check.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-statements-check
+          path: validation/statements/
+          retention-days: 14

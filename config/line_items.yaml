@@ -504,3 +504,100 @@ items:
       ru: [Погашение кредитов и займов, Погашение облигаций]
       en: [Repayment of borrowings, Repayment of bonds]
     rsbu_codes: []
+
+  # ---------- Контрольные статьи МСФО; не расчётные показатели ----------
+  - id: net_profit_nci
+    statement: income
+    name: Прибыль за период, приходящаяся на неконтролирующие доли
+    sign: natural
+    ifrs_synonyms:
+      ru: [Прибыль доле неконтролирующих акционеров, Неконтролирующим долям участия]
+      en: [Profit attributable to non-controlling interests]
+    rsbu_codes: []
+
+  - id: cf_starting_net_profit
+    statement: cash_flow
+    name: Чистая прибыль в начале косвенной сверки CFO
+    sign: natural
+    notes: Только прибыль за период. Прибыль до налога или операционная прибыль — другие базы.
+    ifrs_synonyms:
+      ru: [Прибыль за период, Чистая прибыль за период]
+      en: [Profit for the period, Net profit]
+    rsbu_codes: []
+
+  - id: cf_cash_change
+    statement: cash_flow
+    name: Изменение денег, включая валютный эффект и все корректировки ОДДС
+    sign: natural
+    notes: Не подменять изменением до валютного эффекта; извлекать только раскрытый итог.
+    ifrs_synonyms:
+      ru: [Чистое уменьшение денежных средств и их эквивалентов, Чистое увеличение денежных средств и их эквивалентов]
+      en: [Net decrease in cash and cash equivalents, Net increase in cash and cash equivalents]
+    rsbu_codes: []
+
+  - id: cf_fx_effect
+    statement: cash_flow
+    name: Валютный эффект на деньги в ОДДС
+    sign: natural
+    ifrs_synonyms:
+      ru: [Эффект изменения обменного курса на остаток денежных средств и их эквивалентов]
+      en: [Effect of exchange rate changes on cash and cash equivalents]
+    rsbu_codes: []
+
+  - id: cf_other_cash_changes
+    statement: cash_flow
+    name: Прочие отдельно раскрытые изменения денег вне CFO/CFI/CFF и валютного эффекта
+    sign: natural
+    notes: Только явный агрегат прочих изменений; отсутствие не равно нулю.
+    ifrs_synonyms:
+      ru: [Прочие изменения денежных средств]
+      en: [Other changes in cash and cash equivalents]
+    rsbu_codes: []
+
+  - id: cf_cash_opening
+    statement: cash_flow
+    value_kind: stock
+    date_role: cash_opening
+    name: Деньги на начало периода ОДДС
+    sign: natural
+    notes: Остаток на день до начала потока; не суммируется как поток в LTM.
+    ifrs_synonyms:
+      ru: [Денежные средства и их эквиваленты на начало периода]
+      en: [Cash and cash equivalents at the beginning of the period]
+    rsbu_codes: []
+
+  - id: cf_cash_closing_gross
+    statement: cash_flow
+    value_kind: stock
+    date_role: cash_closing
+    name: Деньги на конец периода ОДДС до корректировок состава
+    sign: natural
+    notes: Итог rollforward, включая деньги активов для продажи, если так раскрыто; не равен автоматически строке баланса.
+    ifrs_synonyms:
+      ru: [Денежные средства и их эквиваленты на конец периода включая активы для продажи]
+      en: [Cash and cash equivalents at the end of the period including held for sale]
+    rsbu_codes: []
+
+  - id: cf_cash_held_for_sale
+    statement: cash_flow
+    value_kind: stock
+    date_role: cash_closing
+    name: Деньги активов для продажи в сверке ОДДС
+    sign: outflow
+    notes: Вычитаемая корректировка состава; прочерк не извлекать как ноль.
+    ifrs_synonyms:
+      ru: [За минусом денежных средств и их эквивалентов в составе активов для продажи]
+      en: [Less cash and cash equivalents in assets held for sale]
+    rsbu_codes: []
+
+  - id: cf_cash_closing_after_hfs
+    statement: cash_flow
+    value_kind: stock
+    date_role: cash_closing
+    name: Конечные деньги ОДДС после исключения денег активов для продажи
+    sign: natural
+    notes: Не подтверждает остальные различия состава с балансом (например, овердрафт) без отдельной сверки.
+    ifrs_synonyms:
+      ru: [Денежные средства и их эквиваленты на конец периода после корректировки]
+      en: [Cash and cash equivalents at the end after held-for-sale adjustment]
+    rsbu_codes: []

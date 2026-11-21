@@ -78,7 +78,7 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
 
 HEADINGS = {
     'balance': r'отчет.{0,80}финансовом положении|statement.{0,80}financial position',
-    'income': r'отчет.{0,80}(?:прибылях|совокупном доходе)|statement.{0,80}(?:profit|income)',
+    'income': r'отчет.{0,80}прибылях|statement.{0,80}(?:profit|income)',
     'cash_flow': r'отчет.{0,80}движении денежных средств|statement.{0,80}cash flows',
     'equity': r'отчет.{0,80}изменени.{0,15}капитал|statement.{0,80}changes in equity',
     'debt': r'кредиты и займы|заемные средства|loans and borrowings|lease liabilities|обязательства по аренде',

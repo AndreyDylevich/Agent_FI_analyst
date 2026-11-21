@@ -273,7 +273,8 @@ def validate_registry(line_items: Mapping[str, Mapping[str, Any]]) -> list[str]:
                 continue
             item_id = d.input_items.get(name, name)
             if item_id in line_items:
-                is_stock = line_items[item_id]["statement"] == "balance"
+                from agent.config import is_stock as item_is_stock
+                is_stock = item_is_stock(line_items[item_id])
             elif item_id in REGISTRY:
                 is_stock = REGISTRY[item_id].result_period in STOCK_RULES
             else:

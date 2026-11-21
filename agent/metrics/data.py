@@ -4,6 +4,7 @@ import sqlite3
 from datetime import date
 from decimal import Decimal
 
+from agent.config import is_stock
 from agent.metrics.engine import Fact, Period
 
 UNIT_MULTIPLIERS = {"руб.": Decimal("1"), "тыс. руб.": Decimal("1000"), "млн руб.": Decimal("1000000")}
@@ -53,7 +54,7 @@ def load_facts(
             raise ValueError(f"source_values.id={row['id']}: нормализованное значение не совпадает с исходным")
         start = date.fromisoformat(row["period_start"]) if row["period_start"] else None
         end = date.fromisoformat(row["period_end"])
-        if (item["statement"] == "balance") != (start is None):
+        if is_stock(item) != (start is None):
             raise ValueError(f"source_values.id={row['id']}: остаток/поток не соответствует периоду")
         if start is not None:
             Period(start, end, row["period_type"])
