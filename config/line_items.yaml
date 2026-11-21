@@ -1,6 +1,7 @@
 # Канонические статьи отчётности: id → синонимы в МСФО (рус./англ.) и коды РСБУ (Приказ Минфина №66н).
 #
-# statement:    balance / income / cash_flow
+# statement:    balance / income / cash_flow / equity
+# source_forms: формы, где фактически раскрыта статья (если отличаются от statement).
 # sign:         как хранить нормализованное значение (value_norm):
 #                 natural — со знаком, как по смыслу статьи (прибыль может быть отрицательной);
 #                 outflow — расход / отток хранится положительной величиной (в отчёте часто в скобках);
@@ -317,6 +318,7 @@ items:
 
   - id: d_and_a
     statement: income
+    source_forms: [income, cash_flow]
     name: Амортизация (ОС, НМА, права пользования)
     sign: outflow
     notes: Источник — ОДДС (корректировки) или примечания. В основных формах РСБУ нет.
@@ -600,4 +602,107 @@ items:
     ifrs_synonyms:
       ru: [Денежные средства и их эквиваленты на конец периода после корректировки]
       en: [Cash and cash equivalents at the end after held-for-sale adjustment]
+    rsbu_codes: []
+
+  # Отчёт об изменениях капитала: самостоятельные источники для сверок с балансом/ОПУ.
+  - id: eq_opening_total
+    statement: equity
+    value_kind: stock
+    date_role: period_opening
+    name: Итого капитал на начало периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Итого капитал]
+      en: [Balance, Total equity]
+    rsbu_codes: []
+
+  - id: eq_closing_total
+    statement: equity
+    value_kind: stock
+    date_role: period_closing
+    name: Итого капитал на конец периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Итого капитал]
+      en: [Balance, Total equity]
+    rsbu_codes: []
+
+  - id: eq_opening_parent
+    statement: equity
+    value_kind: stock
+    date_role: period_opening
+    name: Капитал акционеров Компании на начало периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Капитал акционеров Компании]
+      en: [Balance, Equity attributable to owners]
+    rsbu_codes: []
+
+  - id: eq_closing_parent
+    statement: equity
+    value_kind: stock
+    date_role: period_closing
+    name: Капитал акционеров Компании на конец периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Капитал акционеров Компании]
+      en: [Balance, Equity attributable to owners]
+    rsbu_codes: []
+
+  - id: eq_opening_nci
+    statement: equity
+    value_kind: stock
+    date_role: period_opening
+    name: Неконтролирующие доли на начало периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Неконтролирующие доли]
+      en: [Balance, Non-controlling interests]
+    rsbu_codes: []
+
+  - id: eq_closing_nci
+    statement: equity
+    value_kind: stock
+    date_role: period_closing
+    name: Неконтролирующие доли на конец периода из отчёта об изменениях капитала
+    sign: natural
+    notes: Только соответствующая колонка капитала; количество акций не денежная величина. Остаток, не поток.
+    ifrs_synonyms:
+      ru: [Сальдо, Неконтролирующие доли]
+      en: [Balance, Non-controlling interests]
+    rsbu_codes: []
+
+  - id: eq_profit_total
+    statement: equity
+    name: Прибыль за период всей группы из отчёта об изменениях капитала
+    sign: natural
+    notes: Только строка прибыли за период и соответствующая колонка; не совокупный доход.
+    ifrs_synonyms:
+      ru: [Прибыль за период]
+      en: [Profit for the period]
+    rsbu_codes: []
+
+  - id: eq_profit_parent
+    statement: equity
+    name: Прибыль за период акционеров материнской компании из отчёта об изменениях капитала
+    sign: natural
+    notes: Только строка прибыли за период и соответствующая колонка; не совокупный доход.
+    ifrs_synonyms:
+      ru: [Прибыль за период]
+      en: [Profit for the period]
+    rsbu_codes: []
+
+  - id: eq_profit_nci
+    statement: equity
+    name: Прибыль за период неконтролирующих участников из отчёта об изменениях капитала
+    sign: natural
+    notes: Только строка прибыли за период и соответствующая колонка; не совокупный доход.
+    ifrs_synonyms:
+      ru: [Прибыль за период]
+      en: [Profit for the period]
     rsbu_codes: []

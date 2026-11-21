@@ -7,7 +7,7 @@ from datetime import date, timedelta
 from decimal import Decimal
 
 from agent.extract.pdf_text import Page
-from agent.config import is_stock
+from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
@@ -28,7 +28,7 @@ def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_onl
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
     reference = _object({**CITATION['properties'], 'page': {'type':'integer','enum':page_numbers}}) if page_numbers else CITATION
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
-                    'raw_value': {'type': 'string', 'pattern': r'^[+\-−]?[0-9][0-9 .,\u00a0\u202f]*$|^\([0-9][0-9 .,\u00a0\u202f]*\)$'},
+                    'raw_value': {'type': 'string', 'pattern': '[0-9]'},
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': reference, 'evidence': reference,
@@ -240,16 +240,16 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Отрицательная строка не подтверждает положительный налоговый доход')
         start = date.fromisoformat(row['period_start']) if row['period_start'] is not None else None
         end = date.fromisoformat(row['period_end'])
-        column_year = end.year + 1 if item.get('date_role') == 'cash_opening' else end.year
+        column_year = end.year + 1 if opening_stock(item) else end.year
         if end > period.end or str(column_year) not in row['column_header']:
             raise ValueError(f'{item_id}: дата {end} требует года колонки {column_year}; проверь reporting_windows/cash_stock_dates')
         if is_stock(item) != (start is None):
             raise ValueError('Остаток/поток не соответствует периоду статьи')
         if item.get('date_role'):
             windows = (period, period.shift_years(-1))
-            allowed_dates = {w.start - timedelta(days=1) if item['date_role']=='cash_opening' else w.end for w in windows}
+            allowed_dates = {w.start - timedelta(days=1) if opening_stock(item) else w.end for w in windows}
             if end not in allowed_dates:
-                raise ValueError('Дата остатка ОДДС не соответствует началу/концу отчётного окна')
+                raise ValueError('Дата остатка не соответствует началу/концу отчётного окна')
         if start:
             Period(start, end, row['period_type'])
             kind = row['period_type']
@@ -260,7 +260,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             if kind == 'AT_DATE':
                 kind = {(3,31):'Q1',(6,30):'H1',(9,30):'9M',(12,31):'FY'}.get((end.month,end.day))
             Period(date(end.year, 1, 1), end, kind)
-        allowed = {item['statement'], 'notes'}
+        allowed = {item['statement'], 'notes', *source_forms(item)}
         if item_id == 'd_and_a':
             allowed.add('cash_flow')
         if row['statement'] not in allowed:

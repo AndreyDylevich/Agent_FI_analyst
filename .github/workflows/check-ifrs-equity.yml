@@ -1,0 +1,55 @@
+name: Проверка капитала между формами МСФО
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Получить официальный PDF МТС 1П2026
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from agent.sources.files import download_pdf
+          out=Path('validation/equity');out.mkdir(parents=True,exist_ok=True)
+          source='https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf'
+          pdf=download_pdf(source,out/'pdf',{'static.mts.ru'})
+          (out/'selected_path.txt').write_text(pdf.path)
+          PY
+      - name: Извлечь капитал и прибыль в отдельной SQLite
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+        shell: bash
+        run: |
+          python -m agent.tools.extract_ifrs "$(cat validation/equity/selected_path.txt)" \
+            --ticker MTSS --year 2026 --period H1 --db validation/equity/check.db \
+            --source-url https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf \
+            --output validation/equity/extraction --sections balance income equity \
+            --item total_assets --item non_current_assets --item current_assets --item equity_total \
+            --item non_current_liabilities --item current_liabilities --item total_equity_and_liabilities --item equity_parent \
+            --item non_controlling_interests --item eq_opening_total --item eq_opening_parent --item eq_opening_nci \
+            --item eq_closing_total --item eq_closing_parent --item eq_closing_nci --item eq_profit_total \
+            --item eq_profit_parent --item eq_profit_nci --item net_profit --item net_profit_parent \
+            --item net_profit_nci \
+            --metric current_ratio
+      - name: Сверить 42 значения и статусы с независимым эталоном
+        run: >-
+          python -m agent.tools.verify_ifrs_reference --db validation/equity/check.db
+          --reference tests/fixtures/ifrs/mts_h1_2026_equity_reference.json
+          --output validation/equity/reference_check.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-equity-check
+          path: validation/equity/
+          retention-days: 14

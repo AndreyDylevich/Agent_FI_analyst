@@ -174,6 +174,8 @@ def parse_snapshot(
     checks = _checks(correction)
     rows = []
     for item_id, item in line_items.items():
+        if not item.get('rsbu_codes'):
+            continue
         form, _ = FORMS[item['statement']]
         fields = correction.get(form) or {}
         for code in item.get('rsbu_codes', []):

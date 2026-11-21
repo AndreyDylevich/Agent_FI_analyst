@@ -137,3 +137,39 @@ def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path)
     assert len(provider.calls) == 2
     attempts = json.loads((tmp_path/'attempts.json').read_text())
     assert len(attempts) == 2 and all(a['accepted'] is False for a in attempts)
+
+
+def test_equity_reconciles_same_dates_and_profit_without_assuming_movements():
+    source = parse(payload()).facts[0]
+    rows = tuple(replace(source, item_id=key, normalized=D(value), value=D(value), statement=form,
+                         start=PERIOD.start if flow else None) for key,value,form,flow in [
+        ('equity_total','34662','balance',False), ('equity_parent','4142','balance',False),
+        ('non_controlling_interests','30520','balance',False),
+        ('eq_closing_total','34662','equity',False), ('eq_closing_parent','4142','equity',False),
+        ('eq_closing_nci','30520','equity',False),
+        ('net_profit','75858','income',True), ('eq_profit_total','75858','equity',True),
+        ('eq_profit_parent','74030','equity',True), ('eq_profit_nci','1828','equity',True)])
+    checks, statuses = validate_financials(rows)
+    passed = {c.rule for c in checks if c.result.status=='пройдено'}
+    assert {'equity_attribution','eq_closing_attribution','eq_closing_total_vs_balance',
+            'eq_closing_parent_vs_balance','eq_closing_nci_vs_balance','profit_vs_equity',
+            'eq_profit_attribution'} <= passed
+    assert set(statuses)=={'проверено_авто'}
+    # Отсутствие движения капитала не превращается в доказательство полного rollforward.
+    assert not any('rollforward' in rule for rule in passed)
+    changed = (*rows[:3],replace(rows[3], normalized=D('38000000')), *rows[4:])
+    _, statuses = validate_financials(changed)
+    assert statuses[0]==statuses[3]=='расхождение'
+
+
+def test_amortization_can_be_requested_from_cash_flow(tmp_path):
+    label='Амортизация основных средств, НМА и прав пользования'
+    data=pipeline_answer();data['facts'][0].update(item_id='d_and_a', original_name=label,
+        raw_value='100',evidence={'page':2,'quote':label+' 100'},statement='cash_flow',
+        period_start='2026-01-01',period_type='H1')
+    pdf=PDFText('a'*64,(Page(1,TEXT),Page(2,'Консолидированный отчет о движении денежных средств\n'+TEXT+'\n'+label+' 100')))
+    provider=Provider([data])
+    run=extract_pdf(pdf,provider,ticker='TEST',entity_token='Тест',period=PERIOD,
+                    line_items={'d_and_a':config.line_items()['d_and_a']},output=tmp_path,sections=('cash_flow',))
+    assert len(provider.calls)==1 and run.facts[0].item_id=='d_and_a'
+    assert set(provider.calls[0]['line_items'])=={'d_and_a'}

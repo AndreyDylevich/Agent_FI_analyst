@@ -1,0 +1,484 @@
+{
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "42 значения переписаны из PDF, физические страницы 5/6/7/9 просмотрены визуально. Эталон не получен из ответа LLM. Полный мост движения капитала не подтверждён.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "value": "1835600",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1835600000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "1183681",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1183681000000"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "651919",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "651919000000"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "34662",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "34662000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "480620",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "480620000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "1320318",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1320318000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "1835600",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1835600000000"
+    },
+    {
+      "item_id": "total_assets",
+      "value": "1768424",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1768424000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "value": "1152576",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1152576000000"
+    },
+    {
+      "item_id": "current_assets",
+      "value": "615848",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "615848000000"
+    },
+    {
+      "item_id": "equity_total",
+      "value": "16958",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "16958000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "value": "450572",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "450572000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "value": "1300894",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1300894000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "value": "1768424",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1768424000000"
+    },
+    {
+      "item_id": "equity_parent",
+      "value": "4142",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "4142000000"
+    },
+    {
+      "item_id": "non_controlling_interests",
+      "value": "30520",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "30520000000"
+    },
+    {
+      "item_id": "equity_parent",
+      "value": "-11717",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-11717000000"
+    },
+    {
+      "item_id": "non_controlling_interests",
+      "value": "28675",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "28675000000"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "value": "11234",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "11234000000"
+    },
+    {
+      "item_id": "eq_opening_parent",
+      "value": "-37679",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-37679000000"
+    },
+    {
+      "item_id": "eq_opening_nci",
+      "value": "26445",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "26445000000"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "value": "-45293",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-45293000000"
+    },
+    {
+      "item_id": "eq_closing_parent",
+      "value": "-72562",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-72562000000"
+    },
+    {
+      "item_id": "eq_closing_nci",
+      "value": "27269",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "27269000000"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "value": "16958",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "16958000000"
+    },
+    {
+      "item_id": "eq_opening_parent",
+      "value": "-11717",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-11717000000"
+    },
+    {
+      "item_id": "eq_opening_nci",
+      "value": "28675",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "28675000000"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "value": "34662",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "34662000000"
+    },
+    {
+      "item_id": "eq_closing_parent",
+      "value": "4142",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "4142000000"
+    },
+    {
+      "item_id": "eq_closing_nci",
+      "value": "30520",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "30520000000"
+    },
+    {
+      "item_id": "eq_profit_total",
+      "value": "75858",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "75858000000"
+    },
+    {
+      "item_id": "eq_profit_parent",
+      "value": "74030",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "74030000000"
+    },
+    {
+      "item_id": "eq_profit_nci",
+      "value": "1828",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1828000000"
+    },
+    {
+      "item_id": "eq_profit_total",
+      "value": "8867",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8867000000"
+    },
+    {
+      "item_id": "eq_profit_parent",
+      "value": "7695",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "7695000000"
+    },
+    {
+      "item_id": "eq_profit_nci",
+      "value": "1172",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1172000000"
+    },
+    {
+      "item_id": "net_profit",
+      "value": "75858",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "75858000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "74030",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "74030000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "1828",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1828000000"
+    },
+    {
+      "item_id": "net_profit",
+      "value": "8867",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8867000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "7695",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "7695000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "1172",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1172000000"
+    }
+  ],
+  "checks_required": [
+    "equity_attribution",
+    "eq_opening_attribution",
+    "eq_closing_attribution",
+    "eq_profit_attribution",
+    "profit_vs_equity",
+    "profit_parent_vs_equity",
+    "profit_nci_vs_equity",
+    "eq_opening_total_vs_balance",
+    "eq_closing_total_vs_balance"
+  ]
+}

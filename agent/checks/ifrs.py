@@ -16,7 +16,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 2
+    version: int = 3
 
 
 RULES = {
@@ -26,10 +26,22 @@ RULES = {
     'gross_profit': {'revenue': 1, 'cost_of_sales': -1, 'gross_profit': -1},
     'profit_attribution': {'net_profit':1, 'net_profit_parent':-1, 'net_profit_nci':-1},
     'profit_vs_cash_flow_base': {'net_profit':1, 'cf_starting_net_profit':-1},
+    'equity_attribution': {'equity_total':1, 'equity_parent':-1, 'non_controlling_interests':-1},
+    'eq_opening_attribution': {'eq_opening_total':1, 'eq_opening_parent':-1, 'eq_opening_nci':-1},
+    'eq_closing_attribution': {'eq_closing_total':1, 'eq_closing_parent':-1, 'eq_closing_nci':-1},
+    'eq_profit_attribution': {'eq_profit_total':1, 'eq_profit_parent':-1, 'eq_profit_nci':-1},
+    'profit_vs_equity': {'net_profit':1, 'eq_profit_total':-1},
+    'profit_parent_vs_equity': {'net_profit_parent':1, 'eq_profit_parent':-1},
+    'profit_nci_vs_equity': {'net_profit_nci':1, 'eq_profit_nci':-1},
     'cash_held_for_sale_bridge': {'cf_cash_closing_gross':1, 'cf_cash_held_for_sale':-1, 'cf_cash_closing_after_hfs':-1},
     'debt_components': {'debt_long_term': 1, 'debt_short_term': 1, 'bank_loans': -1, 'bonds': -1, 'other_borrowings': -1},
 }
-FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base'}
+FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base','eq_profit_attribution',
+              'profit_vs_equity','profit_parent_vs_equity','profit_nci_vs_equity'}
+# Начало/конец отчёта об изменениях капитала сверяются с балансом НА ТУ ЖЕ дату.
+for _role in ('opening', 'closing'):
+    for _component, _balance_id in (('total','equity_total'),('parent','equity_parent'),('nci','non_controlling_interests')):
+        RULES[f'eq_{_role}_{_component}_vs_balance'] = {_balance_id:1, f'eq_{_role}_{_component}':-1}
 
 
 def _apply_check(name, start, end, terms, by_item, facts, statuses):

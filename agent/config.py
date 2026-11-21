@@ -27,3 +27,13 @@ def industries() -> dict[str, dict[str, Any]]:
 def is_stock(item: dict[str, Any]) -> bool:
     """Остаток определяется природой величины, а не только названием формы (деньги начала ОДДС)."""
     return item.get('value_kind', 'stock' if item['statement'] == 'balance' else 'flow') == 'stock'
+
+
+def source_forms(item: dict[str, Any]) -> tuple[str, ...]:
+    """Где искать статью: форма источника может отличаться от её экономической категории."""
+    return tuple(item.get('source_forms', [item['statement']]))
+
+
+def opening_stock(item: dict[str, Any]) -> bool:
+    """Начальный остаток ОДДС или отчёта об изменениях капитала."""
+    return item.get('date_role') in ('cash_opening', 'period_opening')

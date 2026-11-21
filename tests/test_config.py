@@ -43,7 +43,8 @@ def test_line_items():
     ids = [i["id"] for i in items]
     assert len(set(ids)) == len(ids)
     for item in items:
-        assert item["statement"] in ("balance", "income", "cash_flow"), item["id"]
+        assert item["statement"] in ("balance", "income", "cash_flow", "equity", "notes"), item["id"]
+        assert set(config.source_forms(item)) <= {"balance", "income", "cash_flow", "equity", "notes"}
         assert item["sign"] in ("natural", "outflow"), item["id"]
         assert isinstance(item["rsbu_codes"], list), item["id"]
     codes = [c for i in items for c in i["rsbu_codes"]]
