@@ -183,3 +183,18 @@ def test_line_references_copy_original_text_instead_of_model_quotes():
 def test_invalid_line_reference_not_accepted(ref):
     data=payload();data['facts'][0]['evidence']=ref
     with pytest.raises(ValueError):parse(data)
+
+
+def test_foreign_currency_table_not_silently_treated_as_rubles():
+    data=payload();data['facts'][0]['unit_evidence']={'page':2,'start_line':1,'end_line':1}
+    with pytest.raises(ValueError):
+        parse(data,(Page(1,TEXT),Page(2,'В миллионах долларов США')))
+
+
+def test_partial_interest_payment_not_accepted_as_complete_interest_paid():
+    label='Уплаченные проценты за вычетом процентов, включенных в стоимость внеоборотных активов'
+    data=payload();data['facts'][0].update(item_id='interest_paid',original_name=label,raw_value='(50)',
+                                        evidence=cite(label+' (50)'),period_start='2026-01-01',
+                                        statement='cash_flow',cash_flow_section='operating')
+    with pytest.raises(ValueError,match='частичный платёж'):
+        parse(data,(Page(1,TEXT+'\n'+label+' (50)'),))

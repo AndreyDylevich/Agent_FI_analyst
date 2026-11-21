@@ -11,7 +11,7 @@ from agent.config import is_stock
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 5
+VERSION = 6
 
 
 def _object(properties: dict) -> dict:
@@ -28,7 +28,7 @@ def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_onl
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
     reference = _object({**CITATION['properties'], 'page': {'type':'integer','enum':page_numbers}}) if page_numbers else CITATION
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
-                    'raw_value': STRING,
+                    'raw_value': {'type': 'string', 'pattern': r'^[+\-−]?[0-9][0-9 .,\u00a0\u202f]*$|^\([0-9][0-9 .,\u00a0\u202f]*\)$'},
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': reference, 'evidence': reference,
@@ -226,8 +226,13 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError(f"{item_id}: фрагмент заголовка колонки не найден; используй дословный фрагмент с годом, например '2025', не собирай дату из разнесённых строк")
         if unit not in units or not re.search(units[unit], unit_evidence.quote, re.I):
             raise ValueError('Единица не подтверждена цитатой')
+        if (re.search(r'\busd\b|\beur\b|доллар|евро',unit_evidence.quote,re.I)
+                and not re.search(r'руб|\brub\b|rubl|roubl',unit_evidence.quote,re.I)):
+            raise ValueError('Единица строки выражена в иностранной валюте, а не RUB')
         if unit == 'руб.' and re.search(r'тыс|миллион|млн|thousand|million', unit_evidence.quote, re.I):
             raise ValueError('Исходный масштаб не равен рублям')
+        if item_id=='interest_paid' and re.search(r'за вычетом.{0,160}(?:капитал|стоимост)|(?:net of|excluding).{0,160}capital',quote,re.I):
+            raise ValueError('interest_paid: частичный платёж за вычетом капитализированных процентов нельзя считать полным; пропусти факт и укажи ограничение')
         value = parse_amount(raw, row['number_format'])
         if item_id == 'income_tax' and value > 0 and not re.search(r'расход|expense|charge', name, re.I):
             raise ValueError('Положительная нейтральная строка налога не подтверждает расход; проверь налоговый доход')

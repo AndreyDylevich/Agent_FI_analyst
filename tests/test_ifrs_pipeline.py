@@ -77,8 +77,9 @@ def test_store_is_idempotent_and_keeps_conflicting_history(tmp_path):
 
 
 class Provider:
-    def __init__(self, responses): self.responses = responses; self.calls = []
+    def __init__(self, responses): self.responses = responses; self.calls = []; self.schemas = []
     def extract(self, system, text, schema):
+        self.schemas.append(schema)
         self.calls.append(json.loads(text.split('\nПовторная проверка')[0]))
         return Completion(json.dumps(self.responses.pop(0), ensure_ascii=False), 'test-model', 10)
 
@@ -104,6 +105,27 @@ def test_one_retry_and_original_responses_preserved(tmp_path):
     assert run.batches[0]['accepted'] is False and run.batches[1]['accepted'] is True
     assert provider.calls[0]['target_pages'] == [2]
     assert {p['page'] for p in provider.calls[0]['pages']} == {1,2}
+    assert provider.calls[1]['verified_context']['scope_evidence'] == correct['scope_evidence']
+    assert provider.schemas[1]['properties']['scope_evidence']['enum'] == [correct['scope_evidence']]
+    assert provider.calls[1]['previous_facts'] == wrong['facts']
+
+
+def test_retry_must_not_change_previously_verified_context(tmp_path):
+    wrong = pipeline_answer();wrong['facts'][0]['raw_value'] = '-'
+    changed = pipeline_answer();changed['scope_evidence'] = changed['identity_evidence']
+    provider = Provider([wrong, changed])
+    with pytest.raises(ValueError):
+        extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
+                    line_items=config.line_items(), output=tmp_path, sections=('balance',))
+    assert provider.calls[1]['verified_context']['scope_evidence'] == wrong['scope_evidence']
+
+
+def test_invalid_context_is_not_frozen_on_retry(tmp_path):
+    wrong = pipeline_answer();wrong['scope_evidence'] = wrong['identity_evidence']
+    provider = Provider([wrong, pipeline_answer()])
+    run = extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
+                      line_items=config.line_items(), output=tmp_path, sections=('balance',))
+    assert run.facts and 'verified_context' not in provider.calls[1]
 
 
 def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path):
