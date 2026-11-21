@@ -42,6 +42,11 @@ jobs:
             --item total_assets --item current_assets --item non_current_assets \
             --item equity_total --item non_current_liabilities --item current_liabilities \
             --item total_equity_and_liabilities --metric current_ratio
+      - name: Сверить 14 исходных значений и коэффициент с независимым эталоном
+        run: >-
+          python -m agent.tools.verify_ifrs_reference --db validation/ifrs/check.db
+          --reference tests/fixtures/ifrs/mts_h1_2026_reference.json
+          --output validation/ifrs/reference_check.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
