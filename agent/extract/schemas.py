@@ -11,7 +11,7 @@ from agent.config import is_stock
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 4
+VERSION = 5
 
 
 def _object(properties: dict) -> dict:
@@ -20,29 +20,31 @@ def _object(properties: dict) -> dict:
 
 STRING = {'type': 'string'}
 NULLABLE_STRING = {'type': ['string', 'null']}
-CITATION = _object({'page': {'type': 'integer'}, 'quote': STRING})
+CITATION = _object({'page': {'type': 'integer'}, 'start_line': {'type': 'integer'}, 'end_line': {'type': 'integer'}})
 
 
-def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_only: bool = False) -> dict:
+def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_only: bool = False,
+                      page_numbers: list[int] | None = None) -> dict:
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
+    reference = _object({**CITATION['properties'], 'page': {'type':'integer','enum':page_numbers}}) if page_numbers else CITATION
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
                     'raw_value': STRING,
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
-                    'unit_evidence': CITATION, 'evidence': CITATION,
+                    'unit_evidence': reference, 'evidence': reference,
                     'column_header': {'type': 'string', 'pattern': '^20[0-9]{2}$'},
                     'period_start': {'type': 'null'} if stock_only else (STRING if flow_only else NULLABLE_STRING), 'period_end': STRING,
                     'period_type': {'type': 'string', 'enum': ['AT_DATE'] if stock_only else (['FY', 'Q1', 'H1', '9M'] if flow_only else ['AT_DATE', 'FY', 'Q1', 'H1', '9M'])},
                     'statement': {'type': 'string', 'enum': ['balance', 'income', 'cash_flow', 'notes', 'equity']},
                     'cash_flow_section': {'type': ['string', 'null'],
                                           'enum': [None, 'operating', 'investing', 'financing', 'mixed']}})
-    return _object({'ticker': STRING, 'entity_name': STRING, 'identity_evidence': CITATION,
-                    'standard': {'type': 'string', 'enum': ['IFRS']}, 'standard_evidence': CITATION,
-                    'scope': {'type': 'string', 'enum': ['group']}, 'scope_evidence': CITATION,
-                    'currency': {'type': 'string', 'enum': ['RUB']}, 'currency_evidence': CITATION,
+    return _object({'ticker': STRING, 'entity_name': STRING, 'identity_evidence': reference,
+                    'standard': {'type': 'string', 'enum': ['IFRS']}, 'standard_evidence': reference,
+                    'scope': {'type': 'string', 'enum': ['group']}, 'scope_evidence': reference,
+                    'currency': {'type': 'string', 'enum': ['RUB']}, 'currency_evidence': reference,
                     'period_start': STRING, 'period_end': STRING,
                     'period_type': {'type': 'string', 'enum': ['FY', 'Q1', 'H1', '9M']},
-                    'period_evidence': CITATION, 'facts': {'type': 'array', 'items': fact},
+                    'period_evidence': reference, 'facts': {'type': 'array', 'items': fact},
                     'warnings': {'type': 'array', 'items': STRING}})
 
 
@@ -101,10 +103,23 @@ def _unique_object(pairs):
 class Citation:
     page: int
     quote: str
+    start_line: int | None = None
+    end_line: int | None = None
 
 
 def citation(data: dict, pages: dict[int, Page]) -> Citation:
-    """Цитата должна действительно находиться на переданной физической странице."""
+    """Новая модель возвращает адрес строк, текст копируется Python; старые ответы проверяются дословно."""
+    if isinstance(data,dict) and set(data)=={'page','start_line','end_line'}:
+        number,first,last=data['page'],data['start_line'],data['end_line']
+        if any(type(value) is not int for value in (number,first,last)) or number not in pages or pages[number].method=='unreadable':
+            raise ValueError('Ссылка на отсутствующую/нечитаемую страницу или нецелые номера строк')
+        lines=pages[number].text.splitlines()
+        if not 1<=first<=last<=len(lines) or last-first+1>20:
+            raise ValueError(f'Страница {number}: неверный диапазон строк {first}–{last}, доступно {len(lines)}')
+        quote='\n'.join(lines[first-1:last])
+        if not quote.strip() or len(quote)>4000:
+            raise ValueError('Диапазон не содержит короткой непустой цитаты')
+        return Citation(number,quote,first,last)
     _keys(data, {'page', 'quote'})
     number, quote = data['page'], data['quote']
     if type(number) is not int or number not in pages or pages[number].method == 'unreadable':
@@ -258,4 +273,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
                                    any(by_number[c.page].method == 'ocr' for c in (evidence, unit_evidence, *contexts.values()))))
     if not isinstance(data['warnings'], list) or any(not isinstance(w, str) for w in data['warnings']):
         raise ValueError('Неверный список ограничений извлечения')
-    return Extraction({k: v for k, v in data.items() if k not in ('facts', 'warnings')}, tuple(facts), tuple(data['warnings']))
+    context={k:v for k,v in data.items() if k not in ('facts','warnings')}
+    for key,value in contexts.items():
+        context[key]={'page':value.page,'quote':value.quote,'start_line':value.start_line,'end_line':value.end_line}
+    return Extraction(context, tuple(facts), tuple(data['warnings']))

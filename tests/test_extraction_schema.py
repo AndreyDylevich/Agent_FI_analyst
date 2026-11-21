@@ -156,3 +156,30 @@ def test_column_gap_not_mistaken_for_thousands(left,right,fmt):
     result=parse(data,(Page(1,source),))
     assert result.facts[0].value == D(left.replace(',',''))
     assert '             ' in result.facts[0].evidence.quote
+
+
+def test_line_references_copy_original_text_instead_of_model_quotes():
+    data=payload()
+    def address(evidence):
+        line=next(n for n,text in enumerate(TEXT.splitlines(),1) if evidence['quote'] in text)
+        return {'page':1,'start_line':line,'end_line':line}
+    for key in ('identity_evidence','standard_evidence','scope_evidence','currency_evidence','period_evidence'):
+        data[key]=address(data[key])
+    for key in ('evidence','unit_evidence'):
+        data['facts'][0][key]=address(data['facts'][0][key])
+    result=parse(data)
+    ref=result.facts[0].evidence
+    assert ref.quote==TEXT.splitlines()[ref.start_line-1]
+    assert ref.start_line==ref.end_line
+    assert result.context['identity_evidence']['quote']==TEXT.splitlines()[0]
+
+
+@pytest.mark.parametrize('ref',[{'page':1,'start_line':0,'end_line':1},
+                               {'page':1,'start_line':2,'end_line':1},
+                               {'page':1,'start_line':1,'end_line':999},
+                               {'page':1,'start_line':True,'end_line':1},
+                               {'page':2,'start_line':1,'end_line':1},
+                               {'page':1,'start_line':1,'end_line':1,'quote':'выдумано'}])
+def test_invalid_line_reference_not_accepted(ref):
+    data=payload();data['facts'][0]['evidence']=ref
+    with pytest.raises(ValueError):parse(data)
