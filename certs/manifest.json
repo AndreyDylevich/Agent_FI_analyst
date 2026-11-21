@@ -1,0 +1,8 @@
+{
+  "source": "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt",
+  "verified_download_run": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44908087406",
+  "sha256": "936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504",
+  "subject": "CN=Russian Trusted Root CA,O=The Ministry of Digital Development and Communications,C=RU",
+  "valid_until": "2032-02-27T21:04:15+00:00",
+  "purpose": "Публичный корневой CA. Не ключ API и не закрытый ключ; системное хранилище не изменяется."
+}

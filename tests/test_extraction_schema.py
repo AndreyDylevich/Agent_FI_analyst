@@ -127,3 +127,14 @@ def test_ending_date_alone_does_not_prove_accumulated_period():
     assert not period_is_cited('30 июня 2026 года', PERIOD)
     assert not period_is_cited('За три месяца, закончившихся 30 июня 2026 года', PERIOD)
     assert period_is_cited('За шесть месяцев, закончившихся 30 июня 2026 года', PERIOD)
+
+
+def test_positive_neutral_tax_not_silently_normalized_as_expense():
+    data = payload();row = data['facts'][0]
+    row.update(item_id='income_tax', original_name='Налог на прибыль', raw_value='50',
+               evidence=cite('Налог на прибыль 50'), column_header='2026',
+               period_start='2026-01-01', statement='income')
+    pages = (Page(1,TEXT+'\nНалог на прибыль 50'),)
+    with pytest.raises(ValueError): parse(data,pages)
+    row['item_id'] = 'income_tax_benefit'
+    assert parse(data,pages).facts[0].normalized == D('50000000')

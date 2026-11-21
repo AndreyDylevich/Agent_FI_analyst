@@ -22,14 +22,14 @@ NULLABLE_STRING = {'type': ['string', 'null']}
 CITATION = _object({'page': {'type': 'integer'}, 'quote': STRING})
 
 
-def extraction_schema(item_ids: list[str]) -> dict:
+def extraction_schema(item_ids: list[str], *, stock_only: bool = False) -> dict:
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
                     'raw_value': STRING,
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': CITATION, 'evidence': CITATION, 'column_header': STRING,
-                    'period_start': NULLABLE_STRING, 'period_end': STRING,
+                    'period_start': {'type': 'null'} if stock_only else NULLABLE_STRING, 'period_end': STRING,
                     'period_type': {'type': 'string', 'enum': ['FY', 'Q1', 'H1', '9M']},
                     'statement': {'type': 'string', 'enum': ['balance', 'income', 'cash_flow', 'notes', 'equity']},
                     'cash_flow_section': {'type': ['string', 'null'],
@@ -110,7 +110,9 @@ def citation(data: dict, pages: dict[int, Page]) -> Citation:
     if not isinstance(quote, str) or not quote.strip() or len(quote) > 4000:
         raise ValueError('Нужна непустая короткая цитата')
     if normalized_text(quote) not in normalized_text(pages[number].text):
-        raise ValueError(f'Цитата не найдена на странице {number}')
+        matches = [n for n, page in pages.items() if normalized_text(quote) in normalized_text(page.text)]
+        hint = f'; точное совпадение на странице {matches[0]}' if len(matches) == 1 else ''
+        raise ValueError(f'Цитата не найдена на странице {number}{hint}')
     return Citation(number, quote)
 
 
@@ -190,15 +192,19 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         body = r'(?:\d{1,3}(?:[ ,]\d{3})+|\d+)(?:[.,]\d+)?'
         number_pattern = r'(?<![\w.,])(?:\(' + body + r'\)|[+\-−]?' + body + r')(?![\w.,])'
         tokens = [match.group() for match in re.finditer(number_pattern, quote)]
-        if normalized_text(name) not in quote or normalized_text(raw) not in tokens:
+        if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
             raise ValueError('Подпись/число отсутствуют в цитате строки')
-        if normalized_text(row['column_header']) not in normalized_text(by_number[evidence.page].text):
+        if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
             raise ValueError('Заголовок колонки не найден на странице значения')
         if unit not in units or not re.search(units[unit], unit_evidence.quote, re.I):
             raise ValueError('Единица не подтверждена цитатой')
         if unit == 'руб.' and re.search(r'тыс|миллион|млн|thousand|million', unit_evidence.quote, re.I):
             raise ValueError('Исходный масштаб не равен рублям')
         value = parse_amount(raw, row['number_format'])
+        if item_id == 'income_tax' and value > 0 and not re.search(r'расход|expense|charge', name, re.I):
+            raise ValueError('Положительная нейтральная строка налога не подтверждает расход; проверь налоговый доход')
+        if item_id == 'income_tax_benefit' and value < 0:
+            raise ValueError('Отрицательная строка не подтверждает положительный налоговый доход')
         start = date.fromisoformat(row['period_start']) if row['period_start'] is not None else None
         end = date.fromisoformat(row['period_end'])
         if end > period.end or str(end.year) not in row['column_header']:

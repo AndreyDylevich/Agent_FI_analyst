@@ -24,7 +24,11 @@ SYSTEM = '''Ты извлекаешь данные из официальной �
 как денежную; не извлекай EPS. number_format=comma_grouped_dot_decimal означает запятые тысяч
 (376,772 -> исходное целое); space_grouped_decimal — пробелы тысяч и десятичный разделитель.
 Ничего не нормализуй: это делает Python. unit — масштаб исходной строки, не желаемый масштаб.
-Остаток: period_start=null, период/дата колонки. Поток: начало и конец накопленного периода;
+Остаток: period_start=null (именно JSON null, НЕ 2026-01-01), период/дата колонки.
+Для баланса извлеки ОБЕ колонки: текущую и сравнительную. Пример балансовой записи:
+{"period_start":null,"period_end":"2025-12-31","period_type":"FY","statement":"balance"}.
+Всегда сверяй физическую страницу строки: ИТОГО АКТИВЫ не равно ИТОГО КАПИТАЛ И ОБЯЗАТЕЛЬСТВА.
+Поток: начало и конец накопленного периода;
 отдельный квартал Q2/Q3/Q4 не подменяй накопленным периодом. В column_header укажи точный
 фрагмент заголовка на странице числа с годом соответствующей колонки.
 Не смешивай показатели группы с сегментами или отдельными юрлицами. Сегментные цифры пропускай.
@@ -86,7 +90,8 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
         accepted = None
         for attempt in (1, 2):
             request_text = json.dumps(request, ensure_ascii=False) + feedback
-            completion = provider.extract(SYSTEM, request_text, extraction_schema(list(line_items)))
+            completion = provider.extract(SYSTEM, request_text, extraction_schema(
+                list(line_items), stock_only=all(item['statement'] == 'balance' for item in line_items.values())))
             filename = f'batch_{batch_index}_attempt_{attempt}.json'
             (output/filename).write_text(completion.content, encoding='utf-8')
             record = {'batch': batch_index, 'attempt': attempt, 'target_pages': sorted(target_set),

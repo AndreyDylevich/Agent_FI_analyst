@@ -1,0 +1,41 @@
+{
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "standard": "IFRS",
+  "scope": "group",
+  "unit": "млн руб.",
+  "number_format": "comma_grouped_dot_decimal",
+  "period_start": "2026-01-01",
+  "period_end": "2026-06-30",
+  "source_pages": {
+    "assets": 5,
+    "equity_and_liabilities": 6
+  },
+  "method": "Семь итогов по двум датам переписаны вручную из PDF независимо от LLM/парсера. Коэффициент проверен точной дробью.",
+  "raw_values_decimal": {
+    "2026-06-30": {
+      "total_assets": "1835600",
+      "non_current_assets": "1183681",
+      "current_assets": "651919",
+      "equity_total": "34662",
+      "non_current_liabilities": "480620",
+      "current_liabilities": "1320318",
+      "total_equity_and_liabilities": "1835600"
+    },
+    "2025-12-31": {
+      "total_assets": "1768424",
+      "non_current_assets": "1152576",
+      "current_assets": "615848",
+      "equity_total": "16958",
+      "non_current_liabilities": "450572",
+      "current_liabilities": "1300894",
+      "total_equity_and_liabilities": "1768424"
+    }
+  },
+  "current_ratio_fraction": {
+    "numerator": 651919,
+    "denominator": 1320318
+  },
+  "current_ratio_decimal_60": "0.493759079252119565135065946234164799692195365055994086273155",
+  "limitation": "В группе консолидирован банк; коэффициент не является чистой ликвидностью телеком-бизнеса. Финансовые формы целиком не аудированы."
+}
