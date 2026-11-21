@@ -67,7 +67,8 @@ def main(argv: list[str] | None = None) -> int:
                 # Неисследованные/OCR-строки сохраняются, но в автоматический расчёт не допускаются.
                 checked = [f for f in facts if f.check_status != 'не_проверено']
                 engine = Engine(checked, company_id=imported['company_id'], standard='IFRS', scope='group',
-                                industry_id=company['industry']['id'], industries=config.industries())
+                                industry_id=company['industry']['id'], industries=config.industries(),
+                                require_comparability=True)
                 calculations = []
                 for metric in args.metric or ['current_ratio', 'net_debt', 'revenue_yoy', 'fcf_simple']:
                     result = engine.calculate(metric, period)

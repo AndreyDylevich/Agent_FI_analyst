@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 8
+VERSION = 9
 
 
 def _object(properties: dict) -> dict:
@@ -106,6 +106,16 @@ def source_context(pages: tuple[Page, ...], *, ticker: str, period: Period,
     except (ValueError,TypeError,KeyError):
         return {}
     return root
+
+
+def date_is_cited(text: str, day: date) -> bool:
+    """Дата остатка в подписи строки; пробелы между глифами года не изменяют оригинал PDF."""
+    months={3:r'март[а-я]*|march',6:r'июн[а-я]*|june',9:r'сентябр[а-я]*|september',
+            12:r'декабр[а-я]*|december'}
+    year=r'\s*'.join(str(day.year))
+    word=rf'\b0?{day.day}\s+(?:{months[day.month]})\s+{year}\b'
+    numeric=rf'\b0?{day.day}[./]0?{day.month}[./]{year}\b|\b{day.isoformat()}\b'
+    return bool(re.search(word+'|'+numeric,text,re.I))
 
 
 def parse_amount(raw: str, number_format: str = 'space_grouped_decimal') -> Decimal:
@@ -250,6 +260,10 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         item = line_items[item_id]
         evidence, unit_evidence = citation(row['evidence'], by_number), citation(row['unit_evidence'], by_number)
         name, raw, unit = row['original_name'], row['raw_value'], row['unit']
+        if row['statement']=='equity' and item.get('date_role') in ('period_opening','period_closing'):
+            expected_date=date.fromisoformat(row['period_end'])
+            if not date_is_cited(evidence.quote,expected_date):
+                raise ValueError(f'{item_id}: цитата должна содержать строку САЛЬДО на дату {expected_date}; начало и конец разных годовых блоков нельзя подменять')
         if not all(isinstance(v, str) and v.strip() for v in (name, raw, row['column_header'])):
             raise ValueError('Нужны подпись строки, число и заголовок колонки')
         if raw.strip() in ('-','—','–','n/a','N/A'):

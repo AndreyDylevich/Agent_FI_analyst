@@ -240,3 +240,19 @@ def test_equivalent_source_format_requires_unique_original_representation():
     pages=(Page(1,TEXT.replace('Итого активы 1 234 1 000','Итого активы 1 234 1234')),)
     row.update(evidence=cite('Итого активы 1 234 1234'),raw_value='+1234')
     with pytest.raises(ValueError):parse(data,pages)
+
+
+def test_equity_opening_requires_its_actual_dated_row_not_previous_june_closing():
+    from agent.extract.schemas import date_is_cited
+    assert date_is_cited('Сальдо на 31 декабря 202      4 года',date(2024,12,31))
+    assert not date_is_cited('Сальдо на 30 июня 2025 года',date(2024,12,31))
+    label='Сальдо на 31 декабря 202      4 года'
+    pages=(Page(1,TEXT+'\n'+label+' 11,234\nСальдо на 30 июня 2025 года (45,293)'),)
+    data=payload();row=data['facts'][0]
+    row.update(item_id='eq_opening_total',original_name=label,raw_value='11,234',
+               number_format='comma_grouped_dot_decimal',evidence=cite(label+' 11,234'),
+               statement='equity',period_end='2024-12-31',period_type='AT_DATE',column_header='2025')
+    assert parse(data,pages).facts[0].value==11234
+    row.update(original_name='Сальдо на 30 июня 2025 года',raw_value='(45,293)',
+               evidence=cite('Сальдо на 30 июня 2025 года (45,293)'))
+    with pytest.raises(ValueError,match='САЛЬДО'):parse(data,pages)

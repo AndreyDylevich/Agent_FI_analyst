@@ -1,0 +1,243 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44958392624",
+  "head_sha": "c107b4cfd23b2c5bf39c4cfb4a28c0c1262306a6",
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "reference": "tests/fixtures/ifrs/mts_h1_2026_statements_reference.json",
+  "selected_values_count": 25,
+  "checked_auto_count": 16,
+  "unverified_count": 9,
+  "batches": [
+    {
+      "batch": 1,
+      "attempt": 1,
+      "target_pages": [
+        10,
+        11
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 10,
+      "request_sha256": "ae92f48663505fadead657fdc61a770ff720e9c278fc8e1c59e87ef23ee120a9",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 7563,
+      "response_sha256": "1cc7185b6f231d5239a89cd089fa17e5c73ed327c4b1e4d87bc5d79f76726071",
+      "file": "batch_1_attempt_1.json",
+      "accepted": true
+    },
+    {
+      "batch": 2,
+      "attempt": 1,
+      "target_pages": [
+        7
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 10,
+      "request_sha256": "ad1d3d559f49a07c6b9551d856b80d7330b9db999554709ab9adf762b8fa0dea",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 5296,
+      "response_sha256": "c7b04602a7baf657b5202735705a163410ef1727735bbd6f6bb13f4fc0ddbf0a",
+      "file": "batch_2_attempt_1.json",
+      "accepted": true
+    },
+    {
+      "batch": 3,
+      "attempt": 1,
+      "target_pages": [
+        10,
+        11
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 10,
+      "request_sha256": "e5cb98f21872a53b88ac2ce844a1dc2da45ba534b146136c827be359bbca4e5f",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 9603,
+      "response_sha256": "d7062ca5d0e2249d3a9f396a16a3df3f1ffc97b1c7652e771eaa0a72b932ccc0",
+      "file": "batch_3_attempt_1.json",
+      "accepted": false,
+      "error": "Повтор статьи/периода: нельзя молча складывать итог и компоненты"
+    },
+    {
+      "batch": 3,
+      "attempt": 2,
+      "target_pages": [
+        10,
+        11
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 10,
+      "request_sha256": "6065543d6f8ff3c0010ffae539c1e33d54b4874e60b22f4a382170b4cd7529af",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 11447,
+      "response_sha256": "b1ff2dbaac05e8647a9234b8d051e2e5ef2a0e76c65523636c5e2c9986193bd3",
+      "file": "batch_3_attempt_2.json",
+      "accepted": true
+    }
+  ],
+  "total_tokens": 33909,
+  "reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_held_for_sale",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_after_hfs",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_after_hfs",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "profit_attribution": true,
+      "profit_vs_cash_flow_base": true,
+      "cash_rollforward": true,
+      "cash_held_for_sale_bridge": true
+    },
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "import_result": {
+    "company_id": 1,
+    "document_id": 1,
+    "inserted": 25,
+    "conflicts": [],
+    "run_sha256": "6c336bb9d5fe0136b91ee507a26c749b2a5d8ee8fb2a0638c9d36c0f2ceda92a"
+  },
+  "financial_audit_complete": false,
+  "messages_sent": 0,
+  "limitations": [
+    "Нет полной проверки состава CFO/CFI/CFF и FX.",
+    "Текущий HFS-прочерк не подставлен нулём: полная сверка состава на эту дату не пройдена.",
+    "Текущая ликвидность в этой отдельной БД не рассчитана, поскольку баланс не импортировался.",
+    "Колонка дополнительно принята по независимому эталону/визуальному просмотру; само совпадение цифры в цитате не доказывает выбор колонки."
+  ]
+}

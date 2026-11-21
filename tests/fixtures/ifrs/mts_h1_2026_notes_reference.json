@@ -1,0 +1,530 @@
+{
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "46 значений вручную переписаны из физических страниц 6/18/20/21. Страницы отрендерены и просмотрены. Даты арендного примечания отличаются от сравнительного баланса; начисленные проценты не равны денежным платежам.",
+  "rows": [
+    {
+      "item_id": "debt_long_term",
+      "value": "321871",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "321871000000"
+    },
+    {
+      "item_id": "debt_long_term",
+      "value": "334315",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "334315000000"
+    },
+    {
+      "item_id": "debt_short_term",
+      "value": "394470",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "394470000000"
+    },
+    {
+      "item_id": "debt_short_term",
+      "value": "378742",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "378742000000"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "value": "136810",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "136810000000"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "value": "92364",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "не_проверено",
+      "normalized_value": "92364000000"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "value": "35425",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "35425000000"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "value": "22496",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "status": "не_проверено",
+      "normalized_value": "22496000000"
+    },
+    {
+      "item_id": "note_debt_total",
+      "value": "716341",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "716341000000"
+    },
+    {
+      "item_id": "note_debt_total",
+      "value": "713057",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "713057000000"
+    },
+    {
+      "item_id": "note_debt_current",
+      "value": "-394470",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "394470000000"
+    },
+    {
+      "item_id": "note_debt_current",
+      "value": "-378742",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "378742000000"
+    },
+    {
+      "item_id": "note_debt_noncurrent",
+      "value": "321871",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "321871000000"
+    },
+    {
+      "item_id": "note_debt_noncurrent",
+      "value": "334315",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "334315000000"
+    },
+    {
+      "item_id": "note_loans_and_other_borrowings",
+      "value": "363528",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "363528000000"
+    },
+    {
+      "item_id": "note_loans_and_other_borrowings",
+      "value": "396395",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "396395000000"
+    },
+    {
+      "item_id": "note_bonds",
+      "value": "352813",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "352813000000"
+    },
+    {
+      "item_id": "note_bonds",
+      "value": "316662",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "316662000000"
+    },
+    {
+      "item_id": "note_lease_undiscounted",
+      "value": "285078",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "285078000000"
+    },
+    {
+      "item_id": "note_lease_undiscounted",
+      "value": "185817",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "185817000000"
+    },
+    {
+      "item_id": "note_lease_discount",
+      "value": "-112843",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "112843000000"
+    },
+    {
+      "item_id": "note_lease_discount",
+      "value": "-73282",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "73282000000"
+    },
+    {
+      "item_id": "note_lease_present_value",
+      "value": "172235",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "172235000000"
+    },
+    {
+      "item_id": "note_lease_present_value",
+      "value": "112535",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "112535000000"
+    },
+    {
+      "item_id": "note_lease_current",
+      "value": "-35425",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "35425000000"
+    },
+    {
+      "item_id": "note_lease_current",
+      "value": "-21388",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "21388000000"
+    },
+    {
+      "item_id": "note_lease_noncurrent",
+      "value": "136810",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "136810000000"
+    },
+    {
+      "item_id": "note_lease_noncurrent",
+      "value": "91147",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        21
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "91147000000"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "value": "56180",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "56180000000"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "value": "67413",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "67413000000"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "value": "8289",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8289000000"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "value": "7515",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "7515000000"
+    },
+    {
+      "item_id": "note_interest_unwinding",
+      "value": "360",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "360000000"
+    },
+    {
+      "item_id": "note_interest_unwinding",
+      "value": "250",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "250000000"
+    },
+    {
+      "item_id": "note_interest_total",
+      "value": "64829",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64829000000"
+    },
+    {
+      "item_id": "note_interest_total",
+      "value": "75178",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "75178000000"
+    },
+    {
+      "item_id": "note_finance_other_expense",
+      "value": "3490",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "3490000000"
+    },
+    {
+      "item_id": "note_finance_other_expense",
+      "value": "1408",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1408000000"
+    },
+    {
+      "item_id": "note_finance_expense_gross",
+      "value": "68319",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "68319000000"
+    },
+    {
+      "item_id": "note_finance_expense_gross",
+      "value": "76586",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "76586000000"
+    },
+    {
+      "item_id": "note_capitalized_interest_expense",
+      "value": "-2059",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "2059000000"
+    },
+    {
+      "item_id": "note_capitalized_interest_expense",
+      "value": "-2488",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "2488000000"
+    },
+    {
+      "item_id": "note_finance_modification_expense",
+      "value": "1260",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1260000000"
+    },
+    {
+      "item_id": "note_finance_modification_expense",
+      "value": "65",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "65000000"
+    },
+    {
+      "item_id": "note_finance_expense_net",
+      "value": "67520",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "67520000000"
+    },
+    {
+      "item_id": "note_finance_expense_net",
+      "value": "74163",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "74163000000"
+    }
+  ],
+  "checks_required": [
+    "note_debt_composition",
+    "note_debt_maturity",
+    "note_debt_current_vs_balance",
+    "note_debt_noncurrent_vs_balance",
+    "note_lease_discounting",
+    "note_lease_maturity",
+    "note_lease_current_vs_balance",
+    "note_lease_noncurrent_vs_balance",
+    "note_interest_composition",
+    "note_finance_gross",
+    "note_finance_net"
+  ]
+}

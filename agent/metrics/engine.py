@@ -64,6 +64,10 @@ class Fact:
     check_status: str = "проверено_авто"
     cash_flow_section: str | None = None
     document_id: int | None = None
+    accounting_basis: str | None = None
+    perimeter_basis: str | None = None
+    methodology_version: str | None = None
+    comparison_evidence: str | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.value, Decimal) or not self.value.is_finite():
@@ -108,6 +112,7 @@ class Engine:
     def __init__(
         self, facts: Iterable[Fact], *, company_id: int, standard: str,
         scope: str, industry_id: str, industries: dict, segment_name: str | None = None,
+        require_comparability: bool = False,
     ) -> None:
         if standard not in ("IFRS", "RSBU"):
             raise ValueError("Нужен стандарт IFRS или RSBU")
@@ -117,6 +122,7 @@ class Engine:
             raise ValueError("РСБУ анализируется в охвате отдельного юрлица (entity)")
         self.company_id, self.standard, self.scope = company_id, standard, scope
         self.segment_name = segment_name
+        self.require_comparability = require_comparability
         self.allowed = {d.id for d in for_industry(industry_id, industries)}
         note = industries[industry_id].get("notes")
         self.company_notes = (note,) if note else ()
@@ -147,6 +153,10 @@ class Engine:
             prepared = {name: self._prepare_input(d, name, rule, target)
                         for name, rule in {**d.inputs, **d.optional_inputs}.items()}
             result = evaluate(metric_id, {name: p.value for name, p in prepared.items()})
+            comparison_problem = self._comparison_problem(prepared)
+            if comparison_problem:
+                result = replace(result,status=Status.INSUFFICIENT_DATA,value=None,explanation=None,
+                                 reason=comparison_problem)
             for name in d.positive_inputs:
                 if any(v <= 0 for v in prepared[name].observations):
                     result = replace(result, status=Status.NOT_APPLICABLE, value=None, explanation=None,
@@ -164,12 +174,39 @@ class Engine:
             calculation = Calculation(
                 replace(result, notes=notes), target, prepared,
                 absent=bool(mandatory) and all(p.absent for p in mandatory),
-                blocked=any(p.blocked for p in prepared.values()),
+                blocked=bool(comparison_problem) or any(p.blocked for p in prepared.values()),
             )
             self._cache[key] = calculation
             return calculation
         finally:
             self._active.remove(key)
+
+    def _comparison_problem(self, prepared: dict[str, Prepared]) -> str | None:
+        """Автоматический путь МСФО требует раскрытий для YoY/CAGR/LTM и средних остатков.
+
+        Одни даты/равные числа не подтверждают одинаковые политику, периметр и определение статьи.
+        Старый диагностический режим расчётов остаётся явно отключаемым от этого строгого пути.
+        """
+        if not self.require_comparability or self.standard!='IFRS':
+            return None
+        used = {source for part in prepared.values() for source in part.source_ids}
+        groups: dict[str,list[Fact]] = {}
+        for fact in self.facts:
+            if fact.source_id in used:
+                groups.setdefault(fact.item_id,[]).append(fact)
+        reasons = []
+        for item,observations in groups.items():
+            if len({(fact.start,fact.end) for fact in observations})<2:
+                continue
+            for field in ('accounting_basis','perimeter_basis','methodology_version'):
+                values = {getattr(fact,field) for fact in observations}
+                if any(not value or not value.strip() for value in values):
+                    reasons.append(f'{item}: не подтверждена {field}')
+                elif len(values)>1:
+                    reasons.append(f'{item}: различается {field}')
+            if any(not fact.comparison_evidence or not fact.comparison_evidence.strip() for fact in observations):
+                reasons.append(f'{item}: нет источника подтверждения сопоставимости')
+        return ('Сопоставимость периодов МСФО не подтверждена: '+'; '.join(reasons)) if reasons else None
 
     def _prepare_input(self, definition: MetricDef, name: str, rule: PeriodRule, period: Period) -> Prepared:
         """Разрешает псевдоним и сдвиг года из реестра до применения правила периода."""
