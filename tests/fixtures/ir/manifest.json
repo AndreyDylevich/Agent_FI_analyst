@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-21",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44891750016",
+  "purpose": "Неизменённые фрагменты HTML ссылок, не финансовые данные",
+  "pages": [
+    {
+      "ticker": "MTSS",
+      "source_url": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
+      "original_html_sha256": "f3ac9c8d222a0ab408285a03e025855aaf0a94000ca573f9a9f56207d05cd70b",
+      "excerpt_file": "mtss.html",
+      "excerpt_sha256": "482e7639d6b2fbda8e828e20f8cbe9b945a8a339b5165f6546595b24cb6bcedd",
+      "expected_unique_links": 5,
+      "first_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_RAS_FS_26-1Q.pdf",
+      "first_title": "Бухгалтерская отчетность ПАО «МТС» по состоянию на 31.03.2026 г."
+    },
+    {
+      "ticker": "MVID",
+      "source_url": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
+      "original_html_sha256": "967bc94be15236ff5c4ddc05dede525067dda0344291107d558844e54d480945",
+      "excerpt_file": "mvid.html",
+      "excerpt_sha256": "734e2b1952cbbb6dd8fdea253de944de69ace6ee17030f30ee8211066a30bc2d",
+      "expected_unique_links": 5,
+      "first_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/pao-mvideo-rsbu-9m2026.pdf",
+      "first_title": "Промежуточная бухгалтерская отчетность ПАО «М.видео» за 9 месяцев 2026 года 20.11.2026"
+    },
+    {
+      "ticker": "SGZH",
+      "source_url": "https://segezha-group.com/investors/report/financial-results/",
+      "original_html_sha256": "a01e1f77db11c7185bf50566e7723e62d7ee492c64c777981d585a23d88b3c83",
+      "excerpt_file": "sgzh.html",
+      "excerpt_sha256": "431afb75cc6c54dc317811875bdcf6a5e7b43870cfcad150428ef01d8189129e",
+      "expected_unique_links": 5,
+      "first_url": "https://segezha-group.com/upload/iblock/931/wtaqqai08j7vcf5i2oysotzrjl4lc5xa.pdf",
+      "first_title": ""
+    }
+  ]
+}

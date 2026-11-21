@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-11-21",
+  "schema_version": 3,
+  "telegram": {
+    "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44891139403",
+    "ok": true,
+    "messages_sent": 0,
+    "checks": [
+      "bot_authenticated",
+      "channel_accessible",
+      "posting_permission_confirmed"
+    ]
+  },
+  "real_source_replay": {
+    "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44894772374",
+    "code_commit": "f5197456dad5945fcd0620f296808134c446c595",
+    "ok": true,
+    "purpose": "Контролируемое воспроизведение по реальным снимкам IR; не событие публикации",
+    "files": [
+      {
+        "ticker": "MTSS",
+        "url": "https://static.mts.ru/mts_rf/contents/10677/MTS_RAS_FS_26-1Q.pdf",
+        "sha256": "b73c82552390136b291c076544482ad6ff06d7dc0f947996ef0af1c3b3696af1",
+        "bytes": 1777151,
+        "pages": 17,
+        "type": "rsbu",
+        "standard": "RSBU",
+        "period_end": "2026-03-31",
+        "period_type": "Q1",
+        "classification_basis": "link_text",
+        "needs_review": false,
+        "first_page_text_characters": 0
+      },
+      {
+        "ticker": "MTSS",
+        "url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+        "sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "bytes": 1096289,
+        "pages": 34,
+        "type": "ifrs",
+        "standard": "IFRS",
+        "period_end": "2026-06-30",
+        "period_type": "H1",
+        "classification_basis": "pdf_first_page",
+        "needs_review": false,
+        "first_page_text_characters": 194
+      },
+      {
+        "ticker": "MVID",
+        "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/pao-mvideo-rsbu-9m2026.pdf",
+        "sha256": "e4ef5ff6c4643ad64584632733670c805dc64b09dcc801e41a4bb4a29a13af6d",
+        "bytes": 555572,
+        "pages": 14,
+        "type": "rsbu",
+        "standard": "RSBU",
+        "period_end": "2026-09-30",
+        "period_type": "9M",
+        "classification_basis": "link_text",
+        "needs_review": false,
+        "first_page_text_characters": 0
+      },
+      {
+        "ticker": "MVID",
+        "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_2026/pao-mvideo-msfo-6-mes-2026.pdf",
+        "sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+        "bytes": 4718728,
+        "pages": 38,
+        "type": "ifrs",
+        "standard": "IFRS",
+        "period_end": "2026-06-30",
+        "period_type": "H1",
+        "classification_basis": "link_text",
+        "needs_review": false,
+        "first_page_text_characters": 0
+      },
+      {
+        "ticker": "SGZH",
+        "url": "https://segezha-group.com/upload/iblock/931/wtaqqai08j7vcf5i2oysotzrjl4lc5xa.pdf",
+        "sha256": "47a1a11dac8bafbadefb52aa79bcbe9666f4a8028bb162e4d4f22e3817ab387e",
+        "bytes": 299562,
+        "pages": 3,
+        "type": "other",
+        "standard": null,
+        "period_end": null,
+        "period_type": null,
+        "classification_basis": "pdf_first_page",
+        "needs_review": true,
+        "first_page_text_characters": 1690
+      },
+      {
+        "ticker": "SGZH",
+        "url": "https://segezha-group.com/upload/iblock/670/p0ilnrcq3wrejxntif1elhayffoqyjwq.pdf",
+        "sha256": "bd1772684df125f203b2c977b13f31f5dab469a5af1e2eeb0dffcaea019b0016",
+        "bytes": 800533,
+        "pages": 3,
+        "type": "press_release",
+        "standard": "IFRS",
+        "period_end": "2026-06-30",
+        "period_type": "H1",
+        "classification_basis": "pdf_first_page",
+        "needs_review": false,
+        "first_page_text_characters": 2451
+      },
+      {
+        "ticker": "SGZH",
+        "url": "https://segezha-group.com/upload/iblock/533/oa7qag8inv5wt638zq0q06dio1eal5zm.pdf",
+        "sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "bytes": 783824,
+        "pages": 21,
+        "type": "ifrs",
+        "standard": "IFRS",
+        "period_end": "2026-06-30",
+        "period_type": "H1",
+        "classification_basis": "pdf_first_page",
+        "needs_review": false,
+        "first_page_text_characters": 205
+      }
+    ]
+  },
+  "main_baseline": {
+    "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44894772542",
+    "saved_commit": "dc69d795d8023e1d4e297f81a5bdb31f78440c72",
+    "total_links": 222,
+    "links_by_ticker": {
+      "MTSS": 127,
+      "MVID": 21,
+      "SGZH": 74
+    },
+    "pdf_downloads": 0
+  },
+  "main_repeat": {
+    "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44895126546",
+    "saved_commit": "d823db7673c33f0ef94733009cd88b9b17deba34",
+    "ok": true,
+    "checks": {
+      "companies_unchanged": true,
+      "documents_unchanged": true,
+      "ir_observations_unchanged": true,
+      "document_classifications_unchanged": true,
+      "same_link_history": true,
+      "same_initialization": true,
+      "integrity_ok": true,
+      "no_repeat_downloads": true,
+      "no_second_baseline": true
+    }
+  },
+  "financial_values_verified": false,
+  "schedule_enabled": false,
+  "messages_sent": 0
+}

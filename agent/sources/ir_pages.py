@@ -12,8 +12,8 @@ from urllib.parse import urljoin, urlsplit
 
 import requests
 
-from agent.classify import VERSION, classify_document
-from agent.sources.files import checked_url, download_pdf, fetch_html
+from agent.classify import VERSION, Classification, classify_document
+from agent.sources.files import Download, checked_url, download_pdf, fetch_html
 
 
 @dataclass(frozen=True)
@@ -74,7 +74,8 @@ def discover_links(html: str, base_url: str, allowed_hosts: set[str]) -> list[Li
     return [Link(url, title) for url, title in found.items()]
 
 
-def _document(conn, company_id, link: Link, classification, now: str, *, download=None) -> int:
+def _document(conn: sqlite3.Connection, company_id: int, link: Link, classification: Classification,
+              now: str, *, download: Download | None = None) -> int:
     """Повтор байтов под новым адресом не создаёт повторный документ одной компании."""
     sha = download.sha256 if download else None
     if sha:
@@ -133,7 +134,7 @@ def apply_snapshot(conn: sqlite3.Connection, page_id: int, links: list[Link], *,
     return {'is_baseline': baseline, **counts}
 
 
-def process_link(conn, row, *, company_id: int, recognition: str, directory: Path,
+def process_link(conn: sqlite3.Connection, row: sqlite3.Row, *, company_id: int, recognition: str, directory: Path,
                  allowed_hosts: set[str], now: str, downloader=download_pdf) -> dict:
     """Сбой оставляет ссылку в очереди; новая версия не перезаписывает старый документ."""
     result = {'url': row['url'], 'status': 'error'}
@@ -164,7 +165,7 @@ def process_link(conn, row, *, company_id: int, recognition: str, directory: Pat
                          (document_id, download.etag, download.last_modified, now, row['id']))
         return {**result, 'status': 'duplicate' if existing else 'downloaded', 'document_id': document_id,
                 'sha256': download.sha256, 'classification': asdict(classification)}
-    except (requests.RequestException, ValueError, OSError, RuntimeError) as error:
+    except (requests.RequestException, ValueError, OSError, RuntimeError, sqlite3.IntegrityError) as error:
         message = f'{type(error).__name__}: {error}'
         with conn:
             conn.execute("UPDATE ir_links SET state='error',last_error=?,last_fetched_at=? WHERE id=?", (message, now, row['id']))
@@ -204,6 +205,11 @@ def monitor(conn: sqlite3.Connection, companies: list[dict], directory: Path, *,
                 report['pages'].append(item)
                 if snapshot['is_baseline']:
                     continue
+                if recheck_known:
+                    # Явно запрошенный аудит становится постоянной очередью, а не только списком в памяти.
+                    with conn:
+                        conn.execute("UPDATE ir_links SET state='pending' WHERE page_id=? AND last_seen_at=? "
+                                     "AND state IN ('baseline','ready')", (page_id, now))
                 rows = conn.execute('SELECT * FROM ir_links WHERE page_id=? AND last_seen_at=? '
                                     "AND (state IN ('pending','error') OR ?)",
                                     (page_id, now, recheck_known)).fetchall()
@@ -215,7 +221,8 @@ def monitor(conn: sqlite3.Connection, companies: list[dict], directory: Path, *,
                     conn.execute('UPDATE ir_pages SET last_checked_at=?,last_error=? WHERE id=?', (now, item['error'], page_id))
                 report['pages'].append(item)
     # Общая очередь не даёт первой большой странице постоянно вытеснять остальные при аудите.
-    queue.sort(key=lambda task: (task[0]['state'] != 'pending', task[0]['last_fetched_at'] or '', task[0]['id']))
+    queue.sort(key=lambda task: (task[0]['state'] != 'pending' or task[0]['document_id'] is not None,
+                                 task[0]['last_fetched_at'] or '', task[0]['id']))
     for row, company_id, ticker, recognition, hosts, now, item in queue[:max_downloads]:
         report['files'].append({'ticker': ticker, **process_link(
             conn, row, company_id=company_id, recognition=recognition, directory=directory,

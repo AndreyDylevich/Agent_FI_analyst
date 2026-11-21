@@ -216,6 +216,19 @@ def test_audit_limit_eventually_reaches_other_company(conn, tmp_path):
     assert {urlsplit_host(url) for url, _ in site.calls} == {'example.test', 'second.test'}
 
 
+def test_explicit_audit_deferred_queue_survives_into_ordinary_run(conn, tmp_path):
+    site = Site(tmp_path)
+    site.html = html('a', 'b', 'c')
+    site.run(conn)
+    result = site.run(conn, recheck_known=True, max_downloads=1)
+    assert result['pages'][0]['deferred'] == 2
+    assert conn.execute("SELECT count(*) FROM ir_links WHERE state='pending'").fetchone()[0] == 2
+    # Повторять флаг не требуется: пользователь уже явно запросил аудит этих URL.
+    result = site.run(conn)
+    assert result['ok'] and len(site.calls) == 3
+    assert conn.execute("SELECT count(*) FROM ir_links WHERE state='pending'").fetchone()[0] == 0
+
+
 def urlsplit_host(url):
     from urllib.parse import urlsplit
     return urlsplit(url).hostname
@@ -237,3 +250,22 @@ def test_cli_persists_baseline_and_reports_source_error_without_losing_history(m
     connection = init_db(tmp_path/'cli.db')
     assert connection.execute('SELECT count(*) FROM ir_links').fetchone()[0] == 1
     connection.close()
+
+
+@pytest.mark.parametrize('ticker', ['MTSS', 'MVID', 'SGZH'])
+def test_real_ir_html_excerpt(ticker):
+    from agent import config
+
+    root = Path(__file__).parent/'fixtures'/'ir'
+    manifest = json.loads((root/'manifest.json').read_text())
+    record = next(row for row in manifest['pages'] if row['ticker'] == ticker)
+    raw = (root/record['excerpt_file']).read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == record['excerpt_sha256']
+    company = next(c for c in config.load('watchlist')['companies'] if c['ticker'] == ticker)
+    links = discover_links(raw.decode(), record['source_url'], set(company['ir_pages'][0]['allowed_hosts']))
+    assert len(links) == record['expected_unique_links']
+    assert links[0].url == record['first_url'] and links[0].title == record['first_title']
+    if ticker == 'SGZH':
+        assert not links[0].title
+    if ticker == 'MVID':
+        assert 'IFRS' in links[1].url and 'бухгалтерская' in links[0].title.lower()

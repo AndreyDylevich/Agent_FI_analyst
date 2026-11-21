@@ -21,7 +21,7 @@ def checked_url(url: str, allowed_hosts: set[str]) -> str:
     """HTTPS, явный список официальных хостов; капча e-disclosure не используется."""
     url = urldefrag(url.strip())[0]
     parsed = urlsplit(url)
-    if (parsed.scheme != 'https' or parsed.hostname not in allowed_hosts or parsed.username
+    if (parsed.scheme != 'https' or not parsed.hostname or parsed.hostname not in allowed_hosts or parsed.username
             or parsed.password or parsed.port not in (None, 443)
             or parsed.hostname == 'e-disclosure.ru' or parsed.hostname.endswith('.e-disclosure.ru')):
         raise ValueError('URL вне разрешённых официальных HTTPS-источников')
