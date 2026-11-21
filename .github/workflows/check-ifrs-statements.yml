@@ -1,6 +1,10 @@
 name: Проверка ОПУ и ОДДС МСФО
 on:
   workflow_dispatch:
+# API физлица: один одновременный поток на все диагностики GigaChat.
+concurrency:
+  group: gigachat-provider
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:

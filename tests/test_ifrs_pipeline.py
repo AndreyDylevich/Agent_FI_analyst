@@ -105,7 +105,7 @@ def test_one_retry_and_original_responses_preserved(tmp_path):
     wrong['facts'][0]['evidence']['quote'] = 'Итого активы 999'
     provider = Provider([wrong, correct])
     run = extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
-                      line_items=config.line_items(), output=tmp_path, sections=('balance',))
+                      line_items={"total_assets":config.line_items()["total_assets"]}, output=tmp_path, sections=('balance',))
     assert len(provider.calls) == 2 and len(run.facts) == 1
     assert (tmp_path/'batch_1_attempt_1.json').exists() and (tmp_path/'batch_1_attempt_2.json').exists()
     assert run.batches[0]['accepted'] is False and run.batches[1]['accepted'] is True
@@ -122,7 +122,7 @@ def test_retry_must_not_change_previously_verified_context(tmp_path):
     provider = Provider([wrong, changed],obey_context=False)
     with pytest.raises(ValueError):
         extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
-                    line_items=config.line_items(), output=tmp_path, sections=('balance',))
+                    line_items={"total_assets":config.line_items()["total_assets"]}, output=tmp_path, sections=('balance',))
     assert provider.calls[1]['verified_context']['scope_evidence'] == provider.calls[0]['verified_context']['scope_evidence']
 
 
@@ -137,7 +137,7 @@ def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path)
     provider = Provider([wrong, wrong])
     with pytest.raises(ValueError):
         extract_pdf(pipeline_pdf(), provider, ticker='TEST', entity_token='Тест', period=PERIOD,
-                    line_items=config.line_items(), output=tmp_path, sections=('balance',))
+                    line_items={"total_assets":config.line_items()["total_assets"]}, output=tmp_path, sections=('balance',))
     assert len(provider.calls) == 2
     attempts = json.loads((tmp_path/'attempts.json').read_text())
     assert len(attempts) == 2 and all(a['accepted'] is False for a in attempts)
@@ -148,7 +148,7 @@ def test_provider_timeout_still_leaves_request_audit(tmp_path):
         def extract(self,*args): raise ProviderError('Извлечение GigaChat: ReadTimeout')
     with pytest.raises(ProviderError):
         extract_pdf(pipeline_pdf(),TimedOut(),ticker='TEST',entity_token='Тест',period=PERIOD,
-                    line_items=config.line_items(),output=tmp_path,sections=('balance',))
+                    line_items={"total_assets":config.line_items()["total_assets"]},output=tmp_path,sections=('balance',))
     attempts=json.loads((tmp_path/'attempts.json').read_text())
     assert len(attempts)==1 and attempts[0]['provider_error'].endswith('ReadTimeout')
     assert attempts[0]['request_sha256'] and not attempts[0]['accepted']

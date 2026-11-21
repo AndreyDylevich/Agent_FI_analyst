@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 7
+VERSION = 8
 
 
 def _object(properties: dict) -> dict:
@@ -197,6 +197,7 @@ class ExtractedFact:
     column_header: str
     cash_flow_section: str | None
     from_ocr: bool
+    model_raw_value: str | None = None
 
 
 @dataclass(frozen=True)
@@ -261,6 +262,21 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         number_pattern = r'(?<![\w.,])(?:\(' + body + r'\)|[+\-−]?' + body + r')(?![\w.,])'
         original_numbers = evidence.quote.replace('\u00a0', ' ').replace('\u202f', ' ')
         tokens = [match.group() for match in re.finditer(number_pattern, original_numbers)]
+        model_raw = raw
+        if normalized_text(raw) not in tokens:
+            # Модель иногда меняет (55) на -55. Восстанавливаем ИСХОДНЫЙ токен только при
+            # точном совпадении Decimal со знаком и единственном варианте записи в цитате.
+            # 55 вместо (55), обрезанное число и неясный формат по-прежнему отклоняются.
+            amount = parse_amount(raw,row['number_format'])
+            matches = set()
+            for token in tokens:
+                try:
+                    if parse_amount(token,row['number_format'])==amount:
+                        matches.add(token)
+                except ValueError:
+                    continue
+            if len(matches)==1:
+                raw = matches.pop()
         if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
             raise ValueError(f'{item_id}: подпись/число {raw!r} отсутствуют в цитате строки; скопируй исходную запись целиком')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
@@ -316,7 +332,8 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         facts.append(ExtractedFact(item_id, name, raw, row['number_format'], value, normalize_money(str(value), unit, item['sign']), unit,
                                    start, end, kind, row['statement'], evidence, unit_evidence,
                                    row['column_header'], section,
-                                   any(by_number[c.page].method == 'ocr' for c in (evidence, unit_evidence, *contexts.values()))))
+                                   any(by_number[c.page].method == 'ocr' for c in (evidence, unit_evidence, *contexts.values())),
+                                   model_raw if model_raw!=raw else None))
     if not isinstance(data['warnings'], list) or any(not isinstance(w, str) for w in data['warnings']):
         raise ValueError('Неверный список ограничений извлечения')
     context={k:v for k,v in data.items() if k not in ('facts','warnings')}

@@ -706,3 +706,256 @@ items:
       ru: [Прибыль за период]
       en: [Profit for the period]
     rsbu_codes: []
+
+  # Примечания: полный состав долга/аренды и процентов хранится отдельно от форм.
+  - id: note_debt_total
+    statement: notes
+    source_forms: [notes]
+    source_topics: [debt]
+    value_kind: stock
+    name: Полный долг по примечанию без аренды
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Полный долг по примечанию без аренды]
+      en: []
+    rsbu_codes: []
+
+  - id: note_debt_current
+    statement: notes
+    source_forms: [notes]
+    source_topics: [debt]
+    value_kind: stock
+    name: Краткосрочная часть долга по примечанию
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Краткосрочная часть долга по примечанию]
+      en: []
+    rsbu_codes: []
+
+  - id: note_debt_noncurrent
+    statement: notes
+    source_forms: [notes]
+    source_topics: [debt]
+    value_kind: stock
+    name: Долгосрочная часть долга по примечанию
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Долгосрочная часть долга по примечанию]
+      en: []
+    rsbu_codes: []
+
+  - id: note_loans_and_other_borrowings
+    statement: notes
+    source_forms: [notes]
+    source_topics: [debt]
+    value_kind: stock
+    name: Банковские кредиты и прочие займы вместе по примечанию
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Банковские кредиты и прочие займы вместе по примечанию]
+      en: []
+    rsbu_codes: []
+
+  - id: note_bonds
+    statement: notes
+    source_forms: [notes]
+    source_topics: [debt]
+    value_kind: stock
+    name: Облигации по долговому примечанию
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Облигации по долговому примечанию]
+      en: []
+    rsbu_codes: []
+
+  - id: note_lease_undiscounted
+    statement: notes
+    source_forms: [notes]
+    source_topics: [leases]
+    value_kind: stock
+    date_role: period_closing
+    name: Недисконтированные будущие арендные платежи
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Недисконтированные будущие арендные платежи]
+      en: []
+    rsbu_codes: []
+
+  - id: note_lease_discount
+    statement: notes
+    source_forms: [notes]
+    source_topics: [leases]
+    value_kind: stock
+    date_role: period_closing
+    name: Эффект дисконтирования будущих арендных платежей
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Эффект дисконтирования будущих арендных платежей]
+      en: []
+    rsbu_codes: []
+
+  - id: note_lease_present_value
+    statement: notes
+    source_forms: [notes]
+    source_topics: [leases]
+    value_kind: stock
+    date_role: period_closing
+    name: Приведённая стоимость обязательств по аренде
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Приведённая стоимость обязательств по аренде]
+      en: []
+    rsbu_codes: []
+
+  - id: note_lease_current
+    statement: notes
+    source_forms: [notes]
+    source_topics: [leases]
+    value_kind: stock
+    date_role: period_closing
+    name: Краткосрочная часть обязательств по аренде из примечания
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Краткосрочная часть обязательств по аренде из примечания]
+      en: []
+    rsbu_codes: []
+
+  - id: note_lease_noncurrent
+    statement: notes
+    source_forms: [notes]
+    source_topics: [leases]
+    value_kind: stock
+    date_role: period_closing
+    name: Долгосрочная часть обязательств по аренде из примечания
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Долгосрочная часть обязательств по аренде из примечания]
+      en: []
+    rsbu_codes: []
+
+  - id: note_interest_borrowings
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Процентный расход по кредитам и облигациям
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Процентный расход по кредитам и облигациям]
+      en: []
+    rsbu_codes: []
+
+  - id: note_interest_leases
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Процентный расход по обязательствам аренды
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Процентный расход по обязательствам аренды]
+      en: []
+    rsbu_codes: []
+
+  - id: note_interest_unwinding
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Прирост обязательства на демонтаж
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Прирост обязательства на демонтаж]
+      en: []
+    rsbu_codes: []
+
+  - id: note_interest_total
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Полный процентный расход по примечанию
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Полный процентный расход по примечанию]
+      en: []
+    rsbu_codes: []
+
+  - id: note_finance_other_expense
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Прочие финансовые расходы
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Прочие финансовые расходы]
+      en: []
+    rsbu_codes: []
+
+  - id: note_finance_expense_gross
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Финансовые расходы до капитализации и модификаций
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Финансовые расходы до капитализации и модификаций]
+      en: []
+    rsbu_codes: []
+
+  - id: note_capitalized_interest_expense
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Капитализированные процентные расходы IAS 23
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Капитализированные процентные расходы IAS 23]
+      en: []
+    rsbu_codes: []
+
+  - id: note_finance_modification_expense
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Модификация займов и прекращение признания
+    sign: natural
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Модификация займов и прекращение признания]
+      en: []
+    rsbu_codes: []
+
+  - id: note_finance_expense_net
+    statement: notes
+    source_forms: [notes]
+    source_topics: [interest]
+    value_kind: flow
+    name: Финансовые расходы после капитализации и модификаций
+    sign: outflow
+    notes: Только раскрытая полная сумма группы. Не подменять средствами клиентов банка, связанными сторонами или сегментом. Пропуск не равен нулю.
+    ifrs_synonyms:
+      ru: [Финансовые расходы после капитализации и модификаций]
+      en: []
+    rsbu_codes: []

@@ -218,3 +218,25 @@ def test_generation_number_pattern_accepts_complete_source_amounts_not_only_one_
         assert re.fullmatch(pattern,value)
     for value in ('-','—','нет',''):
         assert not re.fullmatch(pattern,value)
+
+
+def test_source_parentheses_restored_only_for_equal_signed_amount():
+    data=payload();row=data['facts'][0]
+    row.update(item_id='cost_of_sales',original_name='Себестоимость',raw_value='-50',
+               evidence=cite('Себестоимость (50) (40)'),statement='income',
+               period_start='2026-01-01')
+    result=parse(data).facts[0]
+    assert result.raw_value=='(50)' and result.model_raw_value=='-50'
+    assert result.value==D('-50') and result.normalized==D('50000000')
+    row['raw_value']='50'
+    with pytest.raises(ValueError):parse(data)
+
+
+def test_equivalent_source_format_requires_unique_original_representation():
+    data=payload();row=data['facts'][0]
+    row.update(raw_value='1234')
+    result=parse(data).facts[0]
+    assert result.raw_value=='1 234' and result.value==1234
+    pages=(Page(1,TEXT.replace('Итого активы 1 234 1 000','Итого активы 1 234 1234')),)
+    row.update(evidence=cite('Итого активы 1 234 1234'),raw_value='+1234')
+    with pytest.raises(ValueError):parse(data,pages)
