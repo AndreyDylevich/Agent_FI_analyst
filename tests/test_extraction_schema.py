@@ -2,6 +2,7 @@
 
 import copy
 import json
+import re
 from datetime import date
 from decimal import Decimal as D
 
@@ -208,3 +209,12 @@ def test_explicit_document_context_is_copied_and_fully_revalidated():
     assert extracted.context['standard_evidence']['quote']==TEXT.splitlines()[0]
     assert extracted.context['period_evidence']['quote'].startswith('ПАО Тест')
     assert not extracted.facts
+
+
+def test_generation_number_pattern_accepts_complete_source_amounts_not_only_one_digit():
+    from agent.extract.schemas import extraction_schema
+    pattern=extraction_schema(['total_assets'])['properties']['facts']['items']['properties']['raw_value']['pattern']
+    for value in ('1,835,600','77,966','(55)','−100','1 234','1.25','0'):
+        assert re.fullmatch(pattern,value)
+    for value in ('-','—','нет',''):
+        assert not re.fullmatch(pattern,value)

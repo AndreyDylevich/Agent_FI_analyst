@@ -28,7 +28,7 @@ def extraction_schema(item_ids: list[str], *, stock_only: bool = False, flow_onl
     """Схема выдачи модели; денежные значения обязательно строки, не JSON float."""
     reference = _object({**CITATION['properties'], 'page': {'type':'integer','enum':page_numbers}}) if page_numbers else CITATION
     fact = _object({'item_id': {'type': 'string', 'enum': item_ids}, 'original_name': STRING,
-                    'raw_value': {'type': 'string', 'pattern': '[0-9]'},
+                    'raw_value': {'type': 'string', 'pattern': r'^[-+−(]?[0-9][0-9 ,.()]*$'},
                     'number_format': {'type': 'string', 'enum': ['space_grouped_decimal', 'comma_grouped_dot_decimal']},
                     'unit': {'type': 'string', 'enum': list(UNIT_MULTIPLIERS)},
                     'unit_evidence': reference, 'evidence': reference,
