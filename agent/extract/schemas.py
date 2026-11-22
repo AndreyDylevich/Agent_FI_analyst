@@ -310,7 +310,11 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
                     continue
             if len(matches)==1:
                 raw = matches.pop()
-        if normalized_text(name).casefold() not in quote.casefold() or normalized_text(raw) not in tokens:
+        if normalized_text(name).casefold() not in quote.casefold():
+            raise ValueError(f'{item_id}: original_name {name!r} отсутствует в цитате. '
+                             'Скопируй дословную подпись из evidence без добавленных слов, '
+                             'даже если название канонической статьи длиннее исходного')
+        if normalized_text(raw) not in tokens:
             raise ValueError(f'{item_id}: подпись/число {raw!r} отсутствуют в цитате строки; скопируй исходную запись целиком')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
             raise ValueError(f"{item_id}: фрагмент заголовка колонки не найден; используй дословный фрагмент с годом, например '2025', не собирай дату из разнесённых строк")

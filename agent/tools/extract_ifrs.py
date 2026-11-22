@@ -2,12 +2,13 @@
 
 import argparse
 import json
+from contextlib import nullcontext
 from dataclasses import asdict
 from datetime import date
 from pathlib import Path
 
 from agent import config, db
-from agent.extract.llm import CA_PATH, GigaChatProvider
+from agent.extract.llm import CA_PATH, GigaChatProvider, ProviderError
 from agent.extract.pdf_text import HEADINGS, read_pdf
 from agent.extract.pipeline import extract_pdf
 from agent.extract.store import store_extraction
@@ -15,6 +16,11 @@ from agent.metrics.data import load_facts
 from agent.metrics.engine import Engine, Period
 from agent.metrics.registry import REGISTRY
 from agent.sources.files import checked_url
+
+
+class CachedOnlyProvider:
+    def extract(self, *_args):
+        raise ProviderError('cached-only: нет подходящего проверяемого ответа; сетевой запрос к модели запрещён')
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -37,7 +43,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--max-ocr-pages', type=int, default=20)
     parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
     parser.add_argument('--compact-contract',action='store_true',help='ИИ возвращает значения по фиксированным ключам статья/дата')
+    parser.add_argument('--cached-only',action='store_true',help='Повторная проверка только сохранённых ответов, без ключа/API модели')
     args = parser.parse_args(argv)
+    if args.cached_only and not args.reuse_from:
+        parser.error('--cached-only требует --reuse-from')
     if args.output.exists() and any(args.output.iterdir()):
         parser.error('Каталог вывода должен быть новым/пустым: история ответов не перезаписывается')
     args.output.mkdir(parents=True, exist_ok=True)
@@ -49,11 +58,13 @@ def main(argv: list[str] | None = None) -> int:
     entity_token = company.get('document_identity_token', company['legal_name'])
     if args.item:
         items = {key: items[key] for key in args.item}
-    report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0}
+    report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0,
+              'cached_only':args.cached_only}
     try:
         text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
-        with GigaChatProvider.from_env(args.certificate) as provider:
+        manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
+        with manager as provider:
             options = {'sections': tuple(args.sections)} if args.sections else {}
             if args.reuse_from:options['reuse_from']=tuple(args.reuse_from)
             if args.compact_contract:options['compact']=True

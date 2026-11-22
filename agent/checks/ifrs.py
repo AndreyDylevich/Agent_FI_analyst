@@ -16,7 +16,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 4
+    version: int = 5
 
 
 RULES = {
@@ -33,6 +33,7 @@ RULES = {
     'profit_vs_equity': {'net_profit':1, 'eq_profit_total':-1},
     'profit_parent_vs_equity': {'net_profit_parent':1, 'eq_profit_parent':-1},
     'profit_nci_vs_equity': {'net_profit_nci':1, 'eq_profit_nci':-1},
+    'cash_flow_summary': {'cfo':1,'cfi':1,'cff':1,'cf_fx_effect':1,'cf_cash_change':-1},
     'cash_held_for_sale_bridge': {'cf_cash_closing_gross':1, 'cf_cash_held_for_sale':-1, 'cf_cash_closing_after_hfs':-1},
     'debt_components': {'debt_long_term': 1, 'debt_short_term': 1, 'bank_loans': -1, 'bonds': -1, 'other_borrowings': -1},
     'note_debt_composition': {'note_debt_total':1,'note_bonds':-1,'note_loans_and_other_borrowings':-1},
@@ -50,6 +51,7 @@ RULES = {
 FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base','eq_profit_attribution',
               'profit_vs_equity','profit_parent_vs_equity','profit_nci_vs_equity'}
 FLOW_RULES.update(('note_interest_composition','note_finance_gross','note_finance_net'))
+FLOW_RULES.add('cash_flow_summary')
 # Начало/конец отчёта об изменениях капитала сверяются с балансом НА ТУ ЖЕ дату.
 for _role in ('opening', 'closing'):
     for _component, _balance_id in (('total','equity_total'),('parent','equity_parent'),('nci','non_controlling_interests')):

@@ -6,6 +6,10 @@ on:
         description: Необязательный ID прежнего прогона капитала для повторной проверки ответов
         required: false
         default: ''
+      reuse_statements_run_id:
+        description: Необязательный ID проверенных ОПУ/ОДДС для повторного использования прибыли
+        required: false
+        default: ''
 # API физлица: один одновременный поток на все диагностики GigaChat.
 concurrency:
   group: gigachat-provider
@@ -34,6 +38,14 @@ jobs:
           path: validation/reuse
           github-token: ${{ github.token }}
           run-id: ${{ inputs.reuse_run_id }}
+      - name: Получить проверенные ответы ОПУ
+        if: inputs.reuse_statements_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-statements-check
+          path: validation/reuse-statements
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.reuse_statements_run_id }}
       - name: Извлечь и сверить 42 значения, включая ожидаемое расхождение источника
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
@@ -41,6 +53,7 @@ jobs:
         run: |
           reuse_args=()
           if [ -d validation/reuse ]; then reuse_args=(--reuse-from validation/reuse); fi
+          if [ -d validation/reuse-statements ]; then reuse_args+=(--reuse-from validation/reuse-statements); fi
           python -m agent.tools.check_ifrs_case --case mts_equity --output validation/equity "${reuse_args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()

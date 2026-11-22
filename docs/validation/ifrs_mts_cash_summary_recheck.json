@@ -1,0 +1,276 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "mode": "cached_only",
+  "original_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44958392624",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "selected_values_count": 25,
+  "statuses": {
+    "проверено_авто": 24,
+    "не_проверено": 1
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "attempt": 1,
+      "target_pages": [
+        10,
+        11
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 16,
+      "sent_pages": [
+        1,
+        3,
+        10,
+        11
+      ],
+      "request_sha256": "c728bd77b617e2c9bb6c3731bfe8d68cd17929dc0037c45e98c872c68872ee63",
+      "page_text_sha256": "0ded1288a9eb29046d8073ec7c0dcbde058872dd55c1b5e0419bd4116085ed35",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "cf_cash_closing_after_hfs",
+        "cf_cash_closing_gross",
+        "cf_cash_held_for_sale",
+        "cf_cash_opening"
+      ],
+      "requested_contract": "legacy",
+      "contract_sha256": "66534f0a8e69611489b8537d69880eb0905ba00160cabeaef8bf799e0bce2758",
+      "reused_from": "/private/tmp/fi-statements-44958392624/extraction/batch_1_attempt_1.json",
+      "original_tokens": 7563,
+      "original_request_sha256": "ae92f48663505fadead657fdc61a770ff720e9c278fc8e1c59e87ef23ee120a9",
+      "original_prompt_version": 10,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "1cc7185b6f231d5239a89cd089fa17e5c73ed327c4b1e4d87bc5d79f76726071",
+      "file": "batch_1_attempt_1.json",
+      "response_contract": "legacy",
+      "accepted": true
+    },
+    {
+      "batch": 2,
+      "attempt": 1,
+      "target_pages": [
+        7
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 16,
+      "sent_pages": [
+        1,
+        3,
+        7
+      ],
+      "request_sha256": "75104386be072490b42ffb72c32760a145d5f392d4e3d872dcab25e1df41d450",
+      "page_text_sha256": "76df751daddfff315d7da67e7b286a25c6d64b1fa221dff1094c7444cf4afcee",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "net_profit",
+        "net_profit_nci",
+        "net_profit_parent"
+      ],
+      "requested_contract": "legacy",
+      "contract_sha256": "640ee9ce8019d3fef17bb36fe1a8f8f61fef4a709dbd4ccfd7ace358ff7426c9",
+      "reused_from": "/private/tmp/fi-statements-44958392624/extraction/batch_2_attempt_1.json",
+      "original_tokens": 5296,
+      "original_request_sha256": "ad1d3d559f49a07c6b9551d856b80d7330b9db999554709ab9adf762b8fa0dea",
+      "original_prompt_version": 10,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "c7b04602a7baf657b5202735705a163410ef1727735bbd6f6bb13f4fc0ddbf0a",
+      "file": "batch_2_attempt_1.json",
+      "response_contract": "legacy",
+      "accepted": true
+    },
+    {
+      "batch": 3,
+      "attempt": 1,
+      "target_pages": [
+        10,
+        11
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 16,
+      "sent_pages": [
+        1,
+        3,
+        10,
+        11
+      ],
+      "request_sha256": "c0ba84abfbec5c9a228cacfc00d37aa322f6fca7965540a3c92e171dbb238acf",
+      "page_text_sha256": "0ded1288a9eb29046d8073ec7c0dcbde058872dd55c1b5e0419bd4116085ed35",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "cf_cash_change",
+        "cf_fx_effect",
+        "cf_starting_net_profit",
+        "cff",
+        "cfi",
+        "cfo"
+      ],
+      "requested_contract": "legacy",
+      "contract_sha256": "e48b75bfb0acbf545ea2fc0fcf5e2a1a02baaf3f23b9cb75c929daf4b13db237",
+      "reused_from": "/private/tmp/fi-statements-44958392624/extraction/batch_3_attempt_2.json",
+      "original_tokens": 11447,
+      "original_request_sha256": "6065543d6f8ff3c0010ffae539c1e33d54b4874e60b22f4a382170b4cd7529af",
+      "original_prompt_version": 10,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "b1ff2dbaac05e8647a9234b8d051e2e5ef2a0e76c65523636c5e2c9986193bd3",
+      "file": "batch_3_attempt_1.json",
+      "response_contract": "legacy",
+      "accepted": true
+    }
+  ],
+  "reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_held_for_sale",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_after_hfs",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_after_hfs",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "profit_attribution": true,
+      "profit_vs_cash_flow_base": true,
+      "cash_rollforward": true,
+      "cash_held_for_sale_bridge": true,
+      "cash_flow_summary": true
+    },
+    "expected_checks": [],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "messages_sent": 0,
+  "financial_audit_complete": false,
+  "limitation": "Повторная проверка исходных ответов без ключа/API и свежей генерации. CFO+CFI+CFF+FX сверены с изменением денег; состав отдельных разделов не подтверждён полностью. Текущая HFS-корректировка с прочерком остаётся отсутствующей."
+}

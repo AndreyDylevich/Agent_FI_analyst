@@ -46,6 +46,22 @@ def test_cash_rollforward_connects_beginning_date_and_ending_date():
     assert check.result.status=='недостаточно_данных' and check.result.missing==('cf_cash_opening',)
 
 
+def test_cash_sections_and_fx_reconcile_to_change_without_zero_fill():
+    values={'cfo':'-1595','cfi':'-43806','cff':'32216','cf_fx_effect':'-294','cf_cash_change':'-13479'}
+    rows=tuple(source(item,value,'2026-01-01','2026-06-30') for item,value in values.items())
+    checks,statuses=validate_financials(rows)
+    assert next(c for c in checks if c.rule=='cash_flow_summary').result.status=='пройдено'
+    assert set(statuses)=={'проверено_авто'}
+    for changed in (tuple(row for row in rows if row.item_id!='cf_fx_effect'),
+                    tuple(replace(row,start=date(2025,1,1)) if row.item_id=='cf_fx_effect' else row for row in rows)):
+        checks,_=validate_financials(changed)
+        assert all(c.result.status=='недостаточно_данных' for c in checks if c.rule=='cash_flow_summary')
+    incorrect=tuple(replace(row,normalized=-row.normalized) if row.item_id=='cfo' else row for row in rows)
+    checks,statuses=validate_financials(incorrect)
+    assert next(c for c in checks if c.rule=='cash_flow_summary').result.status=='расхождение'
+    assert set(statuses)=={'расхождение'}
+
+
 def test_held_for_sale_bridge_requires_explicit_adjustment():
     rows=tuple(source(item,value,None,'2025-06-30') for item,value in
                [('cf_cash_closing_gross','71309'),('cf_cash_held_for_sale','55'),('cf_cash_closing_after_hfs','71254')])

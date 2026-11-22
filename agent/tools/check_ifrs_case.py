@@ -20,7 +20,9 @@ def main(argv=None) -> int:
     parser.add_argument('--case',choices=sorted(cases),required=True)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--reuse-from',type=Path,action='append')
+    parser.add_argument('--cached-only',action='store_true')
     args=parser.parse_args(argv)
+    if args.cached_only and not args.reuse_from:parser.error('--cached-only требует --reuse-from')
     if args.output.exists() and any(args.output.iterdir()):
         parser.error('Нужен новый/пустой каталог проверки')
     args.output.mkdir(parents=True,exist_ok=True)
@@ -42,6 +44,7 @@ def main(argv=None) -> int:
         for item in items:command.extend(['--item',item])
         if case.get('compact',True):command.append('--compact-contract')
         for path in args.reuse_from or []:command.extend(['--reuse-from',str(path)])
+        if args.cached_only:command.append('--cached-only')
         if case.get('ocr'):command.extend(['--ocr','--max-ocr-pages',str(case.get('max_ocr_pages',50))])
         code=extract_main(command)
         extraction=json.loads((args.output/'extraction/extraction_check.json').read_text())

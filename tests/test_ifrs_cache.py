@@ -57,3 +57,28 @@ def test_changed_source_text_forces_fresh_extraction(tmp_path):
     run=extract_pdf(changed,provider,ticker='TEST',entity_token='Тест',period=PERIOD,
                 line_items={'total_assets':config.line_items()['total_assets']},output=tmp_path/'new',sections=('balance',),reuse_from=(root,))
     assert len(provider.calls)==1 and 'reused_from' not in run.batches[0]
+
+
+@pytest.mark.parametrize('text_changed',[False,True])
+def test_cached_only_cli_never_initializes_provider_or_uses_unmatched_text(monkeypatch,tmp_path,text_changed):
+    from agent.tools import extract_ifrs
+    root,pdf=cache_run(tmp_path)
+    if text_changed:pdf=replace(pdf,pages=tuple(replace(p,text=p.text+'\nИзменён текст') for p in pdf.pages))
+    monkeypatch.setattr(extract_ifrs,'read_pdf',lambda *args,**kwargs:pdf)
+    original_load=config.load
+    company={'ticker':'TEST','name':'Тест','legal_name':'Тест','industry':{'id':'telecom'},
+             'ir_pages':[{'allowed_hosts':['example.test']}]}
+    monkeypatch.setattr(config,'load',lambda name: {'companies':[company]} if name=='watchlist' else original_load(name))
+    def no_provider(*args):raise AssertionError('В режиме cached-only ключ и клиент модели не нужны')
+    monkeypatch.setattr(extract_ifrs.GigaChatProvider,'from_env',no_provider)
+    output=tmp_path/'cli'
+    code=extract_ifrs.main(['original.pdf','--ticker','TEST','--year','2026','--period','H1',
+        '--source-url','https://example.test/report.pdf','--db',str(tmp_path/'check.db'),
+        '--output',str(output),'--sections','balance','--item','total_assets','--metric','current_ratio',
+        '--reuse-from',str(root),'--cached-only'])
+    report=json.loads((output/'extraction_check.json').read_text())
+    assert report['cached_only'] and code==(1 if text_changed else 0)
+    if text_changed:
+        assert 'cached-only' in report['error'] and not (tmp_path/'check.db').exists()
+    else:
+        assert len(report['facts'])==1 and report['batches'][0]['tokens']==0
