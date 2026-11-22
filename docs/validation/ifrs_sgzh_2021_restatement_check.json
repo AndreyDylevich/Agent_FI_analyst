@@ -1,0 +1,176 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45028940251",
+  "ok": true,
+  "review_sha256": "2f69cc9af02968e3e5e7e5e1dcc58165f10b8cb5f8b1d012f21cb4508f4d7b40",
+  "review_fixture": "tests/fixtures/ifrs/sgzh_2021_restatement_review.json",
+  "source_evidence": {
+    "page": 10,
+    "start_line": 63,
+    "end_line": 65
+  },
+  "evidence_quote_sha256": "ffab7e64e9dedd4ad69fc24296358d6be383704eb40749a7bfcfb04f979ab325",
+  "changes": [
+    {
+      "item_id": "total_assets",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        1
+      ],
+      "new_source_ids": [
+        16
+      ],
+      "old_normalized_value": "209309102000",
+      "new_normalized_value": "213948000000",
+      "statuses_before": {
+        "1": "расхождение",
+        "16": "расхождение"
+      },
+      "statuses_after": {
+        "1": "проверено_авто",
+        "16": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "non_current_assets",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        3
+      ],
+      "new_source_ids": [
+        18
+      ],
+      "old_normalized_value": "152989564000",
+      "new_normalized_value": "159365000000",
+      "statuses_before": {
+        "3": "расхождение",
+        "18": "расхождение"
+      },
+      "statuses_after": {
+        "3": "проверено_авто",
+        "18": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "current_assets",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        5
+      ],
+      "new_source_ids": [
+        20
+      ],
+      "old_normalized_value": "56319538000",
+      "new_normalized_value": "54583000000",
+      "statuses_before": {
+        "5": "расхождение",
+        "20": "расхождение"
+      },
+      "statuses_after": {
+        "5": "проверено_авто",
+        "20": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "equity_total",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        7
+      ],
+      "new_source_ids": [
+        22
+      ],
+      "old_normalized_value": "46191480000",
+      "new_normalized_value": "46192000000",
+      "statuses_before": {
+        "7": "расхождение",
+        "22": "расхождение"
+      },
+      "statuses_after": {
+        "7": "проверено_авто",
+        "22": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        9
+      ],
+      "new_source_ids": [
+        24
+      ],
+      "old_normalized_value": "89895546000",
+      "new_normalized_value": "90789000000",
+      "statuses_before": {
+        "9": "расхождение",
+        "24": "расхождение"
+      },
+      "statuses_after": {
+        "9": "проверено_авто",
+        "24": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "current_liabilities",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        11
+      ],
+      "new_source_ids": [
+        26
+      ],
+      "old_normalized_value": "73222076000",
+      "new_normalized_value": "76967000000",
+      "statuses_before": {
+        "11": "расхождение",
+        "26": "расхождение"
+      },
+      "statuses_after": {
+        "11": "проверено_авто",
+        "26": "проверено_авто"
+      }
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "period_end": "2021-12-31",
+      "old_source_ids": [
+        13
+      ],
+      "new_source_ids": [
+        28
+      ],
+      "old_normalized_value": "209309102000",
+      "new_normalized_value": "213948000000",
+      "statuses_before": {
+        "13": "расхождение",
+        "28": "расхождение"
+      },
+      "statuses_after": {
+        "13": "проверено_авто",
+        "28": "проверено_авто"
+      }
+    }
+  ],
+  "recalculated": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2021-12-31",
+      "new_metric_value_id": 6,
+      "status": "рассчитан"
+    }
+  ],
+  "numeric_payload_unchanged": true,
+  "old_calculations_preserved": true,
+  "source_values_count": 70,
+  "superseded_count": 7,
+  "restated_count": 7,
+  "current_statuses": {
+    "проверено_авто": 63
+  },
+  "foreign_key_check": [],
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "limitation": "Оформлен только раскрытый пересмотр выбранных остатков 2021, исходные числа сохранены. Сопоставимость всей истории, другие формы и специальные основы подготовки не одобрены."
+}

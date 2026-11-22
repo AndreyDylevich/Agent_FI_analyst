@@ -41,6 +41,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--metric', choices=sorted(REGISTRY), action='append')
     parser.add_argument('--ocr', action='store_true')
     parser.add_argument('--max-ocr-pages', type=int, default=20)
+    parser.add_argument('--ocr-dpi',type=int,choices=[320,400],default=320)
     parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
     parser.add_argument('--compact-contract',action='store_true',help='ИИ возвращает значения по фиксированным ключам статья/дата')
     parser.add_argument('--cached-only',action='store_true',help='Повторная проверка только сохранённых ответов, без ключа/API модели')
@@ -61,7 +62,7 @@ def main(argv: list[str] | None = None) -> int:
     report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0,
               'cached_only':args.cached_only}
     try:
-        text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages)
+        text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages,ocr_dpi=args.ocr_dpi)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
         manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
         with manager as provider:

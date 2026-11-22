@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "reviewer": "Codex: визуальная сверка двух PDF и раскрытия компании",
+  "reason": "В выпуске FY2022 компания раскрыла ретроспективный пересмотр сравнительного баланса 2021 после завершения распределения цены приобретения и изменения представления налоговых остатков. Визуально сверены исходные итоги обеих версий; тыс. руб. FY2021 и млн руб. FY2022 нормализованы Python. Решение не одобряет сопоставимость всей истории.",
+  "source_evidence": {
+    "page": 10,
+    "start_line": 63,
+    "end_line": 65
+  },
+  "replacements": [
+    {
+      "item_id": "total_assets",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "209309102000",
+      "new_normalized_value": "213948000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "152989564000",
+      "new_normalized_value": "159365000000"
+    },
+    {
+      "item_id": "current_assets",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "56319538000",
+      "new_normalized_value": "54583000000"
+    },
+    {
+      "item_id": "equity_total",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "46191480000",
+      "new_normalized_value": "46192000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "89895546000",
+      "new_normalized_value": "90789000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "73222076000",
+      "new_normalized_value": "76967000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "period_start": null,
+      "period_end": "2021-12-31",
+      "old_pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "new_pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "old_normalized_value": "209309102000",
+      "new_normalized_value": "213948000000"
+    }
+  ]
+}

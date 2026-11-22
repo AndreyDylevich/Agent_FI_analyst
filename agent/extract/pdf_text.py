@@ -47,13 +47,13 @@ def ocr_orientation(text: str) -> tuple[int,float | None]:
     return (int(rotation[1]) if score>=5 else 0),score
 
 
-def ocr_page(path: Path, number: int) -> OCRResult:
+def ocr_page(path: Path, number: int, *, dpi: int = 320) -> OCRResult:
     """Локальный OCR Poppler + Tesseract rus/eng, без загрузки изображений во внешнюю модель."""
     if not shutil.which('pdftoppm') or not shutil.which('tesseract'):
         raise ValueError('Для OCR нужны pdftoppm и tesseract с языками rus+eng')
     with tempfile.TemporaryDirectory(prefix='fi-ocr-') as directory:
         prefix = Path(directory)/'page'
-        subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', '320', '-png', str(path), str(prefix)],
+        subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', str(dpi), '-png', str(path), str(prefix)],
                        check=True, capture_output=True, timeout=45)
         rotation,confidence=0,None
         try:
@@ -70,7 +70,7 @@ def ocr_page(path: Path, number: int) -> OCRResult:
                 if reader.is_encrypted and not reader.decrypt(''):raise ValueError('PDF требует пароль')
                 writer=PdfWriter();writer.add_page(reader.pages[number-1]);writer.pages[0].rotate(rotation)
                 with rotated.open('wb') as target:writer.write(target)
-            subprocess.run(['pdftoppm','-f','1','-singlefile','-r','320','-png',str(rotated),str(prefix)],
+            subprocess.run(['pdftoppm','-f','1','-singlefile','-r',str(dpi),'-png',str(rotated),str(prefix)],
                            check=True,capture_output=True,timeout=45)
         result = subprocess.run(['tesseract', str(prefix.with_suffix('.png')), 'stdout', '-l', 'rus+eng', '--psm', '6',
                                  '-c', 'preserve_interword_spaces=1'],
@@ -78,12 +78,13 @@ def ocr_page(path: Path, number: int) -> OCRResult:
         return OCRResult(result.stdout,rotation,confidence)
 
 
-def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=ocr_page) -> PDFText:
+def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=ocr_page, ocr_dpi: int = 320) -> PDFText:
     """Читает PDF локально. Непрочитанные страницы остаются явно отмеченными, не пустыми фактами."""
     if path.stat().st_size > MAX_PDF_BYTES:
         raise ValueError('PDF превышает лимит 20 МБ')
     if max_ocr_pages < 0:
         raise ValueError('Лимит OCR не может быть отрицательным')
+    if ocr_dpi not in (320,400):raise ValueError('Поддерживается OCR 320 или 400 dpi')
     raw = path.read_bytes()
     if not raw.startswith(b'%PDF-'):
         raise ValueError('Нет сигнатуры PDF')
@@ -102,7 +103,7 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
                 if use_ocr and used < max_ocr_pages:
                     used += 1
                     try:
-                        recognized = ocr(path, number)
+                        recognized = ocr(path, number,dpi=ocr_dpi) if ocr is ocr_page else ocr(path, number)
                         if isinstance(recognized,OCRResult):
                             text=recognized.text
                             orientations[str(number)]={'rotation':recognized.rotation,
@@ -116,7 +117,7 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
             pages.append(Page(number, text, method))
     processing={'pypdf':version('pypdf'),'native_mode':'layout','ocr_requested':use_ocr}
     if use_ocr:
-        processing['ocr']={'version':3,'dpi':320,'languages':'rus+eng','psm':6,'preserve_interword_spaces':True,
+        processing['ocr']={'version':4,'dpi':ocr_dpi,'languages':'rus+eng','psm':6,'preserve_interword_spaces':True,
                            'orientation_detection':'tesseract_osd','min_orientation_confidence':5,
                            'page_orientations':orientations,
                            'max_pages':max_ocr_pages,'attempted_pages':used}

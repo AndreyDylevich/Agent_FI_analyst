@@ -34,6 +34,7 @@ def main(argv=None):
     parser.add_argument('--item',choices=sorted(config.line_items()),action='append')
     parser.add_argument('--ocr',action='store_true')
     parser.add_argument('--max-ocr-pages',type=int,default=12)
+    parser.add_argument('--ocr-dpi',type=int,choices=[320,400],default=400)
     parser.add_argument('--reuse-from',type=Path,action='append')
     parser.add_argument('--cached-only',action='store_true')
     parser.add_argument('--archive',type=Path,help='Уже скачанный архив с pdf/<sha256>.pdf; файл обязательно сверяется')
@@ -68,7 +69,7 @@ def main(argv=None):
             report['pdf_origin']='official_download'
         if downloaded.sha256!=expected_sha:
             raise ValueError('Версия годового PDF изменилась; требуется отдельная сверка, новый источник не отправлен в модель')
-        pdf=read_pdf(Path(downloaded.path),use_ocr=args.ocr,max_ocr_pages=args.max_ocr_pages)
+        pdf=read_pdf(Path(downloaded.path),use_ocr=args.ocr,max_ocr_pages=args.max_ocr_pages,ocr_dpi=args.ocr_dpi)
         if pdf.sha256!=expected_sha:raise ValueError('SHA256 изменился при чтении PDF')
         title=classify_document(entry['discovery_hint'],pdf.pages[0].text,recognition='pdf_first_page')
         period=Period(date(args.year,1,1),date(args.year,12,31),'FY')
@@ -83,7 +84,7 @@ def main(argv=None):
                  '--source-url',entry['source_url'],'--db',str(args.db),'--output',str(args.output/'extraction'),
                  '--sections',*args.sections,'--metric','current_ratio','--compact-contract']
         for item in args.item or BALANCE_ITEMS:command.extend(['--item',item])
-        if args.ocr:command.extend(['--ocr','--max-ocr-pages',str(args.max_ocr_pages)])
+        if args.ocr:command.extend(['--ocr','--max-ocr-pages',str(args.max_ocr_pages),'--ocr-dpi',str(args.ocr_dpi)])
         for path in args.reuse_from or []:command.extend(['--reuse-from',str(path)])
         if args.cached_only:command.append('--cached-only')
         code=extract_main(command)
