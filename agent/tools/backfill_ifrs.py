@@ -38,7 +38,8 @@ def download_history(conn, companies, entries, directory: Path, *, first_year: i
         base={'ticker':entry['ticker'],'expected_year':entry['expected_year'],'discovery_hint':entry['discovery_hint'],
               'source_page':entry['source_page'],'financial_values_verified':False}
         if cached and not refresh:
-            classification=json.loads(conn.execute('SELECT evidence FROM document_classifications WHERE document_id=?',(old['id'],)).fetchone()['evidence'])
+            evidence=conn.execute('SELECT evidence FROM document_classifications WHERE document_id=?',(old['id'],)).fetchone()
+            classification=json.loads(evidence['evidence']) if evidence else {'basis':'unknown','needs_review':True}
             result={'url':url,'status':'cached','document_id':old['id'],'sha256':old['sha256'],'classification':classification}
         elif downloads>=max_downloads:
             files.append({**base,'url':url,'status':'deferred','document_metadata_verified':False});continue
@@ -46,11 +47,15 @@ def download_history(conn, companies, entries, directory: Path, *, first_year: i
             downloads+=1
             result=processor(conn,row,company_id=company_id,recognition=source['recognition'],directory=directory,
                              allowed_hosts=hosts,now=now)
+        if result['status']=='not_modified' and old:
+            evidence=conn.execute('SELECT evidence FROM document_classifications WHERE document_id=?',(old['id'],)).fetchone()
+            result.update(sha256=old['sha256'],classification=json.loads(evidence['evidence']) if evidence else {})
         classification=result.get('classification',{})
         verified=(classification.get('basis')=='pdf_first_page' and classification.get('doc_type')=='ifrs'
                   and classification.get('standard')=='IFRS' and classification.get('period_type')=='FY'
                   and classification.get('period_end')==f"{entry['expected_year']}-12-31" and not classification.get('needs_review',True))
         files.append({**base,**result,'document_metadata_verified':verified})
+        print(f"{entry['ticker']} FY {entry['expected_year']}: {result['status']}; метаданные PDF: {verified}",flush=True)
     report={'checked_at_utc':now,'files':files,'downloads':downloads,
             'archive_download_complete':not any(f['status'] in ('error','deferred') for f in files),
             'financial_history_validated':False,'messages_sent':0,

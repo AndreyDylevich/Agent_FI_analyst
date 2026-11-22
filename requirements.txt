@@ -5,4 +5,5 @@ python-dotenv==1.2.4
 pypdf==6.21.2
 cryptography==50.0.2     # для зашифрованных PDF (AES) в pypdf
 gigachat==0.2.3
+httpx==0.28.1           # отдельные connect/read timeout адаптера GigaChat
 pytest==9.1.1

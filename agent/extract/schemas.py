@@ -108,14 +108,28 @@ def source_context(pages: tuple[Page, ...], *, ticker: str, period: Period,
     return root
 
 
-def date_is_cited(text: str, day: date) -> bool:
-    """Дата остатка в подписи строки; пробелы между глифами года не изменяют оригинал PDF."""
+def _date_match(text: str, day: date):
+    """Адрес даты, без извлечения денежных чисел из строки."""
     months={3:r'март[а-я]*|march',6:r'июн[а-я]*|june',9:r'сентябр[а-я]*|september',
             12:r'декабр[а-я]*|december'}
     year=r'\s*'.join(str(day.year))
-    word=rf'\b0?{day.day}\s+(?:{months[day.month]})\s+{year}\b'
+    word=rf'\b0?{day.day}\s+(?:{months.get(day.month,"(?!)")})\s+{year}\b'
     numeric=rf'\b0?{day.day}[./]0?{day.month}[./]{year}\b|\b{day.isoformat()}\b'
-    return bool(re.search(word+'|'+numeric,text,re.I))
+    return re.search(word+'|'+numeric,text,re.I)
+
+
+def date_is_cited(text: str, day: date) -> bool:
+    """Дата остатка в подписи строки; пробелы между глифами года не изменяют оригинал PDF."""
+    return bool(_date_match(text,day))
+
+
+def dated_row_label(text: str, day: date) -> str | None:
+    """Копирует подпись до конца даты; денежные колонки остаются задачей ИИ."""
+    match=_date_match(text,day)
+    if not match or not re.match(r'^\s*(?:сальдо|остаток|balance|as at|at\b|на\b|\d{1,2}\s)',text,re.I):
+        return None
+    suffix=re.match(r'\s+года|\s+г\.',text[match.end():],re.I)
+    return text[:match.end()+(suffix.end() if suffix else 0)].strip()
 
 
 def parse_amount(raw: str, number_format: str = 'space_grouped_decimal') -> Decimal:

@@ -2,6 +2,7 @@
 
 import os
 import ssl
+import httpx
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
@@ -13,6 +14,18 @@ from dotenv import load_dotenv
 MODEL = 'GigaChat-2-Max'
 BASE_URL = 'https://api.giga.chat/v1'
 CA_PATH = Path(__file__).resolve().parents[2] / 'certs' / 'russian_trusted_root_ca.cer'
+
+
+def _bounded_sdk(**settings):
+    """SDK 0.2.3 принимает только общий float timeout; разделяем connect/read в его HTTP-клиентах.
+
+    Оба свойства SDK локализованы здесь и покрыты тестом зафиксированной версии.
+    TLS/авторизация остаются у SDK. Ключи/заголовки не читаются и не выводятся.
+    """
+    client=GigaChat(**settings)
+    client._client.timeout=httpx.Timeout(90,connect=10,write=10,pool=10)
+    client._auth_client.timeout=httpx.Timeout(30,connect=10,write=10,pool=10)
+    return client
 
 
 class ProviderError(Exception):
@@ -34,7 +47,8 @@ class IncompleteResponse(ProviderError):
     def __init__(self,completion: Completion,reason: str):
         self.completion=completion
         self.reason=reason if reason in ('length','blacklist','function_call','error') else 'unknown'
-        super().__init__(f'Модель не завершила JSON-ответ полностью: {self.reason}')
+        message='GigaChat отклонил запрос встроенным фильтром' if self.reason=='blacklist' else 'Модель не завершила JSON-ответ полностью'
+        super().__init__(f'{message}: {self.reason}')
 
 
 class ExtractionProvider(Protocol):
@@ -46,7 +60,7 @@ class ExtractionProvider(Protocol):
 class GigaChatProvider:
     """SDK изолирован от конвейера; ошибки внешнего клиента не печатаются целиком."""
 
-    def __init__(self, credentials: str, ca_path: Path = CA_PATH, *, client_factory=GigaChat):
+    def __init__(self, credentials: str, ca_path: Path = CA_PATH, *, client_factory=None):
         if not credentials:
             raise ProviderError('Не задан GIGACHAT_KEY')
         if not ca_path.is_file():
@@ -54,7 +68,7 @@ class GigaChatProvider:
         try:
             context = ssl.create_default_context()
             context.load_verify_locations(cafile=str(ca_path))
-            self.client = client_factory(credentials=credentials, scope='GIGACHAT_API_PERS',
+            self.client = (client_factory or _bounded_sdk)(credentials=credentials, scope='GIGACHAT_API_PERS',
                                          base_url=BASE_URL, model=MODEL, ssl_context=context,
                                          verify_ssl_certs=True, timeout=90, max_retries=2)
         except Exception as error:

@@ -71,3 +71,24 @@ def test_close_and_model_list(provider):
     with provider:
         assert provider.available_models() == ['GigaChat-2-Max']
     assert provider.client.closed
+
+
+def test_connect_timeout_not_equal_to_long_model_generation_timeout(monkeypatch):
+    class SDK:
+        def __init__(self,**kwargs):
+            self.settings=kwargs;self._client=NS(timeout=None);self._auth_client=NS(timeout=None)
+    monkeypatch.setattr(llm,'GigaChat',SDK)
+    client=llm._bounded_sdk(verify_ssl_certs=True)
+    assert client._client.timeout.connect==client._auth_client.timeout.connect==10
+    assert client._client.timeout.read==90 and client._auth_client.timeout.read==30
+    assert client.settings['verify_ssl_certs'] is True
+
+
+def test_pinned_sdk_client_properties_support_bounded_timeouts_without_network(monkeypatch):
+    import httpx
+    def no_request(*args,**kwargs):raise AssertionError('Конструирование клиента не должно отправлять запросы')
+    monkeypatch.setattr(httpx.Client,'request',no_request)
+    with llm.GigaChatProvider('dummy-not-a-real-key') as provider:
+        assert provider.client._client.timeout.connect==10
+        assert provider.client._auth_client.timeout.read==30
+        assert provider.client._settings.verify_ssl_certs is True
