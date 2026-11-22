@@ -1,0 +1,465 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45022384462",
+  "head_sha": "c3e98e6297431726c5f85786f7a6af5f6ecf3efd",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "selected_values_count": 46,
+  "statuses": {
+    "проверено_авто": 44,
+    "не_проверено": 2
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "attempt": 1,
+      "target_pages": [
+        5,
+        6
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 18,
+      "sent_pages": [
+        5,
+        6
+      ],
+      "request_sha256": "809128f874417025e6d6db7a45e8eaf6eb42e8255ad1290b91453a2351f3bb0e",
+      "page_text_sha256": "f838ffa7831e2a30e2202fb92da7de3fd378582b6eab791c4ad18c9fe73c2c5f",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "debt_long_term",
+        "debt_short_term",
+        "lease_liabilities_long",
+        "lease_liabilities_short"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "e096781ee67f7fc4076983b9e9a16becfb75794d8c808513ee842913290e08a8",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_1_attempt_1.json",
+      "original_tokens": 0,
+      "original_request_sha256": "809128f874417025e6d6db7a45e8eaf6eb42e8255ad1290b91453a2351f3bb0e",
+      "original_prompt_version": 17,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "cb1ef119cd82b0cba8b085f7992a6440c68c60ccdd22d902fb03a342d9e4b06b",
+      "file": "batch_1_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 2,
+      "attempt": 1,
+      "target_pages": [
+        18,
+        19,
+        20
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 18,
+      "sent_pages": [
+        18,
+        19,
+        20
+      ],
+      "request_sha256": "269f00baf61faae831c07d7c0dc20a148a6673c45f1eea1559d07fb9ee02e726",
+      "page_text_sha256": "19fa18c912f766f40347f8921f2a857c380f7253ff7fba99c0a589f3e0b99921",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "note_bonds",
+        "note_debt_current",
+        "note_debt_noncurrent",
+        "note_debt_total",
+        "note_loans_and_other_borrowings"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "6261f0ca4452b7b9f3a1a49a0d10a6f8390ef7cee6633ba6669ba16444390a7d",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_2_attempt_1.json",
+      "original_tokens": 0,
+      "original_request_sha256": "269f00baf61faae831c07d7c0dc20a148a6673c45f1eea1559d07fb9ee02e726",
+      "original_prompt_version": 17,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "2321b8d1a9544ff08b20e6ae8fade90b923c2a0a58470c2507c0c010a6a09de4",
+      "file": "batch_2_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 3,
+      "attempt": 1,
+      "target_pages": [
+        21,
+        22
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 18,
+      "sent_pages": [
+        21,
+        22
+      ],
+      "request_sha256": "e1ca0cff000cc9e7d343959b67e5890a34768e284dc1a39a03842b04c045f4e3",
+      "page_text_sha256": "0c98f6648d2d84cc83d54198660c90477113cabe5abcafe07670950be42be0b6",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "note_lease_current",
+        "note_lease_discount",
+        "note_lease_noncurrent",
+        "note_lease_present_value",
+        "note_lease_undiscounted"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "2c0941c6d8f7c6487e5f710ce8f4269bdfc5b9a61143b2ab3d1280c5744ec4b8",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_3_attempt_1.json",
+      "original_tokens": 0,
+      "original_request_sha256": "e1ca0cff000cc9e7d343959b67e5890a34768e284dc1a39a03842b04c045f4e3",
+      "original_prompt_version": 17,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "a4cbabdd9dd82026b07f3fd266e470425db31aed74645bd5c6a10da219d2009b",
+      "file": "batch_3_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 4,
+      "attempt": 1,
+      "target_pages": [
+        20,
+        21
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 18,
+      "sent_pages": [
+        20,
+        21
+      ],
+      "request_sha256": "1a62cc77133abe0c56207a9b6b844878b83996e069bbc0f5eb707b6a70e7491e",
+      "page_text_sha256": "9eab986d302aa1e5eff8c0a4f377acc7c111a892b236892b1209f75ecdb25aae",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "note_capitalized_interest_expense",
+        "note_finance_expense_gross",
+        "note_finance_expense_net",
+        "note_finance_modification_expense",
+        "note_finance_other_expense",
+        "note_interest_borrowings",
+        "note_interest_leases",
+        "note_interest_total",
+        "note_interest_unwinding"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "bfd87b6fbbe8d705acd33b3c1a69625cdfd1df66a233c008d85ec39468258b6c",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 2275,
+      "response_sha256": "b805434e672f9dbedb8c2e738f9d988d8d8dee1009bf9be21e302f36314f43b7",
+      "file": "batch_4_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": false,
+      "error": "note_capitalized_interest_expense: original_name 'капитализированные процентные расходы' отсутствует в цитате. Скопируй дословную подпись из evidence без добавленных слов, даже если название канонической статьи длиннее исходного. Если подпись перенесена выше числа, включи все её строки в evidence. Рядом в исходнике: L056|      Итого финансовые       расходы                                                         68,319                 76,586\nL057|          за вычетом капитализированных процентных расходов\nL058|           на создание активов                                                                (2,059)               (2,488)\nL059|          модификация займов/прекращение признания и прочие расходы                           1,260                     65"
+    },
+    {
+      "batch": 4,
+      "attempt": 2,
+      "target_pages": [
+        20,
+        21
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 18,
+      "sent_pages": [
+        20,
+        21
+      ],
+      "request_sha256": "d97015095e9d1e4dde59fd6ac218aaf807cc4105d6dc416ce9c9cec1d8c86a20",
+      "page_text_sha256": "9eab986d302aa1e5eff8c0a4f377acc7c111a892b236892b1209f75ecdb25aae",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "note_capitalized_interest_expense",
+        "note_finance_expense_gross",
+        "note_finance_expense_net",
+        "note_finance_modification_expense",
+        "note_finance_other_expense",
+        "note_interest_borrowings",
+        "note_interest_leases",
+        "note_interest_total",
+        "note_interest_unwinding"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "69f6124ad297669b60846473699e005b5f14cfc70ed89f5ad2a621982b161f52",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 5861,
+      "response_sha256": "8706210a7ebe37f8d57c20523744ed07dc7c66a3bc2ef416f1a4720645fe3de1",
+      "file": "batch_4_attempt_2.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    }
+  ],
+  "reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "debt_long_term",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "debt_long_term",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "debt_short_term",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "debt_short_term",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_long",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_long",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_short",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_short",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_current",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_current",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_noncurrent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_noncurrent",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_loans_and_other_borrowings",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_loans_and_other_borrowings",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_undiscounted",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_undiscounted",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_discount",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_discount",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_present_value",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_present_value",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_current",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_current",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_noncurrent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_noncurrent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_borrowings",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_borrowings",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_leases",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_leases",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_unwinding",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_unwinding",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_expense_gross",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_expense_gross",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_capitalized_interest_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_capitalized_interest_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_modification_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_modification_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_expense_net",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_expense_net",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "note_debt_composition": true,
+      "note_debt_maturity": true,
+      "note_debt_current_vs_balance": true,
+      "note_debt_noncurrent_vs_balance": true,
+      "note_lease_discounting": true,
+      "note_lease_maturity": true,
+      "note_lease_current_vs_balance": true,
+      "note_lease_noncurrent_vs_balance": true,
+      "note_interest_composition": true,
+      "note_finance_gross": true,
+      "note_finance_net": true
+    },
+    "expected_checks": [],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "financial_audit_complete": false,
+  "messages_sent": 0,
+  "limitation": "Выбранные итоги долга, аренды и начисленных расходов. Арендное примечание сравнивает июнь с июнем; декабрьские остатки не приравниваются к прошлому июню. Начисленные/капитализированные расходы не подменяют уплаченные деньги; полного FCFE по этим данным нет."
+}

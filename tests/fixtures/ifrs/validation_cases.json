@@ -60,5 +60,14 @@
     "reference": "mvid_h1_2026_balance_reference.json",
     "ocr": true,
     "max_ocr_pages": 5
+  },
+  "mts_fy2025_balance": {
+    "ticker": "MTSS",
+    "year": 2025,
+    "period": "FY",
+    "sections": [
+      "balance"
+    ],
+    "reference": "mts_fy2025_balance_reference.json"
   }
 }

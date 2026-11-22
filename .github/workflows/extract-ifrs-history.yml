@@ -11,6 +11,10 @@ on:
         description: Год из манифеста истории
         default: '2025'
         required: true
+      all_years:
+        description: Все доступные годовые балансы компании за 2021–2025 (поле года игнорируется)
+        type: boolean
+        default: false
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
@@ -19,11 +23,12 @@ permissions:
 jobs:
   extract:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     env:
       PYTHONUNBUFFERED: '1'
       HISTORY_TICKER: ${{ inputs.ticker }}
       HISTORY_YEAR: ${{ inputs.year }}
+      HISTORY_ALL_YEARS: ${{ inputs.all_years }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,6 +44,11 @@ jobs:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
         shell: bash
         run: |
+          if [ "$HISTORY_ALL_YEARS" = true ]; then
+            python -m agent.tools.extract_ifrs_history_batch --ticker "$HISTORY_TICKER" \
+              --db validation/history/check.db --output validation/history/reports
+            exit $?
+          fi
           ocr_args=()
           if [ "$HISTORY_TICKER" = MVID ]; then ocr_args=(--ocr --max-ocr-pages 12); fi
           python -m agent.tools.extract_ifrs_history --ticker "$HISTORY_TICKER" --year "$HISTORY_YEAR" \

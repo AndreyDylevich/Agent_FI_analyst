@@ -1,0 +1,179 @@
+{
+  "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображений физических страниц 9 и 10 годовой МСФО МТС FY2025. Сравнительный капитал 2024 напечатан со скобками и отрицательным знаком; не смешивать с положительным итогом в отчёте об изменениях капитала H1 2026.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "1768424",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1768424000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "1152576",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1152576000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "615848",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "615848000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "16958",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "16958000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "450572",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "450572000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "1300894",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1300894000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "1768424",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1768424000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "1516963",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1516963000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "978469",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "978469000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "538494",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "538494000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "-11234",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-11234000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "397932",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "397932000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "1130265",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1130265000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "1516963",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1516963000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "metrics": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2025-12-31",
+      "numerator": 615848,
+      "denominator": 1300894
+    }
+  ],
+  "financial_audit_complete": false
+}
