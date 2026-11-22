@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from datetime import date
 
-VERSION = 2
+VERSION = 3
 
 
 @dataclass(frozen=True)
@@ -25,6 +25,17 @@ def _period(text: str) -> tuple[str | None, str | None, str | None]:
     """Период берётся из описания отчётности, не из имени файла или даты публикации."""
     # Явный период в заголовке сильнее года публикации и сравнительных колонок ниже.
     heading = text[:500]
+    # Явный заголовок «за 2021, 2020 и 2019 годы» задаёт текущий FY и сравнения,
+    # а не неопределённую смесь годов публикации. Произвольные даты ниже не используются.
+    annual_list=re.search(r'\bза\s+((?:20\d{2}\s*(?:,|и)\s*)+20\d{2})\s+год[а-я]*\b',heading)
+    if annual_list:
+        years=[int(value) for value in re.findall(r'20\d{2}',annual_list[1])]
+        if years!=list(range(years[0],years[0]-len(years),-1)):
+            return None,None,None
+        balance_year=re.search(r'на\s+31\s+декабр[а-я]*\s+(20\d{2})',heading)
+        if balance_year and int(balance_year[1])!=years[0]:
+            return None,None,None
+        return date(years[0],1,1).isoformat(),date(years[0],12,31).isoformat(),'FY'
     explicit = []
     for kind, pattern in (
         ('H1', r'за\s+(?:(?:1|первое)\s+)?полугодие\s+(20\d{2})'),

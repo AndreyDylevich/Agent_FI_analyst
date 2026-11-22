@@ -53,6 +53,12 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
     checks=[check for context in contexts for check in context['checks']]
     check_results={name:any(check['rule']==name and check['result']['status']=='пройдено' for check in checks)
                    for name in reference['checks_required']}
+    expected_results=[]
+    for expected in reference.get('checks_expected',[]):
+        matches=[check for check in checks if check['rule']==expected['rule'] and check['start']==expected.get('start') and check['end']==expected['end']]
+        passed=bool(matches) and all(check['result']['status']==expected['status'] and
+            ('delta' not in expected or Decimal(check['result']['delta'])==Decimal(expected['delta'])) for check in matches)
+        expected_results.append({**expected,'passed':passed})
     metric_results={}
     for expected in reference.get('metrics',[]):
         row=conn.execute('SELECT value,status FROM metric_values WHERE metric_id=? AND period_end=? ORDER BY id DESC LIMIT 1',
@@ -65,8 +71,8 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
                          (expected['metric_id'],expected['period_end'])).fetchone()
         metric_results[expected['metric_id']]=bool(row and row['status']==expected['status'] and row['value'] is None)
     return {'all_selected_values_verified':all(r['passed'] for r in results),'selected_values':results,
-            'checks':check_results,'metrics':metric_results,'financial_audit_complete':False,
-            'ok':all(r['passed'] for r in results) and all(check_results.values()) and all(metric_results.values())}
+            'checks':check_results,'expected_checks':expected_results,'metrics':metric_results,'financial_audit_complete':False,
+            'ok':all(r['passed'] for r in results) and all(check_results.values()) and all(metric_results.values()) and all(r['passed'] for r in expected_results)}
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -67,3 +67,11 @@ def test_simultaneous_standards_not_guessed():
 def test_scanned_or_unrecognized_pdf_not_treated_as_confirmed_title():
     result = classify('Консолидированная финансовая отчетность за 2025 год', 'Нечитаемая таблица')
     assert result.needs_review and result.doc_type == 'other'
+
+
+def test_explicit_annual_comparative_year_list_is_not_publication_year_guess():
+    text='Консолидированная финансовая отчетность на 31 декабря 2021 и 2020 годов и за 2021, 2020 и 2019 годы'
+    result=classify('',text,recognition='pdf_first_page')
+    assert result.period_start=='2021-01-01' and result.period_end=='2021-12-31' and not result.needs_review
+    assert classify(text.replace('на 31 декабря 2021','на 31 декабря 2022')).period_end is None
+    assert classify('Консолидированная финансовая отчетность за 2021, 2023 и 2020 годы').period_end is None

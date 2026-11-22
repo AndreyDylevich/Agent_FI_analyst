@@ -143,6 +143,52 @@ def test_second_invalid_answer_stops_without_creating_financial_values(tmp_path)
     assert len(attempts) == 2 and all(a['accepted'] is False for a in attempts)
 
 
+@pytest.mark.parametrize('retry_kind', ['invalid_source', 'missing_row', 'same_discrepancy', 'provider_error'])
+def test_source_discrepancy_survives_failed_or_incomplete_retry(tmp_path, retry_kind):
+    labels={'total_assets':('Итого активы','100'),
+            'non_current_assets':('Внеоборотные активы','60'),
+            'current_assets':('Оборотные активы','43')}
+    answer=pipeline_answer(); template=answer['facts'][0]
+    answer['facts']=[{**template,'item_id':item,'original_name':label,'raw_value':value,
+                      'evidence':{'page':2,'quote':label+' '+value}}
+                     for item,(label,value) in labels.items()]
+    pdf=PDFText('a'*64,(Page(1,TEXT),Page(2,
+        'Консолидированный отчет о финансовом положении\n'+TEXT+'\n'+
+        '\n'.join(label+' '+value for label,value in labels.values()))))
+    retry=copy.deepcopy(answer)
+    if retry_kind=='invalid_source': retry['facts'][0]['raw_value']='999'
+    if retry_kind=='missing_row': retry['facts'].pop()
+    class RetryProvider(Provider):
+        def extract(self,*args):
+            if retry_kind=='provider_error' and self.calls: raise ProviderError('ReadTimeout')
+            return super().extract(*args)
+    provider=RetryProvider([answer,retry])
+    run=extract_pdf(pdf,provider,ticker='TEST',entity_token='Тест',period=PERIOD,
+                    line_items={key:config.line_items()[key] for key in labels},
+                    output=tmp_path,sections=('balance',))
+    assert {f.item_id:f.raw_value for f in run.facts}=={key:value for key,(_,value) in labels.items()}
+    assert set(run.statuses)=={'расхождение'}
+    assert next(c for c in run.checks if c.rule=='assets_components').result.delta==D('-3000000')
+    attempts=json.loads((tmp_path/'attempts.json').read_text())
+    assert len(attempts)==2
+    if retry_kind!='same_discrepancy':
+        assert attempts[0]['accepted'] and attempts[0]['retained_with_discrepancy']
+        assert not attempts[1]['accepted']
+
+
+@pytest.mark.parametrize('text,expected', [
+    ('Итого 91 746    124 002','space_grouped_decimal'),
+    ('Итого 1,651,919 615,848','comma_grouped_dot_decimal'),
+    ('Итого 91 746 124,002',None),
+    ('Доля 0,125 0,250',None),
+    ('Итого 651,919 615,848',None),
+    ('Итого 100 90',None),
+])
+def test_source_number_format_does_not_mix_separator_conventions(text,expected):
+    from agent.extract.pipeline import source_number_format
+    assert source_number_format((Page(1,text),))==expected
+
+
 def test_provider_timeout_still_leaves_request_audit(tmp_path):
     class TimedOut:
         def extract(self,*args): raise ProviderError('Извлечение GigaChat: ReadTimeout')

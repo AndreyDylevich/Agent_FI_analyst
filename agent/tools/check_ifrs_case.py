@@ -19,6 +19,7 @@ def main(argv=None) -> int:
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case',choices=sorted(cases),required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--reuse-from',type=Path,action='append')
     args=parser.parse_args(argv)
     if args.output.exists() and any(args.output.iterdir()):
         parser.error('Нужен новый/пустой каталог проверки')
@@ -40,15 +41,19 @@ def main(argv=None) -> int:
                  '--sections',*case['sections'],'--metric','current_ratio']
         for item in items:command.extend(['--item',item])
         if case.get('compact',True):command.append('--compact-contract')
+        for path in args.reuse_from or []:command.extend(['--reuse-from',str(path)])
         if case.get('ocr'):command.extend(['--ocr','--max-ocr-pages',str(case.get('max_ocr_pages',50))])
         code=extract_main(command)
-        if code:
+        extraction=json.loads((args.output/'extraction/extraction_check.json').read_text())
+        expected_discrepancy=any(check['status']=='расхождение' for check in reference.get('checks_expected',[]))
+        if code and not (expected_discrepancy and not extraction.get('error') and extraction.get('facts') and db_path.is_file()):
             raise ValueError('Извлечение не прошло проверку; исходные ответы сохранены')
         conn=sqlite3.connect(f'{db_path.resolve().as_uri()}?mode=ro',uri=True);conn.row_factory=sqlite3.Row
         try:result=verify(conn,reference)
         finally:conn.close()
         (args.output/'reference_check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-        report.update(ok=result['ok'],pdf_sha256=pdf.sha256,reference=case['reference'])
+        report.update(ok=result['ok'],pdf_sha256=pdf.sha256,reference=case['reference'],
+                      extraction_ok=extraction['ok'],source_discrepancies_present='расхождение' in extraction['statuses'])
     except Exception as error:
         report['error']=f'{type(error).__name__}: {error}'
     (args.output/'case_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

@@ -55,3 +55,52 @@ def test_selected_metric_checked_against_independent_fraction(tmp_path):
     reference['metrics'][0]['numerator']=3
     assert not verify_statements(conn,reference)['ok']
     conn.close()
+
+
+def test_expected_discrepancy_requires_exact_rule_date_and_delta(tmp_path):
+    from dataclasses import replace
+    from decimal import Decimal
+    from agent.db import init_db
+    from agent.extract.store import store_extraction
+    from agent.tools.verify_ifrs_reference import verify_statements
+    from tests.test_extraction_schema import PERIOD
+    from tests.test_ifrs_pipeline import facts,make_run
+    rows=list(facts());rows[0]=replace(rows[0],value=Decimal('102'),normalized=Decimal('102000000'),raw_value='102')
+    conn=init_db(tmp_path/'disputed.db')
+    with conn:store_extraction(conn,make_run(tuple(rows)),ticker='TEST',name='Тест',
+        source_url='https://example.test/a.pdf',period=PERIOD,local_path='a.pdf')
+    reference={'pdf_sha256':'a'*64,'unit':'млн руб.','multiplier':'1000000','checks_required':[],
+        'rows':[{'item_id':'total_assets','start':None,'end':'2026-06-30','value':'102','pages':[1],'status':'расхождение'}],
+        'checks_expected':[{'rule':'balance','start':None,'end':'2026-06-30','status':'расхождение','delta':'2000000'}]}
+    assert verify_statements(conn,reference)['ok']
+    for change in ({'delta':'1000000'},{'end':'2025-06-30'},{'status':'пройдено'},{'rule':'absent'}):
+        altered={**reference,'checks_expected':[{**reference['checks_expected'][0],**change}]}
+        assert not verify_statements(conn,altered)['ok']
+    conn.close()
+
+
+@pytest.mark.parametrize('declared',[True,False])
+def test_case_proceeds_to_reference_only_for_declared_source_discrepancy(monkeypatch,tmp_path,declared):
+    from agent.db import init_db
+    original=json.loads((check_ifrs_case.CATALOG.parent/'sgzh_h1_2026_balance_reference.json').read_text())
+    if declared:original['checks_expected']=[{'rule':'balance','end':'2026-06-30','status':'расхождение'}]
+    catalog=tmp_path/'cases.json'
+    catalog.write_text(json.dumps({'sgzh_balance':{'ticker':'SGZH','year':2026,'period':'H1',
+                                                  'sections':['balance'],'reference':'ref.json'}}))
+    (tmp_path/'ref.json').write_text(json.dumps(original))
+    monkeypatch.setattr(check_ifrs_case,'CATALOG',catalog)
+    monkeypatch.setattr(check_ifrs_case,'download_pdf',lambda *args:SimpleNamespace(sha256=original['pdf_sha256'],path='source.pdf'))
+    verified=[]
+    def extraction(command):
+        out=tmp_path/'out';(out/'extraction').mkdir()
+        init_db(out/'check.db').close()
+        (out/'extraction/extraction_check.json').write_text(json.dumps(
+            {'ok':False,'facts':[{'item_id':'total_assets'}],'statuses':['расхождение']}))
+        return 1
+    monkeypatch.setattr(check_ifrs_case,'extract_main',extraction)
+    def verify(*args): verified.append(True);return {'ok':True}
+    monkeypatch.setattr(check_ifrs_case,'verify',verify)
+    code=check_ifrs_case.main(['--case','sgzh_balance','--output',str(tmp_path/'out')])
+    report=json.loads((tmp_path/'out/case_check.json').read_text())
+    assert code==(0 if declared else 1) and bool(verified)==declared
+    if declared:assert not report['extraction_ok'] and report['source_discrepancies_present']
