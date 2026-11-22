@@ -311,10 +311,15 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             if len(matches)==1:
                 raw = matches.pop()
         if normalized_text(name).casefold() not in quote.casefold():
+            nearby=''
+            if evidence.start_line is not None:
+                lines=by_number[evidence.page].text.splitlines()
+                first=max(1,evidence.start_line-2);last=min(len(lines),evidence.end_line+1)
+                nearby=' Рядом в исходнике: '+'\n'.join(f'L{n:03d}|{lines[n-1]}' for n in range(first,last+1))[:1200]
             raise ValueError(f'{item_id}: original_name {name!r} отсутствует в цитате. '
                              'Скопируй дословную подпись из evidence без добавленных слов, '
                              'даже если название канонической статьи длиннее исходного. '
-                             'Если подпись перенесена выше числа, включи все её строки в evidence')
+                             'Если подпись перенесена выше числа, включи все её строки в evidence.'+nearby)
         if normalized_text(raw) not in tokens:
             raise ValueError(f'{item_id}: подпись/число {raw!r} отсутствуют в цитате строки; скопируй исходную запись целиком')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():

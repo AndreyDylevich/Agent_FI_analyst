@@ -17,6 +17,20 @@ def test_glyph_spacing_in_report_headings_does_not_hide_history_forms():
     assert pdf.pages[0].text==income and pdf.pages[1].text==balance
 
 
+def test_ocr_orientation_records_processing_without_modifying_original_pdf(tmp_path):
+    import hashlib
+    from agent.extract.pdf_text import OCRResult,ocr_orientation
+    assert ocr_orientation('Rotate: 90\nOrientation confidence: 5.89\n')==(90,5.89)
+    assert ocr_orientation('Rotate: 270\nOrientation confidence: 0.2\n')==(0,0.2)
+    assert ocr_orientation('Rotate: 90\n')==(0,None)
+    path=blank_pdf(tmp_path);original=path.read_bytes()
+    pdf=read_pdf(path,use_ocr=True,max_ocr_pages=1,
+                 ocr=lambda *args:OCRResult('Консолидированный отчет об изменениях капитала',90,5.89))
+    assert pdf.sha256==hashlib.sha256(original).hexdigest() and path.read_bytes()==original
+    assert pdf.processing['ocr']['page_orientations']['1']=={'rotation':90,'confidence':5.89}
+    assert pdf.pages[0].method=='ocr'
+
+
 def blank_pdf(tmp_path, count=2, password=None):
     writer = PdfWriter()
     for _ in range(count): writer.add_blank_page(width=100, height=100)

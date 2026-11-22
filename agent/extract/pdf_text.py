@@ -8,7 +8,7 @@ import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from pypdf import PdfReader
+from pypdf import PdfReader, PdfWriter
 from importlib.metadata import version
 
 from agent.sources.files import MAX_PDF_BYTES
@@ -31,7 +31,23 @@ class PDFText:
     processing: dict = field(default_factory=dict)
 
 
-def ocr_page(path: Path, number: int) -> str:
+@dataclass(frozen=True)
+class OCRResult:
+    text: str
+    rotation: int = 0
+    orientation_confidence: float | None = None
+
+
+def ocr_orientation(text: str) -> tuple[int,float | None]:
+    """Метаданные Tesseract OSD, не финансовые данные. Слабый/неполный ответ не поворачивает PDF."""
+    rotation=re.search(r'^Rotate:\s*(0|90|180|270)\s*$',text,re.M)
+    confidence=re.search(r'^Orientation confidence:\s*(\d+(?:\.\d+)?)\s*$',text,re.M)
+    if not rotation or not confidence:return 0,None
+    score=float(confidence[1])
+    return (int(rotation[1]) if score>=5 else 0),score
+
+
+def ocr_page(path: Path, number: int) -> OCRResult:
     """Локальный OCR Poppler + Tesseract rus/eng, без загрузки изображений во внешнюю модель."""
     if not shutil.which('pdftoppm') or not shutil.which('tesseract'):
         raise ValueError('Для OCR нужны pdftoppm и tesseract с языками rus+eng')
@@ -39,10 +55,27 @@ def ocr_page(path: Path, number: int) -> str:
         prefix = Path(directory)/'page'
         subprocess.run(['pdftoppm', '-f', str(number), '-singlefile', '-r', '320', '-png', str(path), str(prefix)],
                        check=True, capture_output=True, timeout=45)
+        rotation,confidence=0,None
+        try:
+            orientation=subprocess.run(['tesseract',str(prefix.with_suffix('.png').resolve()),'stdout','-l','osd','--psm','0'],
+                                       capture_output=True,text=True,timeout=30)
+            if orientation.returncode==0:rotation,confidence=ocr_orientation(orientation.stdout)
+        except (OSError,subprocess.SubprocessError):
+            pass
+        if rotation:
+            # Меняется только временная копия одной страницы; оригинал и физический номер прежние.
+            rotated=Path(directory)/'rotated.pdf'
+            with path.open('rb') as stream:
+                reader=PdfReader(stream)
+                if reader.is_encrypted and not reader.decrypt(''):raise ValueError('PDF требует пароль')
+                writer=PdfWriter();writer.add_page(reader.pages[number-1]);writer.pages[0].rotate(rotation)
+                with rotated.open('wb') as target:writer.write(target)
+            subprocess.run(['pdftoppm','-f','1','-singlefile','-r','320','-png',str(rotated),str(prefix)],
+                           check=True,capture_output=True,timeout=45)
         result = subprocess.run(['tesseract', str(prefix.with_suffix('.png')), 'stdout', '-l', 'rus+eng', '--psm', '6',
                                  '-c', 'preserve_interword_spaces=1'],
                                 check=True, capture_output=True, text=True, timeout=60)
-        return result.stdout
+        return OCRResult(result.stdout,rotation,confidence)
 
 
 def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=ocr_page) -> PDFText:
@@ -54,7 +87,7 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
     raw = path.read_bytes()
     if not raw.startswith(b'%PDF-'):
         raise ValueError('Нет сигнатуры PDF')
-    pages, warnings, used = [], [], 0
+    pages, warnings, used, orientations = [], [], 0, {}
     with path.open('rb') as stream:
         reader = PdfReader(stream)
         if reader.is_encrypted and not reader.decrypt(''):
@@ -69,7 +102,12 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
                 if use_ocr and used < max_ocr_pages:
                     used += 1
                     try:
-                        text = ocr(path, number)
+                        recognized = ocr(path, number)
+                        if isinstance(recognized,OCRResult):
+                            text=recognized.text
+                            orientations[str(number)]={'rotation':recognized.rotation,
+                                                       'confidence':recognized.orientation_confidence}
+                        else:text=recognized
                         method = 'ocr' if len(re.sub(r'\s', '', text)) >= 30 else 'unreadable'
                     except (ValueError, OSError, subprocess.SubprocessError) as error:
                         warnings.append(f'Страница {number}: OCR недоступен ({type(error).__name__})')
@@ -78,7 +116,9 @@ def read_pdf(path: Path, *, use_ocr: bool = False, max_ocr_pages: int = 20, ocr=
             pages.append(Page(number, text, method))
     processing={'pypdf':version('pypdf'),'native_mode':'layout','ocr_requested':use_ocr}
     if use_ocr:
-        processing['ocr']={'version':2,'dpi':320,'languages':'rus+eng','psm':6,'preserve_interword_spaces':True,
+        processing['ocr']={'version':3,'dpi':320,'languages':'rus+eng','psm':6,'preserve_interword_spaces':True,
+                           'orientation_detection':'tesseract_osd','min_orientation_confidence':5,
+                           'page_orientations':orientations,
                            'max_pages':max_ocr_pages,'attempted_pages':used}
     return PDFText(hashlib.sha256(raw).hexdigest(), tuple(pages), tuple(warnings),processing)
 

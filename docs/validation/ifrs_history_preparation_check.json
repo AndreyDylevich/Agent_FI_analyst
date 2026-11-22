@@ -1,0 +1,639 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "archive_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44963506252",
+  "documents": [
+    {
+      "ticker": "MTSS",
+      "expected_year": 2021,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2021-01-01",
+        "period_end": "2021-12-31",
+        "period_type": "FY",
+        "evidence": "пао «мобильные телесистемы» и дочерние предприятия консолидированная финансовая отчетность на 31 декабря 2021 и 2020 годов и за 2021, 2020 и 2019 годы и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          11,
+          12
+        ],
+        "income": [
+          13
+        ],
+        "cash_flow": [
+          17,
+          18
+        ],
+        "equity": [
+          15,
+          16
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 112,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2022,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_21_22_rus.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "ae2da2e15ca9706cc9888b17403bd2337c80b152078fa74b17b600757edb3251",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2022-01-01",
+        "period_end": "2022-12-31",
+        "period_type": "FY",
+        "evidence": "пао «мобильные телесистемы» и дочерние предприятия консолидированная финансовая отчетность на 31 декабря 2022 и 2021 годов и за 2022, 2021 и 2020 годы и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          11,
+          12
+        ],
+        "income": [
+          13
+        ],
+        "cash_flow": [
+          17,
+          18
+        ],
+        "equity": [
+          15,
+          16
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 113,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2023,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_22_23_r.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "period_type": "FY",
+        "evidence": "пао «мобильные телесистемы» и дочерние предприятия консолидированная финансовая отчетность на 31 декабря 2023 и 2022 годов и за 2023, 2022 и 2021 годы и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          11,
+          12
+        ],
+        "income": [
+          13
+        ],
+        "cash_flow": [
+          17,
+          18
+        ],
+        "equity": [
+          15,
+          16
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 107,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2024,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_23-24-r_05.03_final_processed.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "3df7e0bf53631d326d041eeb7693c7c5b8166c43c76aca62161575e20ae32870",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "period_type": "FY",
+        "evidence": "пао «мобильные телесистемы» и дочерние предприятия консолидированная финансовая отчетность за 2024 год и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          10,
+          11
+        ],
+        "income": [
+          12
+        ],
+        "cash_flow": [
+          15,
+          16
+        ],
+        "equity": [
+          14
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 96,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "MTSS",
+      "expected_year": 2025,
+      "source_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "period_type": "FY",
+        "evidence": "пао «мобильные телесистемы» и дочерние предприятия консолидированная финансовая отчетность за 2025 год и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          9,
+          10
+        ],
+        "income": [
+          11
+        ],
+        "cash_flow": [
+          14,
+          15
+        ],
+        "equity": [
+          13
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 89,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2023,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_FY_2023/IFRS_FY2023_RUS.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество «м.видео» консолидированная финансовая отчетность специального назначения за год, закончившийся 31 декабря 2023 года и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          9,
+          71
+        ],
+        "income": [
+          10,
+          72
+        ],
+        "cash_flow": [
+          12,
+          13,
+          73
+        ],
+        "equity": [
+          11
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 73,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": true
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2024,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-finansovaya-otchetnost-pa-mvideo-za-024.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "2e055eb0a75e2d4a5dfb192060255c605d814221455170f009803085eef0e056",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество «м.видео» консолидированная финансовая отчетность за год, закончившийся 31 декабря 2024 года и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          12
+        ],
+        "income": [
+          13
+        ],
+        "cash_flow": [
+          15,
+          16
+        ],
+        "equity": [
+          14
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 79,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2021,
+      "source_url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2021-01-01",
+        "period_end": "2021-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество группа компаний «сегежа» консолидированная финансовая отчетность и аудиторское заключение независимого аудитора за 2021 год",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          12
+        ],
+        "income": [
+          11
+        ],
+        "cash_flow": [
+          14,
+          15
+        ],
+        "equity": [
+          13
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 61,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2022,
+      "source_url": "https://segezha-group.com/upload/iblock/91d/0r3xa6k330atuj72rx7prs6hbixb65st.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2022-01-01",
+        "period_end": "2022-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество группа компаний «сегежа» консолидированная финансовая отчетность и аудиторское заключение независимого аудитора за 2022 год",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          10
+        ],
+        "income": [
+          9
+        ],
+        "cash_flow": [
+          12,
+          13
+        ],
+        "equity": [
+          11
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 58,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": false
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2023,
+      "source_url": "https://segezha-group.com/upload/iblock/399/6ve7zm02as87k84ecttdmefp48n1yhu1.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество группа компаний «сегежа» консолидированная финансовая отчетность специального назначения и аудиторское заключение независимого аудитора за год, закончившийся 31 декабря 2023 года",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          9
+        ],
+        "income": [
+          8
+        ],
+        "cash_flow": [
+          11
+        ],
+        "equity": [
+          10
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 45,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": true
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2024,
+      "source_url": "https://segezha-group.com/upload/iblock/38d/6yw7bqqt7e2b5jwtp6wh2b3tlnm629ej.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "89a72bb9435f8cb1f288dc56568e1c5d724da23b9a1624c5ea2f79797cb520e6",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество группа компаний «сегежа» консолидированная финансовая отчетность специального назначения и аудиторское заключение независимого аудитора за год, закончившийся 31 декабря 2024 года",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          9
+        ],
+        "income": [
+          8
+        ],
+        "cash_flow": [
+          11
+        ],
+        "equity": [
+          10
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 43,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": true
+    },
+    {
+      "ticker": "SGZH",
+      "expected_year": 2025,
+      "source_url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество группа компаний «сегежа» консолидированная финансовая отчетность специального назначения и аудиторское заключение независимого аудитора за год, закончившийся 31 декабря 2025 года",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          8
+        ],
+        "income": [
+          7
+        ],
+        "cash_flow": [
+          10
+        ],
+        "equity": [
+          9
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 43,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": false
+      },
+      "special_purpose_title": true
+    },
+    {
+      "ticker": "MVID",
+      "expected_year": 2025,
+      "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+      "ready_for_extraction": true,
+      "financial_values_verified": false,
+      "comparability_approved": false,
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "classification": {
+        "doc_type": "ifrs",
+        "standard": "IFRS",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "period_type": "FY",
+        "evidence": "публичное акционерное общество «м.видео» консолидированная финансовая отчетность за год, закончившийся 31 декабря 2025 года и аудиторское заключение независимого аудитора",
+        "basis": "pdf_first_page",
+        "needs_review": false
+      },
+      "document_metadata_verified": true,
+      "forms": {
+        "balance": [
+          8
+        ],
+        "income": [
+          9
+        ],
+        "cash_flow": [
+          11,
+          12
+        ],
+        "equity": [
+          10
+        ]
+      },
+      "all_main_forms_located": true,
+      "pages": 68,
+      "text_processing": {
+        "pypdf": "6.21.2",
+        "native_mode": "layout",
+        "ocr_requested": true,
+        "ocr": {
+          "version": 3,
+          "dpi": 320,
+          "languages": "rus+eng",
+          "psm": 6,
+          "preserve_interword_spaces": true,
+          "orientation_detection": "tesseract_osd",
+          "min_orientation_confidence": 5,
+          "page_orientations": {
+            "1": {
+              "rotation": 0,
+              "confidence": 9.65
+            },
+            "2": {
+              "rotation": 0,
+              "confidence": 14.12
+            },
+            "3": {
+              "rotation": 0,
+              "confidence": 16.93
+            },
+            "4": {
+              "rotation": 0,
+              "confidence": 17.63
+            },
+            "5": {
+              "rotation": 0,
+              "confidence": 16.6
+            },
+            "6": {
+              "rotation": 0,
+              "confidence": 20.21
+            },
+            "7": {
+              "rotation": 0,
+              "confidence": 23.88
+            },
+            "8": {
+              "rotation": 0,
+              "confidence": 8.09
+            },
+            "9": {
+              "rotation": 0,
+              "confidence": 8.08
+            },
+            "10": {
+              "rotation": 90,
+              "confidence": 6.98
+            },
+            "11": {
+              "rotation": 0,
+              "confidence": 11.11
+            },
+            "12": {
+              "rotation": 0,
+              "confidence": 9.06
+            }
+          },
+          "max_pages": 12,
+          "attempted_pages": 12
+        }
+      },
+      "special_purpose_title": false
+    }
+  ],
+  "ready_count": 13,
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "limitation": "13 документов готовы к извлечению основных форм. Для М.Видео FY2025 распознаны только первые 12 физических страниц; поворот страницы 10 учтён и записан в метаданных OCR. Специальная основа подготовки требует проверки исключений. Финансовые значения истории пока не извлечены/не сверены."
+}

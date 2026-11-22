@@ -58,6 +58,13 @@ def test_source_and_normalization():
     assert not row.from_ocr
 
 
+def test_missing_caption_reports_original_neighbor_addresses_without_accepting_fact():
+    data=payload();data['facts'][0].update(original_name='Синтезированная подпись',
+        evidence={'page':1,'start_line':4,'end_line':4})
+    with pytest.raises(ValueError,match='L004\\|Итого активы') as error:parse(data)
+    assert 'L003|30.06.2026 31.12.2025' in str(error.value)
+
+
 def test_ocr_source_flag_not_hidden():
     assert parse(payload(), (Page(1, TEXT, 'ocr'),)).facts[0].from_ocr
 

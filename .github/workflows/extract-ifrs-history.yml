@@ -1,0 +1,51 @@
+name: Извлечение годового баланса МСФО
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: Компания
+        type: choice
+        options: [MTSS, MVID, SGZH]
+        required: true
+      year:
+        description: Год из манифеста истории
+        default: '2025'
+        required: true
+concurrency:
+  group: gigachat-provider
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: '1'
+      HISTORY_TICKER: ${{ inputs.ticker }}
+      HISTORY_YEAR: ${{ inputs.year }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Установить OCR для М.Видео
+        if: inputs.ticker == 'MVID'
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
+      - name: Извлечь только закреплённую версию годового PDF
+        env:
+          GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
+        shell: bash
+        run: |
+          ocr_args=()
+          if [ "$HISTORY_TICKER" = MVID ]; then ocr_args=(--ocr --max-ocr-pages 12); fi
+          python -m agent.tools.extract_ifrs_history --ticker "$HISTORY_TICKER" --year "$HISTORY_YEAR" \
+            --db validation/history/check.db --output validation/history/report "${ocr_args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ifrs-history-extraction
+          path: validation/history/
+          retention-days: 14

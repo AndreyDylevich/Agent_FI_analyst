@@ -9,7 +9,8 @@
       "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
       "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
       "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2021 г.",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee"
     },
     {
       "ticker": "MTSS",
@@ -17,7 +18,8 @@
       "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_21_22_rus.pdf",
       "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
       "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2022 г.",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "ae2da2e15ca9706cc9888b17403bd2337c80b152078fa74b17b600757edb3251"
     },
     {
       "ticker": "MTSS",
@@ -25,7 +27,8 @@
       "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_22_23_r.pdf",
       "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
       "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» и дочерних компаний по состоянию на 31 декабря 2023 г.",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563"
     },
     {
       "ticker": "MTSS",
@@ -33,7 +36,8 @@
       "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_23-24-r_05.03_final_processed.pdf",
       "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
       "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» по состоянию на 31.12.2024 г.",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "3df7e0bf53631d326d041eeb7693c7c5b8166c43c76aca62161575e20ae32870"
     },
     {
       "ticker": "MTSS",
@@ -41,7 +45,8 @@
       "source_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
       "source_page": "https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/raskritie-informacii/godovaya-otchetnost",
       "discovery_hint": "Годовая консолидированная финансовая отчетность ПАО «МТС» по состоянию на 31.12.2025 г.",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357"
     },
     {
       "ticker": "MVID",
@@ -49,7 +54,8 @@
       "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_FY_2023/IFRS_FY2023_RUS.pdf",
       "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
       "discovery_hint": "Консолидированная финансовая отчетность специального назначения ПАО «М.видео» за год, закончившийся 31 декабря 2023 года 31.12.2023",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914"
     },
     {
       "ticker": "MVID",
@@ -57,7 +63,8 @@
       "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-finansovaya-otchetnost-pa-mvideo-za-024.pdf",
       "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
       "discovery_hint": "Консолидированная финансовая отчетность ПАО «М.видео» за 2024 год 30.12.2024",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "2e055eb0a75e2d4a5dfb192060255c605d814221455170f009803085eef0e056"
     },
     {
       "ticker": "MVID",
@@ -65,7 +72,8 @@
       "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
       "source_page": "https://www.mvideoeldorado.ru/ru/shareholders-and-investors/regulatory-disclosure/ras-reporting",
       "discovery_hint": "Консолидированная финансовая отчетность ПАО «М.видео» за 2025 год 31.12.2025",
-      "discovery_basis": "IR link text; document verification required"
+      "discovery_basis": "IR link text; document verification required",
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833"
     },
     {
       "ticker": "SGZH",
@@ -73,7 +81,8 @@
       "source_url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
       "source_page": "https://segezha-group.com/investors/report/financial-results/",
       "discovery_hint": "Segezha_IFRS_Cons_FS_2021-rus_signed.pdf",
-      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required",
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77"
     },
     {
       "ticker": "SGZH",
@@ -81,7 +90,8 @@
       "source_url": "https://segezha-group.com/upload/iblock/91d/0r3xa6k330atuj72rx7prs6hbixb65st.pdf",
       "source_page": "https://segezha-group.com/investors/report/financial-results/",
       "discovery_hint": "Segezha_IFRS_Cons_FS_2022-rus (issued).pdf",
-      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required",
+      "pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90"
     },
     {
       "ticker": "SGZH",
@@ -89,7 +99,8 @@
       "source_url": "https://segezha-group.com/upload/iblock/399/6ve7zm02as87k84ecttdmefp48n1yhu1.pdf",
       "source_page": "https://segezha-group.com/investors/report/financial-results/",
       "discovery_hint": "Segezha_IFRS_Cons_SP_FS_2023-r_signed.pdf",
-      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required",
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a"
     },
     {
       "ticker": "SGZH",
@@ -97,7 +108,8 @@
       "source_url": "https://segezha-group.com/upload/iblock/38d/6yw7bqqt7e2b5jwtp6wh2b3tlnm629ej.pdf",
       "source_page": "https://segezha-group.com/investors/report/financial-results/",
       "discovery_hint": "Финансовая отчетность_Segezha_IFRS_Cons_SP_FS_24-rus_signed.pdf",
-      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required",
+      "pdf_sha256": "89a72bb9435f8cb1f288dc56568e1c5d724da23b9a1624c5ea2f79797cb520e6"
     },
     {
       "ticker": "SGZH",
@@ -105,7 +117,8 @@
       "source_url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
       "source_page": "https://segezha-group.com/investors/report/financial-results/",
       "discovery_hint": "Segezha_IFRS_Cons_SP_FS_25-r.pdf",
-      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required"
+      "discovery_basis": "IR anchor title attribute, archive year; hint only, document verification required",
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664"
     }
   ],
   "known_gaps": [

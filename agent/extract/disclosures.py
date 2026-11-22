@@ -10,7 +10,8 @@ from agent.extract.llm import ExtractionProvider, ProviderError, IncompleteRespo
 from agent.extract.pdf_text import PDFText, find_sections, page_batches
 from agent.extract.schemas import CITATION, Citation, _keys, _object, _unique_object, citation
 
-VERSION=2
+VERSION=3
+REQUIRED_EXPLICIT_TOPICS={'accounting_policy','ifrs16','ifrs17','ifrs18'}
 TOPICS={
     'accounting_policy':r'учетн.{0,30}политик|accounting polic',
     'perimeter':r'выбыт|продаж|продал|приобрет|утрат.{0,30}контрол|консолидац|dispos|acqui|deconsolid|loss of control',
@@ -113,7 +114,14 @@ def extract_disclosures(pdf: PDFText,provider: ExtractionProvider,*,output: Path
             record.update(file=filename,model=completion.model,tokens=completion.tokens,
                           response_sha256=hashlib.sha256(completion.content.encode()).hexdigest())
             try:
-                findings.extend(parse_disclosures(completion.content,target));record['accepted']=True
+                parsed=parse_disclosures(completion.content,target)
+                present={finding.topic for finding in parsed}
+                text=' '.join(' '.join(page.text.lower().replace('ё','е').split()) for page in target)
+                missing={topic for topic in REQUIRED_EXPLICIT_TOPICS if re.search(TOPICS[topic],text,re.I)}-present
+                if missing:
+                    raise ValueError('В переданных страницах есть явное упоминание тем '+', '.join(sorted(missing))+
+                                     ', но ссылка на раскрытие пропущена. Верни полный набор с дословными абзацами, включая исключения/отрицания; интерпретацию не добавляй')
+                findings.extend(parsed);record['accepted']=True
                 break
             except (ValueError,TypeError) as error:
                 record.update(accepted=False,error=str(error));feedback='\nПроверка Python: '+str(error)
