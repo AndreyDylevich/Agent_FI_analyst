@@ -88,10 +88,18 @@ def main(argv=None):
         if args.cached_only:command.append('--cached-only')
         code=extract_main(command)
         extraction=json.loads((args.output/'extraction/extraction_check.json').read_text())
+        mandatory_balance=not args.item and args.sections==['balance']
+        missing_balance=[]
+        if mandatory_balance:
+            actual={(fact['item_id'],fact['end']) for fact in extraction.get('facts',[])}
+            missing_balance=[{'item_id':item,'period_end':f'{year}-12-31'} for item in BALANCE_ITEMS
+                             for year in (args.year,args.year-1) if (item,f'{year}-12-31') not in actual]
         report.update(ok=code==0,selected_values_count=len(extraction.get('facts',[])),
                       statuses=extraction.get('statuses',[]),extraction_error=extraction.get('error'),
                       financial_audit_complete=False,
                       limitation='Извлечение и тождества не подтверждают независимый эталон, полную историю и сопоставимость. Специальные основы подготовки, пересчёты и изменения периметра требуют отдельной проверки.')
+        report['missing_balance_observations']=missing_balance
+        if missing_balance:report['ok']=False
     except (ValueError, TypeError, KeyError, OSError, StopIteration, RuntimeError, RequestException) as error:
         report['error']=type(error).__name__ if isinstance(error,RequestException) else f'{type(error).__name__}: {error}'
     (args.output/'history_extraction_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

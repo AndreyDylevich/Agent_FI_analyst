@@ -14,6 +14,10 @@ def command(tmp_path):
     return ['--ticker','SGZH','--year','2025','--db',str(tmp_path/'check.db'),'--output',str(tmp_path/'out')]
 
 
+def balance_facts():
+    return [{'item_id':item,'end':f'{year}-12-31'} for item in tool.BALANCE_ITEMS for year in (2025,2024)]
+
+
 def test_history_extraction_refuses_main_database(tmp_path):
     args=command(tmp_path);args[args.index('--db')+1]=str(db.DB_PATH)
     with pytest.raises(SystemExit):tool.main(args)
@@ -53,7 +57,7 @@ def test_archive_uses_exact_pinned_pdf_without_network(monkeypatch,tmp_path,inta
     monkeypatch.setattr(tool,'read_pdf',lambda *args,**kwargs:PDFText(sha,(Page(1,
         'ПАО СЕГЕЖА. Консолидированная финансовая отчетность по МСФО за 2025 год. В миллионах российских рублей'),)))
     def extracted(args):
-        folder=tmp_path/'out/extraction';folder.mkdir();(folder/'extraction_check.json').write_text(json.dumps({'facts':[{}],'statuses':[]}));return 0
+        folder=tmp_path/'out/extraction';folder.mkdir();(folder/'extraction_check.json').write_text(json.dumps({'facts':balance_facts(),'statuses':[]}));return 0
     monkeypatch.setattr(tool,'extract_main',extracted)
     assert tool.main(command(tmp_path)+['--archive',str(archive)])==(0 if intact else 1)
     report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
@@ -61,8 +65,8 @@ def test_archive_uses_exact_pinned_pdf_without_network(monkeypatch,tmp_path,inta
     else:assert 'SHA256' in report['error']
 
 
-@pytest.mark.parametrize('year',[2024,2025])
-def test_year_confirmed_before_model_and_success_is_not_history_acceptance(monkeypatch,tmp_path,year):
+@pytest.mark.parametrize('year,complete',[(2024,True),(2025,True),(2025,False)])
+def test_year_confirmed_before_model_and_success_is_not_history_acceptance(monkeypatch,tmp_path,year,complete):
     entry=next(row for row in json.loads(tool.MANIFEST.read_text())['documents'] if row['ticker']=='SGZH' and row['expected_year']==2025)
     company=next(c for c in config.load('watchlist')['companies'] if c['ticker']=='SGZH')
     text=(f"ПАО {company['document_identity_token']}. Консолидированная финансовая отчетность по МСФО за {year} год.\n"
@@ -72,11 +76,12 @@ def test_year_confirmed_before_model_and_success_is_not_history_acceptance(monke
     calls=[]
     def extract(args):
         calls.append(args);folder=tmp_path/'out/extraction';folder.mkdir()
-        (folder/'extraction_check.json').write_text(json.dumps({'facts':[{}],'statuses':['проверено_авто']}))
+        (folder/'extraction_check.json').write_text(json.dumps({'facts':balance_facts() if complete else balance_facts()[:1],'statuses':['проверено_авто']}))
         return 0
     monkeypatch.setattr(tool,'extract_main',extract)
-    assert tool.main(command(tmp_path))==(0 if year==2025 else 1)
+    assert tool.main(command(tmp_path))==(0 if year==2025 and complete else 1)
     assert bool(calls)==(year==2025)
     report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
     assert not report['financial_history_validated'] and not report['independent_reference_verified']
     assert not report['comparability_approved'] and report['messages_sent']==0
+    if year==2025 and not complete:assert len(report['missing_balance_observations'])==13

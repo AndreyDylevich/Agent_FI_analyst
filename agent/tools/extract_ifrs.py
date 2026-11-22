@@ -72,7 +72,10 @@ def main(argv: list[str] | None = None) -> int:
                               line_items=items, output=args.output, **options)
         report.update(pdf_sha256=run.pdf_sha256, batches=run.batches, contexts=run.contexts,
                       facts=[asdict(f) for f in run.facts], checks=[asdict(c) for c in run.checks],
-                      statuses=run.statuses, warnings=run.warnings)
+                      statuses=run.statuses, warnings=run.warnings,
+                      requested_observations_count=run.requested_observations_count,
+                      missing_observations=run.missing_observations,
+                      all_requested_observations_present=not run.missing_observations)
         conn = db.init_db(args.db)
         try:
             with conn:

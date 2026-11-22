@@ -104,6 +104,8 @@ class ExtractionRun:
     statuses: tuple[str, ...]
     warnings: tuple[str, ...]
     text_processing: dict = field(default_factory=dict)
+    requested_observations_count: int = 0
+    missing_observations: tuple[dict, ...] = ()
 
 
 def observation_plan(items: dict, period: Period) -> list[dict]:
@@ -404,4 +406,5 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                         (f'; ещё {len(missing)-20}' if len(missing)>20 else ''))
     checks, statuses = validate_financials(all_facts)
     return ExtractionRun(pdf.sha256, tuple(batches), tuple(contexts), all_facts, checks, statuses,
-                         tuple(dict.fromkeys(warnings)),pdf.processing)
+                         tuple(dict.fromkeys(warnings)),pdf.processing,len(requested),
+                         tuple({'item_id':item,'period_start':start,'period_end':end} for item,start,end in missing))
