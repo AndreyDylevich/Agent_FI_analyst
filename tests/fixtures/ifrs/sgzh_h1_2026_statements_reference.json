@@ -1,0 +1,268 @@
+{
+  "source_url": "https://segezha-group.com/upload/iblock/533/oa7qag8inv5wt638zq0q06dio1eal5zm.pdf",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "22 значения переписаны независимо от GigaChat после просмотра изображений физических страниц 5 и 8 МСФО Сегежи H1 2026. Изменение денег в этой форме представлено ДО отдельно следующего валютного эффекта. Итог после FX не придуман; прочерки не стали нулями.",
+  "rows": [
+    {
+      "item_id": "net_profit",
+      "value": "-15263",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-15263000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "-15268",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-15268000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "5",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "5000000"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "value": "-15263",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-15263000000"
+    },
+    {
+      "item_id": "cfo",
+      "value": "-8557",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-8557000000"
+    },
+    {
+      "item_id": "cfi",
+      "value": "-1349",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-1349000000"
+    },
+    {
+      "item_id": "cff",
+      "value": "8329",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8329000000"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "value": "-22",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-22000000"
+    },
+    {
+      "item_id": "cf_cash_change_before_fx",
+      "value": "-1577",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-1577000000"
+    },
+    {
+      "item_id": "net_profit",
+      "value": "-21765",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-21765000000"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "value": "-21731",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-21731000000"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "value": "-34",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-34000000"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "value": "-21765",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-21765000000"
+    },
+    {
+      "item_id": "cfo",
+      "value": "-19049",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-19049000000"
+    },
+    {
+      "item_id": "cfi",
+      "value": "-2089",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-2089000000"
+    },
+    {
+      "item_id": "cff",
+      "value": "20596",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "20596000000"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "value": "-176",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-176000000"
+    },
+    {
+      "item_id": "cf_cash_change_before_fx",
+      "value": "-542",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-542000000"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "value": "3014",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "3014000000"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "value": "1415",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1415000000"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "value": "4641",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "4641000000"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "value": "3923",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "3923000000"
+    }
+  ],
+  "checks_required": [
+    "profit_attribution",
+    "profit_vs_cash_flow_base",
+    "cash_flow_summary_before_fx",
+    "cash_rollforward_before_fx"
+  ],
+  "metric_states": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2026-06-30",
+      "status": "недостаточно_данных"
+    }
+  ],
+  "financial_audit_complete": false,
+  "limitation": "Выбранные итоги ОПУ/ОДДС. Полный состав каждого раздела потоков, CapEx и платежи аренды этим эталоном не приняты."
+}

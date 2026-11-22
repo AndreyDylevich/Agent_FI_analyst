@@ -1,0 +1,172 @@
+{
+  "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "source_specific": true,
+  "scope": "group",
+  "standard": "IFRS",
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображений физических страниц 11/12 годовой МСФО МТС FY2021. Эталон относится только к указанной версии PDF и не одобряет сопоставимость периодов.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "1015818",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1015818000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "752518",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "752518000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "263300",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "263300000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "14604",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "14604000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "527794",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "527794000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "473420",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "473420000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "1015818",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1015818000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "919203",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "919203000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "656849",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "656849000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "262354",
+      "pages": [
+        11
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "262354000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "32690",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "32690000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "557899",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "557899000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "328614",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "328614000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "919203",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "919203000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "financial_audit_complete": false
+}

@@ -69,5 +69,15 @@
       "balance"
     ],
     "reference": "mts_fy2025_balance_reference.json"
+  },
+  "sgzh_statements": {
+    "ticker": "SGZH",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "income",
+      "cash_flow"
+    ],
+    "reference": "sgzh_h1_2026_statements_reference.json"
   }
 }

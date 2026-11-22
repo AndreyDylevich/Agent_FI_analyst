@@ -7,7 +7,7 @@ on:
         required: true
         default: sgzh_balance
         type: choice
-        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_notes]
+        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_notes, mts_fy2025_balance, sgzh_statements]
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false

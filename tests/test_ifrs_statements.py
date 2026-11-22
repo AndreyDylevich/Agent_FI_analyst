@@ -62,6 +62,40 @@ def test_cash_sections_and_fx_reconcile_to_change_without_zero_fill():
     assert set(statuses)=={'расхождение'}
 
 
+def test_change_before_fx_does_not_double_count_fx_or_require_invented_total():
+    values={'cfo':'-8557','cfi':'-1349','cff':'8329','cf_cash_change_before_fx':'-1577','cf_fx_effect':'-22'}
+    flows=tuple(source(item,value,'2026-01-01','2026-06-30') for item,value in values.items())
+    stocks=(source('cf_cash_opening','3014',None,'2025-12-31'),source('cf_cash_closing_gross','1415',None,'2026-06-30'))
+    checks,statuses=validate_financials((*flows,*stocks))
+    passed={c.rule for c in checks if c.result.status=='пройдено'}
+    assert {'cash_flow_summary_before_fx','cash_rollforward_before_fx'}<=passed
+    assert set(statuses)=={'проверено_авто'}
+    assert 'cash_flow_summary' not in passed and 'cash_rollforward' not in passed
+    checks,_=validate_financials(tuple(row for row in (*flows,*stocks) if row.item_id!='cf_fx_effect'))
+    assert next(c for c in checks if c.rule=='cash_rollforward_before_fx').result.missing==('cf_fx_effect',)
+
+
+@pytest.mark.parametrize('before_fx',[True,False])
+def test_source_order_keeps_before_and_after_fx_change_distinct(before_fx):
+    change='Чистое снижение денежных средств (1 577) (542)'
+    fx='Влияние изменений курса иностранной валюты (22) (176)'
+    text=TEXT+'\n'+'\n'.join((change,fx) if before_fx else (fx,change))
+    data=payload();row=data['facts'][0]
+    item='cf_cash_change_before_fx' if before_fx else 'cf_cash_change'
+    row.update(item_id=item,original_name='Чистое снижение денежных средств',raw_value='(1 577)',
+        evidence=cite(change),period_start='2026-01-01',period_type='H1',statement='cash_flow')
+    assert parse(data,(Page(1,text),)).facts[0].item_id==item
+    row['item_id']='cf_cash_change' if before_fx else 'cf_cash_change_before_fx'
+    with pytest.raises(ValueError,match='валютного эффекта'):parse(data,(Page(1,text),))
+
+
+def test_unknown_fx_order_is_not_inferred_by_balancing_numbers():
+    data=payload();data['facts'][0].update(item_id='cf_cash_change',original_name='Чистое снижение',
+        raw_value='100',evidence=cite('Чистое снижение 100'),period_start='2026-01-01',statement='cash_flow')
+    with pytest.raises(ValueError,match='не подтверждает'):
+        parse(data,(Page(1,TEXT+'\nЧистое снижение 100'),))
+
+
 def test_held_for_sale_bridge_requires_explicit_adjustment():
     rows=tuple(source(item,value,None,'2025-06-30') for item,value in
                [('cf_cash_closing_gross','71309'),('cf_cash_held_for_sale','55'),('cf_cash_closing_after_hfs','71254')])

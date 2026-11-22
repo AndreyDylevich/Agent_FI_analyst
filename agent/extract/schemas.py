@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 10
+VERSION = 11
 
 
 def _object(properties: dict) -> dict:
@@ -130,6 +130,24 @@ def dated_row_label(text: str, day: date) -> str | None:
         return None
     suffix=re.match(r'\s+года|\s+г\.',text[match.end():],re.I)
     return text[:match.end()+(suffix.end() if suffix else 0)].strip()
+
+
+def cash_change_basis(evidence, page: Page) -> str | None:
+    """Положение строки относительно явно подписанного валютного эффекта, без чтения/сумм чисел."""
+    first,last=evidence.start_line,evidence.end_line
+    if first is None:
+        position=page.text.find(evidence.quote)
+        if position<0:return None
+        first=page.text[:position].count('\n')+1
+        last=first+evidence.quote.count('\n')
+    lines=page.text.splitlines()
+    pattern=r'(?:влияни|эффект|effect).{0,50}(?:курс|валют|exchange|currency)'
+    fx=[n for n in range(max(1,first-12),min(len(lines),last+12)+1)
+        if re.search(pattern,lines[n-1],re.I)]
+    if len(fx)!=1:return None
+    if fx[0]<first:return 'after_fx'
+    if fx[0]>last:return 'before_fx'
+    return None
 
 
 def parse_amount(raw: str, number_format: str = 'space_grouped_decimal') -> Decimal:
@@ -274,6 +292,11 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Неизвестная каноническая статья')
         item = line_items[item_id]
         evidence, unit_evidence = citation(row['evidence'], by_number), citation(row['unit_evidence'], by_number)
+        if item_id in ('cf_cash_change','cf_cash_change_before_fx'):
+            expected='after_fx' if item_id=='cf_cash_change' else 'before_fx'
+            if cash_change_basis(evidence,by_number[evidence.page])!=expected:
+                raise ValueError(f'{item_id}: положение строки до/после валютного эффекта не подтверждает определение статьи; '
+                                 'выбери правильную статью, не вычисляй новый итог и не включай валютную строку в ту же evidence')
         name, raw, unit = row['original_name'], row['raw_value'], row['unit']
         amount_evidence=evidence.quote
         if row['statement']=='equity' and item.get('date_role') in ('period_opening','period_closing'):

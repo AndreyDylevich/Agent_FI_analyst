@@ -41,15 +41,20 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
         raise ValueError('Эталон должен содержать исходные значения; пустой набор не считается сверкой')
     results=[]
     for expected in reference['rows']:
+        source_filter=' AND d.sha256=?' if reference.get('source_specific') else ''
+        parameters=(expected['item_id'],expected['start'],expected['end'])
+        if source_filter:parameters=(*parameters,reference['pdf_sha256'])
         rows=conn.execute("SELECT s.*,d.sha256 FROM source_values s JOIN documents d ON d.id=s.document_id "
-                          "WHERE s.item_id=? AND s.period_start IS ? AND s.period_end=? AND s.standard='IFRS' AND s.scope='group'",
-                          (expected['item_id'],expected['start'],expected['end'])).fetchall()
+                          "WHERE s.item_id=? AND s.period_start IS ? AND s.period_end=? AND s.standard='IFRS' AND s.scope='group'"+source_filter,
+                          parameters).fetchall()
         passed=bool(rows) and all(row['sha256']==reference['pdf_sha256'] and row['unit']==reference['unit']
                                 and row['check_status']==expected['status'] and Decimal(row['value'])==Decimal(expected['value'])
                                 and Decimal(row['value_norm'])==Decimal(expected.get('normalized_value',str(Decimal(expected['value'])*Decimal(reference['multiplier']))))
                                 and json.loads(row['location'])['page'] in expected['pages'] for row in rows)
         results.append({'item_id':expected['item_id'],'period_end':expected['end'],'passed':passed})
     contexts=[json.loads(row[0]) for row in conn.execute("SELECT value FROM meta WHERE key LIKE 'ifrs_extraction:%'")]
+    if reference.get('source_specific'):
+        contexts=[context for context in contexts if context['pdf_sha256']==reference['pdf_sha256']]
     checks=[check for context in contexts for check in context['checks']]
     check_results={name:any(check['rule']==name and check['result']['status']=='пройдено' for check in checks)
                    for name in reference['checks_required']}

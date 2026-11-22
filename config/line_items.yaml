@@ -546,6 +546,16 @@ items:
       en: [Effect of exchange rate changes on cash and cash equivalents]
     rsbu_codes: []
 
+  - id: cf_cash_change_before_fx
+    statement: cash_flow
+    name: Изменение денег до отдельно представленного валютного эффекта
+    sign: natural
+    notes: Только раскрытый итог до курсового эффекта. Не суммировать потоки в ответе ИИ и не подменять cf_cash_change, который уже включает валютный эффект.
+    ifrs_synonyms:
+      ru: [Чистое снижение денежных средств и их эквивалентов, Чистое увеличение денежных средств и их эквивалентов]
+      en: [Net decrease in cash and cash equivalents, Net increase in cash and cash equivalents]
+    rsbu_codes: []
+
   - id: cf_other_cash_changes
     statement: cash_flow
     name: Прочие отдельно раскрытые изменения денег вне CFO/CFI/CFF и валютного эффекта

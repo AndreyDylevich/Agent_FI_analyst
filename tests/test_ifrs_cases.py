@@ -79,6 +79,27 @@ def test_expected_discrepancy_requires_exact_rule_date_and_delta(tmp_path):
     conn.close()
 
 
+def test_history_reference_checks_requested_pdf_with_other_confirming_sources_present(tmp_path):
+    from dataclasses import replace
+    from agent.db import init_db
+    from agent.extract.store import store_extraction
+    from agent.tools.verify_ifrs_reference import verify_statements
+    from tests.test_extraction_schema import PERIOD
+    from tests.test_ifrs_pipeline import make_run
+    conn=init_db(tmp_path/'history.db')
+    with conn:
+        for sha in ('a'*64,'b'*64):
+            store_extraction(conn,replace(make_run(),pdf_sha256=sha),ticker='TEST',name='Тест',
+                source_url=f'https://example.test/{sha}.pdf',period=PERIOD,local_path='a.pdf')
+    reference={'pdf_sha256':'a'*64,'unit':'млн руб.','multiplier':'1000000','source_specific':True,
+        'checks_required':['assets_components'],
+        'rows':[{'item_id':'current_assets','start':None,'end':'2026-06-30','value':'40','pages':[1],'status':'проверено_авто'}]}
+    assert verify_statements(conn,reference)['ok']
+    assert not verify_statements(conn,{**reference,'pdf_sha256':'f'*64})['ok']
+    assert not verify_statements(conn,{**reference,'source_specific':False})['ok']
+    conn.close()
+
+
 @pytest.mark.parametrize('declared',[True,False])
 def test_case_proceeds_to_reference_only_for_declared_source_discrepancy(monkeypatch,tmp_path,declared):
     from agent.db import init_db

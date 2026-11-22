@@ -16,7 +16,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 5
+    version: int = 6
 
 
 RULES = {
@@ -34,6 +34,8 @@ RULES = {
     'profit_parent_vs_equity': {'net_profit_parent':1, 'eq_profit_parent':-1},
     'profit_nci_vs_equity': {'net_profit_nci':1, 'eq_profit_nci':-1},
     'cash_flow_summary': {'cfo':1,'cfi':1,'cff':1,'cf_fx_effect':1,'cf_cash_change':-1},
+    'cash_flow_summary_before_fx': {'cfo':1,'cfi':1,'cff':1,'cf_cash_change_before_fx':-1},
+    'cash_fx_bridge': {'cf_cash_change_before_fx':1,'cf_fx_effect':1,'cf_cash_change':-1},
     'cash_held_for_sale_bridge': {'cf_cash_closing_gross':1, 'cf_cash_held_for_sale':-1, 'cf_cash_closing_after_hfs':-1},
     'debt_components': {'debt_long_term': 1, 'debt_short_term': 1, 'bank_loans': -1, 'bonds': -1, 'other_borrowings': -1},
     'note_debt_composition': {'note_debt_total':1,'note_bonds':-1,'note_loans_and_other_borrowings':-1},
@@ -52,6 +54,7 @@ FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base','eq
               'profit_vs_equity','profit_parent_vs_equity','profit_nci_vs_equity'}
 FLOW_RULES.update(('note_interest_composition','note_finance_gross','note_finance_net'))
 FLOW_RULES.add('cash_flow_summary')
+FLOW_RULES.update(('cash_flow_summary_before_fx','cash_fx_bridge'))
 # Начало/конец отчёта об изменениях капитала сверяются с балансом НА ТУ ЖЕ дату.
 for _role in ('opening', 'closing'):
     for _component, _balance_id in (('total','equity_total'),('parent','equity_parent'),('nci','non_controlling_interests')):
@@ -105,14 +108,18 @@ def validate_financials(facts: tuple[ExtractedFact, ...]) -> tuple[tuple[Financi
             if result:
                 checks.append(result)
     for (start,end),by_item in groups.items():
-        if start is None or 'cf_cash_change' not in by_item:
+        if start is None:
             continue
-        bridge = {'cf_cash_change':by_item['cf_cash_change']}
-        for key,day in (('cf_cash_opening',start-timedelta(days=1)),('cf_cash_closing_gross',end)):
-            if key in groups.get((None,day),{}):
-                bridge[key] = groups[(None,day)][key]
-        result = _apply_check('cash_rollforward',start,end,
-                              {'cf_cash_opening':1,'cf_cash_change':1,'cf_cash_closing_gross':-1},bridge,facts,statuses)
-        if result:
-            checks.append(result)
+        for change in ('cf_cash_change','cf_cash_change_before_fx'):
+            if change not in by_item:continue
+            bridge = {change:by_item[change]}
+            terms={'cf_cash_opening':1,change:1,'cf_cash_closing_gross':-1}
+            if change=='cf_cash_change_before_fx':
+                terms['cf_fx_effect']=1
+                if 'cf_fx_effect' in by_item:bridge['cf_fx_effect']=by_item['cf_fx_effect']
+            for key,day in (('cf_cash_opening',start-timedelta(days=1)),('cf_cash_closing_gross',end)):
+                if key in groups.get((None,day),{}):bridge[key]=groups[(None,day)][key]
+            rule='cash_rollforward' if change=='cf_cash_change' else 'cash_rollforward_before_fx'
+            result=_apply_check(rule,start,end,terms,bridge,facts,statuses)
+            if result:checks.append(result)
     return tuple(checks), tuple(statuses)
