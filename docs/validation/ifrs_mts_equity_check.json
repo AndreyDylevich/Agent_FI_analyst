@@ -1,0 +1,547 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45019726808",
+  "head_sha": "79bfd8a607a0a84033a1cedc120274d5c8387437",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "selected_values_count": 42,
+  "statuses": {
+    "проверено_авто": 39,
+    "расхождение": 3
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "attempt": 1,
+      "target_pages": [
+        5,
+        6
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        5,
+        6
+      ],
+      "request_sha256": "069528728c7125ab8e8e91a92c795e1aaeda3e7305a9c24a6be74217fc204cbf",
+      "page_text_sha256": "f838ffa7831e2a30e2202fb92da7de3fd378582b6eab791c4ad18c9fe73c2c5f",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "current_assets",
+        "current_liabilities",
+        "equity_parent",
+        "equity_total",
+        "non_controlling_interests",
+        "non_current_assets",
+        "non_current_liabilities",
+        "total_assets",
+        "total_equity_and_liabilities"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "146df0d72da9c7317b4263f63d5f52ef761ebc7e4f324cd7a321444935a3b546",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_1_attempt_1.json",
+      "original_tokens": 0,
+      "original_request_sha256": "069528728c7125ab8e8e91a92c795e1aaeda3e7305a9c24a6be74217fc204cbf",
+      "original_prompt_version": 16,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "9d1e7644b5b197daec9bf78d97000a562ae1737db7c1989f88927fb93491dde1",
+      "file": "batch_1_attempt_1.json",
+      "response_contract": "legacy",
+      "accepted": true
+    },
+    {
+      "batch": 2,
+      "attempt": 1,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "00ea0a5c902b670c574361286c6712d7a65c25fb7e10131e3afe9408153a5343",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_opening_nci",
+        "eq_opening_parent",
+        "eq_opening_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "9954cb487aecd5de182b97565fd8fea0232b1eeea0823505be827f0005757e6f",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_2_attempt_2.json",
+      "original_tokens": 2544,
+      "original_request_sha256": "dd517eed2949f117e628f96bd6a79482aa674b31ece1da0564e20d222ee6d252",
+      "original_prompt_version": 16,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "a838734a1bb53fb11038ae0017b233f01452a988c849274fa71672e9f5601dc1",
+      "file": "batch_2_attempt_1.json",
+      "response_contract": "compact_v1",
+      "source_valid": true,
+      "accepted": false,
+      "error": "Не сошлась арифметическая проверка; повторно проверь колонки, знаки и единицы. Не переставляй владельцев и не изменяй исходные числа ради равенства. Если расхождение есть в PDF, сохрани полный исходный набор"
+    },
+    {
+      "batch": 2,
+      "attempt": 2,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "85a729bc090423d12c52e06aac5e93014c144b25b9503994bec4e8b514fccde2",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_opening_nci",
+        "eq_opening_parent",
+        "eq_opening_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "ab16658968cebb6e71a917833295caab9905661f3bc26a4dd006deab2a6db4cd",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 1764,
+      "response_sha256": "a838734a1bb53fb11038ae0017b233f01452a988c849274fa71672e9f5601dc1",
+      "file": "batch_2_attempt_2.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 3,
+      "attempt": 1,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "c78a0fb068c1ea430157651e6c70daf89d96a50b2dac85a48c63993809f704f5",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_closing_nci",
+        "eq_closing_parent",
+        "eq_closing_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "24c2593243630e35cbfd17e3d346e4439f36af8f617fb10157bf710476babdca",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_3_attempt_1.json",
+      "original_tokens": 1336,
+      "original_request_sha256": "c78a0fb068c1ea430157651e6c70daf89d96a50b2dac85a48c63993809f704f5",
+      "original_prompt_version": 16,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "42134bb38a25f5ab3659858da5328bc2615680780c2608d4e4ba2ff9ac788ef9",
+      "file": "batch_3_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 4,
+      "attempt": 1,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "57e084be978c5e21a7e335982f8644092f5ad74370cbecd7bfaad75f366cf1ce",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_opening_nci",
+        "eq_opening_parent",
+        "eq_opening_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "4c5e15105c48857ed34a79546197474063f36e5022f7fa7f55416ccb2a837fee",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_4_attempt_1.json",
+      "original_tokens": 1898,
+      "original_request_sha256": "57e084be978c5e21a7e335982f8644092f5ad74370cbecd7bfaad75f366cf1ce",
+      "original_prompt_version": 16,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "9146468ca2513968c3f0bc7bc71d81c3892b99ba4fa916ec1b0cd1610bd409ff",
+      "file": "batch_4_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 5,
+      "attempt": 1,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "6367af96804904919fb4265d6d56b15e23b5154c7a9421eb5c7a39d598c2c2b4",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_closing_nci",
+        "eq_closing_parent",
+        "eq_closing_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "f3b7c32d096cf9a96e4a089224f8a43a99ce171c2692214c583be0be2c944fb4",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse/extraction/batch_5_attempt_1.json",
+      "original_tokens": 1339,
+      "original_request_sha256": "6367af96804904919fb4265d6d56b15e23b5154c7a9421eb5c7a39d598c2c2b4",
+      "original_prompt_version": 16,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "b69536bd9944ed379d33fcb43bf4f7da342adaebd68fa1a8c16f65e91e26f204",
+      "file": "batch_5_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    },
+    {
+      "batch": 6,
+      "attempt": 1,
+      "target_pages": [
+        7
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        7
+      ],
+      "request_sha256": "5215c9e21efa8dde30df2238a7d508a153aedf9ce4a422170d49a1383f5e6825",
+      "page_text_sha256": "76df751daddfff315d7da67e7b286a25c6d64b1fa221dff1094c7444cf4afcee",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "net_profit",
+        "net_profit_nci",
+        "net_profit_parent"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "68b4ece35d33f6b78e0e7e3a3ac3c8a45f880fa5dbc3e9da6968a956c888e68d",
+      "reused_from": "/home/runner/work/Agent_FI_analyst/Agent_FI_analyst/validation/reuse-statements/extraction/batch_2_attempt_1.json",
+      "original_tokens": 5296,
+      "original_request_sha256": "ad1d3d559f49a07c6b9551d856b80d7330b9db999554709ab9adf762b8fa0dea",
+      "original_prompt_version": 10,
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 0,
+      "response_sha256": "c7b04602a7baf657b5202735705a163410ef1727735bbd6f6bb13f4fc0ddbf0a",
+      "file": "batch_6_attempt_1.json",
+      "response_contract": "legacy",
+      "accepted": true
+    },
+    {
+      "batch": 7,
+      "attempt": 1,
+      "target_pages": [
+        9
+      ],
+      "context_pages": [
+        1,
+        3
+      ],
+      "prompt_version": 17,
+      "sent_pages": [
+        9
+      ],
+      "request_sha256": "9fbbdfb74b99e498ffb8d5c6aabfff269ad20e5f4aec3d348cb2e0d9337d58c2",
+      "page_text_sha256": "57324e9c88f70548d56bf938ac20b773248c2de8764a9724aef616f0f35cd5e0",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "item_ids": [
+        "eq_profit_nci",
+        "eq_profit_parent",
+        "eq_profit_total"
+      ],
+      "requested_contract": "compact_v1",
+      "contract_sha256": "d0137b6e5c73d733f6041c98dba3699131e3510e6a9d8d24b6da571857cac300",
+      "model": "GigaChat-2-Max:2.0.30.01",
+      "tokens": 2997,
+      "response_sha256": "95cb5c93d67be175d1b5c28ea81a5b5a87ea67739ac59830a510410fc42d75f4",
+      "file": "batch_7_attempt_1.json",
+      "response_contract": "compact_v1",
+      "accepted": true
+    }
+  ],
+  "case_check": {
+    "case": "mts_equity",
+    "ok": true,
+    "messages_sent": 0,
+    "financial_audit_complete": false,
+    "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+    "reference": "mts_h1_2026_equity_reference.json",
+    "extraction_ok": false,
+    "source_discrepancies_present": true
+  },
+  "reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "total_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_controlling_interests",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_parent",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_controlling_interests",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_parent",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_nci",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_parent",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_nci",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "equity_attribution": true,
+      "eq_opening_attribution": true,
+      "eq_closing_attribution": true,
+      "eq_profit_attribution": true,
+      "profit_vs_equity": true,
+      "profit_parent_vs_equity": true,
+      "profit_nci_vs_equity": true,
+      "eq_opening_total_vs_balance": true,
+      "eq_closing_total_vs_balance": true
+    },
+    "expected_checks": [
+      {
+        "rule": "eq_opening_attribution",
+        "start": null,
+        "end": "2024-12-31",
+        "status": "расхождение",
+        "delta": "22468000000",
+        "passed": true
+      }
+    ],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "messages_sent": 0,
+  "financial_audit_complete": false,
+  "limitation": "39 выбранных строк участвуют в пройденных тождествах; три исходные строки открытия 2024 сохраняют расхождение. Независимый эталон подтвердил значения, статусы и точную разницу, не исправляя опубликованный итог. Полный мост изменений капитала ещё не подтверждён."
+}

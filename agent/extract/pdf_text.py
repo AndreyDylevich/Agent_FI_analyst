@@ -134,6 +134,11 @@ class Selection:
     missing_forms: tuple[str, ...]
 
 
+def heading_matches(pattern: str, text: str) -> bool:
+    """Пробелы между глифами заголовка не меняют исходный текст/адреса финансовых цитат."""
+    return bool(re.search(pattern,text) or re.search(pattern.replace(' ',''),re.sub(r'\s+','',text)))
+
+
 def find_sections(pdf: PDFText) -> Selection:
     """Ищет заголовки форм и тем примечаний, не извлекает числа и не трактует таблицы."""
     groups = {key: [] for key in HEADINGS}
@@ -151,7 +156,7 @@ def find_sections(pdf: PDFText) -> Selection:
                 candidate = heading[:450]
             else:
                 candidate = full if key == 'basis' else heading
-            if re.search(pattern, candidate):
+            if heading_matches(pattern, candidate):
                 groups[key].append(page.number)
     # При явных заголовках примечаний не считаем каждое упоминание аренды/долга полным раскрытием.
     # В частности, таблица связанных сторон не заменяет долговое примечание всей группы.

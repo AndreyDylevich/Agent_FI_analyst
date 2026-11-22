@@ -8,6 +8,15 @@ from pypdf import PdfWriter
 from agent.extract.pdf_text import PDFText, Page, find_sections, page_batches, read_pdf
 
 
+def test_glyph_spacing_in_report_headings_does_not_hide_history_forms():
+    income='ПАО Сегежа\nКОНСОЛИДИРОВАННЫЙ ОТ               ЧЕТ СПЕЦИАЛЬНОГО НАЗНАЧЕНИЯ О ПРИБЫЛЯХ И УБЫТКАХ\nЗА 2024 ГОД'
+    balance='ПАО Сегежа\nКОНСОЛИДИРОВАННЫЙ ОТЧЕТ О ФИНАНСОВОМ ПОЛ          ОЖЕНИИ\nНА 31 ДЕКАБРЯ 2024 ГОДА'
+    pdf=PDFText('sha',(Page(8,income),Page(9,balance)))
+    sections=find_sections(pdf)
+    assert sections.groups['income']==(8,) and sections.groups['balance']==(9,)
+    assert pdf.pages[0].text==income and pdf.pages[1].text==balance
+
+
 def blank_pdf(tmp_path, count=2, password=None):
     writer = PdfWriter()
     for _ in range(count): writer.add_blank_page(width=100, height=100)

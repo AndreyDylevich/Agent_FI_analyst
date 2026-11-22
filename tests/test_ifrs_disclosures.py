@@ -35,3 +35,26 @@ def test_unknown_fields_and_fabricated_line_ranges_rejected():
     pages=(Page(14,'МСФО (IFRS) 16'),)
     for data in [answer(last=3),'{"findings":[],"comparability_approved":true}']:
         with pytest.raises(ValueError):parse_disclosures(data,pages)
+
+
+def test_long_disclosure_preserves_exceptions_without_relaxing_numeric_citations():
+    from agent.extract.schemas import citation
+    text='Учётная политика НЕ соответствует всем требованиям МСФО.\n'+'\n'.join('Уточнение основы подготовки.' for _ in range(30))
+    pages=(Page(14,text),)
+    row=parse_disclosures(answer('accounting_policy',1,31),pages)[0]
+    assert row.evidence.quote==text and 'НЕ соответствует' in row.evidence.quote
+    with pytest.raises(ValueError):citation({'page':14,'start_line':1,'end_line':31},{14:pages[0]})
+    with pytest.raises(ValueError):parse_disclosures(answer('accounting_policy',1,81),(Page(14,text+'\n'*60),))
+
+
+def test_incomplete_disclosure_response_retained_for_diagnosis(tmp_path):
+    from agent.extract.disclosures import extract_disclosures
+    from agent.extract.llm import Completion,IncompleteResponse
+    from agent.extract.pdf_text import PDFText
+    class Partial:
+        def extract(self,*args):raise IncompleteResponse(Completion('{"findings":[','test',12),'length')
+    pdf=PDFText('a'*64,(Page(1,'Примечания\n2. ОСНОВА ПОДГОТОВКИ\nУчётная политика по МСФО.'),))
+    with pytest.raises(IncompleteResponse):extract_disclosures(pdf,Partial(),output=tmp_path/'out')
+    audit=json.loads((tmp_path/'out/attempts.json').read_text())
+    assert audit[0]['finish_reason']=='length' and not audit[0]['accepted']
+    assert (tmp_path/'out'/audit[0]['file']).read_text()=='{"findings":['

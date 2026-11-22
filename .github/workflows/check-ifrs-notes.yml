@@ -1,12 +1,17 @@
 name: Проверка долга, аренды и процентов МСФО
 on:
   workflow_dispatch:
-# API физлица: один одновременный поток на все диагностики GigaChat.
+    inputs:
+      reuse_run_id:
+        description: Необязательный ID прежней проверки примечаний
+        required: false
+        default: ''
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
 permissions:
   contents: read
+  actions: read
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -20,37 +25,22 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: pytest -q
-      - name: Получить официальный PDF МТС 1П2026
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          from agent.sources.files import download_pdf
-          out=Path('validation/notes');out.mkdir(parents=True,exist_ok=True)
-          source='https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf'
-          pdf=download_pdf(source,out/'pdf',{'static.mts.ru'})
-          (out/'selected_path.txt').write_text(pdf.path)
-          PY
-      - name: Извлечь долг, аренду и проценты в отдельной SQLite
+      - name: Получить прежние ответы и оригинальный PDF
+        if: inputs.reuse_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-notes-check
+          path: validation/reuse
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.reuse_run_id }}
+      - name: Извлечь и сверить 46 значений по эталону конкретной версии PDF
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
         shell: bash
         run: |
-          python -m agent.tools.extract_ifrs "$(cat validation/notes/selected_path.txt)" \
-            --ticker MTSS --year 2026 --period H1 --db validation/notes/check.db \
-            --source-url https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf \
-            --output validation/notes/extraction --sections balance debt leases interest \
-            --item debt_long_term --item debt_short_term --item lease_liabilities_long --item lease_liabilities_short \
-            --item note_debt_total --item note_debt_current --item note_debt_noncurrent --item note_loans_and_other_borrowings \
-            --item note_bonds --item note_lease_undiscounted --item note_lease_discount --item note_lease_present_value \
-            --item note_lease_current --item note_lease_noncurrent --item note_interest_borrowings --item note_interest_leases \
-            --item note_interest_unwinding --item note_interest_total --item note_finance_other_expense --item note_finance_expense_gross \
-            --item note_capitalized_interest_expense --item note_finance_modification_expense --item note_finance_expense_net \
-            --metric current_ratio --compact-contract
-      - name: Сверить 46 значений и статусы с независимым эталоном
-        run: >-
-          python -m agent.tools.verify_ifrs_reference --db validation/notes/check.db
-          --reference tests/fixtures/ifrs/mts_h1_2026_notes_reference.json
-          --output validation/notes/reference_check.json
+          reuse_args=()
+          if [ -d validation/reuse ]; then reuse_args=(--reuse-from validation/reuse); fi
+          python -m agent.tools.check_ifrs_case --case mts_notes --output validation/notes "${reuse_args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

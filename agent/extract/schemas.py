@@ -172,24 +172,24 @@ class Citation:
     end_line: int | None = None
 
 
-def citation(data: dict, pages: dict[int, Page]) -> Citation:
+def citation(data: dict, pages: dict[int, Page], *, max_lines: int = 20, max_chars: int = 4000) -> Citation:
     """Новая модель возвращает адрес строк, текст копируется Python; старые ответы проверяются дословно."""
     if isinstance(data,dict) and set(data)=={'page','start_line','end_line'}:
         number,first,last=data['page'],data['start_line'],data['end_line']
         if any(type(value) is not int for value in (number,first,last)) or number not in pages or pages[number].method=='unreadable':
             raise ValueError('Ссылка на отсутствующую/нечитаемую страницу или нецелые номера строк')
         lines=pages[number].text.splitlines()
-        if not 1<=first<=last<=len(lines) or last-first+1>20:
-            raise ValueError(f'Страница {number}: неверный диапазон строк {first}–{last}, доступно {len(lines)}')
+        if not 1<=first<=last<=len(lines) or last-first+1>max_lines:
+            raise ValueError(f'Страница {number}: неверный диапазон строк {first}–{last}, доступно {len(lines)}, максимум в цитате {max_lines}')
         quote='\n'.join(lines[first-1:last])
-        if not quote.strip() or len(quote)>4000:
+        if not quote.strip() or len(quote)>max_chars:
             raise ValueError('Диапазон не содержит короткой непустой цитаты')
         return Citation(number,quote,first,last)
     _keys(data, {'page', 'quote'})
     number, quote = data['page'], data['quote']
     if type(number) is not int or number not in pages or pages[number].method == 'unreadable':
         raise ValueError('Цитата ссылается на отсутствующую/нечитаемую страницу')
-    if not isinstance(quote, str) or not quote.strip() or len(quote) > 4000:
+    if not isinstance(quote, str) or not quote.strip() or len(quote) > max_chars:
         raise ValueError('Нужна непустая короткая цитата')
     if normalized_text(quote) not in normalized_text(pages[number].text):
         matches = [n for n, page in pages.items() if normalized_text(quote) in normalized_text(page.text)]
@@ -313,7 +313,8 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
         if normalized_text(name).casefold() not in quote.casefold():
             raise ValueError(f'{item_id}: original_name {name!r} отсутствует в цитате. '
                              'Скопируй дословную подпись из evidence без добавленных слов, '
-                             'даже если название канонической статьи длиннее исходного')
+                             'даже если название канонической статьи длиннее исходного. '
+                             'Если подпись перенесена выше числа, включи все её строки в evidence')
         if normalized_text(raw) not in tokens:
             raise ValueError(f'{item_id}: подпись/число {raw!r} отсутствуют в цитате строки; скопируй исходную запись целиком')
         if normalized_text(row['column_header']).casefold() not in normalized_text(by_number[evidence.page].text).casefold():
