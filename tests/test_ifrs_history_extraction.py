@@ -28,6 +28,39 @@ def test_changed_history_pdf_stops_before_parsing_or_model(monkeypatch,tmp_path)
     assert 'Версия' in report['error'] and not (tmp_path/'check.db').exists()
 
 
+@pytest.mark.parametrize('request_error',[False,True])
+def test_network_errors_leave_protocol_without_http_details(monkeypatch,tmp_path,request_error):
+    from requests import RequestException
+    def unavailable(*args):
+        if request_error:raise RequestException('private signed query must not appear')
+        raise RuntimeError('Не удалось получить официальный PDF за 3 попытки')
+    monkeypatch.setattr(tool,'download_pdf',unavailable)
+    assert tool.main(command(tmp_path))==1
+    report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
+    assert not report['ok'] and 'private' not in report['error']
+    assert not (tmp_path/'check.db').exists()
+
+
+@pytest.mark.parametrize('intact',[True,False])
+def test_archive_uses_exact_pinned_pdf_without_network(monkeypatch,tmp_path,intact):
+    import hashlib
+    entry=next(row for row in json.loads(tool.MANIFEST.read_text())['documents'] if row['ticker']=='SGZH' and row['expected_year']==2025)
+    raw=b'%PDF-archived';sha=hashlib.sha256(raw).hexdigest();entry={**entry,'pdf_sha256':sha}
+    manifest=tmp_path/'sources.json';manifest.write_text(json.dumps({'documents':[entry]}));monkeypatch.setattr(tool,'MANIFEST',manifest)
+    archive=tmp_path/'archive';(archive/'pdf').mkdir(parents=True);(archive/'pdf'/f'{sha}.pdf').write_bytes(raw if intact else b'%PDF-modified')
+    def no_network(*args):raise AssertionError('Архивная проверка не скачивает PDF')
+    monkeypatch.setattr(tool,'download_pdf',no_network)
+    monkeypatch.setattr(tool,'read_pdf',lambda *args,**kwargs:PDFText(sha,(Page(1,
+        'ПАО СЕГЕЖА. Консолидированная финансовая отчетность по МСФО за 2025 год. В миллионах российских рублей'),)))
+    def extracted(args):
+        folder=tmp_path/'out/extraction';folder.mkdir();(folder/'extraction_check.json').write_text(json.dumps({'facts':[{}],'statuses':[]}));return 0
+    monkeypatch.setattr(tool,'extract_main',extracted)
+    assert tool.main(command(tmp_path)+['--archive',str(archive)])==(0 if intact else 1)
+    report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
+    if intact:assert report['pdf_origin']=='verified_archive' and (tmp_path/'out/pdf'/f'{sha}.pdf').read_bytes()==raw
+    else:assert 'SHA256' in report['error']
+
+
 @pytest.mark.parametrize('year',[2024,2025])
 def test_year_confirmed_before_model_and_success_is_not_history_acceptance(monkeypatch,tmp_path,year):
     entry=next(row for row in json.loads(tool.MANIFEST.read_text())['documents'] if row['ticker']=='SGZH' and row['expected_year']==2025)

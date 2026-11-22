@@ -15,11 +15,16 @@ on:
         description: Все доступные годовые балансы компании за 2021–2025 (поле года игнорируется)
         type: boolean
         default: false
+      archive_run_id:
+        description: Необязательный ID скачанного архива ifrs-history-download
+        required: false
+        default: ''
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
 permissions:
   contents: read
+  actions: read
 jobs:
   extract:
     runs-on: ubuntu-latest
@@ -39,20 +44,30 @@ jobs:
       - name: Установить OCR для М.Видео
         if: inputs.ticker == 'MVID'
         run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
+      - name: Получить ранее скачанный архив
+        if: inputs.archive_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-history-download
+          path: validation/archive
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.archive_run_id }}
       - name: Извлечь только закреплённую версию годового PDF
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
         shell: bash
         run: |
+          archive_args=()
+          if [ -d validation/archive ]; then archive_args=(--archive validation/archive); fi
           if [ "$HISTORY_ALL_YEARS" = true ]; then
             python -m agent.tools.extract_ifrs_history_batch --ticker "$HISTORY_TICKER" \
-              --db validation/history/check.db --output validation/history/reports
+              --db validation/history/check.db --output validation/history/reports "${archive_args[@]}"
             exit $?
           fi
           ocr_args=()
           if [ "$HISTORY_TICKER" = MVID ]; then ocr_args=(--ocr --max-ocr-pages 12); fi
           python -m agent.tools.extract_ifrs_history --ticker "$HISTORY_TICKER" --year "$HISTORY_YEAR" \
-            --db validation/history/check.db --output validation/history/report "${ocr_args[@]}"
+            --db validation/history/check.db --output validation/history/report "${ocr_args[@]}" "${archive_args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

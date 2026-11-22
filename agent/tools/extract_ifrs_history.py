@@ -2,15 +2,20 @@
 
 import argparse
 import json
+import hashlib
+import re
+import shutil
+from types import SimpleNamespace
 from datetime import date
 from pathlib import Path
+from requests import RequestException
 
 from agent import config, db
 from agent.classify import classify_document
 from agent.extract.pdf_text import HEADINGS, read_pdf
 from agent.extract.schemas import source_context
 from agent.metrics.engine import Period
-from agent.sources.files import download_pdf
+from agent.sources.files import download_pdf, MAX_PDF_BYTES, checked_url
 from agent.tools.backfill_ifrs import MANIFEST
 from agent.tools.extract_ifrs import main as extract_main
 
@@ -31,6 +36,7 @@ def main(argv=None):
     parser.add_argument('--max-ocr-pages',type=int,default=12)
     parser.add_argument('--reuse-from',type=Path,action='append')
     parser.add_argument('--cached-only',action='store_true')
+    parser.add_argument('--archive',type=Path,help='Уже скачанный архив с pdf/<sha256>.pdf; файл обязательно сверяется')
     args=parser.parse_args(argv)
     if args.db.resolve()==db.DB_PATH.resolve():parser.error('Для первичной истории нужна отдельная проверочная БД')
     if args.output.exists() and any(args.output.iterdir()):parser.error('Нужен новый/пустой каталог ответов')
@@ -45,9 +51,21 @@ def main(argv=None):
             'comparability_approved':False,'independent_reference_verified':False}
     try:
         expected_sha=entry.get('pdf_sha256')
-        if not expected_sha:raise ValueError('Для первой приёмки истории нужен закреплённый SHA256 PDF')
+        if not isinstance(expected_sha,str) or not re.fullmatch('[0-9a-f]{64}',expected_sha):
+            raise ValueError('Для первой приёмки истории нужен закреплённый SHA256 PDF')
         source=next(page for page in company['ir_pages'] if page['url']==entry['source_page'])
-        downloaded=download_pdf(entry['source_url'],args.output/'pdf',set(source['allowed_hosts']))
+        checked_url(entry['source_url'],set(source['allowed_hosts']))
+        if args.archive:
+            original=args.archive/'pdf'/f'{expected_sha}.pdf'
+            if original.stat().st_size>MAX_PDF_BYTES or hashlib.sha256(original.read_bytes()).hexdigest()!=expected_sha:
+                raise ValueError('SHA256/размер архивного PDF не соответствует закреплённой версии')
+            target=args.output/'pdf'/original.name;target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(original,target)
+            downloaded=SimpleNamespace(path=str(target),sha256=expected_sha)
+            report['pdf_origin']='verified_archive'
+        else:
+            downloaded=download_pdf(entry['source_url'],args.output/'pdf',set(source['allowed_hosts']))
+            report['pdf_origin']='official_download'
         if downloaded.sha256!=expected_sha:
             raise ValueError('Версия годового PDF изменилась; требуется отдельная сверка, новый источник не отправлен в модель')
         pdf=read_pdf(Path(downloaded.path),use_ocr=args.ocr,max_ocr_pages=args.max_ocr_pages)
@@ -74,8 +92,8 @@ def main(argv=None):
                       statuses=extraction.get('statuses',[]),extraction_error=extraction.get('error'),
                       financial_audit_complete=False,
                       limitation='Извлечение и тождества не подтверждают независимый эталон, полную историю и сопоставимость. Специальные основы подготовки, пересчёты и изменения периметра требуют отдельной проверки.')
-    except (ValueError, TypeError, KeyError, OSError, StopIteration) as error:
-        report['error']=f'{type(error).__name__}: {error}'
+    except (ValueError, TypeError, KeyError, OSError, StopIteration, RuntimeError, RequestException) as error:
+        report['error']=type(error).__name__ if isinstance(error,RequestException) else f'{type(error).__name__}: {error}'
     (args.output/'history_extraction_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(f"{args.ticker} FY{args.year}: извлечение {'выполнено' if report['ok'] else 'требует проверки'}; история ещё не принята",flush=True)
     return 0 if report['ok'] else 1

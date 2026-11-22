@@ -11,12 +11,13 @@ from tests.test_extraction_schema import PERIOD
 from tests.test_ifrs_pipeline import make_run
 
 
-def test_failed_year_does_not_drop_later_independent_report(tmp_path):
+@pytest.mark.parametrize('failure_type',[ValueError,RuntimeError])
+def test_failed_year_does_not_drop_later_independent_report(tmp_path,failure_type):
     database=tmp_path/'check.db';called=[]
     entries=[{'ticker':'MTSS','expected_year':year} for year in [2024,2025]]
     def runner(command):
         year=int(command[command.index('--year')+1]);called.append(year)
-        if year==2024:raise ValueError('Источник временно недоступен')
+        if year==2024:raise failure_type('Источник временно недоступен')
         folder=tmp_path/'out/MTSS_2025';folder.mkdir()
         (folder/'history_extraction_check.json').write_text(json.dumps({'ok':True,'selected_values_count':6}))
         conn=db.init_db(database)
