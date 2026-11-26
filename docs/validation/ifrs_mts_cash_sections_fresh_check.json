@@ -1,0 +1,799 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45889530034",
+  "source_commit": "f12cd4ac0b33e34b3bb3678254efc5bfc757640b",
+  "source_branch": "codex/stage4-cash-sections-20261126",
+  "fresh_gigachat_acceptance": true,
+  "reference_replay_only": false,
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "selected_values_count": 84,
+  "stored_statuses": {
+    "проверено_авто": 33,
+    "не_проверено": 51
+  },
+  "models": [
+    "GigaChat-2-Max:2.0.30.01"
+  ],
+  "provider_requests": 6,
+  "provider_tokens": 33218,
+  "responses_sha256_verified": true,
+  "responses_reused": false,
+  "database_sha256": "bca637af178385ff19d7611e6474ebf6ff31846f293aad073b0e4da6cd6471c4",
+  "database_unchanged_during_local_recheck": true,
+  "extraction_ok": true,
+  "independent_reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "d_and_a",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "d_and_a",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_expected_credit_losses",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_expected_credit_losses",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_finance_income_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_finance_income_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_finance_expense_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_finance_expense_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_tax_expense_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_tax_expense_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_associates_profit_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_associates_profit_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_subsidiary_disposal_gain",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_fair_value_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_fair_value_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventory_impairment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventory_impairment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_provision_changes",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_provision_changes",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_noncash_adjustments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_noncash_adjustments",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_receivables_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_receivables_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bank_loans_deposits_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bank_loans_deposits_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventories_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventories_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_advances_other_assets_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_advances_other_assets_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_vat_receivable_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_vat_receivable_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_payables_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_payables_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bank_liabilities_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bank_liabilities_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_dividends_received",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_dividends_received",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_income_tax_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_income_tax_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_received",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_received",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_paid_ex_capitalization",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_paid_ex_capitalization",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_subsidiary_acquisitions_net",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_subsidiary_acquisitions_net",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_ppe",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_ppe",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_intangibles",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_intangibles",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investment_property_acquisitions",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investment_property_acquisitions",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_contract_costs_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_contract_costs_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_ppe_disposal_proceeds",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_ppe_disposal_proceeds",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investments_purchased",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investments_purchased",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investments_sold",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_investments_sold",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_swap_cash_flows",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_subsidiary_disposal_proceeds",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_repaid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_repaid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_issued",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_issued",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_borrowing_issue_costs",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_borrowing_issue_costs",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_principal_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_principal_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "dividends_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "dividends_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_raised",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_raised",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_repaid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_repaid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_nci_purchase",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "complete_cfo_components": true,
+      "complete_cff_components": true
+    },
+    "expected_checks": [
+      {
+        "rule": "complete_cfo_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfo_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfi_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfi_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cff_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cff_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      }
+    ],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "checks": [
+    {
+      "rule": "complete_cfo_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        36,
+        45,
+        10,
+        14,
+        12,
+        39,
+        2,
+        38,
+        16,
+        26,
+        32,
+        28,
+        34,
+        6,
+        24,
+        0,
+        41,
+        30,
+        4,
+        8,
+        18,
+        22,
+        20,
+        43
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "d480bf814383bb1ca81c3acbda92105e923a04b756d8b87b49cfde4e0c23fe47",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 12,
+          "end_line": 46
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_subsidiary_disposal_gain"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        37,
+        46,
+        11,
+        15,
+        13,
+        40,
+        3,
+        17,
+        27,
+        33,
+        29,
+        35,
+        7,
+        25,
+        1,
+        42,
+        31,
+        5,
+        9,
+        19,
+        23,
+        21,
+        44
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "d480bf814383bb1ca81c3acbda92105e923a04b756d8b87b49cfde4e0c23fe47",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 12,
+          "end_line": 46
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_swap_cash_flows"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        61,
+        49,
+        47,
+        53,
+        51,
+        59,
+        55,
+        57,
+        63,
+        65
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "276dfd692bb1776df1e98a15e929d2afb6b24fc674e0cb526ded560d1146de75",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 47,
+          "end_line": 65
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_subsidiary_disposal_proceeds"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        62,
+        50,
+        48,
+        54,
+        52,
+        60,
+        56,
+        58,
+        64,
+        66
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "276dfd692bb1776df1e98a15e929d2afb6b24fc674e0cb526ded560d1146de75",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 47,
+          "end_line": 65
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_nci_purchase"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        69,
+        67,
+        71,
+        82,
+        80,
+        73,
+        75,
+        78
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "997bc7d5df05e416e1e18228d5e9c77343eeb1b724f4133f246f955c32cdd448",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 11,
+          "start_line": 11,
+          "end_line": 23
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        70,
+        68,
+        72,
+        83,
+        81,
+        74,
+        76,
+        77,
+        79
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "997bc7d5df05e416e1e18228d5e9c77343eeb1b724f4133f246f955c32cdd448",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 11,
+          "start_line": 11,
+          "end_line": 23
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    }
+  ],
+  "all_requested_observations_present": false,
+  "missing_requested_observations": [
+    {
+      "item_id": "cf_nci_purchase",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_gain",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_proceeds",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_swap_cash_flows",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    }
+  ],
+  "structure_catalog_sha256": "89e3b66523ce2324d0b5550a964734d6783ef0b1a20f22b9800a02a6e469d573",
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Приняты 84 исходных значения компонентов CFO/CFI/CFF МТС H1 2026. CFO 2026 и CFF 2025 полны и сошлись; четыре остальных раздела/периода сохраняют исходные прочерки как отсутствие данных. Проценты за вычетом капитализации не стали полным платежом процентов. Остальные формы/компании, мосты долга/аренды и сопоставимость не приняты. Проверка выполнена в отдельной ветке и проверочных БД."
+}
