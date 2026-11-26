@@ -1,0 +1,315 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45877923651",
+  "source_commit": "874e8375e6179b8a69148111b9185ef11e9dd26f",
+  "source_branch": "codex/stage4-equity-movement-20261126",
+  "fresh_gigachat_acceptance": true,
+  "reference_replay_only": false,
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "selected_values_count": 19,
+  "stored_statuses": {
+    "расхождение": 8,
+    "проверено_авто": 11
+  },
+  "models": [
+    "GigaChat-2-Max:2.0.30.01"
+  ],
+  "provider_requests": 6,
+  "provider_tokens": 14464,
+  "responses_sha256_verified": true,
+  "responses_reused": false,
+  "database_sha256": "b1a914aba6603c2fea0d3ee496d6803090edb0fad6079eacca042a226aa288e7",
+  "database_unchanged_during_local_recheck": true,
+  "extraction_ok": false,
+  "independent_reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_comprehensive_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_options_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_nci_issuance_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_dividends_declared_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_dividends_restored_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_other_movement_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_comprehensive_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_reclassification_retained",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_reclassification_reserves",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_options_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_nci_transfer_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_nci_transfer_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_dividends_declared_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_dividends_restored_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_other_movement_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {
+      "complete_equity_rollforward": true,
+      "equity_neutral_transfer_1": true,
+      "equity_neutral_transfer_2": true
+    },
+    "expected_checks": [
+      {
+        "rule": "complete_equity_rollforward",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "расхождение",
+        "delta": "22468000000",
+        "passed": true
+      },
+      {
+        "rule": "complete_equity_rollforward",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      }
+    ],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "checks": [
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "расхождение",
+        "delta": "22468000000",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        0,
+        5,
+        14,
+        10,
+        7,
+        9,
+        16,
+        1
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "863231545e17de21a6b2ef63ddd7498b3c1a2818197da3ace1e207f38cff4a4f",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 11,
+          "end_line": 24
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "equity_neutral_transfer_1",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_neutral_transfer_1",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        18,
+        17
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "equity_neutral_transfer_2",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_neutral_transfer_2",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        12,
+        11
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        2,
+        4,
+        18,
+        17,
+        13,
+        12,
+        11,
+        6,
+        8,
+        15,
+        3
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    }
+  ],
+  "missing_requested_observations": [
+    {
+      "item_id": "eq_nci_issuance_total",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "item_id": "eq_nci_transfer_nci",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_nci_transfer_parent",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_reclassification_reserves",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_reclassification_retained",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    }
+  ],
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Приняты 19 исходных сумм двух полных мостов капитала МТС H1 2026 и два внутренних переноса. Сравнительное расхождение источника 22468 млн руб. сохранено; 8 участвующих сравнительных сумм заблокированы. Это не приёмка остальных форм/компаний, сопоставимости или всей финансовой истории. Проверка выполнена в отдельной ветке и проверочных БД."
+}
