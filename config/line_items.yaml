@@ -1504,3 +1504,276 @@ items:
       - Приобретение доли в дочерней компании без изменения контроля
       en: []
     rsbu_codes: []
+
+  # Отдельные исходные строки полного моста долга; аренда исключена.
+  - id: note_bonds_issue_2029_1575
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2029 году — движение облигаций (note_bonds_issue_2029_1575)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2029 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2029_1355
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2029 году — движение облигаций (note_bonds_issue_2029_1355)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2029 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2029_1600
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2029 году — движение облигаций (note_bonds_issue_2029_1600)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2029 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2028_1390
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2028 году — движение облигаций (note_bonds_issue_2028_1390)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2028 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2029_1385
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2029 году — движение облигаций (note_bonds_issue_2029_1385)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2029 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2028_1590
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2028 году — движение облигаций (note_bonds_issue_2028_1590)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2028 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_issue_2027_1475
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Облигации ПАО МТС со сроком погашения в 2027 году — движение облигаций (note_bonds_issue_2027_1475)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Облигации ПАО МТС со сроком погашения в 2027 году
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_cfa_other_issued
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: ЦФА и прочие облигации — движение облигаций (note_bonds_cfa_other_issued)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - ЦФА и прочие облигации
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_repaid
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Выплаты — движение облигаций (note_bonds_repaid)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Выплаты
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_fx_change
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Курсовая разница — движение облигаций (note_bonds_fx_change)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Курсовая разница
+      en: []
+    rsbu_codes: []
+  - id: note_bonds_other_change
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Прочие движения — движение облигаций (note_bonds_other_change)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Прочие движения
+      en: []
+    rsbu_codes: []
+  - id: note_loans_raised
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Получение новых кредитов — движение кредитов/прочих займов (note_loans_raised)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Получение новых кредитов
+      en: []
+    rsbu_codes: []
+  - id: note_loans_repaid
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Выплаты — движение кредитов/прочих займов (note_loans_repaid)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Выплаты
+      en: []
+    rsbu_codes: []
+  - id: note_loans_deconsolidation
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Деконсолидация в результате продажи БИК — движение кредитов/прочих займов
+      (note_loans_deconsolidation)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Деконсолидация в результате продажи БИК
+      en: []
+    rsbu_codes: []
+  - id: note_loans_other_change
+    statement: notes
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    value_kind: flow
+    debt_bridge_role: movement
+    name: Прочее движение — движение кредитов/прочих займов (note_loans_other_change)
+    sign: natural
+    notes: Только раскрытое движение долга. Исходный знак сохраняется. Ставка и год
+      погашения идентифицируют выпуск, не являются денежной суммой. Не суммировать выпуски
+      в ответе модели; не подменять движением денежных средств или арендой.
+    ifrs_synonyms:
+      ru:
+      - Прочее движение
+      en: []
+    rsbu_codes: []

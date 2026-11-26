@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "complete": true,
+      "reviewer": "Codex: визуальная сверка физических страниц 18/19/21/22 26.11.2026",
+      "reason": "Примечание 9 раскрывает весь долг без аренды как облигации и банковские кредиты/прочие займы. На странице 19 два полных моста за 1П2026; все движения сохранены, включая курсовую разницу, деконсолидацию и прочие изменения.",
+      "number_format": "comma_grouped_dot_decimal",
+      "composition": {
+        "note_bonds": {
+          "page": 18,
+          "start_line": 58,
+          "end_line": 58
+        },
+        "note_loans_and_other_borrowings": {
+          "page": 18,
+          "start_line": 59,
+          "end_line": 59
+        },
+        "note_debt_total": {
+          "page": 18,
+          "start_line": 60,
+          "end_line": 60
+        }
+      },
+      "components": [
+        {
+          "balance_item": "note_bonds",
+          "rule": "complete_bonds_rollforward",
+          "evidence": {
+            "page": 19,
+            "start_line": 14,
+            "end_line": 39
+          },
+          "rows": [
+            {
+              "kind": "opening",
+              "item_id": "note_bonds",
+              "evidence": {
+                "page": 19,
+                "start_line": 14,
+                "end_line": 16
+              }
+            },
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 19,
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2029_1575",
+              "evidence": {
+                "page": 19,
+                "start_line": 19,
+                "end_line": 20
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2029_1355",
+              "evidence": {
+                "page": 19,
+                "start_line": 21,
+                "end_line": 22
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2029_1600",
+              "evidence": {
+                "page": 19,
+                "start_line": 23,
+                "end_line": 24
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2028_1390",
+              "evidence": {
+                "page": 19,
+                "start_line": 25,
+                "end_line": 26
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2029_1385",
+              "evidence": {
+                "page": 19,
+                "start_line": 27,
+                "end_line": 28
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2028_1590",
+              "evidence": {
+                "page": 19,
+                "start_line": 29,
+                "end_line": 30
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_issue_2027_1475",
+              "evidence": {
+                "page": 19,
+                "start_line": 31,
+                "end_line": 32
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_cfa_other_issued",
+              "evidence": {
+                "page": 19,
+                "start_line": 33,
+                "end_line": 33
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_repaid",
+              "evidence": {
+                "page": 19,
+                "start_line": 34,
+                "end_line": 34
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_fx_change",
+              "evidence": {
+                "page": 19,
+                "start_line": 35,
+                "end_line": 35
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_bonds_other_change",
+              "evidence": {
+                "page": 19,
+                "start_line": 36,
+                "end_line": 36
+              }
+            },
+            {
+              "kind": "closing",
+              "item_id": "note_bonds",
+              "evidence": {
+                "page": 19,
+                "start_line": 37,
+                "end_line": 39
+              }
+            }
+          ]
+        },
+        {
+          "balance_item": "note_loans_and_other_borrowings",
+          "rule": "complete_loans_rollforward",
+          "evidence": {
+            "page": 19,
+            "start_line": 49,
+            "end_line": 55
+          },
+          "rows": [
+            {
+              "kind": "opening",
+              "item_id": "note_loans_and_other_borrowings",
+              "evidence": {
+                "page": 19,
+                "start_line": 49,
+                "end_line": 49
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_loans_raised",
+              "evidence": {
+                "page": 19,
+                "start_line": 51,
+                "end_line": 51
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_loans_repaid",
+              "evidence": {
+                "page": 19,
+                "start_line": 52,
+                "end_line": 52
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_loans_deconsolidation",
+              "evidence": {
+                "page": 19,
+                "start_line": 53,
+                "end_line": 53
+              }
+            },
+            {
+              "kind": "movement",
+              "item_id": "note_loans_other_change",
+              "evidence": {
+                "page": 19,
+                "start_line": 54,
+                "end_line": 54
+              }
+            },
+            {
+              "kind": "closing",
+              "item_id": "note_loans_and_other_borrowings",
+              "evidence": {
+                "page": 19,
+                "start_line": 55,
+                "end_line": 55
+              }
+            }
+          ]
+        }
+      ],
+      "unavailable_bridges": [
+        {
+          "rule": "complete_debt_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "reason": "На странице 19 раскрыты только движения за 1П2026. Остаток декабря 2025 не является потоком за 1П2025.",
+          "evidence": [
+            {
+              "page": 19,
+              "start_line": 7,
+              "end_line": 8
+            },
+            {
+              "page": 19,
+              "start_line": 45,
+              "end_line": 46
+            }
+          ]
+        },
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "reason": "Примечание 11 содержит остатки/амортизацию/поступления активов права пользования, будущие платежи и отдельную обратную аренду БИК; полного движения обязательств нет. Поступления активов не равны новым обязательствам.",
+          "evidence": [
+            {
+              "page": 21,
+              "start_line": 12,
+              "end_line": 65
+            },
+            {
+              "page": 22,
+              "start_line": 7,
+              "end_line": 12
+            }
+          ]
+        },
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "reason": "Полного сравнительного движения обязательств по аренде нет. Июньский остаток 2025 не подменяет декабрьский.",
+          "evidence": [
+            {
+              "page": 21,
+              "start_line": 45,
+              "end_line": 65
+            }
+          ]
+        }
+      ],
+      "cash_links": [
+        {
+          "rule": "debt_bonds_issued_vs_cash_flow",
+          "note_items": [
+            "note_bonds_issue_2029_1575",
+            "note_bonds_issue_2029_1355",
+            "note_bonds_issue_2029_1600",
+            "note_bonds_issue_2028_1390",
+            "note_bonds_issue_2029_1385",
+            "note_bonds_issue_2028_1590",
+            "note_bonds_issue_2027_1475",
+            "note_bonds_cfa_other_issued"
+          ],
+          "cash_item": "cf_bonds_issued",
+          "evidence": {
+            "page": 11,
+            "start_line": 14,
+            "end_line": 14
+          }
+        },
+        {
+          "rule": "debt_bonds_repaid_vs_cash_flow",
+          "note_items": [
+            "note_bonds_repaid"
+          ],
+          "cash_item": "cf_bonds_repaid",
+          "evidence": {
+            "page": 11,
+            "start_line": 13,
+            "end_line": 13
+          }
+        },
+        {
+          "rule": "debt_loans_raised_vs_cash_flow",
+          "note_items": [
+            "note_loans_raised"
+          ],
+          "cash_item": "cf_loans_raised",
+          "evidence": {
+            "page": 11,
+            "start_line": 18,
+            "end_line": 18
+          }
+        },
+        {
+          "rule": "debt_loans_repaid_vs_cash_flow",
+          "note_items": [
+            "note_loans_repaid"
+          ],
+          "cash_item": "cf_loans_repaid",
+          "evidence": {
+            "page": 11,
+            "start_line": 19,
+            "end_line": 19
+          }
+        }
+      ]
+    }
+  ]
+}

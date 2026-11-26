@@ -97,5 +97,14 @@
       "cash_flow"
     ],
     "reference": "mts_h1_2026_cash_sections_reference.json"
+  },
+  "mts_debt_movement": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "debt"
+    ],
+    "reference": "mts_h1_2026_debt_movement_reference.json"
   }
 }

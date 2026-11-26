@@ -1,0 +1,518 @@
+{
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "reviewer": "Codex: визуальная сверка физических страниц 18/19/21/22 26.11.2026",
+  "rows": [
+    {
+      "item_id": "note_bonds",
+      "original_name": "Задолженность по облигациям на 31 декабря 2025 года",
+      "raw_value": "316,662",
+      "value": "316662",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 14,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds",
+      "original_name": "Задолженность по облигациям на 30 июня 2026 года",
+      "raw_value": "352,813",
+      "value": "352813",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 37,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_and_other_borrowings",
+      "original_name": "Задолженность по кредитам и прочим займам на 31 декабря 2025 года",
+      "raw_value": "396,395",
+      "value": "396395",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 49,
+        "end_line": 49
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_and_other_borrowings",
+      "original_name": "Задолженность по кредитам и прочим займам на 30 июня 2026 года",
+      "raw_value": "363,528",
+      "value": "363528",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_debt_total",
+      "original_name": "Итого долговые обязательства",
+      "raw_value": "713,057",
+      "value": "713057",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        18
+      ],
+      "evidence": {
+        "page": 18,
+        "start_line": 60,
+        "end_line": 60
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_debt_total",
+      "original_name": "Итого долговые обязательства",
+      "raw_value": "716,341",
+      "value": "716341",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        18
+      ],
+      "evidence": {
+        "page": 18,
+        "start_line": 60,
+        "end_line": 60
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1575",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2029 году",
+      "raw_value": "33,486",
+      "value": "33486",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 19,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1355",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2029 году",
+      "raw_value": "20,000",
+      "value": "20000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 21,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1600",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2029 году",
+      "raw_value": "16,388",
+      "value": "16388",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 23,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1390",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2028 году",
+      "raw_value": "15,000",
+      "value": "15000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 25,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1385",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2029 году",
+      "raw_value": "15,000",
+      "value": "15000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 27,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1590",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2028 году",
+      "raw_value": "10,000",
+      "value": "10000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 29,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_issue_2027_1475",
+      "original_name": "Облигации ПАО МТС со сроком погашения в 2027 году",
+      "raw_value": "10,000",
+      "value": "10000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 31,
+        "end_line": 32
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_cfa_other_issued",
+      "original_name": "ЦФА и прочие облигации",
+      "raw_value": "11,014",
+      "value": "11014",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 33,
+        "end_line": 33
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_repaid",
+      "original_name": "Выплаты",
+      "raw_value": "(94,425)",
+      "value": "-94425",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_fx_change",
+      "original_name": "Курсовая разница",
+      "raw_value": "(49)",
+      "value": "-49",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_other_change",
+      "original_name": "Прочие движения",
+      "raw_value": "(263)",
+      "value": "-263",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_raised",
+      "original_name": "Получение новых кредитов",
+      "raw_value": "218,284",
+      "value": "218284",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_repaid",
+      "original_name": "Выплаты",
+      "raw_value": "(212,466)",
+      "value": "-212466",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 52,
+        "end_line": 52
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_deconsolidation",
+      "original_name": "Деконсолидация в результате продажи БИК",
+      "raw_value": "(40,093)",
+      "value": "-40093",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 53,
+        "end_line": 53
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_loans_other_change",
+      "original_name": "Прочее движение",
+      "raw_value": "1,408",
+      "value": "1408",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    }
+  ],
+  "checks_required": [],
+  "checks_expected": [
+    {
+      "rule": "complete_bonds_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_loans_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_debt_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    }
+  ],
+  "missing_source_observations": [
+    {
+      "item_id": "note_bonds_issue_2029_1575",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1355",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1600",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1390",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1385",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1590",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_issue_2027_1475",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_cfa_other_issued",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_repaid",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_fx_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_bonds_other_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_loans_raised",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_loans_repaid",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_loans_deconsolidation",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    },
+    {
+      "item_id": "note_loans_other_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "source": "not_disclosed"
+    }
+  ],
+  "financial_audit_complete": false
+}

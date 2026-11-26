@@ -9,6 +9,7 @@ from agent.extract.schemas import ExtractedFact
 from agent.metrics.data import UNIT_MULTIPLIERS
 from agent.checks.equity import EquityBridgePlan
 from agent.checks.cash_sections import CashSectionPlan
+from agent.checks.debt_bridges import DebtBridgePlan
 
 
 @dataclass(frozen=True)
@@ -18,7 +19,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 9
+    version: int = 10
     basis: dict | None = None
 
 
@@ -85,7 +86,7 @@ def _apply_check(name, start, end, terms, by_item, facts, statuses, *, extra_dis
     return FinancialCheck(name,str(start) if start else None,str(end),result,indices,basis=basis)
 
 
-def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
+def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = (), debt_plans: tuple[DebtBridgePlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
     """Одинаковое число в разных цитатах подтверждает источник; разные числа блокируются оба.
 
     «Проверено авто» здесь означает совпадение цитаты и участие в пройденном тождестве,
@@ -172,6 +173,34 @@ def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple
                     raise ValueError('Статья ОДДС взята из другого раздела/строки проверенного состава')
         check = _apply_check(f'complete_{plan.total_item}_components',plan.start,plan.end,plan.terms,
                              by_item,facts,statuses,basis=plan.basis)
+        if check:
+            checks.append(check)
+    for plan in debt_plans:
+        by_item = {}
+        for key, binding in plan.bindings.items():
+            indices = [i for i, f in enumerate(facts) if f.item_id == binding['item_id']
+                       and f.start == binding['start'] and f.end == binding['end']]
+            for index in indices:
+                fact = facts[index]; evidence = fact.evidence
+                proofs = [binding['evidence']]
+                # Тот же датированный остаток также раскрыт в сводной таблице примечания.
+                if fact.start is None:
+                    proofs.append(plan.basis['composition_evidence'][fact.item_id])
+                if (fact.statement != binding.get('statement', 'notes')
+                        or fact.cash_flow_section != binding.get('cash_flow_section') or not any(
+                        evidence.page == p['page'] and evidence.start_line is not None and evidence.end_line is not None
+                        and evidence.start_line >= p['start_line'] and evidence.end_line <= p['end_line'] for p in proofs)):
+                    raise ValueError('Статья движения долга взята из другого источника/строки')
+            if indices:
+                by_item[key] = indices
+            if binding['start'] is not None and binding.get('statement', 'notes') == 'notes' and any(f.item_id == binding['item_id'] and
+                    (f.start, f.end) != (binding['start'], binding['end']) for f in facts):
+                raise ValueError('В проверенном источнике нет движения долга за другой период')
+        # Две компенсирующие ошибки компонентных мостов не разрешают общий мост.
+        disputed = tuple(key for key, indices in by_item.items()
+                         if any(statuses[i] == 'расхождение' for i in indices))
+        check = _apply_check(plan.rule, plan.start, plan.end, plan.terms, by_item, facts,
+                             statuses, extra_disputed=disputed, basis=plan.basis)
         if check:
             checks.append(check)
     return tuple(checks), tuple(statuses)
