@@ -100,6 +100,42 @@ def test_history_reference_checks_requested_pdf_with_other_confirming_sources_pr
     conn.close()
 
 
+@pytest.mark.parametrize('foreign_context', ['company', 'standard', 'segment'])
+def test_reference_metric_cannot_come_from_other_company_standard_or_segment(tmp_path, foreign_context):
+    from agent import config
+    from agent.db import init_db
+    from agent.extract.store import store_extraction
+    from agent.metrics.data import load_facts
+    from agent.metrics.engine import Engine
+    from agent.tools.verify_ifrs_reference import verify_statements
+    from tests.test_extraction_schema import PERIOD
+    from tests.test_ifrs_pipeline import make_run
+    conn = init_db(tmp_path/'metric-context.db')
+    with conn:
+        saved = store_extraction(conn, make_run(), ticker='TEST', name='Тест',
+                                source_url='https://example.test/a.pdf', period=PERIOD, local_path='a.pdf')
+        facts = load_facts(conn, company_id=saved['company_id'], standard='IFRS', scope='group',
+                           segment_name=None, line_items=config.line_items())
+        engine = Engine(facts, company_id=saved['company_id'], standard='IFRS', scope='group',
+                        industry_id='telecom', industries=config.industries())
+        engine.save(conn, engine.calculate('current_ratio', PERIOD))
+        if foreign_context == 'company':
+            other = conn.execute("INSERT INTO companies(ticker,name) VALUES ('OTHER','Другая')").lastrowid
+            conn.execute('UPDATE metric_values SET company_id=?', (other,))
+        elif foreign_context == 'standard':
+            conn.execute("UPDATE metric_values SET standard='RSBU'")
+        else:
+            conn.execute("UPDATE metric_values SET scope='segment',segment_name='Телеком'")
+    reference = {'pdf_sha256':'a'*64, 'unit':'млн руб.', 'multiplier':'1000000', 'checks_required':[],
+        'rows':[{'item_id':'current_assets','start':None,'end':'2026-06-30','value':'40',
+                 'pages':[1],'status':'проверено_авто'}],
+        'metrics':[{'metric_id':'current_ratio','period_end':'2026-06-30','numerator':2,'denominator':1}]}
+    result = verify_statements(conn, reference)
+    assert result['all_selected_values_verified'] and not result['ok']
+    assert not result['metrics']['current_ratio']
+    conn.close()
+
+
 @pytest.mark.parametrize('declared',[True,False])
 def test_case_proceeds_to_reference_only_for_declared_source_discrepancy(monkeypatch,tmp_path,declared):
     from agent.db import init_db

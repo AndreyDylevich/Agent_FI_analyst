@@ -56,7 +56,9 @@ def main(argv=None) -> int:
         finally:conn.close()
         (args.output/'reference_check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
         report.update(ok=result['ok'],pdf_sha256=pdf.sha256,reference=case['reference'],
-                      extraction_ok=extraction['ok'],source_discrepancies_present='расхождение' in extraction['statuses'])
+                      extraction_ok=extraction['ok'],source_discrepancies_present='расхождение' in extraction['statuses'],
+                      all_requested_observations_present=extraction.get('all_requested_observations_present'),
+                      missing_observations=extraction.get('missing_observations',[]))
     except Exception as error:
         report['error']=f'{type(error).__name__}: {error}'
     (args.output/'case_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

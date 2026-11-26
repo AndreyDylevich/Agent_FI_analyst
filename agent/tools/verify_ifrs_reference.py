@@ -8,6 +8,18 @@ from fractions import Fraction
 from pathlib import Path
 
 
+def _metric_row(conn, reference: dict, metric_id: str, end: str):
+    """Расчёт другого юрлица/стандарта/сегмента не подтверждает эталон этого PDF."""
+    companies = conn.execute('SELECT DISTINCT company_id FROM documents WHERE sha256=?',
+                             (reference['pdf_sha256'],)).fetchall()
+    if len(companies) != 1:
+        return None
+    return conn.execute(
+        "SELECT value,status FROM metric_values WHERE company_id=? AND metric_id=? AND period_end=? "
+        "AND standard='IFRS' AND scope='group' AND segment_name IS NULL ORDER BY id DESC LIMIT 1",
+        (companies[0]['company_id'], metric_id, end)).fetchone()
+
+
 def verify(conn: sqlite3.Connection, reference: dict) -> dict:
     """Проверяет конкретный эталон; не означает проверки всех данных отчётности."""
     if 'rows' in reference:
@@ -26,7 +38,7 @@ def verify(conn: sqlite3.Connection, reference: dict) -> dict:
                 and Decimal(row['value_norm']) == Decimal(expected) * Decimal('1000000')
                 and json.loads(row['location'])['page'] == expected_page for row in rows)
             results.append({'item_id': item, 'period_end': end, 'passed': passed})
-    ratio = conn.execute("SELECT value,status FROM metric_values WHERE metric_id='current_ratio' AND period_end='2026-06-30' ORDER BY id DESC LIMIT 1").fetchone()
+    ratio = _metric_row(conn, reference, 'current_ratio', '2026-06-30')
     expected_ratio = Fraction(reference['current_ratio_fraction']['numerator'], reference['current_ratio_fraction']['denominator'])
     ratio_passed = bool(ratio and ratio['status'] == 'рассчитан' and ratio['value'] is not None
                         and abs(Fraction(ratio['value']) - expected_ratio) <= Fraction(1,10**27))
@@ -50,7 +62,8 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
         passed=bool(rows) and all(row['sha256']==reference['pdf_sha256'] and row['unit']==reference['unit']
                                 and row['check_status']==expected['status'] and Decimal(row['value'])==Decimal(expected['value'])
                                 and Decimal(row['value_norm'])==Decimal(expected.get('normalized_value',str(Decimal(expected['value'])*Decimal(reference['multiplier']))))
-                                and json.loads(row['location'])['page'] in expected['pages'] for row in rows)
+                                and json.loads(row['location'])['page'] in expected['pages']
+                                and ('cash_flow_section' not in expected or row['cash_flow_section']==expected['cash_flow_section']) for row in rows)
         results.append({'item_id':expected['item_id'],'period_end':expected['end'],'passed':passed})
     contexts=[json.loads(row[0]) for row in conn.execute("SELECT value FROM meta WHERE key LIKE 'ifrs_extraction:%'")]
     if reference.get('source_specific'):
@@ -66,14 +79,12 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
         expected_results.append({**expected,'passed':passed})
     metric_results={}
     for expected in reference.get('metrics',[]):
-        row=conn.execute('SELECT value,status FROM metric_values WHERE metric_id=? AND period_end=? ORDER BY id DESC LIMIT 1',
-                         (expected['metric_id'],expected['period_end'])).fetchone()
+        row=_metric_row(conn,reference,expected['metric_id'],expected['period_end'])
         fraction=Fraction(expected['numerator'],expected['denominator'])
         metric_results[expected['metric_id']]=bool(row and row['status']=='рассчитан' and row['value'] is not None
             and abs(Fraction(row['value'])-fraction)<=Fraction(1,10**27))
     for expected in reference.get('metric_states',[]):
-        row=conn.execute('SELECT value,status FROM metric_values WHERE metric_id=? AND period_end=? ORDER BY id DESC LIMIT 1',
-                         (expected['metric_id'],expected['period_end'])).fetchone()
+        row=_metric_row(conn,reference,expected['metric_id'],expected['period_end'])
         metric_results[expected['metric_id']]=bool(row and row['status']==expected['status'] and row['value'] is None)
     return {'all_selected_values_verified':all(r['passed'] for r in results),'selected_values':results,
             'checks':check_results,'expected_checks':expected_results,'metrics':metric_results,'financial_audit_complete':False,

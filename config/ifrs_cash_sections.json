@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+      "reason": "Разделы покрыты без пропусков и двойного счёта. Прочерки сохраняются как неизвестные компоненты; неполные тождества не считаются пройденными. Проценты за вычетом капитализации не объявлены полным платежом.",
+      "complete": true,
+      "sections": [
+        {
+          "section": "operating",
+          "total_item": "cfo",
+          "evidence": {
+            "page": 10,
+            "start_line": 12,
+            "end_line": 46
+          },
+          "rows": [
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 10,
+                "start_line": 12,
+                "end_line": 12
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_starting_net_profit",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 13,
+                "end_line": 13
+              }
+            },
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 10,
+                "start_line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "d_and_a",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 15,
+                "end_line": 16
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_expected_credit_losses",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_finance_income_adjustment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_finance_expense_adjustment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_tax_expense_adjustment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_associates_profit_adjustment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_subsidiary_disposal_gain",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 22,
+                "end_line": 22
+              },
+              "dash_years": [
+                2025
+              ]
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_fx_fair_value_adjustment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 23,
+                "end_line": 24
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_inventory_impairment",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 25,
+                "end_line": 25
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_provision_changes",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 26,
+                "end_line": 26
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_other_noncash_adjustments",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 27,
+                "end_line": 27
+              }
+            },
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 10,
+                "start_line": 28,
+                "end_line": 28
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_receivables_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 29,
+                "end_line": 30
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_bank_loans_deposits_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 31,
+                "end_line": 31
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_inventories_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 32,
+                "end_line": 32
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_advances_other_assets_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 33,
+                "end_line": 34
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_vat_receivable_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 35,
+                "end_line": 35
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_payables_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 36,
+                "end_line": 38
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_bank_liabilities_change",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 39,
+                "end_line": 39
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_dividends_received",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 40,
+                "end_line": 40
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_income_tax_paid",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 41,
+                "end_line": 41
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_interest_received",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 42,
+                "end_line": 42
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_interest_paid_ex_capitalization",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 43,
+                "end_line": 44
+              }
+            },
+            {
+              "kind": "total",
+              "item_id": "cfo",
+              "coefficient": -1,
+              "evidence": {
+                "page": 10,
+                "start_line": 45,
+                "end_line": 46
+              }
+            }
+          ]
+        },
+        {
+          "section": "investing",
+          "total_item": "cfi",
+          "evidence": {
+            "page": 10,
+            "start_line": 47,
+            "end_line": 65
+          },
+          "rows": [
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 10,
+                "start_line": 47,
+                "end_line": 48
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_subsidiary_acquisitions_net",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 49,
+                "end_line": 50
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "capex_ppe",
+              "coefficient": -1,
+              "evidence": {
+                "page": 10,
+                "start_line": 51,
+                "end_line": 52
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "capex_intangibles",
+              "coefficient": -1,
+              "evidence": {
+                "page": 10,
+                "start_line": 53,
+                "end_line": 55
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_investment_property_acquisitions",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 56,
+                "end_line": 56
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_contract_costs_paid",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 57,
+                "end_line": 57
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_ppe_disposal_proceeds",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 58,
+                "end_line": 58
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_investments_purchased",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_investments_sold",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 60,
+                "end_line": 60
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_swap_cash_flows",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 61,
+                "end_line": 61
+              },
+              "dash_years": [
+                2026
+              ]
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_subsidiary_disposal_proceeds",
+              "coefficient": 1,
+              "evidence": {
+                "page": 10,
+                "start_line": 62,
+                "end_line": 63
+              },
+              "dash_years": [
+                2025
+              ]
+            },
+            {
+              "kind": "total",
+              "item_id": "cfi",
+              "coefficient": -1,
+              "evidence": {
+                "page": 10,
+                "start_line": 64,
+                "end_line": 65
+              }
+            }
+          ]
+        },
+        {
+          "section": "financing",
+          "total_item": "cff",
+          "evidence": {
+            "page": 11,
+            "start_line": 11,
+            "end_line": 23
+          },
+          "rows": [
+            {
+              "kind": "heading",
+              "evidence": {
+                "page": 11,
+                "start_line": 11,
+                "end_line": 11
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_bonds_repaid",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 13,
+                "end_line": 13
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_bonds_issued",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 14,
+                "end_line": 14
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_borrowing_issue_costs",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 15,
+                "end_line": 15
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "lease_principal_paid",
+              "coefficient": -1,
+              "evidence": {
+                "page": 11,
+                "start_line": 16,
+                "end_line": 16
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "dividends_paid",
+              "coefficient": -1,
+              "evidence": {
+                "page": 11,
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_loans_raised",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_loans_repaid",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "kind": "component",
+              "item_id": "cf_nci_purchase",
+              "coefficient": 1,
+              "evidence": {
+                "page": 11,
+                "start_line": 20,
+                "end_line": 20
+              },
+              "dash_years": [
+                2026
+              ]
+            },
+            {
+              "kind": "total",
+              "item_id": "cff",
+              "coefficient": -1,
+              "evidence": {
+                "page": 11,
+                "start_line": 22,
+                "end_line": 23
+              }
+            }
+          ]
+        }
+      ],
+      "number_format": "comma_grouped_dot_decimal"
+    }
+  ]
+}

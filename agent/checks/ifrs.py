@@ -8,6 +8,7 @@ from agent.checks.validate import CheckResult, reconcile
 from agent.extract.schemas import ExtractedFact
 from agent.metrics.data import UNIT_MULTIPLIERS
 from agent.checks.equity import EquityBridgePlan
+from agent.checks.cash_sections import CashSectionPlan
 
 
 @dataclass(frozen=True)
@@ -17,7 +18,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 8
+    version: int = 9
     basis: dict | None = None
 
 
@@ -84,7 +85,7 @@ def _apply_check(name, start, end, terms, by_item, facts, statuses, *, extra_dis
     return FinancialCheck(name,str(start) if start else None,str(end),result,indices,basis=basis)
 
 
-def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
+def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
     """Одинаковое число в разных цитатах подтверждает источник; разные числа блокируются оба.
 
     «Проверено авто» здесь означает совпадение цитаты и участие в пройденном тождестве,
@@ -155,4 +156,22 @@ def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple
                               statuses, extra_disputed=tuple(disputed), basis=plan.basis)
         if bridge:
             checks.append(bridge)
+    for plan in cash_plans:
+        by_item = {item:[index for index in indices if facts[index].statement=='cash_flow']
+                   for item,indices in groups.get((plan.start,plan.end),{}).items()}
+        by_item = {item:indices for item,indices in by_item.items() if indices}
+        for item in plan.terms:
+            proof = plan.item_evidence[item]
+            for index in by_item.get(item, []):
+                if item in plan.unavailable_items:
+                    raise ValueError('Прочерк этой колонки ОДДС не является числом и не заменяется соседним годом/нулём')
+                fact = facts[index]; evidence = fact.evidence
+                if (fact.statement != 'cash_flow' or fact.cash_flow_section != plan.expected_sections[item]
+                        or evidence.page != proof['page'] or evidence.start_line is None or evidence.end_line is None
+                        or evidence.start_line < proof['start_line'] or evidence.end_line > proof['end_line']):
+                    raise ValueError('Статья ОДДС взята из другого раздела/строки проверенного состава')
+        check = _apply_check(f'complete_{plan.total_item}_components',plan.start,plan.end,plan.terms,
+                             by_item,facts,statuses,basis=plan.basis)
+        if check:
+            checks.append(check)
     return tuple(checks), tuple(statuses)
