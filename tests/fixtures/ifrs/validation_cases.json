@@ -79,5 +79,14 @@
       "cash_flow"
     ],
     "reference": "sgzh_h1_2026_statements_reference.json"
+  },
+  "mts_equity_movement": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "equity"
+    ],
+    "reference": "mts_h1_2026_equity_movement_reference.json"
   }
 }

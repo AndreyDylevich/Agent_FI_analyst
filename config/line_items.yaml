@@ -717,6 +717,103 @@ items:
       en: [Profit for the period]
     rsbu_codes: []
 
+  # Движения капитала сохраняют исходный знак, включая отрицательные объявленные дивиденды.
+  # Набор строк полного моста подтверждается для конкретного PDF; отсутствующие строки не обнуляются.
+  - id: eq_comprehensive_total
+    statement: equity
+    name: Раскрытый совокупный доход всей группы из отчёта об изменениях капитала
+    sign: natural
+    notes: Итог включает прибыль и прочий совокупный доход; не складывать повторно с их компонентами.
+    ifrs_synonyms:
+      ru: [Итого совокупный доход за период]
+      en: [Total comprehensive income]
+    rsbu_codes: []
+  - id: eq_options_total
+    statement: equity
+    equity_bridge_role: movement
+    name: Изменение общего капитала по программам вознаграждения работников
+    sign: natural
+    ifrs_synonyms:
+      ru: [Опционы, выданные по программам вознаграждения работников]
+      en: [Share based payments]
+    rsbu_codes: []
+  - id: eq_nci_issuance_total
+    statement: equity
+    equity_bridge_role: movement
+    name: Выпуск доли неконтролирующих акционеров в общем капитале
+    sign: natural
+    ifrs_synonyms:
+      ru: [Выпуск доли неконтролирующих акционеров]
+      en: [Issue of non controlling interests]
+    rsbu_codes: []
+  - id: eq_dividends_declared_total
+    statement: equity
+    equity_bridge_role: movement
+    name: Объявленные дивиденды группы в движении капитала
+    sign: natural
+    notes: Сохранять отрицательный знак уменьшения капитала. Это не дивиденды уплаченные из ОДДС.
+    ifrs_synonyms:
+      ru: [Дивиденды, объявленные]
+      en: [Dividends declared]
+    rsbu_codes: []
+  - id: eq_dividends_restored_total
+    statement: equity
+    equity_bridge_role: movement
+    name: Восстановленные или невостребованные дивиденды в движении капитала
+    sign: natural
+    ifrs_synonyms:
+      ru: [Восстановленные дивиденды, Невостребованные дивиденды]
+      en: [Unclaimed dividends, Dividends reinstated]
+    rsbu_codes: []
+  - id: eq_other_movement_total
+    statement: equity
+    equity_bridge_role: movement
+    name: Раскрытый итог прочих движений общего капитала
+    sign: natural
+    notes: Только исходный итог строки; не вычислять остаточную корректировку ради равенства.
+    ifrs_synonyms:
+      ru: [Прочее]
+      en: [Other changes]
+    rsbu_codes: []
+  - id: eq_reclassification_retained
+    statement: equity
+    equity_bridge_role: neutral
+    equity_column: Нераспределенная прибыль — компонент внутренней реклассификации, не общий итог капитала
+    name: Перенос переоценки в нераспределённую прибыль
+    sign: natural
+    ifrs_synonyms:
+      ru: [Реклассификация резерва переоценки основных средств]
+      en: [Reclassification of revaluation reserve]
+    rsbu_codes: []
+  - id: eq_reclassification_reserves
+    statement: equity
+    equity_bridge_role: neutral
+    equity_column: Прочие резервы — противоположный компонент той же внутренней реклассификации
+    name: Перенос переоценки из прочих резервов
+    sign: natural
+    ifrs_synonyms:
+      ru: [Реклассификация резерва переоценки основных средств]
+      en: [Reclassification of revaluation reserve]
+    rsbu_codes: []
+  - id: eq_nci_transfer_parent
+    statement: equity
+    equity_bridge_role: neutral
+    name: Изменение доли NCI в капитале акционеров материнской компании
+    sign: natural
+    ifrs_synonyms:
+      ru: [Изменение доли неконтролирующих акционеров]
+      en: [Changes in ownership interests]
+    rsbu_codes: []
+  - id: eq_nci_transfer_nci
+    statement: equity
+    equity_bridge_role: neutral
+    name: Изменение доли NCI в капитале неконтролирующих акционеров
+    sign: natural
+    ifrs_synonyms:
+      ru: [Изменение доли неконтролирующих акционеров]
+      en: [Changes in ownership interests]
+    rsbu_codes: []
+
   # Примечания: полный состав долга/аренды и процентов хранится отдельно от форм.
   - id: note_debt_total
     statement: notes

@@ -18,7 +18,7 @@ def test_full_debt_composition_and_maturity_match_balance():
     checks,statuses=validate_financials(rows)
     assert set(statuses)=={'проверено_авто'}
     assert {'note_debt_composition','note_debt_maturity','note_debt_current_vs_balance',
-            'note_debt_noncurrent_vs_balance'} <= {c.rule for c in checks if c.result.status=='пройдено'}
+            'note_debt_noncurrent_vs_balance','note_debt_total_vs_balance'} <= {c.rule for c in checks if c.result.status=='пройдено'}
     # Банковские кредиты вместе с прочими займами не доказывают отдельную сумму только банков.
     assert not any(c.rule=='debt_components' and c.result.status=='пройдено' for c in checks)
 
@@ -30,6 +30,7 @@ def test_lease_discounting_kept_separate_and_different_dates_not_compared():
     checks,statuses=validate_financials(rows)
     assert set(statuses)=={'проверено_авто'}
     assert next(c for c in checks if c.rule=='note_lease_discounting').result.delta==0
+    assert next(c for c in checks if c.rule=='note_lease_total_vs_balance').result.delta==0
     # Сравнительный столбец примечания за июнь нельзя сверять с декабрьским балансом.
     prior=stocks({'note_lease_present_value':112535,'note_lease_current':21388,'note_lease_noncurrent':91147},'2025-06-30')
     december=stocks({'lease_liabilities_short':22496,'lease_liabilities_long':92364},'2025-12-31')
@@ -42,6 +43,20 @@ def test_missing_lease_discount_not_assumed_zero():
     checks,_=validate_financials(stocks({'note_lease_undiscounted':285078,'note_lease_present_value':172235}))
     check=next(c for c in checks if c.rule=='note_lease_discounting')
     assert check.result.status=='недостаточно_данных' and check.result.missing==('note_lease_discount',)
+
+
+def test_total_debt_and_lease_checks_require_all_balance_components():
+    for rule, total, long_part, short_part in (
+            ('note_debt_total_vs_balance', 'note_debt_total', 'debt_long_term', 'debt_short_term'),
+            ('note_lease_total_vs_balance', 'note_lease_present_value', 'lease_liabilities_long', 'lease_liabilities_short')):
+        checks, _ = validate_financials(stocks({total: 100, long_part: 100}))
+        check = next(c for c in checks if c.rule == rule)
+        assert check.result.status == 'недостаточно_данных' and check.result.missing == (short_part,)
+        checks, _ = validate_financials(stocks({total: 100, long_part: 100, short_part: 0}))
+        assert next(c for c in checks if c.rule == rule).result.status == 'пройдено'
+        checks, statuses = validate_financials(stocks({total: 103, long_part: 100, short_part: 0}))
+        assert next(c for c in checks if c.rule == rule).result.delta == -3000000
+        assert set(statuses) == {'расхождение'}
 
 
 def test_accrued_interest_and_capitalization_not_treated_as_cash_paid():

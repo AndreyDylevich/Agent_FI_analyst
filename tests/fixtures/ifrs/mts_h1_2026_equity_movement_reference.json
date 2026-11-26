@@ -1,0 +1,377 @@
+{
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "19 исходных сумм двух полных мостов капитала переписаны Codex после визуального просмотра физической страницы 9 (26.11.2026), независимо от GigaChat. Положительный итог открытия 2024 не исправлен. Прочерки итогов внутренних переносов не стали нулями: выбраны раскрытые числовые компоненты с противоположными знаками. Это эталон и проверка кода; свежая приёмка GigaChat отдельно.",
+  "rows": [
+    {
+      "item_id": "eq_opening_total",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "11234",
+      "normalized_value": "11234000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "11,234",
+      "original_name": "Сальдо на 31 декабря 202      4 года",
+      "evidence": {
+        "page": 9,
+        "start_line": 11,
+        "end_line": 11
+      }
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "9009",
+      "normalized_value": "9009000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "9,009",
+      "original_name": "Итого совокупный доход за период",
+      "evidence": {
+        "page": 9,
+        "start_line": 16,
+        "end_line": 16
+      }
+    },
+    {
+      "item_id": "eq_options_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "432",
+      "normalized_value": "432000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "432",
+      "original_name": "Опционы, выданные по программам вознаграждения работников",
+      "evidence": {
+        "page": 9,
+        "start_line": 17,
+        "end_line": 18
+      }
+    },
+    {
+      "item_id": "eq_nci_issuance_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "180",
+      "normalized_value": "180000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "180",
+      "original_name": "Выпуск доли неконтролирующих акционеров",
+      "evidence": {
+        "page": 9,
+        "start_line": 19,
+        "end_line": 19
+      }
+    },
+    {
+      "item_id": "eq_dividends_declared_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "-58722",
+      "normalized_value": "-58722000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "(58,722)",
+      "original_name": "Дивиденды, объявленные ПАО «МТС» и дочерними компаниями",
+      "evidence": {
+        "page": 9,
+        "start_line": 20,
+        "end_line": 21
+      }
+    },
+    {
+      "item_id": "eq_dividends_restored_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "14996",
+      "normalized_value": "14996000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "14,996",
+      "original_name": "Невостребованные дивиденды за 2021 (Прим. 15)",
+      "evidence": {
+        "page": 9,
+        "start_line": 22,
+        "end_line": 22
+      }
+    },
+    {
+      "item_id": "eq_other_movement_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "value": "46",
+      "normalized_value": "46000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "46",
+      "original_name": "Прочее",
+      "evidence": {
+        "page": 9,
+        "start_line": 23,
+        "end_line": 23
+      }
+    },
+    {
+      "item_id": "eq_closing_total",
+      "start": null,
+      "end": "2025-06-30",
+      "value": "-45293",
+      "normalized_value": "-45293000000",
+      "pages": [
+        9
+      ],
+      "status": "расхождение",
+      "raw_value": "(45,293)",
+      "original_name": "Сальдо на 30 июня 2025 года",
+      "evidence": {
+        "page": 9,
+        "start_line": 24,
+        "end_line": 24
+      }
+    },
+    {
+      "item_id": "eq_opening_total",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "16958",
+      "normalized_value": "16958000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "16,958",
+      "original_name": "Сальдо на 31 декабря 2025 года",
+      "evidence": {
+        "page": 9,
+        "start_line": 25,
+        "end_line": 25
+      }
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "73885",
+      "normalized_value": "73885000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "73,885",
+      "original_name": "Итого совокупный доход за период",
+      "evidence": {
+        "page": 9,
+        "start_line": 30,
+        "end_line": 30
+      }
+    },
+    {
+      "item_id": "eq_reclassification_retained",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "1533",
+      "normalized_value": "1533000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "1,533",
+      "original_name": "Реклассификация резерва переоценки основных средств по мере использования",
+      "evidence": {
+        "page": 9,
+        "start_line": 31,
+        "end_line": 32
+      }
+    },
+    {
+      "item_id": "eq_reclassification_reserves",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "-1533",
+      "normalized_value": "-1533000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "(1,533)",
+      "original_name": "Реклассификация резерва переоценки основных средств по мере использования",
+      "evidence": {
+        "page": 9,
+        "start_line": 31,
+        "end_line": 32
+      }
+    },
+    {
+      "item_id": "eq_options_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "1013",
+      "normalized_value": "1013000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "1,013",
+      "original_name": "Опционы, выданные по программам вознаграждения работников",
+      "evidence": {
+        "page": 9,
+        "start_line": 33,
+        "end_line": 34
+      }
+    },
+    {
+      "item_id": "eq_nci_transfer_parent",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "-935",
+      "normalized_value": "-935000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "(935)",
+      "original_name": "Изменение доли неконтролирующих акционеров",
+      "evidence": {
+        "page": 9,
+        "start_line": 35,
+        "end_line": 35
+      }
+    },
+    {
+      "item_id": "eq_nci_transfer_nci",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "935",
+      "normalized_value": "935000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "935",
+      "original_name": "Изменение доли неконтролирующих акционеров",
+      "evidence": {
+        "page": 9,
+        "start_line": 35,
+        "end_line": 35
+      }
+    },
+    {
+      "item_id": "eq_dividends_declared_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "-58346",
+      "normalized_value": "-58346000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "(58,346)",
+      "original_name": "Дивиденды, объявленные ПАО «МТС» и дочерними компаниями",
+      "evidence": {
+        "page": 9,
+        "start_line": 36,
+        "end_line": 37
+      }
+    },
+    {
+      "item_id": "eq_dividends_restored_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "1090",
+      "normalized_value": "1090000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "1,090",
+      "original_name": "Восстановленные дивиденды (Прим. 15",
+      "evidence": {
+        "page": 9,
+        "start_line": 38,
+        "end_line": 38
+      }
+    },
+    {
+      "item_id": "eq_other_movement_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": "62",
+      "normalized_value": "62000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "62",
+      "original_name": "Прочее",
+      "evidence": {
+        "page": 9,
+        "start_line": 39,
+        "end_line": 39
+      }
+    },
+    {
+      "item_id": "eq_closing_total",
+      "start": null,
+      "end": "2026-06-30",
+      "value": "34662",
+      "normalized_value": "34662000000",
+      "pages": [
+        9
+      ],
+      "status": "проверено_авто",
+      "raw_value": "34,662",
+      "original_name": "Сальдо на 30 июня 2026 года",
+      "evidence": {
+        "page": 9,
+        "start_line": 40,
+        "end_line": 40
+      }
+    }
+  ],
+  "checks_required": [
+    "complete_equity_rollforward",
+    "equity_neutral_transfer_1",
+    "equity_neutral_transfer_2"
+  ],
+  "checks_expected": [
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "расхождение",
+      "delta": "22468000000"
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    }
+  ],
+  "financial_audit_complete": false,
+  "fresh_gigachat_acceptance": false
+}

@@ -7,6 +7,7 @@ from decimal import Decimal
 from agent.checks.validate import CheckResult, reconcile
 from agent.extract.schemas import ExtractedFact
 from agent.metrics.data import UNIT_MULTIPLIERS
+from agent.checks.equity import EquityBridgePlan
 
 
 @dataclass(frozen=True)
@@ -16,7 +17,8 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 6
+    version: int = 8
+    basis: dict | None = None
 
 
 RULES = {
@@ -42,10 +44,12 @@ RULES = {
     'note_debt_maturity': {'note_debt_total':1,'note_debt_current':-1,'note_debt_noncurrent':-1},
     'note_debt_current_vs_balance': {'debt_short_term':1,'note_debt_current':-1},
     'note_debt_noncurrent_vs_balance': {'debt_long_term':1,'note_debt_noncurrent':-1},
+    'note_debt_total_vs_balance': {'debt_long_term':1,'debt_short_term':1,'note_debt_total':-1},
     'note_lease_discounting': {'note_lease_undiscounted':1,'note_lease_discount':-1,'note_lease_present_value':-1},
     'note_lease_maturity': {'note_lease_present_value':1,'note_lease_current':-1,'note_lease_noncurrent':-1},
     'note_lease_current_vs_balance': {'lease_liabilities_short':1,'note_lease_current':-1},
     'note_lease_noncurrent_vs_balance': {'lease_liabilities_long':1,'note_lease_noncurrent':-1},
+    'note_lease_total_vs_balance': {'lease_liabilities_long':1,'lease_liabilities_short':1,'note_lease_present_value':-1},
     'note_interest_composition': {'note_interest_total':1,'note_interest_borrowings':-1,'note_interest_leases':-1,'note_interest_unwinding':-1},
     'note_finance_gross': {'note_finance_expense_gross':1,'note_interest_total':-1,'note_finance_other_expense':-1},
     'note_finance_net': {'note_finance_expense_gross':1,'note_capitalized_interest_expense':-1,'note_finance_modification_expense':1,'note_finance_expense_net':-1},
@@ -61,12 +65,12 @@ for _role in ('opening', 'closing'):
         RULES[f'eq_{_role}_{_component}_vs_balance'] = {_balance_id:1, f'eq_{_role}_{_component}':-1}
 
 
-def _apply_check(name, start, end, terms, by_item, facts, statuses):
+def _apply_check(name, start, end, terms, by_item, facts, statuses, *, extra_disputed=(), basis=None):
     """Полный набор слагаемых проверяется точно, неполный не дополняется нулями."""
     indices = tuple(i for key in terms for i in by_item.get(key, []))
     if not indices:
         return None
-    disputed = tuple(key for key in terms if key in by_item and (
+    disputed = tuple(key for key in terms if key in extra_disputed or key in by_item and (
         len({facts[i].normalized for i in by_item[key]}) > 1
         or len({facts[i].cash_flow_section for i in by_item[key]}) > 1))
     values = {key:facts[by_item[key][0]].normalized if key in by_item else None for key in terms}
@@ -77,10 +81,10 @@ def _apply_check(name, start, end, terms, by_item, facts, statuses):
             statuses[index] = 'расхождение'
         elif result.status == 'пройдено' and statuses[index] != 'расхождение' and not facts[index].from_ocr:
             statuses[index] = 'проверено_авто'
-    return FinancialCheck(name,str(start) if start else None,str(end),result,indices)
+    return FinancialCheck(name,str(start) if start else None,str(end),result,indices,basis=basis)
 
 
-def validate_financials(facts: tuple[ExtractedFact, ...]) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
+def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
     """Одинаковое число в разных цитатах подтверждает источник; разные числа блокируются оба.
 
     «Проверено авто» здесь означает совпадение цитаты и участие в пройденном тождестве,
@@ -122,4 +126,33 @@ def validate_financials(facts: tuple[ExtractedFact, ...]) -> tuple[tuple[Financi
             rule='cash_rollforward' if change=='cf_cash_change' else 'cash_rollforward_before_fx'
             result=_apply_check(rule,start,end,terms,bridge,facts,statuses)
             if result:checks.append(result)
+    for plan in equity_plans:
+        by_item = dict(groups.get((plan.start, plan.end), {}))
+        for item, day in (('eq_opening_total', plan.start-timedelta(days=1)), ('eq_closing_total', plan.end)):
+            if item in groups.get((None, day), {}):
+                by_item[item] = groups[(None, day)][item]
+        # Число принимается только из исходной строки, включённой в проверенную схему этого окна.
+        for item, indices in by_item.items():
+            if item not in plan.item_evidence:
+                continue
+            proof = plan.item_evidence[item]
+            for index in indices:
+                evidence = facts[index].evidence
+                if (evidence.page != proof['page'] or evidence.start_line is None or evidence.end_line is None
+                        or evidence.start_line < proof['start_line'] or evidence.end_line > proof['end_line']):
+                    raise ValueError('Факт движения капитала взят не из строки проверенного полного моста')
+        disputed = []
+        for index, members in enumerate(plan.neutral_groups, 1):
+            neutral = _apply_check(f'equity_neutral_transfer_{index}', plan.start, plan.end,
+                                   dict.fromkeys(members, 1), by_item, facts, statuses, basis=plan.basis)
+            if neutral:
+                checks.append(neutral)
+                if neutral.result.status == 'расхождение':
+                    disputed.extend(members)
+        # Начальный капитал + все раскрытые движения (со знаком) − конечный капитал = 0.
+        terms = {'eq_opening_total': 1, **dict.fromkeys(plan.movements, 1), 'eq_closing_total': -1}
+        bridge = _apply_check('complete_equity_rollforward', plan.start, plan.end, terms, by_item, facts,
+                              statuses, extra_disputed=tuple(disputed), basis=plan.basis)
+        if bridge:
+            checks.append(bridge)
     return tuple(checks), tuple(statuses)

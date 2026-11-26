@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "complete": true,
+      "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+      "reason": "Все исходные строки распределены по сальдо, компонентам раскрытого совокупного дохода, отдельным движениям и внутренним переносам. Прочерки не становятся нулями: переносы сверяются по двум исходным числовым компонентам. Исходный положительный итог открытия 2024 сохраняется. Схема не подтверждает другие формы и сопоставимость.",
+      "plans": [
+        {
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "evidence": {
+            "page": 9,
+            "start_line": 11,
+            "end_line": 24
+          },
+          "rows": [
+            {
+              "kind": "opening",
+              "evidence": {
+                "page": 9,
+                "start_line": 11,
+                "end_line": 11
+              },
+              "items": [
+                "eq_opening_total"
+              ]
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 12,
+                "end_line": 12
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 13,
+                "end_line": 14
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 15,
+                "end_line": 15
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive",
+              "evidence": {
+                "page": 9,
+                "start_line": 16,
+                "end_line": 16
+              },
+              "items": [
+                "eq_comprehensive_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 17,
+                "end_line": 18
+              },
+              "items": [
+                "eq_options_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 19,
+                "end_line": 19
+              },
+              "items": [
+                "eq_nci_issuance_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 20,
+                "end_line": 21
+              },
+              "items": [
+                "eq_dividends_declared_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 22,
+                "end_line": 22
+              },
+              "items": [
+                "eq_dividends_restored_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 23,
+                "end_line": 23
+              },
+              "items": [
+                "eq_other_movement_total"
+              ]
+            },
+            {
+              "kind": "closing",
+              "evidence": {
+                "page": 9,
+                "start_line": 24,
+                "end_line": 24
+              },
+              "items": [
+                "eq_closing_total"
+              ]
+            }
+          ]
+        },
+        {
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "evidence": {
+            "page": 9,
+            "start_line": 25,
+            "end_line": 40
+          },
+          "rows": [
+            {
+              "kind": "opening",
+              "evidence": {
+                "page": 9,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "items": [
+                "eq_opening_total"
+              ]
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 26,
+                "end_line": 26
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 27,
+                "end_line": 28
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive_component",
+              "evidence": {
+                "page": 9,
+                "start_line": 29,
+                "end_line": 29
+              },
+              "items": []
+            },
+            {
+              "kind": "comprehensive",
+              "evidence": {
+                "page": 9,
+                "start_line": 30,
+                "end_line": 30
+              },
+              "items": [
+                "eq_comprehensive_total"
+              ]
+            },
+            {
+              "kind": "neutral",
+              "evidence": {
+                "page": 9,
+                "start_line": 31,
+                "end_line": 32
+              },
+              "items": [
+                "eq_reclassification_retained",
+                "eq_reclassification_reserves"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 33,
+                "end_line": 34
+              },
+              "items": [
+                "eq_options_total"
+              ]
+            },
+            {
+              "kind": "neutral",
+              "evidence": {
+                "page": 9,
+                "start_line": 35,
+                "end_line": 35
+              },
+              "items": [
+                "eq_nci_transfer_parent",
+                "eq_nci_transfer_nci"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 36,
+                "end_line": 37
+              },
+              "items": [
+                "eq_dividends_declared_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 38,
+                "end_line": 38
+              },
+              "items": [
+                "eq_dividends_restored_total"
+              ]
+            },
+            {
+              "kind": "movement",
+              "evidence": {
+                "page": 9,
+                "start_line": 39,
+                "end_line": 39
+              },
+              "items": [
+                "eq_other_movement_total"
+              ]
+            },
+            {
+              "kind": "closing",
+              "evidence": {
+                "page": 9,
+                "start_line": 40,
+                "end_line": 40
+              },
+              "items": [
+                "eq_closing_total"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
