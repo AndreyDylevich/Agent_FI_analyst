@@ -161,3 +161,36 @@ def test_case_proceeds_to_reference_only_for_declared_source_discrepancy(monkeyp
     report=json.loads((tmp_path/'out/case_check.json').read_text())
     assert code==(0 if declared else 1) and bool(verified)==declared
     if declared:assert not report['extraction_ok'] and report['source_discrepancies_present']
+
+
+@pytest.mark.parametrize('problem',['missing','changed','not_pdf'])
+def test_archive_source_stops_before_model_if_pinned_pdf_is_not_exact(monkeypatch,tmp_path,problem):
+    cases=json.loads(check_ifrs_case.CATALOG.read_text());reference=json.loads((check_ifrs_case.CATALOG.parent/cases['sgzh_balance']['reference']).read_text())
+    archive=tmp_path/'archive';(archive/'pdf').mkdir(parents=True)
+    if problem!='missing':(archive/'pdf'/f"{reference['pdf_sha256']}.pdf").write_bytes(b'%PDF- changed' if problem=='changed' else b'not a PDF')
+    def no_external(*args):raise AssertionError('Не обращаться к модели/сети при неверном архивном PDF')
+    monkeypatch.setattr(check_ifrs_case,'download_pdf',no_external);monkeypatch.setattr(check_ifrs_case,'extract_main',no_external)
+    out=tmp_path/'out';assert check_ifrs_case.main(['--case','sgzh_balance','--source-archive',str(archive),'--output',str(out)])==1
+    report=json.loads((out/'case_check.json').read_text());assert not report['ok'] and report['error']
+    assert not (out/'check.db').exists()
+
+
+def test_exact_archive_reuses_pdf_but_does_not_reuse_model_responses(monkeypatch,tmp_path):
+    import hashlib
+    from agent.db import init_db
+    cases=json.loads(check_ifrs_case.CATALOG.read_text());case=cases['sgzh_balance'];ref=json.loads((check_ifrs_case.CATALOG.parent/case['reference']).read_text())
+    content=b'%PDF- synthetic source for CLI-only test';digest=hashlib.sha256(content).hexdigest();ref['pdf_sha256']=digest
+    catalog=tmp_path/'cases.json';catalog.write_text(json.dumps({'sgzh_balance':{**case,'reference':'reference.json'}}));(tmp_path/'reference.json').write_text(json.dumps(ref))
+    monkeypatch.setattr(check_ifrs_case,'CATALOG',catalog)
+    archive=tmp_path/'archive';(archive/'pdf').mkdir(parents=True);(archive/'pdf'/f'{digest}.pdf').write_bytes(content)
+    def no_download(*args):raise AssertionError('Не загружать документ при закреплённом архиве')
+    monkeypatch.setattr(check_ifrs_case,'download_pdf',no_download)
+    called=[]
+    def extract(command):
+        called.append(command);assert '--reuse-from' not in command and '--cached-only' not in command
+        out=tmp_path/'out';(out/'extraction').mkdir();init_db(out/'check.db').close()
+        (out/'extraction/extraction_check.json').write_text(json.dumps({'ok':True,'facts':[{}],'statuses':['проверено_авто']}));return 0
+    monkeypatch.setattr(check_ifrs_case,'extract_main',extract);monkeypatch.setattr(check_ifrs_case,'verify',lambda *args:{'ok':True})
+    out=tmp_path/'out';assert check_ifrs_case.main(['--case','sgzh_balance','--source-archive',str(archive),'--output',str(out)])==0
+    r=json.loads((out/'case_check.json').read_text());assert called and r['pdf_origin']=='previously_verified_archive' and r['source_pdf_downloaded_this_run'] is False
+    assert (out/'pdf'/f'{digest}.pdf').read_bytes()==content

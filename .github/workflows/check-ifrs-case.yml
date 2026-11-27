@@ -8,11 +8,16 @@ on:
         default: sgzh_balance
         type: choice
         options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements, sgzh_full]
+      source_archive_run_id:
+        description: Необязательный ID прежнего ifrs-case-check с PDF точного SHA256 (ответы модели не используются)
+        required: false
+        default: ''
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false
 permissions:
   contents: read
+  actions: read
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -29,10 +34,23 @@ jobs:
       - name: Установить OCR для скана М.Видео
         if: inputs.case_id == 'mvid_balance'
         run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
+      - name: Получить закреплённый PDF из прежнего артефакта
+        if: inputs.source_archive_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-case-check
+          path: validation/source-archive
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.source_archive_run_id }}
       - name: Проверить официальный PDF и независимый эталон
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
-        run: python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' --output validation/ifrs-case
+        shell: bash
+        run: |
+          archive_args=()
+          if [ -d validation/source-archive ]; then archive_args=(--source-archive validation/source-archive); fi
+          python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' \
+            --output validation/ifrs-case "${archive_args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
