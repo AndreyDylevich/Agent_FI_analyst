@@ -77,6 +77,7 @@ def main(argv: list[str] | None = None) -> int:
                       requested_observations_count=run.requested_observations_count,
                       missing_observations=run.missing_observations,
                       all_requested_observations_present=not run.missing_observations)
+        report['reviewed_disclosure_gaps'] = run.reviewed_disclosure_gaps
         conn = db.init_db(args.db)
         try:
             with conn:

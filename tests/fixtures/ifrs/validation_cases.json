@@ -106,5 +106,17 @@
       "debt"
     ],
     "reference": "mts_h1_2026_debt_movement_reference.json"
+  },
+  "mts_source_links": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "income",
+      "cash_flow",
+      "interest",
+      "leases"
+    ],
+    "reference": "mts_h1_2026_source_links_reference.json"
   }
 }

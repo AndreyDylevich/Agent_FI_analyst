@@ -37,7 +37,7 @@ def test_compact_pipeline_binds_periods_and_keeps_missing_fact_missing(tmp_path)
     assert run.facts[0].model_observation_key=='total_assets__2026_06_30'
     assert any('не равно нулю' in warning for warning in run.warnings)
     assert run.requested_observations_count==2
-    assert run.missing_observations==({'item_id':'total_assets','period_start':None,'period_end':'2025-12-31'},)
+    assert run.missing_observations==({'item_id':'total_assets','period_start':None,'period_end':'2025-12-31','statement':'balance'},)
     assert 'observations' in json.loads((tmp_path/run.batches[0]['file']).read_text())
 
 

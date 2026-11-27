@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "reviewed": true,
+      "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+      "reason": "Одинаковый явный состав амортизации ОПУ/ОДДС: ОС, права пользования, НМА; примечание 11 прямо включает амортизацию прав пользования в расход ОПУ. Сверены полный состав финансовых расходов/доходов и отдельные денежные суммы капитализации. Это не подтверждает полный состав денег или мост начисленных процентов к платежам.",
+      "number_format": "comma_grouped_dot_decimal",
+      "inputs": {
+        "income_da": {
+          "item_id": "d_and_a",
+          "statement": "income",
+          "evidence": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_section": null
+        },
+        "cf_da": {
+          "item_id": "d_and_a",
+          "statement": "cash_flow",
+          "evidence": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "cash_flow_section": null
+        },
+        "income_finance_expense": {
+          "item_id": "income_finance_expense",
+          "statement": "income",
+          "evidence": {
+            "page": 7,
+            "start_line": 31,
+            "end_line": 31
+          },
+          "cash_flow_section": null
+        },
+        "income_finance_income": {
+          "item_id": "income_finance_income",
+          "statement": "income",
+          "evidence": {
+            "page": 7,
+            "start_line": 30,
+            "end_line": 30
+          },
+          "cash_flow_section": null
+        },
+        "cf_finance_expense_adjustment": {
+          "item_id": "cf_finance_expense_adjustment",
+          "statement": "cash_flow",
+          "evidence": {
+            "page": 10,
+            "start_line": 19,
+            "end_line": 19
+          },
+          "cash_flow_section": "operating"
+        },
+        "cf_finance_income_adjustment": {
+          "item_id": "cf_finance_income_adjustment",
+          "statement": "cash_flow",
+          "evidence": {
+            "page": 10,
+            "start_line": 18,
+            "end_line": 18
+          },
+          "cash_flow_section": "operating"
+        },
+        "cf_capitalized_interest_ppe": {
+          "item_id": "cf_capitalized_interest_ppe",
+          "statement": "cash_flow",
+          "evidence": {
+            "page": 10,
+            "start_line": 51,
+            "end_line": 52
+          },
+          "cash_flow_section": "investing"
+        },
+        "cf_capitalized_interest_intangibles": {
+          "item_id": "cf_capitalized_interest_intangibles",
+          "statement": "cash_flow",
+          "evidence": {
+            "page": 10,
+            "start_line": 53,
+            "end_line": 55
+          },
+          "cash_flow_section": "investing"
+        },
+        "note_interest_borrowings": {
+          "item_id": "note_interest_borrowings",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 51,
+            "end_line": 51
+          },
+          "cash_flow_section": null
+        },
+        "note_interest_leases": {
+          "item_id": "note_interest_leases",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 52,
+            "end_line": 52
+          },
+          "cash_flow_section": null
+        },
+        "note_interest_unwinding": {
+          "item_id": "note_interest_unwinding",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 53,
+            "end_line": 53
+          },
+          "cash_flow_section": null
+        },
+        "note_interest_total": {
+          "item_id": "note_interest_total",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 54,
+            "end_line": 54
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_other_expense": {
+          "item_id": "note_finance_other_expense",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 55,
+            "end_line": 55
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_expense_gross": {
+          "item_id": "note_finance_expense_gross",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 56,
+            "end_line": 56
+          },
+          "cash_flow_section": null
+        },
+        "note_capitalized_interest_expense": {
+          "item_id": "note_capitalized_interest_expense",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 57,
+            "end_line": 58
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_modification_expense": {
+          "item_id": "note_finance_modification_expense",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 59,
+            "end_line": 59
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_expense_net": {
+          "item_id": "note_finance_expense_net",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 60,
+            "end_line": 60
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_income_deposits": {
+          "item_id": "note_finance_income_deposits",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 62,
+            "end_line": 62
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_income_loans": {
+          "item_id": "note_finance_income_loans",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 63,
+            "end_line": 63
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_income_other": {
+          "item_id": "note_finance_income_other",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 64,
+            "end_line": 64
+          },
+          "cash_flow_section": null
+        },
+        "note_finance_income_total": {
+          "item_id": "note_finance_income_total",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 65,
+            "end_line": 65
+          },
+          "cash_flow_section": null
+        },
+        "note_net_finance_expense": {
+          "item_id": "note_net_finance_expense",
+          "statement": "notes",
+          "evidence": {
+            "page": 20,
+            "start_line": 66,
+            "end_line": 66
+          },
+          "cash_flow_section": null
+        },
+        "note_rou_network_da": {
+          "item_id": "note_rou_network_da",
+          "statement": "notes",
+          "evidence": {
+            "page": 21,
+            "start_line": 35,
+            "end_line": 35
+          },
+          "cash_flow_section": null
+        },
+        "note_rou_buildings_da": {
+          "item_id": "note_rou_buildings_da",
+          "statement": "notes",
+          "evidence": {
+            "page": 21,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "cash_flow_section": null
+        },
+        "note_rou_other_da": {
+          "item_id": "note_rou_other_da",
+          "statement": "notes",
+          "evidence": {
+            "page": 21,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "cash_flow_section": null
+        },
+        "note_rou_total_da": {
+          "item_id": "note_rou_total_da",
+          "statement": "notes",
+          "evidence": {
+            "page": 21,
+            "start_line": 39,
+            "end_line": 39
+          },
+          "cash_flow_section": null
+        }
+      },
+      "checks": {
+        "depreciation_composition_vs_cash_flow": {
+          "income_da": 1,
+          "cf_da": -1
+        },
+        "rou_depreciation_components": {
+          "note_rou_network_da": 1,
+          "note_rou_buildings_da": 1,
+          "note_rou_other_da": 1,
+          "note_rou_total_da": -1
+        },
+        "finance_expense_income_vs_note": {
+          "income_finance_expense": 1,
+          "note_finance_expense_net": -1
+        },
+        "finance_expense_cash_adjustment_vs_note": {
+          "cf_finance_expense_adjustment": 1,
+          "note_finance_expense_net": -1
+        },
+        "finance_income_income_vs_note": {
+          "income_finance_income": 1,
+          "note_finance_income_total": -1
+        },
+        "finance_income_cash_adjustment_vs_note": {
+          "cf_finance_income_adjustment": 1,
+          "note_finance_income_total": 1
+        },
+        "finance_income_components": {
+          "note_finance_income_deposits": 1,
+          "note_finance_income_loans": 1,
+          "note_finance_income_other": 1,
+          "note_finance_income_total": -1
+        },
+        "net_finance_expense_components": {
+          "note_finance_expense_net": 1,
+          "note_finance_income_total": -1,
+          "note_net_finance_expense": -1
+        }
+      },
+      "depreciation_scope": {
+        "income_scope": {
+          "page": 7,
+          "start_line": 21,
+          "end_line": 22
+        },
+        "cash_flow_scope": {
+          "page": 10,
+          "start_line": 15,
+          "end_line": 16
+        },
+        "rou_included": {
+          "page": 21,
+          "start_line": 26,
+          "end_line": 29
+        }
+      },
+      "complete_blocks": [
+        {
+          "evidence": {
+            "page": 20,
+            "start_line": 50,
+            "end_line": 60
+          },
+          "inputs": [
+            "note_interest_borrowings",
+            "note_interest_leases",
+            "note_interest_unwinding",
+            "note_interest_total",
+            "note_finance_other_expense",
+            "note_finance_expense_gross",
+            "note_capitalized_interest_expense",
+            "note_finance_modification_expense",
+            "note_finance_expense_net"
+          ],
+          "headings": [
+            {
+              "page": 20,
+              "start_line": 50,
+              "end_line": 50
+            }
+          ]
+        },
+        {
+          "evidence": {
+            "page": 20,
+            "start_line": 61,
+            "end_line": 66
+          },
+          "inputs": [
+            "note_finance_income_deposits",
+            "note_finance_income_loans",
+            "note_finance_income_other",
+            "note_finance_income_total",
+            "note_net_finance_expense"
+          ],
+          "headings": [
+            {
+              "page": 20,
+              "start_line": 61,
+              "end_line": 61
+            }
+          ]
+        },
+        {
+          "evidence": {
+            "page": 21,
+            "start_line": 35,
+            "end_line": 39
+          },
+          "inputs": [
+            "note_rou_network_da",
+            "note_rou_buildings_da",
+            "note_rou_other_da",
+            "note_rou_total_da"
+          ],
+          "headings": []
+        }
+      ],
+      "unavailable_checks": [
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "reason": "Нет раскрытой полной сверки состава денег ОДДС и баланса, ограничений и овердрафтов. Равенство текущих чисел не подтверждает состав; сравнительного баланса на 30.06.2025 в выпуске нет.",
+          "evidence": [
+            {
+              "page": 5,
+              "start_line": 43,
+              "end_line": 44
+            },
+            {
+              "page": 11,
+              "start_line": 30,
+              "end_line": 38
+            }
+          ]
+        },
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "reason": "Примечание 10 раскрывает начисленные расходы/капитализацию, ОДДС — платёж за вычетом капитализации и отдельные вложенные суммы. Полных начальных/конечных начислений, всех денежных и неденежных корректировок нет. Начисления нельзя приравнивать платежам.",
+          "evidence": [
+            {
+              "page": 20,
+              "start_line": 50,
+              "end_line": 60
+            },
+            {
+              "page": 10,
+              "start_line": 43,
+              "end_line": 55
+            }
+          ]
+        },
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "reason": "Нет раскрытой полной сверки состава денег ОДДС и баланса, ограничений и овердрафтов. Равенство текущих чисел не подтверждает состав; сравнительного баланса на 30.06.2025 в выпуске нет.",
+          "evidence": [
+            {
+              "page": 5,
+              "start_line": 43,
+              "end_line": 44
+            },
+            {
+              "page": 11,
+              "start_line": 30,
+              "end_line": 38
+            }
+          ]
+        },
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "reason": "Примечание 10 раскрывает начисленные расходы/капитализацию, ОДДС — платёж за вычетом капитализации и отдельные вложенные суммы. Полных начальных/конечных начислений, всех денежных и неденежных корректировок нет. Начисления нельзя приравнивать платежам.",
+          "evidence": [
+            {
+              "page": 20,
+              "start_line": 50,
+              "end_line": 60
+            },
+            {
+              "page": 10,
+              "start_line": 43,
+              "end_line": 55
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

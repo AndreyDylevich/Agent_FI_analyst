@@ -7,7 +7,7 @@ on:
         required: true
         default: sgzh_balance
         type: choice
-        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_notes, mts_fy2025_balance, sgzh_statements]
+        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements]
 concurrency:
   group: gigachat-provider
   cancel-in-progress: false

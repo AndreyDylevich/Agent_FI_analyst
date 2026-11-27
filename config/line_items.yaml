@@ -1777,3 +1777,219 @@ items:
       - Прочее движение
       en: []
     rsbu_codes: []
+
+  # Состав амортизации и финансовых доходов/расходов; денежная капитализация отдельно.
+  - id: income_finance_expense
+    statement: income
+    name: Финансовые расходы
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Финансовые расходы
+      en: []
+    rsbu_codes: []
+  - id: income_finance_income
+    statement: income
+    name: Финансовые доходы
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Финансовые доходы
+      en: []
+    rsbu_codes: []
+  - id: cf_capitalized_interest_ppe
+    statement: cash_flow
+    name: капитализированные проценты
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - капитализированные проценты
+      en: []
+    rsbu_codes: []
+  - id: cf_capitalized_interest_intangibles
+    statement: cash_flow
+    name: капитализированные проценты
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - капитализированные проценты
+      en: []
+    rsbu_codes: []
+  - id: note_finance_income_deposits
+    statement: notes
+    name: '- Процентный доход по банковским депозитам'
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - '- Процентный доход по банковским депозитам'
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_income_loans
+    statement: notes
+    name: '- Процентный доход по выданным займам и цифровым активам'
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - '- Процентный доход по выданным займам и цифровым активам'
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_income_other
+    statement: notes
+    name: '- Прочий финансовый доход'
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - '- Прочий финансовый доход'
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_income_total
+    statement: notes
+    name: Финансовые доходы
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Финансовые доходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_net_finance_expense
+    statement: notes
+    name: Чистые финансовые расходы
+    sign: natural
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Чистые финансовые расходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_rou_network_da
+    statement: notes
+    name: Сетевое оборудование и базовые станции
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Сетевое оборудование и базовые станции
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_rou_buildings_da
+    statement: notes
+    name: Здания и земельные участки
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Здания и земельные участки
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_rou_other_da
+    statement: notes
+    name: Офисное оборудование, транспортные средства и прочее
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Офисное оборудование, транспортные средства и прочее
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_rou_total_da
+    statement: notes
+    name: Итого начисленная амортизация
+    sign: outflow
+    source_link: true
+    notes: Контрольная исходная сумма из проверенной строки. Финансовый доход/расход
+      не равен процентному; капитализированные деньги не равны начисленному расходу.
+      Не суммировать, сохранять исходный знак.
+    ifrs_synonyms:
+      ru:
+      - Итого начисленная амортизация
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow

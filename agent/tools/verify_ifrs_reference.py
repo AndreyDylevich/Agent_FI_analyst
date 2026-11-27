@@ -6,6 +6,7 @@ import sqlite3
 from decimal import Decimal
 from fractions import Fraction
 from pathlib import Path
+from agent.extract.restatements import original_status
 
 
 def _metric_row(conn, reference: dict, metric_id: str, end: str):
@@ -59,6 +60,17 @@ def verify_statements(conn: sqlite3.Connection, reference: dict) -> dict:
         rows=conn.execute("SELECT s.*,d.sha256 FROM source_values s JOIN documents d ON d.id=s.document_id "
                           "WHERE s.item_id=? AND s.period_start IS ? AND s.period_end=? AND s.standard='IFRS' AND s.scope='group'"+source_filter,
                           parameters).fetchall()
+        if 'statement' in expected:
+            selected = []
+            for row in rows:
+                location = json.loads(row['location'])
+                context = conn.execute('SELECT value FROM meta WHERE key=?',
+                    (f"ifrs_extraction:{row['document_id']}:{location['extraction_sha256']}",)).fetchone()
+                if context:
+                    original_status(conn, row)
+                if context and json.loads(context[0])['facts'][location['fact_index']]['statement'] == expected['statement']:
+                    selected.append(row)
+            rows = selected
         passed=bool(rows) and all(row['sha256']==reference['pdf_sha256'] and row['unit']==reference['unit']
                                 and row['check_status']==expected['status'] and Decimal(row['value'])==Decimal(expected['value'])
                                 and Decimal(row['value_norm'])==Decimal(expected.get('normalized_value',str(Decimal(expected['value'])*Decimal(reference['multiplier']))))

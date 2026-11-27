@@ -10,6 +10,7 @@ from agent.metrics.data import UNIT_MULTIPLIERS
 from agent.checks.equity import EquityBridgePlan
 from agent.checks.cash_sections import CashSectionPlan
 from agent.checks.debt_bridges import DebtBridgePlan
+from agent.checks.source_links import SourceReview
 
 
 @dataclass(frozen=True)
@@ -19,7 +20,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 10
+    version: int = 11
     basis: dict | None = None
 
 
@@ -86,7 +87,7 @@ def _apply_check(name, start, end, terms, by_item, facts, statuses, *, extra_dis
     return FinancialCheck(name,str(start) if start else None,str(end),result,indices,basis=basis)
 
 
-def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = (), debt_plans: tuple[DebtBridgePlan, ...] = ()) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
+def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = (), debt_plans: tuple[DebtBridgePlan, ...] = (), source_review: SourceReview | None = None) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
     """Одинаковое число в разных цитатах подтверждает источник; разные числа блокируются оба.
 
     «Проверено авто» здесь означает совпадение цитаты и участие в пройденном тождестве,
@@ -203,4 +204,25 @@ def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple
                              statuses, extra_disputed=disputed, basis=plan.basis)
         if check:
             checks.append(check)
+    if source_review:
+        for window in (source_review.period, source_review.period.shift_years(-1)):
+            by_alias = {}
+            for alias, binding in source_review.inputs.items():
+                indices = [i for i, f in enumerate(facts) if f.item_id == binding['item_id']
+                           and f.statement == binding['statement'] and (f.start, f.end) == (window.start, window.end)]
+                proof = binding['evidence']
+                for i in indices:
+                    evidence = facts[i].evidence
+                    if (facts[i].cash_flow_section != binding['cash_flow_section'] or evidence.page != proof['page']
+                            or evidence.start_line is None or evidence.end_line is None
+                            or evidence.start_line < proof['start_line'] or evidence.end_line > proof['end_line']):
+                        raise ValueError('Вход проверенной связи форм взят из другой строки/раздела')
+                if indices:
+                    by_alias[alias] = indices
+            for rule, terms in source_review.checks.items():
+                disputed = tuple(key for key in terms if any(statuses[i] == 'расхождение' for i in by_alias.get(key, [])))
+                check = _apply_check(rule, window.start, window.end, terms, by_alias, facts,
+                                     statuses, extra_disputed=disputed, basis=source_review.basis)
+                if check:
+                    checks.append(check)
     return tuple(checks), tuple(statuses)
