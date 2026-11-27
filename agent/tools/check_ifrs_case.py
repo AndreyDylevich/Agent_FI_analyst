@@ -5,12 +5,14 @@ import json
 import sqlite3
 import hashlib
 import shutil
+from dataclasses import asdict
 from pathlib import Path
 
 from agent import config
 from agent.sources.files import download_pdf, checked_url, MAX_PDF_BYTES, Download
 from agent.tools.extract_ifrs import main as extract_main
 from agent.tools.verify_ifrs_reference import verify
+from agent.extract.pdf_text import read_pdf, find_sections
 
 ROOT=Path(__file__).resolve().parents[2]
 CATALOG=ROOT/'tests/fixtures/ifrs/validation_cases.json'
@@ -24,6 +26,7 @@ def main(argv=None) -> int:
     parser.add_argument('--reuse-from',type=Path,action='append')
     parser.add_argument('--cached-only',action='store_true')
     parser.add_argument('--source-archive',type=Path,help='Артефакт предыдущей загрузки: используется только PDF с точным SHA256 эталона')
+    parser.add_argument('--prepare-text-only',action='store_true',help='Только подготовка страниц, без модели, БД и приёмки финансовых значений')
     args=parser.parse_args(argv)
     if args.cached_only and not args.reuse_from:parser.error('--cached-only требует --reuse-from')
     if args.output.exists() and any(args.output.iterdir()):
@@ -52,6 +55,15 @@ def main(argv=None) -> int:
             report.update(pdf_origin='official_download',source_pdf_downloaded_this_run=True)
         if pdf.sha256!=reference['pdf_sha256']:
             raise ValueError('SHA256 отчёта изменился: эталон относится к другой версии, требуется отдельная сверка')
+        if args.prepare_text_only:
+            prepared=read_pdf(Path(pdf.path),use_ocr=case.get('ocr',False),max_ocr_pages=50)
+            (args.output/'pages.json').write_text(json.dumps(asdict(prepared),ensure_ascii=False,indent=2)+'\n')
+            (args.output/'selection.json').write_text(json.dumps(asdict(find_sections(prepared)),ensure_ascii=False,indent=2)+'\n')
+            report.update(text_preparation_ok=True,pdf_sha256=pdf.sha256,fresh_gigachat_acceptance=False,
+                          provider_requests=0,financial_values_verified=False)
+            (args.output/'case_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+            print(f'Текст {args.case} подготовлен; финансовая приёмка не выполнялась',flush=True)
+            return 0
         items=sorted({row['item_id'] for row in reference['rows']}) if 'rows' in reference else sorted(
             {item for values in reference['raw_values_decimal'].values() for item in values})
         db_path=args.output/'check.db'

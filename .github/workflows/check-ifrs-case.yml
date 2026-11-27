@@ -12,8 +12,13 @@ on:
         description: Необязательный ID прежнего ifrs-case-check с PDF точного SHA256 (ответы модели не используются)
         required: false
         default: ''
+      prepare_text_only:
+        description: Только текст страниц без модели и финансовой приёмки
+        type: boolean
+        required: false
+        default: false
 concurrency:
-  group: gigachat-provider
+  group: ${{ inputs.prepare_text_only && 'ifrs-source-preparation' || 'gigachat-provider' }}
   cancel-in-progress: false
 permissions:
   contents: read
@@ -49,6 +54,7 @@ jobs:
         run: |
           archive_args=()
           if [ -d validation/source-archive ]; then archive_args=(--source-archive validation/source-archive); fi
+          if [ '${{ inputs.prepare_text_only }}' = true ]; then archive_args+=(--prepare-text-only); fi
           python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' \
             --output validation/ifrs-case "${archive_args[@]}"
       - uses: actions/upload-artifact@v4
