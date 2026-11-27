@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 11
+VERSION = 12
 
 
 def _object(properties: dict) -> dict:
@@ -251,7 +251,7 @@ class Extraction:
 
 
 def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, period: Period,
-                     entity_token: str, line_items: dict) -> Extraction:
+                     entity_token: str, line_items: dict, unlabelled_sources: tuple[dict, ...] = ()) -> Extraction:
     """Проверяет структуру, источники и периоды. Совпадение цитаты не доказывает выбор колонки."""
     def reject_float(value):
         raise ValueError('JSON float/NaN запрещены')
@@ -306,7 +306,13 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
                 raise ValueError(f'{item_id}: цитата должна содержать строку САЛЬДО на дату {expected_date}; начало и конец разных годовых блоков нельзя подменять')
             # Чужая строка внутри широкого диапазона цитаты не доказывает число нужной даты.
             amount_evidence='\n'.join(dated_lines)
-        if not all(isinstance(v, str) and v.strip() for v in (name, raw, row['column_header'])):
+        unnamed = (name == '' and item.get('allow_unlabelled_source') is True
+                   and not re.search(r'[A-Za-zА-Яа-яЁё]', evidence.quote)
+                   and any(all(source.get(key) == row.get(key) for key in
+                               ('item_id', 'statement', 'period_start', 'period_end', 'evidence'))
+                           for source in unlabelled_sources))
+        if not ((isinstance(name, str) and (name.strip() or unnamed))
+                and all(isinstance(v, str) and v.strip() for v in (raw, row['column_header']))):
             raise ValueError('Нужны подпись строки, число и заголовок колонки')
         if raw.strip() in ('-','—','–','n/a','N/A'):
             raise ValueError(f'{item_id}: прочерк не является числовым фактом. Пропусти эту запись facts, не заменяй нулём')

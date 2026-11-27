@@ -990,6 +990,7 @@ items:
     rsbu_codes: []
 
   - id: note_interest_total
+    allow_unlabelled_source: true
     statement: notes
     source_forms: [notes]
     source_topics: [interest]
@@ -1003,6 +1004,7 @@ items:
     rsbu_codes: []
 
   - id: note_finance_other_expense
+    allow_unlabelled_source: true
     statement: notes
     source_forms: [notes]
     source_topics: [interest]
@@ -1993,3 +1995,1253 @@ items:
     source_topics:
     - leases
     value_kind: flow
+
+  # Проверенные исходные строки основных форм и примечаний Сегежи.
+  - id: balance_associate_investments
+    statement: balance
+    name: Инвестиции в совместные и ассоциированные компании
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Инвестиции в совместные и ассоциированные компании
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_deferred_tax_assets
+    statement: balance
+    name: Отложенные налоговые активы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Отложенные налоговые активы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_noncurrent_advances
+    statement: balance
+    name: Авансы, выданные под внеоборотные активы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Авансы, выданные под внеоборотные активы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_other_noncurrent_assets
+    statement: balance
+    name: Прочие внеоборотные активы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие внеоборотные активы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_vat_and_tax_prepayments
+    statement: balance
+    name: НДС к возмещению и текущие переплаты по налогам
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - НДС к возмещению и текущие переплаты по налогам
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_income_tax_prepayments
+    statement: balance
+    name: Текущая переплата по налогу на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Текущая переплата по налогу на прибыль
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_current_advances_and_other
+    statement: balance
+    name: Авансы выданные и прочие оборотные активы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Авансы выданные и прочие оборотные активы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_share_capital
+    statement: balance
+    name: Акционерный капитал
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Акционерный капитал
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_additional_capital
+    statement: balance
+    name: Добавочный капитал
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Добавочный капитал
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_retained_losses
+    statement: balance
+    name: Накопленный убыток
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Накопленный убыток
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_accumulated_oci
+    statement: balance
+    name: Накопленный прочий совокупный расход
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Накопленный прочий совокупный расход
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_deferred_tax_liabilities
+    statement: balance
+    name: Отложенные налоговые обязательства
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Отложенные налоговые обязательства
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_other_noncurrent_liabilities
+    statement: balance
+    name: Прочие долгосрочные обязательства
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие долгосрочные обязательства
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_option_liabilities
+    statement: balance
+    name: Обязательства, относящиеся к опционным соглашениям
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Обязательства, относящиеся к опционным соглашениям
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_trade_and_other_payables
+    statement: balance
+    name: Торговая и прочая кредиторская задолженность
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Торговая и прочая кредиторская задолженность
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_provisions
+    statement: balance
+    name: Оценочные обязательства
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Оценочные обязательства
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_taxes_payable
+    statement: balance
+    name: Налоги к уплате
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Налоги к уплате
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_income_tax_payable
+    statement: balance
+    name: Задолженность по налогу на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Задолженность по налогу на прибыль
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_advances_received
+    statement: balance
+    name: Авансы полученные
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Авансы полученные
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_receivables_and_delivery_costs
+    statement: balance
+    name: Торговая и прочая дебиторская задолженность и расходы будущих периодов по
+      доставке готовой продукции
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Торговая и прочая дебиторская задолженность и расходы будущих периодов по доставке
+        готовой продукции
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: selling_admin_expenses_combined
+    statement: income
+    name: Коммерческие и управленческие расходы
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Коммерческие и управленческие расходы
+      en: []
+    rsbu_codes: []
+  - id: income_reorganization_loss
+    statement: income
+    name: Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»
+      en: []
+    rsbu_codes: []
+  - id: income_other_operating_income
+    statement: income
+    name: Прочие операционные доходы, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие операционные доходы, нетто
+      en: []
+    rsbu_codes: []
+  - id: income_other_finance_expense
+    statement: income
+    name: Прочие финансовые расходы, нетто
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие финансовые расходы, нетто
+      en: []
+    rsbu_codes: []
+  - id: income_fx_result
+    statement: income
+    name: Курсовые разницы, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы, нетто
+      en: []
+    rsbu_codes: []
+  - id: income_profit_attribution_total
+    statement: income
+    name: Итог распределения чистого убытка (строка без подписи)
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+  - id: cf_interest_income_adjustment
+    statement: cash_flow
+    name: Процентные доходы, отраженные в прибылях и убытках
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентные доходы, отраженные в прибылях и убытках
+      en: []
+    rsbu_codes: []
+  - id: cf_interest_expense_adjustment
+    statement: cash_flow
+    name: Процентные расходы, отраженные в прибылях и убытках
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентные расходы, отраженные в прибылях и убытках
+      en: []
+    rsbu_codes: []
+  - id: cf_other_finance_expense_adjustment
+    statement: cash_flow
+    name: Прочие финансовые расходы, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие финансовые расходы, нетто
+      en: []
+    rsbu_codes: []
+  - id: cf_tax_benefit_adjustment
+    statement: cash_flow
+    name: Налог на прибыль, отраженный в прибылях и убытках
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Налог на прибыль, отраженный в прибылях и убытках
+      en: []
+    rsbu_codes: []
+  - id: cf_credit_loss_allowance_change
+    statement: cash_flow
+    name: Изменение оценочного резерва под ожидаемые кредитные убытки
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Изменение оценочного резерва под ожидаемые кредитные убытки
+      en: []
+    rsbu_codes: []
+  - id: cf_fx_adjustment
+    statement: cash_flow
+    name: Курсовые разницы, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы, нетто
+      en: []
+    rsbu_codes: []
+  - id: cf_reorganization_adjustment
+    statement: cash_flow
+    name: Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»
+      en: []
+    rsbu_codes: []
+  - id: cf_other_adjustments_sgzh
+    statement: cash_flow
+    name: Прочие корректировки
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие корректировки
+      en: []
+    rsbu_codes: []
+  - id: cf_before_working_capital
+    statement: cash_flow
+    name: Промежуточный итог до оборотного капитала (строка без подписи)
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+  - id: cf_other_assets_change
+    statement: cash_flow
+    name: Увеличение прочих активов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Увеличение прочих активов
+      en: []
+    rsbu_codes: []
+  - id: cf_other_liabilities_change
+    statement: cash_flow
+    name: Увеличение прочих обязательств
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Увеличение прочих обязательств
+      en: []
+    rsbu_codes: []
+  - id: cf_operating_before_interest_tax
+    statement: cash_flow
+    name: Денежные средства, использованные в операционной деятельности
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Денежные средства, использованные в операционной деятельности
+      en: []
+    rsbu_codes: []
+  - id: capex_total_ppe_intangibles
+    statement: cash_flow
+    name: Выплаты на приобретение основных средств, нематериальных активов
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Выплаты на приобретение основных средств, нематериальных активов
+      en: []
+    rsbu_codes: []
+  - id: cf_subsidiary_disposal_advance
+    statement: cash_flow
+    name: Аванс, полученный в отношении выбытия дочернего предприятия
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Аванс, полученный в отношении выбытия дочернего предприятия
+      en: []
+    rsbu_codes: []
+  - id: cf_other_investing
+    statement: cash_flow
+    name: Прочее движение
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочее движение
+      en: []
+    rsbu_codes: []
+  - id: cf_share_issue_proceeds
+    statement: cash_flow
+    name: Поступление от выпуска акций
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Поступление от выпуска акций
+      en: []
+    rsbu_codes: []
+  - id: note_short_bank_loans_rub
+    statement: notes
+    name: Краткосрочные кредиты банков
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Краткосрочные кредиты банков
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bank_loans_eur
+    statement: notes
+    name: Краткосрочные кредиты банков
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Краткосрочные кредиты банков
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_bank_loans_current_total
+    statement: notes
+    name: Краткосрочные банковские кредиты — итог
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bonds_rub
+    statement: notes
+    name: Краткосрочная часть облигаций и ЦФА
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Краткосрочная часть облигаций и ЦФА
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bonds_cny
+    statement: notes
+    name: Краткосрочная часть облигаций и ЦФА
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Краткосрочная часть облигаций и ЦФА
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_bonds_current_total
+    statement: notes
+    name: Краткосрочная часть облигаций и ЦФА — итог
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_bank_loans_noncurrent_total
+    statement: notes
+    name: Долгосрочные кредиты и займы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Долгосрочные кредиты и займы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_bonds_rub
+    statement: notes
+    name: Долгосрочные облигации и ЦФА
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Долгосрочные облигации и ЦФА
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_bonds_cny
+    statement: notes
+    name: Долгосрочные облигации и ЦФА
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Долгосрочные облигации и ЦФА
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_bonds_noncurrent_total
+    statement: notes
+    name: Долгосрочные облигации и ЦФА — итог
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_term_lease_expense
+    statement: notes
+    name: Расходы, относящиеся к краткосрочной аренде
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Расходы, относящиеся к краткосрочной аренде
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_interest_expense_control
+    statement: notes
+    name: Проценты по обязательствам по аренде
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Проценты по обязательствам по аренде
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_expense_total
+    statement: notes
+    name: Итого расходов по аренде
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_opening
+    statement: notes
+    name: Обязательство на начало периода
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Обязательство на начало периода
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_opening
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: note_lease_cash_payments
+    statement: notes
+    name: Платежи по обязательствам по аренде
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Платежи по обязательствам по аренде
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_contract_changes
+    statement: notes
+    name: Заключение/(выбытие) и модификация договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Заключение/(выбытие) и модификация договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_interest_accrual
+    statement: notes
+    name: Процентные расходы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентные расходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_hfs_transfer
+    statement: notes
+    name: Переведено в состав обязательств, относящихся к активам, предназначенным для
+      продажи
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Переведено в состав обязательств, относящихся к активам, предназначенным для
+        продажи
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_closing
+    statement: notes
+    name: Обязательство на конец периода
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Обязательство на конец периода
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_closing
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: eq_share_issue_total
+    statement: equity
+    name: Эмиссионный доход от размещения акций
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Эмиссионный доход от размещения акций
+      en: []
+    rsbu_codes: []
+    equity_bridge_role: movement
+    equity_column: Итого капитал
+  - id: eq_nci_purchase_total
+    statement: equity
+    name: Выкуп неконтролирующих долей владения
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Выкуп неконтролирующих долей владения
+      en: []
+    rsbu_codes: []
+    equity_bridge_role: movement
+    equity_column: Итого капитал
+  - id: eq_internal_transfer_parent
+    statement: equity
+    name: Прочие движения
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие движения
+      en: []
+    rsbu_codes: []
+    equity_bridge_role: neutral
+    equity_column: Капитал, относящийся к акционерам ПАО «Сегежа Групп»
+  - id: eq_internal_transfer_nci
+    statement: equity
+    name: Прочие движения
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие движения
+      en: []
+    rsbu_codes: []
+    equity_bridge_role: neutral
+    equity_column: Неконтролирующие доли участия
+  - id: note_interest_income_total
+    statement: notes
+    name: Процентные доходы
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентные доходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_interest_options
+    statement: notes
+    name: Процентный расход по обязательствам, относящимся к опционным соглашениям
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентный расход по обязательствам, относящимся к опционным соглашениям
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_interest_other
+    statement: notes
+    name: Процентные расходы по прочим обязательствам
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Процентные расходы по прочим обязательствам
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_modification_control
+    statement: notes
+    name: Корректировка амортизированной стоимости финансовых инструментов при модификации
+      условий
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Корректировка амортизированной стоимости финансовых инструментов при модификации
+        условий
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_fair_value_expense
+    statement: notes
+    name: Изменение стоимости обязательств, учитываемых по справедливой стоимости
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Изменение стоимости обязательств, учитываемых по справедливой стоимости
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_other_component
+    statement: notes
+    name: Прочие финансовые расходы, нетто
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие финансовые расходы, нетто
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_current_tax_gross
+    statement: notes
+    name: Текущий налог на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Текущий налог на прибыль
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_current_tax_prior_adjustments
+    statement: notes
+    name: Корректировки текущего налога на прибыль прошлых периодов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Корректировки текущего налога на прибыль прошлых периодов
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_current_tax_net
+    statement: notes
+    name: Текущий налог после корректировки прошлых лет
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    allow_unlabelled_source: true
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_deferred_tax_benefit
+    statement: notes
+    name: Отложенный налог
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Отложенный налог
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_income_tax_benefit_total
+    statement: notes
+    name: Итого налог на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Итого налог на прибыль
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: rou_asset_opening
+    statement: notes
+    name: На начало периода
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - На начало периода
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_opening
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: rou_asset_contract_changes
+    statement: notes
+    name: Поступление/модификация договоров
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Поступление/модификация договоров
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_other_additions
+    statement: notes
+    name: Прочие поступления
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Прочие поступления
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_da_movement
+    statement: notes
+    name: Амортизация
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Амортизация
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_impairment
+    statement: notes
+    name: Обесценение
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Обесценение
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_hfs_transfer
+    statement: notes
+    name: Переведено в состав активов, предназначенных для продажи
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Переведено в состав активов, предназначенных для продажи
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_disposals
+    statement: notes
+    name: Выбытие
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - Выбытие
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_closing
+    statement: notes
+    name: На конец периода
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель проверенного блока. Пропуски не равны нулю;
+      источник/форма/период сохраняются; итог не складывается со своими подытогами.
+    ifrs_synonyms:
+      ru:
+      - На конец периода
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_closing
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: cf_lease_financing_payments
+    statement: cash_flow
+    name: Раскрытые платежи по аренде в финансовой деятельности
+    sign: natural
+    reviewed_table: true
+    notes: Не объявлять основной суммой или всем платежом по аренде без отдельного раскрытия
+      состава.
+    ifrs_synonyms:
+      ru:
+      - Платежи по обязательствам по аренде
+      en: []
+    rsbu_codes: []

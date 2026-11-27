@@ -1,0 +1,6426 @@
+{
+  "source_url": "https://segezha-group.com/upload/iblock/533/oa7qag8inv5wt638zq0q06dio1eal5zm.pdf",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "rows": [
+    {
+      "item_id": "ppe",
+      "statement": "balance",
+      "original_name": "Основные средства",
+      "raw_value": "56 399",
+      "value": "56399",
+      "normalized_value": "56399000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "ppe",
+      "statement": "balance",
+      "original_name": "Основные средства",
+      "raw_value": "60 021",
+      "value": "60021",
+      "normalized_value": "60021000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "original_name": "Активы в форме права пользования",
+      "raw_value": "28 878",
+      "value": "28878",
+      "normalized_value": "28878000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "original_name": "Активы в форме права пользования",
+      "raw_value": "28 610",
+      "value": "28610",
+      "normalized_value": "28610000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "intangible_assets",
+      "statement": "balance",
+      "original_name": "Нематериальные активы",
+      "raw_value": "4 520",
+      "value": "4520",
+      "normalized_value": "4520000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "intangible_assets",
+      "statement": "balance",
+      "original_name": "Нематериальные активы",
+      "raw_value": "4 612",
+      "value": "4612",
+      "normalized_value": "4612000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "goodwill",
+      "statement": "balance",
+      "original_name": "Гудвил",
+      "raw_value": "21",
+      "value": "21",
+      "normalized_value": "21000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "goodwill",
+      "statement": "balance",
+      "original_name": "Гудвил",
+      "raw_value": "21",
+      "value": "21",
+      "normalized_value": "21000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_associate_investments",
+      "statement": "balance",
+      "original_name": "Инвестиции в совместные и ассоциированные компании",
+      "raw_value": "414",
+      "value": "414",
+      "normalized_value": "414000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_associate_investments",
+      "statement": "balance",
+      "original_name": "Инвестиции в совместные и ассоциированные компании",
+      "raw_value": "414",
+      "value": "414",
+      "normalized_value": "414000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_deferred_tax_assets",
+      "statement": "balance",
+      "original_name": "Отложенные налоговые активы",
+      "raw_value": "6 605",
+      "value": "6605",
+      "normalized_value": "6605000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_deferred_tax_assets",
+      "statement": "balance",
+      "original_name": "Отложенные налоговые активы",
+      "raw_value": "4 987",
+      "value": "4987",
+      "normalized_value": "4987000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_noncurrent_advances",
+      "statement": "balance",
+      "original_name": "Авансы, выданные под внеоборотные активы",
+      "raw_value": "225",
+      "value": "225",
+      "normalized_value": "225000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_noncurrent_advances",
+      "statement": "balance",
+      "original_name": "Авансы, выданные под внеоборотные активы",
+      "raw_value": "129",
+      "value": "129",
+      "normalized_value": "129000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_other_noncurrent_assets",
+      "statement": "balance",
+      "original_name": "Прочие внеоборотные активы",
+      "raw_value": "8 683",
+      "value": "8683",
+      "normalized_value": "8683000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_other_noncurrent_assets",
+      "statement": "balance",
+      "original_name": "Прочие внеоборотные активы",
+      "raw_value": "8 705",
+      "value": "8705",
+      "normalized_value": "8705000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_assets",
+      "statement": "balance",
+      "original_name": "Итого внеоборотные активы",
+      "raw_value": "105 745",
+      "value": "105745",
+      "normalized_value": "105745000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_assets",
+      "statement": "balance",
+      "original_name": "Итого внеоборотные активы",
+      "raw_value": "107 499",
+      "value": "107499",
+      "normalized_value": "107499000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "inventories",
+      "statement": "balance",
+      "original_name": "Товарно-материальные запасы",
+      "raw_value": "20 829",
+      "value": "20829",
+      "normalized_value": "20829000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "inventories",
+      "statement": "balance",
+      "original_name": "Товарно-материальные запасы",
+      "raw_value": "18 630",
+      "value": "18630",
+      "normalized_value": "18630000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_vat_and_tax_prepayments",
+      "statement": "balance",
+      "original_name": "НДС к возмещению и текущие переплаты по налогам",
+      "raw_value": "2 027",
+      "value": "2027",
+      "normalized_value": "2027000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_vat_and_tax_prepayments",
+      "statement": "balance",
+      "original_name": "НДС к возмещению и текущие переплаты по налогам",
+      "raw_value": "2 218",
+      "value": "2218",
+      "normalized_value": "2218000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_income_tax_prepayments",
+      "statement": "balance",
+      "original_name": "Текущая переплата по налогу на прибыль",
+      "raw_value": "225",
+      "value": "225",
+      "normalized_value": "225000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_income_tax_prepayments",
+      "statement": "balance",
+      "original_name": "Текущая переплата по налогу на прибыль",
+      "raw_value": "160",
+      "value": "160",
+      "normalized_value": "160000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_current_advances_and_other",
+      "statement": "balance",
+      "original_name": "Авансы выданные и прочие оборотные активы",
+      "raw_value": "3 814",
+      "value": "3814",
+      "normalized_value": "3814000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 27,
+        "end_line": 27
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_current_advances_and_other",
+      "statement": "balance",
+      "original_name": "Авансы выданные и прочие оборотные активы",
+      "raw_value": "2 838",
+      "value": "2838",
+      "normalized_value": "2838000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 27,
+        "end_line": 27
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "original_name": "Денежные средства и их эквиваленты",
+      "raw_value": "1 415",
+      "value": "1415",
+      "normalized_value": "1415000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 28,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "original_name": "Денежные средства и их эквиваленты",
+      "raw_value": "3 014",
+      "value": "3014",
+      "normalized_value": "3014000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 28,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_assets",
+      "statement": "balance",
+      "original_name": "Итого оборотные активы",
+      "raw_value": "36 510",
+      "value": "36510",
+      "normalized_value": "36510000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_assets",
+      "statement": "balance",
+      "original_name": "Итого оборотные активы",
+      "raw_value": "34 246",
+      "value": "34246",
+      "normalized_value": "34246000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_assets",
+      "statement": "balance",
+      "original_name": "ИТОГО АКТИВЫ",
+      "raw_value": "142 255",
+      "value": "142255",
+      "normalized_value": "142255000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_assets",
+      "statement": "balance",
+      "original_name": "ИТОГО АКТИВЫ",
+      "raw_value": "141 745",
+      "value": "141745",
+      "normalized_value": "141745000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_share_capital",
+      "statement": "balance",
+      "original_name": "Акционерный капитал",
+      "raw_value": "7 845",
+      "value": "7845",
+      "normalized_value": "7845000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_share_capital",
+      "statement": "balance",
+      "original_name": "Акционерный капитал",
+      "raw_value": "7 845",
+      "value": "7845",
+      "normalized_value": "7845000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_additional_capital",
+      "statement": "balance",
+      "original_name": "Добавочный капитал",
+      "raw_value": "116 151",
+      "value": "116151",
+      "normalized_value": "116151000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_additional_capital",
+      "statement": "balance",
+      "original_name": "Добавочный капитал",
+      "raw_value": "116 179",
+      "value": "116179",
+      "normalized_value": "116179000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_retained_losses",
+      "statement": "balance",
+      "original_name": "Накопленный убыток",
+      "raw_value": "(138 955)",
+      "value": "-138955",
+      "normalized_value": "-138955000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_retained_losses",
+      "statement": "balance",
+      "original_name": "Накопленный убыток",
+      "raw_value": "(123 687)",
+      "value": "-123687",
+      "normalized_value": "-123687000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_accumulated_oci",
+      "statement": "balance",
+      "original_name": "Накопленный прочий совокупный расход",
+      "raw_value": "(101)",
+      "value": "-101",
+      "normalized_value": "-101000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_accumulated_oci",
+      "statement": "balance",
+      "original_name": "Накопленный прочий совокупный расход",
+      "raw_value": "(101)",
+      "value": "-101",
+      "normalized_value": "-101000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_parent",
+      "statement": "balance",
+      "original_name": "Капитал, относящийся к акционерам ПАО «Сегежа Групп»",
+      "raw_value": "(15 060)",
+      "value": "-15060",
+      "normalized_value": "-15060000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 38,
+        "end_line": 38
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_parent",
+      "statement": "balance",
+      "original_name": "Капитал, относящийся к акционерам ПАО «Сегежа Групп»",
+      "raw_value": "236",
+      "value": "236",
+      "normalized_value": "236000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 38,
+        "end_line": 38
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_controlling_interests",
+      "statement": "balance",
+      "original_name": "Неконтролирующие доли участия",
+      "raw_value": "52",
+      "value": "52",
+      "normalized_value": "52000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_controlling_interests",
+      "statement": "balance",
+      "original_name": "Неконтролирующие доли участия",
+      "raw_value": "19",
+      "value": "19",
+      "normalized_value": "19000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_total",
+      "statement": "balance",
+      "original_name": "Итого капитал",
+      "raw_value": "(15 008)",
+      "value": "-15008",
+      "normalized_value": "-15008000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 40,
+        "end_line": 40
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "equity_total",
+      "statement": "balance",
+      "original_name": "Итого капитал",
+      "raw_value": "255",
+      "value": "255",
+      "normalized_value": "255000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 40,
+        "end_line": 40
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "original_name": "Кредиты и займы",
+      "raw_value": "27 240",
+      "value": "27240",
+      "normalized_value": "27240000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 42,
+        "end_line": 42
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "original_name": "Кредиты и займы",
+      "raw_value": "45 076",
+      "value": "45076",
+      "normalized_value": "45076000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 42,
+        "end_line": 42
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "original_name": "Обязательства по аренде",
+      "raw_value": "9 731",
+      "value": "9731",
+      "normalized_value": "9731000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 43,
+        "end_line": 43
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "original_name": "Обязательства по аренде",
+      "raw_value": "9 028",
+      "value": "9028",
+      "normalized_value": "9028000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 43,
+        "end_line": 43
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_deferred_tax_liabilities",
+      "statement": "balance",
+      "original_name": "Отложенные налоговые обязательства",
+      "raw_value": "6 726",
+      "value": "6726",
+      "normalized_value": "6726000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 44,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_deferred_tax_liabilities",
+      "statement": "balance",
+      "original_name": "Отложенные налоговые обязательства",
+      "raw_value": "6 710",
+      "value": "6710",
+      "normalized_value": "6710000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 44,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_other_noncurrent_liabilities",
+      "statement": "balance",
+      "original_name": "Прочие долгосрочные обязательства",
+      "raw_value": "5 053",
+      "value": "5053",
+      "normalized_value": "5053000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 45,
+        "end_line": 45
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_other_noncurrent_liabilities",
+      "statement": "balance",
+      "original_name": "Прочие долгосрочные обязательства",
+      "raw_value": "3 768",
+      "value": "3768",
+      "normalized_value": "3768000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 45,
+        "end_line": 45
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "statement": "balance",
+      "original_name": "Итого долгосрочные обязательства",
+      "raw_value": "48 750",
+      "value": "48750",
+      "normalized_value": "48750000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "statement": "balance",
+      "original_name": "Итого долгосрочные обязательства",
+      "raw_value": "64 582",
+      "value": "64582",
+      "normalized_value": "64582000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "original_name": "Кредиты и займы",
+      "raw_value": "51 212",
+      "value": "51212",
+      "normalized_value": "51212000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 48,
+        "end_line": 48
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "original_name": "Кредиты и займы",
+      "raw_value": "24 972",
+      "value": "24972",
+      "normalized_value": "24972000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 48,
+        "end_line": 48
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_option_liabilities",
+      "statement": "balance",
+      "original_name": "Обязательства, относящиеся к опционным соглашениям",
+      "raw_value": "32 089",
+      "value": "32089",
+      "normalized_value": "32089000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 49,
+        "end_line": 49
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_option_liabilities",
+      "statement": "balance",
+      "original_name": "Обязательства, относящиеся к опционным соглашениям",
+      "raw_value": "29 140",
+      "value": "29140",
+      "normalized_value": "29140000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 49,
+        "end_line": 49
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_trade_and_other_payables",
+      "statement": "balance",
+      "original_name": "Торговая и прочая кредиторская задолженность",
+      "raw_value": "15 086",
+      "value": "15086",
+      "normalized_value": "15086000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 50,
+        "end_line": 50
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_trade_and_other_payables",
+      "statement": "balance",
+      "original_name": "Торговая и прочая кредиторская задолженность",
+      "raw_value": "14 254",
+      "value": "14254",
+      "normalized_value": "14254000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 50,
+        "end_line": 50
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "original_name": "Обязательства по аренде",
+      "raw_value": "2 867",
+      "value": "2867",
+      "normalized_value": "2867000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "original_name": "Обязательства по аренде",
+      "raw_value": "2 778",
+      "value": "2778",
+      "normalized_value": "2778000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_provisions",
+      "statement": "balance",
+      "original_name": "Оценочные обязательства",
+      "raw_value": "1 913",
+      "value": "1913",
+      "normalized_value": "1913000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 52,
+        "end_line": 52
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_provisions",
+      "statement": "balance",
+      "original_name": "Оценочные обязательства",
+      "raw_value": "1 539",
+      "value": "1539",
+      "normalized_value": "1539000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 52,
+        "end_line": 52
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_taxes_payable",
+      "statement": "balance",
+      "original_name": "Налоги к уплате",
+      "raw_value": "2 539",
+      "value": "2539",
+      "normalized_value": "2539000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 53,
+        "end_line": 53
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_taxes_payable",
+      "statement": "balance",
+      "original_name": "Налоги к уплате",
+      "raw_value": "1 877",
+      "value": "1877",
+      "normalized_value": "1877000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 53,
+        "end_line": 53
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_income_tax_payable",
+      "statement": "balance",
+      "original_name": "Задолженность по налогу на прибыль",
+      "raw_value": "38",
+      "value": "38",
+      "normalized_value": "38000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_income_tax_payable",
+      "statement": "balance",
+      "original_name": "Задолженность по налогу на прибыль",
+      "raw_value": "14",
+      "value": "14",
+      "normalized_value": "14000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_advances_received",
+      "statement": "balance",
+      "original_name": "Авансы полученные",
+      "raw_value": "2 769",
+      "value": "2769",
+      "normalized_value": "2769000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_advances_received",
+      "statement": "balance",
+      "original_name": "Авансы полученные",
+      "raw_value": "2 334",
+      "value": "2334",
+      "normalized_value": "2334000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_liabilities",
+      "statement": "balance",
+      "original_name": "Итого краткосрочные обязательства",
+      "raw_value": "108 513",
+      "value": "108513",
+      "normalized_value": "108513000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 56,
+        "end_line": 56
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "current_liabilities",
+      "statement": "balance",
+      "original_name": "Итого краткосрочные обязательства",
+      "raw_value": "76 908",
+      "value": "76908",
+      "normalized_value": "76908000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 56,
+        "end_line": 56
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "statement": "balance",
+      "original_name": "ИТОГО КАПИТАЛ И ОБЯЗАТЕЛЬСТВА",
+      "raw_value": "142 255",
+      "value": "142255",
+      "normalized_value": "142255000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 57,
+        "end_line": 57
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "statement": "balance",
+      "original_name": "ИТОГО КАПИТАЛ И ОБЯЗАТЕЛЬСТВА",
+      "raw_value": "141 745",
+      "value": "141745",
+      "normalized_value": "141745000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 57,
+        "end_line": 57
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_receivables_and_delivery_costs",
+      "statement": "balance",
+      "original_name": "Торговая и прочая дебиторская задолженность и расходы будущих периодов по доставке готовой продукции",
+      "raw_value": "8 200",
+      "value": "8200",
+      "normalized_value": "8200000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 23,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "balance_receivables_and_delivery_costs",
+      "statement": "balance",
+      "original_name": "Торговая и прочая дебиторская задолженность и расходы будущих периодов по доставке готовой продукции",
+      "raw_value": "7 386",
+      "value": "7386",
+      "normalized_value": "7386000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        6
+      ],
+      "evidence": {
+        "page": 6,
+        "start_line": 23,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "original_name": "Выручка",
+      "raw_value": "37 984",
+      "value": "37984",
+      "normalized_value": "37984000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "original_name": "Выручка",
+      "raw_value": "44 835",
+      "value": "44835",
+      "normalized_value": "44835000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "original_name": "Себестоимость реализованной продукции",
+      "raw_value": "(31 825)",
+      "value": "-31825",
+      "normalized_value": "31825000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "original_name": "Себестоимость реализованной продукции",
+      "raw_value": "(36 629)",
+      "value": "-36629",
+      "normalized_value": "36629000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "original_name": "Коммерческие и управленческие расходы",
+      "raw_value": "(11 574)",
+      "value": "-11574",
+      "normalized_value": "11574000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "original_name": "Коммерческие и управленческие расходы",
+      "raw_value": "(14 545)",
+      "value": "-14545",
+      "normalized_value": "14545000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_reorganization_loss",
+      "statement": "income",
+      "original_name": "Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»",
+      "raw_value": "(5 574)",
+      "value": "-5574",
+      "normalized_value": "5574000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 16,
+        "end_line": 17
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "original_name": "Прочие операционные доходы, нетто",
+      "raw_value": "101",
+      "value": "101",
+      "normalized_value": "101000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "original_name": "Прочие операционные доходы, нетто",
+      "raw_value": "1 625",
+      "value": "1625",
+      "normalized_value": "1625000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "original_name": "Операционный убыток",
+      "raw_value": "(5 314)",
+      "value": "-5314",
+      "normalized_value": "-5314000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "original_name": "Операционный убыток",
+      "raw_value": "(10 288)",
+      "value": "-10288",
+      "normalized_value": "-10288000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_income",
+      "statement": "income",
+      "original_name": "Процентные доходы",
+      "raw_value": "187",
+      "value": "187",
+      "normalized_value": "187000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_income",
+      "statement": "income",
+      "original_name": "Процентные доходы",
+      "raw_value": "873",
+      "value": "873",
+      "normalized_value": "873000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_expense",
+      "statement": "income",
+      "original_name": "Процентные расходы",
+      "raw_value": "(10 761)",
+      "value": "-10761",
+      "normalized_value": "10761000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_expense",
+      "statement": "income",
+      "original_name": "Процентные расходы",
+      "raw_value": "(15 834)",
+      "value": "-15834",
+      "normalized_value": "15834000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_other_finance_expense",
+      "statement": "income",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "(443)",
+      "value": "-443",
+      "normalized_value": "443000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_other_finance_expense",
+      "statement": "income",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "(1 560)",
+      "value": "-1560",
+      "normalized_value": "1560000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_fx_result",
+      "statement": "income",
+      "original_name": "Курсовые разницы, нетто",
+      "raw_value": "(384)",
+      "value": "-384",
+      "normalized_value": "-384000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_fx_result",
+      "statement": "income",
+      "original_name": "Курсовые разницы, нетто",
+      "raw_value": "368",
+      "value": "368",
+      "normalized_value": "368000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "original_name": "Убыток до налогообложения",
+      "raw_value": "(16 715)",
+      "value": "-16715",
+      "normalized_value": "-16715000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "original_name": "Убыток до налогообложения",
+      "raw_value": "(26 441)",
+      "value": "-26441",
+      "normalized_value": "-26441000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "original_name": "Налог на прибыль",
+      "raw_value": "1 452",
+      "value": "1452",
+      "normalized_value": "1452000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "original_name": "Налог на прибыль",
+      "raw_value": "4 676",
+      "value": "4676",
+      "normalized_value": "4676000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(15 263)",
+      "value": "-15263",
+      "normalized_value": "-15263000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(21 765)",
+      "value": "-21765",
+      "normalized_value": "-21765000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "statement": "income",
+      "original_name": "Акционерам ПАО «Сегежа Групп»",
+      "raw_value": "(15 268)",
+      "value": "-15268",
+      "normalized_value": "-15268000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 28,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit_parent",
+      "statement": "income",
+      "original_name": "Акционерам ПАО «Сегежа Групп»",
+      "raw_value": "(21 731)",
+      "value": "-21731",
+      "normalized_value": "-21731000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 28,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "statement": "income",
+      "original_name": "Неконтролирующим долям участия",
+      "raw_value": "5",
+      "value": "5",
+      "normalized_value": "5000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit_nci",
+      "statement": "income",
+      "original_name": "Неконтролирующим долям участия",
+      "raw_value": "(34)",
+      "value": "-34",
+      "normalized_value": "-34000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_profit_attribution_total",
+      "statement": "income",
+      "original_name": "",
+      "raw_value": "(15 263)",
+      "value": "-15263",
+      "normalized_value": "-15263000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_profit_attribution_total",
+      "statement": "income",
+      "original_name": "",
+      "raw_value": "(21 765)",
+      "value": "-21765",
+      "normalized_value": "-21765000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        5
+      ],
+      "evidence": {
+        "page": 5,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "original_name": "Чистый убыток за период",
+      "raw_value": "(15 263)",
+      "value": "-15263",
+      "normalized_value": "-15263000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "original_name": "Чистый убыток за период",
+      "raw_value": "(21 765)",
+      "value": "-21765",
+      "normalized_value": "-21765000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "original_name": "Амортизация",
+      "raw_value": "5 971",
+      "value": "5971",
+      "normalized_value": "5971000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "original_name": "Амортизация",
+      "raw_value": "7 332",
+      "value": "7332",
+      "normalized_value": "7332000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Процентные доходы, отраженные в прибылях и убытках",
+      "raw_value": "(187)",
+      "value": "-187",
+      "normalized_value": "-187000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Процентные доходы, отраженные в прибылях и убытках",
+      "raw_value": "(873)",
+      "value": "-873",
+      "normalized_value": "-873000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Процентные расходы, отраженные в прибылях и убытках",
+      "raw_value": "10 761",
+      "value": "10761",
+      "normalized_value": "10761000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Процентные расходы, отраженные в прибылях и убытках",
+      "raw_value": "15 834",
+      "value": "15834",
+      "normalized_value": "15834000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_finance_expense_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "443",
+      "value": "443",
+      "normalized_value": "443000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_finance_expense_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "1 560",
+      "value": "1560",
+      "normalized_value": "1560000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 18,
+        "end_line": 18
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Налог на прибыль, отраженный в прибылях и убытках",
+      "raw_value": "(1 452)",
+      "value": "-1452",
+      "normalized_value": "-1452000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Налог на прибыль, отраженный в прибылях и убытках",
+      "raw_value": "(4 676)",
+      "value": "-4676",
+      "normalized_value": "-4676000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_credit_loss_allowance_change",
+      "statement": "cash_flow",
+      "original_name": "Изменение оценочного резерва под ожидаемые кредитные убытки",
+      "raw_value": "(132)",
+      "value": "-132",
+      "normalized_value": "-132000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": "operating",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_credit_loss_allowance_change",
+      "statement": "cash_flow",
+      "original_name": "Изменение оценочного резерва под ожидаемые кредитные убытки",
+      "raw_value": "181",
+      "value": "181",
+      "normalized_value": "181000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Курсовые разницы, нетто",
+      "raw_value": "384",
+      "value": "384",
+      "normalized_value": "384000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Курсовые разницы, нетто",
+      "raw_value": "(368)",
+      "value": "-368",
+      "normalized_value": "-368000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_reorganization_adjustment",
+      "statement": "cash_flow",
+      "original_name": "Убыток от обесценения и другие расходы в связи с реорганизацией сегмента «Деревообработка»",
+      "raw_value": "5 574",
+      "value": "5574",
+      "normalized_value": "5574000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 22,
+        "end_line": 23
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_adjustments_sgzh",
+      "statement": "cash_flow",
+      "original_name": "Прочие корректировки",
+      "raw_value": "(109)",
+      "value": "-109",
+      "normalized_value": "-109000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": "operating",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_other_adjustments_sgzh",
+      "statement": "cash_flow",
+      "original_name": "Прочие корректировки",
+      "raw_value": "(1 374)",
+      "value": "-1374",
+      "normalized_value": "-1374000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "original_name": "",
+      "raw_value": "416",
+      "value": "416",
+      "normalized_value": "416000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "original_name": "",
+      "raw_value": "1 425",
+      "value": "1425",
+      "normalized_value": "1425000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 25,
+        "end_line": 25
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_receivables_change",
+      "statement": "cash_flow",
+      "original_name": "(Увеличение)/уменьшение торговой и прочей дебиторской задолженности",
+      "raw_value": "(1 059)",
+      "value": "-1059",
+      "normalized_value": "-1059000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 27,
+        "end_line": 28
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_receivables_change",
+      "statement": "cash_flow",
+      "original_name": "(Увеличение)/уменьшение торговой и прочей дебиторской задолженности",
+      "raw_value": "19",
+      "value": "19",
+      "normalized_value": "19000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 27,
+        "end_line": 28
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение товарно-материальных запасов",
+      "raw_value": "(2 116)",
+      "value": "-2116",
+      "normalized_value": "-2116000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение товарно-материальных запасов",
+      "raw_value": "(3 473)",
+      "value": "-3473",
+      "normalized_value": "-3473000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_assets_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение прочих активов",
+      "raw_value": "(828)",
+      "value": "-828",
+      "normalized_value": "-828000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_assets_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение прочих активов",
+      "raw_value": "(707)",
+      "value": "-707",
+      "normalized_value": "-707000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение/(уменьшение) торговой и прочей кредиторской задолженности",
+      "raw_value": "1",
+      "value": "1",
+      "normalized_value": "1000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 31,
+        "end_line": 32
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение/(уменьшение) торговой и прочей кредиторской задолженности",
+      "raw_value": "(1 928)",
+      "value": "-1928",
+      "normalized_value": "-1928000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 31,
+        "end_line": 32
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_liabilities_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение прочих обязательств",
+      "raw_value": "1 306",
+      "value": "1306",
+      "normalized_value": "1306000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 33,
+        "end_line": 33
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_other_liabilities_change",
+      "statement": "cash_flow",
+      "original_name": "Увеличение прочих обязательств",
+      "raw_value": "409",
+      "value": "409",
+      "normalized_value": "409000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 33,
+        "end_line": 33
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства, использованные в операционной деятельности",
+      "raw_value": "(2 280)",
+      "value": "-2280",
+      "normalized_value": "-2280000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 34,
+        "end_line": 35
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства, использованные в операционной деятельности",
+      "raw_value": "(4 255)",
+      "value": "-4255",
+      "normalized_value": "-4255000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 34,
+        "end_line": 35
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "original_name": "Проценты уплаченные",
+      "raw_value": "(6 072)",
+      "value": "-6072",
+      "normalized_value": "6072000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "original_name": "Проценты уплаченные",
+      "raw_value": "(14 565)",
+      "value": "-14565",
+      "normalized_value": "14565000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "original_name": "Налог на прибыль уплаченный",
+      "raw_value": "(205)",
+      "value": "-205",
+      "normalized_value": "-205000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "original_name": "Налог на прибыль уплаченный",
+      "raw_value": "(229)",
+      "value": "-229",
+      "normalized_value": "-229000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, использованные в операционной деятельности",
+      "raw_value": "(8 557)",
+      "value": "-8557",
+      "normalized_value": "-8557000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 38,
+        "end_line": 39
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, использованные в операционной деятельности",
+      "raw_value": "(19 049)",
+      "value": "-19049",
+      "normalized_value": "-19049000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 38,
+        "end_line": 39
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "original_name": "Выплаты на приобретение основных средств, нематериальных активов",
+      "raw_value": "(1 840)",
+      "value": "-1840",
+      "normalized_value": "1840000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 42,
+        "end_line": 43
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "original_name": "Выплаты на приобретение основных средств, нематериальных активов",
+      "raw_value": "(2 863)",
+      "value": "-2863",
+      "normalized_value": "2863000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 42,
+        "end_line": 43
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "original_name": "Проценты полученные",
+      "raw_value": "139",
+      "value": "139",
+      "normalized_value": "139000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 44,
+        "end_line": 44
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "original_name": "Проценты полученные",
+      "raw_value": "274",
+      "value": "274",
+      "normalized_value": "274000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 44,
+        "end_line": 44
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_advance",
+      "statement": "cash_flow",
+      "original_name": "Аванс, полученный в отношении выбытия дочернего предприятия",
+      "raw_value": "500",
+      "value": "500",
+      "normalized_value": "500000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 45,
+        "end_line": 45
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_other_investing",
+      "statement": "cash_flow",
+      "original_name": "Прочее движение",
+      "raw_value": "352",
+      "value": "352",
+      "normalized_value": "352000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, использованные в инвестиционной деятельности",
+      "raw_value": "(1 349)",
+      "value": "-1349",
+      "normalized_value": "-1349000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 47,
+        "end_line": 48
+      },
+      "cash_flow_section": "investing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, использованные в инвестиционной деятельности",
+      "raw_value": "(2 089)",
+      "value": "-2089",
+      "normalized_value": "-2089000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 47,
+        "end_line": 48
+      },
+      "cash_flow_section": "investing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_share_issue_proceeds",
+      "statement": "cash_flow",
+      "original_name": "Поступление от выпуска акций",
+      "raw_value": "51 012",
+      "value": "51012",
+      "normalized_value": "51012000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 50,
+        "end_line": 50
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "original_name": "Поступления от кредитов и займов",
+      "raw_value": "12 165",
+      "value": "12165",
+      "normalized_value": "12165000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": "financing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "original_name": "Поступления от кредитов и займов",
+      "raw_value": "49 459",
+      "value": "49459",
+      "normalized_value": "49459000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "original_name": "Поступления от выпуска облигаций и цифровых финансовых активов",
+      "raw_value": "4 529",
+      "value": "4529",
+      "normalized_value": "4529000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 52,
+        "end_line": 52
+      },
+      "cash_flow_section": "financing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "original_name": "Поступления от выпуска облигаций и цифровых финансовых активов",
+      "raw_value": "10 000",
+      "value": "10000",
+      "normalized_value": "10000000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 52,
+        "end_line": 52
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "original_name": "Погашение основной суммы кредитов и займов",
+      "raw_value": "(397)",
+      "value": "-397",
+      "normalized_value": "-397000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 53,
+        "end_line": 53
+      },
+      "cash_flow_section": "financing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "original_name": "Погашение основной суммы кредитов и займов",
+      "raw_value": "(64 223)",
+      "value": "-64223",
+      "normalized_value": "-64223000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 53,
+        "end_line": 53
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "original_name": "Погашение облигаций и цифровых финансовых активов",
+      "raw_value": "(7 802)",
+      "value": "-7802",
+      "normalized_value": "-7802000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": "financing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "original_name": "Погашение облигаций и цифровых финансовых активов",
+      "raw_value": "(25 545)",
+      "value": "-25545",
+      "normalized_value": "-25545000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "original_name": "Платежи по обязательствам по аренде",
+      "raw_value": "(166)",
+      "value": "-166",
+      "normalized_value": "-166000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "original_name": "Платежи по обязательствам по аренде",
+      "raw_value": "(107)",
+      "value": "-107",
+      "normalized_value": "-107000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, полученные от финансовой деятельности",
+      "raw_value": "8 329",
+      "value": "8329",
+      "normalized_value": "8329000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 56,
+        "end_line": 57
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "original_name": "Чистые денежные средства, полученные от финансовой деятельности",
+      "raw_value": "20 596",
+      "value": "20596",
+      "normalized_value": "20596000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 56,
+        "end_line": 57
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_change_before_fx",
+      "statement": "cash_flow",
+      "original_name": "Чистое снижение денежных средств и их эквивалентов",
+      "raw_value": "(1 577)",
+      "value": "-1577",
+      "normalized_value": "-1577000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 58,
+        "end_line": 58
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_change_before_fx",
+      "statement": "cash_flow",
+      "original_name": "Чистое снижение денежных средств и их эквивалентов",
+      "raw_value": "(542)",
+      "value": "-542",
+      "normalized_value": "-542000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 58,
+        "end_line": 58
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства и их эквиваленты на начало периода",
+      "raw_value": "3 014",
+      "value": "3014",
+      "normalized_value": "3014000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 59,
+        "end_line": 59
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства и их эквиваленты на начало периода",
+      "raw_value": "4 641",
+      "value": "4641",
+      "normalized_value": "4641000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 59,
+        "end_line": 59
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "statement": "cash_flow",
+      "original_name": "Влияние изменений курса иностранной валюты на остатки денежных средств в иностранной валюте",
+      "raw_value": "(22)",
+      "value": "-22",
+      "normalized_value": "-22000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 60,
+        "end_line": 61
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "statement": "cash_flow",
+      "original_name": "Влияние изменений курса иностранной валюты на остатки денежных средств в иностранной валюте",
+      "raw_value": "(176)",
+      "value": "-176",
+      "normalized_value": "-176000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 60,
+        "end_line": 61
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства и их эквиваленты на конец периода",
+      "raw_value": "1 415",
+      "value": "1415",
+      "normalized_value": "1415000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "original_name": "Денежные средства и их эквиваленты на конец периода",
+      "raw_value": "3 923",
+      "value": "3923",
+      "normalized_value": "3923000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_bank_loans_rub",
+      "statement": "notes",
+      "original_name": "Краткосрочные кредиты банков",
+      "raw_value": "17 558",
+      "value": "17558",
+      "normalized_value": "17558000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_bank_loans_eur",
+      "statement": "notes",
+      "original_name": "Краткосрочные кредиты банков",
+      "raw_value": "2 383",
+      "value": "2383",
+      "normalized_value": "2383000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_bank_loans_eur",
+      "statement": "notes",
+      "original_name": "Краткосрочные кредиты банков",
+      "raw_value": "2 457",
+      "value": "2457",
+      "normalized_value": "2457000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_bank_loans_current_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "19 941",
+      "value": "19941",
+      "normalized_value": "19941000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bank_loans_current_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "2 457",
+      "value": "2457",
+      "normalized_value": "2457000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_bonds_rub",
+      "statement": "notes",
+      "original_name": "Краткосрочная часть облигаций и ЦФА",
+      "raw_value": "22 531",
+      "value": "22531",
+      "normalized_value": "22531000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 25,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_bonds_rub",
+      "statement": "notes",
+      "original_name": "Краткосрочная часть облигаций и ЦФА",
+      "raw_value": "22 515",
+      "value": "22515",
+      "normalized_value": "22515000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 25,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_short_bonds_cny",
+      "statement": "notes",
+      "original_name": "Краткосрочная часть облигаций и ЦФА",
+      "raw_value": "8 740",
+      "value": "8740",
+      "normalized_value": "8740000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 27,
+        "end_line": 28
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_current_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "31 271",
+      "value": "31271",
+      "normalized_value": "31271000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_current_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "22 515",
+      "value": "22515",
+      "normalized_value": "22515000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 29,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bank_loans_noncurrent_total",
+      "statement": "notes",
+      "original_name": "Долгосрочные кредиты и займы",
+      "raw_value": "12 679",
+      "value": "12679",
+      "normalized_value": "12679000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 30,
+        "end_line": 31
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bank_loans_noncurrent_total",
+      "statement": "notes",
+      "original_name": "Долгосрочные кредиты и займы",
+      "raw_value": "18 809",
+      "value": "18809",
+      "normalized_value": "18809000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 30,
+        "end_line": 31
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_long_bonds_rub",
+      "statement": "notes",
+      "original_name": "Долгосрочные облигации и ЦФА",
+      "raw_value": "14 321",
+      "value": "14321",
+      "normalized_value": "14321000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_long_bonds_rub",
+      "statement": "notes",
+      "original_name": "Долгосрочные облигации и ЦФА",
+      "raw_value": "17 525",
+      "value": "17525",
+      "normalized_value": "17525000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_long_bonds_cny",
+      "statement": "notes",
+      "original_name": "Долгосрочные облигации и ЦФА",
+      "raw_value": "240",
+      "value": "240",
+      "normalized_value": "240000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_long_bonds_cny",
+      "statement": "notes",
+      "original_name": "Долгосрочные облигации и ЦФА",
+      "raw_value": "8 742",
+      "value": "8742",
+      "normalized_value": "8742000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_noncurrent_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "14 561",
+      "value": "14561",
+      "normalized_value": "14561000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_bonds_noncurrent_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "26 267",
+      "value": "26267",
+      "normalized_value": "26267000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_debt_total",
+      "statement": "notes",
+      "original_name": "Итого кредиты и займы",
+      "raw_value": "78 452",
+      "value": "78452",
+      "normalized_value": "78452000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_debt_total",
+      "statement": "notes",
+      "original_name": "Итого кредиты и займы",
+      "raw_value": "70 048",
+      "value": "70048",
+      "normalized_value": "70048000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        17
+      ],
+      "evidence": {
+        "page": 17,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_rou_total_da",
+      "statement": "notes",
+      "original_name": "Амортизация активов в форме права пользования",
+      "raw_value": "1 262",
+      "value": "1262",
+      "normalized_value": "1262000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_rou_total_da",
+      "statement": "notes",
+      "original_name": "Амортизация активов в форме права пользования",
+      "raw_value": "1 685",
+      "value": "1685",
+      "normalized_value": "1685000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_term_lease_expense",
+      "statement": "notes",
+      "original_name": "Расходы, относящиеся к краткосрочной аренде",
+      "raw_value": "2",
+      "value": "2",
+      "normalized_value": "2000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_short_term_lease_expense",
+      "statement": "notes",
+      "original_name": "Расходы, относящиеся к краткосрочной аренде",
+      "raw_value": "4",
+      "value": "4",
+      "normalized_value": "4000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_interest_expense_control",
+      "statement": "notes",
+      "original_name": "Проценты по обязательствам по аренде",
+      "raw_value": "1 406",
+      "value": "1406",
+      "normalized_value": "1406000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_interest_expense_control",
+      "statement": "notes",
+      "original_name": "Проценты по обязательствам по аренде",
+      "raw_value": "1 376",
+      "value": "1376",
+      "normalized_value": "1376000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_expense_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "2 670",
+      "value": "2670",
+      "normalized_value": "2670000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_expense_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "3 065",
+      "value": "3065",
+      "normalized_value": "3065000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_opening",
+      "statement": "notes",
+      "original_name": "Обязательство на начало периода",
+      "raw_value": "11 806",
+      "value": "11806",
+      "normalized_value": "11806000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_opening",
+      "statement": "notes",
+      "original_name": "Обязательство на начало периода",
+      "raw_value": "13 333",
+      "value": "13333",
+      "normalized_value": "13333000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_cash_payments",
+      "statement": "notes",
+      "original_name": "Платежи по обязательствам по аренде",
+      "raw_value": "(1 572)",
+      "value": "-1572",
+      "normalized_value": "-1572000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_cash_payments",
+      "statement": "notes",
+      "original_name": "Платежи по обязательствам по аренде",
+      "raw_value": "(1 483)",
+      "value": "-1483",
+      "normalized_value": "-1483000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_contract_changes",
+      "statement": "notes",
+      "original_name": "Заключение/(выбытие) и модификация договоров аренды",
+      "raw_value": "958",
+      "value": "958",
+      "normalized_value": "958000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_lease_contract_changes",
+      "statement": "notes",
+      "original_name": "Заключение/(выбытие) и модификация договоров аренды",
+      "raw_value": "(1 446)",
+      "value": "-1446",
+      "normalized_value": "-1446000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_interest_accrual",
+      "statement": "notes",
+      "original_name": "Процентные расходы",
+      "raw_value": "1 406",
+      "value": "1406",
+      "normalized_value": "1406000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 27,
+        "end_line": 27
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_interest_accrual",
+      "statement": "notes",
+      "original_name": "Процентные расходы",
+      "raw_value": "1 376",
+      "value": "1376",
+      "normalized_value": "1376000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 27,
+        "end_line": 27
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_hfs_transfer",
+      "statement": "notes",
+      "original_name": "Переведено в состав обязательств, относящихся к активам, предназначенным для продажи",
+      "raw_value": "(25)",
+      "value": "-25",
+      "normalized_value": "-25000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 28,
+        "end_line": 29
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_closing",
+      "statement": "notes",
+      "original_name": "Обязательство на конец периода",
+      "raw_value": "12 598",
+      "value": "12598",
+      "normalized_value": "12598000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_lease_closing",
+      "statement": "notes",
+      "original_name": "Обязательство на конец периода",
+      "raw_value": "11 755",
+      "value": "11755",
+      "normalized_value": "11755000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        20
+      ],
+      "evidence": {
+        "page": 20,
+        "start_line": 30,
+        "end_line": 30
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "statement": "equity",
+      "original_name": "31 декабря 2025 года",
+      "raw_value": "255",
+      "value": "255",
+      "normalized_value": "255000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "statement": "equity",
+      "original_name": "31 декабря 2024 года",
+      "raw_value": "1 084",
+      "value": "1084",
+      "normalized_value": "1084000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_parent",
+      "statement": "equity",
+      "original_name": "31 декабря 2025 года",
+      "raw_value": "236",
+      "value": "236",
+      "normalized_value": "236000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_parent",
+      "statement": "equity",
+      "original_name": "31 декабря 2024 года",
+      "raw_value": "1 096",
+      "value": "1096",
+      "normalized_value": "1096000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_nci",
+      "statement": "equity",
+      "original_name": "31 декабря 2025 года",
+      "raw_value": "19",
+      "value": "19",
+      "normalized_value": "19000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 19,
+        "end_line": 19
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_opening_nci",
+      "statement": "equity",
+      "original_name": "31 декабря 2024 года",
+      "raw_value": "(12)",
+      "value": "-12",
+      "normalized_value": "-12000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "statement": "equity",
+      "original_name": "30 июня 2026 года",
+      "raw_value": "(15 008)",
+      "value": "-15008",
+      "normalized_value": "-15008000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "statement": "equity",
+      "original_name": "30 июня 2025 года",
+      "raw_value": "66 641",
+      "value": "66641",
+      "normalized_value": "66641000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_parent",
+      "statement": "equity",
+      "original_name": "30 июня 2026 года",
+      "raw_value": "(15 060)",
+      "value": "-15060",
+      "normalized_value": "-15060000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_parent",
+      "statement": "equity",
+      "original_name": "30 июня 2025 года",
+      "raw_value": "66 683",
+      "value": "66683",
+      "normalized_value": "66683000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_nci",
+      "statement": "equity",
+      "original_name": "30 июня 2026 года",
+      "raw_value": "52",
+      "value": "52",
+      "normalized_value": "52000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 22,
+        "end_line": 22
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_closing_nci",
+      "statement": "equity",
+      "original_name": "30 июня 2025 года",
+      "raw_value": "(42)",
+      "value": "-42",
+      "normalized_value": "-42000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 16,
+        "end_line": 16
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_total",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(15 263)",
+      "value": "-15263",
+      "normalized_value": "-15263000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_total",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(21 765)",
+      "value": "-21765",
+      "normalized_value": "-21765000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_parent",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(15 268)",
+      "value": "-15268",
+      "normalized_value": "-15268000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_parent",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(21 731)",
+      "value": "-21731",
+      "normalized_value": "-21731000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_nci",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "5",
+      "value": "5",
+      "normalized_value": "5000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_profit_nci",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(34)",
+      "value": "-34",
+      "normalized_value": "-34000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(15 263)",
+      "value": "-15263",
+      "normalized_value": "-15263000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 20,
+        "end_line": 20
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "statement": "equity",
+      "original_name": "Чистый убыток и совокупный расход за период",
+      "raw_value": "(21 765)",
+      "value": "-21765",
+      "normalized_value": "-21765000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_share_issue_total",
+      "statement": "equity",
+      "original_name": "Эмиссионный доход от размещения акций",
+      "raw_value": "87 333",
+      "value": "87333",
+      "normalized_value": "87333000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 14,
+        "end_line": 14
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_nci_purchase_total",
+      "statement": "equity",
+      "original_name": "Выкуп неконтролирующих долей владения",
+      "raw_value": "(11)",
+      "value": "-11",
+      "normalized_value": "-11000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 15,
+        "end_line": 15
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_internal_transfer_parent",
+      "statement": "equity",
+      "original_name": "Прочие движения",
+      "raw_value": "(28)",
+      "value": "-28",
+      "normalized_value": "-28000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "eq_internal_transfer_nci",
+      "statement": "equity",
+      "original_name": "Прочие движения",
+      "raw_value": "28",
+      "value": "28",
+      "normalized_value": "28000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        7
+      ],
+      "evidence": {
+        "page": 7,
+        "start_line": 21,
+        "end_line": 21
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_income_total",
+      "statement": "notes",
+      "original_name": "Процентные доходы",
+      "raw_value": "187",
+      "value": "187",
+      "normalized_value": "187000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 32,
+        "end_line": 32
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_income_total",
+      "statement": "notes",
+      "original_name": "Процентные доходы",
+      "raw_value": "873",
+      "value": "873",
+      "normalized_value": "873000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 32,
+        "end_line": 32
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "statement": "notes",
+      "original_name": "Процентные расходы по кредитам и займам полученным",
+      "raw_value": "(6 329)",
+      "value": "-6329",
+      "normalized_value": "6329000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "statement": "notes",
+      "original_name": "Процентные расходы по кредитам и займам полученным",
+      "raw_value": "(13 917)",
+      "value": "-13917",
+      "normalized_value": "13917000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 34,
+        "end_line": 34
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_interest_options",
+      "statement": "notes",
+      "original_name": "Процентный расход по обязательствам, относящимся к опционным",
+      "raw_value": "(2 950)",
+      "value": "-2950",
+      "normalized_value": "2950000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 35,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "statement": "notes",
+      "original_name": "Процентные расходы по арендным обязательствам",
+      "raw_value": "(1 406)",
+      "value": "-1406",
+      "normalized_value": "1406000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "statement": "notes",
+      "original_name": "Процентные расходы по арендным обязательствам",
+      "raw_value": "(1 376)",
+      "value": "-1376",
+      "normalized_value": "1376000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_other",
+      "statement": "notes",
+      "original_name": "Процентные расходы по прочим обязательствам",
+      "raw_value": "(76)",
+      "value": "-76",
+      "normalized_value": "76000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 38,
+        "end_line": 38
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_other",
+      "statement": "notes",
+      "original_name": "Процентные расходы по прочим обязательствам",
+      "raw_value": "(541)",
+      "value": "-541",
+      "normalized_value": "541000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 38,
+        "end_line": 38
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_interest_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(10 761)",
+      "value": "-10761",
+      "normalized_value": "10761000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_interest_total",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(15 834)",
+      "value": "-15834",
+      "normalized_value": "15834000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_finance_modification_control",
+      "statement": "notes",
+      "original_name": "Корректировка амортизированной стоимости финансовых инструментов при модификации условий",
+      "raw_value": "(474)",
+      "value": "-474",
+      "normalized_value": "474000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 41,
+        "end_line": 42
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_finance_fair_value_expense",
+      "statement": "notes",
+      "original_name": "Изменение стоимости обязательств, учитываемых по справедливой стоимости",
+      "raw_value": "(74)",
+      "value": "-74",
+      "normalized_value": "74000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 43,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_finance_fair_value_expense",
+      "statement": "notes",
+      "original_name": "Изменение стоимости обязательств, учитываемых по справедливой стоимости",
+      "raw_value": "(298)",
+      "value": "-298",
+      "normalized_value": "298000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 43,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_finance_other_component",
+      "statement": "notes",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "(369)",
+      "value": "-369",
+      "normalized_value": "369000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 45,
+        "end_line": 45
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "note_finance_other_component",
+      "statement": "notes",
+      "original_name": "Прочие финансовые расходы, нетто",
+      "raw_value": "(788)",
+      "value": "-788",
+      "normalized_value": "788000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 45,
+        "end_line": 45
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_finance_other_expense",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(443)",
+      "value": "-443",
+      "normalized_value": "443000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_finance_other_expense",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(1 560)",
+      "value": "-1560",
+      "normalized_value": "1560000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_net_finance_expense",
+      "statement": "notes",
+      "original_name": "Финансовые расходы, нетто",
+      "raw_value": "(11 017)",
+      "value": "-11017",
+      "normalized_value": "-11017000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 47,
+        "end_line": 47
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_net_finance_expense",
+      "statement": "notes",
+      "original_name": "Финансовые расходы, нетто",
+      "raw_value": "(16 521)",
+      "value": "-16521",
+      "normalized_value": "-16521000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 47,
+        "end_line": 47
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_gross",
+      "statement": "notes",
+      "original_name": "Текущий налог на прибыль",
+      "raw_value": "(156)",
+      "value": "-156",
+      "normalized_value": "-156000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 61,
+        "end_line": 61
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_gross",
+      "statement": "notes",
+      "original_name": "Текущий налог на прибыль",
+      "raw_value": "(274)",
+      "value": "-274",
+      "normalized_value": "-274000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 61,
+        "end_line": 61
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_prior_adjustments",
+      "statement": "notes",
+      "original_name": "Корректировки текущего налога на прибыль прошлых периодов",
+      "raw_value": "8",
+      "value": "8",
+      "normalized_value": "8000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_prior_adjustments",
+      "statement": "notes",
+      "original_name": "Корректировки текущего налога на прибыль прошлых периодов",
+      "raw_value": "34",
+      "value": "34",
+      "normalized_value": "34000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_net",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(148)",
+      "value": "-148",
+      "normalized_value": "-148000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 63,
+        "end_line": 63
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_current_tax_net",
+      "statement": "notes",
+      "original_name": "",
+      "raw_value": "(240)",
+      "value": "-240",
+      "normalized_value": "-240000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 63,
+        "end_line": 63
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_deferred_tax_benefit",
+      "statement": "notes",
+      "original_name": "Отложенный налог",
+      "raw_value": "1 600",
+      "value": "1600",
+      "normalized_value": "1600000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 64,
+        "end_line": 64
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_deferred_tax_benefit",
+      "statement": "notes",
+      "original_name": "Отложенный налог",
+      "raw_value": "4 916",
+      "value": "4916",
+      "normalized_value": "4916000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 64,
+        "end_line": 64
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_income_tax_benefit_total",
+      "statement": "notes",
+      "original_name": "Итого налог на прибыль",
+      "raw_value": "1 452",
+      "value": "1452",
+      "normalized_value": "1452000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 65,
+        "end_line": 65
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "note_income_tax_benefit_total",
+      "statement": "notes",
+      "original_name": "Итого налог на прибыль",
+      "raw_value": "4 676",
+      "value": "4676",
+      "normalized_value": "4676000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        13
+      ],
+      "evidence": {
+        "page": 13,
+        "start_line": 65,
+        "end_line": 65
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_opening",
+      "statement": "notes",
+      "original_name": "На 31 декабря 202    5 года",
+      "raw_value": "28 610",
+      "value": "28610",
+      "normalized_value": "28610000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 56,
+        "end_line": 56
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_opening",
+      "statement": "notes",
+      "original_name": "На 31 декабря 2024 года",
+      "raw_value": "46 649",
+      "value": "46649",
+      "normalized_value": "46649000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 47,
+        "end_line": 47
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_contract_changes",
+      "statement": "notes",
+      "original_name": "Поступление/модификация договоров",
+      "raw_value": "924",
+      "value": "924",
+      "normalized_value": "924000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 57,
+        "end_line": 57
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_contract_changes",
+      "statement": "notes",
+      "original_name": "Поступление/модификация договоров",
+      "raw_value": "(1 378)",
+      "value": "-1378",
+      "normalized_value": "-1378000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 48,
+        "end_line": 48
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_other_additions",
+      "statement": "notes",
+      "original_name": "Прочие поступления",
+      "raw_value": "666",
+      "value": "666",
+      "normalized_value": "666000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 58,
+        "end_line": 58
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_other_additions",
+      "statement": "notes",
+      "original_name": "Прочие поступления",
+      "raw_value": "644",
+      "value": "644",
+      "normalized_value": "644000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 49,
+        "end_line": 49
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_da_movement",
+      "statement": "notes",
+      "original_name": "Амортизация",
+      "raw_value": "(1 262)",
+      "value": "-1262",
+      "normalized_value": "-1262000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 59,
+        "end_line": 59
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_da_movement",
+      "statement": "notes",
+      "original_name": "Амортизация",
+      "raw_value": "(1 685)",
+      "value": "-1685",
+      "normalized_value": "-1685000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 50,
+        "end_line": 50
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_impairment",
+      "statement": "notes",
+      "original_name": "Обесценение",
+      "raw_value": "(69)",
+      "value": "-69",
+      "normalized_value": "-69000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 51,
+        "end_line": 51
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_hfs_transfer",
+      "statement": "notes",
+      "original_name": "Переведено в состав активов, предназначенных для продажи",
+      "raw_value": "(18)",
+      "value": "-18",
+      "normalized_value": "-18000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 52,
+        "end_line": 53
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_disposals",
+      "statement": "notes",
+      "original_name": "Выбытие",
+      "raw_value": "(60)",
+      "value": "-60",
+      "normalized_value": "-60000000",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 60,
+        "end_line": 60
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_disposals",
+      "statement": "notes",
+      "original_name": "Выбытие",
+      "raw_value": "(40)",
+      "value": "-40",
+      "normalized_value": "-40000000",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 54,
+        "end_line": 54
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_closing",
+      "statement": "notes",
+      "original_name": "На 30 июня 202    6 года",
+      "raw_value": "28 878",
+      "value": "28878",
+      "normalized_value": "28878000000",
+      "start": null,
+      "end": "2026-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 61,
+        "end_line": 61
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "rou_asset_closing",
+      "statement": "notes",
+      "original_name": "На 30 июня 2025 года",
+      "raw_value": "44 103",
+      "value": "44103",
+      "normalized_value": "44103000000",
+      "start": null,
+      "end": "2025-06-30",
+      "pages": [
+        19
+      ],
+      "evidence": {
+        "page": 19,
+        "start_line": 55,
+        "end_line": 55
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    }
+  ],
+  "checks_required": [],
+  "checks_expected": [
+    {
+      "rule": "complete_noncurrent_assets",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_current_assets",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_noncurrent_liabilities",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_current_liabilities",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "parent_capital_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_capital_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_operating_profit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "profit_before_tax_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_after_tax_benefit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_income_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "profit_attribution_repeated_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "income_repeated_total_vs_profit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "cash_before_working_capital",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "cash_after_working_capital",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "operating_cash_after_payments",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "complete_reported_cash_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_income_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_expense_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "other_finance_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "tax_benefit_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "fx_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "reorganization_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "equity_neutral_transfer_sgzh",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_equals_comprehensive_income",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_current_bank_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_current_bond_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_noncurrent_bond_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_debt_balance_components",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_current_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_noncurrent_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_lease_expense_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "lease_expense_vs_accrual",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "lease_cash_financing_and_accrual_observed",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_rou_asset_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "rou_depreciation_vs_lease_expense",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_interest_composition",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_other_finance_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "note_net_finance_composition",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_finance_income_expense",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "interest_income_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_expense_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "other_finance_expense_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "lease_interest_note_consistency",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "current_tax_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_tax_benefit_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "income_tax_benefit_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_noncurrent_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_noncurrent_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "parent_capital_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_capital_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_operating_profit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_before_tax_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_after_tax_benefit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_income_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_attribution_repeated_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "income_repeated_total_vs_profit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "cash_before_working_capital",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "cash_after_working_capital",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "operating_cash_after_payments",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_reported_cash_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_income_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_expense_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "other_finance_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "tax_benefit_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "fx_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "reorganization_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "profit_equals_comprehensive_income",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_current_bank_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "note_current_bond_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "note_noncurrent_bond_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_debt_balance_components",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_current_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_debt_noncurrent_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_lease_expense_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "lease_expense_vs_accrual",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "lease_cash_financing_and_accrual_observed",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_rou_asset_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "rou_depreciation_vs_lease_expense",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_interest_composition",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "note_other_finance_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_net_finance_composition",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_finance_income_expense",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "interest_income_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "interest_expense_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "other_finance_expense_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "lease_interest_note_consistency",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "current_tax_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "complete_tax_benefit_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "income_tax_benefit_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_lease_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "note_lease_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "rou_asset_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "rou_asset_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    }
+  ],
+  "financial_audit_complete": false,
+  "method": "284 суммы переписаны с просмотренных изображений независимо от ответов GigaChat. Прочерки и отсутствующие строки сохранены; структура и исходные значения разделены."
+}

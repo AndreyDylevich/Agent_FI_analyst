@@ -1,6 +1,6 @@
 """Проверки извлечённых групповых МСФО: полные тождества, явный допуск, адресная блокировка."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict, replace
 from datetime import timedelta
 from decimal import Decimal
 
@@ -11,6 +11,7 @@ from agent.checks.equity import EquityBridgePlan
 from agent.checks.cash_sections import CashSectionPlan
 from agent.checks.debt_bridges import DebtBridgePlan
 from agent.checks.source_links import SourceReview
+from agent.checks.reviewed_tables import ReviewedDocument
 
 
 @dataclass(frozen=True)
@@ -20,7 +21,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 11
+    version: int = 12
     basis: dict | None = None
 
 
@@ -87,7 +88,7 @@ def _apply_check(name, start, end, terms, by_item, facts, statuses, *, extra_dis
     return FinancialCheck(name,str(start) if start else None,str(end),result,indices,basis=basis)
 
 
-def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = (), debt_plans: tuple[DebtBridgePlan, ...] = (), source_review: SourceReview | None = None) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
+def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple[EquityBridgePlan, ...] = (), cash_plans: tuple[CashSectionPlan, ...] = (), debt_plans: tuple[DebtBridgePlan, ...] = (), source_review: SourceReview | None = None, reviewed_document: ReviewedDocument | None = None) -> tuple[tuple[FinancialCheck, ...], tuple[str, ...]]:
     """Одинаковое число в разных цитатах подтверждает источник; разные числа блокируются оба.
 
     «Проверено авто» здесь означает совпадение цитаты и участие в пройденном тождестве,
@@ -227,4 +228,38 @@ def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple
                                      statuses, extra_disputed=disputed, basis=source_review.basis)
                 if check:
                     checks.append(check)
+    if reviewed_document:
+        by_alias = {}
+        for alias, source in reviewed_document.observations.items():
+            indices = [i for i, fact in enumerate(facts) if (fact.item_id, fact.statement, fact.start, fact.end) ==
+                       (source['item_id'], source['statement'], source['start'], source['end'])]
+            proof = source['evidence']
+            for i in indices:
+                fact = facts[i]; evidence = fact.evidence
+                if source.get('source_absent'):
+                    raise ValueError('Прочерк/нераскрытое наблюдение проверенной таблицы не является числом')
+                if (fact.cash_flow_section != source['cash_flow_section'] or evidence.page != proof['page']
+                        or evidence.start_line is None or evidence.end_line is None
+                        or evidence.start_line < proof['start_line'] or evidence.end_line > proof['end_line']):
+                    raise ValueError('Наблюдение взято вне проверенной строки/формы/раздела')
+            if indices:
+                by_alias[alias] = indices
+        for identity in reviewed_document.identities:
+            rule, start, end, terms = (identity[k] for k in ('rule', 'start', 'end', 'terms'))
+            disputed = tuple(key for key in terms if any(statuses[i] == 'расхождение' for i in by_alias.get(key, [])))
+            check = _apply_check(rule, start, end, terms, by_alias, facts, statuses,
+                                 extra_disputed=disputed, basis=reviewed_document.basis)
+            if check is None:
+                check = FinancialCheck(rule, start, end,
+                                       CheckResult(rule, 'недостаточно_данных', missing=tuple(terms)),
+                                       (), basis=reviewed_document.basis)
+            if check:
+                # Прямой агрегат может не раскрываться: проверенная полная сумма частей — иной
+                # допустимый путь сверки. Прежний неполный путь сохраняется в основании результата.
+                partial = [c for c in checks if (c.rule, c.start, c.end) == (rule, start, end)
+                           and c.result.status == 'недостаточно_данных']
+                if check.result.status == 'пройдено' and partial:
+                    checks = [c for c in checks if c not in partial]
+                    check = replace(check, basis={**check.basis, 'direct_partial_checks': [asdict(c) for c in partial]})
+                checks.append(check)
     return tuple(checks), tuple(statuses)

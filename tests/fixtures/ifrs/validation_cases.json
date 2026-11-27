@@ -118,5 +118,20 @@
       "leases"
     ],
     "reference": "mts_h1_2026_source_links_reference.json"
+  },
+  "sgzh_full": {
+    "ticker": "SGZH",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance",
+      "income",
+      "cash_flow",
+      "equity",
+      "debt",
+      "leases",
+      "interest"
+    ],
+    "reference": "sgzh_h1_2026_full_reference.json"
   }
 }
