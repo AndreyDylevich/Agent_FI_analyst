@@ -7,13 +7,18 @@ on:
         required: true
         default: sgzh_balance
         type: choice
-        options: [mvid_balance, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements, sgzh_full]
+        options: [mvid_balance, mvid_full, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements, sgzh_full]
       source_archive_run_id:
         description: Необязательный ID прежнего ifrs-case-check с PDF точного SHA256 (ответы модели не используются)
         required: false
         default: ''
+      prepare_text_only:
+        description: Только текст страниц без модели и финансовой приёмки
+        type: boolean
+        required: false
+        default: false
 concurrency:
-  group: gigachat-provider
+  group: ${{ inputs.prepare_text_only && 'ifrs-source-preparation' || 'gigachat-provider' }}
   cancel-in-progress: false
 permissions:
   contents: read
@@ -21,7 +26,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: ${{ inputs.case_id == 'mvid_full' && 60 || 30 }}
     env:
       PYTHONUNBUFFERED: '1'
     steps:
@@ -32,7 +37,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pytest -q
       - name: Установить OCR для скана М.Видео
-        if: inputs.case_id == 'mvid_balance'
+        if: inputs.case_id == 'mvid_balance' || inputs.case_id == 'mvid_full'
         run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
       - name: Получить закреплённый PDF из прежнего артефакта
         if: inputs.source_archive_run_id != ''
@@ -49,6 +54,7 @@ jobs:
         run: |
           archive_args=()
           if [ -d validation/source-archive ]; then archive_args=(--source-archive validation/source-archive); fi
+          if [ '${{ inputs.prepare_text_only }}' = true ]; then archive_args+=(--prepare-text-only); fi
           python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' \
             --output validation/ifrs-case "${archive_args[@]}"
       - uses: actions/upload-artifact@v4

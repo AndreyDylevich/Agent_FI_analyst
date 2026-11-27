@@ -3245,3 +3245,1140 @@ items:
       - Платежи по обязательствам по аренде
       en: []
     rsbu_codes: []
+
+  # Визуально проверенные исходные строки форм/примечаний М.Видео; OCR требует отдельной приёмки.
+  - id: balance_investment_property
+    statement: balance
+    name: Инвестиционная недвижимость
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Инвестиционная недвижимость
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: receivables
+    statement: balance
+    name: Дебиторская задолженность
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Дебиторская задолженность
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_advances_paid
+    statement: balance
+    name: Авансы выданные
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Авансы выданные
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_loans_issued
+    statement: balance
+    name: Займы выданные
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Займы выданные
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_other_tax_prepayments
+    statement: balance
+    name: Авансовые платежи по прочим налогам
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Авансовые платежи по прочим налогам
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_paid_in_capital
+    statement: balance
+    name: Оплаченный капитал
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Оплаченный капитал
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_revaluation_reserve
+    statement: balance
+    name: Резерв OT переоценки основных средств и прочие резервы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Резерв OT переоценки основных средств и прочие резервы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_treasury_shares
+    statement: balance
+    name: Выкупленные собственные акции
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Выкупленные собственные акции
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: payables
+    statement: balance
+    name: Торговая кредиторская задолженность
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Торговая кредиторская задолженность
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_other_payables_accruals
+    statement: balance
+    name: Прочая кредиторская задолженность и начисленные расходы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочая кредиторская задолженность и начисленные расходы
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_customer_liabilities
+    statement: balance
+    name: Обязательства перед покупателями
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Обязательства перед покупателями
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: balance_liabilities_total
+    statement: balance
+    name: Итого обязательства
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Итого обязательства
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+  - id: income_other_operating_expense
+    statement: income
+    name: Прочие операционные расходы
+    sign: outflow
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочие операционные расходы
+      en: []
+    rsbu_codes: []
+  - id: income_investment_property_fv
+    statement: income
+    name: Изменение справедливой стоимости инвестиционной недвижимости
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Изменение справедливой стоимости инвестиционной недвижимости
+      en: []
+    rsbu_codes: []
+  - id: finance_income
+    statement: income
+    name: Финансовые доходы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Финансовые доходы
+      en: []
+    rsbu_codes: []
+  - id: finance_expense
+    statement: income
+    name: Финансовые расходы
+    sign: outflow
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Финансовые расходы
+      en: []
+    rsbu_codes: []
+  - id: income_nonoperating_expense
+    statement: income
+    name: Прочие неоперационные расходы
+    sign: outflow
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочие неоперационные расходы
+      en: []
+    rsbu_codes: []
+  - id: income_oci_revaluation
+    statement: income
+    name: Прибыль от переоценки основных средств
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прибыль от переоценки основных средств
+      en: []
+    rsbu_codes: []
+  - id: income_oci_after_tax
+    statement: income
+    name: Прочий совокупный доход за вычетом налога на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочий совокупный доход за вычетом налога на прибыль
+      en: []
+    rsbu_codes: []
+  - id: income_comprehensive_total
+    statement: income
+    name: ИТОГО СОВОКУПНЫЙ РАСХОД ЗА ПЕРИОД
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ИТОГО СОВОКУПНЫЙ РАСХОД ЗА ПЕРИОД
+      en: []
+    rsbu_codes: []
+  - id: income_oci_tax
+    statement: income
+    name: Налог на прибыль по статьям, которые впоследствии не будут реклассифицированы
+      в состав прибыли или убытка
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Налог на прибыль по статьям, которые впоследствии не будут реклассифицированы
+        в состав прибыли или убытка
+      en: []
+    rsbu_codes: []
+  - id: cf_lease_termination_adjustment
+    statement: cash_flow
+    name: Доход от прекращения договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Доход от прекращения договоров аренды
+      en: []
+    rsbu_codes: []
+  - id: cf_receivables_impairment_adjustment
+    statement: cash_flow
+    name: Изменение резерва под обесценение задолженности
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Изменение резерва под обесценение задолженности
+      en: []
+    rsbu_codes: []
+  - id: cf_inventory_markdown_adjustment
+    statement: cash_flow
+    name: Уценка и потери товарно-материальных заласов, за вычетом излишков и дохода
+      от невостребованных товаров, и списание запасов до чистой цены возможной реализации
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Уценка и потери товарно-материальных заласов, за вычетом излишков и дохода от
+        невостребованных товаров, и списание запасов до чистой цены возможной реализации
+      en: []
+    rsbu_codes: []
+  - id: cf_subsidiary_gain_adjustment
+    statement: cash_flow
+    name: Прибыль от выбытия дочерних компаний
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прибыль от выбытия дочерних компаний
+      en: []
+    rsbu_codes: []
+  - id: cf_investment_property_fv_adjustment
+    statement: cash_flow
+    name: Изменение справедливой стоимости инвестиционной недвижимости
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Изменение справедливой стоимости инвестиционной недвижимости
+      en: []
+    rsbu_codes: []
+  - id: cf_other_noncash_mvid
+    statement: cash_flow
+    name: Прочие неденежные операции, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочие неденежные операции, нетто
+      en: []
+    rsbu_codes: []
+  - id: cf_receivables_advances_change
+    statement: cash_flow
+    name: Уменьшение дебиторской задолженности и авансов выданных
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Уменьшение дебиторской задолженности и авансов выданных
+      en: []
+    rsbu_codes: []
+  - id: cf_other_tax_prepayments_change
+    statement: cash_flow
+    name: Уменьшение авансовых платежей по прочим налогам
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Уменьшение авансовых платежей по прочим налогам
+      en: []
+    rsbu_codes: []
+  - id: cf_other_payables_accruals_change
+    statement: cash_flow
+    name: (Уменьшение)/увеличение прочей кредиторской задолженности и начисленных расходов
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - (Уменьшение)/увеличение прочей кредиторской задолженности и начисленных расходов
+      en: []
+    rsbu_codes: []
+  - id: cf_customer_liabilities_change
+    statement: cash_flow
+    name: Уменьшение обязательств перед покупателями
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Уменьшение обязательств перед покупателями
+      en: []
+    rsbu_codes: []
+  - id: cf_taxes_payable_change
+    statement: cash_flow
+    name: (Уменьшение)/увеличение кредиторской задолженности по прочим налогам
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - (Уменьшение)/увеличение кредиторской задолженности по прочим налогам
+      en: []
+    rsbu_codes: []
+  - id: cf_other_working_capital
+    statement: cash_flow
+    name: Прочие изменения в оборотном капитале, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочие изменения в оборотном капитале, нетто
+      en: []
+    rsbu_codes: []
+  - id: cf_ppe_disposal
+    statement: cash_flow
+    name: Поступления от выбытия основных средств
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Поступления от выбытия основных средств
+      en: []
+    rsbu_codes: []
+  - id: cf_subsidiary_disposal
+    statement: cash_flow
+    name: Продажа компаний Группы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Продажа компаний Группы
+      en: []
+    rsbu_codes: []
+  - id: cf_loans_received_repayment
+    statement: cash_flow
+    name: Возврат предоставленных займов
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Возврат предоставленных займов
+      en: []
+    rsbu_codes: []
+  - id: cf_consumer_loans_advanced
+    statement: cash_flow
+    name: Предоставление потребительских кредитов
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Предоставление потребительских кредитов
+      en: []
+    rsbu_codes: []
+  - id: cf_consumer_loans_repaid
+    statement: cash_flow
+    name: Возврат предоставленных потребительских кредитов
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Возврат предоставленных потребительских кредитов
+      en: []
+    rsbu_codes: []
+  - id: cf_shareholder_funding
+    statement: cash_flow
+    name: Предоставление финансирования от акционеров
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Предоставление финансирования от акционеров
+      en: []
+    rsbu_codes: []
+  - id: cf_reported_net_cash_change
+    statement: cash_flow
+    name: ЧИСТОЕ УМЕНЬШЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ и их эквивалентов
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ЧИСТОЕ УМЕНЬШЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ и их эквивалентов
+      en: []
+    rsbu_codes: []
+  - id: eq_oci_total
+    statement: equity
+    name: Прочий совокупный доход за период
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Прочий совокупный доход за период
+      en: []
+    rsbu_codes: []
+  - id: eq_shareholder_paid_capital
+    equity_column: Итого капитал
+    statement: equity
+    name: Оплаченный акционерами капитал
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Оплаченный акционерами капитал
+      en: []
+    rsbu_codes: []
+  - id: note_long_afinans_loan
+    statement: notes
+    name: ООО «А-ФИНАНС ПРОЕКТ»
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО «А-ФИНАНС ПРОЕКТ»
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_gpi_loan
+    statement: notes
+    name: ООО «УК «Джи Пи Ай»
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО «УК «Джи Пи Ай»
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_capitalguard_loan
+    statement: notes
+    name: ООО "Кэпиталгард"
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО "Кэпиталгард"
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_loans_mvid
+    statement: notes
+    name: note long loans mvid
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    allow_unlabelled_source: true
+  - id: note_long_bonds_mvid
+    statement: notes
+    name: Выпущенные облигации
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Выпущенные облигации
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_long_bonds_total_mvid
+    statement: notes
+    name: note long bonds total mvid
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    allow_unlabelled_source: true
+  - id: note_short_bank1_mvid
+    statement: notes
+    name: Банк 1
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Банк 1
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bank2_mvid
+    statement: notes
+    name: Банк 2
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Банк 2
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bank3_mvid
+    statement: notes
+    name: Банк 3
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Банк 3
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bank4_mvid
+    statement: notes
+    name: Банк 4
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Банк 4
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_bank6_mvid
+    statement: notes
+    name: Банк 6
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Банк 6
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_sfi_loan
+    statement: notes
+    name: ПАО "ЭСЭФАЙ"
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ПАО "ЭСЭФАЙ"
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_sfi_capital_loan
+    statement: notes
+    name: ООО "ЭсЭфАй КЭПИТАЛ"
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО "ЭсЭфАй КЭПИТАЛ"
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_lenbury_loan
+    statement: notes
+    name: ООО "Лэнбури"
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО "Лэнбури"
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_grand_loan
+    statement: notes
+    name: ООО «ГРАНД СМВ»
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - ООО «ГРАНД СМВ»
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_afinans_loan
+    statement: notes
+    name: OOO «А-ФИНАНС ПРОЕКТ»
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - OOO «А-ФИНАНС ПРОЕКТ»
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: note_short_loans_total_mvid
+    statement: notes
+    name: note short loans total mvid
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru: []
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+    allow_unlabelled_source: true
+  - id: note_short_bonds_mvid
+    statement: notes
+    name: Выпущенные облигации
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Выпущенные облигации
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    source_forms:
+    - notes
+    source_topics:
+    - debt
+  - id: rou_asset_new_contracts
+    statement: notes
+    name: Заключение новых договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Заключение новых договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_modifications
+    statement: notes
+    name: Модификация договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Модификация договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_fx_mvid
+    statement: notes
+    name: Курсовые разницы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_interest_mvid
+    statement: notes
+    name: Процентные расходы по обязательствам по аренде
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Процентные расходы по обязательствам по аренде
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: rou_asset_payments_mvid
+    statement: notes
+    name: Арендные платежи за период
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Арендные платежи за период
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_signed_opening
+    statement: notes
+    name: На 1 января
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - На 1 января
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_opening
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: note_lease_new_contracts_signed
+    statement: notes
+    name: Заключение новых договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Заключение новых договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_modifications_signed
+    statement: notes
+    name: Модификация договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Модификация договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_da_signed
+    statement: notes
+    name: Расходы по амортизации
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Расходы по амортизации
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_disposals_signed
+    statement: notes
+    name: Выбытия договоров аренды
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Выбытия договоров аренды
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_fx_signed
+    statement: notes
+    name: Курсовые разницы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_interest_signed
+    statement: notes
+    name: Процентные расходы по обязательствам по аренде
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Процентные расходы по обязательствам по аренде
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_payments_signed
+    statement: notes
+    name: Арендные платежи за период
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Арендные платежи за период
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+    value_kind: flow
+  - id: note_lease_signed_closing
+    statement: notes
+    name: На 30 июня
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - На 30 июня
+      en: []
+    rsbu_codes: []
+    value_kind: stock
+    date_role: period_closing
+    source_forms:
+    - notes
+    source_topics:
+    - leases
+  - id: note_finance_fx_income_lease
+    statement: notes
+    name: Курсовые разницы по финансовым обязательствам (аренда)
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы по финансовым обязательствам (аренда)
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_income
+    statement: notes
+    name: Итого финансовые доходы
+    sign: natural
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Итого финансовые доходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_fx_expense_lease
+    statement: notes
+    name: Курсовые разницы по финансовым обязательствам (аренда)
+    sign: outflow
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Курсовые разницы по финансовым обязательствам (аренда)
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow
+  - id: note_finance_expense_mvid
+    statement: notes
+    name: Итого финансовые расходы
+    sign: outflow
+    reviewed_table: true
+    notes: Независимо просмотренная исходная строка М.Видео; OCR сам по себе не является
+      финансовой приёмкой.
+    ifrs_synonyms:
+      ru:
+      - Итого финансовые расходы
+      en: []
+    rsbu_codes: []
+    source_forms:
+    - notes
+    source_topics:
+    - interest
+    value_kind: flow

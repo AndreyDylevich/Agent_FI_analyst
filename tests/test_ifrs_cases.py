@@ -194,3 +194,21 @@ def test_exact_archive_reuses_pdf_but_does_not_reuse_model_responses(monkeypatch
     out=tmp_path/'out';assert check_ifrs_case.main(['--case','sgzh_balance','--source-archive',str(archive),'--output',str(out)])==0
     r=json.loads((out/'case_check.json').read_text());assert called and r['pdf_origin']=='previously_verified_archive' and r['source_pdf_downloaded_this_run'] is False
     assert (out/'pdf'/f'{digest}.pdf').read_bytes()==content
+
+
+def test_prepare_only_never_accepts_numbers_or_calls_model(monkeypatch,tmp_path):
+    from agent.extract.pdf_text import PDFText,Page
+    reference=json.loads((check_ifrs_case.CATALOG.parent/'mvid_h1_2026_balance_reference.json').read_text())
+    monkeypatch.setattr(check_ifrs_case,'download_pdf',lambda *args:SimpleNamespace(sha256=reference['pdf_sha256'],path='scan.pdf'))
+    calls=[]
+    def read(path,**kwargs):
+        calls.append(kwargs);return PDFText(reference['pdf_sha256'],(Page(6,'Отчет о прибылях и убытках','ocr'),))
+    def no_model(*args):raise AssertionError('Подготовка не должна обращаться к модели или БД')
+    monkeypatch.setattr(check_ifrs_case,'read_pdf',read);monkeypatch.setattr(check_ifrs_case,'extract_main',no_model)
+    out=tmp_path/'out'
+    assert check_ifrs_case.main(['--case','mvid_balance','--prepare-text-only','--output',str(out)])==0
+    report=json.loads((out/'case_check.json').read_text())
+    assert report['text_preparation_ok'] and not report['ok'] and not report['financial_values_verified']
+    assert not report['fresh_gigachat_acceptance'] and report['provider_requests']==0
+    assert calls==[{'use_ocr':True,'max_ocr_pages':50}]
+    assert (out/'pages.json').is_file() and (out/'selection.json').is_file() and not (out/'check.db').exists()

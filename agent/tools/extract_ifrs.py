@@ -10,6 +10,7 @@ from pathlib import Path
 from agent import config, db
 from agent.extract.llm import CA_PATH, GigaChatProvider, ProviderError
 from agent.extract.pdf_text import HEADINGS, read_pdf
+from agent.extract.ocr_transcript import apply_reviewed_ocr_punctuation
 from agent.extract.pipeline import extract_pdf
 from agent.extract.store import store_extraction
 from agent.metrics.data import load_facts
@@ -63,6 +64,9 @@ def main(argv: list[str] | None = None) -> int:
               'cached_only':args.cached_only}
     try:
         text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages,ocr_dpi=args.ocr_dpi)
+        if args.ocr:
+            (args.output/'ocr_original_pages.json').write_text(json.dumps(asdict(text),ensure_ascii=False,indent=2)+'\n')
+            text = apply_reviewed_ocr_punctuation(text)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
         manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
         with manager as provider:

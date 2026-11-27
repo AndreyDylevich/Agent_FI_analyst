@@ -282,7 +282,7 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
     tasks=divided
     planned_tasks=[]
     for target,subset,form in tasks:
-        plan=observation_plan(subset,period)
+        plan=[] if reviewed_document and all(key in known_items for key in subset) else observation_plan(subset,period)
         if reviewed_document and all(key in known_items for key in subset):
             target_set = {p.number for p in target}
             plan = []
