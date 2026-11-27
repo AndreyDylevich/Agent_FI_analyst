@@ -282,7 +282,7 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
     tasks=divided
     planned_tasks=[]
     for target,subset,form in tasks:
-        plan=observation_plan(subset,period)
+        plan=[] if reviewed_document and all(key in known_items for key in subset) else observation_plan(subset,period)
         if reviewed_document and all(key in known_items for key in subset):
             target_set = {p.number for p in target}
             plan = []
@@ -292,6 +292,8 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                 row = {k: source[k] for k in ('item_id', 'period_start', 'period_end', 'period_type', 'column_header')}
                 row.update(source_row_hints=[source['evidence']],
                            expected_cash_flow_section=source['cash_flow_section'])
+                if source.get('raw_sign'):
+                    row['expected_raw_sign'] = source['raw_sign']
                 for key in ('owner_column', 'original_name_hints', 'source_absent', 'unit_evidence'):
                     if key in source:
                         row[key] = source[key]
