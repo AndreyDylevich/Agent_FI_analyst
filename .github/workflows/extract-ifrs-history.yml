@@ -84,7 +84,11 @@ jobs:
             exit $?
           fi
           ocr_args=()
-          if [ "$HISTORY_TICKER" = MVID ]; then ocr_args=(--ocr --max-ocr-pages 12); fi
+          if [ "$HISTORY_TICKER" = MVID ]; then
+            ocr_pages=12
+            if [ "$HISTORY_PROFILE" = income_cash ]; then ocr_pages=20; fi
+            ocr_args=(--ocr --max-ocr-pages "$ocr_pages")
+          fi
           python -m agent.tools.extract_ifrs_history --ticker "$HISTORY_TICKER" --year "$HISTORY_YEAR" \
             --db validation/history/check.db --output validation/history/report \
             --forms-profile "$HISTORY_PROFILE" "${ocr_args[@]}" "${archive_args[@]}"

@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "ticker": "MTSS",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "reviewed": true,
+      "reviewer": "Codex: адресный просмотр раскрытий 27.11.2026",
+      "reason": "IAS 34 и историческая стоимость с исключениями годового выпуска; существенное выбытие/обратная аренда БИК и банковский бизнес требуют отдельных мостов. Применение IFRS 18 в просмотренной политике не раскрыто; оно не выводится из года.",
+      "ocr_visual_review_confirmed": false,
+      "evidence": {
+        "basis": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 60
+          },
+          "contains": [
+            "МСФО (IAS) 34",
+            "исторической стоимости"
+          ]
+        },
+        "policy": {
+          "topic": "accounting_policy",
+          "address": {
+            "page": 13,
+            "start_line": 24,
+            "end_line": 46
+          },
+          "contains": [
+            "соответствуют",
+            "годовой эффективной ставки налога",
+            "Поправки не оказали влияния"
+          ]
+        },
+        "perimeter_bik": {
+          "topic": "perimeter",
+          "address": {
+            "page": 13,
+            "start_line": 49,
+            "end_line": 66
+          },
+          "contains": [
+            "БИК",
+            "совместное предприятие"
+          ]
+        },
+        "bank_definition": {
+          "topic": "perimeter",
+          "address": {
+            "page": 15,
+            "start_line": 22,
+            "end_line": 35
+          },
+          "contains": [
+            "Финансовые технологии",
+            "банковских услуг"
+          ]
+        },
+        "restated_segments": {
+          "topic": "restatement",
+          "address": {
+            "page": 15,
+            "start_line": 68,
+            "end_line": 69
+          },
+          "contains": [
+            "2025",
+            "реструктуризац"
+          ]
+        },
+        "lease": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "contains": [
+            "Погашение основной суммы обязательств по аренде"
+          ]
+        },
+        "interest_operating": {
+          "topic": "cash_flow",
+          "address": {
+            "page": 10,
+            "start_line": 40,
+            "end_line": 46
+          },
+          "contains": [
+            "Проценты полученные",
+            "Уплаченные проценты",
+            "операционной"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ias34",
+        "evidence_ids": [
+          "basis"
+        ]
+      },
+      "policy_changes": [
+        {
+          "description": "Ожидаемая годовая эффективная ставка налога; раскрытые поправки без влияния. Это не доказательство сопоставимости всех исторических окон.",
+          "evidence_ids": [
+            "policy"
+          ]
+        }
+      ],
+      "perimeter_events": [
+        {
+          "description": "После сделки БИК учитывается как совместное предприятие; доля владения сама по себе не доказывает контроль. Группа также включает Финтех/банковские услуги.",
+          "evidence_ids": [
+            "perimeter_bik",
+            "bank_definition"
+          ]
+        }
+      ],
+      "comparative_presentation": [
+        {
+          "description": "Сравнительные сегментные показатели пересчитаны из-за реструктуризации; старые источники автоматически не заменяются.",
+          "evidence_ids": [
+            "restated_segments"
+          ]
+        }
+      ],
+      "ifrs16": {
+        "lease_payment_definition": "principal_explicit",
+        "evidence_ids": [
+          "lease"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": [
+        {
+          "item_id": "interest_paid",
+          "section": "operating",
+          "evidence_ids": [
+            "interest_operating"
+          ]
+        },
+        {
+          "item_id": "cf_interest_received",
+          "section": "operating",
+          "evidence_ids": [
+            "interest_operating"
+          ]
+        }
+      ],
+      "page_text_sha256": {
+        "10": "9c81730f91b39bce33762da92ab7ea3c0b80c6d0618b25ccaf7d3ccdcc713c20",
+        "11": "e2be30ea198122cfb4e82a314489a6778edec1c29fb6d762bd97ffc890fd953d",
+        "12": "aba21359f4cdcbc400a83776e39c3ec185add465cc081b01ebc5ee73bfe2909e",
+        "13": "f8a05a22544dbf7e451c87f75b73701f5878d9e036fb0753dc3ed49e685d2b9e",
+        "15": "7207409e40ae482a96c44e1c743dd6e3d6354007f59ef046c0b491684e2814be"
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "ticker": "SGZH",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "reviewed": true,
+      "reviewer": "Codex: адресный просмотр раскрытий 27.11.2026",
+      "reason": "Текущий промежуточный выпуск заявляет IAS 34; одинаковые политики с годовым выпуском не заменяют отдельной проверки специальной основы годовых PDF и сравнительного периметра.",
+      "ocr_visual_review_confirmed": false,
+      "evidence": {
+        "basis": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 9,
+            "start_line": 32,
+            "end_line": 46
+          },
+          "contains": [
+            "МСФО (IAS) 34",
+            "учетные политики"
+          ]
+        },
+        "policy": {
+          "topic": "accounting_policy",
+          "address": {
+            "page": 10,
+            "start_line": 41,
+            "end_line": 51
+          },
+          "contains": [
+            "те же принципы учетной политики",
+            "ожидаемой годовой ставки налога"
+          ]
+        },
+        "perimeter": {
+          "topic": "perimeter",
+          "address": {
+            "page": 9,
+            "start_line": 24,
+            "end_line": 29
+          },
+          "contains": [
+            "существенным образом не изменились"
+          ]
+        },
+        "restated_segments": {
+          "topic": "restatement",
+          "address": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 30
+          },
+          "contains": [
+            "2025",
+            "скорректирована"
+          ]
+        },
+        "lease": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 8,
+            "start_line": 55,
+            "end_line": 55
+          },
+          "contains": [
+            "Платежи по обязательствам по аренде"
+          ]
+        },
+        "interest_paid": {
+          "topic": "cash_flow",
+          "address": {
+            "page": 8,
+            "start_line": 34,
+            "end_line": 39
+          },
+          "contains": [
+            "Проценты уплаченные",
+            "операционной"
+          ]
+        },
+        "interest_received": {
+          "topic": "cash_flow",
+          "address": {
+            "page": 8,
+            "start_line": 40,
+            "end_line": 48
+          },
+          "contains": [
+            "Проценты полученные",
+            "инвестиционной"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ias34",
+        "evidence_ids": [
+          "basis"
+        ]
+      },
+      "policy_changes": [
+        {
+          "description": "Исключение для оценки годовой налоговой ставки; раскрытые поправки без существенного влияния.",
+          "evidence_ids": [
+            "policy"
+          ]
+        }
+      ],
+      "perimeter_events": [
+        {
+          "description": "Раскрыто отсутствие существенных изменений значительных предприятий относительно конца предыдущего года. Это не полный мост двенадцати месяцев между двумя H1.",
+          "evidence_ids": [
+            "perimeter"
+          ]
+        }
+      ],
+      "comparative_presentation": [
+        {
+          "description": "Сравнительная сегментная информация пересчитана под новую структуру управления; группы и дочерние направления различаются.",
+          "evidence_ids": [
+            "restated_segments"
+          ]
+        }
+      ],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": [
+        {
+          "item_id": "interest_paid",
+          "section": "operating",
+          "evidence_ids": [
+            "interest_paid"
+          ]
+        },
+        {
+          "item_id": "cf_interest_received",
+          "section": "investing",
+          "evidence_ids": [
+            "interest_received"
+          ]
+        }
+      ],
+      "page_text_sha256": {
+        "8": "9a7cc83cc66dbf6e55664fcb23bd1999cde7964e2f3209e19ab64c5d3db2357e",
+        "9": "5035a5e1c1ab010c4880dd12d3946450de16dd2fdd002a7724244c089a78b127",
+        "10": "1afad0f1c929b948a164dc775227809203b4d4905c716c4311b277001a827dd6",
+        "12": "ffd5a4907bef131dae09b5aef977c57b8d14545c6bcf5b6eb63da0ba726fc798"
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "ticker": "MVID",
+      "report_start": "2026-01-01",
+      "report_end": "2026-06-30",
+      "report_kind": "H1",
+      "reviewed": true,
+      "reviewer": "Codex: адресный просмотр раскрытий 27.11.2026",
+      "reason": "Просмотрены оригинальные OCR-страницы политики 13–14. IFRS 18 не применён досрочно, влияние анализируется; наличие одного сегмента не подтверждает постоянный состав группы во всех сравнительных окнах.",
+      "ocr_visual_review_confirmed": true,
+      "evidence": {
+        "basis": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 3,
+            "start_line": 11,
+            "end_line": 21
+          },
+          "contains": [
+            "МСФО",
+            "34"
+          ]
+        },
+        "policy": {
+          "topic": "accounting_policy",
+          "address": {
+            "page": 13,
+            "start_line": 16,
+            "end_line": 30
+          },
+          "contains": [
+            "соответствуют учетной политике",
+            "не оказали существенного влияния"
+          ]
+        },
+        "one_segment": {
+          "topic": "perimeter",
+          "address": {
+            "page": 14,
+            "start_line": 15,
+            "end_line": 23
+          },
+          "contains": [
+            "единственного операционного сегмента Группы"
+          ]
+        },
+        "ifrs18_not_adopted": {
+          "topic": "ifrs18",
+          "address": {
+            "page": 13,
+            "start_line": 31,
+            "end_line": 38
+          },
+          "contains": [
+            "не применяла досрочно",
+            "МСФО (IFRS) 18"
+          ]
+        },
+        "ifrs18_assessment": {
+          "topic": "ifrs18",
+          "address": {
+            "page": 14,
+            "start_line": 10,
+            "end_line": 13
+          },
+          "contains": [
+            "МСФО (IFRS) 18",
+            "в процессе анализа влияния"
+          ]
+        },
+        "lease": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 9,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "contains": [
+            "Выплаты обязательств по аренде"
+          ]
+        },
+        "interest_paid": {
+          "topic": "cash_flow",
+          "address": {
+            "page": 8,
+            "start_line": 40,
+            "end_line": 46
+          },
+          "contains": [
+            "Уплаченные проценты",
+            "операционной"
+          ]
+        },
+        "interest_received": {
+          "topic": "cash_flow",
+          "address": {
+            "page": 9,
+            "start_line": 17,
+            "end_line": 21
+          },
+          "contains": [
+            "Проценты полученные",
+            "инвестиционной"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ias34",
+        "evidence_ids": [
+          "basis"
+        ]
+      },
+      "policy_changes": [
+        {
+          "description": "Политики/оценки соответствуют годовым, кроме перечисленных новых стандартов без существенного влияния.",
+          "evidence_ids": [
+            "policy"
+          ]
+        }
+      ],
+      "perimeter_events": [
+        {
+          "description": "Для теста обесценения раскрыт единственный операционный сегмент. Состав магазинов/продажи компаний и периметр за весь сравнительный интервал требуют отдельной сверки.",
+          "evidence_ids": [
+            "one_segment"
+          ]
+        }
+      ],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_early_adopted",
+        "evidence_ids": [
+          "ifrs18_not_adopted",
+          "ifrs18_assessment"
+        ],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": [
+        {
+          "item_id": "interest_paid",
+          "section": "operating",
+          "evidence_ids": [
+            "interest_paid"
+          ]
+        },
+        {
+          "item_id": "cf_interest_received",
+          "section": "investing",
+          "evidence_ids": [
+            "interest_received"
+          ]
+        }
+      ],
+      "page_text_sha256": {
+        "3": "c64fb17f2ba0cb769e7c161c59f6cf8d37e2a454f9c70e480c738de14737c041",
+        "8": "4058f6c315e0f6328f1288263beace645a8883560fbacf868ffe75a5f7241181",
+        "9": "de1d2c642c3dcd509945c350695eacf40ff978d1194124b4e372ac9a29ee5450",
+        "13": "eec8a241eb50960f1bb441b0ca73ef653b7a44793215f8e6a77464616b3aa845",
+        "14": "5336634b98ea60b735d0cbaed4b6bc934acae9626b85bf576bdec3de14db4012"
+      }
+    }
+  ]
+}

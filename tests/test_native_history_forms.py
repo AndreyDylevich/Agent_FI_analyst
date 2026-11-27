@@ -75,3 +75,24 @@ def test_history_forms_cannot_accept_wrong_source_column_or_window(tmp_path,chan
  if change=='scope':conn.execute("UPDATE source_values SET scope='segment',segment_name='Other'")
  if change=='protocol':conn.execute("UPDATE meta SET value=value||' ' WHERE key LIKE 'ifrs_extraction:%'")
  assert not tool.verify_history(conn,'MTSS',[entry],{2023:ref},[2023])['ok'];conn.close()
+
+
+def test_three_column_report_opening_cash_uses_flow_column_year_instead_of_key_date(tmp_path):
+ from tests.test_mts_primary_forms import Provider
+ from agent.extract.pipeline import extract_pdf
+ ref,pdf,period,review,facts,checks,statuses,context=inputs('mts_fy2021')
+ for row in ref['rows']:
+  row['original_name']=next(o['original_name_hints'][0] for o in review.observations.values() if (o['item_id'],o['period_start'],o['period_end'])==(row['item_id'],row['start'],row['end']))
+ class Capture(Provider):
+  def __init__(self,ref):super().__init__(ref);self.requests=[]
+  def extract(self,system,text,schema):
+   self.requests.append(json.loads(text.split('\nПовторная проверка')[0]));return super().extract(system,text,schema)
+ provider=Capture(ref);items=config.line_items();selected={o['item_id']:items[o['item_id']] for o in review.observations.values()}
+ run=extract_pdf(pdf,provider,ticker='MTSS',entity_token='МОБИЛЬНЫЕ ТЕЛЕСИСТЕМЫ',period=period,line_items=selected,sections=('income','cash_flow'),output=tmp_path/'out',compact=True,reviewed_catalog=json.loads(tool.CATALOG.read_text()))
+ assert len(run.facts)==41
+ opening=[r for req in provider.requests for r in req['requested_observations'] if r['item_id']=='cf_cash_opening']
+ assert {(r['opening_balance_date'],r['read_value_from_column_year']) for r in opening}=={('2020-12-31','2021'),('2019-12-31','2020')}
+ assert all(r['stock_date_role']=='cash_opening' for r in opening)
+ prior=next(r for r in opening if r['opening_balance_date']=='2019-12-31')
+ assert '<SELECTED_COLUMN> 38,070 </SELECTED_COLUMN>' in prior['reviewed_column_context']['text']
+ assert next(f.value for f in run.facts if f.item_id=='cf_cash_opening' and str(f.end)=='2019-12-31')==38070

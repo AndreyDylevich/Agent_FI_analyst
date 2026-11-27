@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "ticker": "MTSS",
+  "reviewer": "Codex: адресная сверка раскрытий 27.11.2026",
+  "reason": "Изменение контроля над БИК и обратная аренда, а также пересчитанные сравнительные сегменты раскрыты. Полный мост периметра между двумя полугодиями и влияние на определение выручки не принят; автоматический YoY не одобрен.",
+  "decision": "insufficient_data",
+  "scope": "group",
+  "segment_name": null,
+  "item_id": "revenue",
+  "accounting_basis": null,
+  "perimeter_basis": null,
+  "methodology_version": null,
+  "source_context_reviewed": true,
+  "observations": [
+    {
+      "source_id": 42,
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "normalized_value": "370906000000"
+    },
+    {
+      "source_id": 41,
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "normalized_value": "414729000000"
+    }
+  ],
+  "evidence": [
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 12,
+        "start_line": 43,
+        "end_line": 60
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 13,
+        "start_line": 24,
+        "end_line": 46
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "perimeter",
+      "evidence": {
+        "page": 13,
+        "start_line": 49,
+        "end_line": 66
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "perimeter",
+      "evidence": {
+        "page": 15,
+        "start_line": 22,
+        "end_line": 35
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "restatement",
+      "evidence": {
+        "page": 15,
+        "start_line": 68,
+        "end_line": 69
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "ifrs16",
+      "evidence": {
+        "page": 11,
+        "start_line": 16,
+        "end_line": 16
+      }
+    },
+    {
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "topic": "cash_flow",
+      "evidence": {
+        "page": 10,
+        "start_line": 40,
+        "end_line": 46
+      }
+    }
+  ]
+}

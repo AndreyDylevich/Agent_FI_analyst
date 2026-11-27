@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "ticker": "MVID",
+  "reviewer": "Codex: адресная сверка раскрытий 27.11.2026",
+  "reason": "Один операционный сегмент и одинаковая политика с годовым выпуском не доказывают постоянный состав группы на всём интервале сравнения. Финансовая точность OCR принята отдельно; автоматический YoY до сверки периметра не одобрен.",
+  "decision": "insufficient_data",
+  "scope": "group",
+  "segment_name": null,
+  "item_id": "revenue",
+  "accounting_basis": null,
+  "perimeter_basis": null,
+  "methodology_version": null,
+  "source_context_reviewed": true,
+  "observations": [
+    {
+      "source_id": 188,
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "normalized_value": "171233000000"
+    },
+    {
+      "source_id": 187,
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "normalized_value": "108171000000"
+    }
+  ],
+  "evidence": [
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 3,
+        "start_line": 11,
+        "end_line": 21
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 13,
+        "start_line": 16,
+        "end_line": 30
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "perimeter",
+      "evidence": {
+        "page": 14,
+        "start_line": 15,
+        "end_line": 23
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "ifrs18",
+      "evidence": {
+        "page": 13,
+        "start_line": 31,
+        "end_line": 38
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "ifrs18",
+      "evidence": {
+        "page": 14,
+        "start_line": 10,
+        "end_line": 13
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "ifrs16",
+      "evidence": {
+        "page": 9,
+        "start_line": 28,
+        "end_line": 28
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "cash_flow",
+      "evidence": {
+        "page": 8,
+        "start_line": 40,
+        "end_line": 46
+      }
+    },
+    {
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "topic": "cash_flow",
+      "evidence": {
+        "page": 9,
+        "start_line": 17,
+        "end_line": 21
+      }
+    }
+  ]
+}

@@ -8,7 +8,7 @@ from agent.extract.restatements import original_status
 from agent.extract.schemas import _keys, citation
 
 PREFIX='ifrs_comparability_review:'
-TOPICS={'accounting_policy','perimeter','definition','presentation','restatement','ifrs16','ifrs18'}
+TOPICS={'accounting_policy','perimeter','definition','presentation','restatement','ifrs16','ifrs18','cash_flow'}
 FIELDS=('id','company_id','item_id','value','value_norm','unit','currency','period_start','period_end',
         'period_type','standard','scope','segment_name','document_id','check_status','cash_flow_section',
         'location','sha256','url')
@@ -20,7 +20,9 @@ def _source(conn,source_id):
     if not row:
         raise ValueError('Источник отсутствует или заменён пересчитанной версией')
     original_status(conn,row)
-    return {k:row[k] for k in FIELDS}
+    from agent.extract.document_policy import load_document_policies
+    policies=load_document_policies(conn,row['document_id'])
+    return {**{k:row[k] for k in FIELDS},'document_policy_review_ids':sorted(p['meta_key'] for p in policies)}
 
 
 def apply_comparability_review(conn,pdfs,review):
@@ -61,7 +63,7 @@ def apply_comparability_review(conn,pdfs,review):
         raise ValueError('Подтверждение одной даты не является сопоставимостью периодов')
     if len({s['cash_flow_section'] for s in snapshots})!=1:
         raise ValueError('Сравнение смешивает разные классификации денежных потоков')
-    evidence=[];topics=set();covered=set()
+    evidence=[];topics=set();covered=set();topics_by_pdf={}
     if not isinstance(review['evidence'],list) or not review['evidence']:
         raise ValueError('Нужны исходные раскрытия для решения')
     for entry in review['evidence']:
@@ -72,11 +74,18 @@ def apply_comparability_review(conn,pdfs,review):
         proof=citation(entry['evidence'],{p.number:p for p in pdfs[digest].pages},max_lines=80,max_chars=12000)
         evidence.append({'pdf_sha256':digest,'topic':topic,'page':proof.page,'quote':proof.quote,
                          'start_line':proof.start_line,'end_line':proof.end_line})
-        topics.add(topic);covered.add(digest)
+        topics.add(topic);covered.add(digest);topics_by_pdf.setdefault(digest,set()).add(topic)
     if not {s['sha256'] for s in snapshots} <= covered:
         raise ValueError('Не просмотрены раскрытия каждой выбранной версии PDF')
-    if review['decision']=='approved' and not {'accounting_policy','perimeter','definition'} <= topics:
+    if review['decision']=='approved' and any(not {'accounting_policy','perimeter','definition'} <= topics_by_pdf.get(s['sha256'],set()) for s in snapshots):
         raise ValueError('Нужны отдельные подтверждения политики, периметра и определения статьи')
+    if review['decision']=='approved':
+        from agent.extract.document_policy import load_document_policies
+        policies=[p['policy'] for s in snapshots for p in load_document_policies(conn,s['document_id'])]
+        adoptions={p['ifrs18']['adoption'] for p in policies}
+        if 'adopted' in adoptions and adoptions!={'adopted'}:
+            if any(not {'ifrs18','restatement','presentation','cash_flow'}<=topics_by_pdf.get(s['sha256'],set()) for s in snapshots):
+                raise ValueError('Переход IFRS 18 требует отдельной сверки представления, сравнительных данных и ОДДС каждой версии PDF')
     payload={'review':review,'snapshots':snapshots,'evidence':evidence}
     digest=reference_sha256(payload);key=PREFIX+digest
     old=conn.execute('SELECT value FROM meta WHERE key=?',(key,)).fetchone()
@@ -109,17 +118,18 @@ def comparability_for_sources(conn,source_ids):
         review=payload['review']
         if valid and record['decision']=='approved':
             basis={k:review[k] for k in ('accounting_basis','perimeter_basis','methodology_version')}
-            basis.update(comparison_evidence=PREFIX+digest,comparison_issue=None)
+            basis.update(comparison_evidence=PREFIX+digest,comparison_issue=None,comparability_review_ids=(PREFIX+digest,))
         else:
             issue=review['reason'] if valid else 'Решение о сопоставимости устарело: исходный набор/статус изменился'
             basis={'accounting_basis':None,'perimeter_basis':None,'methodology_version':None,
-                   'comparison_evidence':PREFIX+digest,'comparison_issue':issue}
+                   'comparison_evidence':PREFIX+digest,'comparison_issue':issue,'comparability_review_ids':()}
         for source_id in affected:choices.setdefault(source_id,[]).append(basis)
     result={}
     for source_id,decisions in choices.items():
         meanings={(d['accounting_basis'],d['perimeter_basis'],d['methodology_version'],d['comparison_issue']) for d in decisions}
         if len(meanings)>1:
             result[source_id]={'accounting_basis':None,'perimeter_basis':None,'methodology_version':None,
-                               'comparison_evidence':None,'comparison_issue':'Противоречивые решения о сопоставимости: требуется отдельный разбор'}
-        else:result[source_id]=decisions[0]
+                               'comparison_evidence':None,'comparison_issue':'Противоречивые решения о сопоставимости: требуется отдельный разбор','comparability_review_ids':()}
+        else:
+            result[source_id]={**decisions[0],'comparability_review_ids':tuple(sorted({review_id for d in decisions for review_id in d['comparability_review_ids']}))}
     return result

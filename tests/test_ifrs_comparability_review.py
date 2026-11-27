@@ -100,3 +100,43 @@ def test_changed_top_level_decision_cannot_bypass_signed_payload(tmp_path):
  with conn:conn.execute('UPDATE meta SET value=? WHERE key=?',(json.dumps(record),row['key']))
  with pytest.raises(ValueError,match='Контрольная сумма'):calculate(conn)
  conn.close()
+
+
+def test_equal_basis_labels_cannot_stitch_separate_approved_period_pairs(tmp_path):
+ conn,pdf,review=setup(tmp_path);base=facts()[0]
+ extra=tuple(replace(base,item_id='revenue',value=Decimal('90'),normalized=Decimal('90000000'),raw_value='90',
+              start=date(y,1,1),end=date(y,6,30),period_type='H1') for y in (2024,2023))
+ with conn:store_extraction(conn,replace(make_run(),facts=extra,statuses=('проверено_авто',)*2,checks=()),ticker='TEST',name='Test',source_url='https://example.test/a.pdf',period=PERIOD,local_path='a.pdf')
+ sources=list(conn.execute('SELECT * FROM source_values ORDER BY id'));observations={r['period_end']:{'source_id':r['id'],'pdf_sha256':pdf.sha256,'normalized_value':r['value_norm']} for r in sources}
+ for dates in (('2026-06-30','2024-06-30'),('2025-06-30','2023-06-30')):
+  decision={**review,'observations':[observations[d] for d in dates]}
+  with conn:apply_comparability_review(conn,{pdf.sha256:pdf},decision)
+ assert calculate(conn).blocked and 'общим решением' in calculate(conn).result.reason
+ with conn:apply_comparability_review(conn,{pdf.sha256:pdf},review)
+ assert calculate(conn).result.value==20
+ conn.close()
+
+
+def test_each_selected_pdf_requires_policy_perimeter_and_definition_evidence(tmp_path):
+ conn,pdf,review=setup(tmp_path);base=facts()[0];row=replace(base,item_id='revenue',value=Decimal('90'),normalized=Decimal('90000000'),raw_value='90',start=date(2024,1,1),end=date(2024,6,30),period_type='H1')
+ with conn:store_extraction(conn,replace(make_run(),pdf_sha256='b'*64,facts=(row,),statuses=('проверено_авто',),checks=()),ticker='TEST',name='Test',source_url='https://example.test/b.pdf',period=PERIOD.shift_years(-2),local_path='b.pdf')
+ latest=conn.execute('SELECT * FROM source_values ORDER BY id DESC LIMIT 1').fetchone();second=PDFText('b'*64,pdf.pages);review['observations']=[review['observations'][0],{'source_id':latest['id'],'pdf_sha256':second.sha256,'normalized_value':latest['value_norm']}];review['evidence'].append({**review['evidence'][0],'pdf_sha256':second.sha256})
+ with pytest.raises(ValueError,match='подтверждения'):
+  with conn:apply_comparability_review(conn,{pdf.sha256:pdf,second.sha256:second},review)
+ review['evidence'].extend({**entry,'pdf_sha256':second.sha256} for entry in review['evidence'][1:3])
+ with conn:assert apply_comparability_review(conn,{pdf.sha256:pdf,second.sha256:second},review)['decision']=='approved'
+ conn.close()
+
+
+def test_ifrs18_adoption_transition_needs_presentation_restatement_and_cashflow_review(tmp_path,monkeypatch):
+ from agent.extract import document_policy
+ conn,pdf,review=setup(tmp_path);base=facts()[0];row=replace(base,item_id='revenue',value=Decimal('90'),normalized=Decimal('90000000'),raw_value='90',start=date(2024,1,1),end=date(2024,6,30),period_type='H1')
+ with conn:store_extraction(conn,replace(make_run(),pdf_sha256='b'*64,facts=(row,),statuses=('проверено_авто',),checks=()),ticker='TEST',name='Test',source_url='https://example.test/b.pdf',period=PERIOD.shift_years(-2),local_path='b.pdf')
+ source=conn.execute('SELECT * FROM source_values ORDER BY id DESC LIMIT 1').fetchone();second=PDFText('b'*64,pdf.pages);review['observations']=[review['observations'][0],{'source_id':source['id'],'pdf_sha256':second.sha256,'normalized_value':source['value_norm']}];review['evidence'].extend({**entry,'pdf_sha256':second.sha256} for entry in list(review['evidence']))
+ monkeypatch.setattr(document_policy,'load_document_policies',lambda conn,doc:[{'meta_key':f'policy:{doc}','policy':{'ifrs18':{'adoption':'adopted' if doc==source['document_id'] else 'not_early_adopted'}}}])
+ with pytest.raises(ValueError,match='Переход IFRS 18'):
+  with conn:apply_comparability_review(conn,{pdf.sha256:pdf,second.sha256:second},review)
+ for digest in (pdf.sha256,second.sha256):
+  review['evidence'].extend({'pdf_sha256':digest,'topic':topic,'evidence':{'page':1,'start_line':1,'end_line':3}} for topic in ('ifrs18','restatement','presentation','cash_flow'))
+ with conn:assert apply_comparability_review(conn,{pdf.sha256:pdf,second.sha256:second},review)['decision']=='approved'
+ conn.close()

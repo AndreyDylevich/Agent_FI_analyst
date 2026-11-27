@@ -69,6 +69,7 @@ class Fact:
     methodology_version: str | None = None
     comparison_evidence: str | None = None
     comparison_issue: str | None = None
+    comparability_review_ids: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not isinstance(self.value, Decimal) or not self.value.is_finite():
@@ -208,6 +209,12 @@ class Engine:
                     reasons.append(f'{item}: различается {field}')
             if any(not fact.comparison_evidence or not fact.comparison_evidence.strip() for fact in observations):
                 reasons.append(f'{item}: нет источника подтверждения сопоставимости')
+            review_sets=[set(fact.comparability_review_ids) for fact in observations]
+            if any(review_sets):
+                if not set.intersection(*review_sets):
+                    reasons.append(f'{item}: выбранные периоды не подтверждены одним общим решением о сопоставимости')
+            elif len({fact.comparison_evidence for fact in observations})>1:
+                reasons.append(f'{item}: нет общего источника подтверждения выбранных периодов')
         return ('Сопоставимость периодов МСФО не подтверждена: '+'; '.join(reasons)) if reasons else None
 
     def _prepare_input(self, definition: MetricDef, name: str, rule: PeriodRule, period: Period) -> Prepared:

@@ -25,7 +25,7 @@ def run_batch(entries, output: Path, database: Path, *, archive: Path | None = N
         if archive:command.extend(['--archive',str(archive)])
         if forms_profile!='balance':command.extend(['--forms-profile',forms_profile])
         if prepare_text_only:command.append('--prepare-text-only')
-        if entry['ticker']=='MVID':command.extend(['--ocr','--max-ocr-pages','12'])
+        if entry['ticker']=='MVID':command.extend(['--ocr','--max-ocr-pages','20' if forms_profile=='income_cash' else '12'])
         try:
             code=runner(command)
             result=json.loads((folder/'history_extraction_check.json').read_text())

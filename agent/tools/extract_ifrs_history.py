@@ -51,6 +51,7 @@ def main(argv=None):
     if args.forms_profile=='income_cash':
         if args.item or args.sections!=['balance']:parser.error('Профиль форм нельзя смешивать с --item/--sections')
         args.sections=['income','cash_flow'];args.item=list(INCOME_CASH_ITEMS)
+        if args.ocr and args.max_ocr_pages==12:args.max_ocr_pages=20
     if args.db.resolve()==db.DB_PATH.resolve():parser.error('Для первичной истории нужна отдельная проверочная БД')
     if args.output.exists() and any(args.output.iterdir()):parser.error('Нужен новый/пустой каталог ответов')
     if args.cached_only and not args.reuse_from:parser.error('--cached-only требует --reuse-from')

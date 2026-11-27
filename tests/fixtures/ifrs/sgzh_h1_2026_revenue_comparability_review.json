@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "ticker": "SGZH",
+  "reviewer": "Codex: адресная сверка раскрытий 27.11.2026",
+  "reason": "Отсутствие существенных изменений значительных предприятий с конца предыдущего года не подтверждает весь интервал между H1 2025 и H1 2026. Сегментные сравнения скорректированы, основа годовых выпусков специального назначения требует отдельной сверки; автоматический YoY не одобрен.",
+  "decision": "insufficient_data",
+  "scope": "group",
+  "segment_name": null,
+  "item_id": "revenue",
+  "accounting_basis": null,
+  "perimeter_basis": null,
+  "methodology_version": null,
+  "source_context_reviewed": true,
+  "observations": [
+    {
+      "source_id": 167,
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "normalized_value": "44835000000"
+    },
+    {
+      "source_id": 166,
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "normalized_value": "37984000000"
+    }
+  ],
+  "evidence": [
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 9,
+        "start_line": 32,
+        "end_line": 46
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 10,
+        "start_line": 41,
+        "end_line": 51
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "perimeter",
+      "evidence": {
+        "page": 9,
+        "start_line": 24,
+        "end_line": 29
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "restatement",
+      "evidence": {
+        "page": 12,
+        "start_line": 28,
+        "end_line": 30
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "ifrs16",
+      "evidence": {
+        "page": 8,
+        "start_line": 55,
+        "end_line": 55
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "cash_flow",
+      "evidence": {
+        "page": 8,
+        "start_line": 34,
+        "end_line": 39
+      }
+    },
+    {
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "topic": "cash_flow",
+      "evidence": {
+        "page": 8,
+        "start_line": 40,
+        "end_line": 48
+      }
+    }
+  ]
+}
