@@ -69,8 +69,9 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
         proof = citation(source['evidence'], pages)
         if str(proof.page) not in profile['page_text_sha256']:
             raise ValueError('Страница наблюдения не имеет проверенного SHA256 текста')
-        if pages[proof.page].method != 'native':
-            raise ValueError('Эта версия структуры допускает только нативный текст; OCR требует отдельной приёмки')
+        if pages[proof.page].method != 'native' and not (
+                pages[proof.page].method == 'ocr' and profile.get('ocr_structure_reviewed') is True):
+            raise ValueError('OCR требует отдельного подтверждения структуры; финансовая приёмка остаётся независимой')
         section = source['cash_flow_section']
         if section is not None and (items[item]['statement'] != 'cash_flow' or start is None
                                     or section not in ('operating', 'investing', 'financing', 'mixed')):
@@ -88,6 +89,14 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
                         (not name.strip() and re.search(r'[A-Za-zА-Яа-яЁё]', proof.quote)) or
                         normalized_text(name).casefold() not in normalized_text(proof.quote).casefold()):
                     raise ValueError('Подсказка подписи не подтверждена проверенной строкой')
+        if source.get('value_column'):
+            column = source['value_column']
+            if (set(column) != {'line', 'start_char', 'end_char'}
+                    or any(type(v) is not int for v in column.values())
+                    or not source['evidence']['start_line'] <= column['line'] <= source['evidence']['end_line']
+                    or not 1 <= column['start_char'] <= column['end_char'] <= 24000
+                    or column['start_char'] > len(pages[proof.page].text.splitlines()[column['line']-1])):
+                raise ValueError('Неверный адрес проверенной денежной колонки')
         observations[alias] = {**source, 'start': start, 'end': end}
     if not observations:
         raise ValueError('Пустой выпуск не является проверкой извлечения')
@@ -156,3 +165,20 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
                             {'pdf_sha256': pdf.sha256, 'plan_sha256': digest, 'reviewer': profile['reviewer'],
                              'source_structure_reviewed': True, 'number_format': profile['number_format']},
                             tuple(profile.get('unavailable_checks', [])))
+
+
+def validate_reviewed_columns(facts, review: ReviewedDocument, pages) -> None:
+    """Проверяет возвращённый моделью токен внутри просмотренной колонки; не извлекает суммы."""
+    by_page = {p.number:p for p in pages}
+    for fact in facts:
+        found = [o for o in review.observations.values() if o['item_id'] == fact.item_id
+                 and o['statement'] == fact.statement and o['start'] == fact.start and o['end'] == fact.end]
+        if len(found) != 1 or not found[0].get('value_column'):
+            continue
+        source = found[0]; column = source['value_column']
+        line = by_page[source['evidence']['page']].text.splitlines()[column['line']-1]
+        selected = normalized_text(line[column['start_char']-1:column['end_char']])
+        if not re.search(r'(?<![\w.,])' + re.escape(normalized_text(fact.raw_value)) + r'(?![\w.,])', selected):
+            raise ValueError(f'{fact.item_id}: число взято из другой колонки; нужна {source.get("owner_column", "проверенная колонка")} '
+                             f'в символах {column["start_char"]}–{column["end_char"]} строки {column["line"]}. '
+                             'Не меняй число для равенства; выбери исходный токен нужного владельца/всей группы.')

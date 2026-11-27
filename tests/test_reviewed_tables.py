@@ -79,3 +79,25 @@ def test_compiled_identity_uses_all_three_exact_sources():
  assert c.result.status=='пройдено' and c.result.delta==0 and set(statuses)=={'проверено_авто'}
  checks,_=validate_financials((facts[0],facts[2]),reviewed_document=review)
  assert next(c for c in checks if c.rule=='complete_cash_bridge').result.status=='недостаточно_данных'
+
+
+def test_wrong_owner_value_cannot_be_proven_by_another_column():
+ from agent.checks.reviewed_tables import validate_reviewed_columns
+ from tests.test_ifrs_statements import source
+ pdf,catalog=inputs();profile=catalog['documents'][0]
+ text='Проверка\nНачало 100\nДвижение 20 30\nКонец 120'
+ pdf=replace(pdf,pages=(Page(2,text),));profile['page_text_sha256']['2']=hashlib.sha256(text.encode()).hexdigest()
+ profile['observations']['movement']['value_column']={'line':3,'start_char':13,'end_char':14}
+ profile['observations']['movement']['owner_column']='Итого, последняя колонка'
+ review=compile_reviewed_tables(pdf,PERIOD,catalog)
+ correct=source('cf_other_cash_changes','30','2026-01-01','2026-06-30','cash_flow')
+ validate_reviewed_columns((correct,),review,pdf.pages)
+ wrong=source('cf_other_cash_changes','20','2026-01-01','2026-06-30','cash_flow')
+ with pytest.raises(ValueError,match='другой колонки'):validate_reviewed_columns((wrong,),review,pdf.pages)
+
+
+def test_ocr_structure_requires_review_and_never_grants_financial_approval():
+ pdf,catalog=inputs();pdf=replace(pdf,pages=(replace(pdf.pages[0],method='ocr'),))
+ with pytest.raises(ValueError,match='OCR'):compile_reviewed_tables(pdf,PERIOD,catalog)
+ catalog['documents'][0]['ocr_structure_reviewed']=True
+ assert compile_reviewed_tables(pdf,PERIOD,catalog).basis['source_structure_reviewed']

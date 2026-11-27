@@ -5429,12 +5429,17 @@
           "original_name_hints": [
             "Чистый убыток и совокупный расход за период"
           ],
-          "owner_column": "Итого капитал",
+          "owner_column": "Итого капитал: самая правая, седьмая денежная колонка ПОСЛЕ неконтролирующих долей; НЕ капитал акционеров и НЕ накопленный убыток",
           "source_absent": false,
           "unit_evidence": {
             "page": 7,
             "start_line": 5,
             "end_line": 5
+          },
+          "value_column": {
+            "line": 20,
+            "start_char": 185,
+            "end_char": 220
           }
         },
         "equity_eq_profit_total__2025_06_30": {
@@ -5453,12 +5458,17 @@
           "original_name_hints": [
             "Чистый убыток и совокупный расход за период"
           ],
-          "owner_column": "Итого капитал",
+          "owner_column": "Итого капитал: самая правая, седьмая денежная колонка ПОСЛЕ неконтролирующих долей; НЕ капитал акционеров и НЕ накопленный убыток",
           "source_absent": false,
           "unit_evidence": {
             "page": 7,
             "start_line": 5,
             "end_line": 5
+          },
+          "value_column": {
+            "line": 13,
+            "start_char": 185,
+            "end_char": 220
           }
         },
         "equity_eq_profit_parent__2026_06_30": {
@@ -6531,12 +6541,17 @@
           "original_name_hints": [
             "На 31 декабря 202    5 года"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 56,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_opening__2024_12_31": {
@@ -6555,12 +6570,17 @@
           "original_name_hints": [
             "На 31 декабря 2024 года"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 47,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_contract_changes__2026_06_30": {
@@ -6579,12 +6599,17 @@
           "original_name_hints": [
             "Поступление/модификация договоров"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 57,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_contract_changes__2025_06_30": {
@@ -6603,12 +6628,17 @@
           "original_name_hints": [
             "Поступление/модификация договоров"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 48,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_other_additions__2026_06_30": {
@@ -6627,12 +6657,17 @@
           "original_name_hints": [
             "Прочие поступления"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 58,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_other_additions__2025_06_30": {
@@ -6651,12 +6686,17 @@
           "original_name_hints": [
             "Прочие поступления"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 49,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_da_movement__2026_06_30": {
@@ -6675,12 +6715,17 @@
           "original_name_hints": [
             "Амортизация"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 59,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_da_movement__2025_06_30": {
@@ -6699,12 +6744,17 @@
           "original_name_hints": [
             "Амортизация"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 50,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_impairment__2026_06_30": {
@@ -6720,7 +6770,7 @@
             "start_line": 56,
             "end_line": 61
           },
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": true,
           "unit_evidence": {
             "page": 19,
@@ -6744,12 +6794,17 @@
           "original_name_hints": [
             "Обесценение"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 51,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_hfs_transfer__2026_06_30": {
@@ -6765,7 +6820,7 @@
             "start_line": 56,
             "end_line": 61
           },
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": true,
           "unit_evidence": {
             "page": 19,
@@ -6789,12 +6844,17 @@
           "original_name_hints": [
             "Переведено в состав активов, предназначенных для продажи"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 53,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_disposals__2026_06_30": {
@@ -6813,12 +6873,17 @@
           "original_name_hints": [
             "Выбытие"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 60,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_disposals__2025_06_30": {
@@ -6837,12 +6902,17 @@
           "original_name_hints": [
             "Выбытие"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 54,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_closing__2026_06_30": {
@@ -6861,12 +6931,17 @@
           "original_name_hints": [
             "На 30 июня 202    6 года"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 61,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "notes_rou_asset_closing__2025_06_30": {
@@ -6885,12 +6960,17 @@
           "original_name_hints": [
             "На 30 июня 2025 года"
           ],
-          "owner_column": "Итого — вся группа, не отдельные лесные участки/прочее",
+          "owner_column": "Итого: самая правая ТРЕТЬЯ сумма ПОСЛЕ колонок Лесные участки и Прочие; НЕ первая сумма лесных участков",
           "source_absent": false,
           "unit_evidence": {
             "page": 19,
             "start_line": 6,
             "end_line": 6
+          },
+          "value_column": {
+            "line": 55,
+            "start_char": 100,
+            "end_char": 130
           }
         },
         "cash_flow_cf_lease_financing_payments__2026_06_30": {
