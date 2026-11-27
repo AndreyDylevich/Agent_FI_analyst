@@ -42,7 +42,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_ppe__2025_12_31": {
           "item_id": "ppe",
@@ -65,7 +66,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_right_of_use_assets__2026_06_30": {
           "item_id": "right_of_use_assets",
@@ -88,7 +90,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_right_of_use_assets__2025_12_31": {
           "item_id": "right_of_use_assets",
@@ -111,7 +114,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_intangible_assets__2026_06_30": {
           "item_id": "intangible_assets",
@@ -134,7 +138,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_intangible_assets__2025_12_31": {
           "item_id": "intangible_assets",
@@ -157,7 +162,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_goodwill__2026_06_30": {
           "item_id": "goodwill",
@@ -180,7 +186,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_goodwill__2025_12_31": {
           "item_id": "goodwill",
@@ -203,7 +210,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_associate_investments__2026_06_30": {
           "item_id": "balance_associate_investments",
@@ -226,7 +234,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_associate_investments__2025_12_31": {
           "item_id": "balance_associate_investments",
@@ -249,7 +258,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_deferred_tax_assets__2026_06_30": {
           "item_id": "balance_deferred_tax_assets",
@@ -272,7 +282,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_deferred_tax_assets__2025_12_31": {
           "item_id": "balance_deferred_tax_assets",
@@ -295,7 +306,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_noncurrent_advances__2026_06_30": {
           "item_id": "balance_noncurrent_advances",
@@ -318,7 +330,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_noncurrent_advances__2025_12_31": {
           "item_id": "balance_noncurrent_advances",
@@ -341,7 +354,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_other_noncurrent_assets__2026_06_30": {
           "item_id": "balance_other_noncurrent_assets",
@@ -364,7 +378,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_other_noncurrent_assets__2025_12_31": {
           "item_id": "balance_other_noncurrent_assets",
@@ -387,7 +402,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_current_assets__2026_06_30": {
           "item_id": "non_current_assets",
@@ -410,7 +426,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_current_assets__2025_12_31": {
           "item_id": "non_current_assets",
@@ -433,7 +450,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_inventories__2026_06_30": {
           "item_id": "inventories",
@@ -456,7 +474,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_inventories__2025_12_31": {
           "item_id": "inventories",
@@ -479,7 +498,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_vat_and_tax_prepayments__2026_06_30": {
           "item_id": "balance_vat_and_tax_prepayments",
@@ -502,7 +522,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_vat_and_tax_prepayments__2025_12_31": {
           "item_id": "balance_vat_and_tax_prepayments",
@@ -525,7 +546,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_income_tax_prepayments__2026_06_30": {
           "item_id": "balance_income_tax_prepayments",
@@ -548,7 +570,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_income_tax_prepayments__2025_12_31": {
           "item_id": "balance_income_tax_prepayments",
@@ -571,7 +594,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_current_advances_and_other__2026_06_30": {
           "item_id": "balance_current_advances_and_other",
@@ -594,7 +618,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_current_advances_and_other__2025_12_31": {
           "item_id": "balance_current_advances_and_other",
@@ -617,7 +642,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_cash_and_equivalents__2026_06_30": {
           "item_id": "cash_and_equivalents",
@@ -640,7 +666,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_cash_and_equivalents__2025_12_31": {
           "item_id": "cash_and_equivalents",
@@ -663,7 +690,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_current_assets__2026_06_30": {
           "item_id": "current_assets",
@@ -686,7 +714,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_current_assets__2025_12_31": {
           "item_id": "current_assets",
@@ -709,7 +738,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_total_assets__2026_06_30": {
           "item_id": "total_assets",
@@ -732,7 +762,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_total_assets__2025_12_31": {
           "item_id": "total_assets",
@@ -755,7 +786,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_share_capital__2026_06_30": {
           "item_id": "balance_share_capital",
@@ -778,7 +810,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_share_capital__2025_12_31": {
           "item_id": "balance_share_capital",
@@ -801,7 +834,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_additional_capital__2026_06_30": {
           "item_id": "balance_additional_capital",
@@ -824,7 +858,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_additional_capital__2025_12_31": {
           "item_id": "balance_additional_capital",
@@ -847,7 +882,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_retained_losses__2026_06_30": {
           "item_id": "balance_retained_losses",
@@ -870,7 +906,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_balance_retained_losses__2025_12_31": {
           "item_id": "balance_retained_losses",
@@ -893,7 +930,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_balance_accumulated_oci__2026_06_30": {
           "item_id": "balance_accumulated_oci",
@@ -916,7 +954,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_balance_accumulated_oci__2025_12_31": {
           "item_id": "balance_accumulated_oci",
@@ -939,7 +978,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_equity_parent__2026_06_30": {
           "item_id": "equity_parent",
@@ -962,7 +1002,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_equity_parent__2025_12_31": {
           "item_id": "equity_parent",
@@ -985,7 +1026,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_controlling_interests__2026_06_30": {
           "item_id": "non_controlling_interests",
@@ -1008,7 +1050,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_controlling_interests__2025_12_31": {
           "item_id": "non_controlling_interests",
@@ -1031,7 +1074,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_equity_total__2026_06_30": {
           "item_id": "equity_total",
@@ -1054,7 +1098,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "balance_equity_total__2025_12_31": {
           "item_id": "equity_total",
@@ -1077,7 +1122,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_debt_long_term__2026_06_30": {
           "item_id": "debt_long_term",
@@ -1100,7 +1146,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_debt_long_term__2025_12_31": {
           "item_id": "debt_long_term",
@@ -1123,7 +1170,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_lease_liabilities_long__2026_06_30": {
           "item_id": "lease_liabilities_long",
@@ -1146,7 +1194,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_lease_liabilities_long__2025_12_31": {
           "item_id": "lease_liabilities_long",
@@ -1169,7 +1218,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_deferred_tax_liabilities__2026_06_30": {
           "item_id": "balance_deferred_tax_liabilities",
@@ -1192,7 +1242,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_deferred_tax_liabilities__2025_12_31": {
           "item_id": "balance_deferred_tax_liabilities",
@@ -1215,7 +1266,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_other_noncurrent_liabilities__2026_06_30": {
           "item_id": "balance_other_noncurrent_liabilities",
@@ -1238,7 +1290,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_other_noncurrent_liabilities__2025_12_31": {
           "item_id": "balance_other_noncurrent_liabilities",
@@ -1261,7 +1314,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_current_liabilities__2026_06_30": {
           "item_id": "non_current_liabilities",
@@ -1284,7 +1338,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_non_current_liabilities__2025_12_31": {
           "item_id": "non_current_liabilities",
@@ -1307,7 +1362,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_debt_short_term__2026_06_30": {
           "item_id": "debt_short_term",
@@ -1330,7 +1386,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_debt_short_term__2025_12_31": {
           "item_id": "debt_short_term",
@@ -1353,7 +1410,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_option_liabilities__2026_06_30": {
           "item_id": "balance_option_liabilities",
@@ -1376,7 +1434,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_option_liabilities__2025_12_31": {
           "item_id": "balance_option_liabilities",
@@ -1399,7 +1458,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_trade_and_other_payables__2026_06_30": {
           "item_id": "balance_trade_and_other_payables",
@@ -1422,7 +1482,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_trade_and_other_payables__2025_12_31": {
           "item_id": "balance_trade_and_other_payables",
@@ -1445,7 +1506,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_lease_liabilities_short__2026_06_30": {
           "item_id": "lease_liabilities_short",
@@ -1468,7 +1530,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_lease_liabilities_short__2025_12_31": {
           "item_id": "lease_liabilities_short",
@@ -1491,7 +1554,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_provisions__2026_06_30": {
           "item_id": "balance_provisions",
@@ -1514,7 +1578,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_provisions__2025_12_31": {
           "item_id": "balance_provisions",
@@ -1537,7 +1602,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_taxes_payable__2026_06_30": {
           "item_id": "balance_taxes_payable",
@@ -1560,7 +1626,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_taxes_payable__2025_12_31": {
           "item_id": "balance_taxes_payable",
@@ -1583,7 +1650,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_income_tax_payable__2026_06_30": {
           "item_id": "balance_income_tax_payable",
@@ -1606,7 +1674,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_income_tax_payable__2025_12_31": {
           "item_id": "balance_income_tax_payable",
@@ -1629,7 +1698,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_advances_received__2026_06_30": {
           "item_id": "balance_advances_received",
@@ -1652,7 +1722,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_advances_received__2025_12_31": {
           "item_id": "balance_advances_received",
@@ -1675,7 +1746,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_current_liabilities__2026_06_30": {
           "item_id": "current_liabilities",
@@ -1698,7 +1770,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_current_liabilities__2025_12_31": {
           "item_id": "current_liabilities",
@@ -1721,7 +1794,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_total_equity_and_liabilities__2026_06_30": {
           "item_id": "total_equity_and_liabilities",
@@ -1744,7 +1818,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_total_equity_and_liabilities__2025_12_31": {
           "item_id": "total_equity_and_liabilities",
@@ -1767,7 +1842,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_receivables_and_delivery_costs__2026_06_30": {
           "item_id": "balance_receivables_and_delivery_costs",
@@ -1790,7 +1866,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "balance_balance_receivables_and_delivery_costs__2025_12_31": {
           "item_id": "balance_receivables_and_delivery_costs",
@@ -1813,7 +1890,8 @@
             "page": 6,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_revenue__2026_06_30": {
           "item_id": "revenue",
@@ -1836,7 +1914,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_revenue__2025_06_30": {
           "item_id": "revenue",
@@ -1859,7 +1938,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_cost_of_sales__2026_06_30": {
           "item_id": "cost_of_sales",
@@ -1882,7 +1962,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_cost_of_sales__2025_06_30": {
           "item_id": "cost_of_sales",
@@ -1905,7 +1986,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_selling_admin_expenses_combined__2026_06_30": {
           "item_id": "selling_admin_expenses_combined",
@@ -1928,7 +2010,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_selling_admin_expenses_combined__2025_06_30": {
           "item_id": "selling_admin_expenses_combined",
@@ -1951,7 +2034,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_reorganization_loss__2026_06_30": {
           "item_id": "income_reorganization_loss",
@@ -1994,7 +2078,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_other_operating_income__2026_06_30": {
           "item_id": "income_other_operating_income",
@@ -2017,7 +2102,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_income_other_operating_income__2025_06_30": {
           "item_id": "income_other_operating_income",
@@ -2040,7 +2126,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_operating_profit__2026_06_30": {
           "item_id": "operating_profit",
@@ -2063,7 +2150,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_operating_profit__2025_06_30": {
           "item_id": "operating_profit",
@@ -2086,7 +2174,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_interest_income__2026_06_30": {
           "item_id": "interest_income",
@@ -2109,7 +2198,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_interest_income__2025_06_30": {
           "item_id": "interest_income",
@@ -2132,7 +2222,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_interest_expense__2026_06_30": {
           "item_id": "interest_expense",
@@ -2155,7 +2246,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_interest_expense__2025_06_30": {
           "item_id": "interest_expense",
@@ -2178,7 +2270,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_other_finance_expense__2026_06_30": {
           "item_id": "income_other_finance_expense",
@@ -2201,7 +2294,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_other_finance_expense__2025_06_30": {
           "item_id": "income_other_finance_expense",
@@ -2224,7 +2318,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_fx_result__2026_06_30": {
           "item_id": "income_fx_result",
@@ -2247,7 +2342,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_fx_result__2025_06_30": {
           "item_id": "income_fx_result",
@@ -2270,7 +2366,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_profit_before_tax__2026_06_30": {
           "item_id": "profit_before_tax",
@@ -2293,7 +2390,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_profit_before_tax__2025_06_30": {
           "item_id": "profit_before_tax",
@@ -2316,7 +2414,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_tax_benefit__2026_06_30": {
           "item_id": "income_tax_benefit",
@@ -2339,7 +2438,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_income_tax_benefit__2025_06_30": {
           "item_id": "income_tax_benefit",
@@ -2362,7 +2462,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_net_profit__2026_06_30": {
           "item_id": "net_profit",
@@ -2385,7 +2486,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_net_profit__2025_06_30": {
           "item_id": "net_profit",
@@ -2408,7 +2510,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_net_profit_parent__2026_06_30": {
           "item_id": "net_profit_parent",
@@ -2431,7 +2534,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_net_profit_parent__2025_06_30": {
           "item_id": "net_profit_parent",
@@ -2454,7 +2558,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_net_profit_nci__2026_06_30": {
           "item_id": "net_profit_nci",
@@ -2477,7 +2582,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "income_net_profit_nci__2025_06_30": {
           "item_id": "net_profit_nci",
@@ -2500,7 +2606,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_profit_attribution_total__2026_06_30": {
           "item_id": "income_profit_attribution_total",
@@ -2523,7 +2630,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "income_income_profit_attribution_total__2025_06_30": {
           "item_id": "income_profit_attribution_total",
@@ -2546,7 +2654,8 @@
             "page": 5,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_starting_net_profit__2026_06_30": {
           "item_id": "cf_starting_net_profit",
@@ -2569,7 +2678,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_starting_net_profit__2025_06_30": {
           "item_id": "cf_starting_net_profit",
@@ -2592,7 +2702,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_d_and_a__2026_06_30": {
           "item_id": "d_and_a",
@@ -2615,7 +2726,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_d_and_a__2025_06_30": {
           "item_id": "d_and_a",
@@ -2638,7 +2750,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_interest_income_adjustment__2026_06_30": {
           "item_id": "cf_interest_income_adjustment",
@@ -2661,7 +2774,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_interest_income_adjustment__2025_06_30": {
           "item_id": "cf_interest_income_adjustment",
@@ -2684,7 +2798,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_interest_expense_adjustment__2026_06_30": {
           "item_id": "cf_interest_expense_adjustment",
@@ -2707,7 +2822,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_interest_expense_adjustment__2025_06_30": {
           "item_id": "cf_interest_expense_adjustment",
@@ -2730,7 +2846,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_finance_expense_adjustment__2026_06_30": {
           "item_id": "cf_other_finance_expense_adjustment",
@@ -2753,7 +2870,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_finance_expense_adjustment__2025_06_30": {
           "item_id": "cf_other_finance_expense_adjustment",
@@ -2776,7 +2894,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_tax_benefit_adjustment__2026_06_30": {
           "item_id": "cf_tax_benefit_adjustment",
@@ -2799,7 +2918,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_tax_benefit_adjustment__2025_06_30": {
           "item_id": "cf_tax_benefit_adjustment",
@@ -2822,7 +2942,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_credit_loss_allowance_change__2026_06_30": {
           "item_id": "cf_credit_loss_allowance_change",
@@ -2845,7 +2966,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_credit_loss_allowance_change__2025_06_30": {
           "item_id": "cf_credit_loss_allowance_change",
@@ -2868,7 +2990,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_fx_adjustment__2026_06_30": {
           "item_id": "cf_fx_adjustment",
@@ -2891,7 +3014,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_fx_adjustment__2025_06_30": {
           "item_id": "cf_fx_adjustment",
@@ -2914,7 +3038,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_reorganization_adjustment__2026_06_30": {
           "item_id": "cf_reorganization_adjustment",
@@ -2957,7 +3082,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_adjustments_sgzh__2026_06_30": {
           "item_id": "cf_other_adjustments_sgzh",
@@ -2980,7 +3106,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_other_adjustments_sgzh__2025_06_30": {
           "item_id": "cf_other_adjustments_sgzh",
@@ -3003,7 +3130,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_before_working_capital__2026_06_30": {
           "item_id": "cf_before_working_capital",
@@ -3026,7 +3154,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_before_working_capital__2025_06_30": {
           "item_id": "cf_before_working_capital",
@@ -3049,7 +3178,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_receivables_change__2026_06_30": {
           "item_id": "cf_receivables_change",
@@ -3072,7 +3202,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_receivables_change__2025_06_30": {
           "item_id": "cf_receivables_change",
@@ -3095,7 +3226,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_inventories_change__2026_06_30": {
           "item_id": "cf_inventories_change",
@@ -3118,7 +3250,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_inventories_change__2025_06_30": {
           "item_id": "cf_inventories_change",
@@ -3141,7 +3274,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_other_assets_change__2026_06_30": {
           "item_id": "cf_other_assets_change",
@@ -3164,7 +3298,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_other_assets_change__2025_06_30": {
           "item_id": "cf_other_assets_change",
@@ -3187,7 +3322,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_payables_change__2026_06_30": {
           "item_id": "cf_payables_change",
@@ -3210,7 +3346,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_payables_change__2025_06_30": {
           "item_id": "cf_payables_change",
@@ -3233,7 +3370,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_other_liabilities_change__2026_06_30": {
           "item_id": "cf_other_liabilities_change",
@@ -3256,7 +3394,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_liabilities_change__2025_06_30": {
           "item_id": "cf_other_liabilities_change",
@@ -3279,7 +3418,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_operating_before_interest_tax__2026_06_30": {
           "item_id": "cf_operating_before_interest_tax",
@@ -3302,7 +3442,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_operating_before_interest_tax__2025_06_30": {
           "item_id": "cf_operating_before_interest_tax",
@@ -3325,7 +3466,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_interest_paid__2026_06_30": {
           "item_id": "interest_paid",
@@ -3348,7 +3490,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_interest_paid__2025_06_30": {
           "item_id": "interest_paid",
@@ -3371,7 +3514,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_income_tax_paid__2026_06_30": {
           "item_id": "cf_income_tax_paid",
@@ -3394,7 +3538,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_income_tax_paid__2025_06_30": {
           "item_id": "cf_income_tax_paid",
@@ -3417,7 +3562,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cfo__2026_06_30": {
           "item_id": "cfo",
@@ -3440,7 +3586,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cfo__2025_06_30": {
           "item_id": "cfo",
@@ -3463,7 +3610,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_capex_total_ppe_intangibles__2026_06_30": {
           "item_id": "capex_total_ppe_intangibles",
@@ -3486,7 +3634,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_capex_total_ppe_intangibles__2025_06_30": {
           "item_id": "capex_total_ppe_intangibles",
@@ -3509,7 +3658,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_interest_received__2026_06_30": {
           "item_id": "cf_interest_received",
@@ -3532,7 +3682,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_interest_received__2025_06_30": {
           "item_id": "cf_interest_received",
@@ -3555,7 +3706,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_subsidiary_disposal_advance__2026_06_30": {
           "item_id": "cf_subsidiary_disposal_advance",
@@ -3598,7 +3750,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_investing__2026_06_30": {
           "item_id": "cf_other_investing",
@@ -3621,7 +3774,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_other_investing__2025_06_30": {
           "item_id": "cf_other_investing",
@@ -3664,7 +3818,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cfi__2025_06_30": {
           "item_id": "cfi",
@@ -3687,7 +3842,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_share_issue_proceeds__2026_06_30": {
           "item_id": "cf_share_issue_proceeds",
@@ -3730,7 +3886,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_loans_raised__2026_06_30": {
           "item_id": "cf_loans_raised",
@@ -3753,7 +3910,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_loans_raised__2025_06_30": {
           "item_id": "cf_loans_raised",
@@ -3776,7 +3934,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_bonds_issued__2026_06_30": {
           "item_id": "cf_bonds_issued",
@@ -3799,7 +3958,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_bonds_issued__2025_06_30": {
           "item_id": "cf_bonds_issued",
@@ -3822,7 +3982,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_loans_repaid__2026_06_30": {
           "item_id": "cf_loans_repaid",
@@ -3845,7 +4006,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_loans_repaid__2025_06_30": {
           "item_id": "cf_loans_repaid",
@@ -3868,7 +4030,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_bonds_repaid__2026_06_30": {
           "item_id": "cf_bonds_repaid",
@@ -3891,7 +4054,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_bonds_repaid__2025_06_30": {
           "item_id": "cf_bonds_repaid",
@@ -3914,7 +4078,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cff__2026_06_30": {
           "item_id": "cff",
@@ -3937,7 +4102,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cff__2025_06_30": {
           "item_id": "cff",
@@ -3960,7 +4126,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_cash_change_before_fx__2026_06_30": {
           "item_id": "cf_cash_change_before_fx",
@@ -3983,7 +4150,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_cash_change_before_fx__2025_06_30": {
           "item_id": "cf_cash_change_before_fx",
@@ -4006,7 +4174,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_cash_opening__2025_12_31": {
           "item_id": "cf_cash_opening",
@@ -4029,7 +4198,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_cash_opening__2024_12_31": {
           "item_id": "cf_cash_opening",
@@ -4052,7 +4222,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_fx_effect__2026_06_30": {
           "item_id": "cf_fx_effect",
@@ -4075,7 +4246,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_fx_effect__2025_06_30": {
           "item_id": "cf_fx_effect",
@@ -4098,7 +4270,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_cash_closing_gross__2026_06_30": {
           "item_id": "cf_cash_closing_gross",
@@ -4121,7 +4294,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_cash_closing_gross__2025_06_30": {
           "item_id": "cf_cash_closing_gross",
@@ -4144,7 +4318,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bank_loans_rub__2026_06_30": {
           "item_id": "note_short_bank_loans_rub",
@@ -4168,7 +4343,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bank_loans_rub__2025_12_31": {
           "item_id": "note_short_bank_loans_rub",
@@ -4213,7 +4389,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bank_loans_eur__2025_12_31": {
           "item_id": "note_short_bank_loans_eur",
@@ -4237,7 +4414,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bank_loans_current_total__2026_06_30": {
           "item_id": "note_bank_loans_current_total",
@@ -4261,7 +4439,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bank_loans_current_total__2025_12_31": {
           "item_id": "note_bank_loans_current_total",
@@ -4285,7 +4464,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bonds_rub__2026_06_30": {
           "item_id": "note_short_bonds_rub",
@@ -4309,7 +4489,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bonds_rub__2025_12_31": {
           "item_id": "note_short_bonds_rub",
@@ -4333,7 +4514,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bonds_cny__2026_06_30": {
           "item_id": "note_short_bonds_cny",
@@ -4357,7 +4539,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_bonds_cny__2025_12_31": {
           "item_id": "note_short_bonds_cny",
@@ -4402,7 +4585,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bonds_current_total__2025_12_31": {
           "item_id": "note_bonds_current_total",
@@ -4426,7 +4610,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bank_loans_noncurrent_total__2026_06_30": {
           "item_id": "note_bank_loans_noncurrent_total",
@@ -4450,7 +4635,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bank_loans_noncurrent_total__2025_12_31": {
           "item_id": "note_bank_loans_noncurrent_total",
@@ -4474,7 +4660,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_long_bonds_rub__2026_06_30": {
           "item_id": "note_long_bonds_rub",
@@ -4498,7 +4685,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_long_bonds_rub__2025_12_31": {
           "item_id": "note_long_bonds_rub",
@@ -4522,7 +4710,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_long_bonds_cny__2026_06_30": {
           "item_id": "note_long_bonds_cny",
@@ -4546,7 +4735,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_long_bonds_cny__2025_12_31": {
           "item_id": "note_long_bonds_cny",
@@ -4570,7 +4760,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bonds_noncurrent_total__2026_06_30": {
           "item_id": "note_bonds_noncurrent_total",
@@ -4594,7 +4785,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_bonds_noncurrent_total__2025_12_31": {
           "item_id": "note_bonds_noncurrent_total",
@@ -4618,7 +4810,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_debt_total__2026_06_30": {
           "item_id": "note_debt_total",
@@ -4642,7 +4835,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_debt_total__2025_12_31": {
           "item_id": "note_debt_total",
@@ -4666,7 +4860,8 @@
             "start_line": 6,
             "end_line": 6
           },
-          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку"
+          "owner_column": "Балансовая стоимость, не эффективная процентная ставка; валюта идентифицирует строку",
+          "raw_sign": "nonnegative"
         },
         "notes_note_rou_total_da__2026_06_30": {
           "item_id": "note_rou_total_da",
@@ -4689,7 +4884,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_rou_total_da__2025_06_30": {
           "item_id": "note_rou_total_da",
@@ -4712,7 +4908,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_term_lease_expense__2026_06_30": {
           "item_id": "note_short_term_lease_expense",
@@ -4735,7 +4932,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_short_term_lease_expense__2025_06_30": {
           "item_id": "note_short_term_lease_expense",
@@ -4758,7 +4956,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_interest_expense_control__2026_06_30": {
           "item_id": "note_lease_interest_expense_control",
@@ -4781,7 +4980,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_interest_expense_control__2025_06_30": {
           "item_id": "note_lease_interest_expense_control",
@@ -4804,7 +5004,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_expense_total__2026_06_30": {
           "item_id": "note_lease_expense_total",
@@ -4827,7 +5028,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_expense_total__2025_06_30": {
           "item_id": "note_lease_expense_total",
@@ -4850,7 +5052,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_opening__2025_12_31": {
           "item_id": "note_lease_opening",
@@ -4873,7 +5076,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_opening__2024_12_31": {
           "item_id": "note_lease_opening",
@@ -4896,7 +5100,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_cash_payments__2026_06_30": {
           "item_id": "note_lease_cash_payments",
@@ -4919,7 +5124,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_lease_cash_payments__2025_06_30": {
           "item_id": "note_lease_cash_payments",
@@ -4942,7 +5148,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_lease_contract_changes__2026_06_30": {
           "item_id": "note_lease_contract_changes",
@@ -4965,7 +5172,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_contract_changes__2025_06_30": {
           "item_id": "note_lease_contract_changes",
@@ -4988,7 +5196,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_lease_interest_accrual__2026_06_30": {
           "item_id": "note_lease_interest_accrual",
@@ -5011,7 +5220,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_interest_accrual__2025_06_30": {
           "item_id": "note_lease_interest_accrual",
@@ -5034,7 +5244,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_hfs_transfer__2026_06_30": {
           "item_id": "note_lease_hfs_transfer",
@@ -5077,7 +5288,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_lease_closing__2026_06_30": {
           "item_id": "note_lease_closing",
@@ -5100,7 +5312,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_lease_closing__2025_06_30": {
           "item_id": "note_lease_closing",
@@ -5123,7 +5336,8 @@
             "page": 20,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_total__2025_12_31": {
           "item_id": "eq_opening_total",
@@ -5147,7 +5361,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_total__2024_12_31": {
           "item_id": "eq_opening_total",
@@ -5171,7 +5386,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_parent__2025_12_31": {
           "item_id": "eq_opening_parent",
@@ -5195,7 +5411,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_parent__2024_12_31": {
           "item_id": "eq_opening_parent",
@@ -5219,7 +5436,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_nci__2025_12_31": {
           "item_id": "eq_opening_nci",
@@ -5243,7 +5461,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_opening_nci__2024_12_31": {
           "item_id": "eq_opening_nci",
@@ -5267,7 +5486,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_closing_total__2026_06_30": {
           "item_id": "eq_closing_total",
@@ -5291,7 +5511,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_closing_total__2025_06_30": {
           "item_id": "eq_closing_total",
@@ -5315,7 +5536,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_closing_parent__2026_06_30": {
           "item_id": "eq_closing_parent",
@@ -5339,7 +5561,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_closing_parent__2025_06_30": {
           "item_id": "eq_closing_parent",
@@ -5363,7 +5586,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_closing_nci__2026_06_30": {
           "item_id": "eq_closing_nci",
@@ -5387,7 +5611,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_closing_nci__2025_06_30": {
           "item_id": "eq_closing_nci",
@@ -5411,7 +5636,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_total__2026_06_30": {
           "item_id": "eq_profit_total",
@@ -5440,7 +5666,8 @@
             "line": 20,
             "start_char": 185,
             "end_char": 220
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_total__2025_06_30": {
           "item_id": "eq_profit_total",
@@ -5469,7 +5696,8 @@
             "line": 13,
             "start_char": 185,
             "end_char": 220
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_parent__2026_06_30": {
           "item_id": "eq_profit_parent",
@@ -5493,7 +5721,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_parent__2025_06_30": {
           "item_id": "eq_profit_parent",
@@ -5517,7 +5746,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_nci__2026_06_30": {
           "item_id": "eq_profit_nci",
@@ -5541,7 +5771,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_profit_nci__2025_06_30": {
           "item_id": "eq_profit_nci",
@@ -5565,7 +5796,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_comprehensive_total__2026_06_30": {
           "item_id": "eq_comprehensive_total",
@@ -5589,7 +5821,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_comprehensive_total__2025_06_30": {
           "item_id": "eq_comprehensive_total",
@@ -5613,7 +5846,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_share_issue_total__2026_06_30": {
           "item_id": "eq_share_issue_total",
@@ -5658,7 +5892,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_nci_purchase_total__2026_06_30": {
           "item_id": "eq_nci_purchase_total",
@@ -5703,7 +5938,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_internal_transfer_parent__2026_06_30": {
           "item_id": "eq_internal_transfer_parent",
@@ -5727,7 +5963,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_internal_transfer_parent__2025_06_30": {
           "item_id": "eq_internal_transfer_parent",
@@ -5772,7 +6009,8 @@
             "page": 7,
             "start_line": 5,
             "end_line": 5
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_internal_transfer_nci__2025_06_30": {
           "item_id": "eq_internal_transfer_nci",
@@ -5816,7 +6054,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_interest_income_total__2025_06_30": {
           "item_id": "note_interest_income_total",
@@ -5839,7 +6078,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_interest_borrowings__2026_06_30": {
           "item_id": "note_interest_borrowings",
@@ -5862,7 +6102,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_borrowings__2025_06_30": {
           "item_id": "note_interest_borrowings",
@@ -5885,7 +6126,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_options__2026_06_30": {
           "item_id": "note_interest_options",
@@ -5908,7 +6150,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_options__2025_06_30": {
           "item_id": "note_interest_options",
@@ -5951,7 +6194,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_leases__2025_06_30": {
           "item_id": "note_interest_leases",
@@ -5974,7 +6218,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_other__2026_06_30": {
           "item_id": "note_interest_other",
@@ -5997,7 +6242,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_other__2025_06_30": {
           "item_id": "note_interest_other",
@@ -6020,7 +6266,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_total__2026_06_30": {
           "item_id": "note_interest_total",
@@ -6043,7 +6290,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_interest_total__2025_06_30": {
           "item_id": "note_interest_total",
@@ -6066,7 +6314,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_modification_control__2026_06_30": {
           "item_id": "note_finance_modification_control",
@@ -6109,7 +6358,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_fair_value_expense__2026_06_30": {
           "item_id": "note_finance_fair_value_expense",
@@ -6132,7 +6382,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_fair_value_expense__2025_06_30": {
           "item_id": "note_finance_fair_value_expense",
@@ -6155,7 +6406,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_other_component__2026_06_30": {
           "item_id": "note_finance_other_component",
@@ -6178,7 +6430,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_other_component__2025_06_30": {
           "item_id": "note_finance_other_component",
@@ -6201,7 +6454,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_other_expense__2026_06_30": {
           "item_id": "note_finance_other_expense",
@@ -6224,7 +6478,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_finance_other_expense__2025_06_30": {
           "item_id": "note_finance_other_expense",
@@ -6247,7 +6502,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_net_finance_expense__2026_06_30": {
           "item_id": "note_net_finance_expense",
@@ -6270,7 +6526,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_net_finance_expense__2025_06_30": {
           "item_id": "note_net_finance_expense",
@@ -6293,7 +6550,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_current_tax_gross__2026_06_30": {
           "item_id": "note_current_tax_gross",
@@ -6316,7 +6574,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_current_tax_gross__2025_06_30": {
           "item_id": "note_current_tax_gross",
@@ -6339,7 +6598,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_current_tax_prior_adjustments__2026_06_30": {
           "item_id": "note_current_tax_prior_adjustments",
@@ -6362,7 +6622,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_current_tax_prior_adjustments__2025_06_30": {
           "item_id": "note_current_tax_prior_adjustments",
@@ -6385,7 +6646,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_current_tax_net__2026_06_30": {
           "item_id": "note_current_tax_net",
@@ -6408,7 +6670,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_current_tax_net__2025_06_30": {
           "item_id": "note_current_tax_net",
@@ -6431,7 +6694,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_note_deferred_tax_benefit__2026_06_30": {
           "item_id": "note_deferred_tax_benefit",
@@ -6454,7 +6718,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_deferred_tax_benefit__2025_06_30": {
           "item_id": "note_deferred_tax_benefit",
@@ -6477,7 +6742,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_income_tax_benefit_total__2026_06_30": {
           "item_id": "note_income_tax_benefit_total",
@@ -6500,7 +6766,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_income_tax_benefit_total__2025_06_30": {
           "item_id": "note_income_tax_benefit_total",
@@ -6523,7 +6790,8 @@
             "page": 13,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_opening__2025_12_31": {
           "item_id": "rou_asset_opening",
@@ -6552,7 +6820,8 @@
             "line": 56,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_opening__2024_12_31": {
           "item_id": "rou_asset_opening",
@@ -6581,7 +6850,8 @@
             "line": 47,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_contract_changes__2026_06_30": {
           "item_id": "rou_asset_contract_changes",
@@ -6610,7 +6880,8 @@
             "line": 57,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_contract_changes__2025_06_30": {
           "item_id": "rou_asset_contract_changes",
@@ -6639,7 +6910,8 @@
             "line": 48,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_other_additions__2026_06_30": {
           "item_id": "rou_asset_other_additions",
@@ -6668,7 +6940,8 @@
             "line": 58,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_other_additions__2025_06_30": {
           "item_id": "rou_asset_other_additions",
@@ -6697,7 +6970,8 @@
             "line": 49,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_da_movement__2026_06_30": {
           "item_id": "rou_asset_da_movement",
@@ -6726,7 +7000,8 @@
             "line": 59,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_da_movement__2025_06_30": {
           "item_id": "rou_asset_da_movement",
@@ -6755,7 +7030,8 @@
             "line": 50,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_impairment__2026_06_30": {
           "item_id": "rou_asset_impairment",
@@ -6805,7 +7081,8 @@
             "line": 51,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_hfs_transfer__2026_06_30": {
           "item_id": "rou_asset_hfs_transfer",
@@ -6855,7 +7132,8 @@
             "line": 53,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_disposals__2026_06_30": {
           "item_id": "rou_asset_disposals",
@@ -6884,7 +7162,8 @@
             "line": 60,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_disposals__2025_06_30": {
           "item_id": "rou_asset_disposals",
@@ -6913,7 +7192,8 @@
             "line": 54,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "notes_rou_asset_closing__2026_06_30": {
           "item_id": "rou_asset_closing",
@@ -6942,7 +7222,8 @@
             "line": 61,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_rou_asset_closing__2025_06_30": {
           "item_id": "rou_asset_closing",
@@ -6971,7 +7252,8 @@
             "line": 55,
             "start_char": 100,
             "end_char": 130
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "cash_flow_cf_lease_financing_payments__2026_06_30": {
           "item_id": "cf_lease_financing_payments",
@@ -6994,7 +7276,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "cash_flow_cf_lease_financing_payments__2025_06_30": {
           "item_id": "cf_lease_financing_payments",
@@ -7017,7 +7300,8 @@
             "page": 8,
             "start_line": 6,
             "end_line": 6
-          }
+          },
+          "raw_sign": "nonpositive"
         }
       },
       "complete_blocks": {

@@ -7,6 +7,8 @@ from dataclasses import asdict, dataclass, field, replace
 from datetime import date, timedelta
 from pathlib import Path
 
+from agent import config
+
 from agent.checks.ifrs import FinancialCheck, validate_financials
 from agent.checks.equity import compile_plans
 from agent.checks.cash_sections import compile_cash_sections
@@ -156,7 +158,8 @@ def source_number_format(pages: tuple[Page, ...]) -> str | None:
 def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, entity_token: str,
                 period: Period, line_items: dict, output: Path,
                 sections: tuple[str, ...] = ('balance', 'income', 'cash_flow', 'equity', 'debt', 'leases', 'interest', 'segments'),
-                reuse_from: tuple[Path,...] = (), compact: bool = False) -> ExtractionRun:
+                reuse_from: tuple[Path,...] = (), compact: bool = False,
+                reviewed_catalog: dict | None = None) -> ExtractionRun:
     """На неудачную проверку пакета — один повтор. История обоих ответов остаётся в output.
 
     Неполное покрытие форм явно возвращается; успешный JSON не делает этап извлечения завершённым.
@@ -171,7 +174,8 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
     debt_plans = compile_debt_bridges(pdf, period) if 'debt' in sections else ()
     focus_debt = bool(debt_plans) and any(item.get('debt_bridge_role') for item in line_items.values())
     source_review = compile_source_links(pdf, period) if any(item.get('source_link') for item in line_items.values()) else None
-    reviewed_document = compile_reviewed_tables(pdf, period) if any(item.get('reviewed_table') for item in line_items.values()) else None
+    reviewed_document = compile_reviewed_tables(pdf, period, reviewed_catalog,
+        line_items={**config.line_items(),**line_items}) if reviewed_catalog is not None or any(item.get('reviewed_table') for item in line_items.values()) else None
     cache=ResponseCache(reuse_from,pdf.sha256)
     selected = find_sections(pdf)
     if set(sections) - set(selected.groups):
@@ -292,6 +296,8 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                 row = {k: source[k] for k in ('item_id', 'period_start', 'period_end', 'period_type', 'column_header')}
                 row.update(source_row_hints=[source['evidence']],
                            expected_cash_flow_section=source['cash_flow_section'])
+                if source.get('raw_sign'):
+                    row['expected_raw_sign'] = source['raw_sign']
                 for key in ('owner_column', 'original_name_hints', 'source_absent', 'unit_evidence'):
                     if key in source:
                         row[key] = source[key]

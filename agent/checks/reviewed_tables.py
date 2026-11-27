@@ -23,7 +23,7 @@ class ReviewedDocument:
     gaps: tuple[dict, ...]
 
 
-def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None = None) -> ReviewedDocument | None:
+def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None = None, *, line_items: dict | None = None) -> ReviewedDocument | None:
     """Адреса/колонки и состав подтверждает отдельный просмотр; значения возвращает модель."""
     catalog = json.loads(CATALOG.read_text()) if catalog is None else catalog
     if type(catalog.get('version')) is not int or catalog['version'] != 1:
@@ -39,7 +39,7 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
                (str(period.start), str(period.end), period.kind)
             or profile['number_format'] not in ('space_grouped_decimal', 'comma_grouped_dot_decimal')):
         raise ValueError('Нужны проверка структуры и точное окно выпуска')
-    pages = {p.number: p for p in pdf.pages}; items = config.line_items()
+    pages = {p.number: p for p in pdf.pages}; items = config.line_items() if line_items is None else line_items
     for number, digest in profile['page_text_sha256'].items():
         if int(number) not in pages or hashlib.sha256(pages[int(number)].text.encode()).hexdigest() != digest:
             raise ValueError('Текст/адреса проверенной страницы изменились; нужна отдельная сверка')
@@ -82,6 +82,8 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
         seen.add(key)
         if type(source.get('source_absent', False)) is not bool:
             raise ValueError('Отсутствие должно быть явным логическим признаком')
+        if source.get('raw_sign') not in (None,'nonnegative','nonpositive'):
+            raise ValueError('Неизвестный проверенный знак исходной строки')
         if source.get('original_name_hints'):
             for name in source['original_name_hints']:
                 if (not isinstance(name, str) or
@@ -173,9 +175,15 @@ def validate_reviewed_columns(facts, review: ReviewedDocument, pages) -> None:
     for fact in facts:
         found = [o for o in review.observations.values() if o['item_id'] == fact.item_id
                  and o['statement'] == fact.statement and o['start'] == fact.start and o['end'] == fact.end]
-        if len(found) != 1 or not found[0].get('value_column'):
+        if len(found) != 1:
             continue
-        source = found[0]; column = source['value_column']
+        source = found[0]
+        if (source.get('raw_sign') == 'nonnegative' and fact.value < 0
+                or source.get('raw_sign') == 'nonpositive' and fact.value > 0):
+            raise ValueError(f'{fact.item_id}: знак не соответствует просмотренной исходной строке; не нормализуй знак в raw_value')
+        if not source.get('value_column'):
+            continue
+        column = source['value_column']
         line = by_page[source['evidence']['page']].text.splitlines()[column['line']-1]
         selected = normalized_text(line[column['start_char']-1:column['end_char']])
         if not re.search(r'(?<![\w.,])' + re.escape(normalized_text(fact.raw_value)) + r'(?![\w.,])', selected):

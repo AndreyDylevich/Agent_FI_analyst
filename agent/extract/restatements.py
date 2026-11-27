@@ -20,6 +20,8 @@ def original_status(conn,row):
     if hashlib.sha256(saved['value'].encode()).hexdigest()!=digest:
         raise ValueError('Контрольная сумма протокола извлечения изменилась')
     run=json.loads(saved['value']);fact=run['facts'][index]
+    if row['scope'] != run.get('data_scope','group') or row['segment_name'] != run.get('segment_name'):
+        raise ValueError('Охват/сегмент в БД не совпадает с исходным протоколом')
     if (fact['item_id']!=row['item_id'] or fact['normalized']!=row['value_norm']
             or fact['unit']!=row['unit'] or fact['end']!=row['period_end'] or fact['start']!=row['period_start']
             or Decimal(fact['value'])!=Decimal(row['value'])):

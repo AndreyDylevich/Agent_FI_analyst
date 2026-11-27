@@ -4382,3 +4382,124 @@ items:
     source_topics:
     - interest
     value_kind: flow
+
+  # Исходные сегментные показатели, отдельные от расчётной EBITDA.
+  - id: segment_revenue_total
+    statement: notes
+    name: Сегментная выручка до межсегментной корректировки
+    sign: natural
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Сегментная выручка до межсегментной корректировки
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: segment_revenue_adjustment
+    statement: notes
+    name: Исходная межсегментная выручка/исключение
+    sign: natural
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Исходная межсегментная выручка/исключение
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: segment_oibda
+    statement: notes
+    name: Раскрытая OIBDA сегмента
+    sign: natural
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Раскрытая OIBDA сегмента
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: segment_oibda_reconciliation_total
+    statement: notes
+    name: OIBDA в таблице сверки с ОПУ
+    sign: natural
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - OIBDA в таблице сверки с ОПУ
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: segment_current_asset_impairment
+    statement: notes
+    name: Обесценение оборотных активов в реорганизации
+    sign: outflow
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Обесценение оборотных активов в реорганизации
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: segment_employee_provisions
+    statement: notes
+    name: Оценочное обязательство по выплатам персоналу
+    sign: outflow
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Оценочное обязательство по выплатам персоналу
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.
+  - id: reorganization_expense_components_total
+    statement: notes
+    name: Итого составляющих реорганизации
+    sign: outflow
+    source_forms:
+    - notes
+    source_topics:
+    - segments
+    value_kind: flow
+    reviewed_table: true
+    ifrs_synonyms:
+      ru:
+      - Итого составляющих реорганизации
+      en: []
+    rsbu_codes: []
+    notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
+      охват и роль колонки задаются отдельно.

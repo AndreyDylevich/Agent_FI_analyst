@@ -7,7 +7,7 @@ on:
         required: true
         default: sgzh_balance
         type: choice
-        options: [mvid_balance, mvid_full, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements, sgzh_full]
+        options: [mvid_balance, mvid_full, sgzh_balance, mts_balance, mts_statements, mts_equity, mts_equity_movement, mts_cash_sections, mts_debt_movement, mts_source_links, mts_notes, mts_fy2025_balance, sgzh_statements, sgzh_full, all_segments]
       source_archive_run_id:
         description: Необязательный ID прежнего ifrs-case-check с PDF точного SHA256 (ответы модели не используются)
         required: false
@@ -26,7 +26,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ inputs.case_id == 'mvid_full' && 60 || 30 }}
+    timeout-minutes: ${{ inputs.case_id == 'mvid_full' && 60 || inputs.case_id == 'all_segments' && 45 || 30 }}
     env:
       PYTHONUNBUFFERED: '1'
     steps:
@@ -40,18 +40,40 @@ jobs:
         if: inputs.case_id == 'mvid_balance' || inputs.case_id == 'mvid_full'
         run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng
       - name: Получить закреплённый PDF из прежнего артефакта
-        if: inputs.source_archive_run_id != ''
+        if: inputs.source_archive_run_id != '' && inputs.case_id != 'all_segments'
         uses: actions/download-artifact@v4
         with:
           name: ifrs-case-check
           path: validation/source-archive
           github-token: ${{ github.token }}
           run-id: ${{ inputs.source_archive_run_id }}
+      - name: Закреплённый PDF МТС для сегментов
+        if: inputs.case_id == 'all_segments'
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-case-check
+          path: validation/archive-mts
+          github-token: ${{ github.token }}
+          run-id: '45946586525'
+      - name: Закреплённый PDF Сегежи для сегментов
+        if: inputs.case_id == 'all_segments'
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-case-check
+          path: validation/archive-sgzh
+          github-token: ${{ github.token }}
+          run-id: '45028939182'
       - name: Проверить официальный PDF и независимый эталон
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
         shell: bash
         run: |
+          if [ '${{ inputs.case_id }}' = all_segments ]; then
+            if [ '${{ inputs.prepare_text_only }}' = true ]; then echo 'Для подготовки текста выберите выпуск компании'; exit 1; fi
+            python -m agent.tools.check_ifrs_segments --ticker MTSS --output validation/ifrs-case/MTSS --source-archive validation/archive-mts
+            python -m agent.tools.check_ifrs_segments --ticker SGZH --output validation/ifrs-case/SGZH --source-archive validation/archive-sgzh
+            exit 0
+          fi
           archive_args=()
           if [ -d validation/source-archive ]; then archive_args=(--source-archive validation/source-archive); fi
           if [ '${{ inputs.prepare_text_only }}' = true ]; then archive_args+=(--prepare-text-only); fi

@@ -12,10 +12,14 @@ from agent.metrics.engine import Period
 
 
 def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: str, name: str,
-                     source_url: str, period: Period, local_path: str) -> dict:
+                     source_url: str, period: Period, local_path: str,
+                     scope: str = 'group', segment_name: str | None = None) -> dict:
     """Транзакция у вызывающего. Разные ответы не перезаписывают историю и не создают рестейтмент."""
     if len(run.facts) != len(run.statuses):
         raise ValueError('Количество исходных значений и статусов проверки различается')
+    if scope not in ('group','segment') or (scope == 'group' and segment_name is not None
+            or scope == 'segment' and (not isinstance(segment_name,str) or not segment_name.strip())):
+        raise ValueError('Групповой итог и именованный сегмент требуют отдельного охвата')
     conn.execute('INSERT OR IGNORE INTO companies (ticker,name) VALUES (?,?)', (ticker, name))
     company_id = conn.execute('SELECT id FROM companies WHERE ticker=?', (ticker,)).fetchone()['id']
     row = conn.execute('SELECT * FROM documents WHERE url=? AND sha256=?', (source_url, run.pdf_sha256)).fetchone()
@@ -30,7 +34,8 @@ def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: st
                               (company_id, source_url, run.pdf_sha256, name+' МСФО '+period.kind,
                                str(period.start), str(period.end), period.kind, local_path))
         document_id = cursor.lastrowid
-    payload = {'schema_version': VERSION, 'prompt_version': PROMPT_VERSION, **asdict(run)}
+    payload = {'schema_version': VERSION, 'prompt_version': PROMPT_VERSION, **asdict(run),
+               'data_scope':scope, 'segment_name':segment_name}
     serialized = json.dumps(payload, ensure_ascii=False, sort_keys=True, default=str)
     digest = hashlib.sha256(serialized.encode()).hexdigest()
     key = f'ifrs_extraction:{document_id}:{digest}'
@@ -40,9 +45,9 @@ def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: st
     conflicts = []
     for index, (fact, check_status) in enumerate(zip(run.facts, run.statuses)):
         previous = conn.execute("SELECT * FROM source_values_current WHERE company_id=? AND item_id=? "
-                                "AND standard='IFRS' AND scope='group' AND segment_name IS NULL AND currency='RUB' "
+                                "AND standard='IFRS' AND scope=? AND segment_name IS ? AND currency='RUB' "
                                 'AND period_start IS ? AND period_end=? AND cash_flow_section IS ?',
-                                (company_id, fact.item_id, str(fact.start) if fact.start else None,
+                                (company_id, fact.item_id, scope, segment_name, str(fact.start) if fact.start else None,
                                  str(fact.end), fact.cash_flow_section)).fetchall()
         disagreement = [r for r in previous if r['value_norm'] is None or Decimal(r['value_norm']) != fact.normalized]
         if disagreement:
@@ -60,10 +65,10 @@ def store_extraction(conn: sqlite3.Connection, run: ExtractionRun, *, ticker: st
                                'extraction_sha256': digest, 'fact_index': index}, ensure_ascii=False)
         conn.execute('INSERT INTO source_values (company_id,item_id,original_name,value,unit,value_norm,currency,'
                      'period_start,period_end,period_type,standard,scope,document_id,source,location,extracted_by,'
-                     'check_status,cash_flow_section) VALUES (?,?,?,?,?,?,\'RUB\',?,?,?,?,?,?,?,?,?,?,?)',
+                     'check_status,cash_flow_section,segment_name) VALUES (?,?,?,?,?,?,\'RUB\',?,?,?,?,?,?,?,?,?,?,?,?)',
                      (company_id, fact.item_id, fact.original_name, str(fact.value), fact.unit, str(fact.normalized),
-                      str(fact.start) if fact.start else None, str(fact.end), fact.period_type, 'IFRS', 'group', document_id,
-                      'ir_page', location, 'gigachat', check_status, fact.cash_flow_section))
+                      str(fact.start) if fact.start else None, str(fact.end), fact.period_type, 'IFRS', scope, document_id,
+                      'ir_page', location, 'gigachat', check_status, fact.cash_flow_section, segment_name))
     conn.execute('INSERT INTO meta (key,value) VALUES (?,?)', (key, serialized))
     conn.execute("UPDATE documents SET status='extracted' WHERE id=?", (document_id,))
     return {'company_id': company_id, 'document_id': document_id, 'inserted': len(run.facts),
