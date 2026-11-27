@@ -309,5 +309,15 @@
       "total_assets",
       "total_equity_and_liabilities"
     ]
+  },
+  "mts_primary_forms": {
+    "ticker": "MTSS",
+    "year": 2026,
+    "period": "H1",
+    "sections": [
+      "balance",
+      "income"
+    ],
+    "reference": "mts_h1_2026_primary_forms_reference.json"
   }
 }
