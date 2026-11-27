@@ -1,0 +1,249 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "selected_ocr_values_manually_reviewed": 28,
+  "cases": {
+    "fy2025": {
+      "review_decision": "tests/fixtures/ifrs/mvid_fy2025_ocr_review.json",
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "review_sha256": "f53406632db0697341cdbed051099e9296a24d85a47d6cfc329388927fee5ee1",
+      "source_values_count": 14,
+      "source_numbers_and_locations_unchanged": true,
+      "original_unreviewed_database_unchanged": true,
+      "old_calculations_preserved": true,
+      "reviewed_database_sha256": "7bebb33d1fb6a900efff46eb9ee8c608dc612baa2aa158e2332e2e160d66b60d",
+      "independent_post_review_reference_check": {
+        "all_selected_values_verified": true,
+        "selected_values": [
+          {
+            "item_id": "total_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "equity_total",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "total_equity_and_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "total_assets",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_assets",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_assets",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "equity_total",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_liabilities",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_liabilities",
+            "period_end": "2024-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "total_equity_and_liabilities",
+            "period_end": "2024-12-31",
+            "passed": true
+          }
+        ],
+        "checks": {
+          "assets_components": true,
+          "balance": true,
+          "balance_totals": true
+        },
+        "expected_checks": [],
+        "metrics": {
+          "current_ratio": true
+        },
+        "financial_audit_complete": false,
+        "ok": true
+      },
+      "recalculated": [
+        {
+          "metric_id": "current_ratio",
+          "period_end": "2025-12-31",
+          "saved_id": 2,
+          "status": "рассчитан",
+          "value": "0.4310639111466462725740010081",
+          "explanation": "Текущая ликвидность = 124 002,0 / 287 665,0 = 0,43 (суммы в млн руб.)"
+        },
+        {
+          "metric_id": "roa",
+          "period_end": "2025-12-31",
+          "saved_id": 3,
+          "status": "недостаточно_данных",
+          "value": null,
+          "explanation": null
+        }
+      ],
+      "independent_current_ratio_fraction": {
+        "numerator": 124002,
+        "denominator": 287665
+      },
+      "repeat_review_database_bytes_unchanged": true
+    },
+    "h1_2026": {
+      "review_decision": "tests/fixtures/ifrs/mvid_h1_2026_ocr_review.json",
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "review_sha256": "1da26f00ee4866dc4ac9fb9da3482b6daf13c08dcba0a6ae2fccbdc7efb44ee1",
+      "source_values_count": 14,
+      "source_numbers_and_locations_unchanged": true,
+      "original_unreviewed_database_unchanged": true,
+      "old_calculations_preserved": true,
+      "reviewed_database_sha256": "d9e90515787c79e7ffe1b6ddd347a98f9f9e841641cdb1d3ed2b88d25be00116",
+      "independent_post_review_reference_check": {
+        "all_selected_values_verified": true,
+        "selected_values": [
+          {
+            "item_id": "total_assets",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_assets",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "current_assets",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "equity_total",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_liabilities",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "current_liabilities",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "total_equity_and_liabilities",
+            "period_end": "2026-06-30",
+            "passed": true
+          },
+          {
+            "item_id": "total_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_assets",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "equity_total",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "non_current_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "current_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          },
+          {
+            "item_id": "total_equity_and_liabilities",
+            "period_end": "2025-12-31",
+            "passed": true
+          }
+        ],
+        "checks": {
+          "assets_components": true,
+          "balance": true,
+          "balance_totals": true
+        },
+        "expected_checks": [],
+        "metrics": {
+          "current_ratio": true
+        },
+        "financial_audit_complete": false,
+        "ok": true
+      },
+      "recalculated": [
+        {
+          "metric_id": "current_ratio",
+          "period_end": "2026-06-30",
+          "saved_id": 2,
+          "status": "рассчитан",
+          "value": "0.3319511983327544286210489753",
+          "explanation": "Текущая ликвидность = 91 746,0 / 276 384,0 = 0,33 (суммы в млн руб.)"
+        },
+        {
+          "metric_id": "roa",
+          "period_end": "2026-06-30",
+          "saved_id": 3,
+          "status": "недостаточно_данных",
+          "value": null,
+          "explanation": null
+        }
+      ],
+      "independent_current_ratio_fraction": {
+        "numerator": 91746,
+        "denominator": 276384
+      },
+      "repeat_review_database_bytes_unchanged": true
+    }
+  },
+  "comparability_approved": false,
+  "financial_history_validated": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Отдельная визуальная приёмка семи итогов баланса в обеих колонках двух PDF. Автор решения — Codex, просмотревший изображения, а не автоматическое повышение по арифметике. Остальные строки/страницы, формы, примечания, учётная база и сопоставимость этим решением не приняты. Рабочая БД и оригинальные проверочные базы не изменены."
+}

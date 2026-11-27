@@ -1,0 +1,96 @@
+# Приёмка одного выпуска МСФО. Пройденные частичные сверки не заменяют полные мосты.
+version: 1
+families:
+  - id: profit_cash_flow
+    name: Прибыль ОПУ и база косвенной сверки CFO
+    checks:
+      - rule: profit_vs_cash_flow_base
+        periods: [flow, comparative_flow]
+  - id: profit_equity
+    name: Прибыль ОПУ и отчёт об изменениях капитала
+    checks:
+      - rule: profit_vs_equity
+        periods: [flow, comparative_flow]
+      - rule: profit_parent_vs_equity
+        periods: [flow, comparative_flow]
+      - rule: profit_nci_vs_equity
+        periods: [flow, comparative_flow]
+  - id: debt_balance
+    name: Кредиты, займы и облигации в балансе и примечании
+    checks:
+      - rule: note_debt_current_vs_balance
+        periods: [end, previous_year_end]
+      - rule: note_debt_noncurrent_vs_balance
+        periods: [end, previous_year_end]
+      - rule: note_debt_total_vs_balance
+        periods: [end, previous_year_end]
+  - id: lease_balance
+    name: Обязательства по аренде в балансе и примечании
+    checks:
+      - rule: note_lease_current_vs_balance
+        periods: [end, previous_year_end]
+      - rule: note_lease_noncurrent_vs_balance
+        periods: [end, previous_year_end]
+      - rule: note_lease_total_vs_balance
+        periods: [end, previous_year_end]
+  - id: equity_balance
+    name: Начальные и конечные остатки капитала в двух формах
+    checks:
+      - rule: eq_opening_total_vs_balance
+        periods: [opening, comparative_opening]
+      - rule: eq_opening_parent_vs_balance
+        periods: [opening, comparative_opening]
+      - rule: eq_opening_nci_vs_balance
+        periods: [opening, comparative_opening]
+      - rule: eq_closing_total_vs_balance
+        periods: [end, comparative_end]
+      - rule: eq_closing_parent_vs_balance
+        periods: [end, comparative_end]
+      - rule: eq_closing_nci_vs_balance
+        periods: [end, comparative_end]
+  - id: cash_composition
+    name: Состав денег ОДДС и баланса
+    limitation: Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.
+    checks:
+      - rule: cash_composition_vs_balance
+        periods: [end, comparative_end]
+  - id: cash_flow_sections
+    name: Полный состав разделов ОДДС
+    limitation: Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.
+    checks:
+      - rule: complete_cfo_components
+        periods: [flow, comparative_flow]
+      - rule: complete_cfi_components
+        periods: [flow, comparative_flow]
+      - rule: complete_cff_components
+        periods: [flow, comparative_flow]
+  - id: equity_movement
+    name: Полный мост изменения капитала
+    limitation: Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.
+    checks:
+      - rule: complete_equity_rollforward
+        periods: [flow, comparative_flow]
+  - id: debt_movement
+    name: Полный мост изменения долга
+    limitation: Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.
+    checks:
+      - rule: complete_debt_rollforward
+        periods: [flow, comparative_flow]
+  - id: lease_movement
+    name: Полный мост изменения аренды
+    limitation: Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.
+    checks:
+      - rule: complete_lease_rollforward
+        periods: [flow, comparative_flow]
+  - id: depreciation_composition
+    name: Состав амортизации для EBITDA
+    limitation: Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.
+    checks:
+      - rule: depreciation_composition_vs_cash_flow
+        periods: [flow, comparative_flow]
+  - id: interest_expense_to_payment
+    name: Начисленные проценты и денежные платежи
+    limitation: Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.
+    checks:
+      - rule: interest_expense_to_payment_bridge
+        periods: [flow, comparative_flow]

@@ -35,3 +35,14 @@ def test_batch_refuses_main_database_old_output_and_empty_success(tmp_path):
     with pytest.raises(ValueError):run_batch([],out,tmp_path/'check.db')
     assert (out/'old.json').read_text()=='original'
     assert not run_batch([],tmp_path/'empty',tmp_path/'check.db')['ok']
+
+
+def test_preparation_batch_preserves_profile_without_claiming_financial_success(tmp_path):
+ calls=[]
+ def runner(command):
+  calls.append(command);year=command[command.index('--year')+1];folder=tmp_path/'out'/('SGZH_'+year);folder.mkdir()
+  (folder/'history_extraction_check.json').write_text(json.dumps({'ok':False,'text_preparation_ok':True,'provider_requests':0}))
+  return 0
+ report=run_batch([{'ticker':'SGZH','expected_year':2025}],tmp_path/'out',tmp_path/'check.db',runner=runner,forms_profile='income_cash',prepare_text_only=True)
+ assert '--prepare-text-only' in calls[0] and calls[0][calls[0].index('--forms-profile')+1]=='income_cash'
+ assert report['text_preparation_ok'] and not report['ok'] and not report['financial_history_validated']

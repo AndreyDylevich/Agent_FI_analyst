@@ -1,0 +1,2657 @@
+{
+  "checked_date_moscow": "2026-11-27",
+  "ok": true,
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46023284414",
+  "source_commit": "3a09c026b7efd2a84930d23397c90e53a89e0ccb",
+  "source_branch": "codex/stage4-reviewed-recovery-20261127",
+  "fresh_gigachat_acceptance": true,
+  "source_pdf_downloaded_this_run": false,
+  "values_count": 131,
+  "companies": [
+    {
+      "ticker": "MTSS",
+      "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+      "source_response_hashes_verified": true,
+      "source_citations_and_columns_rechecked": true,
+      "fresh_provider_requests": 6,
+      "provider_tokens": 41097,
+      "database_sha256": "5b2e3fdcd55d7e215f1c919084b6dc919d047f8ca752815aef55ad5a481d673c",
+      "database_unchanged": true,
+      "stored_statuses": {
+        "проверено_авто": 50
+      },
+      "independent_reference_check": {
+        "ok": true,
+        "selected_values_count": 50,
+        "actual_values_count": 50,
+        "observations": [
+          {
+            "segment_key": "telecom",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "telecom",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "fintech",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "reportable_subtotal",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "corporate",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "d_and_a",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "operating_profit",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "d_and_a",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "operating_profit",
+            "end": "2025-06-30",
+            "ok": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "rule": "reportable_segments_subtotal_segment_revenue_total",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_total",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 15,
+                "quote": "      Итого выручка                              295,332       82,548       377,880        79,688       (42,839)     414,729",
+                "start_line": 59,
+                "end_line": 59
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_segment_revenue_adjustment",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_revenue_adjustment",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_adjustment",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_adjustment",
+            "status": "недостаточно_данных",
+            "delta": null,
+            "tolerance": "1000000",
+            "missing": [
+              "term_3"
+            ],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от операций между\n       сегментами                                  2,856         2,785        5,641        37,227       (42,868)            -",
+                "start_line": 56,
+                "end_line": 57
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_revenue",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_revenue",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 15,
+                "quote": "      Выручка от внешних клиентов                292,476       79,763       372,239        42,461            29      414,729",
+                "start_line": 55,
+                "end_line": 55
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_segment_oibda",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_oibda",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 15,
+                "quote": "      OIBDA                                      136,193       10,567       146,760        21,225        (8,639)     159,346",
+                "start_line": 61,
+                "end_line": 61
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_segment_revenue_total",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_total",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 16,
+                "quote": "      Итого выручка                                   261,982        78,675      340,657        76,441       (46,192)    370,906",
+                "start_line": 20,
+                "end_line": 20
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_segment_revenue_adjustment",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_revenue_adjustment",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_adjustment",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_adjustment",
+            "status": "недостаточно_данных",
+            "delta": null,
+            "tolerance": "1000000",
+            "missing": [
+              "term_3"
+            ],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от операций между сегментами               6,369        3,451         9,820       36,318       (46,138)            -",
+                "start_line": 19,
+                "end_line": 19
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_revenue",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_revenue",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 16,
+                "quote": "      Выручка от внешних клиентов                     255,613        75,224      330,837        40,123           (54)    370,906",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "reportable_segments_subtotal_segment_oibda",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "reportable_segments_subtotal_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "telecom",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "fintech",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_oibda",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "reportable_subtotal",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "corporate",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 16,
+                "quote": "      OIBDA                                           120,721         9,882      130,603        17,359       (11,885)    136,077",
+                "start_line": 21,
+                "end_line": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "SGZH",
+      "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+      "source_response_hashes_verified": true,
+      "source_citations_and_columns_rechecked": true,
+      "fresh_provider_requests": 10,
+      "provider_tokens": 47969,
+      "database_sha256": "b57adcacaaf98857b0c734ac9ccba7f88b57d4dd3b5ac6df5373712613b177bf",
+      "database_unchanged": true,
+      "stored_statuses": {
+        "не_проверено": 2,
+        "проверено_авто": 79
+      },
+      "independent_reference_check": {
+        "ok": true,
+        "selected_values_count": 81,
+        "actual_values_count": 81,
+        "observations": [
+          {
+            "segment_key": "paper",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "paper",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "wood",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards_housing",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "boards",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "housing",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_nw",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "forest_siberia",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "other",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "revenue",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_revenue_adjustment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "revenue",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda_reconciliation_total",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_oibda_reconciliation_total",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "d_and_a",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "d_and_a",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "income_reorganization_loss",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "operating_profit",
+            "end": "2026-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "operating_profit",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "impairment_noncurrent",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_current_asset_impairment",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "segment_employee_provisions",
+            "end": "2025-06-30",
+            "ok": true
+          },
+          {
+            "segment_key": "group",
+            "item_id": "reorganization_expense_components_total",
+            "end": "2025-06-30",
+            "ok": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "rule": "group_segments_sum_segment_revenue_total",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  14 522                (4)         14 518                  2 352",
+                "start_line": 16,
+                "end_line": 16
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    16 263              (368)         15 895                   (755)",
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 434          (5 286)            1 148                    42",
+                "start_line": 22,
+                "end_line": 22
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              4 442          (4 263)              179                   174",
+                "start_line": 23,
+                "end_line": 23
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               2 465          (2 417)               48                (1 674)",
+                "start_line": 24,
+                "end_line": 24
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              50 415         (12 431)           37 984                   657",
+                "start_line": 25,
+                "end_line": 25
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_revenue_total",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             3 952                 -           3 952                   287",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 337              (93)           2 244                   231",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_adjustment",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_adjustment",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  14 522                (4)         14 518                  2 352",
+                "start_line": 16,
+                "end_line": 16
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    16 263              (368)         15 895                   (755)",
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 434          (5 286)            1 148                    42",
+                "start_line": 22,
+                "end_line": 22
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              4 442          (4 263)              179                   174",
+                "start_line": 23,
+                "end_line": 23
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               2 465          (2 417)               48                (1 674)",
+                "start_line": 24,
+                "end_line": 24
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              50 415         (12 431)           37 984                   657",
+                "start_line": 25,
+                "end_line": 25
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_revenue_adjustment",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_revenue_adjustment",
+            "status": "недостаточно_данных",
+            "delta": null,
+            "tolerance": "1000000",
+            "missing": [
+              "term_0"
+            ],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 337              (93)           2 244                   231",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_revenue",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  14 522                (4)         14 518                  2 352",
+                "start_line": 16,
+                "end_line": 16
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    16 263              (368)         15 895                   (755)",
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 434          (5 286)            1 148                    42",
+                "start_line": 22,
+                "end_line": 22
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              4 442          (4 263)              179                   174",
+                "start_line": 23,
+                "end_line": 23
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               2 465          (2 417)               48                (1 674)",
+                "start_line": 24,
+                "end_line": 24
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              50 415         (12 431)           37 984                   657",
+                "start_line": 25,
+                "end_line": 25
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_revenue",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "boards_housing_components_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             3 952                 -           3 952                   287",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 337              (93)           2 244                   231",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_oibda",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  14 522                (4)         14 518                  2 352",
+                "start_line": 16,
+                "end_line": 16
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    16 263              (368)         15 895                   (755)",
+                "start_line": 17,
+                "end_line": 17
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 434          (5 286)            1 148                    42",
+                "start_line": 22,
+                "end_line": 22
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              4 442          (4 263)              179                   174",
+                "start_line": 23,
+                "end_line": 23
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               2 465          (2 417)               48                (1 674)",
+                "start_line": 24,
+                "end_line": 24
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              50 415         (12 431)           37 984                   657",
+                "start_line": 25,
+                "end_line": 25
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_oibda",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             3 952                 -           3 952                   287",
+                "start_line": 20,
+                "end_line": 20
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 337              (93)           2 244                   231",
+                "start_line": 21,
+                "end_line": 21
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,                    6 289              (93)           6 196                   518",
+                "start_line": 18,
+                "end_line": 18
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_total",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  17 432                (8)         17 424                  2 929",
+                "start_line": 37,
+                "end_line": 37
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    19 026              (206)         18 820                 (1 271)",
+                "start_line": 38,
+                "end_line": 38
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 802          (5 571)            1 231                   248",
+                "start_line": 43,
+                "end_line": 43
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              8 569          (7 719)              850                   429",
+                "start_line": 44,
+                "end_line": 44
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               3 104          (3 059)               45                  (659)",
+                "start_line": 45,
+                "end_line": 45
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              61 509         (16 674)           44 835                 2 618",
+                "start_line": 46,
+                "end_line": 46
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_revenue_total",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_revenue_total",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             4 030                 -           4 030                   449",
+                "start_line": 41,
+                "end_line": 41
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 546             (111)           2 435                   493",
+                "start_line": 42,
+                "end_line": 42
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_total",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_revenue_adjustment",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_revenue_adjustment",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  17 432                (8)         17 424                  2 929",
+                "start_line": 37,
+                "end_line": 37
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    19 026              (206)         18 820                 (1 271)",
+                "start_line": 38,
+                "end_line": 38
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 802          (5 571)            1 231                   248",
+                "start_line": 43,
+                "end_line": 43
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              8 569          (7 719)              850                   429",
+                "start_line": 44,
+                "end_line": 44
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               3 104          (3 059)               45                  (659)",
+                "start_line": 45,
+                "end_line": 45
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              61 509         (16 674)           44 835                 2 618",
+                "start_line": 46,
+                "end_line": 46
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_revenue_adjustment",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_revenue_adjustment",
+            "status": "недостаточно_данных",
+            "delta": null,
+            "tolerance": "1000000",
+            "missing": [
+              "term_0"
+            ],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 546             (111)           2 435                   493",
+                "start_line": 42,
+                "end_line": 42
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_revenue_adjustment",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_revenue",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  17 432                (8)         17 424                  2 929",
+                "start_line": 37,
+                "end_line": 37
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    19 026              (206)         18 820                 (1 271)",
+                "start_line": 38,
+                "end_line": 38
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 802          (5 571)            1 231                   248",
+                "start_line": 43,
+                "end_line": 43
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              8 569          (7 719)              850                   429",
+                "start_line": 44,
+                "end_line": 44
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               3 104          (3 059)               45                  (659)",
+                "start_line": 45,
+                "end_line": 45
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              61 509         (16 674)           44 835                 2 618",
+                "start_line": 46,
+                "end_line": 46
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_revenue",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "boards_housing_components_revenue",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             4 030                 -           4 030                   449",
+                "start_line": 41,
+                "end_line": 41
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 546             (111)           2 435                   493",
+                "start_line": 42,
+                "end_line": 42
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "revenue",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            }
+          ]
+        },
+        {
+          "rule": "group_segments_sum_segment_oibda",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "group_segments_sum_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "paper",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Бумага и упаковка                                  17 432                (8)         17 424                  2 929",
+                "start_line": 37,
+                "end_line": 37
+              }
+            },
+            {
+              "segment": "wood",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Деревообработка                                    19 026              (206)         18 820                 (1 271)",
+                "start_line": 38,
+                "end_line": 38
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            },
+            {
+              "segment": "forest_nw",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Северо-Запад»                        6 802          (5 571)            1 231                   248",
+                "start_line": 43,
+                "end_line": 43
+              }
+            },
+            {
+              "segment": "forest_siberia",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Лесные ресурсы «Сибирь»                              8 569          (7 719)              850                   429",
+                "start_line": 44,
+                "end_line": 44
+              }
+            },
+            {
+              "segment": "other",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Прочие                                               3 104          (3 059)               45                  (659)",
+                "start_line": 45,
+                "end_line": 45
+              }
+            },
+            {
+              "segment": "group",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Итого                                              61 509         (16 674)           44 835                 2 618",
+                "start_line": 46,
+                "end_line": 46
+              }
+            }
+          ]
+        },
+        {
+          "rule": "boards_housing_components_segment_oibda",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "result": {
+            "name": "boards_housing_components_segment_oibda",
+            "status": "пройдено",
+            "delta": "0",
+            "tolerance": "1000000",
+            "missing": [],
+            "reasons": []
+          },
+          "sources": [
+            {
+              "segment": "boards",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "             Плитные материалы                             4 030                 -           4 030                   449",
+                "start_line": 41,
+                "end_line": 41
+              }
+            },
+            {
+              "segment": "housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "             Домостроение                                  2 546             (111)           2 435                   493",
+                "start_line": 42,
+                "end_line": 42
+              }
+            },
+            {
+              "segment": "boards_housing",
+              "item_id": "segment_oibda",
+              "evidence": {
+                "page": 12,
+                "quote": "      Плитные материалы и домостроение,\n       в том числе:                                        6 576             (111)           6 465                   942",
+                "start_line": 39,
+                "end_line": 40
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "segment_catalog_sha256": "367fe003bb64ae203aa3f4056bff5b25983ecde090687e2b668b50b5fec34875",
+  "comparability_approved": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Проверены исходные сегментные и групповые контрольные значения. OIBDA не заменяет расчётную EBITDA. Сегментные/групповые/иерархические подытоги хранятся раздельно; сравнительные данные обоих эмитентов пересчитаны, сопоставимость отдельно не одобрена. Два показателя SGZH остаются непроверенными из-за нераскрытого текущего компонента."
+}

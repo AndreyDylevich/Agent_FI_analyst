@@ -1,0 +1,310 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "verification_scope": "independent_reference_replay_only",
+  "fresh_gigachat_acceptance": false,
+  "source_pdf_and_text_verified": true,
+  "selected_values_count": 84,
+  "stored_statuses": {
+    "проверено_авто": 33,
+    "не_проверено": 51
+  },
+  "missing_observations": [
+    {
+      "item_id": "cf_nci_purchase",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_gain",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_proceeds",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_swap_cash_flows",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    }
+  ],
+  "checks": [
+    {
+      "rule": "complete_cfo_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        36,
+        45,
+        10,
+        14,
+        12,
+        39,
+        2,
+        38,
+        16,
+        26,
+        32,
+        28,
+        34,
+        6,
+        24,
+        0,
+        41,
+        30,
+        4,
+        8,
+        18,
+        22,
+        20,
+        43
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "d480bf814383bb1ca81c3acbda92105e923a04b756d8b87b49cfde4e0c23fe47",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 12,
+          "end_line": 46
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_subsidiary_disposal_gain"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        37,
+        46,
+        11,
+        15,
+        13,
+        40,
+        3,
+        17,
+        27,
+        33,
+        29,
+        35,
+        7,
+        25,
+        1,
+        42,
+        31,
+        5,
+        9,
+        19,
+        23,
+        21,
+        44
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "d480bf814383bb1ca81c3acbda92105e923a04b756d8b87b49cfde4e0c23fe47",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 12,
+          "end_line": 46
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_swap_cash_flows"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        61,
+        49,
+        47,
+        53,
+        51,
+        59,
+        55,
+        57,
+        63,
+        65
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "276dfd692bb1776df1e98a15e929d2afb6b24fc674e0cb526ded560d1146de75",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 47,
+          "end_line": 65
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_subsidiary_disposal_proceeds"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        62,
+        50,
+        48,
+        54,
+        52,
+        60,
+        56,
+        58,
+        64,
+        66
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "276dfd692bb1776df1e98a15e929d2afb6b24fc674e0cb526ded560d1146de75",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 10,
+          "start_line": 47,
+          "end_line": 65
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_nci_purchase"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        69,
+        67,
+        71,
+        82,
+        80,
+        73,
+        75,
+        78
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "997bc7d5df05e416e1e18228d5e9c77343eeb1b724f4133f246f955c32cdd448",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 11,
+          "start_line": 11,
+          "end_line": 23
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        70,
+        68,
+        72,
+        83,
+        81,
+        74,
+        76,
+        77,
+        79
+      ],
+      "version": 9,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "997bc7d5df05e416e1e18228d5e9c77343eeb1b724f4133f246f955c32cdd448",
+        "reviewer": "Codex: визуальная сверка физических страниц 10/11 и полного состава строк 26.11.2026",
+        "source_evidence": {
+          "page": 11,
+          "start_line": 11,
+          "end_line": 23
+        },
+        "source_structure_reviewed": true,
+        "dash_is_zero": false,
+        "number_format": "comma_grouped_dot_decimal"
+      }
+    }
+  ],
+  "structure_catalog_sha256": "89e3b66523ce2324d0b5550a964734d6783ef0b1a20f22b9800a02a6e469d573",
+  "provider": "independent-reference-fixture",
+  "requests": 6,
+  "tokens": 0,
+  "source_databases_modified": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "limitation": "Проверка кода на независимом визуальном эталоне и оригинальном PDF. Две полные сверки сошлись, четыре сохраняют пропуски из-за прочерков; свежий GigaChat проверяется отдельно. Частичный платёж процентов не стал полным."
+}

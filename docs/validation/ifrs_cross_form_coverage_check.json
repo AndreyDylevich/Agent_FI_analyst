@@ -1,0 +1,1763 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "companies": {
+    "MTSS": {
+      "protocol": "docs/validation/ifrs_mts_cross_form_check.json",
+      "source_observations_count": 113,
+      "distinct_facts_count": 107,
+      "check_status_counts": {
+        "пройдено": 57,
+        "недостаточно_данных": 22,
+        "расхождение": 4
+      },
+      "arithmetic_discrepancies": [
+        {
+          "rule": "eq_opening_attribution",
+          "start": null,
+          "end": "2024-12-31",
+          "delta": "22468000000",
+          "tolerance": "1000000"
+        }
+      ],
+      "cross_form_families": [
+        {
+          "id": "profit_cash_flow",
+          "name": "Прибыль ОПУ и база косвенной сверки CFO",
+          "requirements": [
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "пройдено"
+        },
+        {
+          "id": "profit_equity",
+          "name": "Прибыль ОПУ и отчёт об изменениях капитала",
+          "requirements": [
+            {
+              "rule": "profit_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "пройдено"
+        },
+        {
+          "id": "debt_balance",
+          "name": "Кредиты, займы и облигации в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "пройдено"
+        },
+        {
+          "id": "lease_balance",
+          "name": "Обязательства по аренде в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "note_lease_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "note_lease_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "note_lease_present_value"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_balance",
+          "name": "Начальные и конечные остатки капитала в двух формах",
+          "requirements": [
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "расхождение",
+              "missing_inputs": [
+                "equity_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "расхождение",
+              "missing_inputs": [
+                "equity_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "расхождение",
+              "missing_inputs": [
+                "non_controlling_interests"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "расхождение"
+        },
+        {
+          "id": "cash_composition",
+          "name": "Состав денег ОДДС и баланса",
+          "requirements": [
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "cash_flow_sections",
+          "name": "Полный состав разделов ОДДС",
+          "requirements": [
+            {
+              "rule": "complete_cfo_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfo_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_movement",
+          "name": "Полный мост изменения капитала",
+          "requirements": [
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "debt_movement",
+          "name": "Полный мост изменения долга",
+          "requirements": [
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "lease_movement",
+          "name": "Полный мост изменения аренды",
+          "requirements": [
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "depreciation_composition",
+          "name": "Состав амортизации для EBITDA",
+          "requirements": [
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "interest_expense_to_payment",
+          "name": "Начисленные проценты и денежные платежи",
+          "requirements": [
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.",
+          "status": "недостаточно_данных"
+        }
+      ],
+      "source_databases_unchanged": true,
+      "cross_form_complete": false
+    },
+    "SGZH": {
+      "protocol": "docs/validation/ifrs_sgzh_cross_form_check.json",
+      "source_observations_count": 36,
+      "distinct_facts_count": 36,
+      "check_status_counts": {
+        "пройдено": 14,
+        "недостаточно_данных": 18
+      },
+      "arithmetic_discrepancies": [],
+      "cross_form_families": [
+        {
+          "id": "profit_cash_flow",
+          "name": "Прибыль ОПУ и база косвенной сверки CFO",
+          "requirements": [
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "пройдено",
+              "missing_inputs": [],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "пройдено"
+        },
+        {
+          "id": "profit_equity",
+          "name": "Прибыль ОПУ и отчёт об изменениях капитала",
+          "requirements": [
+            {
+              "rule": "profit_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_profit_nci"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "debt_balance",
+          "name": "Кредиты, займы и облигации в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_short_term",
+                "note_debt_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_short_term",
+                "note_debt_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "note_debt_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "note_debt_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "debt_short_term",
+                "note_debt_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "debt_short_term",
+                "note_debt_total"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "lease_balance",
+          "name": "Обязательства по аренде в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_short",
+                "note_lease_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_short",
+                "note_lease_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "note_lease_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "note_lease_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "lease_liabilities_short",
+                "note_lease_present_value"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "lease_liabilities_short",
+                "note_lease_present_value"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_balance",
+          "name": "Начальные и конечные остатки капитала в двух формах",
+          "requirements": [
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_opening_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_total",
+                "eq_opening_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_opening_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_opening_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_opening_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_opening_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_closing_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_total",
+                "eq_closing_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_closing_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_closing_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_closing_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_closing_nci"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "cash_composition",
+          "name": "Состав денег ОДДС и баланса",
+          "requirements": [
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "cash_flow_sections",
+          "name": "Полный состав разделов ОДДС",
+          "requirements": [
+            {
+              "rule": "complete_cfo_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfo_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_movement",
+          "name": "Полный мост изменения капитала",
+          "requirements": [
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "debt_movement",
+          "name": "Полный мост изменения долга",
+          "requirements": [
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "lease_movement",
+          "name": "Полный мост изменения аренды",
+          "requirements": [
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "depreciation_composition",
+          "name": "Состав амортизации для EBITDA",
+          "requirements": [
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "interest_expense_to_payment",
+          "name": "Начисленные проценты и денежные платежи",
+          "requirements": [
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.",
+          "status": "недостаточно_данных"
+        }
+      ],
+      "source_databases_unchanged": true,
+      "cross_form_complete": false
+    },
+    "MVID": {
+      "protocol": "docs/validation/ifrs_mvid_cross_form_check.json",
+      "source_observations_count": 14,
+      "distinct_facts_count": 14,
+      "check_status_counts": {
+        "пройдено": 6,
+        "недостаточно_данных": 6
+      },
+      "arithmetic_discrepancies": [],
+      "cross_form_families": [
+        {
+          "id": "profit_cash_flow",
+          "name": "Прибыль ОПУ и база косвенной сверки CFO",
+          "requirements": [
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit",
+                "cf_starting_net_profit"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_cash_flow_base",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit",
+                "cf_starting_net_profit"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "profit_equity",
+          "name": "Прибыль ОПУ и отчёт об изменениях капитала",
+          "requirements": [
+            {
+              "rule": "profit_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit",
+                "eq_profit_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit",
+                "eq_profit_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit_parent",
+                "eq_profit_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_parent_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit_parent",
+                "eq_profit_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit_nci",
+                "eq_profit_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "profit_nci_vs_equity",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "net_profit_nci",
+                "eq_profit_nci"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "debt_balance",
+          "name": "Кредиты, займы и облигации в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_short_term",
+                "note_debt_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_short_term",
+                "note_debt_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "note_debt_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "note_debt_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "debt_short_term",
+                "note_debt_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_debt_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "debt_long_term",
+                "debt_short_term",
+                "note_debt_total"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "lease_balance",
+          "name": "Обязательства по аренде в балансе и примечании",
+          "requirements": [
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_short",
+                "note_lease_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_current_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_short",
+                "note_lease_current"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "note_lease_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_noncurrent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "note_lease_noncurrent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "lease_liabilities_short",
+                "note_lease_present_value"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "note_lease_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "lease_liabilities_long",
+                "lease_liabilities_short",
+                "note_lease_present_value"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_balance",
+          "name": "Начальные и конечные остатки капитала в двух формах",
+          "requirements": [
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_opening_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_total_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_total",
+                "eq_opening_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_opening_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_parent_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_opening_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_opening_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_opening_nci_vs_balance",
+              "start": null,
+              "end": "2024-12-31",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_opening_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "eq_closing_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_total_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_total",
+                "eq_closing_total"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_closing_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_parent_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "equity_parent",
+                "eq_closing_parent"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_closing_nci"
+              ],
+              "implemented": true
+            },
+            {
+              "rule": "eq_closing_nci_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [
+                "non_controlling_interests",
+                "eq_closing_nci"
+              ],
+              "implemented": true
+            }
+          ],
+          "limitation": null,
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "cash_composition",
+          "name": "Состав денег ОДДС и баланса",
+          "requirements": [
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "cash_composition_vs_balance",
+              "start": null,
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "cash_flow_sections",
+          "name": "Полный состав разделов ОДДС",
+          "requirements": [
+            {
+              "rule": "complete_cfo_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfo_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cfi_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_cff_components",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "equity_movement",
+          "name": "Полный мост изменения капитала",
+          "requirements": [
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_equity_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "debt_movement",
+          "name": "Полный мост изменения долга",
+          "requirements": [
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_debt_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "lease_movement",
+          "name": "Полный мост изменения аренды",
+          "requirements": [
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "complete_lease_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "depreciation_composition",
+          "name": "Состав амортизации для EBITDA",
+          "requirements": [
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "depreciation_composition_vs_cash_flow",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.",
+          "status": "недостаточно_данных"
+        },
+        {
+          "id": "interest_expense_to_payment",
+          "name": "Начисленные проценты и денежные платежи",
+          "requirements": [
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            },
+            {
+              "rule": "interest_expense_to_payment_bridge",
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "status": "недостаточно_данных",
+              "missing_inputs": [],
+              "implemented": false
+            }
+          ],
+          "limitation": "Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.",
+          "status": "недостаточно_данных"
+        }
+      ],
+      "source_databases_unchanged": true,
+      "cross_form_complete": false
+    }
+  },
+  "source_observations_count": 163,
+  "distinct_facts_count": 157,
+  "passed_identities_count": 77,
+  "incomplete_identities_count": 46,
+  "blocked_or_discrepant_identities_count": 4,
+  "source_integrity_verified": true,
+  "source_databases_unchanged": true,
+  "stage4_complete": false,
+  "cross_form_complete": false,
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "new_rules": {
+    "note_debt_total_vs_balance": "Долгосрочные кредиты/займы + краткосрочные кредиты/займы = общий долг примечания",
+    "note_lease_total_vs_balance": "Долгосрочная аренда + краткосрочная аренда = приведённая стоимость аренды примечания"
+  },
+  "limitation": "Общая повторная диагностика сохранённых извлечений, без новых запросов GigaChat и без изменения исходных статусов. 127 тождеств не равны 127 полным межформенным мостам. Из четырёх блокированных/спорных проверок МТС одна имеет арифметическую разницу, три блокированы исходными спорными входами. Полные мосты и отсутствующие формы/примечания не объявлены принятыми."
+}

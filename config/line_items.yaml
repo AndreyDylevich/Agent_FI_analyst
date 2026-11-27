@@ -4503,3 +4503,91 @@ items:
     rsbu_codes: []
     notes: Раскрытый сегментный показатель. Не является автоматически расчётной EBITDA;
       охват и роль колонки задаются отдельно.
+
+  # Annual source controls: retain operating scope and presentation convention.
+  - id: income_profit_continuing
+    statement: income
+    reviewed_table: true
+    name: Прибыль за год от продолжающейся деятельности
+    sign: natural
+    ifrs_synonyms:
+      ru: [Прибыль за год от продолжающейся деятельности, Чистая прибыль от продолжающейся деятельности]
+      en: [Profit from continuing operations]
+    rsbu_codes: []
+
+  - id: income_discontinued_expense_control
+    statement: income
+    reviewed_table: true
+    name: Результат прекращённой деятельности в расходной конвенции ОПУ
+    sign: natural
+    notes: Сохранять исходный знак. В проверенной расходной форме вычитается из продолжающейся прибыли. Не заменяет обычный результат прекращённой деятельности.
+    ifrs_synonyms:
+      ru: [Прибыль от прекращенной деятельности, Чистая прибыль от прекращенной деятельности]
+      en: [Profit from discontinued operations]
+    rsbu_codes: []
+
+  - id: income_discontinued_result
+    statement: income
+    reviewed_table: true
+    name: Результат прекращённой деятельности в естественной конвенции ОПУ
+    sign: natural
+    ifrs_synonyms:
+      ru: [Чистый убыток от прекращенной деятельности, Чистая прибыль от прекращенной деятельности]
+      en: [Profit or loss from discontinued operations]
+    rsbu_codes: []
+
+  - id: cf_depreciation_all_operations
+    statement: cash_flow
+    reviewed_table: true
+    name: Амортизация всех операций в сверке CFO
+    sign: natural
+    notes: Может включать прекращённую деятельность. Не подставлять в EBITDA продолжающейся деятельности без отдельной сверки охвата.
+    ifrs_synonyms:
+      ru: [Амортизация, Амортизация основных средств, активов в форме права пользования и нематериальных активов]
+      en: [Depreciation and amortisation]
+    rsbu_codes: []
+
+  - id: cf_depreciation_ppe_intangibles
+    statement: cash_flow
+    reviewed_table: true
+    name: Амортизация ОС и НМА в сверке CFO без отдельной амортизации ROU
+    sign: natural
+    ifrs_synonyms:
+      ru: [Амортизация основных средств и нематериальных активов]
+      en: [Depreciation of property plant equipment and intangible assets]
+    rsbu_codes: []
+
+  - id: cf_depreciation_rou
+    statement: cash_flow
+    reviewed_table: true
+    name: Амортизация ROU в сверке CFO
+    sign: natural
+    ifrs_synonyms:
+      ru: [Амортизация активов в форме права пользования]
+      en: [Depreciation of right-of-use assets]
+    rsbu_codes: []
+
+  - id: cf_cash_opening_hfs
+    statement: cash_flow
+    reviewed_table: true
+    value_kind: stock
+    date_role: cash_opening
+    name: Деньги активов для продажи в начальном остатке ОДДС
+    sign: outflow
+    ifrs_synonyms:
+      ru: [За минусом денежных средств и их эквивалентов в составе активов для продажи]
+      en: [Less opening cash held for sale]
+    rsbu_codes: []
+
+  - id: cf_cash_opening_after_hfs
+    statement: cash_flow
+    reviewed_table: true
+    value_kind: stock
+    date_role: cash_opening
+    name: Начальные деньги ОДДС после исключения денег активов для продажи
+    sign: natural
+    notes: Не использовать с изменением денег всех операций без подтверждённого моста состава.
+    ifrs_synonyms:
+      ru: [Денежные средства и их эквиваленты на начало года]
+      en: [Opening cash after held-for-sale adjustment]
+    rsbu_codes: []

@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 12
+VERSION = 13
 
 
 def _object(properties: dict) -> dict:
@@ -321,7 +321,7 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             body = r'(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
         else:
             body = r'(?:\d{1,3}(?: \d{3})+|\d+)(?:[.,]\d+)?'
-        number_pattern = r'(?<![\w.,])(?:\(' + body + r'\)|[+\-−]?' + body + r')(?![\w.,])'
+        number_pattern = r'(?<![\w.,])(?:\( *' + body + r' *\)|[+\-−]?' + body + r')(?![\w.,])'
         original_numbers = amount_evidence.replace('\u00a0', ' ').replace('\u202f', ' ')
         tokens = [match.group() for match in re.finditer(number_pattern, original_numbers)]
         model_raw = raw

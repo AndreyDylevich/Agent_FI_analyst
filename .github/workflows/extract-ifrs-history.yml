@@ -1,4 +1,5 @@
-name: Извлечение годового баланса МСФО
+name: Извлечение годовых форм МСФО
+run-name: История ${{ inputs.ticker }} / ${{ inputs.forms_profile }}
 on:
   workflow_dispatch:
     inputs:
@@ -19,8 +20,20 @@ on:
         description: Необязательный ID скачанного архива ifrs-history-download
         required: false
         default: ''
+      forms_profile:
+        description: Выбранные формы
+        type: choice
+        options: [balance, income_cash]
+        default: balance
+      years:
+        description: Необязательный явный список закреплённых лет через запятую
+        default: ''
+      prepare_text_only:
+        description: Только подготовка страниц без модели и финансовой приёмки
+        type: boolean
+        default: false
 concurrency:
-  group: gigachat-provider
+  group: ${{ inputs.prepare_text_only && 'ifrs-source-preparation' || 'gigachat-provider' }}
   cancel-in-progress: false
 permissions:
   contents: read
@@ -28,12 +41,15 @@ permissions:
 jobs:
   extract:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     env:
       PYTHONUNBUFFERED: '1'
       HISTORY_TICKER: ${{ inputs.ticker }}
       HISTORY_YEAR: ${{ inputs.year }}
       HISTORY_ALL_YEARS: ${{ inputs.all_years }}
+      HISTORY_PROFILE: ${{ inputs.forms_profile }}
+      HISTORY_YEARS: ${{ inputs.years }}
+      HISTORY_PREPARE: ${{ inputs.prepare_text_only }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -59,15 +75,39 @@ jobs:
         run: |
           archive_args=()
           if [ -d validation/archive ]; then archive_args=(--archive validation/archive); fi
-          if [ "$HISTORY_ALL_YEARS" = true ]; then
+          if [ "$HISTORY_PREPARE" = true ]; then archive_args+=(--prepare-text-only); fi
+          if [ "$HISTORY_ALL_YEARS" = true ] || [ -n "$HISTORY_YEARS" ]; then
+            if [ -n "$HISTORY_YEARS" ]; then archive_args+=(--years "$HISTORY_YEARS"); fi
             python -m agent.tools.extract_ifrs_history_batch --ticker "$HISTORY_TICKER" \
-              --db validation/history/check.db --output validation/history/reports "${archive_args[@]}"
+              --db validation/history/check.db --output validation/history/reports \
+              --forms-profile "$HISTORY_PROFILE" "${archive_args[@]}"
             exit $?
           fi
           ocr_args=()
           if [ "$HISTORY_TICKER" = MVID ]; then ocr_args=(--ocr --max-ocr-pages 12); fi
           python -m agent.tools.extract_ifrs_history --ticker "$HISTORY_TICKER" --year "$HISTORY_YEAR" \
-            --db validation/history/check.db --output validation/history/report "${ocr_args[@]}" "${archive_args[@]}"
+            --db validation/history/check.db --output validation/history/report \
+            --forms-profile "$HISTORY_PROFILE" "${ocr_args[@]}" "${archive_args[@]}"
+      - name: Сверить выбранные балансы с независимыми эталонами
+        if: always() && !inputs.prepare_text_only
+        shell: bash
+        run: |
+          if [ ! -f validation/history/check.db ]; then
+            echo 'БД извлечения отсутствует; независимая сверка не выполнена'
+            exit 1
+          fi
+          year_args=()
+          if [ "$HISTORY_ALL_YEARS" != true ] && [ -z "$HISTORY_YEARS" ]; then
+            year_args=(--from-year "$HISTORY_YEAR" --through-year "$HISTORY_YEAR")
+          fi
+          if [ -n "$HISTORY_YEARS" ]; then year_args+=(--years "$HISTORY_YEARS"); fi
+          if [ "$HISTORY_PROFILE" = income_cash ]; then
+            python -m agent.tools.verify_ifrs_history_forms --ticker "$HISTORY_TICKER" \
+              --db validation/history/check.db --output validation/history/reference_check.json "${year_args[@]}"
+          else
+            python -m agent.tools.verify_ifrs_history --ticker "$HISTORY_TICKER" \
+              --db validation/history/check.db --output validation/history/reference_check.json "${year_args[@]}"
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:

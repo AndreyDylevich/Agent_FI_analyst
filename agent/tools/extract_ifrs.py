@@ -12,6 +12,7 @@ from agent.extract.llm import CA_PATH, GigaChatProvider, ProviderError
 from agent.extract.pdf_text import HEADINGS, read_pdf
 from agent.extract.ocr_transcript import apply_reviewed_ocr_punctuation
 from agent.extract.pipeline import extract_pdf
+from agent.checks.reviewed_tables import CATALOG, compile_reviewed_tables
 from agent.extract.store import store_extraction
 from agent.metrics.data import load_facts
 from agent.metrics.engine import Engine, Period
@@ -44,6 +45,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--max-ocr-pages', type=int, default=20)
     parser.add_argument('--ocr-dpi',type=int,choices=[320,400],default=320)
     parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
+    parser.add_argument('--reviewed-tables',action='store_true',help='Только отдельно просмотренная структура точного PDF/периода')
     parser.add_argument('--compact-contract',action='store_true',help='ИИ возвращает значения по фиксированным ключам статья/дата')
     parser.add_argument('--cached-only',action='store_true',help='Повторная проверка только сохранённых ответов, без ключа/API модели')
     args = parser.parse_args(argv)
@@ -69,11 +71,15 @@ def main(argv: list[str] | None = None) -> int:
             original_ocr = asdict(text)
             text = apply_reviewed_ocr_punctuation(text)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
+        reviewed_catalog=json.loads(CATALOG.read_text()) if args.reviewed_tables else None
+        if args.reviewed_tables and compile_reviewed_tables(text,period,reviewed_catalog) is None:
+            raise ValueError('Нет просмотренной структуры точной версии PDF/периода')
         manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
         with manager as provider:
             options = {'sections': tuple(args.sections)} if args.sections else {}
             if args.reuse_from:options['reuse_from']=tuple(args.reuse_from)
             if args.compact_contract:options['compact']=True
+            if reviewed_catalog is not None:options['reviewed_catalog']=reviewed_catalog
             run = extract_pdf(text, provider, ticker=args.ticker, entity_token=entity_token, period=period,
                               line_items=items, output=args.output, **options)
         report.update(pdf_sha256=run.pdf_sha256, batches=run.batches, contexts=run.contexts,

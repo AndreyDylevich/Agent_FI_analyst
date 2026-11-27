@@ -68,6 +68,7 @@ class Fact:
     perimeter_basis: str | None = None
     methodology_version: str | None = None
     comparison_evidence: str | None = None
+    comparison_issue: str | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.value, Decimal) or not self.value.is_finite():
@@ -198,6 +199,7 @@ class Engine:
         for item,observations in groups.items():
             if len({(fact.start,fact.end) for fact in observations})<2:
                 continue
+            reasons.extend(f'{item}: {fact.comparison_issue}' for fact in observations if fact.comparison_issue)
             for field in ('accounting_basis','perimeter_basis','methodology_version'):
                 values = {getattr(fact,field) for fact in observations}
                 if any(not value or not value.strip() for value in values):

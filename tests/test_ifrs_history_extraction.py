@@ -85,3 +85,37 @@ def test_year_confirmed_before_model_and_success_is_not_history_acceptance(monke
     assert not report['financial_history_validated'] and not report['independent_reference_verified']
     assert not report['comparability_approved'] and report['messages_sent']==0
     if year==2025 and not complete:assert len(report['missing_balance_observations'])==13
+
+
+def test_preparing_all_text_does_not_call_provider_or_accept_financial_values(monkeypatch,tmp_path):
+ entry=next(row for row in json.loads(tool.MANIFEST.read_text())['documents'] if row['ticker']=='SGZH' and row['expected_year']==2025)
+ text='ПАО СЕГЕЖА ГРУПП. Консолидированная финансовая отчетность по МСФО за 2025 год. В миллионах российских рублей'
+ monkeypatch.setattr(tool,'download_pdf',lambda *a:SimpleNamespace(sha256=entry['pdf_sha256'],path='source.pdf'))
+ monkeypatch.setattr(tool,'read_pdf',lambda *a,**kw:PDFText(entry['pdf_sha256'],(Page(1,text),)))
+ def no_model(*a):raise AssertionError('Подготовка не вызывает модель')
+ monkeypatch.setattr(tool,'extract_main',no_model)
+ assert tool.main(command(tmp_path)+['--prepare-text-only'])==0
+ report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
+ assert report['text_preparation_ok'] and not report['ok'] and not report['financial_values_verified']
+ assert report['provider_requests']==0 and not (tmp_path/'check.db').exists() and (tmp_path/'out/pages.json').exists()
+
+
+@pytest.mark.parametrize('complete',[True,False])
+def test_income_cash_profile_requires_core_figures_for_both_full_years(monkeypatch,tmp_path,complete):
+ monkeypatch.setattr(tool,'compile_reviewed_tables',lambda *a:SimpleNamespace(observations={str(i):{'item_id':item,'statement':'income' if item in ('revenue','operating_profit','net_profit','profit_before_tax','income_tax','income_tax_benefit','d_and_a') else 'cash_flow'} for i,item in enumerate(tool.INCOME_CASH_ITEMS)},basis={'source_structure_reviewed':True}))
+ entry=next(row for row in json.loads(tool.MANIFEST.read_text())['documents'] if row['ticker']=='SGZH' and row['expected_year']==2025)
+ text='ПАО СЕГЕЖА ГРУПП. Консолидированная финансовая отчетность по МСФО за 2025 год. В миллионах российских рублей'
+ monkeypatch.setattr(tool,'download_pdf',lambda *a:SimpleNamespace(sha256=entry['pdf_sha256'],path='source.pdf'))
+ monkeypatch.setattr(tool,'read_pdf',lambda *a,**kw:PDFText(entry['pdf_sha256'],(Page(1,text),)))
+ calls=[]
+ def extract(args):
+  calls.append(args);folder=tmp_path/'out/extraction';folder.mkdir()
+  facts=[{'item_id':item,'start':f'{y}-01-01','end':f'{y}-12-31'} for item in tool.CORE_FLOW_ITEMS for y in (2026 if not complete else 2025,2024)]
+  (folder/'extraction_check.json').write_text(json.dumps({'facts':facts,'statuses':[]}));return 0
+ monkeypatch.setattr(tool,'extract_main',extract)
+ assert tool.main(command(tmp_path)+['--forms-profile','income_cash'])==(0 if complete else 1)
+ call=calls[0];assert call[call.index('--sections')+1:call.index('--metric')]==['income','cash_flow']
+ assert all(item in call for item in tool.INCOME_CASH_ITEMS)
+ report=json.loads((tmp_path/'out/history_extraction_check.json').read_text())
+ assert report['forms_profile']=='income_cash' and not report['financial_history_validated']
+ assert bool(report['missing_core_flow_observations']) is (not complete)

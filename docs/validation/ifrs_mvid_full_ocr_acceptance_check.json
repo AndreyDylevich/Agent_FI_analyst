@@ -1,0 +1,90 @@
+{
+  "checked_date_moscow": "2026-11-27",
+  "ok": true,
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46022730544",
+  "source_commit": "3a09c026b7efd2a84930d23397c90e53a89e0ccb",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "source_observations_count": 281,
+  "manually_accepted_observations": 273,
+  "disputed_observations_preserved": 8,
+  "stored_statuses": {
+    "проверено_вручную": 273,
+    "расхождение": 8
+  },
+  "source_financial_fields_unchanged": true,
+  "original_extraction_database_unchanged": true,
+  "original_database_sha256": "d6aa81083e5229951ca778ca521e4b179545410ec1c907e836e53544fddadc08",
+  "reviewed_database_sha256": "4e234a1fc51a753b1e92e415af67690702d612e94a1fc5a938b37fc64f9a585d",
+  "review_sha256": "56a6b57cfb3cd218880530ff97964546a96e4fb8eff1cf8a73188ec71ed4b337",
+  "reviewed_pages": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    16,
+    21,
+    27
+  ],
+  "review_journal_revalidated": true,
+  "original_money_modified": false,
+  "source_discrepancy_million_rub": "380",
+  "metrics": [
+    {
+      "metric_id": "capex",
+      "period_end": "2026-06-30",
+      "saved_id": 2,
+      "status": "рассчитан",
+      "value": "2898000000",
+      "explanation": "Капитальные затраты = 67,0 + 2 831,0 = 2 898,0 млн руб."
+    },
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2026-06-30",
+      "saved_id": 3,
+      "status": "рассчитан",
+      "value": "0.3319511983327544286210489753",
+      "explanation": "Текущая ликвидность = 91 746,0 / 276 384,0 = 0,33 (суммы в млн руб.)"
+    },
+    {
+      "metric_id": "ebitda",
+      "period_end": "2026-06-30",
+      "saved_id": 4,
+      "status": "рассчитан",
+      "value": "-14719000000",
+      "explanation": "EBITDA = −25 625,0 + 10 906,0 + н/д = −14 719,0 млн руб."
+    },
+    {
+      "metric_id": "fcf_simple",
+      "period_end": "2026-06-30",
+      "saved_id": 5,
+      "status": "рассчитан",
+      "value": "2395000000",
+      "explanation": "Свободный денежный поток (простой) = 5 293,0 − 2 898,0 = 2 395,0 млн руб."
+    },
+    {
+      "metric_id": "net_margin",
+      "period_end": "2026-06-30",
+      "saved_id": 7,
+      "status": "рассчитан",
+      "value": "-33.38972552717456619611540986",
+      "explanation": "Чистая рентабельность = −36 118,0 / 108 171,0 × 100 = −33,39 % (суммы в млн руб.)"
+    },
+    {
+      "metric_id": "total_debt_incl_leases",
+      "period_end": "2026-06-30",
+      "saved_id": 8,
+      "status": "рассчитан",
+      "value": "209216000000",
+      "explanation": "Общий долг с арендой = 159 227,0 + 33 073,0 + 16 916,0 = 209 216,0 млн руб."
+    }
+  ],
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Подтверждена точность 273 выбранных OCR-наблюдений на копии БД. Восемь спорных значений OCI и исходная БД сохранены. Расчётная EBITDA -14719 млн руб. отличается от EBITDA эмитента -14725 млн руб.; различие не исправляется подгонкой. Полнота всех связей и сопоставимость не одобрены."
+}

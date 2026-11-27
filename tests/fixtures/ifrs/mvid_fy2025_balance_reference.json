@@ -1,0 +1,179 @@
+{
+  "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображения физической страницы 8 годового отчёта М.Видео FY2025. Исходные отрицательные итоги капитала подтверждены скобками на изображении. OCR 400dpi/psm6; сверка сама по себе не повышает статусы OCR.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "288701",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "288701000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "164699",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "164699000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "124002",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "124002000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "-45596",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-45596000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "46632",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "46632000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "287665",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "287665000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "288701",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "288701000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "367451",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "367451000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "150201",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "150201000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "217250",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "217250000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "-20354",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "-20354000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "52418",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "52418000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "335387",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "335387000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "367451",
+      "pages": [
+        8
+      ],
+      "status": "не_проверено",
+      "normalized_value": "367451000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "metric_states": [
+    {
+      "metric_id": "current_ratio",
+      "period_end": "2025-12-31",
+      "status": "недостаточно_данных"
+    }
+  ],
+  "financial_audit_complete": false
+}

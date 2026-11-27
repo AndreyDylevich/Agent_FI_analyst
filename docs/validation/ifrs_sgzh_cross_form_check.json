@@ -1,0 +1,2594 @@
+{
+  "ticker": "SGZH",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "url": "https://segezha-group.com/upload/iblock/533/oa7qag8inv5wt638zq0q06dio1eal5zm.pdf",
+  "standard": "IFRS",
+  "period_start": "2026-01-01",
+  "period_end": "2026-06-30",
+  "period_type": "H1",
+  "source_integrity_verified": true,
+  "source_observations_count": 36,
+  "distinct_facts_count": 36,
+  "checks": [
+    {
+      "rule": "assets_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "assets_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        6,
+        0
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "142255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 6,
+          "item_id": "non_current_assets",
+          "normalized_value": "105745000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 7,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 0,
+          "item_id": "current_assets",
+          "normalized_value": "36510000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 1,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        4,
+        8,
+        2
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "142255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-15008000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 8,
+          "item_id": "non_current_liabilities",
+          "normalized_value": "48750000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 9,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 2,
+          "item_id": "current_liabilities",
+          "normalized_value": "108513000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 3,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance_totals",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "balance_totals",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        12
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "142255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 12,
+          "item_id": "total_equity_and_liabilities",
+          "normalized_value": "142255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 13,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "equity_attribution",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_attribution",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "equity_parent",
+          "non_controlling_interests"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-15008000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_held_for_sale_bridge",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_held_for_sale_bridge",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_held_for_sale",
+          "cf_cash_closing_after_hfs"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        14
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 14,
+          "item_id": "cf_cash_closing_gross",
+          "normalized_value": "1415000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 1,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_opening_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "eq_opening_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_opening_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-15008000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_closing_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "eq_closing_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_closing_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-15008000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "assets_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "assets_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        7,
+        1
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "141745000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 7,
+          "item_id": "non_current_assets",
+          "normalized_value": "107499000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 8,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 1,
+          "item_id": "current_assets",
+          "normalized_value": "34246000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 2,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        5,
+        9,
+        3
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "141745000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 9,
+          "item_id": "non_current_liabilities",
+          "normalized_value": "64582000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 10,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 3,
+          "item_id": "current_liabilities",
+          "normalized_value": "76908000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 4,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance_totals",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "balance_totals",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        13
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "141745000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 13,
+          "item_id": "total_equity_and_liabilities",
+          "normalized_value": "141745000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 14,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "equity_attribution",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "equity_attribution",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "equity_parent",
+          "non_controlling_interests"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_opening_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "eq_opening_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_opening_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_closing_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "eq_closing_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_closing_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "255000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "3a070da6d2fa1089dc264987448ddefe2afff3d3361e1341f5a5b16f81e6b57b",
+              "stored_status": "проверено_авто",
+              "page": 6,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_held_for_sale_bridge",
+      "start": null,
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_held_for_sale_bridge",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_held_for_sale",
+          "cf_cash_closing_after_hfs"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        15
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 15,
+          "item_id": "cf_cash_closing_gross",
+          "normalized_value": "3923000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 2,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_attribution",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_attribution",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        18,
+        22,
+        20
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 18,
+          "item_id": "net_profit",
+          "normalized_value": "-15263000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 5,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 22,
+          "item_id": "net_profit_parent",
+          "normalized_value": "-15268000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 9,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 20,
+          "item_id": "net_profit_nci",
+          "normalized_value": "5000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 7,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_vs_cash_flow_base",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_vs_cash_flow_base",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        18,
+        28
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 18,
+          "item_id": "net_profit",
+          "normalized_value": "-15263000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 5,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 28,
+          "item_id": "cf_starting_net_profit",
+          "normalized_value": "-15263000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 15,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_vs_equity",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        18
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 18,
+          "item_id": "net_profit",
+          "normalized_value": "-15263000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 5,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_parent_vs_equity",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_parent_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_parent"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        22
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 22,
+          "item_id": "net_profit_parent",
+          "normalized_value": "-15268000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 9,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_nci_vs_equity",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_nci_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_nci"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        20
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 20,
+          "item_id": "net_profit_nci",
+          "normalized_value": "5000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 7,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_flow_summary",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_flow_summary",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_change"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        34,
+        32,
+        30,
+        26
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 34,
+          "item_id": "cfo",
+          "normalized_value": "-8557000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 21,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 32,
+          "item_id": "cfi",
+          "normalized_value": "-1349000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 19,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 30,
+          "item_id": "cff",
+          "normalized_value": "8329000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 17,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 26,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-22000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 13,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_flow_summary_before_fx",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_flow_summary_before_fx",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        34,
+        32,
+        30,
+        24
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 34,
+          "item_id": "cfo",
+          "normalized_value": "-8557000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 21,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 32,
+          "item_id": "cfi",
+          "normalized_value": "-1349000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 19,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 30,
+          "item_id": "cff",
+          "normalized_value": "8329000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 17,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 24,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-1577000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 11,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_fx_bridge",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_fx_bridge",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_change"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        24,
+        26
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 24,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-1577000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 11,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 26,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-22000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 13,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_attribution",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_attribution",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        19,
+        23,
+        21
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 19,
+          "item_id": "net_profit",
+          "normalized_value": "-21765000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 6,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 23,
+          "item_id": "net_profit_parent",
+          "normalized_value": "-21731000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 10,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 21,
+          "item_id": "net_profit_nci",
+          "normalized_value": "-34000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 8,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_vs_cash_flow_base",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_vs_cash_flow_base",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        19,
+        29
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 19,
+          "item_id": "net_profit",
+          "normalized_value": "-21765000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 6,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 29,
+          "item_id": "cf_starting_net_profit",
+          "normalized_value": "-21765000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 16,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_vs_equity",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        19
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 19,
+          "item_id": "net_profit",
+          "normalized_value": "-21765000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 6,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_parent_vs_equity",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_parent_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_parent"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        23
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 23,
+          "item_id": "net_profit_parent",
+          "normalized_value": "-21731000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 10,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "profit_nci_vs_equity",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_nci_vs_equity",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_profit_nci"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        21
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 21,
+          "item_id": "net_profit_nci",
+          "normalized_value": "-34000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 8,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 5,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_flow_summary",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_flow_summary",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_change"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        35,
+        33,
+        31,
+        27
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 35,
+          "item_id": "cfo",
+          "normalized_value": "-19049000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 22,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 33,
+          "item_id": "cfi",
+          "normalized_value": "-2089000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 20,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 31,
+          "item_id": "cff",
+          "normalized_value": "20596000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 18,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 27,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-176000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 14,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_flow_summary_before_fx",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_flow_summary_before_fx",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        35,
+        33,
+        31,
+        25
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 35,
+          "item_id": "cfo",
+          "normalized_value": "-19049000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 22,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 33,
+          "item_id": "cfi",
+          "normalized_value": "-2089000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 20,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 31,
+          "item_id": "cff",
+          "normalized_value": "20596000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 18,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 25,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-542000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 12,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_fx_bridge",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_fx_bridge",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cf_cash_change"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        25,
+        27
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 25,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-542000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 12,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 27,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-176000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 14,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_rollforward_before_fx",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_rollforward_before_fx",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        16,
+        24,
+        14,
+        26
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 16,
+          "item_id": "cf_cash_opening",
+          "normalized_value": "3014000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 3,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 24,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-1577000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 11,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 14,
+          "item_id": "cf_cash_closing_gross",
+          "normalized_value": "1415000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 1,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 26,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-22000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 13,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "cash_rollforward_before_fx",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_rollforward_before_fx",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        17,
+        25,
+        15,
+        27
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 17,
+          "item_id": "cf_cash_opening",
+          "normalized_value": "4641000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 4,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 25,
+          "item_id": "cf_cash_change_before_fx",
+          "normalized_value": "-542000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 12,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 15,
+          "item_id": "cf_cash_closing_gross",
+          "normalized_value": "3923000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 2,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        },
+        {
+          "fact_index": 27,
+          "item_id": "cf_fx_effect",
+          "normalized_value": "-176000000",
+          "origins": [
+            {
+              "database": "database_2",
+              "source_id": 14,
+              "extraction_sha256": "ee020fa2e1e2b9a322a61be8f0ab1d18472d731b52ade5708c1649b653008c02",
+              "stored_status": "проверено_авто",
+              "page": 8,
+              "citation_rechecked_from_pdf": true,
+              "ocr_review_verified": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "check_status_counts": {
+    "пройдено": 14,
+    "недостаточно_данных": 18
+  },
+  "cross_form_families": [
+    {
+      "id": "profit_cash_flow",
+      "name": "Прибыль ОПУ и база косвенной сверки CFO",
+      "requirements": [
+        {
+          "rule": "profit_vs_cash_flow_base",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "пройдено",
+          "missing_inputs": [],
+          "implemented": true
+        },
+        {
+          "rule": "profit_vs_cash_flow_base",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "пройдено",
+          "missing_inputs": [],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "пройдено"
+    },
+    {
+      "id": "profit_equity",
+      "name": "Прибыль ОПУ и отчёт об изменениях капитала",
+      "requirements": [
+        {
+          "rule": "profit_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_parent_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_parent_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_nci_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_nci_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_profit_nci"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "debt_balance",
+      "name": "Кредиты, займы и облигации в балансе и примечании",
+      "requirements": [
+        {
+          "rule": "note_debt_current_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_short_term",
+            "note_debt_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_current_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_short_term",
+            "note_debt_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_noncurrent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "note_debt_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_noncurrent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "note_debt_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "debt_short_term",
+            "note_debt_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "debt_short_term",
+            "note_debt_total"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "lease_balance",
+      "name": "Обязательства по аренде в балансе и примечании",
+      "requirements": [
+        {
+          "rule": "note_lease_current_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_short",
+            "note_lease_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_current_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_short",
+            "note_lease_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_noncurrent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "note_lease_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_noncurrent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "note_lease_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "lease_liabilities_short",
+            "note_lease_present_value"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "lease_liabilities_short",
+            "note_lease_present_value"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "equity_balance",
+      "name": "Начальные и конечные остатки капитала в двух формах",
+      "requirements": [
+        {
+          "rule": "eq_opening_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_opening_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_total_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_total",
+            "eq_opening_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_parent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_opening_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_parent_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_opening_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_nci_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_opening_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_nci_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_opening_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_closing_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_total_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_total",
+            "eq_closing_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_parent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_closing_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_parent_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_closing_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_nci_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_closing_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_nci_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_closing_nci"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "cash_composition",
+      "name": "Состав денег ОДДС и баланса",
+      "requirements": [
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "cash_flow_sections",
+      "name": "Полный состав разделов ОДДС",
+      "requirements": [
+        {
+          "rule": "complete_cfo_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfo_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfi_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfi_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cff_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cff_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "equity_movement",
+      "name": "Полный мост изменения капитала",
+      "requirements": [
+        {
+          "rule": "complete_equity_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_equity_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "debt_movement",
+      "name": "Полный мост изменения долга",
+      "requirements": [
+        {
+          "rule": "complete_debt_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_debt_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "lease_movement",
+      "name": "Полный мост изменения аренды",
+      "requirements": [
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "depreciation_composition",
+      "name": "Состав амортизации для EBITDA",
+      "requirements": [
+        {
+          "rule": "depreciation_composition_vs_cash_flow",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "depreciation_composition_vs_cash_flow",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "interest_expense_to_payment",
+      "name": "Начисленные проценты и денежные платежи",
+      "requirements": [
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.",
+      "status": "недостаточно_данных"
+    }
+  ],
+  "coverage_version": 1,
+  "cross_form_complete": false,
+  "has_discrepancies": false,
+  "ok": false,
+  "source_statuses_modified": false,
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "limitation": "Повторная арифметическая диагностика сохранённых извлечений одного PDF. Статусы исходных строк не повышаются и не записываются. Данные разных версий PDF не смешиваются. Неполные и ещё не реализованные полные мосты показаны отдельно; успешная частичная сверка их не заменяет.",
+  "source_databases": [
+    {
+      "database": "database_1",
+      "sha256": "1efb574c7b2d3c12ee6434a7bb80eac2b7997a946f629a6435028a04e65ae0df",
+      "unchanged": true
+    },
+    {
+      "database": "database_2",
+      "sha256": "bb6aaa3eeeb191bc35cfbaa01cef5acee3062761c1d5de21548500feb3e5209e",
+      "unchanged": true
+    }
+  ],
+  "checked_date_moscow": "2026-11-26",
+  "source_run_urls": [
+    "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/44961206119",
+    "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45028939182"
+  ]
+}

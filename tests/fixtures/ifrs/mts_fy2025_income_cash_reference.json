@@ -1,0 +1,868 @@
+{
+  "source_specific": true,
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+  "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+  "ticker": "MTSS",
+  "year": 2025,
+  "standard": "IFRS",
+  "scope": "group",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "method": "Независимая ручная транскрипция после просмотра оригинальных страниц; адреса привязаны по буквальным токенам. Это выбранные строки, а не полная приёмка ОПУ/ОДДС.",
+  "rows": [
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "raw_value": "807,186",
+      "value": "807186",
+      "normalized_value": "807186000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "raw_value": "703,741",
+      "value": "703741",
+      "normalized_value": "703741000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 12,
+        "end_line": 12
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "raw_value": "154,609",
+      "value": "154609",
+      "normalized_value": "154609000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "raw_value": "135,930",
+      "value": "135930",
+      "normalized_value": "135930000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 23,
+        "end_line": 23
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "raw_value": "47,021",
+      "value": "47021",
+      "normalized_value": "47021000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 31,
+        "end_line": 31
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "raw_value": "35,478",
+      "value": "35478",
+      "normalized_value": "35478000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 31,
+        "end_line": 31
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_tax",
+      "statement": "income",
+      "raw_value": "8,384",
+      "value": "8384",
+      "normalized_value": "8384000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 33,
+        "end_line": 33
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_tax",
+      "statement": "income",
+      "raw_value": "3,959",
+      "value": "3959",
+      "normalized_value": "3959000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 33,
+        "end_line": 33
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_profit_continuing",
+      "statement": "income",
+      "raw_value": "38,637",
+      "value": "38637",
+      "normalized_value": "38637000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_profit_continuing",
+      "statement": "income",
+      "raw_value": "31,519",
+      "value": "31519",
+      "normalized_value": "31519000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 35,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "income_discontinued_expense_control",
+      "statement": "income",
+      "raw_value": "(19,781)",
+      "value": "-19781",
+      "normalized_value": "-19781000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "raw_value": "38,637",
+      "value": "38637",
+      "normalized_value": "38637000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "raw_value": "51,300",
+      "value": "51300",
+      "normalized_value": "51300000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 39,
+        "end_line": 39
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "income",
+      "raw_value": "125,086",
+      "value": "125086",
+      "normalized_value": "125086000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "income",
+      "raw_value": "110,502",
+      "value": "110502",
+      "normalized_value": "110502000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        11
+      ],
+      "evidence": {
+        "page": 11,
+        "start_line": 17,
+        "end_line": 17
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_depreciation_all_operations",
+      "statement": "cash_flow",
+      "raw_value": "125,086",
+      "value": "125086",
+      "normalized_value": "125086000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 12,
+        "end_line": 13
+      },
+      "cash_flow_section": "operating",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_depreciation_all_operations",
+      "statement": "cash_flow",
+      "raw_value": "110,757",
+      "value": "110757",
+      "normalized_value": "110757000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 12,
+        "end_line": 13
+      },
+      "cash_flow_section": "operating",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "raw_value": "38,637",
+      "value": "38637",
+      "normalized_value": "38637000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 10,
+        "end_line": 10
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "raw_value": "51,300",
+      "value": "51300",
+      "normalized_value": "51300000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 10,
+        "end_line": 10
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "raw_value": "274,431",
+      "value": "274431",
+      "normalized_value": "274431000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 41,
+        "end_line": 41
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "raw_value": "158,959",
+      "value": "158959",
+      "normalized_value": "158959000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 41,
+        "end_line": 41
+      },
+      "cash_flow_section": "operating",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "raw_value": "(321,939)",
+      "value": "-321939",
+      "normalized_value": "-321939000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": "investing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "raw_value": "(176,029)",
+      "value": "-176029",
+      "normalized_value": "-176029000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 62,
+        "end_line": 62
+      },
+      "cash_flow_section": "investing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "raw_value": "15,927",
+      "value": "15927",
+      "normalized_value": "15927000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "raw_value": "50,144",
+      "value": "50144",
+      "normalized_value": "50144000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 26,
+        "end_line": 26
+      },
+      "cash_flow_section": "financing",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "raw_value": "(61,249)",
+      "value": "-61249",
+      "normalized_value": "61249000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 46,
+        "end_line": 47
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "raw_value": "(67,112)",
+      "value": "-67112",
+      "normalized_value": "67112000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 46,
+        "end_line": 47
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "raw_value": "(59,361)",
+      "value": "-59361",
+      "normalized_value": "59361000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 48,
+        "end_line": 50
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "raw_value": "(65,261)",
+      "value": "-65261",
+      "normalized_value": "65261000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        14
+      ],
+      "evidence": {
+        "page": 14,
+        "start_line": 48,
+        "end_line": 50
+      },
+      "cash_flow_section": "investing",
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_cash_change",
+      "statement": "cash_flow",
+      "raw_value": "(31,810)",
+      "value": "-31810",
+      "normalized_value": "-31810000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 31,
+        "end_line": 32
+      },
+      "cash_flow_section": "mixed",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_change",
+      "statement": "cash_flow",
+      "raw_value": "33,966",
+      "value": "33966",
+      "normalized_value": "33966000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 31,
+        "end_line": 32
+      },
+      "cash_flow_section": "mixed",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "statement": "cash_flow",
+      "raw_value": "(229)",
+      "value": "-229",
+      "normalized_value": "-229000000",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 28,
+        "end_line": 29
+      },
+      "cash_flow_section": "mixed",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_fx_effect",
+      "statement": "cash_flow",
+      "raw_value": "892",
+      "value": "892",
+      "normalized_value": "892000000",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 28,
+        "end_line": 29
+      },
+      "cash_flow_section": "mixed",
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "raw_value": "109,776",
+      "value": "109776",
+      "normalized_value": "109776000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 34,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "raw_value": "75,810",
+      "value": "75810",
+      "normalized_value": "75810000000",
+      "start": null,
+      "end": "2023-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 34,
+        "end_line": 35
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening_hfs",
+      "statement": "cash_flow",
+      "raw_value": "2,058",
+      "value": "2058",
+      "normalized_value": "2058000000",
+      "start": null,
+      "end": "2023-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 37,
+        "end_line": 38
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_opening_after_hfs",
+      "statement": "cash_flow",
+      "raw_value": "109,776",
+      "value": "109776",
+      "normalized_value": "109776000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 40,
+        "end_line": 41
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cf_cash_opening_after_hfs",
+      "statement": "cash_flow",
+      "raw_value": "73,752",
+      "value": "73752",
+      "normalized_value": "73752000000",
+      "start": null,
+      "end": "2023-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 40,
+        "end_line": 41
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "raw_value": "77,966",
+      "value": "77966",
+      "normalized_value": "77966000000",
+      "start": null,
+      "end": "2025-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 43,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "raw_value": "109,776",
+      "value": "109776",
+      "normalized_value": "109776000000",
+      "start": null,
+      "end": "2024-12-31",
+      "pages": [
+        15
+      ],
+      "evidence": {
+        "page": 15,
+        "start_line": 43,
+        "end_line": 44
+      },
+      "cash_flow_section": null,
+      "status": "проверено_авто"
+    }
+  ],
+  "checks_required": [],
+  "checks_expected": [
+    {
+      "rule": "annual_tax_to_profit",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_continuing_discontinued_profit",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "annual_net_profit_vs_cf_start",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_flow_totals",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_gross_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_opening_hfs",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "недостаточно_данных"
+    },
+    {
+      "rule": "annual_tax_to_profit",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_continuing_discontinued_profit",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_net_profit_vs_cf_start",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_flow_totals",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_gross_rollforward",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    },
+    {
+      "rule": "annual_cash_opening_hfs",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "пройдено",
+      "delta": "0"
+    }
+  ],
+  "requested_positions": 42,
+  "source_scope_notes": {
+    "d_and_a_form": "income",
+    "income_scope": "Continuing operating profit/D&A versus total net profit; prior discontinued gain is printed in expense convention.",
+    "cash_scope": "First opening row is gross cash for total cash flows; second opening excludes HFS. Do not combine net opening with total cash change.",
+    "da_scope": "2024 OPU continuing D&A 110502 differs from all-operations CFO addback 110757. No equality is assumed."
+  },
+  "comparability_approved": false,
+  "financial_history_validated": false
+}

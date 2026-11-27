@@ -41,6 +41,8 @@ def load_facts(
         "AND scope = ? AND segment_name IS ? AND currency = 'RUB' ORDER BY id",
         (company_id, standard, scope, segment_name),
     ).fetchall()
+    from agent.extract.comparability_review import comparability_for_sources
+    comparison=comparability_for_sources(conn,[row['id'] for row in rows]) if standard=='IFRS' else {}
     result = []
     for row in rows:
         if row["item_id"] not in line_items:
@@ -64,5 +66,6 @@ def load_facts(
             segment_name=segment_name, currency=row["currency"], check_status=row["check_status"],
             cash_flow_section=section,
             document_id=row['document_id'],
+            **comparison.get(row['id'],{}),
         ))
     return result

@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "source_integrity_verified": false,
+  "cross_form_complete": false,
+  "messages_sent": 0,
+  "error": "ValueError: Наблюдение взято вне проверенной строки/формы/раздела",
+  "checked_date_moscow": "2026-11-27"
+}

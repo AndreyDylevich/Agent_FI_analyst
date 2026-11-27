@@ -1,0 +1,172 @@
+{
+  "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+  "source_url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображения физической страницы 8 годового отчёта Сегежи FY2025. В FY2022 сравнительный 2021 пересмотрен; исходный FY2021 сохранён отдельно. Приёмка исходных строк не одобряет сопоставимость/специальную основу подготовки.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "141745",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "141745000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "107499",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "107499000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "34246",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "34246000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "255",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "255000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "64582",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64582000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "76908",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "76908000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "141745",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "141745000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "206554",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "206554000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "159777",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "159777000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "46777",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "46777000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "1084",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "1084000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "109423",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "109423000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "96047",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "96047000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "206554",
+      "pages": [
+        8
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "206554000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "financial_audit_complete": false
+}

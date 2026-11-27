@@ -11,8 +11,10 @@ from agent.tools.backfill_ifrs import MANIFEST
 from agent.tools.extract_ifrs_history import main as extract_one
 
 
-def run_batch(entries, output: Path, database: Path, *, archive: Path | None = None, runner=extract_one):
+def run_batch(entries, output: Path, database: Path, *, archive: Path | None = None, runner=extract_one,
+              forms_profile: str = 'balance', prepare_text_only: bool = False):
     if database.resolve()==db.DB_PATH.resolve():raise ValueError('Нужна отдельная проверочная БД истории')
+    if forms_profile not in ('balance','income_cash'):raise ValueError('Неизвестный профиль исторических форм')
     if output.exists() and any(output.iterdir()):raise ValueError('Нужен новый/пустой каталог истории')
     output.mkdir(parents=True,exist_ok=True)
     jobs=[]
@@ -21,6 +23,8 @@ def run_batch(entries, output: Path, database: Path, *, archive: Path | None = N
         command=['--ticker',entry['ticker'],'--year',str(entry['expected_year']),
                  '--db',str(database),'--output',str(folder)]
         if archive:command.extend(['--archive',str(archive)])
+        if forms_profile!='balance':command.extend(['--forms-profile',forms_profile])
+        if prepare_text_only:command.append('--prepare-text-only')
         if entry['ticker']=='MVID':command.extend(['--ocr','--max-ocr-pages','12'])
         try:
             code=runner(command)
@@ -42,7 +46,9 @@ def run_batch(entries, output: Path, database: Path, *, archive: Path | None = N
             'jobs_succeeded':sum(job['exit_code']==0 for job in jobs),
             'ok':bool(jobs) and count>0 and all(job['exit_code']==0 for job in jobs),
             'financial_history_validated':False,'comparability_approved':False,'messages_sent':0,
-            'limitation':'Только выбранные итоги балансов. Источники и конфликты сохраняются совместно, но независимая сверка, другие формы и сопоставимость истории ещё не приняты.'}
+            'forms_profile':forms_profile,'text_preparation_only':prepare_text_only,
+            'text_preparation_ok':bool(jobs) and prepare_text_only and all(j.get('text_preparation_ok') and j['exit_code']==0 for j in jobs),
+            'limitation':'Только явно выбранные исходные статьи/формы. Извлечение, подготовка текста и отдельные тождества не означают независимой приёмки всех форм, полноты истории или сопоставимости.'}
     (output/'history_batch_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     return report
 
@@ -56,14 +62,24 @@ def main(argv=None):
     parser.add_argument('--from-year',type=int,default=2021)
     parser.add_argument('--through-year',type=int,default=2025)
     parser.add_argument('--archive',type=Path)
+    parser.add_argument('--forms-profile',choices=['balance','income_cash'],default='balance')
+    parser.add_argument('--prepare-text-only',action='store_true')
+    parser.add_argument('--years',help='Явно выбранные годы через запятую из закреплённого манифеста')
     args=parser.parse_args(argv)
     if args.from_year>args.through_year:parser.error('Некорректный диапазон лет')
     if args.db.resolve()==db.DB_PATH.resolve():parser.error('Нужна отдельная проверочная БД истории')
+    years=None
+    if args.years:
+        try:years={int(s.strip()) for s in args.years.split(',')}
+        except ValueError:parser.error('Нужны целые годы через запятую')
+        if not years or any(y<2021 or y>2025 for y in years):parser.error('Поддерживаются закреплённые годы 2021–2025')
     entries=[entry for entry in json.loads(MANIFEST.read_text())['documents']
              if (not args.ticker or entry['ticker'] in args.ticker)
-             and args.from_year<=entry['expected_year']<=args.through_year]
-    report=run_batch(entries,args.output,args.db,archive=args.archive)
-    return 0 if report['ok'] else 1
+             and args.from_year<=entry['expected_year']<=args.through_year
+             and (years is None or entry['expected_year'] in years)]
+    report=run_batch(entries,args.output,args.db,archive=args.archive,forms_profile=args.forms_profile,
+                     prepare_text_only=args.prepare_text_only)
+    return 0 if (report['text_preparation_ok'] if args.prepare_text_only else report['ok']) else 1
 
 
 if __name__=='__main__':raise SystemExit(main())

@@ -265,3 +265,11 @@ def test_equity_opening_requires_its_actual_dated_row_not_previous_june_closing(
     with pytest.raises(ValueError,match='САЛЬДО'):parse(data,pages)
     row.update(original_name=label,evidence=cite(label+' 11,234\nСальдо на 30 июня 2025 года (45,293)'))
     with pytest.raises(ValueError,match='отсутствуют'):parse(data,pages)
+
+
+def test_source_parenthesis_spacing_preserves_negative_value():
+    data=payload();row=data['facts'][0]
+    row.update(item_id='cost_of_sales',original_name='Себестоимость',raw_value='-50',
+               evidence=cite('Себестоимость (50 ) (40)'),statement='income',period_start='2026-01-01')
+    result=parse_extraction(json.dumps(data), (Page(1,TEXT+'\nСебестоимость (50 ) (40)'),),ticker='TEST',period=PERIOD,entity_token='Тест',line_items=config.line_items()).facts[0]
+    assert result.raw_value=='(50 )' and result.value==D('-50')

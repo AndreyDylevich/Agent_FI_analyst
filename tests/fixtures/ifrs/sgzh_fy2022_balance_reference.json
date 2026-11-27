@@ -1,0 +1,172 @@
+{
+  "pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+  "source_url": "https://segezha-group.com/upload/iblock/91d/0r3xa6k330atuj72rx7prs6hbixb65st.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображения физической страницы 10 годового отчёта Сегежи FY2022. В FY2022 сравнительный 2021 пересмотрен; исходный FY2021 сохранён отдельно. Приёмка исходных строк не одобряет сопоставимость/специальную основу подготовки.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "228090",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "228090000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "163462",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "163462000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "64628",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64628000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "42054",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "42054000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "115910",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "115910000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "70126",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "70126000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2022-12-31",
+      "value": "228090",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "228090000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "213948",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "213948000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "159365",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "159365000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "54583",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "54583000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "46192",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "46192000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "90789",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "90789000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "76967",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "76967000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "213948",
+      "pages": [
+        10
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "213948000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "financial_audit_complete": false
+}

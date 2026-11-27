@@ -1,0 +1,800 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "source_url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_cond_i_fs_q2_26_2608_final.pdf",
+  "verification_scope": "independent_reference_replay_only",
+  "fresh_gigachat_acceptance": false,
+  "source_pdf_and_selected_text_verified": true,
+  "selected_reference_values_count": 19,
+  "all_reference_values_match": true,
+  "reference_provider": "independent-reference-fixture",
+  "reference_provider_requests_count": 6,
+  "reference_provider_tokens": 0,
+  "structure_catalog_sha256": "5007aa3814a031678c0ecd8d00cc16b6645a0ca287bd034bff4a6b6771226e9b",
+  "checks": [
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "расхождение",
+        "delta": "22468000000",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        0,
+        5,
+        14,
+        10,
+        7,
+        9,
+        16,
+        1
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "863231545e17de21a6b2ef63ddd7498b3c1a2818197da3ace1e207f38cff4a4f",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 11,
+          "end_line": 24
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "equity_neutral_transfer_1",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_neutral_transfer_1",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        18,
+        17
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "equity_neutral_transfer_2",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_neutral_transfer_2",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        12,
+        11
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        2,
+        4,
+        18,
+        17,
+        13,
+        12,
+        11,
+        6,
+        8,
+        15,
+        3
+      ],
+      "version": 8,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "a3959c712808f610effc5a74eab7096c82752cc8fb92cae7ede24635709db25b",
+        "reviewer": "Codex: визуальная проверка физической страницы 9 и состава обеих таблиц 26.11.2026",
+        "source_evidence": {
+          "page": 9,
+          "start_line": 25,
+          "end_line": 40
+        },
+        "source_structure_reviewed": true
+      }
+    }
+  ],
+  "source_facts": [
+    {
+      "item_id": "eq_opening_total",
+      "original_name": "Сальдо на 31 декабря 202      4 года",
+      "raw_value": "11,234",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "11234",
+      "normalized": "11234000000",
+      "unit": "млн руб.",
+      "start": null,
+      "end": "2024-12-31",
+      "period_type": "FY",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Сальдо на 31 декабря 202      4 года                                     1,998,381,575                   200               56,113               (93,992)             (37,679)              26,445                 11,234",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_opening_total__2024_12_31"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "original_name": "Сальдо на 30 июня 2025 года",
+      "raw_value": "(45,293)",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "-45293",
+      "normalized": "-45293000000",
+      "unit": "млн руб.",
+      "start": null,
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Сальдо на 30 июня 2025 года                                             1,998,381,575                   200                20,610              (93,372)              (72,562)              27,269                 (45,293)",
+        "start_line": 24,
+        "end_line": 24
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_closing_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "original_name": "Сальдо на 31 декабря 2025 года",
+      "raw_value": "16,958",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "16958",
+      "normalized": "16958000000",
+      "unit": "млн руб.",
+      "start": null,
+      "end": "2025-12-31",
+      "period_type": "FY",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Сальдо на 31 декабря 2025 года                                           1,998,381,575                  200                49,317              (61,234)              (11,717)              28,675                 16,958",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_opening_total__2025_12_31"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "original_name": "Сальдо на 30 июня 2026 года",
+      "raw_value": "34,662",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "34662",
+      "normalized": "34662000000",
+      "unit": "млн руб.",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Сальдо на 30 июня 2026 года                                             1,998,381,575                   200                67,605              (63,663)                4,142               30,520                 34,662",
+        "start_line": 40,
+        "end_line": 40
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_closing_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "original_name": "Итого совокупный доход за период",
+      "raw_value": "73,885",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "73885",
+      "normalized": "73885000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Итого совокупный доход за период                                                      -                    -               74,030                (1,731)              72,299                 1,586                73,885",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_comprehensive_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_comprehensive_total",
+      "original_name": "Итого совокупный доход за период",
+      "raw_value": "9,009",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "9009",
+      "normalized": "9009000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Итого совокупный доход за период                                                      -                    -                7,695                   142                7,837                 1,172                  9,009",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_comprehensive_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_dividends_declared_total",
+      "original_name": "Дивиденды, объявленные ПАО «МТС» и дочерними компаниями",
+      "raw_value": "(58,346)",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "-58346",
+      "normalized": "-58346000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Дивиденды, объявленные ПАО «МТС» и дочерними\n компаниями                                                                           -                    -              (57,722)                     -             (57,722)                 (624)               (58,346)",
+        "start_line": 36,
+        "end_line": 37
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_dividends_declared_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_dividends_declared_total",
+      "original_name": "Дивиденды, объявленные ПАО «МТС» и дочерними компаниями",
+      "raw_value": "(58,722)",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "-58722",
+      "normalized": "-58722000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Дивиденды, объявленные ПАО «МТС» и дочерними\n компаниями                                                                           -                    -              (58,194)                     -             (58,194)                 (528)               (58,722)",
+        "start_line": 20,
+        "end_line": 21
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_dividends_declared_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_dividends_restored_total",
+      "original_name": "Восстановленные дивиденды (Прим. 15",
+      "raw_value": "1,090",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "1090",
+      "normalized": "1090000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Восстановленные дивиденды (Прим. 15        )                                          -                    -                1,090                      -               1,090                      -                 1,090",
+        "start_line": 38,
+        "end_line": 38
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_dividends_restored_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_dividends_restored_total",
+      "original_name": "Невостребованные дивиденды за 2021 (Прим. 15)",
+      "raw_value": "14,996",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "14996",
+      "normalized": "14996000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Невостребованные дивиденды за 2021 (Прим. 15)                                         -                    -               14,996                      -              14,996                      -               14,996",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_dividends_restored_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_nci_issuance_total",
+      "original_name": "Выпуск доли неконтролирующих акционеров",
+      "raw_value": "180",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "180",
+      "normalized": "180000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Выпуск доли неконтролирующих акционеров                                               -                    -                     -                     -                    -                  180                    180",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_nci_issuance_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_nci_transfer_nci",
+      "original_name": "Изменение доли неконтролирующих акционеров",
+      "raw_value": "935",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "935",
+      "normalized": "935000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Изменение доли неконтролирующих акционеров                                            -                    -                     -                 (935)                (935)                  935                       -",
+        "start_line": 35,
+        "end_line": 35
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_nci_transfer_nci__2026_06_30"
+    },
+    {
+      "item_id": "eq_nci_transfer_parent",
+      "original_name": "Изменение доли неконтролирующих акционеров",
+      "raw_value": "(935)",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "-935",
+      "normalized": "-935000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Изменение доли неконтролирующих акционеров                                            -                    -                     -                 (935)                (935)                  935                       -",
+        "start_line": 35,
+        "end_line": 35
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_nci_transfer_parent__2026_06_30"
+    },
+    {
+      "item_id": "eq_options_total",
+      "original_name": "Опционы, выданные по программам вознаграждения работников",
+      "raw_value": "1,013",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "1013",
+      "normalized": "1013000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Опционы, выданные по программам вознаграждения\n работников                                                                           -                    -                     -                1,013                1,013                      -                 1,013",
+        "start_line": 33,
+        "end_line": 34
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_options_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_options_total",
+      "original_name": "Опционы, выданные по программам вознаграждения работников",
+      "raw_value": "432",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "432",
+      "normalized": "432000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Опционы, выданные по программам вознаграждения\n работников                                                                           -                    -                     -                  432                  432                      -                   432",
+        "start_line": 17,
+        "end_line": 18
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_options_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_other_movement_total",
+      "original_name": "Прочее",
+      "raw_value": "62",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "62",
+      "normalized": "62000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Прочее                                                                                -                    -                 (643)                  757                  114                   (52)                    62",
+        "start_line": 39,
+        "end_line": 39
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_other_movement_total__2026_06_30"
+    },
+    {
+      "item_id": "eq_other_movement_total",
+      "original_name": "Прочее",
+      "raw_value": "46",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "46",
+      "normalized": "46000000",
+      "unit": "млн руб.",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Прочее                                                                                -                    -                     -                   46                   46                      -                    46",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2025",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_other_movement_total__2025_06_30"
+    },
+    {
+      "item_id": "eq_reclassification_reserves",
+      "original_name": "Реклассификация резерва переоценки основных средств по мере использования",
+      "raw_value": "(1,533)",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "-1533",
+      "normalized": "-1533000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Реклассификация резерва переоценки основных средств по\n мере использования                                                                   -                    -                1,533                (1,533)                    -                     -                      -",
+        "start_line": 31,
+        "end_line": 32
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_reclassification_reserves__2026_06_30"
+    },
+    {
+      "item_id": "eq_reclassification_retained",
+      "original_name": "Реклассификация резерва переоценки основных средств по мере использования",
+      "raw_value": "1,533",
+      "number_format": "comma_grouped_dot_decimal",
+      "value": "1533",
+      "normalized": "1533000000",
+      "unit": "млн руб.",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "H1",
+      "statement": "equity",
+      "evidence": {
+        "page": 9,
+        "quote": "Реклассификация резерва переоценки основных средств по\n мере использования                                                                   -                    -                1,533                (1,533)                    -                     -                      -",
+        "start_line": 31,
+        "end_line": 32
+      },
+      "unit_evidence": {
+        "page": 9,
+        "quote": "(в миллионах российских рублей, за исключением количества акций)",
+        "start_line": 5,
+        "end_line": 5
+      },
+      "column_header": "2026",
+      "cash_flow_section": null,
+      "from_ocr": false,
+      "model_raw_value": null,
+      "model_observation_key": "eq_reclassification_retained__2026_06_30"
+    }
+  ],
+  "source_statuses": [
+    "расхождение",
+    "расхождение",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "расхождение",
+    "проверено_авто",
+    "расхождение",
+    "проверено_авто",
+    "расхождение",
+    "расхождение",
+    "проверено_авто",
+    "проверено_авто",
+    "проверено_авто",
+    "расхождение",
+    "проверено_авто",
+    "расхождение",
+    "проверено_авто",
+    "проверено_авто"
+  ],
+  "missing_requested_observations": [
+    {
+      "item_id": "eq_nci_issuance_total",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30"
+    },
+    {
+      "item_id": "eq_nci_transfer_nci",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_nci_transfer_parent",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_reclassification_reserves",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_reclassification_retained",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    }
+  ],
+  "original_extractions_readiness": {
+    "source_integrity_verified": true,
+    "databases_unchanged": true,
+    "missing_movements_by_period": {
+      "2025-06-30": [
+        "eq_comprehensive_total",
+        "eq_options_total",
+        "eq_nci_issuance_total",
+        "eq_dividends_declared_total",
+        "eq_dividends_restored_total",
+        "eq_other_movement_total"
+      ],
+      "2026-06-30": [
+        "eq_comprehensive_total",
+        "eq_reclassification_retained",
+        "eq_reclassification_reserves",
+        "eq_options_total",
+        "eq_nci_transfer_parent",
+        "eq_nci_transfer_nci",
+        "eq_dividends_declared_total",
+        "eq_dividends_restored_total",
+        "eq_other_movement_total"
+      ]
+    },
+    "full_movement_extraction_present": false
+  },
+  "case_ready_for_github_actions": "mts_equity_movement",
+  "source_databases_modified": false,
+  "messages_sent": 0,
+  "comparability_approved": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "limitation": "Это полный прогон кода на независимо прочитанном эталоне и оригинальном PDF, не свежий ответ GigaChat. 15 потоковых сумм ещё отсутствуют в прежних извлечениях. Положительное открытие сравнительного периода и разница сохранены. Структура подтверждена только для этого SHA256, другие выпуски автоматически не одобряются."
+}

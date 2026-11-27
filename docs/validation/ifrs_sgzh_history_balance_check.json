@@ -1,0 +1,433 @@
+{
+  "checked_date_moscow": "2026-11-22",
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45028940251",
+  "restatement_review": "docs/validation/ifrs_sgzh_2021_restatement_check.json",
+  "source_values_count": 70,
+  "independent_references": {
+    "2021": {
+      "all_selected_values_verified": true,
+      "selected_values": [
+        {
+          "item_id": "total_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_assets",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2020-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2020-12-31",
+          "passed": true
+        }
+      ],
+      "checks": {
+        "assets_components": true,
+        "balance": true,
+        "balance_totals": true
+      },
+      "expected_checks": [],
+      "metrics": {},
+      "financial_audit_complete": false,
+      "ok": true
+    },
+    "2022": {
+      "all_selected_values_verified": true,
+      "selected_values": [
+        {
+          "item_id": "total_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2021-12-31",
+          "passed": true
+        }
+      ],
+      "checks": {
+        "assets_components": true,
+        "balance": true,
+        "balance_totals": true
+      },
+      "expected_checks": [],
+      "metrics": {},
+      "financial_audit_complete": false,
+      "ok": true
+    },
+    "2023": {
+      "all_selected_values_verified": true,
+      "selected_values": [
+        {
+          "item_id": "total_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2022-12-31",
+          "passed": true
+        }
+      ],
+      "checks": {
+        "assets_components": true,
+        "balance": true,
+        "balance_totals": true
+      },
+      "expected_checks": [],
+      "metrics": {},
+      "financial_audit_complete": false,
+      "ok": true
+    },
+    "2024": {
+      "all_selected_values_verified": true,
+      "selected_values": [
+        {
+          "item_id": "total_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2023-12-31",
+          "passed": true
+        }
+      ],
+      "checks": {
+        "assets_components": true,
+        "balance": true,
+        "balance_totals": true
+      },
+      "expected_checks": [],
+      "metrics": {},
+      "financial_audit_complete": false,
+      "ok": true
+    },
+    "2025": {
+      "all_selected_values_verified": true,
+      "selected_values": [
+        {
+          "item_id": "total_assets",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2025-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_assets",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "equity_total",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "non_current_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "current_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        },
+        {
+          "item_id": "total_equity_and_liabilities",
+          "period_end": "2024-12-31",
+          "passed": true
+        }
+      ],
+      "checks": {
+        "assets_components": true,
+        "balance": true,
+        "balance_totals": true
+      },
+      "expected_checks": [],
+      "metrics": {},
+      "financial_audit_complete": false,
+      "ok": true
+    }
+  },
+  "selected_balance_history_verified": true,
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "limitation": "70 исходных значений из пяти годовых PDF сверены по визуальным эталонам после оформления раскрытого пересмотра 2021. FY2021 в тыс. руб., остальные в млн руб.; старые числа сохранены. Специальная основа FY2023–2025, сопоставимость и другие формы истории не приняты."
+}

@@ -1,0 +1,56 @@
+{
+  "checked_date_moscow": "2026-11-27",
+  "verification_scope": "independent_visual_source_finding",
+  "fresh_gigachat_acceptance": false,
+  "ticker": "MVID",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_2026/pao-mvideo-msfo-6-mes-2026.pdf",
+  "period_start": "2025-01-01",
+  "period_end": "2025-06-30",
+  "unit": "млн руб.",
+  "source_scope": "group",
+  "readings": [
+    {
+      "physical_page": 6,
+      "original_name": "Прибыль от переоценки основных средств",
+      "value": "8472"
+    },
+    {
+      "physical_page": 6,
+      "original_name": "Налог на прибыль по статьям, которые впоследствии не будут реклассифицированы в состав прибыли или убытка",
+      "value": "-2118"
+    },
+    {
+      "physical_page": 6,
+      "original_name": "Прочий совокупный доход за вычетом налога на прибыль",
+      "value": "6354"
+    },
+    {
+      "physical_page": 6,
+      "original_name": "ИТОГО СОВОКУПНЫЙ РАСХОД ЗА ПЕРИОД",
+      "position": "после OCI",
+      "value": "-18805"
+    },
+    {
+      "physical_page": 7,
+      "original_name": "Прочий совокупный доход за период",
+      "owner_column": "Итого",
+      "value": "6734"
+    },
+    {
+      "physical_page": 7,
+      "original_name": "Итого совокупный доход/(расход) за период",
+      "owner_column": "Итого",
+      "value": "-18425"
+    }
+  ],
+  "difference_equity_minus_income_million": "380",
+  "difference_equity_minus_income_rubles": "380000000",
+  "both_tables_individually_sum_to_their_own_totals": true,
+  "cause_or_restatement_confirmed": false,
+  "source_values_corrected": false,
+  "source_databases_modified": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "limitation": "Несовпадающие значения подтверждены на полных изображениях физических страниц 6/7 и увеличенных фрагментах. Причина/пересчёт не установлены. Нужны свежая приёмка извлечения и блокировка затронутых сравнительных входов; цифры источника сохраняются без исправления по равенству."
+}

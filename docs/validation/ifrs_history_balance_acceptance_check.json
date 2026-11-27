@@ -1,0 +1,783 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "companies": {
+    "MTSS": {
+      "source_values_count": 70,
+      "unavailable_report_years": [],
+      "requested_window_complete": true,
+      "selected_balance_history_verified": true,
+      "source_run_urls": [
+        "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45025520170"
+      ],
+      "database_sha256": "34e33f7aa0763d3889a9328375627ea3bfe7d811982033a9a3a2dcc264820f65",
+      "database_unchanged": true,
+      "years": [
+        {
+          "year": 2021,
+          "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+          "reference_sha256": "a6486b5bbed173580c59c6a728cb3c06a0534150af36ff2ee97098e4d64d099d",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2022,
+          "pdf_sha256": "ae2da2e15ca9706cc9888b17403bd2337c80b152078fa74b17b600757edb3251",
+          "reference_sha256": "2f619ec126d16a993b8bcfde1942dc8b75612897555f2a8fcbee8f0e5d1ff584",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2023,
+          "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+          "reference_sha256": "b8b4134869c3060fcf84c096f0bbc63de576a6c3a81ed93fcfb687c8429e5362",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2024,
+          "pdf_sha256": "3df7e0bf53631d326d041eeb7693c7c5b8166c43c76aca62161575e20ae32870",
+          "reference_sha256": "6e6064445dd4ba4033fa131b641ed3ab02614212f1ff101403d653eede2eb8bb",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2025,
+          "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+          "reference_sha256": "78e68b6145380aef3f5651f70dc27fffb3696d14f70c8eaecbcdffb48f66edd9",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        }
+      ]
+    },
+    "SGZH": {
+      "source_values_count": 70,
+      "unavailable_report_years": [],
+      "requested_window_complete": true,
+      "selected_balance_history_verified": true,
+      "source_run_urls": [
+        "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45028940251"
+      ],
+      "database_sha256": "5436ed96febd73fae10b9aae16642272bcb9c30f98d50628995b2bc6387ad6b7",
+      "database_unchanged": true,
+      "years": [
+        {
+          "year": 2021,
+          "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+          "reference_sha256": "03fa20b2ace189fd1bb0666bc9e94e4a01c631c350db7515bfa3cf8aa050b4cc",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 7,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2020-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2022,
+          "pdf_sha256": "5fdc407326433bea53855e1aeaaf6e569e483bfac65cf93903a5901e930dbf90",
+          "reference_sha256": "59980fcd8b7cbe46e4ac6cf1a5d874587956d43ae2aa6154a54697790a1bce02",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 7,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2021-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2023,
+          "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+          "reference_sha256": "439ecedbf55ac25d6cffa8518828285eb111285332c1dbe9589f70695aedf279",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2024,
+          "pdf_sha256": "89a72bb9435f8cb1f288dc56568e1c5d724da23b9a1624c5ea2f79797cb520e6",
+          "reference_sha256": "7a03b8dd72615af7a978c22b72c03627145c5f6285aab333ed694e78e38dc2f9",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2025,
+          "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+          "reference_sha256": "ab844a35e6db41199ab1fd382202883eefb4ed672c58c8327b7575081957f480",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        }
+      ]
+    },
+    "MVID": {
+      "source_values_count": 42,
+      "unavailable_report_years": [
+        2021,
+        2022
+      ],
+      "requested_window_complete": false,
+      "selected_balance_history_verified": true,
+      "source_run_urls": [
+        "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45033999900",
+        "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45042565852"
+      ],
+      "database_sha256": "370ad7e42cb77af69d68ba14fa5a652b0658cee6102d05073522761b8cd31acd",
+      "database_unchanged": true,
+      "years": [
+        {
+          "year": 2023,
+          "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+          "reference_sha256": "cf749b4d2c2767a5663e360a9f5f0b77887743f452c06cea1cf8f2081bc7d869",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2022-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2024,
+          "pdf_sha256": "2e055eb0a75e2d4a5dfb192060255c605d814221455170f009803085eef0e056",
+          "reference_sha256": "4dee7df59d317307419f6e7f7643b75024c54d601b74329734449cc2c0f8f945",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "проверено_авто": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2023-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        },
+        {
+          "year": 2025,
+          "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+          "reference_sha256": "5eb89e95af88394a5972173bcd91e06b6c3d8c7f48fc529ccb2e37adb8178b28",
+          "source_values_count": 14,
+          "stored_statuses": {
+            "не_проверено": 14
+          },
+          "superseded_values_count": 0,
+          "restated_values_count": 0,
+          "period_checks": [
+            {
+              "rule": "assets_components",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2025-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "assets_components",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            },
+            {
+              "rule": "balance_totals",
+              "period_end": "2024-12-31",
+              "passed": true,
+              "delta": "0",
+              "tolerance": "1000000"
+            }
+          ],
+          "ok": true
+        }
+      ]
+    }
+  },
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "selected_values_verified": 182,
+  "selected_balance_history_verified": true,
+  "limitation": "Сверка 182 исходных значений из 13 PDF относится к семи итогам баланса в двух колонках. Это не полная финансовая история. FY2025 М.Видео: 14 OCR-значений остаются не_проверено, текущая ликвидность заблокирована. Отдельные выпуски М.Видео FY2021/2022 отсутствуют в архиве; сравнительная колонка FY2023 не заменяет их. Пересчёт Сегежи оформлен отдельно; учётная база, периметр и сопоставимость не одобрены."
+}

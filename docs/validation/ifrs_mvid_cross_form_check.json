@@ -1,0 +1,1333 @@
+{
+  "ticker": "MVID",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_2026/pao-mvideo-msfo-6-mes-2026.pdf",
+  "standard": "IFRS",
+  "period_start": "2026-01-01",
+  "period_end": "2026-06-30",
+  "period_type": "H1",
+  "source_integrity_verified": true,
+  "source_observations_count": 14,
+  "distinct_facts_count": 14,
+  "checks": [
+    {
+      "rule": "assets_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "assets_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        6,
+        0
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "256504000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 6,
+          "item_id": "non_current_assets",
+          "normalized_value": "164758000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 7,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 0,
+          "item_id": "current_assets",
+          "normalized_value": "91746000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 1,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        4,
+        8,
+        2
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "256504000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-81714000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 8,
+          "item_id": "non_current_liabilities",
+          "normalized_value": "61834000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 9,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 2,
+          "item_id": "current_liabilities",
+          "normalized_value": "276384000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 3,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance_totals",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "balance_totals",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        12
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 10,
+          "item_id": "total_assets",
+          "normalized_value": "256504000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 11,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 12,
+          "item_id": "total_equity_and_liabilities",
+          "normalized_value": "256504000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 13,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "equity_attribution",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_attribution",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "equity_parent",
+          "non_controlling_interests"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-81714000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_opening_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "eq_opening_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_opening_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-81714000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_closing_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "eq_closing_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_closing_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        4
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 4,
+          "item_id": "equity_total",
+          "normalized_value": "-81714000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 5,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "assets_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "assets_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        7,
+        1
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "288701000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 7,
+          "item_id": "non_current_assets",
+          "normalized_value": "164699000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 8,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 1,
+          "item_id": "current_assets",
+          "normalized_value": "124002000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 2,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        5,
+        9,
+        3
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "288701000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "-45596000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 9,
+          "item_id": "non_current_liabilities",
+          "normalized_value": "46632000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 10,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 3,
+          "item_id": "current_liabilities",
+          "normalized_value": "287665000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 4,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "balance_totals",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "balance_totals",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        13
+      ],
+      "version": 7,
+      "status": "пройдено",
+      "arithmetic_status": "пройдено",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 11,
+          "item_id": "total_assets",
+          "normalized_value": "288701000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 12,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        },
+        {
+          "fact_index": 13,
+          "item_id": "total_equity_and_liabilities",
+          "normalized_value": "288701000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 14,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "equity_attribution",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "equity_attribution",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "equity_parent",
+          "non_controlling_interests"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "-45596000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_opening_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "eq_opening_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_opening_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "-45596000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rule": "eq_closing_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "eq_closing_total_vs_balance",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "eq_closing_total"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        5
+      ],
+      "version": 7,
+      "status": "недостаточно_данных",
+      "arithmetic_status": "недостаточно_данных",
+      "inherited_discrepancy_indices": [],
+      "disputed_input_indices": [],
+      "unreviewed_ocr_indices": [],
+      "inputs": [
+        {
+          "fact_index": 5,
+          "item_id": "equity_total",
+          "normalized_value": "-45596000000",
+          "origins": [
+            {
+              "database": "database_1",
+              "source_id": 6,
+              "extraction_sha256": "ec677ab44a882032131f23cb2919f84a2046936e9bc146eb48e32fb136955a13",
+              "stored_status": "проверено_вручную",
+              "page": 5,
+              "citation_rechecked_from_pdf": false,
+              "ocr_review_verified": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "check_status_counts": {
+    "пройдено": 6,
+    "недостаточно_данных": 6
+  },
+  "cross_form_families": [
+    {
+      "id": "profit_cash_flow",
+      "name": "Прибыль ОПУ и база косвенной сверки CFO",
+      "requirements": [
+        {
+          "rule": "profit_vs_cash_flow_base",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit",
+            "cf_starting_net_profit"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_vs_cash_flow_base",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit",
+            "cf_starting_net_profit"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "profit_equity",
+      "name": "Прибыль ОПУ и отчёт об изменениях капитала",
+      "requirements": [
+        {
+          "rule": "profit_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit",
+            "eq_profit_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit",
+            "eq_profit_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_parent_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit_parent",
+            "eq_profit_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_parent_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit_parent",
+            "eq_profit_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_nci_vs_equity",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit_nci",
+            "eq_profit_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "profit_nci_vs_equity",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "net_profit_nci",
+            "eq_profit_nci"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "debt_balance",
+      "name": "Кредиты, займы и облигации в балансе и примечании",
+      "requirements": [
+        {
+          "rule": "note_debt_current_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_short_term",
+            "note_debt_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_current_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_short_term",
+            "note_debt_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_noncurrent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "note_debt_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_noncurrent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "note_debt_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "debt_short_term",
+            "note_debt_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_debt_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "debt_long_term",
+            "debt_short_term",
+            "note_debt_total"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "lease_balance",
+      "name": "Обязательства по аренде в балансе и примечании",
+      "requirements": [
+        {
+          "rule": "note_lease_current_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_short",
+            "note_lease_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_current_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_short",
+            "note_lease_current"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_noncurrent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "note_lease_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_noncurrent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "note_lease_noncurrent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "lease_liabilities_short",
+            "note_lease_present_value"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "note_lease_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "lease_liabilities_long",
+            "lease_liabilities_short",
+            "note_lease_present_value"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "equity_balance",
+      "name": "Начальные и конечные остатки капитала в двух формах",
+      "requirements": [
+        {
+          "rule": "eq_opening_total_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_opening_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_total_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_total",
+            "eq_opening_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_parent_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_opening_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_parent_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_opening_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_nci_vs_balance",
+          "start": null,
+          "end": "2025-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_opening_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_opening_nci_vs_balance",
+          "start": null,
+          "end": "2024-12-31",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_opening_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_total_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "eq_closing_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_total_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_total",
+            "eq_closing_total"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_parent_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_closing_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_parent_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "equity_parent",
+            "eq_closing_parent"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_nci_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_closing_nci"
+          ],
+          "implemented": true
+        },
+        {
+          "rule": "eq_closing_nci_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [
+            "non_controlling_interests",
+            "eq_closing_nci"
+          ],
+          "implemented": true
+        }
+      ],
+      "limitation": null,
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "cash_composition",
+      "name": "Состав денег ОДДС и баланса",
+      "requirements": [
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "cash_composition_vs_balance",
+          "start": null,
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужна подтверждённая сверка состава денег, эквивалентов, ограничений, активов для продажи и овердрафтов. Равные числа сами по себе не подтверждают одинаковый состав.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "cash_flow_sections",
+      "name": "Полный состав разделов ОДДС",
+      "requirements": [
+        {
+          "rule": "complete_cfo_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfo_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfi_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cfi_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cff_components",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_cff_components",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Равенство CFO+CFI+CFF и итогового изменения денег не подтверждает полноту строк каждого раздела.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "equity_movement",
+      "name": "Полный мост изменения капитала",
+      "requirements": [
+        {
+          "rule": "complete_equity_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_equity_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны совокупный доход, все операции с владельцами и прочие движения, а не только прибыль и остатки.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "debt_movement",
+      "name": "Полный мост изменения долга",
+      "requirements": [
+        {
+          "rule": "complete_debt_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_debt_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны денежные, валютные, неденежные движения и изменения периметра. Привлечение и погашение из ОДДС не заменяют полный мост.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "lease_movement",
+      "name": "Полный мост изменения аренды",
+      "requirements": [
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "complete_lease_rollforward",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны все начисления, платежи, переоценки, валютные и прочие неденежные изменения обязательств.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "depreciation_composition",
+      "name": "Состав амортизации для EBITDA",
+      "requirements": [
+        {
+          "rule": "depreciation_composition_vs_cash_flow",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "depreciation_composition_vs_cash_flow",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужны подтверждения одинакового состава ОС, НМА и прав пользования в примечаниях и корректировках ОДДС.",
+      "status": "недостаточно_данных"
+    },
+    {
+      "id": "interest_expense_to_payment",
+      "name": "Начисленные проценты и денежные платежи",
+      "requirements": [
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        },
+        {
+          "rule": "interest_expense_to_payment_bridge",
+          "start": "2025-01-01",
+          "end": "2025-06-30",
+          "status": "недостаточно_данных",
+          "missing_inputs": [],
+          "implemented": false
+        }
+      ],
+      "limitation": "Нужна полная сверка начислений, капитализации, платежей и классификации. Начисленные и уплаченные проценты не обязаны быть равны.",
+      "status": "недостаточно_данных"
+    }
+  ],
+  "coverage_version": 1,
+  "cross_form_complete": false,
+  "has_discrepancies": false,
+  "ok": false,
+  "source_statuses_modified": false,
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "messages_sent": 0,
+  "limitation": "Повторная арифметическая диагностика сохранённых извлечений одного PDF. Статусы исходных строк не повышаются и не записываются. Данные разных версий PDF не смешиваются. Неполные и ещё не реализованные полные мосты показаны отдельно; успешная частичная сверка их не заменяет.",
+  "source_databases": [
+    {
+      "database": "database_1",
+      "sha256": "d9e90515787c79e7ffe1b6ddd347a98f9f9e841641cdb1d3ed2b88d25be00116",
+      "unchanged": true
+    }
+  ],
+  "checked_date_moscow": "2026-11-26",
+  "source_run_urls": [
+    "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/45019138129"
+  ],
+  "local_ocr_review": "docs/validation/ifrs_mvid_ocr_review_check.json"
+}

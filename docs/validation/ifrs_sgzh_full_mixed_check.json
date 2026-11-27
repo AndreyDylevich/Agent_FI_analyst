@@ -1,0 +1,5784 @@
+{
+  "checked_date_moscow": "2026-11-27",
+  "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46022645252",
+  "source_commit": "3a09c026b7efd2a84930d23397c90e53a89e0ccb",
+  "source_branch": "codex/stage4-reviewed-recovery-20261127",
+  "fresh_gigachat_acceptance": false,
+  "mixed_acceptance": true,
+  "reference_replay_only": false,
+  "source_response_archive_run_id": "45954134910",
+  "pdf_origin": "previously_verified_archive",
+  "source_pdf_downloaded_this_run": false,
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "selected_values_count": 284,
+  "stored_statuses": {
+    "проверено_авто": 260,
+    "не_проверено": 24
+  },
+  "replayed_response_attempts": 24,
+  "new_provider_requests": 1,
+  "new_provider_tokens": 11964,
+  "responses_sha256_verified": true,
+  "archived_response_hashes_verified": true,
+  "database_sha256": "08cc373d4bdaac4d926053c776eb56bb13c4fc599ae07fee8c6dce4e6fac9172",
+  "database_unchanged_during_local_recheck": true,
+  "independent_reference_check": {
+    "all_selected_values_verified": true,
+    "selected_values": [
+      {
+        "item_id": "ppe",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "ppe",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "right_of_use_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "right_of_use_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "intangible_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "intangible_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "goodwill",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "goodwill",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_associate_investments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_associate_investments",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_deferred_tax_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_deferred_tax_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_noncurrent_advances",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_noncurrent_advances",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_other_noncurrent_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_other_noncurrent_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "inventories",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "inventories",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_vat_and_tax_prepayments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_vat_and_tax_prepayments",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_income_tax_prepayments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_income_tax_prepayments",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_current_advances_and_other",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_current_advances_and_other",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cash_and_equivalents",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cash_and_equivalents",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "total_assets",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_assets",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_share_capital",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_share_capital",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_additional_capital",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_additional_capital",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_retained_losses",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_retained_losses",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_accumulated_oci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_accumulated_oci",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_parent",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_controlling_interests",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_controlling_interests",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "equity_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "debt_long_term",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "debt_long_term",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_long",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_long",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_deferred_tax_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_deferred_tax_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_other_noncurrent_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_other_noncurrent_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "non_current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "debt_short_term",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "debt_short_term",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_option_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_option_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_trade_and_other_payables",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_trade_and_other_payables",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_short",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "lease_liabilities_short",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_provisions",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_provisions",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_taxes_payable",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_taxes_payable",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_income_tax_payable",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_income_tax_payable",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_advances_received",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_advances_received",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "current_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "total_equity_and_liabilities",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "balance_receivables_and_delivery_costs",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "balance_receivables_and_delivery_costs",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "revenue",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "revenue",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cost_of_sales",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cost_of_sales",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "selling_admin_expenses_combined",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "selling_admin_expenses_combined",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_reorganization_loss",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_other_operating_income",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_other_operating_income",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "operating_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "operating_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_income",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_income",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_other_finance_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_other_finance_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_fx_result",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_fx_result",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "profit_before_tax",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "profit_before_tax",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_tax_benefit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_tax_benefit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "net_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_profit_attribution_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "income_profit_attribution_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_starting_net_profit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "d_and_a",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "d_and_a",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_income_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_income_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_expense_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_expense_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_finance_expense_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_finance_expense_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_tax_benefit_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_tax_benefit_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_credit_loss_allowance_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_credit_loss_allowance_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_adjustment",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_reorganization_adjustment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_adjustments_sgzh",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_adjustments_sgzh",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_before_working_capital",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_before_working_capital",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_receivables_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_receivables_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventories_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_inventories_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_assets_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_assets_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_payables_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_payables_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_liabilities_change",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_liabilities_change",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_operating_before_interest_tax",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_operating_before_interest_tax",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "interest_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_income_tax_paid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_income_tax_paid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfo",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_total_ppe_intangibles",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "capex_total_ppe_intangibles",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_received",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_interest_received",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_subsidiary_disposal_advance",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_other_investing",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cfi",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_share_issue_proceeds",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_raised",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_raised",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_issued",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_issued",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_repaid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_loans_repaid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_repaid",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_bonds_repaid",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_lease_financing_payments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_lease_financing_payments",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cff",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change_before_fx",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_change_before_fx",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_opening",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_fx_effect",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "cf_cash_closing_gross",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bank_loans_rub",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bank_loans_eur",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bank_loans_eur",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_bank_loans_current_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bank_loans_current_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bonds_rub",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bonds_rub",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_bonds_cny",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds_current_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds_current_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_bank_loans_noncurrent_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bank_loans_noncurrent_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_long_bonds_rub",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_long_bonds_rub",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_long_bonds_cny",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_long_bonds_cny",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds_noncurrent_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_bonds_noncurrent_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_debt_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_rou_total_da",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_rou_total_da",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_term_lease_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_short_term_lease_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_interest_expense_control",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_interest_expense_control",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_expense_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_expense_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_opening",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_opening",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_cash_payments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_cash_payments",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_contract_changes",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_contract_changes",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_interest_accrual",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_interest_accrual",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_hfs_transfer",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_closing",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_lease_closing",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_total",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_parent",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_parent",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_nci",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_opening_nci",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_closing_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_parent",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_profit_nci",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_comprehensive_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_comprehensive_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_share_issue_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_nci_purchase_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_internal_transfer_parent",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "eq_internal_transfer_nci",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_income_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_income_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_borrowings",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_borrowings",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_options",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_leases",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_leases",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_other",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_other",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_interest_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_modification_control",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_fair_value_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_fair_value_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_component",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_component",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_finance_other_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_net_finance_expense",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_net_finance_expense",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_gross",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_gross",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_prior_adjustments",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_prior_adjustments",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_net",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_current_tax_net",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_deferred_tax_benefit",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_deferred_tax_benefit",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_income_tax_benefit_total",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "note_income_tax_benefit_total",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_opening",
+        "period_end": "2025-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_opening",
+        "period_end": "2024-12-31",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_contract_changes",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_contract_changes",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_other_additions",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_other_additions",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_da_movement",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_da_movement",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_impairment",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_hfs_transfer",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_disposals",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_disposals",
+        "period_end": "2025-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_closing",
+        "period_end": "2026-06-30",
+        "passed": true
+      },
+      {
+        "item_id": "rou_asset_closing",
+        "period_end": "2025-06-30",
+        "passed": true
+      }
+    ],
+    "checks": {},
+    "expected_checks": [
+      {
+        "rule": "complete_noncurrent_assets",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_current_assets",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_noncurrent_liabilities",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_current_liabilities",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "parent_capital_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_capital_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_operating_profit",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "profit_before_tax_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_after_tax_benefit",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_income_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "profit_attribution_repeated_total",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "income_repeated_total_vs_profit",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "cash_before_working_capital",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "cash_after_working_capital",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "operating_cash_after_payments",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfo_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfi_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cff_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_reported_cash_rollforward",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_income_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_expense_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "other_finance_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "tax_benefit_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "fx_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "reorganization_cash_adjustment",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "equity_neutral_transfer_sgzh",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_equity_rollforward",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_equals_comprehensive_income",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_current_bank_currency_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_current_bond_currency_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_noncurrent_bond_currency_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_debt_balance_components",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_composition",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_current_vs_balance",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_noncurrent_vs_balance",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_lease_expense_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_lease_rollforward",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "lease_expense_vs_accrual",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "lease_cash_financing_and_accrual_observed",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_rou_asset_rollforward",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "rou_depreciation_vs_lease_expense",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_interest_composition",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_other_finance_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "note_net_finance_composition",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_finance_income_expense",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "interest_income_vs_note",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_expense_vs_note",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "other_finance_expense_vs_note",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "lease_interest_note_consistency",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "current_tax_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_tax_benefit_components",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "income_tax_benefit_vs_note",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_noncurrent_assets",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_current_assets",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_noncurrent_liabilities",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_current_liabilities",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "parent_capital_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_capital_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_operating_profit",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_before_tax_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_after_tax_benefit",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_income_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_attribution_repeated_total",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "income_repeated_total_vs_profit",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "cash_before_working_capital",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "cash_after_working_capital",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "operating_cash_after_payments",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfo_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_cfi_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "complete_cff_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_reported_cash_rollforward",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_income_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_expense_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "other_finance_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "tax_benefit_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "fx_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "reorganization_cash_adjustment",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_equity_rollforward",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "profit_equals_comprehensive_income",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_current_bank_currency_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "note_current_bond_currency_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "note_noncurrent_bond_currency_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_debt_balance_components",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_composition",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_current_vs_balance",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_debt_noncurrent_vs_balance",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_lease_expense_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_lease_rollforward",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "lease_expense_vs_accrual",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "lease_cash_financing_and_accrual_observed",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_rou_asset_rollforward",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "rou_depreciation_vs_lease_expense",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_interest_composition",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "note_other_finance_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_net_finance_composition",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_finance_income_expense",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "недостаточно_данных",
+        "passed": true
+      },
+      {
+        "rule": "interest_income_vs_note",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "interest_expense_vs_note",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "other_finance_expense_vs_note",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "lease_interest_note_consistency",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "current_tax_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "complete_tax_benefit_components",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "income_tax_benefit_vs_note",
+        "start": "2025-01-01",
+        "end": "2025-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_lease_total_vs_balance",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "note_lease_total_vs_balance",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "rou_asset_vs_balance",
+        "start": null,
+        "end": "2026-06-30",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      },
+      {
+        "rule": "rou_asset_vs_balance",
+        "start": null,
+        "end": "2025-12-31",
+        "status": "пройдено",
+        "delta": "0",
+        "passed": true
+      }
+    ],
+    "metrics": {},
+    "financial_audit_complete": false,
+    "ok": true
+  },
+  "checks": [
+    {
+      "rule": "complete_noncurrent_assets",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_noncurrent_assets",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        60,
+        62,
+        40,
+        42,
+        0,
+        2,
+        4,
+        20,
+        64
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_current_assets",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_current_assets",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        44,
+        38,
+        22,
+        6,
+        8,
+        46,
+        48
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_noncurrent_liabilities",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_noncurrent_liabilities",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        54,
+        70,
+        14,
+        28,
+        72
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_current_liabilities",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_current_liabilities",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        56,
+        30,
+        32,
+        74,
+        34,
+        36,
+        16,
+        18,
+        58
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "parent_capital_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "parent_capital_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        24,
+        10,
+        26,
+        12,
+        50
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_capital_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_capital_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        24,
+        10,
+        26,
+        12,
+        68,
+        52
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_operating_profit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_operating_profit",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "income_income_reorganization_loss__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        165,
+        146,
+        167,
+        149,
+        169
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_before_tax_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_before_tax_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        169,
+        151,
+        153,
+        155,
+        157,
+        171
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_after_tax_benefit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_after_tax_benefit",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        171,
+        159,
+        161
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_income_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_income_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "income_income_reorganization_loss__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        165,
+        146,
+        167,
+        149,
+        151,
+        153,
+        155,
+        157,
+        159,
+        161
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_attribution_repeated_total",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_attribution_repeated_total",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        173,
+        175,
+        163
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "income_repeated_total_vs_profit",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "income_repeated_total_vs_profit",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        163,
+        161
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "cash_before_working_capital",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_before_working_capital",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cash_flow_cf_reorganization_adjustment__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        118,
+        134,
+        98,
+        78,
+        100,
+        120,
+        80,
+        82,
+        102,
+        84
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "cash_after_working_capital",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "cash_after_working_capital",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        84,
+        123,
+        104,
+        106,
+        125,
+        127,
+        108
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "operating_cash_after_payments",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "operating_cash_after_payments",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        108,
+        136,
+        86,
+        138
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cash_flow_cf_reorganization_adjustment__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        118,
+        134,
+        98,
+        78,
+        100,
+        120,
+        80,
+        82,
+        102,
+        123,
+        104,
+        106,
+        125,
+        127,
+        136,
+        86,
+        138
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cash_flow_cf_subsidiary_disposal_advance__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        88,
+        110,
+        130,
+        140
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cash_flow_cf_share_issue_proceeds__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        112,
+        90,
+        114,
+        92,
+        116,
+        132
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_reported_cash_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_reported_cash_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        142,
+        94,
+        96,
+        144
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_income_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "interest_income_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        98,
+        151
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_expense_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "interest_expense_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        78,
+        153
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "other_finance_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "other_finance_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        100,
+        155
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "tax_benefit_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "tax_benefit_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        120,
+        159
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "fx_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "fx_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        82,
+        157
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "reorganization_cash_adjustment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "reorganization_cash_adjustment",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "0",
+        "missing": [
+          "cash_flow_cf_reorganization_adjustment__2026_06_30",
+          "income_income_reorganization_loss__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "equity_neutral_transfer_sgzh",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "equity_neutral_transfer_sgzh",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        199,
+        200
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        183,
+        195,
+        199,
+        200,
+        186
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_equals_comprehensive_income",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "profit_equals_comprehensive_income",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        189,
+        195
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_current_bank_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_current_bank_currency_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        201,
+        202,
+        204
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_current_bond_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_current_bond_currency_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        219,
+        206,
+        207
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_noncurrent_bond_currency_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_noncurrent_bond_currency_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        211,
+        213,
+        215
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_debt_balance_components",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_debt_balance_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        201,
+        202,
+        219,
+        206,
+        209,
+        211,
+        213,
+        217
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_debt_composition",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        204,
+        207,
+        209,
+        215,
+        217
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_composition",
+            "start": null,
+            "end": "2026-06-30",
+            "result": {
+              "name": "note_debt_composition",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_bonds",
+                "note_loans_and_other_borrowings"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              217
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_debt_current_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_debt_current_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        204,
+        207,
+        56
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_current_vs_balance",
+            "start": null,
+            "end": "2026-06-30",
+            "result": {
+              "name": "note_debt_current_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_debt_current"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              56
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_debt_noncurrent_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_debt_noncurrent_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        209,
+        215,
+        54
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_noncurrent_vs_balance",
+            "start": null,
+            "end": "2026-06-30",
+            "result": {
+              "name": "note_debt_noncurrent_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_debt_noncurrent"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              54
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "complete_lease_expense_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_lease_expense_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        251,
+        253,
+        255,
+        257
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_lease_rollforward",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_lease_hfs_transfer__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        266,
+        259,
+        261,
+        263,
+        268
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_expense_vs_accrual",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "lease_expense_vs_accrual",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        255,
+        263
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_cash_financing_and_accrual_observed",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "lease_cash_financing_and_accrual_observed",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        259,
+        116,
+        263
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_rou_asset_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_rou_asset_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        270,
+        274,
+        276,
+        278,
+        282,
+        272
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "rou_depreciation_vs_lease_expense",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "rou_depreciation_vs_lease_expense",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        278,
+        251
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_interest_composition",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_interest_composition",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        221,
+        242,
+        243,
+        245,
+        247
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_interest_composition",
+            "start": "2026-01-01",
+            "end": "2026-06-30",
+            "result": {
+              "name": "note_interest_composition",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_interest_unwinding"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              247,
+              221,
+              243
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_other_finance_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_other_finance_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_finance_modification_control__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        224,
+        226,
+        228
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_net_finance_composition",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_net_finance_composition",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        240,
+        247,
+        228,
+        249
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_finance_income_expense",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_finance_income_expense",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_finance_modification_control__2026_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        240,
+        221,
+        242,
+        243,
+        245,
+        224,
+        226,
+        249
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_income_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "interest_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        151,
+        240
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_expense_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "interest_expense_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        153,
+        247
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "other_finance_expense_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "other_finance_expense_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        155,
+        228
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_interest_note_consistency",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "lease_interest_note_consistency",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        263,
+        243
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "current_tax_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "current_tax_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        230,
+        232,
+        234
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_tax_benefit_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_tax_benefit_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        230,
+        232,
+        236,
+        238
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "income_tax_benefit_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "income_tax_benefit_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        159,
+        238
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_noncurrent_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_noncurrent_assets",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        61,
+        63,
+        41,
+        43,
+        1,
+        3,
+        5,
+        21,
+        65
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_current_assets",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_current_assets",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        45,
+        39,
+        23,
+        7,
+        9,
+        47,
+        49
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_noncurrent_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_noncurrent_liabilities",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        55,
+        71,
+        15,
+        29,
+        73
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_current_liabilities",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_current_liabilities",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        57,
+        31,
+        33,
+        75,
+        35,
+        37,
+        17,
+        19,
+        59
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "parent_capital_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "parent_capital_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        25,
+        11,
+        27,
+        13,
+        51
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_capital_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_capital_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        25,
+        11,
+        27,
+        13,
+        69,
+        53
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_operating_profit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_operating_profit",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        166,
+        147,
+        168,
+        148,
+        150,
+        170
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_before_tax_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_before_tax_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        170,
+        152,
+        154,
+        156,
+        158,
+        172
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_after_tax_benefit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_after_tax_benefit",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        172,
+        160,
+        162
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_income_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_income_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        166,
+        147,
+        168,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_attribution_repeated_total",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_attribution_repeated_total",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        174,
+        176,
+        164
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "income_repeated_total_vs_profit",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "income_repeated_total_vs_profit",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        164,
+        162
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "cash_before_working_capital",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_before_working_capital",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        119,
+        135,
+        99,
+        79,
+        101,
+        121,
+        81,
+        83,
+        122,
+        103,
+        85
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "cash_after_working_capital",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "cash_after_working_capital",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        85,
+        124,
+        105,
+        107,
+        126,
+        128,
+        109
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "operating_cash_after_payments",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "operating_cash_after_payments",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        109,
+        137,
+        87,
+        139
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cfo_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfo_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        119,
+        135,
+        99,
+        79,
+        101,
+        121,
+        81,
+        83,
+        122,
+        103,
+        124,
+        105,
+        107,
+        126,
+        128,
+        137,
+        87,
+        139
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cfi_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cfi_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "cash_flow_cf_other_investing__2025_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        89,
+        111,
+        129,
+        141
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_cff_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_cff_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        131,
+        113,
+        91,
+        115,
+        93,
+        117,
+        133
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_reported_cash_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_reported_cash_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        143,
+        95,
+        97,
+        145
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_income_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "interest_income_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        99,
+        152
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_expense_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "interest_expense_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        79,
+        154
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "other_finance_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "other_finance_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        101,
+        156
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "tax_benefit_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "tax_benefit_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        121,
+        160
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "fx_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "fx_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        83,
+        158
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "reorganization_cash_adjustment",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "reorganization_cash_adjustment",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        122,
+        148
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_equity_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_equity_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        177,
+        196,
+        197,
+        198,
+        180
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "profit_equals_comprehensive_income",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "profit_equals_comprehensive_income",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        190,
+        196
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_current_bank_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_current_bank_currency_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_short_bank_loans_rub__2025_12_31"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        203,
+        205
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_current_bond_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_current_bond_currency_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_short_bonds_cny__2025_12_31"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        220,
+        208
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_noncurrent_bond_currency_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_noncurrent_bond_currency_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        212,
+        214,
+        216
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_debt_balance_components",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "complete_debt_balance_components",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_short_bank_loans_rub__2025_12_31",
+          "notes_note_short_bonds_cny__2025_12_31"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        203,
+        220,
+        210,
+        212,
+        214,
+        218
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_debt_composition",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_debt_composition",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        205,
+        208,
+        210,
+        216,
+        218
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_composition",
+            "start": null,
+            "end": "2025-12-31",
+            "result": {
+              "name": "note_debt_composition",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_bonds",
+                "note_loans_and_other_borrowings"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              218
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_debt_current_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_debt_current_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        205,
+        208,
+        57
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_current_vs_balance",
+            "start": null,
+            "end": "2025-12-31",
+            "result": {
+              "name": "note_debt_current_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_debt_current"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              57
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_debt_noncurrent_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_debt_noncurrent_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        210,
+        216,
+        55
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_debt_noncurrent_vs_balance",
+            "start": null,
+            "end": "2025-12-31",
+            "result": {
+              "name": "note_debt_noncurrent_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_debt_noncurrent"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              55
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "complete_lease_expense_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_lease_expense_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        252,
+        254,
+        256,
+        258
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_lease_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        267,
+        260,
+        262,
+        264,
+        265,
+        269
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_expense_vs_accrual",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "lease_expense_vs_accrual",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        256,
+        264
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_cash_financing_and_accrual_observed",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "lease_cash_financing_and_accrual_observed",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        260,
+        117,
+        264
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_rou_asset_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_rou_asset_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        271,
+        275,
+        277,
+        279,
+        283,
+        273,
+        280,
+        281
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "rou_depreciation_vs_lease_expense",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "rou_depreciation_vs_lease_expense",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        279,
+        252
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_interest_composition",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "note_interest_composition",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_interest_options__2025_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        222,
+        244,
+        246,
+        248
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_other_finance_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "note_other_finance_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        223,
+        225,
+        227,
+        229
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_net_finance_composition",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "note_net_finance_composition",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        241,
+        248,
+        229,
+        250
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_finance_income_expense",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_finance_income_expense",
+        "status": "недостаточно_данных",
+        "delta": null,
+        "tolerance": "1000000",
+        "missing": [
+          "notes_note_interest_options__2025_06_30"
+        ],
+        "reasons": []
+      },
+      "fact_indices": [
+        241,
+        222,
+        244,
+        246,
+        223,
+        225,
+        227,
+        250
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_income_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "interest_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        152,
+        241
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "interest_expense_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "interest_expense_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        154,
+        248
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "other_finance_expense_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "other_finance_expense_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        156,
+        229
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "lease_interest_note_consistency",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "lease_interest_note_consistency",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        264,
+        244
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "current_tax_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "current_tax_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        231,
+        233,
+        235
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "complete_tax_benefit_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "complete_tax_benefit_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        231,
+        233,
+        237,
+        239
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "income_tax_benefit_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "income_tax_benefit_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        160,
+        239
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "note_lease_total_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "note_lease_total_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        70,
+        74,
+        268
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_lease_total_vs_balance",
+            "start": null,
+            "end": "2026-06-30",
+            "result": {
+              "name": "note_lease_total_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_lease_present_value"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              70,
+              74
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "note_lease_total_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "note_lease_total_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        71,
+        75,
+        266
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "direct_partial_checks": [
+          {
+            "rule": "note_lease_total_vs_balance",
+            "start": null,
+            "end": "2025-12-31",
+            "result": {
+              "name": "note_lease_total_vs_balance",
+              "status": "недостаточно_данных",
+              "delta": null,
+              "tolerance": "1000000",
+              "missing": [
+                "note_lease_present_value"
+              ],
+              "reasons": []
+            },
+            "fact_indices": [
+              71,
+              75
+            ],
+            "version": 12,
+            "basis": null
+          }
+        ]
+      }
+    },
+    {
+      "rule": "rou_asset_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "result": {
+        "name": "rou_asset_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        62,
+        272
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    },
+    {
+      "rule": "rou_asset_vs_balance",
+      "start": null,
+      "end": "2025-12-31",
+      "result": {
+        "name": "rou_asset_vs_balance",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        63,
+        270
+      ],
+      "version": 12,
+      "basis": {
+        "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+        "plan_sha256": "c2e77c78211d4d2f2fa65d0e7033852e60ebdf09dac69295e53bfe6a6daa2f09",
+        "reviewer": "Codex: визуальная сверка страниц 5/6/7/8/13/17/19/20 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб."
+      }
+    }
+  ],
+  "requested_source_positions": 300,
+  "missing_requested_observations": [
+    {
+      "item_id": "cf_other_investing",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "statement": "cash_flow"
+    },
+    {
+      "item_id": "cf_reorganization_adjustment",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "cash_flow"
+    },
+    {
+      "item_id": "cf_share_issue_proceeds",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "cash_flow"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_advance",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "cash_flow"
+    },
+    {
+      "item_id": "eq_internal_transfer_nci",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "statement": "equity"
+    },
+    {
+      "item_id": "eq_internal_transfer_parent",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "statement": "equity"
+    },
+    {
+      "item_id": "eq_nci_purchase_total",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "equity"
+    },
+    {
+      "item_id": "eq_share_issue_total",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "equity"
+    },
+    {
+      "item_id": "income_reorganization_loss",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "income"
+    },
+    {
+      "item_id": "note_finance_modification_control",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "notes"
+    },
+    {
+      "item_id": "note_interest_options",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "statement": "notes"
+    },
+    {
+      "item_id": "note_lease_hfs_transfer",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "notes"
+    },
+    {
+      "item_id": "note_short_bank_loans_rub",
+      "period_start": null,
+      "period_end": "2025-12-31",
+      "statement": "notes"
+    },
+    {
+      "item_id": "note_short_bonds_cny",
+      "period_start": null,
+      "period_end": "2025-12-31",
+      "statement": "notes"
+    },
+    {
+      "item_id": "rou_asset_hfs_transfer",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "notes"
+    },
+    {
+      "item_id": "rou_asset_impairment",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "statement": "notes"
+    }
+  ],
+  "reviewed_disclosure_gaps": [
+    {
+      "rule": "complete_debt_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "reason": "Примечание 12 раскрывает остатки долга, не полный мост денежных/валютных/неденежных движений. Опционные обязательства отдельно от обычного долга.",
+      "evidence": [
+        {
+          "page": 17,
+          "start_line": 18,
+          "end_line": 37
+        }
+      ]
+    },
+    {
+      "rule": "cash_composition_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "reason": "Выпуск не содержит полной сверки состава денег, ограничений/овердрафтов. Равные текущие числа не являются подтверждением состава.",
+      "evidence": [
+        {
+          "page": 8,
+          "start_line": 58,
+          "end_line": 62
+        }
+      ]
+    },
+    {
+      "rule": "interest_expense_to_payment_bridge",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "reason": "Процентный расход включает опционные и арендные обязательства; платёж CFO не равен начислению. Полного моста начальных/конечных начислений и всех корректировок нет.",
+      "evidence": [
+        {
+          "page": 13,
+          "start_line": 32,
+          "end_line": 47
+        }
+      ]
+    },
+    {
+      "rule": "depreciation_composition_vs_cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "reason": "В ОПУ нет отдельной полной строки ОС/НМА/прав пользования. Равенство общей амортизации с компонентом прав пользования не предполагается.",
+      "evidence": [
+        {
+          "page": 19,
+          "start_line": 47,
+          "end_line": 61
+        }
+      ]
+    },
+    {
+      "rule": "complete_debt_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "Примечание 12 раскрывает остатки долга, не полный мост денежных/валютных/неденежных движений. Опционные обязательства отдельно от обычного долга.",
+      "evidence": [
+        {
+          "page": 17,
+          "start_line": 18,
+          "end_line": 37
+        }
+      ]
+    },
+    {
+      "rule": "cash_composition_vs_balance",
+      "start": null,
+      "end": "2025-06-30",
+      "reason": "Выпуск не содержит полной сверки состава денег, ограничений/овердрафтов. Равные текущие числа не являются подтверждением состава.",
+      "evidence": [
+        {
+          "page": 8,
+          "start_line": 58,
+          "end_line": 62
+        }
+      ]
+    },
+    {
+      "rule": "interest_expense_to_payment_bridge",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "Процентный расход включает опционные и арендные обязательства; платёж CFO не равен начислению. Полного моста начальных/конечных начислений и всех корректировок нет.",
+      "evidence": [
+        {
+          "page": 13,
+          "start_line": 32,
+          "end_line": 47
+        }
+      ]
+    },
+    {
+      "rule": "depreciation_composition_vs_cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "В ОПУ нет отдельной полной строки ОС/НМА/прав пользования. Равенство общей амортизации с компонентом прав пользования не предполагается.",
+      "evidence": [
+        {
+          "page": 19,
+          "start_line": 47,
+          "end_line": 61
+        }
+      ]
+    }
+  ],
+  "structure_catalog_sha256": "08c8d7caf9a899eb7c197558e6f03e5f83c3556aef527f5c7b1031e1cd64c83e",
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Смешанная приёмка: 24 прежних ответа GigaChat повторно прошли все текущие проверки, один новый запрос вернул две прежде пропущенные суммы. Все 284 значения/статуса сверены с независимым визуальным эталоном; это не полностью свежий прогон. 24 суммы остаются непроверенными, прочерки не равны нулям; полного раскрытия некоторых мостов нет."
+}

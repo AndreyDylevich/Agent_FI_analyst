@@ -1,0 +1,1663 @@
+{
+  "version": 2,
+  "ticker": "MVID",
+  "reviewer": "Codex: визуальная сверка оригинальных страниц 27.11.2026",
+  "reason": "Все выбранные суммы сопоставлены с отдельно переписанным эталоном после просмотра оригинальных форм и примечаний. Восемь наблюдений с исходным расхождением OCI 380 млн руб. не включены и сохраняют статус расхождение. Прочерки не считаются нулями. Перечень просмотренных страниц уточнён до страниц выбранных значений, единиц и контекста; прежнее черновое решение со всеми страницами выпуска не используется.",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "reference_sha256": "c416d0c5d5b7d61403ae63151360e17aae5b84829c6783ece09448eec1d0a030",
+  "reviewed_pages": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    16,
+    21,
+    27
+  ],
+  "visual_review_confirmed": true,
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "ppe",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "ppe",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_investment_property",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_investment_property",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "intangible_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "intangible_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "goodwill",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "goodwill",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_deferred_tax_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_deferred_tax_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_other_noncurrent_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_other_noncurrent_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "non_current_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "non_current_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "inventories",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "inventories",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "receivables",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "receivables",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_advances_paid",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_advances_paid",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_loans_issued",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_income_tax_prepayments",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_income_tax_prepayments",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_other_tax_prepayments",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_other_tax_prepayments",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "current_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "current_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "total_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "total_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_share_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_share_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_paid_in_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_paid_in_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_revaluation_reserve",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_revaluation_reserve",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_additional_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_additional_capital",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_treasury_shares",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_treasury_shares",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_retained_losses",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_retained_losses",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "equity_total",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "equity_total",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_deferred_tax_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_deferred_tax_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_other_noncurrent_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_other_noncurrent_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "payables",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "payables",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_other_payables_accruals",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_other_payables_accruals",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_customer_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_customer_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_income_tax_payable",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_income_tax_payable",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_taxes_payable",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_taxes_payable",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_provisions",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_provisions",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "current_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "current_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_liabilities_total",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "balance_liabilities_total",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "gross_profit",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "gross_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_other_operating_expense",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "income_other_operating_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_investment_property_fv",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "finance_income",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "finance_income",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "finance_expense",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "finance_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_nonoperating_expense",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_oci_revaluation",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_comprehensive_total",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "income_oci_tax",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_lease_termination_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_lease_termination_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_receivables_impairment_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_receivables_impairment_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_inventory_markdown_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_inventory_markdown_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_gain_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_investment_property_fv_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_other_noncash_mvid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_other_noncash_mvid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_receivables_advances_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_receivables_advances_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_other_tax_prepayments_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_other_tax_prepayments_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_other_payables_accruals_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_other_payables_accruals_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_customer_liabilities_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_customer_liabilities_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_taxes_payable_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_taxes_payable_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_other_working_capital",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_other_working_capital",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_ppe_disposal",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_ppe_disposal",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_loans_received_repayment",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_consumer_loans_advanced",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_consumer_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_shareholder_funding",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_reported_net_cash_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_reported_net_cash_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "eq_opening_total",
+      "statement": "equity",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "eq_closing_total",
+      "statement": "equity",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "eq_profit_total",
+      "statement": "equity",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_long_afinans_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_long_gpi_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_long_capitalguard_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_long_capitalguard_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_long_loans_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_long_loans_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_long_bonds_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_long_bonds_total_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_debt_noncurrent",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_debt_noncurrent",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bank1_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank1_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bank2_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank2_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bank3_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank3_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bank4_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank4_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bank6_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank6_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_bank_loans_current_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_bank_loans_current_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_sfi_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_sfi_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_sfi_capital_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_sfi_capital_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_lenbury_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_lenbury_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_grand_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_afinans_loan",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_loans_total_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_loans_total_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bonds_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bonds_mvid",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_bonds_current_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_bonds_current_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_debt_current",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_debt_current",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_debt_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_debt_total",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "rou_asset_opening",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "rou_asset_opening",
+      "statement": "notes",
+      "start": null,
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "rou_asset_new_contracts",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "rou_asset_new_contracts",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "rou_asset_modifications",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "rou_asset_modifications",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "rou_asset_da_movement",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "rou_asset_da_movement",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "rou_asset_disposals",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "rou_asset_disposals",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "rou_asset_closing",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "rou_asset_closing",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_signed_opening",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_lease_signed_opening",
+      "statement": "notes",
+      "start": null,
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "note_lease_new_contracts_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_new_contracts_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_modifications_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_modifications_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_disposals_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_disposals_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_fx_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_fx_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_interest_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_interest_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_payments_signed",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_payments_signed",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_lease_signed_closing",
+      "statement": "notes",
+      "start": null,
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_lease_signed_closing",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_interest_income_total",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_interest_income_total",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_finance_fx_income_lease",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_finance_income",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_finance_income",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_interest_leases",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_finance_fx_expense_lease",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_finance_expense_mvid",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_finance_expense_mvid",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_net_finance_expense",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_net_finance_expense",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "pdf_sha256": "2e055eb0a75e2d4a5dfb192060255c605d814221455170f009803085eef0e056",
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-finansovaya-otchetnost-pa-mvideo-za-024.pdf",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "14 итогов вручную переписаны независимо от ответов GigaChat после просмотра отрендеренной физической страницы 12 PDF М.Видео FY2024 (26.11.2026). Скобки отрицательного капитала и годы обеих колонок сверены визуально. Специальная основа FY2023 не означает одобрения сопоставимости.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "367451",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "367451000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "150201",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "150201000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "217250",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "217250000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "-20354",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-20354000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "52418",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "52418000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "335387",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "335387000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "367451",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "367451000000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "359809",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "359809000000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "147511",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "147511000000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "212298",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "212298000000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "-233",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "-233000000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "59336",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "59336000000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "300706",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "300706000000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2023-12-31",
+      "value": "359809",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "359809000000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "financial_audit_complete": false
+}

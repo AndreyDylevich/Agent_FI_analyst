@@ -1,0 +1,320 @@
+{
+  "checked_date_moscow": "2026-11-26",
+  "verification_scope": "independent_reference_replay_only",
+  "fresh_gigachat_acceptance": false,
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "source_pdf_and_text_verified": true,
+  "selected_values_count": 21,
+  "stored_statuses": {
+    "проверено_авто": 21
+  },
+  "checks": [
+    {
+      "rule": "complete_bonds_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_bonds_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        1,
+        13,
+        11,
+        14,
+        9,
+        12,
+        10,
+        8,
+        6,
+        16,
+        7,
+        15,
+        0
+      ],
+      "version": 10,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "ed8294f6883afe793dec25627b84c251a5b13c55913429e84ada92f7ffb361c2",
+        "reviewer": "Codex: визуальная сверка физических страниц 18/19/21/22 26.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "debt_excludes_leases": true,
+        "composition_evidence": {
+          "note_bonds": {
+            "page": 18,
+            "start_line": 58,
+            "end_line": 58
+          },
+          "note_loans_and_other_borrowings": {
+            "page": 18,
+            "start_line": 59,
+            "end_line": 59
+          },
+          "note_debt_total": {
+            "page": 18,
+            "start_line": 60,
+            "end_line": 60
+          }
+        },
+        "source_evidence": {
+          "page": 19,
+          "start_line": 14,
+          "end_line": 39
+        }
+      }
+    },
+    {
+      "rule": "complete_loans_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_loans_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        3,
+        19,
+        20,
+        17,
+        18,
+        2
+      ],
+      "version": 10,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "ed8294f6883afe793dec25627b84c251a5b13c55913429e84ada92f7ffb361c2",
+        "reviewer": "Codex: визуальная сверка физических страниц 18/19/21/22 26.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "debt_excludes_leases": true,
+        "composition_evidence": {
+          "note_bonds": {
+            "page": 18,
+            "start_line": 58,
+            "end_line": 58
+          },
+          "note_loans_and_other_borrowings": {
+            "page": 18,
+            "start_line": 59,
+            "end_line": 59
+          },
+          "note_debt_total": {
+            "page": 18,
+            "start_line": 60,
+            "end_line": 60
+          }
+        },
+        "source_evidence": {
+          "page": 19,
+          "start_line": 49,
+          "end_line": 55
+        }
+      }
+    },
+    {
+      "rule": "complete_debt_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "complete_debt_rollforward",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        1,
+        13,
+        11,
+        14,
+        9,
+        12,
+        10,
+        8,
+        6,
+        16,
+        7,
+        15,
+        0,
+        3,
+        19,
+        20,
+        17,
+        18,
+        2
+      ],
+      "version": 10,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "ed8294f6883afe793dec25627b84c251a5b13c55913429e84ada92f7ffb361c2",
+        "reviewer": "Codex: визуальная сверка физических страниц 18/19/21/22 26.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "debt_excludes_leases": true,
+        "composition_evidence": {
+          "note_bonds": {
+            "page": 18,
+            "start_line": 58,
+            "end_line": 58
+          },
+          "note_loans_and_other_borrowings": {
+            "page": 18,
+            "start_line": 59,
+            "end_line": 59
+          },
+          "note_debt_total": {
+            "page": 18,
+            "start_line": 60,
+            "end_line": 60
+          }
+        }
+      }
+    }
+  ],
+  "provider": "independent-reference-fixture",
+  "requests": 4,
+  "tokens": 0,
+  "missing_observations": [
+    {
+      "item_id": "note_bonds_cfa_other_issued",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_fx_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2027_1475",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1390",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2028_1590",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1355",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1385",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1575",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_issue_2029_1600",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_other_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_bonds_repaid",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_loans_deconsolidation",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_loans_other_change",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_loans_raised",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    },
+    {
+      "item_id": "note_loans_repaid",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30"
+    }
+  ],
+  "unavailable_bridges": [
+    {
+      "rule": "complete_debt_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "На странице 19 раскрыты только движения за 1П2026. Остаток декабря 2025 не является потоком за 1П2025.",
+      "evidence": [
+        {
+          "page": 19,
+          "start_line": 7,
+          "end_line": 8
+        },
+        {
+          "page": 19,
+          "start_line": 45,
+          "end_line": 46
+        }
+      ]
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "reason": "Примечание 11 содержит остатки/амортизацию/поступления активов права пользования, будущие платежи и отдельную обратную аренду БИК; полного движения обязательств нет. Поступления активов не равны новым обязательствам.",
+      "evidence": [
+        {
+          "page": 21,
+          "start_line": 12,
+          "end_line": 65
+        },
+        {
+          "page": 22,
+          "start_line": 7,
+          "end_line": 12
+        }
+      ]
+    },
+    {
+      "rule": "complete_lease_rollforward",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "Полного сравнительного движения обязательств по аренде нет. Июньский остаток 2025 не подменяет декабрьский.",
+      "evidence": [
+        {
+          "page": 21,
+          "start_line": 45,
+          "end_line": 65
+        }
+      ]
+    }
+  ],
+  "source_databases_modified": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "structure_catalog_sha256": "a0715a2b060cc13586988479c8e9f3a5be4e618e8701e03135b7dc89b7f7f4ef",
+  "limitation": "Прогон кода на визуальном эталоне, не свежий ответ GigaChat. Полный долг за 1П2026 сошёлся; сравнение 1П2025 и полный мост аренды не раскрыты и не восстановлены."
+}

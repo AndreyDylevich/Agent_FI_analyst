@@ -1,0 +1,793 @@
+{
+  "checked_date_moscow": "2026-11-27",
+  "verification_scope": "independent_reference_replay_only",
+  "fresh_gigachat_acceptance": false,
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "source_pdf_and_text_verified": true,
+  "selected_values_count": 52,
+  "stored_statuses": {
+    "проверено_авто": 48,
+    "не_проверено": 4
+  },
+  "checks": [
+    {
+      "rule": "depreciation_composition_vs_cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "depreciation_composition_vs_cash_flow",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        0,
+        14
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "rou_depreciation_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "rou_depreciation_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        46,
+        44,
+        48,
+        50
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_expense_income_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "finance_expense_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        2,
+        20
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_expense_cash_adjustment_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "finance_expense_cash_adjustment_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        10,
+        20
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_income_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "finance_income_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        4,
+        28
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_cash_adjustment_vs_note",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "finance_income_cash_adjustment_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        12,
+        28
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "finance_income_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        22,
+        24,
+        26,
+        28
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "net_finance_expense_components",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "result": {
+        "name": "net_finance_expense_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        20,
+        28,
+        42
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "depreciation_composition_vs_cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "depreciation_composition_vs_cash_flow",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        1,
+        15
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "rou_depreciation_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "rou_depreciation_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        47,
+        45,
+        49,
+        51
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_expense_income_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "finance_expense_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        3,
+        21
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_expense_cash_adjustment_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "finance_expense_cash_adjustment_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        11,
+        21
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_income_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "finance_income_income_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        5,
+        29
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_cash_adjustment_vs_note",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "finance_income_cash_adjustment_vs_note",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        13,
+        29
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "finance_income_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "finance_income_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        23,
+        25,
+        27,
+        29
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    },
+    {
+      "rule": "net_finance_expense_components",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "result": {
+        "name": "net_finance_expense_components",
+        "status": "пройдено",
+        "delta": "0",
+        "tolerance": "1000000",
+        "missing": [],
+        "reasons": []
+      },
+      "fact_indices": [
+        21,
+        29,
+        43
+      ],
+      "version": 11,
+      "basis": {
+        "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+        "plan_sha256": "cb2dac624ae326bffbe282391e5e2bcb09e176cdc533f8f7ac06de3975939df3",
+        "reviewer": "Codex: визуальная сверка физических страниц 7/10/20/21 27.11.2026",
+        "source_structure_reviewed": true,
+        "number_format": "comma_grouped_dot_decimal",
+        "depreciation_scope": {
+          "income_scope": {
+            "page": 7,
+            "start_line": 21,
+            "end_line": 22
+          },
+          "cash_flow_scope": {
+            "page": 10,
+            "start_line": 15,
+            "end_line": 16
+          },
+          "rou_included": {
+            "page": 21,
+            "start_line": 26,
+            "end_line": 29
+          }
+        },
+        "interest_accrual_is_not_payment": true
+      }
+    }
+  ],
+  "provider": "independent-reference-fixture",
+  "requests": 5,
+  "tokens": 0,
+  "missing_observations": [],
+  "reviewed_disclosure_gaps": [
+    {
+      "rule": "cash_composition_vs_balance",
+      "start": null,
+      "end": "2026-06-30",
+      "reason": "Нет раскрытой полной сверки состава денег ОДДС и баланса, ограничений и овердрафтов. Равенство текущих чисел не подтверждает состав; сравнительного баланса на 30.06.2025 в выпуске нет.",
+      "evidence": [
+        {
+          "page": 5,
+          "start_line": 43,
+          "end_line": 44
+        },
+        {
+          "page": 11,
+          "start_line": 30,
+          "end_line": 38
+        }
+      ]
+    },
+    {
+      "rule": "interest_expense_to_payment_bridge",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "reason": "Примечание 10 раскрывает начисленные расходы/капитализацию, ОДДС — платёж за вычетом капитализации и отдельные вложенные суммы. Полных начальных/конечных начислений, всех денежных и неденежных корректировок нет. Начисления нельзя приравнивать платежам.",
+      "evidence": [
+        {
+          "page": 20,
+          "start_line": 50,
+          "end_line": 60
+        },
+        {
+          "page": 10,
+          "start_line": 43,
+          "end_line": 55
+        }
+      ]
+    },
+    {
+      "rule": "cash_composition_vs_balance",
+      "start": null,
+      "end": "2025-06-30",
+      "reason": "Нет раскрытой полной сверки состава денег ОДДС и баланса, ограничений и овердрафтов. Равенство текущих чисел не подтверждает состав; сравнительного баланса на 30.06.2025 в выпуске нет.",
+      "evidence": [
+        {
+          "page": 5,
+          "start_line": 43,
+          "end_line": 44
+        },
+        {
+          "page": 11,
+          "start_line": 30,
+          "end_line": 38
+        }
+      ]
+    },
+    {
+      "rule": "interest_expense_to_payment_bridge",
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "reason": "Примечание 10 раскрывает начисленные расходы/капитализацию, ОДДС — платёж за вычетом капитализации и отдельные вложенные суммы. Полных начальных/конечных начислений, всех денежных и неденежных корректировок нет. Начисления нельзя приравнивать платежам.",
+      "evidence": [
+        {
+          "page": 20,
+          "start_line": 50,
+          "end_line": 60
+        },
+        {
+          "page": 10,
+          "start_line": 43,
+          "end_line": 55
+        }
+      ]
+    }
+  ],
+  "source_databases_modified": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false
+}

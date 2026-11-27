@@ -1,0 +1,172 @@
+{
+  "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+  "source_url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
+  "unit": "тыс. руб.",
+  "multiplier": "1000",
+  "scope": "group",
+  "standard": "IFRS",
+  "source_specific": true,
+  "method": "14 итогов переписаны независимо от GigaChat после просмотра изображения физической страницы 12 годового отчёта Сегежи FY2021. В FY2022 сравнительный 2021 пересмотрен; исходный FY2021 сохранён отдельно. Приёмка исходных строк не одобряет сопоставимость/специальную основу подготовки.",
+  "rows": [
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "209309102",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "209309102000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "152989564",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "152989564000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "56319538",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "56319538000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "46191480",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "46191480000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "89895546",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "89895546000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "73222076",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "73222076000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2021-12-31",
+      "value": "209309102",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "209309102000"
+    },
+    {
+      "item_id": "total_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "89417643",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "89417643000"
+    },
+    {
+      "item_id": "non_current_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "64881733",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64881733000"
+    },
+    {
+      "item_id": "current_assets",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "24535910",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "24535910000"
+    },
+    {
+      "item_id": "equity_total",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "8868216",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "8868216000"
+    },
+    {
+      "item_id": "non_current_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "64033552",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "64033552000"
+    },
+    {
+      "item_id": "current_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "16515875",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "16515875000"
+    },
+    {
+      "item_id": "total_equity_and_liabilities",
+      "start": null,
+      "end": "2020-12-31",
+      "value": "89417643",
+      "pages": [
+        12
+      ],
+      "status": "проверено_авто",
+      "normalized_value": "89417643000"
+    }
+  ],
+  "checks_required": [
+    "assets_components",
+    "balance",
+    "balance_totals"
+  ],
+  "financial_audit_complete": false
+}
