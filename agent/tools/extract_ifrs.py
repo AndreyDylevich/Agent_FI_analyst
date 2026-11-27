@@ -62,10 +62,11 @@ def main(argv: list[str] | None = None) -> int:
         items = {key: items[key] for key in args.item}
     report = {'ok': False, 'ticker': args.ticker, 'financial_audit_complete': False, 'messages_sent': 0,
               'cached_only':args.cached_only}
+    original_ocr = None
     try:
         text = read_pdf(args.pdf, use_ocr=args.ocr, max_ocr_pages=args.max_ocr_pages,ocr_dpi=args.ocr_dpi)
         if args.ocr:
-            (args.output/'ocr_original_pages.json').write_text(json.dumps(asdict(text),ensure_ascii=False,indent=2)+'\n')
+            original_ocr = asdict(text)
             text = apply_reviewed_ocr_punctuation(text)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
         manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
@@ -105,6 +106,8 @@ def main(argv: list[str] | None = None) -> int:
             conn.close()
     except Exception as error:
         report['error'] = f'{type(error).__name__}: {error}'
+    if original_ocr is not None:
+        (args.output/'ocr_original_pages.json').write_text(json.dumps(original_ocr,ensure_ascii=False,indent=2)+'\n')
     (args.output/'extraction_check.json').write_text(json.dumps(report, ensure_ascii=False, default=str, indent=2)+'\n', encoding='utf-8')
     print(f"{args.ticker}: {'извлечение выполнено' if report['ok'] else 'требуется проверка'}; "
           f"строк: {len(report.get('facts', []))}; протокол сохранён", flush=True)
