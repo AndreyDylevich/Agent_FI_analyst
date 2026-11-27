@@ -58,6 +58,7 @@ def extract_segments(pdf, provider, *, ticker, entity_token, period, output, cat
             or len({(s['scope'],s['segment_name']) for s in document['segments']}) != len(keys)):
         raise ValueError('Повтор сегмента в плане')
     runs=[]
+    known_items=config.line_items()
     for segment in document['segments']:
         if (segment['scope'] not in ('group','segment')
                 or segment['scope']=='group' and segment['segment_name'] is not None
@@ -65,7 +66,7 @@ def extract_segments(pdf, provider, *, ticker, entity_token, period, output, cat
             raise ValueError('Не согласованы сегмент и групповой итог')
         profile=reviewed_segment_profile(document,segment)
         items=segment_items({o['item_id'] for o in segment['source_profile']['observations'].values()})
-        if not compile_reviewed_tables(pdf,period,profile,line_items={**config.line_items(),**items}):
+        if not compile_reviewed_tables(pdf,period,profile,line_items={**known_items,**items}):
             raise ValueError('Сегментная структура относится к другой версии PDF')
         run=extract_pdf(pdf,provider,ticker=ticker,entity_token=entity_token,period=period,
                         line_items=items,sections=('segments',),output=output/segment['key'],
@@ -81,7 +82,7 @@ def extract_segments(pdf, provider, *, ticker, entity_token, period, output, cat
         year=identity['year'];start=f'{year}-01-01';end=f'{year}-06-30'
         terms={};values={};involved={};units=[];sources=[];disputed=[]
         for alias,term in identity['terms'].items():
-            if (term['segment'] not in keys or term['item_id'] not in config.line_items()
+            if (term['segment'] not in keys or term['item_id'] not in known_items
                     or type(term['coefficient']) is not int or not term['coefficient']):
                 raise ValueError('Неизвестная колонка/коэффициент сегментной сверки')
             segment,run=next((s,r) for s,r in runs if s['key']==term['segment'])

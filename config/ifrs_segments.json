@@ -4240,7 +4240,8 @@
           "12": "ffd5a4907bef131dae09b5aef977c57b8d14545c6bcf5b6eb63da0ba726fc798",
           "13": "9ee956e7e2dda9de179e8d459101065a6217be0a7996283ddb535e0bf355050b"
         },
-        "unavailable_checks": []
+        "unavailable_checks": [],
+        "unit": "млн руб."
       }
     },
     {
@@ -7628,7 +7629,8 @@
           "15": "7207409e40ae482a96c44e1c743dd6e3d6354007f59ef046c0b491684e2814be",
           "16": "e968dd867b141c6e03dbfac5cc6fd46ff0d2611efd4a4102eaad27c62a88d6cc"
         },
-        "unavailable_checks": []
+        "unavailable_checks": [],
+        "unit": "млн руб."
       }
     }
   ]

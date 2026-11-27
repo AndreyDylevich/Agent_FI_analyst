@@ -66,3 +66,20 @@ def test_pipeline_requests_all_300_source_positions_without_filling_16_absences(
  assert len(run.reviewed_disclosure_gaps)==8
  assert {(f.item_id,f.statement,str(f.end)):str(f.value) for f in run.facts}=={(r['item_id'],r['statement'],r['end']):r['value'] for r in ref['rows']}
  assert all(len(call['requested_observations'])<=20 for call in provider.calls)
+
+
+def test_reviewed_numeric_source_cannot_silently_become_null(tmp_path):
+ class DropsOnce(ReferenceProvider):
+  def extract(self,system,text,schema):
+   result=super().extract(system,text,schema)
+   if len(self.calls)==1:
+    data=json.loads(result.content)
+    key=next(k for k,v in data['observations'].items() if v is not None)
+    data['observations'][key]=None
+    return Completion(json.dumps(data,ensure_ascii=False),result.model,result.tokens)
+   return result
+ pdf,ref,_=inputs();provider=DropsOnce(ref);items=config.line_items();selected={k:items[k] for k in sorted({r['item_id'] for r in ref['rows']})}
+ run=extract_pdf(pdf,provider,ticker='SGZH',entity_token='СЕГЕЖА ГРУПП',period=PERIOD,line_items=selected,
+  sections=('balance','income','cash_flow','equity','debt','leases','interest'),output=tmp_path/'out',compact=True)
+ assert len(run.facts)==284 and len(run.missing_observations)==16
+ assert run.batches[0]['accepted'] is False and 'null' in run.batches[0]['error'] and run.batches[1]['accepted']

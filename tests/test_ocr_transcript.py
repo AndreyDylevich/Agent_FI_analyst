@@ -41,3 +41,13 @@ def test_visual_digit_transcription_is_explicit_and_does_not_change_source():
  assert audit['financial_digits_modified'] and audit['visual_transcriptions']==p['visual_transcriptions']
  p['visual_transcriptions'][0]['reviewed_image_sha256']=''
  with pytest.raises(ValueError):apply_reviewed_ocr_punctuation(pdf,catalog)
+
+
+def test_partial_ocr_applies_only_read_pages_and_records_the_rest():
+ pdf,catalog=setup();profile=catalog['documents'][0]
+ profile['pages']['2']={'original_text_sha256':'b'*64,'bracket_lines':[1]}
+ pdf=replace(pdf,pages=(*pdf.pages,Page(2,'','unreadable')))
+ result=apply_reviewed_ocr_punctuation(pdf,catalog)
+ assert result.pages[0].text.startswith('Расходы (123)')
+ assert result.pages[1].method=='unreadable'
+ assert result.processing['visual_ocr_punctuation']['unavailable_pages']==[2]

@@ -3,7 +3,7 @@
 import hashlib
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -34,6 +34,8 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
     if len(matches) != 1:
         raise ValueError('Неоднозначная структура проверенных таблиц')
     profile = matches[0]
+    if profile.get('unit') not in (None,'руб.','тыс. руб.','млн руб.'):
+        raise ValueError('Неизвестный просмотренный масштаб')
     if (profile['reviewed'] is not True or not profile['reviewer'].strip() or not profile['reason'].strip()
             or (profile['report_start'], profile['report_end'], profile['report_kind']) !=
                (str(period.start), str(period.end), period.kind)
@@ -67,6 +69,13 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
         if source['column_header'] != str(column_year):
             raise ValueError('Год колонки не совпадает с датой/ролью исходного наблюдения')
         proof = citation(source['evidence'], pages)
+        if profile.get('unit'):
+            unit_proof=citation(source['unit_evidence'],pages)
+            pattern={'руб.':r'рубл|roubl|rubl','тыс. руб.':r'тыс|thousand','млн руб.':r'миллион|млн|million'}[profile['unit']]
+            if (not re.search(pattern,unit_proof.quote,re.I)
+                    or not re.search(r'руб|roubl|rubl',unit_proof.quote,re.I)
+                    or profile['unit']=='руб.' and re.search(r'миллион|млн|тыс|million|thousand',unit_proof.quote,re.I)):
+                raise ValueError('Просмотренный масштаб не подтверждён исходной строкой единиц')
         if str(proof.page) not in profile['page_text_sha256']:
             raise ValueError('Страница наблюдения не имеет проверенного SHA256 текста')
         if pages[proof.page].method != 'native' and not (
@@ -165,28 +174,39 @@ def compile_reviewed_tables(pdf: PDFText, period: Period, catalog: dict | None =
     digest = hashlib.sha256(json.dumps(profile, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
     return ReviewedDocument(observations, tuple(checks),
                             {'pdf_sha256': pdf.sha256, 'plan_sha256': digest, 'reviewer': profile['reviewer'],
-                             'source_structure_reviewed': True, 'number_format': profile['number_format']},
+                             'source_structure_reviewed': True, 'number_format': profile['number_format'],
+                             **({'unit':profile['unit']} if profile.get('unit') else {})},
                             tuple(profile.get('unavailable_checks', [])))
 
 
-def validate_reviewed_columns(facts, review: ReviewedDocument, pages) -> None:
+def validate_reviewed_columns(facts, review: ReviewedDocument, pages):
     """Проверяет возвращённый моделью токен внутри просмотренной колонки; не извлекает суммы."""
     by_page = {p.number:p for p in pages}
+    aligned=[]
     for fact in facts:
         found = [o for o in review.observations.values() if o['item_id'] == fact.item_id
                  and o['statement'] == fact.statement and o['start'] == fact.start and o['end'] == fact.end]
         if len(found) != 1:
+            aligned.append(fact)
             continue
         source = found[0]
         if (source.get('raw_sign') == 'nonnegative' and fact.value < 0
                 or source.get('raw_sign') == 'nonpositive' and fact.value > 0):
             raise ValueError(f'{fact.item_id}: знак не соответствует просмотренной исходной строке; не нормализуй знак в raw_value')
         if not source.get('value_column'):
+            aligned.append(fact)
             continue
         column = source['value_column']
         line = by_page[source['evidence']['page']].text.splitlines()[column['line']-1]
         selected = normalized_text(line[column['start_char']-1:column['end_char']])
         if not re.search(r'(?<![\w.,])' + re.escape(normalized_text(fact.raw_value)) + r'(?![\w.,])', selected):
+            # Одинаковая сумма может печататься «31 643» и «31643» в соседних годах.
+            # Восстанавливаем только пробелы собственного исходного токена, не знак/цифры.
+            if selected.replace(' ','') == normalized_text(fact.raw_value).replace(' ',''):
+                aligned.append(replace(fact,raw_value=selected,model_raw_value=fact.model_raw_value or fact.raw_value))
+                continue
             raise ValueError(f'{fact.item_id}: число взято из другой колонки; нужна {source.get("owner_column", "проверенная колонка")} '
                              f'в символах {column["start_char"]}–{column["end_char"]} строки {column["line"]}. '
                              'Не меняй число для равенства; выбери исходный токен нужного владельца/всей группы.')
+        aligned.append(fact)
+    return tuple(aligned)

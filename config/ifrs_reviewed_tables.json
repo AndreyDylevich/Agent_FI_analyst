@@ -6479,7 +6479,12 @@
             "start_line": 6,
             "end_line": 6
           },
-          "raw_sign": "nonpositive"
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 46,
+            "start_char": 90,
+            "end_char": 94
+          }
         },
         "notes_note_finance_other_expense__2025_06_30": {
           "item_id": "note_finance_other_expense",
@@ -6503,7 +6508,12 @@
             "start_line": 6,
             "end_line": 6
           },
-          "raw_sign": "nonpositive"
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 46,
+            "start_char": 109,
+            "end_char": 115
+          }
         },
         "notes_note_net_finance_expense__2026_06_30": {
           "item_id": "note_net_finance_expense",
@@ -11517,7 +11527,8 @@
             }
           ]
         }
-      ]
+      ],
+      "unit": "млн руб."
     },
     {
       "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
@@ -11561,7 +11572,14 @@
           },
           "original_name_hints": [
             "Основные средства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 129,
+            "end_char": 134
+          }
         },
         "balance_ppe__2025_12_31": {
           "item_id": "ppe",
@@ -11584,7 +11602,14 @@
           },
           "original_name_hints": [
             "Основные средства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 156,
+            "end_char": 161
+          }
         },
         "balance_balance_investment_property__2026_06_30": {
           "item_id": "balance_investment_property",
@@ -11607,7 +11632,14 @@
           },
           "original_name_hints": [
             "Инвестиционная недвижимость"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 20,
+            "start_char": 110,
+            "end_char": 112
+          }
         },
         "balance_balance_investment_property__2025_12_31": {
           "item_id": "balance_investment_property",
@@ -11630,7 +11662,14 @@
           },
           "original_name_hints": [
             "Инвестиционная недвижимость"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 20,
+            "start_char": 134,
+            "end_char": 136
+          }
         },
         "balance_intangible_assets__2026_06_30": {
           "item_id": "intangible_assets",
@@ -11653,7 +11692,14 @@
           },
           "original_name_hints": [
             "Нематериальные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 126,
+            "end_char": 131
+          }
         },
         "balance_intangible_assets__2025_12_31": {
           "item_id": "intangible_assets",
@@ -11676,7 +11722,14 @@
           },
           "original_name_hints": [
             "Нематериальные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 153,
+            "end_char": 158
+          }
         },
         "balance_goodwill__2026_06_30": {
           "item_id": "goodwill",
@@ -11699,7 +11752,14 @@
           },
           "original_name_hints": [
             "Гудвил"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 137,
+            "end_char": 142
+          }
         },
         "balance_goodwill__2025_12_31": {
           "item_id": "goodwill",
@@ -11722,7 +11782,14 @@
           },
           "original_name_hints": [
             "Гудвил"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 164,
+            "end_char": 169
+          }
         },
         "balance_right_of_use_assets__2026_06_30": {
           "item_id": "right_of_use_assets",
@@ -11745,7 +11812,14 @@
           },
           "original_name_hints": [
             "Активы в форме права пользования"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 114,
+            "end_char": 119
+          }
         },
         "balance_right_of_use_assets__2025_12_31": {
           "item_id": "right_of_use_assets",
@@ -11768,7 +11842,14 @@
           },
           "original_name_hints": [
             "Активы в форме права пользования"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 139,
+            "end_char": 144
+          }
         },
         "balance_balance_deferred_tax_assets__2026_06_30": {
           "item_id": "balance_deferred_tax_assets",
@@ -11791,7 +11872,14 @@
           },
           "original_name_hints": [
             "Отложенные налоговые активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 28,
+            "start_char": 123,
+            "end_char": 128
+          }
         },
         "balance_balance_deferred_tax_assets__2025_12_31": {
           "item_id": "balance_deferred_tax_assets",
@@ -11814,7 +11902,14 @@
           },
           "original_name_hints": [
             "Отложенные налоговые активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 28,
+            "start_char": 150,
+            "end_char": 155
+          }
         },
         "balance_balance_other_noncurrent_assets__2026_06_30": {
           "item_id": "balance_other_noncurrent_assets",
@@ -11837,7 +11932,14 @@
           },
           "original_name_hints": [
             "Прочие внеоборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 135,
+            "end_char": 137
+          }
         },
         "balance_balance_other_noncurrent_assets__2025_12_31": {
           "item_id": "balance_other_noncurrent_assets",
@@ -11860,7 +11962,14 @@
           },
           "original_name_hints": [
             "Прочие внеоборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 165,
+            "end_char": 167
+          }
         },
         "balance_non_current_assets__2026_06_30": {
           "item_id": "non_current_assets",
@@ -11883,7 +11992,14 @@
           },
           "original_name_hints": [
             "Итого внеоборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 125,
+            "end_char": 131
+          }
         },
         "balance_non_current_assets__2025_12_31": {
           "item_id": "non_current_assets",
@@ -11906,7 +12022,14 @@
           },
           "original_name_hints": [
             "Итого внеоборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 152,
+            "end_char": 158
+          }
         },
         "balance_inventories__2026_06_30": {
           "item_id": "inventories",
@@ -11929,7 +12052,14 @@
           },
           "original_name_hints": [
             "Запасы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 36,
+            "start_char": 144,
+            "end_char": 149
+          }
         },
         "balance_inventories__2025_12_31": {
           "item_id": "inventories",
@@ -11952,7 +12082,14 @@
           },
           "original_name_hints": [
             "Запасы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 36,
+            "start_char": 172,
+            "end_char": 177
+          }
         },
         "balance_receivables__2026_06_30": {
           "item_id": "receivables",
@@ -11975,7 +12112,14 @@
           },
           "original_name_hints": [
             "Дебиторская задолженность"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 38,
+            "start_char": 124,
+            "end_char": 129
+          }
         },
         "balance_receivables__2025_12_31": {
           "item_id": "receivables",
@@ -11998,7 +12142,14 @@
           },
           "original_name_hints": [
             "Дебиторская задолженность"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 38,
+            "start_char": 151,
+            "end_char": 156
+          }
         },
         "balance_balance_advances_paid__2026_06_30": {
           "item_id": "balance_advances_paid",
@@ -12021,7 +12172,14 @@
           },
           "original_name_hints": [
             "Авансы выданные"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 40,
+            "start_char": 133,
+            "end_char": 136
+          }
         },
         "balance_balance_advances_paid__2025_12_31": {
           "item_id": "balance_advances_paid",
@@ -12044,7 +12202,14 @@
           },
           "original_name_hints": [
             "Авансы выданные"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 40,
+            "start_char": 160,
+            "end_char": 164
+          }
         },
         "balance_balance_loans_issued__2026_06_30": {
           "item_id": "balance_loans_issued",
@@ -12087,7 +12252,14 @@
           },
           "original_name_hints": [
             "Займы выданные"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 42,
+            "start_char": 149,
+            "end_char": 151
+          }
         },
         "balance_balance_income_tax_prepayments__2026_06_30": {
           "item_id": "balance_income_tax_prepayments",
@@ -12110,7 +12282,14 @@
           },
           "original_name_hints": [
             "Переплата по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 44,
+            "start_char": 127,
+            "end_char": 128
+          }
         },
         "balance_balance_income_tax_prepayments__2025_12_31": {
           "item_id": "balance_income_tax_prepayments",
@@ -12133,7 +12312,14 @@
           },
           "original_name_hints": [
             "Переплата по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 44,
+            "start_char": 155,
+            "end_char": 156
+          }
         },
         "balance_balance_other_tax_prepayments__2026_06_30": {
           "item_id": "balance_other_tax_prepayments",
@@ -12156,7 +12342,14 @@
           },
           "original_name_hints": [
             "Авансовые платежи по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 46,
+            "start_char": 116,
+            "end_char": 119
+          }
         },
         "balance_balance_other_tax_prepayments__2025_12_31": {
           "item_id": "balance_other_tax_prepayments",
@@ -12179,7 +12372,14 @@
           },
           "original_name_hints": [
             "Авансовые платежи по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 46,
+            "start_char": 141,
+            "end_char": 144
+          }
         },
         "balance_cash_and_equivalents__2026_06_30": {
           "item_id": "cash_and_equivalents",
@@ -12202,7 +12402,14 @@
           },
           "original_name_hints": [
             "Денежные средства и их эквиваленты"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 48,
+            "start_char": 124,
+            "end_char": 126
+          }
         },
         "balance_cash_and_equivalents__2025_12_31": {
           "item_id": "cash_and_equivalents",
@@ -12225,7 +12432,14 @@
           },
           "original_name_hints": [
             "Денежные средства и их эквиваленты"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 48,
+            "start_char": 149,
+            "end_char": 153
+          }
         },
         "balance_current_assets__2026_06_30": {
           "item_id": "current_assets",
@@ -12248,7 +12462,14 @@
           },
           "original_name_hints": [
             "Итого оборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 50,
+            "start_char": 128,
+            "end_char": 133
+          }
         },
         "balance_current_assets__2025_12_31": {
           "item_id": "current_assets",
@@ -12271,7 +12492,14 @@
           },
           "original_name_hints": [
             "Итого оборотные активы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 50,
+            "start_char": 154,
+            "end_char": 160
+          }
         },
         "balance_total_assets__2026_06_30": {
           "item_id": "total_assets",
@@ -12294,7 +12522,14 @@
           },
           "original_name_hints": [
             "ИТОГО АКТИВЫ"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 52,
+            "start_char": 145,
+            "end_char": 151
+          }
         },
         "balance_total_assets__2025_12_31": {
           "item_id": "total_assets",
@@ -12317,7 +12552,14 @@
           },
           "original_name_hints": [
             "ИТОГО АКТИВЫ"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 52,
+            "start_char": 174,
+            "end_char": 180
+          }
         },
         "balance_balance_share_capital__2026_06_30": {
           "item_id": "balance_share_capital",
@@ -12340,7 +12582,14 @@
           },
           "original_name_hints": [
             "Уставный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 56,
+            "start_char": 119,
+            "end_char": 122
+          }
         },
         "balance_balance_share_capital__2025_12_31": {
           "item_id": "balance_share_capital",
@@ -12363,7 +12612,14 @@
           },
           "original_name_hints": [
             "Уставный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 56,
+            "start_char": 143,
+            "end_char": 146
+          }
         },
         "balance_balance_paid_in_capital__2026_06_30": {
           "item_id": "balance_paid_in_capital",
@@ -12386,7 +12642,14 @@
           },
           "original_name_hints": [
             "Оплаченный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 58,
+            "start_char": 116,
+            "end_char": 121
+          }
         },
         "balance_balance_paid_in_capital__2025_12_31": {
           "item_id": "balance_paid_in_capital",
@@ -12409,7 +12672,14 @@
           },
           "original_name_hints": [
             "Оплаченный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 58,
+            "start_char": 141,
+            "end_char": 145
+          }
         },
         "balance_balance_revaluation_reserve__2026_06_30": {
           "item_id": "balance_revaluation_reserve",
@@ -12432,7 +12702,14 @@
           },
           "original_name_hints": [
             "Резерв OT переоценки основных средств и прочие резервы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 60,
+            "start_char": 114,
+            "end_char": 118
+          }
         },
         "balance_balance_revaluation_reserve__2025_12_31": {
           "item_id": "balance_revaluation_reserve",
@@ -12455,7 +12732,14 @@
           },
           "original_name_hints": [
             "Резерв OT переоценки основных средств и прочие резервы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 60,
+            "start_char": 141,
+            "end_char": 145
+          }
         },
         "balance_balance_additional_capital__2026_06_30": {
           "item_id": "balance_additional_capital",
@@ -12478,7 +12762,14 @@
           },
           "original_name_hints": [
             "Добавочный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 62,
+            "start_char": 153,
+            "end_char": 157
+          }
         },
         "balance_balance_additional_capital__2025_12_31": {
           "item_id": "balance_additional_capital",
@@ -12501,7 +12792,14 @@
           },
           "original_name_hints": [
             "Добавочный капитал"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 62,
+            "start_char": 185,
+            "end_char": 188
+          }
         },
         "balance_balance_treasury_shares__2026_06_30": {
           "item_id": "balance_treasury_shares",
@@ -12524,7 +12822,14 @@
           },
           "original_name_hints": [
             "Выкупленные собственные акции"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 64,
+            "start_char": 129,
+            "end_char": 133
+          }
         },
         "balance_balance_treasury_shares__2025_12_31": {
           "item_id": "balance_treasury_shares",
@@ -12547,7 +12852,14 @@
           },
           "original_name_hints": [
             "Выкупленные собственные акции"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 64,
+            "start_char": 159,
+            "end_char": 163
+          }
         },
         "balance_balance_retained_losses__2026_06_30": {
           "item_id": "balance_retained_losses",
@@ -12570,7 +12882,14 @@
           },
           "original_name_hints": [
             "Накопленный убыток"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 66,
+            "start_char": 129,
+            "end_char": 137
+          }
         },
         "balance_balance_retained_losses__2025_12_31": {
           "item_id": "balance_retained_losses",
@@ -12593,7 +12912,14 @@
           },
           "original_name_hints": [
             "Накопленный убыток"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 66,
+            "start_char": 158,
+            "end_char": 165
+          }
         },
         "balance_equity_total__2026_06_30": {
           "item_id": "equity_total",
@@ -12616,7 +12942,14 @@
           },
           "original_name_hints": [
             "Итого капитал"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 68,
+            "start_char": 154,
+            "end_char": 161
+          }
         },
         "balance_equity_total__2025_12_31": {
           "item_id": "equity_total",
@@ -12639,7 +12972,14 @@
           },
           "original_name_hints": [
             "Итого капитал"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 68,
+            "start_char": 185,
+            "end_char": 192
+          }
         },
         "balance_lease_liabilities_long__2026_06_30": {
           "item_id": "lease_liabilities_long",
@@ -12662,7 +13002,14 @@
           },
           "original_name_hints": [
             "Обязательства по аренде"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 71,
+            "start_char": 120,
+            "end_char": 125
+          }
         },
         "balance_lease_liabilities_long__2025_12_31": {
           "item_id": "lease_liabilities_long",
@@ -12685,7 +13032,14 @@
           },
           "original_name_hints": [
             "Обязательства по аренде"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 71,
+            "start_char": 146,
+            "end_char": 151
+          }
         },
         "balance_debt_long_term__2026_06_30": {
           "item_id": "debt_long_term",
@@ -12708,7 +13062,14 @@
           },
           "original_name_hints": [
             "Кредиты и прочие финансовые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 73,
+            "start_char": 117,
+            "end_char": 122
+          }
         },
         "balance_debt_long_term__2025_12_31": {
           "item_id": "debt_long_term",
@@ -12731,7 +13092,14 @@
           },
           "original_name_hints": [
             "Кредиты и прочие финансовые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 73,
+            "start_char": 146,
+            "end_char": 149
+          }
         },
         "balance_balance_deferred_tax_liabilities__2026_06_30": {
           "item_id": "balance_deferred_tax_liabilities",
@@ -12754,7 +13122,14 @@
           },
           "original_name_hints": [
             "Отложенные налоговые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 75,
+            "start_char": 124,
+            "end_char": 127
+          }
         },
         "balance_balance_deferred_tax_liabilities__2025_12_31": {
           "item_id": "balance_deferred_tax_liabilities",
@@ -12777,7 +13152,14 @@
           },
           "original_name_hints": [
             "Отложенные налоговые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 75,
+            "start_char": 151,
+            "end_char": 154
+          }
         },
         "balance_balance_other_noncurrent_liabilities__2026_06_30": {
           "item_id": "balance_other_noncurrent_liabilities",
@@ -12800,7 +13182,14 @@
           },
           "original_name_hints": [
             "Прочие обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 77,
+            "start_char": 140,
+            "end_char": 142
+          }
         },
         "balance_balance_other_noncurrent_liabilities__2025_12_31": {
           "item_id": "balance_other_noncurrent_liabilities",
@@ -12823,7 +13212,14 @@
           },
           "original_name_hints": [
             "Прочие обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 77,
+            "start_char": 169,
+            "end_char": 171
+          }
         },
         "balance_non_current_liabilities__2026_06_30": {
           "item_id": "non_current_liabilities",
@@ -12846,7 +13242,14 @@
           },
           "original_name_hints": [
             "Итого долгосрочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 79,
+            "start_char": 137,
+            "end_char": 142
+          }
         },
         "balance_non_current_liabilities__2025_12_31": {
           "item_id": "non_current_liabilities",
@@ -12869,7 +13272,14 @@
           },
           "original_name_hints": [
             "Итого долгосрочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 79,
+            "start_char": 167,
+            "end_char": 172
+          }
         },
         "balance_payables__2026_06_30": {
           "item_id": "payables",
@@ -12892,7 +13302,14 @@
           },
           "original_name_hints": [
             "Торговая кредиторская задолженность"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 81,
+            "start_char": 117,
+            "end_char": 123
+          }
         },
         "balance_payables__2025_12_31": {
           "item_id": "payables",
@@ -12915,7 +13332,14 @@
           },
           "original_name_hints": [
             "Торговая кредиторская задолженность"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 81,
+            "start_char": 143,
+            "end_char": 149
+          }
         },
         "balance_debt_short_term__2026_06_30": {
           "item_id": "debt_short_term",
@@ -12938,7 +13362,14 @@
           },
           "original_name_hints": [
             "Кредиты и прочие финансовые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 83,
+            "start_char": 113,
+            "end_char": 119
+          }
         },
         "balance_debt_short_term__2025_12_31": {
           "item_id": "debt_short_term",
@@ -12961,7 +13392,14 @@
           },
           "original_name_hints": [
             "Кредиты и прочие финансовые обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 83,
+            "start_char": 139,
+            "end_char": 145
+          }
         },
         "balance_balance_other_payables_accruals__2026_06_30": {
           "item_id": "balance_other_payables_accruals",
@@ -12984,7 +13422,14 @@
           },
           "original_name_hints": [
             "Прочая кредиторская задолженность и начисленные расходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 85,
+            "start_char": 108,
+            "end_char": 112
+          }
         },
         "balance_balance_other_payables_accruals__2025_12_31": {
           "item_id": "balance_other_payables_accruals",
@@ -13007,7 +13452,14 @@
           },
           "original_name_hints": [
             "Прочая кредиторская задолженность и начисленные расходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 85,
+            "start_char": 134,
+            "end_char": 139
+          }
         },
         "balance_balance_customer_liabilities__2026_06_30": {
           "item_id": "balance_customer_liabilities",
@@ -13030,7 +13482,14 @@
           },
           "original_name_hints": [
             "Обязательства перед покупателями"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 86,
+            "start_char": 121,
+            "end_char": 124
+          }
         },
         "balance_balance_customer_liabilities__2025_12_31": {
           "item_id": "balance_customer_liabilities",
@@ -13053,7 +13512,14 @@
           },
           "original_name_hints": [
             "Обязательства перед покупателями"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 86,
+            "start_char": 147,
+            "end_char": 150
+          }
         },
         "balance_lease_liabilities_short__2026_06_30": {
           "item_id": "lease_liabilities_short",
@@ -13076,7 +13542,14 @@
           },
           "original_name_hints": [
             "Обязательства по аренде"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 87,
+            "start_char": 125,
+            "end_char": 130
+          }
         },
         "balance_lease_liabilities_short__2025_12_31": {
           "item_id": "lease_liabilities_short",
@@ -13099,7 +13572,14 @@
           },
           "original_name_hints": [
             "Обязательства по аренде"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 87,
+            "start_char": 152,
+            "end_char": 156
+          }
         },
         "balance_balance_income_tax_payable__2026_06_30": {
           "item_id": "balance_income_tax_payable",
@@ -13122,7 +13602,14 @@
           },
           "original_name_hints": [
             "Задолженность по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 88,
+            "start_char": 125,
+            "end_char": 126
+          }
         },
         "balance_balance_income_tax_payable__2025_12_31": {
           "item_id": "balance_income_tax_payable",
@@ -13145,7 +13632,14 @@
           },
           "original_name_hints": [
             "Задолженность по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 88,
+            "start_char": 151,
+            "end_char": 153
+          }
         },
         "balance_balance_taxes_payable__2026_06_30": {
           "item_id": "balance_taxes_payable",
@@ -13168,7 +13662,14 @@
           },
           "original_name_hints": [
             "Задолженность по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 89,
+            "start_char": 121,
+            "end_char": 125
+          }
         },
         "balance_balance_taxes_payable__2025_12_31": {
           "item_id": "balance_taxes_payable",
@@ -13191,7 +13692,14 @@
           },
           "original_name_hints": [
             "Задолженность по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 89,
+            "start_char": 148,
+            "end_char": 151
+          }
         },
         "balance_balance_provisions__2026_06_30": {
           "item_id": "balance_provisions",
@@ -13214,7 +13722,14 @@
           },
           "original_name_hints": [
             "Оценочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 90,
+            "start_char": 137,
+            "end_char": 139
+          }
         },
         "balance_balance_provisions__2025_12_31": {
           "item_id": "balance_provisions",
@@ -13237,7 +13752,14 @@
           },
           "original_name_hints": [
             "Оценочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 90,
+            "start_char": 168,
+            "end_char": 169
+          }
         },
         "balance_current_liabilities__2026_06_30": {
           "item_id": "current_liabilities",
@@ -13260,7 +13782,14 @@
           },
           "original_name_hints": [
             "Итого краткосрочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 91,
+            "start_char": 126,
+            "end_char": 132
+          }
         },
         "balance_current_liabilities__2025_12_31": {
           "item_id": "current_liabilities",
@@ -13283,7 +13812,14 @@
           },
           "original_name_hints": [
             "Итого краткосрочные обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 91,
+            "start_char": 153,
+            "end_char": 159
+          }
         },
         "balance_balance_liabilities_total__2026_06_30": {
           "item_id": "balance_liabilities_total",
@@ -13306,7 +13842,14 @@
           },
           "original_name_hints": [
             "Итого обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 92,
+            "start_char": 144,
+            "end_char": 150
+          }
         },
         "balance_balance_liabilities_total__2025_12_31": {
           "item_id": "balance_liabilities_total",
@@ -13329,7 +13872,14 @@
           },
           "original_name_hints": [
             "Итого обязательства"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 92,
+            "start_char": 173,
+            "end_char": 179
+          }
         },
         "balance_total_equity_and_liabilities__2026_06_30": {
           "item_id": "total_equity_and_liabilities",
@@ -13352,7 +13902,14 @@
           },
           "original_name_hints": [
             "ИТОГО КАПИТАЛ И ОБЯЗАТЕЛЬСТВА"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 93,
+            "start_char": 122,
+            "end_char": 128
+          }
         },
         "balance_total_equity_and_liabilities__2025_12_31": {
           "item_id": "total_equity_and_liabilities",
@@ -13375,7 +13932,14 @@
           },
           "original_name_hints": [
             "ИТОГО КАПИТАЛ И ОБЯЗАТЕЛЬСТВА"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 93,
+            "start_char": 149,
+            "end_char": 155
+          }
         },
         "income_revenue__2026_06_30": {
           "item_id": "revenue",
@@ -13398,7 +13962,14 @@
           },
           "original_name_hints": [
             "ВЫРУЧКА"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 10,
+            "start_char": 119,
+            "end_char": 125
+          }
         },
         "income_revenue__2025_06_30": {
           "item_id": "revenue",
@@ -13421,7 +13992,14 @@
           },
           "original_name_hints": [
             "ВЫРУЧКА"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 10,
+            "start_char": 146,
+            "end_char": 152
+          }
         },
         "income_cost_of_sales__2026_06_30": {
           "item_id": "cost_of_sales",
@@ -13444,7 +14022,14 @@
           },
           "original_name_hints": [
             "СЕБЕСТОИМОСТЬ РЕАЛИЗАЦИИ"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 11,
+            "start_char": 113,
+            "end_char": 121
+          }
         },
         "income_cost_of_sales__2025_06_30": {
           "item_id": "cost_of_sales",
@@ -13467,7 +14052,14 @@
           },
           "original_name_hints": [
             "СЕБЕСТОИМОСТЬ РЕАЛИЗАЦИИ"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 11,
+            "start_char": 142,
+            "end_char": 150
+          }
         },
         "income_gross_profit__2026_06_30": {
           "item_id": "gross_profit",
@@ -13490,7 +14082,14 @@
           },
           "original_name_hints": [
             "ВАЛОВАЯ ПРИБЫЛЬ"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 122,
+            "end_char": 126
+          }
         },
         "income_gross_profit__2025_06_30": {
           "item_id": "gross_profit",
@@ -13513,7 +14112,14 @@
           },
           "original_name_hints": [
             "ВАЛОВАЯ ПРИБЫЛЬ"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 150,
+            "end_char": 155
+          }
         },
         "income_selling_admin_expenses_combined__2026_06_30": {
           "item_id": "selling_admin_expenses_combined",
@@ -13536,7 +14142,14 @@
           },
           "original_name_hints": [
             "Коммерческие, общехозяйственные и административные расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 13,
+            "start_char": 91,
+            "end_char": 98
+          }
         },
         "income_selling_admin_expenses_combined__2025_06_30": {
           "item_id": "selling_admin_expenses_combined",
@@ -13559,7 +14172,14 @@
           },
           "original_name_hints": [
             "Коммерческие, общехозяйственные и административные расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 13,
+            "start_char": 119,
+            "end_char": 126
+          }
         },
         "income_income_other_operating_income__2026_06_30": {
           "item_id": "income_other_operating_income",
@@ -13582,7 +14202,14 @@
           },
           "original_name_hints": [
             "Прочие операционные доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 117,
+            "end_char": 120
+          }
         },
         "income_income_other_operating_income__2025_06_30": {
           "item_id": "income_other_operating_income",
@@ -13605,7 +14232,14 @@
           },
           "original_name_hints": [
             "Прочие операционные доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 146,
+            "end_char": 149
+          }
         },
         "income_income_other_operating_expense__2026_06_30": {
           "item_id": "income_other_operating_expense",
@@ -13628,7 +14262,14 @@
           },
           "original_name_hints": [
             "Прочие операционные расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 15,
+            "start_char": 120,
+            "end_char": 124
+          }
         },
         "income_income_other_operating_expense__2025_06_30": {
           "item_id": "income_other_operating_expense",
@@ -13651,7 +14292,14 @@
           },
           "original_name_hints": [
             "Прочие операционные расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 15,
+            "start_char": 151,
+            "end_char": 155
+          }
         },
         "income_income_investment_property_fv__2026_06_30": {
           "item_id": "income_investment_property_fv",
@@ -13694,7 +14342,14 @@
           },
           "original_name_hints": [
             "Изменение справедливой стоимости инвестиционной недвижимости"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 16,
+            "start_char": 122,
+            "end_char": 124
+          }
         },
         "income_operating_profit__2026_06_30": {
           "item_id": "operating_profit",
@@ -13717,7 +14372,14 @@
           },
           "original_name_hints": [
             "ОПЕРАЦИОННЫЙ УБЫТОК"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 115,
+            "end_char": 122
+          }
         },
         "income_operating_profit__2025_06_30": {
           "item_id": "operating_profit",
@@ -13740,7 +14402,14 @@
           },
           "original_name_hints": [
             "ОПЕРАЦИОННЫЙ УБЫТОК"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 146,
+            "end_char": 152
+          }
         },
         "income_finance_income__2026_06_30": {
           "item_id": "finance_income",
@@ -13763,7 +14432,14 @@
           },
           "original_name_hints": [
             "Финансовые доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 133,
+            "end_char": 135
+          }
         },
         "income_finance_income__2025_06_30": {
           "item_id": "finance_income",
@@ -13786,7 +14462,14 @@
           },
           "original_name_hints": [
             "Финансовые доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 165,
+            "end_char": 167
+          }
         },
         "income_finance_expense__2026_06_30": {
           "item_id": "finance_expense",
@@ -13809,7 +14492,14 @@
           },
           "original_name_hints": [
             "Финансовые расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 117,
+            "end_char": 124
+          }
         },
         "income_finance_expense__2025_06_30": {
           "item_id": "finance_expense",
@@ -13832,7 +14522,14 @@
           },
           "original_name_hints": [
             "Финансовые расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 146,
+            "end_char": 153
+          }
         },
         "income_income_nonoperating_expense__2026_06_30": {
           "item_id": "income_nonoperating_expense",
@@ -13855,7 +14552,14 @@
           },
           "original_name_hints": [
             "Прочие неоперационные расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 20,
+            "start_char": 115,
+            "end_char": 117
+          }
         },
         "income_income_nonoperating_expense__2025_06_30": {
           "item_id": "income_nonoperating_expense",
@@ -13898,7 +14602,14 @@
           },
           "original_name_hints": [
             "УБЫТОК ДО НАЛОГА HA ПРИБЫЛЬ"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 111,
+            "end_char": 118
+          }
         },
         "income_profit_before_tax__2025_06_30": {
           "item_id": "profit_before_tax",
@@ -13921,7 +14632,14 @@
           },
           "original_name_hints": [
             "УБЫТОК ДО НАЛОГА HA ПРИБЫЛЬ"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 140,
+            "end_char": 147
+          }
         },
         "income_income_tax_benefit__2026_06_30": {
           "item_id": "income_tax_benefit",
@@ -13944,7 +14662,14 @@
           },
           "original_name_hints": [
             "Доходы по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 23,
+            "start_char": 105,
+            "end_char": 110
+          }
         },
         "income_income_tax_benefit__2025_06_30": {
           "item_id": "income_tax_benefit",
@@ -13967,7 +14692,14 @@
           },
           "original_name_hints": [
             "Доходы по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 23,
+            "start_char": 132,
+            "end_char": 135
+          }
         },
         "income_net_profit__2026_06_30": {
           "item_id": "net_profit",
@@ -13990,7 +14722,14 @@
           },
           "original_name_hints": [
             "ИТОГО СОВОКУПНЫЙ РАСХОД за период"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 104,
+            "end_char": 111
+          }
         },
         "income_net_profit__2025_06_30": {
           "item_id": "net_profit",
@@ -14013,7 +14752,14 @@
           },
           "original_name_hints": [
             "ИТОГО СОВОКУПНЫЙ РАСХОД за период"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 132,
+            "end_char": 139
+          }
         },
         "income_income_oci_revaluation__2026_06_30": {
           "item_id": "income_oci_revaluation",
@@ -14056,7 +14802,14 @@
           },
           "original_name_hints": [
             "Прибыль от переоценки основных средств"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 28,
+            "start_char": 147,
+            "end_char": 150
+          }
         },
         "income_income_oci_after_tax__2026_06_30": {
           "item_id": "income_oci_after_tax",
@@ -14099,7 +14852,14 @@
           },
           "original_name_hints": [
             "Прочий совокупный доход за вычетом налога на прибыль"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 31,
+            "start_char": 133,
+            "end_char": 137
+          }
         },
         "income_income_comprehensive_total__2026_06_30": {
           "item_id": "income_comprehensive_total",
@@ -14122,7 +14882,14 @@
           },
           "original_name_hints": [
             "ИТОГО СОВОКУПНЫЙ РАСХОД ЗА ПЕРИОД"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 104,
+            "end_char": 111
+          }
         },
         "income_income_comprehensive_total__2025_06_30": {
           "item_id": "income_comprehensive_total",
@@ -14145,7 +14912,14 @@
           },
           "original_name_hints": [
             "ИТОГО СОВОКУПНЫЙ РАСХОД ЗА ПЕРИОД"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 133,
+            "end_char": 140
+          }
         },
         "income_income_oci_tax__2026_06_30": {
           "item_id": "income_oci_tax",
@@ -14188,7 +14962,14 @@
           },
           "original_name_hints": [
             "Налог на прибыль по статьям, которые впоследствии не будут реклассифицированы в состав прибыли или убытка"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 125,
+            "end_char": 131
+          }
         },
         "cash_flow_cf_starting_net_profit__2026_06_30": {
           "item_id": "cf_starting_net_profit",
@@ -14211,7 +14992,14 @@
           },
           "original_name_hints": [
             "Итого чистый убыток за период"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 103,
+            "end_char": 110
+          }
         },
         "cash_flow_cf_starting_net_profit__2025_06_30": {
           "item_id": "cf_starting_net_profit",
@@ -14234,7 +15022,14 @@
           },
           "original_name_hints": [
             "Итого чистый убыток за период"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 129,
+            "end_char": 136
+          }
         },
         "cash_flow_cf_tax_benefit_adjustment__2026_06_30": {
           "item_id": "cf_tax_benefit_adjustment",
@@ -14257,7 +15052,14 @@
           },
           "original_name_hints": [
             "Доходы по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 102,
+            "end_char": 108
+          }
         },
         "cash_flow_cf_tax_benefit_adjustment__2025_06_30": {
           "item_id": "cf_tax_benefit_adjustment",
@@ -14280,7 +15082,14 @@
           },
           "original_name_hints": [
             "Доходы по налогу на прибыль"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 128,
+            "end_char": 134
+          }
         },
         "cash_flow_d_and_a__2026_06_30": {
           "item_id": "d_and_a",
@@ -14303,7 +15112,14 @@
           },
           "original_name_hints": [
             "Амортизация основных средств, инвестиционной недвижимости, нематериальных активов и актизов в форме права пользования"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 16,
+            "start_char": 97,
+            "end_char": 102
+          }
         },
         "cash_flow_d_and_a__2025_06_30": {
           "item_id": "d_and_a",
@@ -14326,7 +15142,14 @@
           },
           "original_name_hints": [
             "Амортизация основных средств, инвестиционной недвижимости, нематериальных активов и актизов в форме права пользования"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 16,
+            "start_char": 126,
+            "end_char": 130
+          }
         },
         "cash_flow_cf_lease_termination_adjustment__2026_06_30": {
           "item_id": "cf_lease_termination_adjustment",
@@ -14349,7 +15172,14 @@
           },
           "original_name_hints": [
             "Доход от прекращения договоров аренды"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 110,
+            "end_char": 115
+          }
         },
         "cash_flow_cf_lease_termination_adjustment__2025_06_30": {
           "item_id": "cf_lease_termination_adjustment",
@@ -14372,7 +15202,14 @@
           },
           "original_name_hints": [
             "Доход от прекращения договоров аренды"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 139,
+            "end_char": 145
+          }
         },
         "cash_flow_cf_receivables_impairment_adjustment__2026_06_30": {
           "item_id": "cf_receivables_impairment_adjustment",
@@ -14395,7 +15232,14 @@
           },
           "original_name_hints": [
             "Изменение резерва под обесценение задолженности"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 107,
+            "end_char": 108
+          }
         },
         "cash_flow_cf_receivables_impairment_adjustment__2025_06_30": {
           "item_id": "cf_receivables_impairment_adjustment",
@@ -14418,7 +15262,14 @@
           },
           "original_name_hints": [
             "Изменение резерва под обесценение задолженности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 134,
+            "end_char": 137
+          }
         },
         "cash_flow_cf_inventory_markdown_adjustment__2026_06_30": {
           "item_id": "cf_inventory_markdown_adjustment",
@@ -14441,7 +15292,14 @@
           },
           "original_name_hints": [
             "Уценка и потери товарно-материальных заласов, за вычетом излишков и дохода от невостребованных товаров, и списание запасов до чистой цены возможной реализации"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 99,
+            "end_char": 103
+          }
         },
         "cash_flow_cf_inventory_markdown_adjustment__2025_06_30": {
           "item_id": "cf_inventory_markdown_adjustment",
@@ -14464,7 +15322,14 @@
           },
           "original_name_hints": [
             "Уценка и потери товарно-материальных заласов, за вычетом излишков и дохода от невостребованных товаров, и списание запасов до чистой цены возможной реализации"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 124,
+            "end_char": 128
+          }
         },
         "cash_flow_cf_interest_income_adjustment__2026_06_30": {
           "item_id": "cf_interest_income_adjustment",
@@ -14487,7 +15352,14 @@
           },
           "original_name_hints": [
             "Процентные доходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 130,
+            "end_char": 134
+          }
         },
         "cash_flow_cf_interest_income_adjustment__2025_06_30": {
           "item_id": "cf_interest_income_adjustment",
@@ -14510,7 +15382,14 @@
           },
           "original_name_hints": [
             "Процентные доходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 162,
+            "end_char": 166
+          }
         },
         "cash_flow_cf_interest_expense_adjustment__2026_06_30": {
           "item_id": "cf_interest_expense_adjustment",
@@ -14533,7 +15412,14 @@
           },
           "original_name_hints": [
             "Процентные расходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 23,
+            "start_char": 114,
+            "end_char": 119
+          }
         },
         "cash_flow_cf_interest_expense_adjustment__2025_06_30": {
           "item_id": "cf_interest_expense_adjustment",
@@ -14556,7 +15442,14 @@
           },
           "original_name_hints": [
             "Процентные расходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 23,
+            "start_char": 141,
+            "end_char": 146
+          }
         },
         "cash_flow_cf_subsidiary_gain_adjustment__2026_06_30": {
           "item_id": "cf_subsidiary_gain_adjustment",
@@ -14579,7 +15472,14 @@
           },
           "original_name_hints": [
             "Прибыль от выбытия дочерних компаний"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 113,
+            "end_char": 117
+          }
         },
         "cash_flow_cf_subsidiary_gain_adjustment__2025_06_30": {
           "item_id": "cf_subsidiary_gain_adjustment",
@@ -14642,7 +15542,14 @@
           },
           "original_name_hints": [
             "Изменение справедливой стоимости инвестиционной недвижимости"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 25,
+            "start_char": 120,
+            "end_char": 124
+          }
         },
         "cash_flow_cf_fx_adjustment__2026_06_30": {
           "item_id": "cf_fx_adjustment",
@@ -14665,7 +15572,14 @@
           },
           "original_name_hints": [
             "Расход/(доход) от курсовых разниц"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 121,
+            "end_char": 122
+          }
         },
         "cash_flow_cf_fx_adjustment__2025_06_30": {
           "item_id": "cf_fx_adjustment",
@@ -14688,7 +15602,14 @@
           },
           "original_name_hints": [
             "Расход/(доход) от курсовых разниц"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 148,
+            "end_char": 152
+          }
         },
         "cash_flow_cf_other_noncash_mvid__2026_06_30": {
           "item_id": "cf_other_noncash_mvid",
@@ -14711,7 +15632,14 @@
           },
           "original_name_hints": [
             "Прочие неденежные операции, нетто"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 27,
+            "start_char": 114,
+            "end_char": 118
+          }
         },
         "cash_flow_cf_other_noncash_mvid__2025_06_30": {
           "item_id": "cf_other_noncash_mvid",
@@ -14734,7 +15662,14 @@
           },
           "original_name_hints": [
             "Прочие неденежные операции, нетто"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 27,
+            "start_char": 146,
+            "end_char": 148
+          }
         },
         "cash_flow_cf_before_working_capital__2026_06_30": {
           "item_id": "cf_before_working_capital",
@@ -14757,7 +15692,14 @@
           },
           "original_name_hints": [
             "Денежные средства, (использованные в]/ полученные OT операционной деятельности, до изменений в оборотном капитале"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 29,
+            "start_char": 91,
+            "end_char": 98
+          }
         },
         "cash_flow_cf_before_working_capital__2025_06_30": {
           "item_id": "cf_before_working_capital",
@@ -14780,7 +15722,14 @@
           },
           "original_name_hints": [
             "Денежные средства, (использованные в]/ полученные OT операционной деятельности, до изменений в оборотном капитале"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 29,
+            "start_char": 123,
+            "end_char": 126
+          }
         },
         "cash_flow_cf_inventories_change__2026_06_30": {
           "item_id": "cf_inventories_change",
@@ -14803,7 +15752,14 @@
           },
           "original_name_hints": [
             "Уменьшение запасов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 111,
+            "end_char": 116
+          }
         },
         "cash_flow_cf_inventories_change__2025_06_30": {
           "item_id": "cf_inventories_change",
@@ -14826,7 +15782,14 @@
           },
           "original_name_hints": [
             "Уменьшение запасов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 137,
+            "end_char": 141
+          }
         },
         "cash_flow_cf_receivables_advances_change__2026_06_30": {
           "item_id": "cf_receivables_advances_change",
@@ -14849,7 +15812,14 @@
           },
           "original_name_hints": [
             "Уменьшение дебиторской задолженности и авансов выданных"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 31,
+            "start_char": 93,
+            "end_char": 98
+          }
         },
         "cash_flow_cf_receivables_advances_change__2025_06_30": {
           "item_id": "cf_receivables_advances_change",
@@ -14872,7 +15842,14 @@
           },
           "original_name_hints": [
             "Уменьшение дебиторской задолженности и авансов выданных"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 31,
+            "start_char": 120,
+            "end_char": 124
+          }
         },
         "cash_flow_cf_other_tax_prepayments_change__2026_06_30": {
           "item_id": "cf_other_tax_prepayments_change",
@@ -14895,7 +15872,14 @@
           },
           "original_name_hints": [
             "Уменьшение авансовых платежей по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 100,
+            "end_char": 102
+          }
         },
         "cash_flow_cf_other_tax_prepayments_change__2025_06_30": {
           "item_id": "cf_other_tax_prepayments_change",
@@ -14918,7 +15902,14 @@
           },
           "original_name_hints": [
             "Уменьшение авансовых платежей по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 124,
+            "end_char": 127
+          }
         },
         "cash_flow_cf_payables_change__2026_06_30": {
           "item_id": "cf_payables_change",
@@ -14941,7 +15932,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение торговой кредиторской задолженности"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 33,
+            "start_char": 97,
+            "end_char": 101
+          }
         },
         "cash_flow_cf_payables_change__2025_06_30": {
           "item_id": "cf_payables_change",
@@ -14964,7 +15962,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение торговой кредиторской задолженности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 33,
+            "start_char": 122,
+            "end_char": 129
+          }
         },
         "cash_flow_cf_other_payables_accruals_change__2026_06_30": {
           "item_id": "cf_other_payables_accruals_change",
@@ -14987,7 +15992,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение прочей кредиторской задолженности и начисленных расходов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 35,
+            "start_char": 116,
+            "end_char": 120
+          }
         },
         "cash_flow_cf_other_payables_accruals_change__2025_06_30": {
           "item_id": "cf_other_payables_accruals_change",
@@ -15010,7 +16022,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение прочей кредиторской задолженности и начисленных расходов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 35,
+            "start_char": 142,
+            "end_char": 148
+          }
         },
         "cash_flow_cf_customer_liabilities_change__2026_06_30": {
           "item_id": "cf_customer_liabilities_change",
@@ -15033,7 +16052,14 @@
           },
           "original_name_hints": [
             "Уменьшение обязательств перед покупателями"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 36,
+            "start_char": 102,
+            "end_char": 108
+          }
         },
         "cash_flow_cf_customer_liabilities_change__2025_06_30": {
           "item_id": "cf_customer_liabilities_change",
@@ -15056,7 +16082,14 @@
           },
           "original_name_hints": [
             "Уменьшение обязательств перед покупателями"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 36,
+            "start_char": 132,
+            "end_char": 136
+          }
         },
         "cash_flow_cf_taxes_payable_change__2026_06_30": {
           "item_id": "cf_taxes_payable_change",
@@ -15079,7 +16112,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение кредиторской задолженности по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 38,
+            "start_char": 130,
+            "end_char": 132
+          }
         },
         "cash_flow_cf_taxes_payable_change__2025_06_30": {
           "item_id": "cf_taxes_payable_change",
@@ -15102,7 +16142,14 @@
           },
           "original_name_hints": [
             "(Уменьшение)/увеличение кредиторской задолженности по прочим налогам"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 38,
+            "start_char": 158,
+            "end_char": 162
+          }
         },
         "cash_flow_cf_other_working_capital__2026_06_30": {
           "item_id": "cf_other_working_capital",
@@ -15125,7 +16172,14 @@
           },
           "original_name_hints": [
             "Прочие изменения в оборотном капитале, нетто"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 39,
+            "start_char": 105,
+            "end_char": 108
+          }
         },
         "cash_flow_cf_other_working_capital__2025_06_30": {
           "item_id": "cf_other_working_capital",
@@ -15148,7 +16202,14 @@
           },
           "original_name_hints": [
             "Прочие изменения в оборотном капитале, нетто"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 39,
+            "start_char": 135,
+            "end_char": 136
+          }
         },
         "cash_flow_cf_operating_before_interest_tax__2026_06_30": {
           "item_id": "cf_operating_before_interest_tax",
@@ -15171,7 +16232,14 @@
           },
           "original_name_hints": [
             "Денежные средства, полученные / (использованные в) от операционной деятельности"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 41,
+            "start_char": 117,
+            "end_char": 122
+          }
         },
         "cash_flow_cf_operating_before_interest_tax__2025_06_30": {
           "item_id": "cf_operating_before_interest_tax",
@@ -15194,7 +16262,14 @@
           },
           "original_name_hints": [
             "Денежные средства, полученные / (использованные в) от операционной деятельности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 41,
+            "start_char": 146,
+            "end_char": 152
+          }
         },
         "cash_flow_cf_income_tax_paid__2026_06_30": {
           "item_id": "cf_income_tax_paid",
@@ -15217,7 +16292,14 @@
           },
           "original_name_hints": [
             "Уплата налога на прибыль"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 42,
+            "start_char": 106,
+            "end_char": 109
+          }
         },
         "cash_flow_cf_income_tax_paid__2025_06_30": {
           "item_id": "cf_income_tax_paid",
@@ -15240,7 +16322,14 @@
           },
           "original_name_hints": [
             "Уплата налога на прибыль"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 42,
+            "start_char": 132,
+            "end_char": 135
+          }
         },
         "cash_flow_interest_paid__2026_06_30": {
           "item_id": "interest_paid",
@@ -15263,7 +16352,14 @@
           },
           "original_name_hints": [
             "Уплаченные проценты"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 43,
+            "start_char": 107,
+            "end_char": 114
+          }
         },
         "cash_flow_interest_paid__2025_06_30": {
           "item_id": "interest_paid",
@@ -15286,7 +16382,14 @@
           },
           "original_name_hints": [
             "Уплаченные проценты"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 43,
+            "start_char": 133,
+            "end_char": 140
+          }
         },
         "cash_flow_cfo__2026_06_30": {
           "item_id": "cfo",
@@ -15309,7 +16412,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, полученные от/ (использованные в)"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 46,
+            "start_char": 119,
+            "end_char": 123
+          }
         },
         "cash_flow_cfo__2025_06_30": {
           "item_id": "cfo",
@@ -15332,7 +16442,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, полученные от/ (использованные в)"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 46,
+            "start_char": 145,
+            "end_char": 152
+          }
         },
         "cash_flow_capex_ppe__2026_06_30": {
           "item_id": "capex_ppe",
@@ -15355,7 +16472,14 @@
           },
           "original_name_hints": [
             "Приобретение основных средств"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 124,
+            "end_char": 127
+          }
         },
         "cash_flow_capex_ppe__2025_06_30": {
           "item_id": "capex_ppe",
@@ -15378,7 +16502,14 @@
           },
           "original_name_hints": [
             "Приобретение основных средств"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 12,
+            "start_char": 154,
+            "end_char": 158
+          }
         },
         "cash_flow_cf_ppe_disposal__2026_06_30": {
           "item_id": "cf_ppe_disposal",
@@ -15401,7 +16532,14 @@
           },
           "original_name_hints": [
             "Поступления от выбытия основных средств"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 13,
+            "start_char": 118,
+            "end_char": 118
+          }
         },
         "cash_flow_cf_ppe_disposal__2025_06_30": {
           "item_id": "cf_ppe_disposal",
@@ -15424,7 +16562,14 @@
           },
           "original_name_hints": [
             "Поступления от выбытия основных средств"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 13,
+            "start_char": 147,
+            "end_char": 148
+          }
         },
         "cash_flow_capex_intangibles__2026_06_30": {
           "item_id": "capex_intangibles",
@@ -15447,7 +16592,14 @@
           },
           "original_name_hints": [
             "Приобретение нематериальных активов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 107,
+            "end_char": 112
+          }
         },
         "cash_flow_capex_intangibles__2025_06_30": {
           "item_id": "capex_intangibles",
@@ -15470,7 +16622,14 @@
           },
           "original_name_hints": [
             "Приобретение нематериальных активов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 14,
+            "start_char": 134,
+            "end_char": 140
+          }
         },
         "cash_flow_cf_subsidiary_disposal__2026_06_30": {
           "item_id": "cf_subsidiary_disposal",
@@ -15493,7 +16652,14 @@
           },
           "original_name_hints": [
             "Продажа компаний Группы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 15,
+            "start_char": 104,
+            "end_char": 106
+          }
         },
         "cash_flow_cf_subsidiary_disposal__2025_06_30": {
           "item_id": "cf_subsidiary_disposal",
@@ -15536,7 +16702,14 @@
           },
           "original_name_hints": [
             "Возврат предоставленных займов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 16,
+            "start_char": 128,
+            "end_char": 129
+          }
         },
         "cash_flow_cf_loans_received_repayment__2025_06_30": {
           "item_id": "cf_loans_received_repayment",
@@ -15599,7 +16772,14 @@
           },
           "original_name_hints": [
             "Предоставление потребительских кредитов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 139,
+            "end_char": 143
+          }
         },
         "cash_flow_cf_consumer_loans_repaid__2026_06_30": {
           "item_id": "cf_consumer_loans_repaid",
@@ -15642,7 +16822,14 @@
           },
           "original_name_hints": [
             "Возврат предоставленных потребительских кредитов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 139,
+            "end_char": 141
+          }
         },
         "cash_flow_cf_interest_received__2026_06_30": {
           "item_id": "cf_interest_received",
@@ -15665,7 +16852,14 @@
           },
           "original_name_hints": [
             "Проценты полученные"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 124,
+            "end_char": 126
+          }
         },
         "cash_flow_cf_interest_received__2025_06_30": {
           "item_id": "cf_interest_received",
@@ -15688,7 +16882,14 @@
           },
           "original_name_hints": [
             "Проценты полученные"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 154,
+            "end_char": 156
+          }
         },
         "cash_flow_cfi__2026_06_30": {
           "item_id": "cfi",
@@ -15711,7 +16912,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, использованные в инвестиционной деятельности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 123,
+            "end_char": 129
+          }
         },
         "cash_flow_cfi__2025_06_30": {
           "item_id": "cfi",
@@ -15734,7 +16942,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, использованные в инвестиционной деятельности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 152,
+            "end_char": 158
+          }
         },
         "cash_flow_cf_bonds_issued__2026_06_30": {
           "item_id": "cf_bonds_issued",
@@ -15777,7 +16992,14 @@
           },
           "original_name_hints": [
             "Размещение облигаций"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 23,
+            "start_char": 156,
+            "end_char": 159
+          }
         },
         "cash_flow_cf_bonds_repaid__2026_06_30": {
           "item_id": "cf_bonds_repaid",
@@ -15800,7 +17022,14 @@
           },
           "original_name_hints": [
             "Погашение облигаций"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 121,
+            "end_char": 127
+          }
         },
         "cash_flow_cf_bonds_repaid__2025_06_30": {
           "item_id": "cf_bonds_repaid",
@@ -15823,7 +17052,14 @@
           },
           "original_name_hints": [
             "Погашение облигаций"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 24,
+            "start_char": 151,
+            "end_char": 157
+          }
         },
         "cash_flow_cf_loans_raised__2026_06_30": {
           "item_id": "cf_loans_raised",
@@ -15846,7 +17082,14 @@
           },
           "original_name_hints": [
             "Поступления от кредитов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 25,
+            "start_char": 123,
+            "end_char": 128
+          }
         },
         "cash_flow_cf_loans_raised__2025_06_30": {
           "item_id": "cf_loans_raised",
@@ -15869,7 +17112,14 @@
           },
           "original_name_hints": [
             "Поступления от кредитов"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 25,
+            "start_char": 152,
+            "end_char": 157
+          }
         },
         "cash_flow_cf_loans_repaid__2026_06_30": {
           "item_id": "cf_loans_repaid",
@@ -15892,7 +17142,14 @@
           },
           "original_name_hints": [
             "Погашение кредитов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 121,
+            "end_char": 128
+          }
         },
         "cash_flow_cf_loans_repaid__2025_06_30": {
           "item_id": "cf_loans_repaid",
@@ -15915,7 +17172,14 @@
           },
           "original_name_hints": [
             "Погашение кредитов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 26,
+            "start_char": 150,
+            "end_char": 157
+          }
         },
         "cash_flow_cf_shareholder_funding__2026_06_30": {
           "item_id": "cf_shareholder_funding",
@@ -15958,7 +17222,14 @@
           },
           "original_name_hints": [
             "Предоставление финансирования от акционеров"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 27,
+            "start_char": 140,
+            "end_char": 145
+          }
         },
         "cash_flow_cf_lease_financing_payments__2026_06_30": {
           "item_id": "cf_lease_financing_payments",
@@ -15981,7 +17252,14 @@
           },
           "original_name_hints": [
             "Выплаты обязательств по аренде"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 28,
+            "start_char": 115,
+            "end_char": 121
+          }
         },
         "cash_flow_cf_lease_financing_payments__2025_06_30": {
           "item_id": "cf_lease_financing_payments",
@@ -16004,7 +17282,14 @@
           },
           "original_name_hints": [
             "Выплаты обязательств по аренде"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 28,
+            "start_char": 144,
+            "end_char": 150
+          }
         },
         "cash_flow_cff__2026_06_30": {
           "item_id": "cff",
@@ -16027,7 +17312,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, (использованные в)/ полученные от финансовой деятельности"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 117,
+            "end_char": 123
+          }
         },
         "cash_flow_cff__2025_06_30": {
           "item_id": "cff",
@@ -16050,7 +17342,14 @@
           },
           "original_name_hints": [
             "Чистые денежные средства, (использованные в)/ полученные от финансовой деятельности"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 30,
+            "start_char": 147,
+            "end_char": 152
+          }
         },
         "cash_flow_cf_reported_net_cash_change__2026_06_30": {
           "item_id": "cf_reported_net_cash_change",
@@ -16073,7 +17372,14 @@
           },
           "original_name_hints": [
             "ЧИСТОЕ УМЕНЬШЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ и их эквивалентов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 31,
+            "start_char": 99,
+            "end_char": 105
+          }
         },
         "cash_flow_cf_reported_net_cash_change__2025_06_30": {
           "item_id": "cf_reported_net_cash_change",
@@ -16096,7 +17402,14 @@
           },
           "original_name_hints": [
             "ЧИСТОЕ УМЕНЬШЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ и их эквивалентов"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 31,
+            "start_char": 129,
+            "end_char": 136
+          }
         },
         "cash_flow_cf_cash_opening__2025_12_31": {
           "item_id": "cf_cash_opening",
@@ -16119,7 +17432,14 @@
           },
           "original_name_hints": [
             "ДЕНЕЖНЫЕ СРЕДСТВА И ИХ ЭКВИВАЛЕНТЫ на начало периода"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 96,
+            "end_char": 100
+          }
         },
         "cash_flow_cf_cash_opening__2024_12_31": {
           "item_id": "cf_cash_opening",
@@ -16142,7 +17462,14 @@
           },
           "original_name_hints": [
             "ДЕНЕЖНЫЕ СРЕДСТВА И ИХ ЭКВИВАЛЕНТЫ на начало периода"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 32,
+            "start_char": 124,
+            "end_char": 129
+          }
         },
         "cash_flow_cf_cash_closing_gross__2026_06_30": {
           "item_id": "cf_cash_closing_gross",
@@ -16165,7 +17492,14 @@
           },
           "original_name_hints": [
             "ДЕНЕЖНЫЕ СРЕДСТВА И ИХ ЭКВИВАЛЕНТЫ на конец периода"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 33,
+            "start_char": 99,
+            "end_char": 101
+          }
         },
         "cash_flow_cf_cash_closing_gross__2025_06_30": {
           "item_id": "cf_cash_closing_gross",
@@ -16188,7 +17522,14 @@
           },
           "original_name_hints": [
             "ДЕНЕЖНЫЕ СРЕДСТВА И ИХ ЭКВИВАЛЕНТЫ на конец периода"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 33,
+            "start_char": 126,
+            "end_char": 130
+          }
         },
         "equity_eq_opening_total__2025_12_31": {
           "item_id": "eq_opening_total",
@@ -16217,7 +17558,8 @@
             "line": 20,
             "start_char": 217,
             "end_char": 228
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_opening_total__2024_12_31": {
           "item_id": "eq_opening_total",
@@ -16246,7 +17588,8 @@
             "line": 14,
             "start_char": 221,
             "end_char": 232
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_closing_total__2026_06_30": {
           "item_id": "eq_closing_total",
@@ -16275,7 +17618,8 @@
             "line": 22,
             "start_char": 224,
             "end_char": 235
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_closing_total__2025_06_30": {
           "item_id": "eq_closing_total",
@@ -16304,7 +17648,8 @@
             "line": 19,
             "start_char": 225,
             "end_char": 236
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_total__2026_06_30": {
           "item_id": "eq_profit_total",
@@ -16333,7 +17678,8 @@
             "line": 21,
             "start_char": 212,
             "end_char": 223
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_profit_total__2025_06_30": {
           "item_id": "eq_profit_total",
@@ -16362,7 +17708,8 @@
             "line": 15,
             "start_char": 209,
             "end_char": 220
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_oci_total__2026_06_30": {
           "item_id": "eq_oci_total",
@@ -16412,7 +17759,8 @@
             "line": 16,
             "start_char": 221,
             "end_char": 232
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "equity_eq_comprehensive_total__2026_06_30": {
           "item_id": "eq_comprehensive_total",
@@ -16462,7 +17810,8 @@
             "line": 17,
             "start_char": 226,
             "end_char": 237
-          }
+          },
+          "raw_sign": "nonpositive"
         },
         "equity_eq_shareholder_paid_capital__2026_06_30": {
           "item_id": "eq_shareholder_paid_capital",
@@ -16512,7 +17861,8 @@
             "line": 18,
             "start_char": 204,
             "end_char": 215
-          }
+          },
+          "raw_sign": "nonnegative"
         },
         "notes_note_long_afinans_loan__2026_06_30": {
           "item_id": "note_long_afinans_loan",
@@ -16536,7 +17886,13 @@
           "original_name_hints": [
             "ООО «А-ФИНАНС ПРОЕКТ»"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 13,
+            "start_char": 100,
+            "end_char": 105
+          }
         },
         "notes_note_long_afinans_loan__2025_12_31": {
           "item_id": "note_long_afinans_loan",
@@ -16581,7 +17937,13 @@
           "original_name_hints": [
             "ООО «УК «Джи Пи Ай»"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 14,
+            "start_char": 100,
+            "end_char": 104
+          }
         },
         "notes_note_long_gpi_loan__2025_12_31": {
           "item_id": "note_long_gpi_loan",
@@ -16626,7 +17988,13 @@
           "original_name_hints": [
             "OOO \"Кэпиталгард\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 15,
+            "start_char": 122,
+            "end_char": 124
+          }
         },
         "notes_note_long_capitalguard_loan__2025_12_31": {
           "item_id": "note_long_capitalguard_loan",
@@ -16650,7 +18018,13 @@
           "original_name_hints": [
             "OOO \"Кэпиталгард\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 15,
+            "start_char": 154,
+            "end_char": 156
+          }
         },
         "notes_note_long_loans_mvid__2026_06_30": {
           "item_id": "note_long_loans_mvid",
@@ -16674,7 +18048,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 16,
+            "start_char": 1,
+            "end_char": 6
+          }
         },
         "notes_note_long_loans_mvid__2025_12_31": {
           "item_id": "note_long_loans_mvid",
@@ -16698,7 +18078,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 16,
+            "start_char": 39,
+            "end_char": 41
+          }
         },
         "notes_note_long_bonds_mvid__2026_06_30": {
           "item_id": "note_long_bonds_mvid",
@@ -16743,7 +18129,13 @@
           "original_name_hints": [
             "Выпущенные облигации"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 18,
+            "start_char": 149,
+            "end_char": 152
+          }
         },
         "notes_note_long_bonds_total_mvid__2026_06_30": {
           "item_id": "note_long_bonds_total_mvid",
@@ -16788,7 +18180,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 19,
+            "start_char": 28,
+            "end_char": 31
+          }
         },
         "notes_note_debt_noncurrent__2026_06_30": {
           "item_id": "note_debt_noncurrent",
@@ -16812,7 +18210,13 @@
           "original_name_hints": [
             "Итого долгосрочные финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 20,
+            "start_char": 108,
+            "end_char": 113
+          }
         },
         "notes_note_debt_noncurrent__2025_12_31": {
           "item_id": "note_debt_noncurrent",
@@ -16836,7 +18240,13 @@
           "original_name_hints": [
             "Итого долгосрочные финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 20,
+            "start_char": 141,
+            "end_char": 144
+          }
         },
         "notes_note_short_bank1_mvid__2026_06_30": {
           "item_id": "note_short_bank1_mvid",
@@ -16860,7 +18270,13 @@
           "original_name_hints": [
             "Банк 1"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 24,
+            "start_char": 111,
+            "end_char": 116
+          }
         },
         "notes_note_short_bank1_mvid__2025_12_31": {
           "item_id": "note_short_bank1_mvid",
@@ -16884,7 +18300,13 @@
           "original_name_hints": [
             "Банк 1"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 24,
+            "start_char": 139,
+            "end_char": 144
+          }
         },
         "notes_note_short_bank2_mvid__2026_06_30": {
           "item_id": "note_short_bank2_mvid",
@@ -16908,7 +18330,13 @@
           "original_name_hints": [
             "Банк 2"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 26,
+            "start_char": 113,
+            "end_char": 118
+          }
         },
         "notes_note_short_bank2_mvid__2025_12_31": {
           "item_id": "note_short_bank2_mvid",
@@ -16932,7 +18360,13 @@
           "original_name_hints": [
             "Банк 2"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 26,
+            "start_char": 141,
+            "end_char": 146
+          }
         },
         "notes_note_short_bank3_mvid__2026_06_30": {
           "item_id": "note_short_bank3_mvid",
@@ -16956,7 +18390,13 @@
           "original_name_hints": [
             "Банк 3"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 27,
+            "start_char": 109,
+            "end_char": 113
+          }
         },
         "notes_note_short_bank3_mvid__2025_12_31": {
           "item_id": "note_short_bank3_mvid",
@@ -16980,7 +18420,13 @@
           "original_name_hints": [
             "Банк 3"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 27,
+            "start_char": 137,
+            "end_char": 141
+          }
         },
         "notes_note_short_bank4_mvid__2026_06_30": {
           "item_id": "note_short_bank4_mvid",
@@ -17004,7 +18450,13 @@
           "original_name_hints": [
             "Банк 4"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 28,
+            "start_char": 113,
+            "end_char": 118
+          }
         },
         "notes_note_short_bank4_mvid__2025_12_31": {
           "item_id": "note_short_bank4_mvid",
@@ -17028,7 +18480,13 @@
           "original_name_hints": [
             "Банк 4"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 28,
+            "start_char": 142,
+            "end_char": 147
+          }
         },
         "notes_note_short_bank6_mvid__2026_06_30": {
           "item_id": "note_short_bank6_mvid",
@@ -17052,7 +18510,13 @@
           "original_name_hints": [
             "Банк 6"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 29,
+            "start_char": 119,
+            "end_char": 123
+          }
         },
         "notes_note_short_bank6_mvid__2025_12_31": {
           "item_id": "note_short_bank6_mvid",
@@ -17076,7 +18540,13 @@
           "original_name_hints": [
             "Банк 6"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 29,
+            "start_char": 150,
+            "end_char": 154
+          }
         },
         "notes_note_bank_loans_current_total__2026_06_30": {
           "item_id": "note_bank_loans_current_total",
@@ -17100,7 +18570,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 30,
+            "start_char": 1,
+            "end_char": 7
+          }
         },
         "notes_note_bank_loans_current_total__2025_12_31": {
           "item_id": "note_bank_loans_current_total",
@@ -17124,7 +18600,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 30,
+            "start_char": 31,
+            "end_char": 37
+          }
         },
         "notes_note_short_sfi_loan__2026_06_30": {
           "item_id": "note_short_sfi_loan",
@@ -17148,7 +18630,13 @@
           "original_name_hints": [
             "ПАО \"ЭСЭФАЙ\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 32,
+            "start_char": 108,
+            "end_char": 111
+          }
         },
         "notes_note_short_sfi_loan__2025_12_31": {
           "item_id": "note_short_sfi_loan",
@@ -17172,7 +18660,13 @@
           "original_name_hints": [
             "ПАО \"ЭСЭФАЙ\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 32,
+            "start_char": 137,
+            "end_char": 139
+          }
         },
         "notes_note_short_sfi_capital_loan__2026_06_30": {
           "item_id": "note_short_sfi_capital_loan",
@@ -17196,7 +18690,13 @@
           "original_name_hints": [
             "ООО \"ЭсЭфАй КЭПИТАЛ\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 33,
+            "start_char": 86,
+            "end_char": 88
+          }
         },
         "notes_note_short_sfi_capital_loan__2025_12_31": {
           "item_id": "note_short_sfi_capital_loan",
@@ -17220,7 +18720,13 @@
           "original_name_hints": [
             "ООО \"ЭсЭфАй КЭПИТАЛ\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 33,
+            "start_char": 109,
+            "end_char": 110
+          }
         },
         "notes_note_short_lenbury_loan__2026_06_30": {
           "item_id": "note_short_lenbury_loan",
@@ -17244,7 +18750,13 @@
           "original_name_hints": [
             "ООО \"Лэнбури\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 34,
+            "start_char": 116,
+            "end_char": 117
+          }
         },
         "notes_note_short_lenbury_loan__2025_12_31": {
           "item_id": "note_short_lenbury_loan",
@@ -17268,7 +18780,13 @@
           "original_name_hints": [
             "ООО \"Лэнбури\""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 34,
+            "start_char": 146,
+            "end_char": 147
+          }
         },
         "notes_note_short_grand_loan__2026_06_30": {
           "item_id": "note_short_grand_loan",
@@ -17313,7 +18831,13 @@
           "original_name_hints": [
             "ООО «ГРАНД СМВ»"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 35,
+            "start_char": 151,
+            "end_char": 156
+          }
         },
         "notes_note_short_afinans_loan__2026_06_30": {
           "item_id": "note_short_afinans_loan",
@@ -17358,7 +18882,13 @@
           "original_name_hints": [
             "OOO «А-ФИНАНС ПРОЕКТ»"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 36,
+            "start_char": 131,
+            "end_char": 135
+          }
         },
         "notes_note_short_loans_total_mvid__2026_06_30": {
           "item_id": "note_short_loans_total_mvid",
@@ -17382,7 +18912,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 37,
+            "start_char": 1,
+            "end_char": 4
+          }
         },
         "notes_note_short_loans_total_mvid__2025_12_31": {
           "item_id": "note_short_loans_total_mvid",
@@ -17406,7 +18942,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 37,
+            "start_char": 28,
+            "end_char": 33
+          }
         },
         "notes_note_short_bonds_mvid__2026_06_30": {
           "item_id": "note_short_bonds_mvid",
@@ -17430,7 +18972,13 @@
           "original_name_hints": [
             "Выпущенные облигации"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 40,
+            "start_char": 106,
+            "end_char": 110
+          }
         },
         "notes_note_short_bonds_mvid__2025_12_31": {
           "item_id": "note_short_bonds_mvid",
@@ -17454,7 +19002,13 @@
           "original_name_hints": [
             "Выпущенные облигации"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 40,
+            "start_char": 135,
+            "end_char": 139
+          }
         },
         "notes_note_bonds_current_total__2026_06_30": {
           "item_id": "note_bonds_current_total",
@@ -17478,7 +19032,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 41,
+            "start_char": 1,
+            "end_char": 5
+          }
         },
         "notes_note_bonds_current_total__2025_12_31": {
           "item_id": "note_bonds_current_total",
@@ -17502,7 +19062,13 @@
           "original_name_hints": [
             ""
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 41,
+            "start_char": 32,
+            "end_char": 36
+          }
         },
         "notes_note_debt_current__2026_06_30": {
           "item_id": "note_debt_current",
@@ -17526,7 +19092,13 @@
           "original_name_hints": [
             "Итого краткосрочные кредиты и кредитные линии, займы и прочие финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 44,
+            "start_char": 124,
+            "end_char": 130
+          }
         },
         "notes_note_debt_current__2025_12_31": {
           "item_id": "note_debt_current",
@@ -17550,7 +19122,13 @@
           "original_name_hints": [
             "Итого краткосрочные кредиты и кредитные линии, займы и прочие финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 44,
+            "start_char": 154,
+            "end_char": 160
+          }
         },
         "notes_note_debt_total__2026_06_30": {
           "item_id": "note_debt_total",
@@ -17574,7 +19152,13 @@
           "original_name_hints": [
             "Итого кредиты, кредитные линии и прочие финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 46,
+            "start_char": 111,
+            "end_char": 117
+          }
         },
         "notes_note_debt_total__2025_12_31": {
           "item_id": "note_debt_total",
@@ -17598,7 +19182,13 @@
           "original_name_hints": [
             "Итого кредиты, кредитные линии и прочие финансовые обязательства"
           ],
-          "owner_column": "Балансовая стоимость на дату; не срок погашения"
+          "owner_column": "Балансовая стоимость на дату; не срок погашения",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 46,
+            "start_char": 140,
+            "end_char": 146
+          }
         },
         "notes_rou_asset_opening__2025_12_31": {
           "item_id": "rou_asset_opening",
@@ -17622,7 +19212,13 @@
           "original_name_hints": [
             "На 1 января"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 12,
+            "start_char": 109,
+            "end_char": 114
+          }
         },
         "notes_rou_asset_opening__2024_12_31": {
           "item_id": "rou_asset_opening",
@@ -17646,7 +19242,13 @@
           "original_name_hints": [
             "На 1 января"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 24,
+            "start_char": 110,
+            "end_char": 115
+          }
         },
         "notes_rou_asset_new_contracts__2026_06_30": {
           "item_id": "rou_asset_new_contracts",
@@ -17670,7 +19272,13 @@
           "original_name_hints": [
             "Заключение новых договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 13,
+            "start_char": 104,
+            "end_char": 106
+          }
         },
         "notes_rou_asset_new_contracts__2025_06_30": {
           "item_id": "rou_asset_new_contracts",
@@ -17694,7 +19302,13 @@
           "original_name_hints": [
             "Заключение новых договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 25,
+            "start_char": 106,
+            "end_char": 108
+          }
         },
         "notes_rou_asset_modifications__2026_06_30": {
           "item_id": "rou_asset_modifications",
@@ -17718,7 +19332,13 @@
           "original_name_hints": [
             "Модификация договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 14,
+            "start_char": 105,
+            "end_char": 108
+          }
         },
         "notes_rou_asset_modifications__2025_06_30": {
           "item_id": "rou_asset_modifications",
@@ -17742,7 +19362,13 @@
           "original_name_hints": [
             "Модификация договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 26,
+            "start_char": 109,
+            "end_char": 111
+          }
         },
         "notes_rou_asset_da_movement__2026_06_30": {
           "item_id": "rou_asset_da_movement",
@@ -17766,7 +19392,13 @@
           "original_name_hints": [
             "Расходы по амортизации"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 15,
+            "start_char": 116,
+            "end_char": 122
+          }
         },
         "notes_rou_asset_da_movement__2025_06_30": {
           "item_id": "rou_asset_da_movement",
@@ -17790,7 +19422,13 @@
           "original_name_hints": [
             "Расходы по амортизации"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 27,
+            "start_char": 110,
+            "end_char": 116
+          }
         },
         "notes_rou_asset_disposals__2026_06_30": {
           "item_id": "rou_asset_disposals",
@@ -17814,7 +19452,13 @@
           "original_name_hints": [
             "Выбытия договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 16,
+            "start_char": 104,
+            "end_char": 110
+          }
         },
         "notes_rou_asset_disposals__2025_06_30": {
           "item_id": "rou_asset_disposals",
@@ -17838,7 +19482,13 @@
           "original_name_hints": [
             "Выбытия договоров аренды"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 28,
+            "start_char": 108,
+            "end_char": 113
+          }
         },
         "notes_rou_asset_fx_mvid__2026_06_30": {
           "item_id": "rou_asset_fx_mvid",
@@ -17988,7 +19638,13 @@
           "original_name_hints": [
             "На 30 июня"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 20,
+            "start_char": 113,
+            "end_char": 118
+          }
         },
         "notes_rou_asset_closing__2025_06_30": {
           "item_id": "rou_asset_closing",
@@ -18012,7 +19668,13 @@
           "original_name_hints": [
             "На 30 июня"
           ],
-          "owner_column": "Активы в форме права пользования"
+          "owner_column": "Активы в форме права пользования",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 32,
+            "start_char": 111,
+            "end_char": 116
+          }
         },
         "notes_note_lease_signed_opening__2025_12_31": {
           "item_id": "note_lease_signed_opening",
@@ -18036,7 +19698,13 @@
           "original_name_hints": [
             "На 1 января"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 12,
+            "start_char": 135,
+            "end_char": 142
+          }
         },
         "notes_note_lease_signed_opening__2024_12_31": {
           "item_id": "note_lease_signed_opening",
@@ -18060,7 +19728,13 @@
           "original_name_hints": [
             "На 1 января"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 24,
+            "start_char": 136,
+            "end_char": 143
+          }
         },
         "notes_note_lease_new_contracts_signed__2026_06_30": {
           "item_id": "note_lease_new_contracts_signed",
@@ -18084,7 +19758,13 @@
           "original_name_hints": [
             "Заключение новых договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 13,
+            "start_char": 131,
+            "end_char": 135
+          }
         },
         "notes_note_lease_new_contracts_signed__2025_06_30": {
           "item_id": "note_lease_new_contracts_signed",
@@ -18108,7 +19788,13 @@
           "original_name_hints": [
             "Заключение новых договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 25,
+            "start_char": 133,
+            "end_char": 137
+          }
         },
         "notes_note_lease_modifications_signed__2026_06_30": {
           "item_id": "note_lease_modifications_signed",
@@ -18132,7 +19818,13 @@
           "original_name_hints": [
             "Модификация договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 14,
+            "start_char": 131,
+            "end_char": 137
+          }
         },
         "notes_note_lease_modifications_signed__2025_06_30": {
           "item_id": "note_lease_modifications_signed",
@@ -18156,7 +19848,13 @@
           "original_name_hints": [
             "Модификация договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 26,
+            "start_char": 137,
+            "end_char": 141
+          }
         },
         "notes_note_lease_da_signed__2026_06_30": {
           "item_id": "note_lease_da_signed",
@@ -18222,7 +19920,13 @@
           "original_name_hints": [
             "Выбытия договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 16,
+            "start_char": 135,
+            "end_char": 138
+          }
         },
         "notes_note_lease_disposals_signed__2025_06_30": {
           "item_id": "note_lease_disposals_signed",
@@ -18246,7 +19950,13 @@
           "original_name_hints": [
             "Выбытия договоров аренды"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 28,
+            "start_char": 138,
+            "end_char": 142
+          }
         },
         "notes_note_lease_fx_signed__2026_06_30": {
           "item_id": "note_lease_fx_signed",
@@ -18270,7 +19980,13 @@
           "original_name_hints": [
             "Курсовые разницы"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 17,
+            "start_char": 149,
+            "end_char": 151
+          }
         },
         "notes_note_lease_fx_signed__2025_06_30": {
           "item_id": "note_lease_fx_signed",
@@ -18294,7 +20010,13 @@
           "original_name_hints": [
             "Курсовые разницы"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 29,
+            "start_char": 140,
+            "end_char": 142
+          }
         },
         "notes_note_lease_interest_signed__2026_06_30": {
           "item_id": "note_lease_interest_signed",
@@ -18318,7 +20040,13 @@
           "original_name_hints": [
             "Процентные расходы по обязательствам по аренде"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 18,
+            "start_char": 122,
+            "end_char": 128
+          }
         },
         "notes_note_lease_interest_signed__2025_06_30": {
           "item_id": "note_lease_interest_signed",
@@ -18342,7 +20070,13 @@
           "original_name_hints": [
             "Процентные расходы по обязательствам по аренде"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 30,
+            "start_char": 125,
+            "end_char": 131
+          }
         },
         "notes_note_lease_payments_signed__2026_06_30": {
           "item_id": "note_lease_payments_signed",
@@ -18366,7 +20100,13 @@
           "original_name_hints": [
             "Арендные платежи за период"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 19,
+            "start_char": 130,
+            "end_char": 134
+          }
         },
         "notes_note_lease_payments_signed__2025_06_30": {
           "item_id": "note_lease_payments_signed",
@@ -18390,7 +20130,13 @@
           "original_name_hints": [
             "Арендные платежи за период"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonnegative",
+          "value_column": {
+            "line": 31,
+            "start_char": 131,
+            "end_char": 136
+          }
         },
         "notes_note_lease_signed_closing__2026_06_30": {
           "item_id": "note_lease_signed_closing",
@@ -18414,7 +20160,13 @@
           "original_name_hints": [
             "На 30 июня"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 20,
+            "start_char": 140,
+            "end_char": 147
+          }
         },
         "notes_note_lease_signed_closing__2025_06_30": {
           "item_id": "note_lease_signed_closing",
@@ -18438,7 +20190,13 @@
           "original_name_hints": [
             "На 30 июня"
           ],
-          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)"
+          "owner_column": "Обязательства по аренде (исходные отрицательные остатки)",
+          "raw_sign": "nonpositive",
+          "value_column": {
+            "line": 32,
+            "start_char": 137,
+            "end_char": 144
+          }
         },
         "notes_note_interest_income_total__2026_06_30": {
           "item_id": "note_interest_income_total",
@@ -18461,7 +20219,14 @@
           },
           "original_name_hints": [
             "Процентные доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 15,
+            "start_char": 136,
+            "end_char": 138
+          }
         },
         "notes_note_interest_income_total__2025_06_30": {
           "item_id": "note_interest_income_total",
@@ -18484,7 +20249,14 @@
           },
           "original_name_hints": [
             "Процентные доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 15,
+            "start_char": 172,
+            "end_char": 174
+          }
         },
         "notes_note_finance_fx_income_lease__2026_06_30": {
           "item_id": "note_finance_fx_income_lease",
@@ -18527,7 +20299,14 @@
           },
           "original_name_hints": [
             "Курсовые разницы по финансовым обязательствам (аренда)"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 16,
+            "start_char": 125,
+            "end_char": 127
+          }
         },
         "notes_note_finance_income__2026_06_30": {
           "item_id": "note_finance_income",
@@ -18550,7 +20329,14 @@
           },
           "original_name_hints": [
             "Итого финансовые доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 125,
+            "end_char": 127
+          }
         },
         "notes_note_finance_income__2025_06_30": {
           "item_id": "note_finance_income",
@@ -18573,7 +20359,14 @@
           },
           "original_name_hints": [
             "Итого финансовые доходы"
-          ]
+          ],
+          "raw_sign": "nonnegative",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 17,
+            "start_char": 159,
+            "end_char": 161
+          }
         },
         "notes_note_interest_borrowings__2026_06_30": {
           "item_id": "note_interest_borrowings",
@@ -18596,7 +20389,14 @@
           },
           "original_name_hints": [
             "Процентный расход по кредитам, облигациям, займам и факторингу"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 88,
+            "end_char": 95
+          }
         },
         "notes_note_interest_borrowings__2025_06_30": {
           "item_id": "note_interest_borrowings",
@@ -18619,7 +20419,14 @@
           },
           "original_name_hints": [
             "Процентный расход по кредитам, облигациям, займам и факторингу"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 18,
+            "start_char": 117,
+            "end_char": 124
+          }
         },
         "notes_note_interest_leases__2026_06_30": {
           "item_id": "note_interest_leases",
@@ -18642,7 +20449,14 @@
           },
           "original_name_hints": [
             "Процентные расходы по аренде"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 100,
+            "end_char": 106
+          }
         },
         "notes_note_interest_leases__2025_06_30": {
           "item_id": "note_interest_leases",
@@ -18665,7 +20479,14 @@
           },
           "original_name_hints": [
             "Процентные расходы по аренде"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 19,
+            "start_char": 128,
+            "end_char": 134
+          }
         },
         "notes_note_finance_fx_expense_lease__2026_06_30": {
           "item_id": "note_finance_fx_expense_lease",
@@ -18688,7 +20509,14 @@
           },
           "original_name_hints": [
             "Курсовые разницы по финансовым обязательствам (аренда)"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 20,
+            "start_char": 95,
+            "end_char": 97
+          }
         },
         "notes_note_finance_fx_expense_lease__2025_06_30": {
           "item_id": "note_finance_fx_expense_lease",
@@ -18731,7 +20559,14 @@
           },
           "original_name_hints": [
             "Итого финансовые расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 106,
+            "end_char": 113
+          }
         },
         "notes_note_finance_expense_mvid__2025_06_30": {
           "item_id": "note_finance_expense_mvid",
@@ -18754,7 +20589,14 @@
           },
           "original_name_hints": [
             "Итого финансовые расходы"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 21,
+            "start_char": 135,
+            "end_char": 142
+          }
         },
         "notes_note_net_finance_expense__2026_06_30": {
           "item_id": "note_net_finance_expense",
@@ -18777,7 +20619,14 @@
           },
           "original_name_hints": [
             "Итого финансовые расходы, нетто"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2026: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 101,
+            "end_char": 108
+          }
         },
         "notes_note_net_finance_expense__2025_06_30": {
           "item_id": "note_net_finance_expense",
@@ -18800,7 +20649,14 @@
           },
           "original_name_hints": [
             "Итого финансовые расходы, нетто"
-          ]
+          ],
+          "raw_sign": "nonpositive",
+          "owner_column": "2025: exact source year column, never adjacent row or year",
+          "value_column": {
+            "line": 22,
+            "start_char": 130,
+            "end_char": 137
+          }
         }
       },
       "complete_blocks": {
@@ -23260,7 +25116,9 @@
             }
           ]
         }
-      ]
+      ],
+      "column_address_review": "Literal coordinates of independent visual transcriptions, with reviewed current/prior columns and ROU/liability measures; no monetary constants in runtime map.",
+      "unit": "млн руб."
     }
   ]
 }

@@ -1,4 +1,5 @@
 name: Проверка эталона МСФО
+run-name: МСФО ${{ inputs.case_id }}
 on:
   workflow_dispatch:
     inputs:
@@ -17,6 +18,10 @@ on:
         type: boolean
         required: false
         default: false
+      responses_archive_run_id:
+        description: Необязательный прежний ifrs-case-check для полной повторной проверки ответов; это смешанная приёмка, не полностью свежий прогон
+        required: false
+        default: ''
 concurrency:
   group: ${{ inputs.prepare_text_only && 'ifrs-source-preparation' || 'gigachat-provider' }}
   cancel-in-progress: false
@@ -55,6 +60,14 @@ jobs:
           path: validation/archive-mts
           github-token: ${{ github.token }}
           run-id: '45946586525'
+      - name: Прежние ответы для повторной проверки
+        if: inputs.responses_archive_run_id != '' && inputs.case_id != 'all_segments'
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-case-check
+          path: validation/response-archive
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.responses_archive_run_id }}
       - name: Закреплённый PDF Сегежи для сегментов
         if: inputs.case_id == 'all_segments'
         uses: actions/download-artifact@v4
@@ -76,6 +89,7 @@ jobs:
           fi
           archive_args=()
           if [ -d validation/source-archive ]; then archive_args=(--source-archive validation/source-archive); fi
+          if [ -d validation/response-archive ]; then archive_args+=(--reuse-from validation/response-archive); fi
           if [ '${{ inputs.prepare_text_only }}' = true ]; then archive_args+=(--prepare-text-only); fi
           python -m agent.tools.check_ifrs_case --case '${{ inputs.case_id }}' \
             --output validation/ifrs-case "${archive_args[@]}"

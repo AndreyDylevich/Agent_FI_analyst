@@ -25,10 +25,13 @@ def apply_reviewed_ocr_punctuation(pdf: PDFText, catalog: dict | None = None) ->
             or not profile.get('reason', '').strip()):
         raise ValueError('Исправление OCR требует визуального подтверждения')
     pages = {p.number: p for p in pdf.pages}
-    changed, audit = {}, []
+    changed, audit, unavailable = {}, [], []
     for address, review in profile['pages'].items():
         number = int(address)
         source = pages.get(number)
+        if source is not None and source.method == 'unreadable':
+            unavailable.append(number)
+            continue
         if source is None or source.method != 'ocr':
             raise ValueError('Нет исходной OCR-страницы')
         original_hash = hashlib.sha256(source.text.encode()).hexdigest()
@@ -67,4 +70,5 @@ def apply_reviewed_ocr_punctuation(pdf: PDFText, catalog: dict | None = None) ->
     return replace(pdf, pages=tuple(changed.get(p.number,p) for p in pdf.pages),
                    processing={**pdf.processing, 'visual_ocr_punctuation':{
                        'reviewer':profile['reviewer'],'profile_sha256':digest,'pages':audit,
+                       'unavailable_pages':unavailable,
                        'source_pdf_modified':False,'financial_values_approved':False}})

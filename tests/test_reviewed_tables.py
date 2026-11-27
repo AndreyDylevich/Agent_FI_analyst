@@ -101,3 +101,17 @@ def test_ocr_structure_requires_review_and_never_grants_financial_approval():
  with pytest.raises(ValueError,match='OCR'):compile_reviewed_tables(pdf,PERIOD,catalog)
  catalog['documents'][0]['ocr_structure_reviewed']=True
  assert compile_reviewed_tables(pdf,PERIOD,catalog).basis['source_structure_reviewed']
+
+
+def test_column_alignment_changes_only_thousand_spaces_not_digits_or_sign():
+ from agent.checks.reviewed_tables import validate_reviewed_columns
+ from tests.test_ifrs_statements import source
+ pdf,catalog=inputs();profile=catalog['documents'][0]
+ text='Проверка\nНачало 100\nДвижение 3 000 3000\nКонец 120'
+ pdf=replace(pdf,pages=(Page(2,text),));profile['page_text_sha256']['2']=hashlib.sha256(text.encode()).hexdigest()
+ profile['observations']['movement']['value_column']={'line':3,'start_char':16,'end_char':19}
+ review=compile_reviewed_tables(pdf,PERIOD,catalog)
+ f=replace(source('cf_other_cash_changes','3000','2026-01-01','2026-06-30','cash_flow'),raw_value='3 000')
+ aligned=validate_reviewed_columns((f,),review,pdf.pages)[0]
+ assert aligned.raw_value=='3000' and aligned.model_raw_value=='3 000' and aligned.value==f.value and aligned.normalized==f.normalized
+ with pytest.raises(ValueError):validate_reviewed_columns((replace(f,raw_value='(3 000)'),),review,pdf.pages)
