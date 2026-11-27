@@ -213,6 +213,8 @@ def validate_financials(facts: tuple[ExtractedFact, ...], *, equity_plans: tuple
                 proof = binding['evidence']
                 for i in indices:
                     evidence = facts[i].evidence
+                    if binding.get('raw_sign') == 'nonnegative' and facts[i].value < 0:
+                        raise ValueError('Нужна положительная вложенная сумма капитализированных процентов, не отрицательная сумма приобретения ОС/НМА')
                     if (facts[i].cash_flow_section != binding['cash_flow_section'] or evidence.page != proof['page']
                             or evidence.start_line is None or evidence.end_line is None
                             or evidence.start_line < proof['start_line'] or evidence.end_line > proof['end_line']):

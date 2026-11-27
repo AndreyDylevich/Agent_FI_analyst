@@ -140,3 +140,11 @@ def test_missing_income_source_is_visible_even_when_cash_flow_has_same_amount(tm
   line_items=selected,sections=('income','cash_flow','interest','leases'),output=tmp_path/'out',compact=True)
  assert run.requested_observations_count==52 and len(run.facts)==51
  assert run.missing_observations==({'item_id':'d_and_a','period_start':'2025-01-01','period_end':'2025-06-30','statement':'income'},)
+
+
+def test_acquisition_total_cannot_replace_embedded_capitalized_interest():
+ pdf,_,extraction=inputs();facts=list(extraction.facts)
+ n=next(i for i,f in enumerate(facts) if f.item_id=='cf_capitalized_interest_ppe')
+ facts[n]=replace(facts[n],value=Decimal('-35052'),normalized=Decimal('-35052000000'),raw_value='(35,052)')
+ with pytest.raises(ValueError,match='вложенная сумма'):
+  validate_financials(tuple(facts),source_review=compile_source_links(pdf,PERIOD))

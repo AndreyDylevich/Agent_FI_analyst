@@ -7,7 +7,7 @@ from pathlib import Path
 
 from agent import config
 from agent.extract.pdf_text import PDFText
-from agent.extract.schemas import citation
+from agent.extract.schemas import citation, normalized_text
 from agent.metrics.engine import Period
 
 CATALOG = Path(__file__).resolve().parents[2] / 'config/ifrs_source_links.json'
@@ -67,6 +67,13 @@ def compile_source_links(pdf: PDFText, period: Period, catalog: dict | None = No
         if binding['cash_flow_section'] != expected_section:
             raise ValueError('Неверный раздел ОДДС проверенной связи')
         proof = citation(binding['evidence'], pages)
+        if 'raw_sign' in binding and (binding['raw_sign'] != 'nonnegative' or not alias.startswith('cf_capitalized_interest_')):
+            raise ValueError('Неизвестное ограничение знака вложенной суммы')
+        if 'original_name_hints' in binding and (not binding['original_name_hints'] or any(
+                not isinstance(name, str) or not name.strip()
+                or normalized_text(name).casefold() not in normalized_text(proof.quote).casefold()
+                for name in binding['original_name_hints'])):
+            raise ValueError('Подсказка подписи отсутствует в исходной строке')
         if pages[proof.page].method != 'native':
             raise ValueError('Проверенные связи требуют нативного текста; OCR принимается отдельно')
     for field in ('income_scope', 'cash_flow_scope'):

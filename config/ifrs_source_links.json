@@ -79,7 +79,11 @@
             "start_line": 51,
             "end_line": 52
           },
-          "cash_flow_section": "investing"
+          "cash_flow_section": "investing",
+          "original_name_hints": [
+            "капитализированные проценты"
+          ],
+          "raw_sign": "nonnegative"
         },
         "cf_capitalized_interest_intangibles": {
           "item_id": "cf_capitalized_interest_intangibles",
@@ -89,7 +93,11 @@
             "start_line": 53,
             "end_line": 55
           },
-          "cash_flow_section": "investing"
+          "cash_flow_section": "investing",
+          "original_name_hints": [
+            "капитализированные проценты"
+          ],
+          "raw_sign": "nonnegative"
         },
         "note_interest_borrowings": {
           "item_id": "note_interest_borrowings",
