@@ -584,7 +584,12 @@ def extract_pdf(pdf: PDFText, provider: ExtractionProvider, *, ticker: str, enti
                         ', '.join(f'{item}@{end}/{form}' for item,_,end,form in missing[:20])+
                         (f'; ещё {len(missing)-20}' if len(missing)>20 else ''))
     checks, statuses = validate_financials(all_facts,equity_plans=equity_plans,cash_plans=cash_plans,debt_plans=debt_plans,source_review=source_review,reviewed_document=reviewed_document)
+    processing={**pdf.processing}
+    if reviewed_document:
+        # A source-address profile may deliberately have no arithmetic identity.
+        # Preserve its digest even then; a successful extraction is not approval.
+        processing['reviewed_source_structure']=reviewed_document.basis
     return ExtractionRun(pdf.sha256, tuple(batches), tuple(contexts), all_facts, checks, statuses,
-                         tuple(dict.fromkeys(warnings)),pdf.processing,len(requested),
+                         tuple(dict.fromkeys(warnings)),processing,len(requested),
                          tuple({'item_id':item,'period_start':start,'period_end':end,'statement':form} for item,start,end,form in missing),
                          tuple(source_review.gaps if source_review else ()) + tuple(reviewed_document.gaps if reviewed_document else ()))

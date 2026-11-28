@@ -29,6 +29,9 @@ INCOME_CASH_ITEMS=('revenue','operating_profit','net_profit','profit_before_tax'
                    'cf_cash_opening','cf_cash_closing_gross','cf_cash_change','cf_cash_change_before_fx',
                    'cf_fx_effect','cf_starting_net_profit','cf_starting_operating_profit','cf_starting_profit_before_tax')
 CORE_FLOW_ITEMS=('revenue','net_profit','cfo','cfi','cff')
+FINANCING_ITEMS=('cash_and_equivalents','debt_long_term','debt_short_term',
+                 'lease_liabilities_long','lease_liabilities_short','right_of_use_assets')
+FINANCING_CATALOG=Path(__file__).resolve().parents[2]/'config/ifrs_history_financing_tables.json'
 
 
 def main(argv=None):
@@ -46,13 +49,16 @@ def main(argv=None):
     parser.add_argument('--reuse-from',type=Path,action='append')
     parser.add_argument('--cached-only',action='store_true')
     parser.add_argument('--archive',type=Path,help='Уже скачанный архив с pdf/<sha256>.pdf; файл обязательно сверяется')
-    parser.add_argument('--forms-profile',choices=['balance','income_cash'])
+    parser.add_argument('--forms-profile',choices=['balance','income_cash','balance_financing'])
     parser.add_argument('--prepare-text-only',action='store_true')
     args=parser.parse_args(argv)
     if args.forms_profile=='income_cash':
         if args.item or args.sections!=['balance']:parser.error('Профиль форм нельзя смешивать с --item/--sections')
         args.sections=['income','cash_flow'];args.item=list(INCOME_CASH_ITEMS)
         if args.ocr and args.max_ocr_pages==12:args.max_ocr_pages=20
+    elif args.forms_profile=='balance_financing':
+        if args.item or args.sections!=['balance']:parser.error('Профиль форм нельзя смешивать с --item/--sections')
+        args.item=list(FINANCING_ITEMS)
     if args.db.resolve()==db.DB_PATH.resolve():parser.error('Для первичной истории нужна отдельная проверочная БД')
     if args.output.exists() and any(args.output.iterdir()):parser.error('Нужен новый/пустой каталог ответов')
     if args.cached_only and not args.reuse_from:parser.error('--cached-only требует --reuse-from')
@@ -95,14 +101,14 @@ def main(argv=None):
             entity_token=company.get('document_identity_token',company['legal_name']),line_items=config.line_items())
         if not context:raise ValueError('Контекст компании/МСФО/группы/RUB/периода не подтверждён')
         report.update(pdf_sha256=pdf.sha256,source_context=context)
-        if args.forms_profile=='income_cash' and not args.prepare_text_only:
+        if args.forms_profile in ('income_cash','balance_financing') and not args.prepare_text_only:
             if args.ocr:pdf=apply_reviewed_ocr_punctuation(pdf)
-            reviewed=compile_reviewed_tables(pdf,period)
+            reviewed=compile_reviewed_tables(pdf,period,json.loads(FINANCING_CATALOG.read_text())) if args.forms_profile=='balance_financing' else compile_reviewed_tables(pdf,period)
             if reviewed is None:
-                raise ValueError('Для годовых ОПУ/ОДДС нужна отдельно просмотренная структура точной версии PDF')
+                raise ValueError('Для выбранного исторического профиля нужна просмотренная структура точной версии PDF')
             args.item=sorted({o['item_id'] for o in reviewed.observations.values() if o['statement'] in args.sections})
-            if not set(CORE_FLOW_ITEMS)<=set(args.item):
-                raise ValueError('Просмотренный профиль не содержит обязательных исходных потоков')
+            if not set(FINANCING_ITEMS if args.forms_profile=='balance_financing' else CORE_FLOW_ITEMS)<=set(args.item):
+                raise ValueError('Просмотренный профиль не содержит обязательных исходных статей')
             report['reviewed_structure_basis']=reviewed.basis
         if args.prepare_text_only:
             (args.output/'pages.json').write_text(json.dumps(asdict(pdf),ensure_ascii=False,indent=2)+'\n')
@@ -115,6 +121,7 @@ def main(argv=None):
                  '--source-url',entry['source_url'],'--db',str(args.db),'--output',str(args.output/'extraction'),
                  '--sections',*args.sections,'--metric','current_ratio','--compact-contract']
         if args.forms_profile=='income_cash':command.append('--reviewed-tables')
+        elif args.forms_profile=='balance_financing':command.extend(['--reviewed-catalog',str(FINANCING_CATALOG)])
         for item in args.item or BALANCE_ITEMS:command.extend(['--item',item])
         if args.ocr:command.extend(['--ocr','--max-ocr-pages',str(args.max_ocr_pages),'--ocr-dpi',str(args.ocr_dpi)])
         for path in args.reuse_from or []:command.extend(['--reuse-from',str(path)])
@@ -139,6 +146,15 @@ def main(argv=None):
                       for item in CORE_FLOW_ITEMS for year in (args.year,args.year-1)
                       if (item,f'{year}-01-01',f'{year}-12-31') not in actual]
             report.update(missing_core_flow_observations=required,
+                          missing_requested_observations=extraction.get('missing_observations',[]),
+                          requested_observations_count=extraction.get('requested_observations_count'))
+            if required:report['ok']=False
+        elif args.forms_profile=='balance_financing':
+            actual={(f['item_id'],f.get('start'),f['end']) for f in extraction.get('facts',[])}
+            required=[{'item_id':o['item_id'],'period_start':o['period_start'],'period_end':o['period_end']}
+                      for o in reviewed.observations.values() if not o.get('source_absent')
+                      and (o['item_id'],o['period_start'],o['period_end']) not in actual]
+            report.update(missing_financing_observations=required,
                           missing_requested_observations=extraction.get('missing_observations',[]),
                           requested_observations_count=extraction.get('requested_observations_count'))
             if required:report['ok']=False

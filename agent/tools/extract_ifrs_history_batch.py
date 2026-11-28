@@ -14,7 +14,7 @@ from agent.tools.extract_ifrs_history import main as extract_one
 def run_batch(entries, output: Path, database: Path, *, archive: Path | None = None, runner=extract_one,
               forms_profile: str = 'balance', prepare_text_only: bool = False):
     if database.resolve()==db.DB_PATH.resolve():raise ValueError('Нужна отдельная проверочная БД истории')
-    if forms_profile not in ('balance','income_cash'):raise ValueError('Неизвестный профиль исторических форм')
+    if forms_profile not in ('balance','income_cash','balance_financing'):raise ValueError('Неизвестный профиль исторических форм')
     if output.exists() and any(output.iterdir()):raise ValueError('Нужен новый/пустой каталог истории')
     output.mkdir(parents=True,exist_ok=True)
     jobs=[]
@@ -62,7 +62,7 @@ def main(argv=None):
     parser.add_argument('--from-year',type=int,default=2021)
     parser.add_argument('--through-year',type=int,default=2025)
     parser.add_argument('--archive',type=Path)
-    parser.add_argument('--forms-profile',choices=['balance','income_cash'],default='balance')
+    parser.add_argument('--forms-profile',choices=['balance','income_cash','balance_financing'],default='balance')
     parser.add_argument('--prepare-text-only',action='store_true')
     parser.add_argument('--years',help='Явно выбранные годы через запятую из закреплённого манифеста')
     args=parser.parse_args(argv)

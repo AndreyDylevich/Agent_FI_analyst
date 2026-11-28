@@ -1,0 +1,269 @@
+{
+  "source_specific": true,
+  "ticker": "MVID",
+  "year": 2025,
+  "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+  "standard": "IFRS",
+  "scope": "group",
+  "unit": "млн руб.",
+  "multiplier": "1000000",
+  "rows": [
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "4737",
+      "normalized_value": "4737000000",
+      "raw_value": "4 737",
+      "original_name": "Денежные средства и их эквиваленты",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "cash_and_equivalents",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "22659",
+      "normalized_value": "22659000000",
+      "raw_value": "22 659",
+      "original_name": "Денежные средства и их эквиваленты",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 24,
+        "end_line": 24
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "2247",
+      "normalized_value": "2247000000",
+      "raw_value": "2247",
+      "original_name": "Кредиты и прочие финансовые обязательства",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "debt_long_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "3674",
+      "normalized_value": "3674000000",
+      "raw_value": "3 674",
+      "original_name": "Кредиты и прочие финансовые обязательства",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 37,
+        "end_line": 37
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "42121",
+      "normalized_value": "42121000000",
+      "raw_value": "42 121",
+      "original_name": "Обязательства по аренде",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "lease_liabilities_long",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "48283",
+      "normalized_value": "48283000000",
+      "raw_value": "48 283",
+      "original_name": "Обязательства по аренде",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 36,
+        "end_line": 36
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "150000",
+      "normalized_value": "150000000000",
+      "raw_value": "150 000",
+      "original_name": "Кредиты и прочие финансовые обязательства",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 43,
+        "end_line": 43
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "debt_short_term",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "104785",
+      "normalized_value": "104785000000",
+      "raw_value": "104 785",
+      "original_name": "Кредиты и прочие финансовые обязательства",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 43,
+        "end_line": 43
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "17114",
+      "normalized_value": "17114000000",
+      "raw_value": "17 114",
+      "original_name": "Обязательства по зренде",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "lease_liabilities_short",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "19299",
+      "normalized_value": "19299000000",
+      "raw_value": "19 299",
+      "original_name": "Обязательства по зренде",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 46,
+        "end_line": 46
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31",
+      "value": "42179",
+      "normalized_value": "42179000000",
+      "raw_value": "42 179",
+      "original_name": "Активы в форме права пользования",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2024-12-31",
+      "value": "50213",
+      "normalized_value": "50213000000",
+      "raw_value": "50 213",
+      "original_name": "Активы в форме права пользования",
+      "unit": "млн руб.",
+      "pages": [
+        8
+      ],
+      "evidence": {
+        "page": 8,
+        "start_line": 13,
+        "end_line": 13
+      },
+      "cash_flow_section": null,
+      "status": "не_проверено"
+    }
+  ],
+  "checks_required": [],
+  "method": "Независимая визуальная транскрипция исходного баланса; нет искусственного равенства ROU и обязательства по аренде. Банковские суммы МТС не включены в обычный кредитный долг.",
+  "financial_history_validated": false,
+  "comparability_approved": false
+}

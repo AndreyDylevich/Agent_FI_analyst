@@ -23,7 +23,7 @@ on:
       forms_profile:
         description: Выбранные формы
         type: choice
-        options: [balance, income_cash]
+        options: [balance, income_cash, balance_financing]
         default: balance
       years:
         description: Необязательный явный список закреплённых лет через запятую
@@ -107,6 +107,9 @@ jobs:
           if [ -n "$HISTORY_YEARS" ]; then year_args+=(--years "$HISTORY_YEARS"); fi
           if [ "$HISTORY_PROFILE" = income_cash ]; then
             python -m agent.tools.verify_ifrs_history_forms --ticker "$HISTORY_TICKER" \
+              --db validation/history/check.db --output validation/history/reference_check.json "${year_args[@]}"
+          elif [ "$HISTORY_PROFILE" = balance_financing ]; then
+            python -m agent.tools.verify_ifrs_financing_history --ticker "$HISTORY_TICKER" \
               --db validation/history/check.db --output validation/history/reference_check.json "${year_args[@]}"
           else
             python -m agent.tools.verify_ifrs_history --ticker "$HISTORY_TICKER" \

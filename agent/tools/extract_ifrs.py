@@ -46,6 +46,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--ocr-dpi',type=int,choices=[320,400],default=320)
     parser.add_argument('--reuse-from',type=Path,action='append',help='Артефакт прежнего прогона с pdf/ и extraction/; ответы проверяются заново')
     parser.add_argument('--reviewed-tables',action='store_true',help='Только отдельно просмотренная структура точного PDF/периода')
+    parser.add_argument('--reviewed-catalog',type=Path,help='Отдельный просмотренный каталог точных PDF/периодов; суммы не задаются этим файлом')
     parser.add_argument('--compact-contract',action='store_true',help='ИИ возвращает значения по фиксированным ключам статья/дата')
     parser.add_argument('--cached-only',action='store_true',help='Повторная проверка только сохранённых ответов, без ключа/API модели')
     args = parser.parse_args(argv)
@@ -71,8 +72,10 @@ def main(argv: list[str] | None = None) -> int:
             original_ocr = asdict(text)
             text = apply_reviewed_ocr_punctuation(text)
         report.update(pdf_sha256=text.sha256,text_processing=text.processing,pdf_warnings=text.warnings)
-        reviewed_catalog=json.loads(CATALOG.read_text()) if args.reviewed_tables else None
-        if args.reviewed_tables and compile_reviewed_tables(text,period,reviewed_catalog) is None:
+        if args.reviewed_tables and args.reviewed_catalog:
+            raise ValueError('Выберите один просмотренный каталог')
+        reviewed_catalog=json.loads((args.reviewed_catalog or CATALOG).read_text()) if (args.reviewed_tables or args.reviewed_catalog) else None
+        if reviewed_catalog is not None and compile_reviewed_tables(text,period,reviewed_catalog) is None:
             raise ValueError('Нет просмотренной структуры точной версии PDF/периода')
         manager=nullcontext(CachedOnlyProvider()) if args.cached_only else GigaChatProvider.from_env(args.certificate)
         with manager as provider:

@@ -1,0 +1,4984 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+      "report_start": "2021-01-01",
+      "report_end": "2021-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "comma_grouped_dot_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "11": "96925ec60d21bf348410b504a75f24186147a173bdd8d64922d6827bfc3c4756",
+        "12": "d27fc646b60e68ddc90c1e8c5bb61672ebc532547405bb7ec1b96210e0d42d54"
+      },
+      "observations": {
+        "cash_and_equivalents__2021_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 93,
+            "end_char": 98
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2020_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2021_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_long_term__2020_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_long__2021_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2020_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2021_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_short_term__2020_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_short__2021_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2020_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2021_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2020_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2021_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2020_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2021_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 93,
+            "end_char": 98
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2020_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2021_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 29,
+            "end_line": 29
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 29,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2020_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 29,
+            "end_line": 29
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 29,
+            "start_char": 115,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2021_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 45,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2020_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 45,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 11,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "cash_and_equivalents__2021_12_31",
+                "cash_and_equivalents__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 27,
+                "end_line": 27
+              },
+              "inputs": [
+                "debt_long_term__2021_12_31",
+                "debt_long_term__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 28,
+                "end_line": 28
+              },
+              "inputs": [
+                "lease_liabilities_long__2021_12_31",
+                "lease_liabilities_long__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "debt_short_term__2021_12_31",
+                "debt_short_term__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 44,
+                "end_line": 44
+              },
+              "inputs": [
+                "lease_liabilities_short__2021_12_31",
+                "lease_liabilities_short__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 16,
+                "end_line": 16
+              },
+              "inputs": [
+                "right_of_use_assets__2021_12_31",
+                "right_of_use_assets__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent": {
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "inputs": [
+                "balance_bank_loans_issued_noncurrent__2021_12_31",
+                "balance_bank_loans_issued_noncurrent__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_current": {
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 37,
+                "end_line": 37
+              },
+              "inputs": [
+                "balance_bank_loans_issued_current__2021_12_31",
+                "balance_bank_loans_issued_current__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_noncurrent": {
+          "evidence": {
+            "page": 12,
+            "start_line": 29,
+            "end_line": 29
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 29,
+                "end_line": 29
+              },
+              "inputs": [
+                "balance_bank_liabilities_noncurrent__2021_12_31",
+                "balance_bank_liabilities_noncurrent__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_current": {
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 45,
+                "end_line": 45
+              },
+              "inputs": [
+                "balance_bank_liabilities_current__2021_12_31",
+                "balance_bank_liabilities_current__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "comma_grouped_dot_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "11": "38f2dd53e9f298097c02b6d974ccdd6a2cc50fd024dbfecedbcbd7f458663536",
+        "12": "7d99e8f95a1df748ea6c545e4afbc52499a608cfd8e7bcfe1d82fef32877e9ae"
+      },
+      "observations": {
+        "cash_and_equivalents__2023_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2022_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2023_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_long_term__2022_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_long__2023_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 26,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2022_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 26,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2023_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_short_term__2022_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_short__2023_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2022_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2023_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2022_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2023_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2022_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 113,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2023_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 91,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2022_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 11,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 114,
+            "end_char": 119
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2023_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2022_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2023_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2022_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 11,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 42,
+                "end_line": 42
+              },
+              "inputs": [
+                "cash_and_equivalents__2023_12_31",
+                "cash_and_equivalents__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "inputs": [
+                "debt_long_term__2023_12_31",
+                "debt_long_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 12,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 26,
+                "end_line": 26
+              },
+              "inputs": [
+                "lease_liabilities_long__2023_12_31",
+                "lease_liabilities_long__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 41,
+                "end_line": 41
+              },
+              "inputs": [
+                "debt_short_term__2023_12_31",
+                "debt_short_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 12,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 42,
+                "end_line": 42
+              },
+              "inputs": [
+                "lease_liabilities_short__2023_12_31",
+                "lease_liabilities_short__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 11,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 16,
+                "end_line": 16
+              },
+              "inputs": [
+                "right_of_use_assets__2023_12_31",
+                "right_of_use_assets__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent": {
+          "evidence": {
+            "page": 11,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "inputs": [
+                "balance_bank_loans_issued_noncurrent__2023_12_31",
+                "balance_bank_loans_issued_noncurrent__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_current": {
+          "evidence": {
+            "page": 11,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 11,
+                "start_line": 37,
+                "end_line": 37
+              },
+              "inputs": [
+                "balance_bank_loans_issued_current__2023_12_31",
+                "balance_bank_loans_issued_current__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_noncurrent": {
+          "evidence": {
+            "page": 12,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 27,
+                "end_line": 27
+              },
+              "inputs": [
+                "balance_bank_liabilities_noncurrent__2023_12_31",
+                "balance_bank_liabilities_noncurrent__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_current": {
+          "evidence": {
+            "page": 12,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "balance_bank_liabilities_current__2023_12_31",
+                "balance_bank_liabilities_current__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "comma_grouped_dot_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "9": "fcea918747c3d80d149ae1a9269b7a5e1d6b23cdedcf22e0f312206b70dc4a75",
+        "10": "be5048894eade543dab445e3f20dccb604ead25b8c9d23c7bac38bc824a8173e"
+      },
+      "observations": {
+        "cash_and_equivalents__2025_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2024_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2025_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_long_term__2024_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_long__2025_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 26,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2024_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 26,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2025_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "debt_short_term__2024_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Долговые обязательства"
+          ]
+        },
+        "lease_liabilities_short__2025_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2024_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2025_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 92,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2024_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 16,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Актив в форме права пользования"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2025_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent__2024_12_31": {
+          "item_id": "balance_bank_loans_issued_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 25,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2025_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 36,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_loans_issued_current__2024_12_31": {
+          "item_id": "balance_bank_loans_issued_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 36,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и займы выданные"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2025_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 93,
+            "end_char": 97
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_noncurrent__2024_12_31": {
+          "item_id": "balance_bank_liabilities_noncurrent",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 113,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2025_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 90,
+            "end_char": 96
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        },
+        "balance_bank_liabilities_current__2024_12_31": {
+          "item_id": "balance_bank_liabilities_current",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 10,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 10,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 112,
+            "end_char": 118
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Банковские депозиты и обязательства"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 44,
+                "end_line": 44
+              },
+              "inputs": [
+                "cash_and_equivalents__2025_12_31",
+                "cash_and_equivalents__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 10,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "inputs": [
+                "debt_long_term__2025_12_31",
+                "debt_long_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 10,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 26,
+                "end_line": 26
+              },
+              "inputs": [
+                "lease_liabilities_long__2025_12_31",
+                "lease_liabilities_long__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 10,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 41,
+                "end_line": 41
+              },
+              "inputs": [
+                "debt_short_term__2025_12_31",
+                "debt_short_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 10,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 42,
+                "end_line": 42
+              },
+              "inputs": [
+                "lease_liabilities_short__2025_12_31",
+                "lease_liabilities_short__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 9,
+            "start_line": 16,
+            "end_line": 16
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 16,
+                "end_line": 16
+              },
+              "inputs": [
+                "right_of_use_assets__2025_12_31",
+                "right_of_use_assets__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_noncurrent": {
+          "evidence": {
+            "page": 9,
+            "start_line": 25,
+            "end_line": 25
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 25,
+                "end_line": 25
+              },
+              "inputs": [
+                "balance_bank_loans_issued_noncurrent__2025_12_31",
+                "balance_bank_loans_issued_noncurrent__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_loans_issued_current": {
+          "evidence": {
+            "page": 9,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 36,
+                "end_line": 36
+              },
+              "inputs": [
+                "balance_bank_loans_issued_current__2025_12_31",
+                "balance_bank_loans_issued_current__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_noncurrent": {
+          "evidence": {
+            "page": 10,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 27,
+                "end_line": 27
+              },
+              "inputs": [
+                "balance_bank_liabilities_noncurrent__2025_12_31",
+                "balance_bank_liabilities_noncurrent__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "balance_bank_liabilities_current": {
+          "evidence": {
+            "page": 10,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 10,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "balance_bank_liabilities_current__2025_12_31",
+                "balance_bank_liabilities_current__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "report_start": "2021-01-01",
+      "report_end": "2021-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "space_grouped_decimal",
+      "unit": "тыс. руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "12": "b2f856883cca272857c89b56a9d98de53527c762ea742e308e7153b0741ad9df"
+      },
+      "observations": {
+        "cash_and_equivalents__2021_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 91,
+            "end_char": 100
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и эквиваленты денежных средств"
+          ]
+        },
+        "cash_and_equivalents__2020_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 114,
+            "end_char": 122
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и эквиваленты денежных средств"
+          ]
+        },
+        "debt_long_term__2021_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 91,
+            "end_char": 100
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_long_term__2020_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 112,
+            "end_char": 121
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_long__2021_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 45,
+            "start_char": 91,
+            "end_char": 100
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2020_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 45,
+            "start_char": 114,
+            "end_char": 122
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2021_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 54,
+            "end_line": 54
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 54,
+            "start_char": 91,
+            "end_char": 100
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_short_term__2020_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 54,
+            "end_line": 54
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 54,
+            "start_char": 114,
+            "end_char": 122
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_short__2021_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 56,
+            "end_line": 56
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 56,
+            "start_char": 93,
+            "end_char": 101
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2020_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 56,
+            "end_line": 56
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 56,
+            "start_char": 114,
+            "end_char": 122
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2021_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2021",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 91,
+            "end_char": 100
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2020_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2020-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2020",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 12,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 12,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 112,
+            "end_char": 121
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 12,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 28,
+                "end_line": 28
+              },
+              "inputs": [
+                "cash_and_equivalents__2021_12_31",
+                "cash_and_equivalents__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 44,
+                "end_line": 44
+              },
+              "inputs": [
+                "debt_long_term__2021_12_31",
+                "debt_long_term__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 12,
+            "start_line": 45,
+            "end_line": 45
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 45,
+                "end_line": 45
+              },
+              "inputs": [
+                "lease_liabilities_long__2021_12_31",
+                "lease_liabilities_long__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 12,
+            "start_line": 54,
+            "end_line": 54
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 54,
+                "end_line": 54
+              },
+              "inputs": [
+                "debt_short_term__2021_12_31",
+                "debt_short_term__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 12,
+            "start_line": 56,
+            "end_line": 56
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 56,
+                "end_line": 56
+              },
+              "inputs": [
+                "lease_liabilities_short__2021_12_31",
+                "lease_liabilities_short__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 12,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 12,
+                "start_line": 12,
+                "end_line": 12
+              },
+              "inputs": [
+                "right_of_use_assets__2021_12_31",
+                "right_of_use_assets__2020_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "space_grouped_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "9": "a7730646a1542b59d20c62b6411fb5cee7cc6cc8ad91d29609e0a3d7724f13bd"
+      },
+      "observations": {
+        "cash_and_equivalents__2023_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2022_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 28,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2023_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_long_term__2022_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_long__2023_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2022_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2023_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 48,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_short_term__2022_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 48,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_short__2023_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 50,
+            "end_line": 50
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 50,
+            "start_char": 91,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2022_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 50,
+            "end_line": 50
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 50,
+            "start_char": 113,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2023_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2022_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 9,
+            "start_line": 28,
+            "end_line": 28
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 28,
+                "end_line": 28
+              },
+              "inputs": [
+                "cash_and_equivalents__2023_12_31",
+                "cash_and_equivalents__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 9,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 42,
+                "end_line": 42
+              },
+              "inputs": [
+                "debt_long_term__2023_12_31",
+                "debt_long_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 9,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "lease_liabilities_long__2023_12_31",
+                "lease_liabilities_long__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 9,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 48,
+                "end_line": 48
+              },
+              "inputs": [
+                "debt_short_term__2023_12_31",
+                "debt_short_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 9,
+            "start_line": 50,
+            "end_line": 50
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 50,
+                "end_line": 50
+              },
+              "inputs": [
+                "lease_liabilities_short__2023_12_31",
+                "lease_liabilities_short__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 9,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 12,
+                "end_line": 12
+              },
+              "inputs": [
+                "right_of_use_assets__2023_12_31",
+                "right_of_use_assets__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "space_grouped_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "8": "217e654a62a9f93a3c90091611c4bfa6749b0b74a0e6c2ebb052a6de2c3ab463"
+      },
+      "observations": {
+        "cash_and_equivalents__2025_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 91,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2024_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 27,
+            "start_char": 113,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2025_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_long_term__2024_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 42,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_long__2025_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 91,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2024_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2025_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 48,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "debt_short_term__2024_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 48,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и займы"
+          ]
+        },
+        "lease_liabilities_short__2025_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 51,
+            "end_line": 51
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 51,
+            "start_char": 91,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2024_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 51,
+            "end_line": 51
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 51,
+            "start_char": 113,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2025_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 90,
+            "end_char": 95
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2024_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 12,
+            "start_char": 112,
+            "end_char": 117
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 8,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 27,
+                "end_line": 27
+              },
+              "inputs": [
+                "cash_and_equivalents__2025_12_31",
+                "cash_and_equivalents__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 8,
+            "start_line": 42,
+            "end_line": 42
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 42,
+                "end_line": 42
+              },
+              "inputs": [
+                "debt_long_term__2025_12_31",
+                "debt_long_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "lease_liabilities_long__2025_12_31",
+                "lease_liabilities_long__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 8,
+            "start_line": 48,
+            "end_line": 48
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 48,
+                "end_line": 48
+              },
+              "inputs": [
+                "debt_short_term__2025_12_31",
+                "debt_short_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 8,
+            "start_line": 51,
+            "end_line": 51
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 51,
+                "end_line": 51
+              },
+              "inputs": [
+                "lease_liabilities_short__2025_12_31",
+                "lease_liabilities_short__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 8,
+            "start_line": 12,
+            "end_line": 12
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 12,
+                "end_line": 12
+              },
+              "inputs": [
+                "right_of_use_assets__2025_12_31",
+                "right_of_use_assets__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "space_grouped_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": false,
+      "page_text_sha256": {
+        "9": "1c627931112b66f9e398f14590ffe522460f4a4f648139aaef59151c9572471c"
+      },
+      "observations": {
+        "cash_and_equivalents__2023_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 24,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2022_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 24,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2023_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 35,
+            "end_line": 35
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 35,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "debt_long_term__2022_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 35,
+            "end_line": 35
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 35,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "lease_liabilities_long__2023_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 34,
+            "end_line": 34
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 34,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2022_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 34,
+            "end_line": 34
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 34,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2023_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "debt_short_term__2022_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 41,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "lease_liabilities_short__2023_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_short__2022_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 44,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "right_of_use_assets__2023_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2023-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2023",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 14,
+            "end_line": 14
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 14,
+            "start_char": 103,
+            "end_char": 108
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2022_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2022",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 9,
+            "start_line": 14,
+            "end_line": 14
+          },
+          "unit_evidence": {
+            "page": 9,
+            "start_line": 5,
+            "end_line": 5
+          },
+          "value_column": {
+            "line": 14,
+            "start_char": 127,
+            "end_char": 132
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 9,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 24,
+                "end_line": 24
+              },
+              "inputs": [
+                "cash_and_equivalents__2023_12_31",
+                "cash_and_equivalents__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 9,
+            "start_line": 35,
+            "end_line": 35
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 35,
+                "end_line": 35
+              },
+              "inputs": [
+                "debt_long_term__2023_12_31",
+                "debt_long_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 9,
+            "start_line": 34,
+            "end_line": 34
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 34,
+                "end_line": 34
+              },
+              "inputs": [
+                "lease_liabilities_long__2023_12_31",
+                "lease_liabilities_long__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 9,
+            "start_line": 41,
+            "end_line": 41
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 41,
+                "end_line": 41
+              },
+              "inputs": [
+                "debt_short_term__2023_12_31",
+                "debt_short_term__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 9,
+            "start_line": 44,
+            "end_line": 44
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 44,
+                "end_line": 44
+              },
+              "inputs": [
+                "lease_liabilities_short__2023_12_31",
+                "lease_liabilities_short__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 9,
+            "start_line": 14,
+            "end_line": 14
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 9,
+                "start_line": 14,
+                "end_line": 14
+              },
+              "inputs": [
+                "right_of_use_assets__2023_12_31",
+                "right_of_use_assets__2022_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    },
+    {
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: независимая визуальная транскрипция оригинальных годовых балансов, 28.11.2026",
+      "reason": "Выбранные деньги, долг, аренда и ROU; банковские активы/обязательства МТС отдельны. Дополнительное приложение М.Видео без влияния IFRS16 исключено. Суммы хранятся только в независимом эталоне, не в этом профиле.",
+      "number_format": "space_grouped_decimal",
+      "unit": "млн руб.",
+      "ocr_structure_reviewed": true,
+      "page_text_sha256": {
+        "8": "672acc2ec26b533ac65c2235a94b1d0add5b1de6ca8e369d706c43d656940435"
+      },
+      "observations": {
+        "cash_and_equivalents__2025_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 24,
+            "start_char": 118,
+            "end_char": 122
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "cash_and_equivalents__2024_12_31": {
+          "item_id": "cash_and_equivalents",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 24,
+            "start_char": 147,
+            "end_char": 152
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Денежные средства и их эквиваленты"
+          ]
+        },
+        "debt_long_term__2025_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 108,
+            "end_char": 111
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "debt_long_term__2024_12_31": {
+          "item_id": "debt_long_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 37,
+            "start_char": 136,
+            "end_char": 140
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "lease_liabilities_long__2025_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 36,
+            "start_char": 108,
+            "end_char": 113
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "lease_liabilities_long__2024_12_31": {
+          "item_id": "lease_liabilities_long",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 36,
+            "start_char": 134,
+            "end_char": 139
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по аренде"
+          ]
+        },
+        "debt_short_term__2025_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 107,
+            "end_char": 113
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "debt_short_term__2024_12_31": {
+          "item_id": "debt_short_term",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 43,
+            "start_char": 136,
+            "end_char": 142
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Кредиты и прочие финансовые обязательства"
+          ]
+        },
+        "lease_liabilities_short__2025_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 46,
+            "end_line": 46
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 46,
+            "start_char": 120,
+            "end_char": 125
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по зренде"
+          ]
+        },
+        "lease_liabilities_short__2024_12_31": {
+          "item_id": "lease_liabilities_short",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 46,
+            "end_line": 46
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 46,
+            "start_char": 149,
+            "end_char": 154
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Обязательства по зренде"
+          ]
+        },
+        "right_of_use_assets__2025_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2025",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 13,
+            "end_line": 13
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 13,
+            "start_char": 106,
+            "end_char": 111
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        },
+        "right_of_use_assets__2024_12_31": {
+          "item_id": "right_of_use_assets",
+          "statement": "balance",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "period_type": "AT_DATE",
+          "column_header": "2024",
+          "cash_flow_section": null,
+          "evidence": {
+            "page": 8,
+            "start_line": 13,
+            "end_line": 13
+          },
+          "unit_evidence": {
+            "page": 8,
+            "start_line": 4,
+            "end_line": 4
+          },
+          "value_column": {
+            "line": 13,
+            "start_char": 132,
+            "end_char": 137
+          },
+          "raw_sign": "nonnegative",
+          "source_absent": false,
+          "original_name_hints": [
+            "Активы в форме права пользования"
+          ]
+        }
+      },
+      "complete_blocks": {
+        "cash_and_equivalents": {
+          "evidence": {
+            "page": 8,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 24,
+                "end_line": 24
+              },
+              "inputs": [
+                "cash_and_equivalents__2025_12_31",
+                "cash_and_equivalents__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_long_term": {
+          "evidence": {
+            "page": 8,
+            "start_line": 37,
+            "end_line": 37
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 37,
+                "end_line": 37
+              },
+              "inputs": [
+                "debt_long_term__2025_12_31",
+                "debt_long_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_long": {
+          "evidence": {
+            "page": 8,
+            "start_line": 36,
+            "end_line": 36
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 36,
+                "end_line": 36
+              },
+              "inputs": [
+                "lease_liabilities_long__2025_12_31",
+                "lease_liabilities_long__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "debt_short_term": {
+          "evidence": {
+            "page": 8,
+            "start_line": 43,
+            "end_line": 43
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 43,
+                "end_line": 43
+              },
+              "inputs": [
+                "debt_short_term__2025_12_31",
+                "debt_short_term__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "lease_liabilities_short": {
+          "evidence": {
+            "page": 8,
+            "start_line": 46,
+            "end_line": 46
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 46,
+                "end_line": 46
+              },
+              "inputs": [
+                "lease_liabilities_short__2025_12_31",
+                "lease_liabilities_short__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        },
+        "right_of_use_assets": {
+          "evidence": {
+            "page": 8,
+            "start_line": 13,
+            "end_line": 13
+          },
+          "rows": [
+            {
+              "kind": "value",
+              "evidence": {
+                "page": 8,
+                "start_line": 13,
+                "end_line": 13
+              },
+              "inputs": [
+                "right_of_use_assets__2025_12_31",
+                "right_of_use_assets__2024_12_31"
+              ],
+              "bridge_inputs": []
+            }
+          ]
+        }
+      },
+      "identities": [],
+      "unavailable_checks": [],
+      "selection_profile": "balance_financing"
+    }
+  ]
+}

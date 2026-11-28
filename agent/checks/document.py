@@ -14,7 +14,8 @@ from agent.checks.equity import compile_plans
 from agent.checks.cash_sections import CASH_RULES, compile_cash_sections
 from agent.checks.debt_bridges import DEBT_RULES, compile_debt_bridges
 from agent.checks.source_links import SOURCE_RULES, compile_source_links
-from agent.checks.reviewed_tables import compile_reviewed_tables
+from agent.checks.reviewed_tables import compile_reviewed_tables, validate_reviewed_columns
+from agent.checks.source_coverage import reviewed_position_coverage
 from agent.extract.pdf_text import PDFText
 from agent.extract.ocr_review import apply_ocr_balance_review, reference_sha256
 from agent.extract.ocr_source_review import apply_ocr_source_review,apply_native_source_review
@@ -194,6 +195,8 @@ def reconcile_document(sources: list[tuple[str, sqlite3.Connection]], pdf: PDFTe
     period = Period(date.fromisoformat(metadata['period_start']), date.fromisoformat(metadata['period_end']), metadata['period_type'])
     review = compile_source_links(pdf, period)
     reviewed_document = compile_reviewed_tables(pdf, period)
+    if reviewed_document:
+        validate_reviewed_columns(facts,reviewed_document,pdf.pages)
     checks, statuses = validate_financials(tuple(facts),equity_plans=compile_plans(pdf,period),cash_plans=compile_cash_sections(pdf,period),debt_plans=compile_debt_bridges(pdf,period),source_review=review,reviewed_document=reviewed_document)
     inherited = {index for index, references in enumerate(origins)
                  if any(source['stored_status'] == 'расхождение' for source in references)}
@@ -218,6 +221,7 @@ def reconcile_document(sources: list[tuple[str, sqlite3.Connection]], pdf: PDFTe
     discrepancies = any(check['status'] == 'расхождение' for check in output)
     return {'ticker': ticker, 'pdf_sha256': pdf.sha256, **metadata, 'source_integrity_verified': True,
             'source_observations_count': sum(map(len, origins)), 'distinct_facts_count': len(facts),
+            'reviewed_position_coverage': reviewed_position_coverage(reviewed_document,facts,origins),
             'checks': output, 'check_status_counts': dict(Counter(check['status'] for check in output)),
             'cross_form_families': families, 'coverage_version': specification['version'],
             'cross_form_complete': complete, 'has_discrepancies': discrepancies,
