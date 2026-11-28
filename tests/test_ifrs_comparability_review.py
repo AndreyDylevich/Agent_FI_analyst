@@ -14,11 +14,11 @@ from tests.test_extraction_schema import PERIOD
 from tests.test_ifrs_pipeline import make_run,facts
 
 
-def setup(tmp_path):
+def setup(tmp_path,statuses=('проверено_авто','проверено_авто')):
  conn=db.init_db(tmp_path/'review.db')
  base=facts()[0];rows=tuple(replace(base,item_id='revenue',value=Decimal(value),normalized=Decimal(value)*1000000,
   raw_value=value,start=date(year,1,1),end=date(year,6,30),period_type='H1') for year,value in ((2026,'120'),(2025,'100')))
- run=replace(make_run(),facts=rows,statuses=('проверено_авто','проверено_авто'),checks=())
+ run=replace(make_run(),facts=rows,statuses=statuses,checks=())
  with conn:store_extraction(conn,run,ticker='TEST',name='Test',source_url='https://example.test/a.pdf',period=PERIOD,local_path='a.pdf')
  pdf=PDFText('a'*64,(Page(1,'Учётная политика одинакова\nПериметр сравнений подтверждён\nВыручка от внешних клиентов'),))
  review={'version':1,'ticker':'TEST','reviewer':'Независимый просмотр','reason':'Политика, периметр и определение выручки подтверждены для выбранных строк',
@@ -139,4 +139,42 @@ def test_ifrs18_adoption_transition_needs_presentation_restatement_and_cashflow_
  for digest in (pdf.sha256,second.sha256):
   review['evidence'].extend({'pdf_sha256':digest,'topic':topic,'evidence':{'page':1,'start_line':1,'end_line':3}} for topic in ('ifrs18','restatement','presentation','cash_flow'))
  with conn:assert apply_comparability_review(conn,{pdf.sha256:pdf,second.sha256:second},review)['decision']=='approved'
+ conn.close()
+
+
+@pytest.mark.parametrize('promoted_status',['проверено_авто','проверено_вручную'])
+def test_changed_status_alone_cannot_approve_unverified_financial_sources(tmp_path,promoted_status):
+ conn,pdf,review=setup(tmp_path,statuses=('не_проверено','не_проверено'))
+ with conn:conn.execute('UPDATE source_values SET check_status=?',(promoted_status,))
+ with pytest.raises(ValueError):
+  with conn:apply_comparability_review(conn,{pdf.sha256:pdf},review)
+ assert not conn.execute("SELECT 1 FROM meta WHERE key LIKE 'ifrs_comparability_review:%'").fetchall()
+ conn.close()
+
+
+@pytest.mark.parametrize('change',['deleted','modified'])
+def test_manual_financial_journal_is_bound_to_later_comparability_approval(tmp_path,change):
+ from tests.test_native_source_review import setup as source_setup
+ from agent.extract.ocr_source_review import apply_native_source_review
+ from agent.extract.comparability_review import comparability_for_sources
+ conn,pdf,reference,source_decision=source_setup(tmp_path)
+ with conn:financial=apply_native_source_review(conn,pdf,reference,source_decision)
+ rows=conn.execute("SELECT * FROM source_values WHERE item_id='ppe' ORDER BY period_end").fetchall();assert len(rows)==2
+ review={'version':1,'ticker':'MTSS','reviewer':'Explicit integrity test','reason':'Test only: declared common source bases',
+  'decision':'approved','scope':'group','segment_name':None,'item_id':'ppe','accounting_basis':'test-policy',
+  'perimeter_basis':'test-perimeter','methodology_version':'test-method','source_context_reviewed':True,
+  'observations':[{'source_id':r['id'],'pdf_sha256':pdf.sha256,'normalized_value':r['value_norm']} for r in rows],
+  'evidence':[{'pdf_sha256':pdf.sha256,'topic':topic,'evidence':{'page':1,'start_line':1,'end_line':1}}
+   for topic in ('accounting_policy','perimeter','definition')]}
+ with conn:apply_comparability_review(conn,{pdf.sha256:pdf},review)
+ ids=[r['id'] for r in rows];assert all(v['comparison_issue'] is None for v in comparability_for_sources(conn,ids).values())
+ key='ifrs_source_review:'+financial['review_sha256']
+ with conn:
+  if change=='deleted':conn.execute('DELETE FROM meta WHERE key=?',(key,))
+  else:
+   payload=json.loads(conn.execute('SELECT value FROM meta WHERE key=?',(key,)).fetchone()['value'])
+   payload['review']['reason']='Altered after approval'
+   conn.execute('UPDATE meta SET value=? WHERE key=?',(json.dumps(payload),key))
+ result=comparability_for_sources(conn,ids)
+ assert all(v['accounting_basis'] is None and 'устарело' in v['comparison_issue'] for v in result.values())
  conn.close()

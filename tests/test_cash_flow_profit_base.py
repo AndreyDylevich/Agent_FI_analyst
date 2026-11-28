@@ -33,6 +33,19 @@ def test_unknown_profit_caption_does_not_default_to_net_profit():
  assert cash_flow_profit_base('Прибыль') is None and cash_flow_profit_base('Расчётная EBITDA') is None
 
 
+@pytest.mark.parametrize('caption',[
+ 'Прибыль за год от продолжающейся деятельности','Profit for the year from discontinued operations',
+ 'Скорректированная операционная прибыль','Adjusted profit before tax',
+ 'Нормализованная чистая прибыль','Profit for the year attributable to owners',
+])
+def test_qualified_subtotal_cannot_become_an_unqualified_cash_flow_profit_base(caption):
+ assert cash_flow_profit_base(caption) is None
+ data=payload();data['facts'][0].update(item_id='cf_starting_net_profit',statement='cash_flow',period_start='2026-01-01',
+  original_name=caption,raw_value='100',evidence=cite(caption+' 100'),cash_flow_section='operating')
+ with pytest.raises(ValueError,match='базу CFO'):
+  parse_extraction(json.dumps(data),(Page(1,TEXT+'\n'+caption+' 100'),),ticker='TEST',period=PERIOD,entity_token='Тест',line_items=config.line_items())
+
+
 @pytest.mark.parametrize('item,pnl,rule',[('cf_starting_operating_profit','operating_profit','operating_profit_vs_cash_flow_base'),('cf_starting_profit_before_tax','profit_before_tax','profit_before_tax_vs_cash_flow_base')])
 def test_same_window_cross_form_check_uses_declared_base_and_leaves_net_profit_bridge_missing(item,pnl,rule):
  rows=(source('net_profit','20','2026-01-01','2026-06-30','income'),source(pnl,'30','2026-01-01','2026-06-30','income'),source(item,'30','2026-01-01','2026-06-30'))

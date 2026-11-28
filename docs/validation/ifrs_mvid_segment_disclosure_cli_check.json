@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "ticker": "MVID",
+  "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+  "source_url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_2026/pao-mvideo-msfo-6-mes-2026.pdf",
+  "source_pdf_origin": "verified_archive",
+  "source_pdf_downloaded_this_run": false,
+  "provider_requests": 0,
+  "selected_values_count": 0,
+  "numeric_segment_acceptance": false,
+  "numerical_database_created": false,
+  "disclosure_check": {
+    "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+    "ticker": "MVID",
+    "runs": [],
+    "checks": [],
+    "quantitative_table_not_disclosed": true,
+    "single_operating_segment_reported": true,
+    "source_evidence": [
+      {
+        "page": 14,
+        "quote": "3. ГУДВИЛ\nВследствие наличия внешних и внутренних индикаторов возможного обесценения,\nвключающих как текущую макроэкономическую ситуацию, так и адаптацию пересмотренной\nстратегии Группы ктекущим показателям, руководство Группы провело тест на обесценение\nгудвила и остальных долгосрочных активов по состоянию на 30 июня 2026 года.\nДля целей тестирования гудвила на обесценение единицы, генерирующие денежные средства\n(«ЕГДС»), представленные группой магазинов, расположенных в одном городе, были\nсгруппированы на уровне единственного операционного сегмента Группы. Возмещаемая\nстоимость ЕГДС определялась как стоимость использования.",
+        "start_line": 15,
+        "end_line": 23
+      }
+    ],
+    "disclosure_reviewed": true,
+    "financial_values_verified": false,
+    "provider_requests": 0,
+    "selected_values_count": 0,
+    "absence_means_zero": false,
+    "comparative_basis": "В примечании по обесценению указан единственный операционный сегмент; отдельная количественная сегментная таблица в просмотренных примечаниях не раскрыта. Данные всей группы не выдумываются повторно как отдельная таблица сегмента.",
+    "disclosure_review_sha256": "50f70ab54a04863115922b8d67a418ff3004cdf853a26f5cb1ae38e900912300",
+    "financial_audit_complete": false,
+    "comparability_approved": false
+  },
+  "messages_sent": 0,
+  "financial_audit_complete": false,
+  "comparability_approved": false,
+  "checked_date_moscow": "2026-11-28",
+  "original_pdf_sha256_rechecked": true,
+  "source_rows_created": 0,
+  "stage4_complete": false
+}

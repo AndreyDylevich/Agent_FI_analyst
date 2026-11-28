@@ -153,6 +153,10 @@ def cash_change_basis(evidence, page: Page) -> str | None:
 def cash_flow_profit_base(name: str) -> str | None:
     """Классифицирует только подпись исходной базы CFO, не читая финансовые числа."""
     name=normalized_text(name).casefold()
+    # A qualified subtotal is a different scope/definition, even when it contains
+    # the words "profit for the year". It needs its own reviewed source mapping.
+    if re.search(r'продолжающ|прекращ[её]н|continuing|discontinued|скорректир|adjusted|нормализ|normali[sz]ed|attributable|приходящ|относящ.{0,18}акционер',name):
+        return None
     if re.search(r'(?:прибыл|убыт|profit|loss).{0,35}(?:до.{0,10}(?:налог|налогооблож)|before.{0,10}(?:income.?tax|tax))',name):
         return 'cf_starting_profit_before_tax'
     if re.search(r'операционн.{0,12}(?:прибыл|убыт)|(?:прибыл|убыт).{0,12}от операционн|operating.{0,8}(?:profit|loss)',name):

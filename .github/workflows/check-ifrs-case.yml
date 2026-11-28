@@ -76,6 +76,14 @@ jobs:
           path: validation/archive-sgzh
           github-token: ${{ github.token }}
           run-id: '45028939182'
+      - name: Закреплённый PDF и просмотренный OCR М.Видео для сегментного раскрытия
+        if: inputs.case_id == 'all_segments'
+        uses: actions/download-artifact@v4
+        with:
+          name: ifrs-case-check
+          path: validation/archive-mvid
+          github-token: ${{ github.token }}
+          run-id: '46022730544'
       - name: Проверить официальный PDF и независимый эталон
         env:
           GIGACHAT_KEY: ${{ secrets.GIGACHAT_KEY }}
@@ -85,6 +93,7 @@ jobs:
             if [ '${{ inputs.prepare_text_only }}' = true ]; then echo 'Для подготовки текста выберите выпуск компании'; exit 1; fi
             python -m agent.tools.check_ifrs_segments --ticker MTSS --output validation/ifrs-case/MTSS --source-archive validation/archive-mts
             python -m agent.tools.check_ifrs_segments --ticker SGZH --output validation/ifrs-case/SGZH --source-archive validation/archive-sgzh
+            python -m agent.tools.check_ifrs_segments --ticker MVID --output validation/ifrs-case/MVID --source-archive validation/archive-mvid --prepared-pages validation/archive-mvid/extraction/pages.json
             exit 0
           fi
           archive_args=()

@@ -1,5 +1,6 @@
 """Неизменяемые адресные решения о сопоставимости; финансовые числа/статусы не меняются."""
 
+import hashlib
 import json
 from datetime import datetime, timezone
 
@@ -20,9 +21,22 @@ def _source(conn,source_id):
     if not row:
         raise ValueError('Источник отсутствует или заменён пересчитанной версией')
     original_status(conn,row)
+    location=json.loads(row['location'])
+    extraction=json.loads(conn.execute('SELECT value FROM meta WHERE key=?',
+        (f"ifrs_extraction:{row['document_id']}:{location['extraction_sha256']}",)).fetchone()['value'])
+    if row['check_status']=='проверено_авто' and extraction['statuses'][location['fact_index']]!='проверено_авто':
+        raise ValueError('Автоматический статус не подтверждён исходными финансовыми проверками')
     from agent.extract.document_policy import load_document_policies
     policies=load_document_policies(conn,row['document_id'])
-    return {**{k:row[k] for k in FIELDS},'document_policy_review_ids':sorted(p['meta_key'] for p in policies)}
+    result={**{k:row[k] for k in FIELDS},'document_policy_review_ids':sorted(p['meta_key'] for p in policies)}
+    if row['check_status']=='проверено_вручную':
+        journals=[]
+        for saved in conn.execute("SELECT key,value FROM meta WHERE key LIKE 'ifrs_ocr_review:%' OR key LIKE 'ifrs_source_review:%'"):
+            record=json.loads(saved['value'])
+            if any(change['source_id']==source_id for change in record['changes']):
+                journals.append({'meta_key':saved['key'],'record_sha256':hashlib.sha256(saved['value'].encode()).hexdigest()})
+        result['financial_source_review_ids']=sorted(journals,key=lambda r:r['meta_key'])
+    return result
 
 
 def apply_comparability_review(conn,pdfs,review):
@@ -80,6 +94,10 @@ def apply_comparability_review(conn,pdfs,review):
     if review['decision']=='approved' and any(not {'accounting_policy','perimeter','definition'} <= topics_by_pdf.get(s['sha256'],set()) for s in snapshots):
         raise ValueError('Нужны отдельные подтверждения политики, периметра и определения статьи')
     if review['decision']=='approved':
+        from agent.checks.document import _verify_ocr_review
+        for source in snapshots:
+            if source['check_status']=='проверено_вручную':
+                _verify_ocr_review(conn,pdfs[source['sha256']],source['id'])
         from agent.extract.document_policy import load_document_policies
         policies=[p['policy'] for s in snapshots for p in load_document_policies(conn,s['document_id'])]
         adoptions={p['ifrs18']['adoption'] for p in policies}
@@ -112,7 +130,14 @@ def comparability_for_sources(conn,source_ids):
         if not affected:continue
         valid=True
         try:
-            valid=all(_source(conn,s['id'])==s for s in snapshots)
+            current=[_source(conn,s['id']) for s in snapshots]
+            if record['decision']!='approved':
+                # Older unresolved decisions remain unresolved; a new financial
+                # journal field cannot turn them into approval or erase their reason.
+                for now,previous in zip(current,snapshots):
+                    if 'financial_source_review_ids' not in previous:
+                        now.pop('financial_source_review_ids',None)
+            valid=all(now==previous for now,previous in zip(current,snapshots))
         except ValueError:
             valid=False
         review=payload['review']
