@@ -16,6 +16,7 @@ from agent.classify import classify_document
 from agent.checks.reviewed_tables import compile_reviewed_tables
 from agent.extract.pdf_text import HEADINGS, read_pdf, find_sections
 from agent.extract.schemas import source_context
+from agent.extract.ocr_transcript import apply_reviewed_ocr_punctuation
 from agent.metrics.engine import Period
 from agent.sources.files import download_pdf, MAX_PDF_BYTES, checked_url
 from agent.tools.backfill_ifrs import MANIFEST
@@ -95,6 +96,7 @@ def main(argv=None):
         if not context:raise ValueError('Контекст компании/МСФО/группы/RUB/периода не подтверждён')
         report.update(pdf_sha256=pdf.sha256,source_context=context)
         if args.forms_profile=='income_cash' and not args.prepare_text_only:
+            if args.ocr:pdf=apply_reviewed_ocr_punctuation(pdf)
             reviewed=compile_reviewed_tables(pdf,period)
             if reviewed is None:
                 raise ValueError('Для годовых ОПУ/ОДДС нужна отдельно просмотренная структура точной версии PDF')

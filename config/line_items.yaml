@@ -5101,3 +5101,137 @@ items:
       - доле неконтролирующих акционеров
       en: []
     rsbu_codes: []
+
+  # Annual MVID source controls; financial values remain in independent references.
+  - id: income_financial_asset_disposal_loss
+    statement: income
+    name: Убытки от выбытия финансовых активов
+    sign: outflow
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Убытки от выбытия финансовых активов
+      en: []
+    rsbu_codes: []
+  - id: cf_financial_asset_disposal_loss
+    statement: cash_flow
+    name: Убытки от выбытия финансовых активов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Убытки от выбытия финансовых активов
+      en: []
+    rsbu_codes: []
+  - id: cf_subsidized_loan_income_adjustment
+    statement: cash_flow
+    name: Доходы, признанные по субсидированным кредитам
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Доходы, признанные по субсидированным кредитам
+      en: []
+    rsbu_codes: []
+  - id: cf_income_tax_refund
+    statement: cash_flow
+    name: Возмещение налога на прибыль
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Возмещение налога на прибыль
+      en: []
+    rsbu_codes: []
+  - id: cf_financial_asset_disposal_proceeds
+    statement: cash_flow
+    name: Поступления от выбытия финансовых активов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Поступления от выбытия финансовых активов
+      en: []
+    rsbu_codes: []
+  - id: cf_subsidiary_acquisition_net
+    statement: cash_flow
+    name: Чистое выбытие денежных средств в связи с приобретением дочерней компании
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Чистое выбытие денежных средств в связи с приобретением дочерней компании
+      en: []
+    rsbu_codes: []
+  - id: cf_ppe_intangible_disposal_gain_adjustment
+    statement: cash_flow
+    name: Прибыль от выбытия объектов основных средств и нематериальных активов, нетто
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Прибыль от выбытия объектов основных средств и нематериальных активов, нетто
+      en: []
+    rsbu_codes: []
+  - id: cf_consumer_loans_issued
+    statement: cash_flow
+    name: Предоставление потребительских кредитов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Предоставление потребительских кредитов
+      en: []
+    rsbu_codes: []
+  - id: cf_loans_issued
+    statement: cash_flow
+    name: Займы выданные
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Займы выданные
+      en: []
+    rsbu_codes: []
+  - id: cf_other_borrowings_received
+    statement: cash_flow
+    name: Поступления от займов
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Поступления от займов
+      en: []
+    rsbu_codes: []
+  - id: cf_shareholder_financing
+    statement: cash_flow
+    name: Предоставление финансирования от акционеров
+    sign: natural
+    reviewed_table: true
+    notes: Исходный контрольный показатель годовой формы; сохраняет собственный состав
+      и исходный знак. Прочерки не равны нулю.
+    ifrs_synonyms:
+      ru:
+      - Предоставление финансирования от акционеров
+      en: []
+    rsbu_codes: []

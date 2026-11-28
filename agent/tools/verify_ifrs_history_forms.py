@@ -42,7 +42,7 @@ def verify_year(conn, entry, reference):
             or document['period_type']!='FY' or document['period_start']!=f'{year}-01-01'
             or document['period_end']!=f'{year}-12-31'):
         raise ValueError('Период/стандарт/URL документа не совпадают')
-    selected=[];seen=set();contexts={}
+    selected=[];seen=set();contexts={};ocr_count=0;unreviewed_ocr_count=0
     for row in conn.execute('SELECT * FROM source_values WHERE document_id=?',(document['id'],)):
         location=json.loads(row['location'])
         original_status(conn,row)
@@ -59,8 +59,10 @@ def verify_year(conn, entry, reference):
                 or run['pdf_sha256']!=entry['pdf_sha256'] or address!=target['evidence']
                 or fact['raw_value']!=location['raw_value'] or fact['raw_value']!=target['raw_value']
                 or parse_amount(fact['raw_value'],fact['number_format'])!=Decimal(target['value'])
-                or fact['from_ocr'] or row['cash_flow_section']!=target['cash_flow_section']):
+                or row['cash_flow_section']!=target['cash_flow_section']):
             raise ValueError('Строка/колонка/дата/знак/охват не совпадают с просмотренным оригиналом')
+        ocr_count+=bool(fact['from_ocr'])
+        unreviewed_ocr_count+=bool(fact['from_ocr'] and row['check_status']!='проверено_вручную')
         selected.append(row)
     if seen!=set(expected):raise ValueError('Не все независимые исходные наблюдения найдены')
     result=verify_statements(conn,reference)
@@ -76,6 +78,8 @@ def verify_year(conn, entry, reference):
     if not checked:raise ValueError('Пустой набор сверок не подтверждает годовые формы')
     return {'year':year,'pdf_sha256':entry['pdf_sha256'],'source_values_count':len(selected),
             'stored_statuses':dict(Counter(r['check_status'] for r in selected)),
+            'ocr_observations_count':ocr_count,'unreviewed_ocr_observations_count':unreviewed_ocr_count,
+            'ocr_financial_acceptance_complete':ocr_count>0 and unreviewed_ocr_count==0,
             'reference_check':result,'reviewed_checks':checked,'structure_plan_sha256':plan_digest,
             'reference_sha256':hashlib.sha256(json.dumps(reference,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),
             'ok':result['ok'] and all(c['passed'] for c in checked)}

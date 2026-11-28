@@ -99,6 +99,49 @@
           "bracket_lines": []
         }
       }
+    },
+    {
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "visual_review_confirmed": true,
+      "reviewer": "Codex: оригинальные страницы 9 и 11, 28.11.2026",
+      "reason": "Три ошибки цифр OCR сверены непосредственно с оригинальными изображениями. Исходный PDF и исходный OCR не изменяются, бухгалтерские суммы не подгоняются; финансовая приёмка остаётся отдельной.",
+      "pages": {
+        "9": {
+          "original_text_sha256": "7d38215ed9530e2b9e73fe335cebd89a77296d97d0e4df073d1539a44f15b22e",
+          "bracket_lines": [
+            4
+          ],
+          "visual_transcriptions": [
+            {
+              "line": 21,
+              "original": "53 638",
+              "reviewed": "63 638",
+              "reviewed_image_sha256": "c1063c482b0429e25bf5007cee566e7ba9a36513cca574a0964b75cefdf051fa",
+              "reason": "Убыток за период в оригинале (63 638); OCR заменил 6 на 5."
+            }
+          ]
+        },
+        "11": {
+          "original_text_sha256": "4418d708761d6fbbc3f3de9c5fda1410c85d483659bd085d580d3f5eba0a8506",
+          "bracket_lines": [],
+          "visual_transcriptions": [
+            {
+              "line": 11,
+              "original": "19 359",
+              "reviewed": "19 369",
+              "reviewed_image_sha256": "efc075feac5f5d9ff5a0d30b9cc45322da7326e5b6bae263c57843801003ec39",
+              "reason": "Налоговая корректировка в оригинале (19 369); OCR заменил 6 на 5."
+            },
+            {
+              "line": 49,
+              "original": "36 594",
+              "reviewed": "36 694",
+              "reviewed_image_sha256": "efc075feac5f5d9ff5a0d30b9cc45322da7326e5b6bae263c57843801003ec39",
+              "reason": "Сравнительный денежный поток до процентов/налога в оригинале 36 694; OCR заменил 6 на 5."
+            }
+          ]
+        }
+      }
     }
   ]
 }
