@@ -7632,6 +7632,39 @@
         "unavailable_checks": [],
         "unit": "млн руб."
       }
+    },
+    {
+      "ticker": "MVID",
+      "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+      "reviewed": true,
+      "reviewer": "Codex: просмотр примечаний/содержания и оригинальной страницы 14, 28.11.2026",
+      "quantitative_table_not_disclosed": true,
+      "single_operating_segment_reported": true,
+      "disclosure_evidence": [
+        {
+          "page": 14,
+          "start_line": 15,
+          "end_line": 23
+        }
+      ],
+      "comparative_basis": "В примечании по обесценению указан единственный операционный сегмент; отдельная количественная сегментная таблица в просмотренных примечаниях не раскрыта. Данные всей группы не выдумываются повторно как отдельная таблица сегмента.",
+      "segments": [],
+      "identities": [],
+      "source_profile": {
+        "pdf_sha256": "d2bcba2cef30dce61da03491f193981c515dd77a21224fcea22ded80f3796f99",
+        "report_start": "2026-01-01",
+        "report_end": "2026-06-30",
+        "report_kind": "H1",
+        "reviewed": true,
+        "reviewer": "Codex: исходная страница 14 просмотрена по изображению",
+        "reason": "Качественное раскрытие одного сегмента; отсутствие отдельной таблицы не равно числовому нулю.",
+        "number_format": "space_grouped_decimal",
+        "unit": "млн руб.",
+        "page_text_sha256": {
+          "14": "5336634b98ea60b735d0cbaed4b6bc934acae9626b85bf576bdec3de14db4012"
+        },
+        "unavailable_checks": []
+      }
     }
   ]
 }

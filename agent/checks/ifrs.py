@@ -21,7 +21,7 @@ class FinancialCheck:
     end: str
     result: CheckResult
     fact_indices: tuple[int, ...]
-    version: int = 12
+    version: int = 13
     basis: dict | None = None
 
 
@@ -32,6 +32,8 @@ RULES = {
     'gross_profit': {'revenue': 1, 'cost_of_sales': -1, 'gross_profit': -1},
     'profit_attribution': {'net_profit':1, 'net_profit_parent':-1, 'net_profit_nci':-1},
     'profit_vs_cash_flow_base': {'net_profit':1, 'cf_starting_net_profit':-1},
+    'operating_profit_vs_cash_flow_base': {'operating_profit':1,'cf_starting_operating_profit':-1},
+    'profit_before_tax_vs_cash_flow_base': {'profit_before_tax':1,'cf_starting_profit_before_tax':-1},
     'equity_attribution': {'equity_total':1, 'equity_parent':-1, 'non_controlling_interests':-1},
     'eq_opening_attribution': {'eq_opening_total':1, 'eq_opening_parent':-1, 'eq_opening_nci':-1},
     'eq_closing_attribution': {'eq_closing_total':1, 'eq_closing_parent':-1, 'eq_closing_nci':-1},
@@ -58,7 +60,7 @@ RULES = {
     'note_finance_gross': {'note_finance_expense_gross':1,'note_interest_total':-1,'note_finance_other_expense':-1},
     'note_finance_net': {'note_finance_expense_gross':1,'note_capitalized_interest_expense':-1,'note_finance_modification_expense':1,'note_finance_expense_net':-1},
 }
-FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base','eq_profit_attribution',
+FLOW_RULES = {'gross_profit','profit_attribution','profit_vs_cash_flow_base','operating_profit_vs_cash_flow_base','profit_before_tax_vs_cash_flow_base','eq_profit_attribution',
               'profit_vs_equity','profit_parent_vs_equity','profit_nci_vs_equity'}
 FLOW_RULES.update(('note_interest_composition','note_finance_gross','note_finance_net'))
 FLOW_RULES.add('cash_flow_summary')

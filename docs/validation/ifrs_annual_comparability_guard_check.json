@@ -1,0 +1,1110 @@
+{
+  "checked_date_moscow": "2026-11-28",
+  "ok": true,
+  "source_reports_reviewed": 8,
+  "reports": [
+    {
+      "ticker": "MTSS",
+      "year": 2021,
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+      "source_database_sha256": "40c2463481546e4472d14f2144af279aff8fd8e4fd3d0f9414870167fafc1530",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "fabb4abdc6af0d7ea8fb0576a6b3ff08a8b647b7dae50b77506995a4a26e6229",
+      "comparability_review": {
+        "review_sha256": "9aa8a0cd6f2f59fab520dfd461ee3669a3b6c65d94a306e3deb588ca5635a941",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "MTSS",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 27,
+                "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+                "normalized_value": "494926000000"
+              },
+              {
+                "source_id": 26,
+                "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+                "normalized_value": "534403000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 10
+                }
+              },
+              {
+                "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 3,
+                  "start_line": 24,
+                  "end_line": 24
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 27,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "494926",
+              "value_norm": "494926000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2020-01-01",
+              "period_end": "2020-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 13, \"quote\": \"Выручка                                              6, 7             534,403                494,926                470,605\", \"start_line\": 11, \"end_line\": 11, \"column_header\": \"2020\", \"unit_evidence\": {\"page\": 13, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"494,926\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2020_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"4835e9a1366abc14576ae6e45a7e8cbeae2f115f9760666fb3eb92342b4d7dca\", \"fact_index\": 26}",
+              "sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:f4c819683b0ef89a3312b26199697118a517ac2c5bc3539bb364c1ffd3c9e07a"
+              ]
+            },
+            {
+              "id": 26,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "534403",
+              "value_norm": "534403000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2021-01-01",
+              "period_end": "2021-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 13, \"quote\": \"Выручка                                              6, 7             534,403                494,926                470,605\", \"start_line\": 11, \"end_line\": 11, \"column_header\": \"2021\", \"unit_evidence\": {\"page\": 13, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"534,403\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2021_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"4835e9a1366abc14576ae6e45a7e8cbeae2f115f9760666fb3eb92342b4d7dca\", \"fact_index\": 25}",
+              "sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_20_21_r.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:f4c819683b0ef89a3312b26199697118a517ac2c5bc3539bb364c1ffd3c9e07a"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nна 31 декабря 2021 и 2020 годов и\nза 2021, 2020 и 2019 годы и\nаудиторское заключение независимого аудитора",
+              "start_line": 7,
+              "end_line": 10
+            },
+            {
+              "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+              "topic": "accounting_policy",
+              "page": 3,
+              "quote": "2021 года, в соответствии с Международными стандартами финансовой отчетности",
+              "start_line": 24,
+              "end_line": 24
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:22.129652+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "MTSS",
+      "year": 2023,
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+      "source_database_sha256": "63b1ed3fe8f21bfc72ce01e89fe4c35383ff0a2fe3083a88e37f959e20344656",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "cee7eebd8cd9a85722a332e27f993ee79325b6bf88651022596163f84e8ba319",
+      "comparability_review": {
+        "review_sha256": "23c3d67ff076591c8a97c8c60fe8c2f23264ccca1877d3349b363239821afdee",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "MTSS",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 27,
+                "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+                "normalized_value": "534116000000"
+              },
+              {
+                "source_id": 26,
+                "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+                "normalized_value": "605991000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 10
+                }
+              },
+              {
+                "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 3,
+                  "start_line": 23,
+                  "end_line": 23
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 27,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "534116",
+              "value_norm": "534116000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2022-01-01",
+              "period_end": "2022-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 13, \"quote\": \"Выручка                                              5,6              605,991                534,116                521,189\", \"start_line\": 11, \"end_line\": 11, \"column_header\": \"2022\", \"unit_evidence\": {\"page\": 13, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"534,116\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2022_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"e251019f756e24b0545c66ea2ec5effa747cd2f161464df13d45abcbdbcad359\", \"fact_index\": 26}",
+              "sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_22_23_r.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:cce3199d903cfde45bf5c63eab4c7f3a7df39b81d11466465c5e6a26be65ede3"
+              ]
+            },
+            {
+              "id": 26,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "605991",
+              "value_norm": "605991000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2023-01-01",
+              "period_end": "2023-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 13, \"quote\": \"Выручка                                              5,6              605,991                534,116                521,189\", \"start_line\": 11, \"end_line\": 11, \"column_header\": \"2023\", \"unit_evidence\": {\"page\": 13, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"605,991\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2023_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"e251019f756e24b0545c66ea2ec5effa747cd2f161464df13d45abcbdbcad359\", \"fact_index\": 25}",
+              "sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/mts_ifrs_cons_fs_22_23_r.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:cce3199d903cfde45bf5c63eab4c7f3a7df39b81d11466465c5e6a26be65ede3"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nна 31 декабря 2023 и 2022 годов и\nза 2023, 2022 и 2021 годы и\nаудиторское заключение независимого аудитора",
+              "start_line": 7,
+              "end_line": 10
+            },
+            {
+              "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+              "topic": "accounting_policy",
+              "page": 3,
+              "quote": "2023 года, в соответствии с Международными стандартами финансовой отчетности",
+              "start_line": 23,
+              "end_line": 23
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:22.381144+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "MTSS",
+      "year": 2025,
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "source_database_sha256": "f0a7afdba631e4705409fcde7051aaff8bb269d6a0e39fb79025c371b9a776cd",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "e70467a859522fe91903521f9f82e12245da5a9d70ccd1f2dc62f8780c41857c",
+      "comparability_review": {
+        "review_sha256": "13fe2a73929c969eae446f3bc38a95d5b56af93b51cfaa6b382cd3db5baa8f5e",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "MTSS",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 68,
+                "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+                "normalized_value": "703741000000"
+              },
+              {
+                "source_id": 67,
+                "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+                "normalized_value": "807186000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 9
+                }
+              },
+              {
+                "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 3,
+                  "start_line": 21,
+                  "end_line": 21
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 68,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "703741",
+              "value_norm": "703741000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 11, \"quote\": \"Выручка                                                                    5,6             807,186                703,741\", \"start_line\": 12, \"end_line\": 12, \"column_header\": \"2024\", \"unit_evidence\": {\"page\": 11, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"703,741\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2024_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"3d2776f822793cf0cf1e54bd462d39907512529744272251310e4da4ce5f0c7a\", \"fact_index\": 26}",
+              "sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:16734f44a2615b7fe117bee90008e7a22d1ab6d6fb050e10dd60763031930351"
+              ]
+            },
+            {
+              "id": 67,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "807186",
+              "value_norm": "807186000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2025-01-01",
+              "period_end": "2025-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 11, \"quote\": \"Выручка                                                                    5,6             807,186                703,741\", \"start_line\": 12, \"end_line\": 12, \"column_header\": \"2025\", \"unit_evidence\": {\"page\": 11, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"807,186\", \"number_format\": \"comma_grouped_dot_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2025_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"3d2776f822793cf0cf1e54bd462d39907512529744272251310e4da4ce5f0c7a\", \"fact_index\": 25}",
+              "sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+              "url": "https://static.mts.ru/mts_rf/contents/10677/MTS_IFRS_Cons_FS_24-25-rus.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:16734f44a2615b7fe117bee90008e7a22d1ab6d6fb050e10dd60763031930351"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nза 2025 год и аудиторское заключение\nнезависимого аудитора",
+              "start_line": 7,
+              "end_line": 9
+            },
+            {
+              "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+              "topic": "accounting_policy",
+              "page": 3,
+              "quote": "финансовой отчетности («МСФО»).",
+              "start_line": 21,
+              "end_line": 21
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:22.637571+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "SGZH",
+      "year": 2021,
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "source_database_sha256": "d8c33de2190ae98b29d688e5a30cc395dcd28c89ed9ed01f00a35e7b2e1edac3",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "ff82b23336132c9e317055a5510fe5ff1dc25aeb820703a174334239a88f9310",
+      "comparability_review": {
+        "review_sha256": "176aafb0ee1d2b815317c36f73f3a528218d99b7e2bd8d825fe8f82591cba653",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "SGZH",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 26,
+                "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+                "normalized_value": "68986649000"
+              },
+              {
+                "source_id": 25,
+                "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+                "normalized_value": "92442267000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 9
+                }
+              },
+              {
+                "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 2,
+                  "start_line": 29,
+                  "end_line": 29
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 26,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "68986649",
+              "value_norm": "68986649000",
+              "unit": "тыс. руб.",
+              "currency": "RUB",
+              "period_start": "2020-01-01",
+              "period_end": "2020-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 11, \"quote\": \"Выручка                                                                      4           92 442 267             68 986 649\", \"start_line\": 9, \"end_line\": 9, \"column_header\": \"2020\", \"unit_evidence\": {\"page\": 11, \"quote\": \"(в тысячах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"68 986 649\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2020_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"79cf40c129f9c336270fc0e9d8cb2c94a7feb1d598c7b3e85954394ba9f00f58\", \"fact_index\": 25}",
+              "sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+              "url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:7edf932e4a4298a30929af0cf3882f6d0a97c4b82f149be1c9484598d5fb805c"
+              ]
+            },
+            {
+              "id": 25,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "92442267",
+              "value_norm": "92442267000",
+              "unit": "тыс. руб.",
+              "currency": "RUB",
+              "period_start": "2021-01-01",
+              "period_end": "2021-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 11, \"quote\": \"Выручка                                                                      4           92 442 267             68 986 649\", \"start_line\": 9, \"end_line\": 9, \"column_header\": \"2021\", \"unit_evidence\": {\"page\": 11, \"quote\": \"(в тысячах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"92 442 267\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2021_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"79cf40c129f9c336270fc0e9d8cb2c94a7feb1d598c7b3e85954394ba9f00f58\", \"fact_index\": 24}",
+              "sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+              "url": "https://segezha-group.com/upload/iblock/21a/an6vxpgppglbo6a4sya3zkwwuw3iko6v.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:7edf932e4a4298a30929af0cf3882f6d0a97c4b82f149be1c9484598d5fb805c"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nи аудиторское заключение\nнезависимого аудитора за 2021 год",
+              "start_line": 7,
+              "end_line": 9
+            },
+            {
+              "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+              "topic": "accounting_policy",
+              "page": 2,
+              "quote": "    3.  Новые и пересмотренные Международные стандарты финансовой отчетности                               19",
+              "start_line": 29,
+              "end_line": 29
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:22.906369+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "SGZH",
+      "year": 2023,
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "source_database_sha256": "fc13c6f6cf9cfa31bcd66437e892233cd6f2be585fe9472cd0b73abd63a94483",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "c41fac2b1f83114c61ab625ba1cdd8a6aec5b535bfd631f9b7ea962880e3ce02",
+      "comparability_review": {
+        "review_sha256": "0975ab2c6437f8d560ad790d547b131556ece63691be39d3daa2caaa6fc9b2d1",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "SGZH",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 56,
+                "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+                "normalized_value": "96875000000"
+              },
+              {
+                "source_id": 55,
+                "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+                "normalized_value": "88487000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 8,
+                  "end_line": 11
+                }
+              },
+              {
+                "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 2,
+                  "start_line": 32,
+                  "end_line": 32
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 56,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "96875",
+              "value_norm": "96875000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2022-01-01",
+              "period_end": "2022-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 8, \"quote\": \"Выручка                                                                   4                88 487               96 875\", \"start_line\": 9, \"end_line\": 9, \"column_header\": \"2022\", \"unit_evidence\": {\"page\": 8, \"quote\": \"(в миллионах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"96 875\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2022_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"44f620048afa30c723dbd28e11c3e839cdf67cd51d25f9df2cec085da5e8b1f4\", \"fact_index\": 21}",
+              "sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+              "url": "https://segezha-group.com/upload/iblock/399/6ve7zm02as87k84ecttdmefp48n1yhu1.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:e4d4995c34f9b506f91603c5bbc3c838b65ceeb52cd6a5bf76485a97dbe392cb"
+              ]
+            },
+            {
+              "id": 55,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "88487",
+              "value_norm": "88487000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2023-01-01",
+              "period_end": "2023-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 8, \"quote\": \"Выручка                                                                   4                88 487               96 875\", \"start_line\": 9, \"end_line\": 9, \"column_header\": \"2023\", \"unit_evidence\": {\"page\": 8, \"quote\": \"(в миллионах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"88 487\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2023_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"44f620048afa30c723dbd28e11c3e839cdf67cd51d25f9df2cec085da5e8b1f4\", \"fact_index\": 20}",
+              "sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+              "url": "https://segezha-group.com/upload/iblock/399/6ve7zm02as87k84ecttdmefp48n1yhu1.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:e4d4995c34f9b506f91603c5bbc3c838b65ceeb52cd6a5bf76485a97dbe392cb"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nспециального назначения и аудиторское\nзаключение независимого аудитора за год,\nзакончившийся 31 декабря 2023 года",
+              "start_line": 8,
+              "end_line": 11
+            },
+            {
+              "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+              "topic": "accounting_policy",
+              "page": 2,
+              "quote": "    3.  Новые и пересмотренные Международные стандарты финансовой отчетности                             14",
+              "start_line": 32,
+              "end_line": 32
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:23.168976+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "SGZH",
+      "year": 2025,
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+      "source_database_sha256": "bb6c0126ad604ac0c1e2b2a72da6957fb826ce2c13500f317ef0025bb2965924",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "8a5854d923f1d948d182ad000981a7891ba13818e0d26337674088f2208f51ad",
+      "comparability_review": {
+        "review_sha256": "c7e1bdb3cc8230d88f00ef5bc64aec98da2c31573cc612e3217793f904d365eb",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "SGZH",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 90,
+                "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+                "normalized_value": "101900000000"
+              },
+              {
+                "source_id": 89,
+                "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+                "normalized_value": "89187000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 10
+                }
+              },
+              {
+                "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 2,
+                  "start_line": 27,
+                  "end_line": 27
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 90,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "101900",
+              "value_norm": "101900000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 3,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 7, \"quote\": \"Выручка                                                                   4               89 187              101 900\", \"start_line\": 8, \"end_line\": 8, \"column_header\": \"2024\", \"unit_evidence\": {\"page\": 7, \"quote\": \"(в миллионах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"101 900\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2024_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"8c6db8da93243424dd7b85bd699babf653220228e4ec8c03d5f4e4db84ada347\", \"fact_index\": 21}",
+              "sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+              "url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:3:1150542f188269a839776b46e1227cbe0c5478494bf9e8c02000dbe7f6df9922"
+              ]
+            },
+            {
+              "id": 89,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "89187",
+              "value_norm": "89187000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2025-01-01",
+              "period_end": "2025-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 3,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 7, \"quote\": \"Выручка                                                                   4               89 187              101 900\", \"start_line\": 8, \"end_line\": 8, \"column_header\": \"2025\", \"unit_evidence\": {\"page\": 7, \"quote\": \"(в миллионах российских рублей)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"89 187\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2025_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"8c6db8da93243424dd7b85bd699babf653220228e4ec8c03d5f4e4db84ada347\", \"fact_index\": 20}",
+              "sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+              "url": "https://segezha-group.com/upload/iblock/bf4/90wf8fn2epd62xlhk7jw34xf7ydm3eo5.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:3:1150542f188269a839776b46e1227cbe0c5478494bf9e8c02000dbe7f6df9922"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nспециального назначения и аудиторское\nзаключение независимого аудитора за год,\nзакончившийся 31 декабря 2025 года",
+              "start_line": 7,
+              "end_line": 10
+            },
+            {
+              "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+              "topic": "accounting_policy",
+              "page": 2,
+              "quote": "    3.  Новые и пересмотренные Международные стандарты финансовой отчетности                                13",
+              "start_line": 27,
+              "end_line": 27
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:23.427103+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "MVID",
+      "year": 2023,
+      "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+      "source_database_sha256": "03930d71868752cf41326f42be53dbb1a1bf453673e97787e65956751bfd7d42",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "e2deb2922fc608ad94fb1cf4cc88198943c55fb46e9fc83f013ff97c864c99ee",
+      "comparability_review": {
+        "review_sha256": "cc35790c7dd426e7c71f1d60912a2d0147ea6c55ed4ba913c9d5bcfa904e23f8",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "MVID",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 99,
+                "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+                "normalized_value": "402462000000"
+              },
+              {
+                "source_id": 98,
+                "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+                "normalized_value": "434390000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 7,
+                  "end_line": 10
+                }
+              },
+              {
+                "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 2,
+                  "start_line": 29,
+                  "end_line": 29
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 99,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "402462",
+              "value_norm": "402462000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2022-01-01",
+              "period_end": "2022-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_авто",
+              "cash_flow_section": null,
+              "location": "{\"page\": 10, \"quote\": \"ВЫРУЧКА                                                                       21                434 390                402 462\", \"start_line\": 10, \"end_line\": 10, \"column_header\": \"2022\", \"unit_evidence\": {\"page\": 10, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"402 462\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2022_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"a4159c83ce14f3cf559a34c62bbf5af5a867b708ead419e645d9217f958c829f\", \"fact_index\": 98}",
+              "sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+              "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_FY_2023/IFRS_FY2023_RUS.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:94e95457aac25fba79d5d010d9aa44e009dc7471655f0d09ac704900e1f3f1f6"
+              ]
+            },
+            {
+              "id": 98,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "434390",
+              "value_norm": "434390000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2023-01-01",
+              "period_end": "2023-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 1,
+              "check_status": "проверено_авто",
+              "cash_flow_section": null,
+              "location": "{\"page\": 10, \"quote\": \"ВЫРУЧКА                                                                       21                434 390                402 462\", \"start_line\": 10, \"end_line\": 10, \"column_header\": \"2023\", \"unit_evidence\": {\"page\": 10, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 5, \"end_line\": 5}, \"raw_value\": \"434 390\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2023_12_31\", \"text_method\": \"native\", \"extraction_sha256\": \"a4159c83ce14f3cf559a34c62bbf5af5a867b708ead419e645d9217f958c829f\", \"fact_index\": 97}",
+              "sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+              "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/IFRS/IRFS_FY_2023/IFRS_FY2023_RUS.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:1:94e95457aac25fba79d5d010d9aa44e009dc7471655f0d09ac704900e1f3f1f6"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nспециального назначения за год, закончившийся\n31 декабря 2023 года и аудиторское заключение\nнезависимого аудитора",
+              "start_line": 7,
+              "end_line": 10
+            },
+            {
+              "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+              "topic": "accounting_policy",
+              "page": 2,
+              "quote": "ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ О ВЛИЯНИИ СТАНДАРТА МСФО 16                                             68-71",
+              "start_line": 29,
+              "end_line": 29
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:23.686300+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    },
+    {
+      "ticker": "MVID",
+      "year": 2025,
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "source_database_sha256": "3f790c7e368dad7f185f1f770bd383cfc5e6b8b6687d364767f631920a9fc1ec",
+      "source_database_unchanged": true,
+      "financial_source_rows_unchanged": true,
+      "reviewed_database_sha256": "ff2f5824c7fd5be483f70412dc71f02f0a6f8a13f6e3c3e431fa2a5d3edda4a6",
+      "comparability_review": {
+        "review_sha256": "206d459ba6e2d18e92baa639d766cf50be17c834fc87c28a33e102e876c03ac7",
+        "payload": {
+          "review": {
+            "version": 1,
+            "ticker": "MVID",
+            "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+            "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+            "decision": "insufficient_data",
+            "scope": "group",
+            "segment_name": null,
+            "item_id": "revenue",
+            "accounting_basis": null,
+            "perimeter_basis": null,
+            "methodology_version": null,
+            "source_context_reviewed": true,
+            "observations": [
+              {
+                "source_id": 216,
+                "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+                "normalized_value": "451642000000"
+              },
+              {
+                "source_id": 215,
+                "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+                "normalized_value": "324761000000"
+              }
+            ],
+            "evidence": [
+              {
+                "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 1,
+                  "start_line": 5,
+                  "end_line": 9
+                }
+              },
+              {
+                "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+                "topic": "accounting_policy",
+                "evidence": {
+                  "page": 3,
+                  "start_line": 19,
+                  "end_line": 19
+                }
+              }
+            ]
+          },
+          "snapshots": [
+            {
+              "id": 216,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "451642",
+              "value_norm": "451642000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 9, \"quote\": \"ВЫРУЧКА                                                                                                21                     324 761                     451 642\", \"start_line\": 8, \"end_line\": 8, \"column_header\": \"2024\", \"unit_evidence\": {\"page\": 9, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 4, \"end_line\": 4}, \"raw_value\": \"451 642\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2024_12_31\", \"text_method\": \"ocr\", \"extraction_sha256\": \"8a7c6fc2b8f047007f403741dea8b978bb775c3e591a966e852da91c7dec3ada\", \"fact_index\": 112}",
+              "sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+              "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:2662cd691809879558dd0ba9cacc1bdbbbdacac53121de5be1161f7b58936ee9"
+              ]
+            },
+            {
+              "id": 215,
+              "company_id": 1,
+              "item_id": "revenue",
+              "value": "324761",
+              "value_norm": "324761000000",
+              "unit": "млн руб.",
+              "currency": "RUB",
+              "period_start": "2025-01-01",
+              "period_end": "2025-12-31",
+              "period_type": "FY",
+              "standard": "IFRS",
+              "scope": "group",
+              "segment_name": null,
+              "document_id": 2,
+              "check_status": "проверено_вручную",
+              "cash_flow_section": null,
+              "location": "{\"page\": 9, \"quote\": \"ВЫРУЧКА                                                                                                21                     324 761                     451 642\", \"start_line\": 8, \"end_line\": 8, \"column_header\": \"2025\", \"unit_evidence\": {\"page\": 9, \"quote\": \"(в миллионах российских рублей, за исключением прибыли на акцию)\", \"start_line\": 4, \"end_line\": 4}, \"raw_value\": \"324 761\", \"number_format\": \"space_grouped_decimal\", \"model_raw_value\": null, \"model_observation_key\": \"revenue__2025_12_31\", \"text_method\": \"ocr\", \"extraction_sha256\": \"8a7c6fc2b8f047007f403741dea8b978bb775c3e591a966e852da91c7dec3ada\", \"fact_index\": 111}",
+              "sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+              "url": "https://www.mvideoeldorado.ru/fileadmin/user_upload/konsolidirovannaya-otchyotnost-pao-mvideo-za-2025-goddlya-publikacii.pdf",
+              "document_policy_review_ids": [
+                "ifrs_document_policy:2:2662cd691809879558dd0ba9cacc1bdbbbdacac53121de5be1161f7b58936ee9"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+              "topic": "accounting_policy",
+              "page": 1,
+              "quote": "Консолидированная финансовая отчетность\nза год, закончившийся 31 декабря 2025 года\nи аудиторское заключение\n\nнезависимого аудитора",
+              "start_line": 5,
+              "end_line": 9
+            },
+            {
+              "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+              "topic": "accounting_policy",
+              "page": 3,
+              "quote": "в соответствии со Стандартами «Стандарты МСФО».",
+              "start_line": 19,
+              "end_line": 19
+            }
+          ]
+        },
+        "decision": "insufficient_data",
+        "reviewed_at_utc": "2026-11-28T11:31:23.943716+00:00",
+        "source_numbers_modified": false,
+        "source_financial_statuses_modified": false
+      },
+      "reloaded_revenue_yoy": {
+        "blocked": true,
+        "value": null,
+        "reason": "Сопоставимость периодов МСФО не подтверждена: revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.; revenue: не подтверждена accounting_basis; revenue: не подтверждена perimeter_basis; revenue: не подтверждена methodology_version"
+      }
+    }
+  ],
+  "comparability_approved": false,
+  "source_numbers_modified": false,
+  "source_financial_statuses_modified": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Ограниченный просмотр не устанавливает одинаковый периметр годовых рядов. Сохранённое insufficient_data проверено после повторного открытия БД; финансовая приёмка сумм не подменяет экономическую сопоставимость."
+}

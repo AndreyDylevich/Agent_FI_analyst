@@ -62,3 +62,18 @@ def test_policy_journal_is_idempotent_and_preserves_all_financial_source_rows(tm
  with conn:conn.execute('UPDATE meta SET value=? WHERE key=?',(json.dumps(data),row['key']))
  with pytest.raises(ValueError,match='Контрольная сумма'):load_document_policies(conn,first['policy']['document_id'])
  conn.close()
+
+
+@pytest.mark.parametrize('ticker,year,kind',[
+ ('MTSS',2021,'ifrs_annual'),('MTSS',2023,'ifrs_annual'),('MTSS',2025,'ifrs_annual'),
+ ('SGZH',2021,'ifrs_annual'),('SGZH',2023,'special_purpose_ifrs_based'),('SGZH',2025,'special_purpose_ifrs_based'),
+ ('MVID',2023,'special_purpose_ifrs_based'),('MVID',2025,'ifrs_annual')])
+def test_annual_special_purpose_basis_is_preserved_separately_from_general_ifrs(ticker,year,kind):
+ from datetime import date
+ from agent.metrics.engine import Period
+ saved=json.loads((FIXTURES/f'{ticker.lower()}_fy{year}_policy_pages.json').read_text());pdf=PDFText(saved['pdf_sha256'],tuple(Page(**p) for p in saved['pages']))
+ policy=compile_document_policy(pdf,ticker,Period(date(year,1,1),date(year,12,31),'FY'))
+ assert policy['financial_reporting_basis']['kind']==kind and not policy['comparability_approved']
+ assert policy['review_scope']==['financial_reporting_basis','lease_payment_caption']
+ assert policy['ifrs18']['adoption']=='not_disclosed_in_reviewed_notes'
+ if kind=='special_purpose_ifrs_based':assert 'специального назначения' in policy['evidence']['annual_title']['quote']

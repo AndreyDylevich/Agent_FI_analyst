@@ -1,0 +1,180 @@
+{
+  "version": 3,
+  "ticker": "SGZH",
+  "reviewer": "Codex: визуальная транскрипция финансовых строк и проверка native-контекста, 28.11.2026",
+  "reason": "Выбранные исходные суммы независимо переписаны с оригинальных страниц и совпали с GigaChat после адресной проверки колонок/знаков/масштаба. Подтверждается точность исходного факта. Полнота раскрытий, нулевые отсутствующие компоненты, экономическая сопоставимость и завершение этапа этим не одобряются.",
+  "pdf_sha256": "1193ce001ac6c4b973b8b5272ace71ffe3205f69d7d9d60a3f8f87abada8e5d8",
+  "reference_sha256": "e2411087b34379b319dd656970b4c0e250633d970c39156b71a89e2a9754be37",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "source_context_reviewed": true,
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_credit_loss_allowance_change",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_other_adjustments_sgzh",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_subsidiary_disposal_advance",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "cf_other_investing",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_short_bank_loans_eur",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_short_bonds_rub",
+      "statement": "notes",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "note_lease_contract_changes",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_interest_borrowings",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_interest_other",
+      "statement": "notes",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "note_finance_fair_value_expense",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    },
+    {
+      "item_id": "note_finance_other_component",
+      "statement": "notes",
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+    }
+  ]
+}

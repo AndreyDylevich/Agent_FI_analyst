@@ -20,11 +20,11 @@ FIXTURES=Path(__file__).parent/'fixtures/ifrs'
 
 def inputs(year):
  ref=json.loads((FIXTURES/f'mvid_fy{year}_income_cash_reference.json').read_text());saved=json.loads((FIXTURES/f'mvid_fy{year}_income_cash_pages.json').read_text());pdf=PDFText(saved['pdf_sha256'],tuple(Page(**p) for p in saved['pages']),tuple(saved.get('warnings',[])),saved.get('processing',{}));period=Period(date(year,1,1),date(year,12,31),'FY');review=compile_reviewed_tables(pdf,period);context=source_context(pdf.pages,ticker='MVID',period=period,entity_token='М.ВИДЕО',line_items=config.line_items());assert context
- facts=[]
+ facts=[];items=config.line_items()
  for r in ref['rows']:
   o=next(o for o in review.observations.values() if (o['item_id'],o['statement'],o['period_start'],o['period_end'])==(r['item_id'],r['statement'],r['start'],r['end']))
   row={'item_id':r['item_id'],'original_name':r['original_name'],'raw_value':r['raw_value'],'number_format':'space_grouped_decimal','unit':'млн руб.','unit_evidence':o['unit_evidence'],'evidence':r['evidence'],'column_header':o['column_header'],'period_start':r['start'],'period_end':r['end'],'period_type':o['period_type'],'statement':r['statement'],'cash_flow_section':r['cash_flow_section']}
-  facts.extend(parse_extraction(json.dumps({**context,'facts':[row],'warnings':[]},ensure_ascii=False),pdf.pages,ticker='MVID',period=period,entity_token='М.ВИДЕО',line_items=config.line_items()).facts)
+  facts.extend(parse_extraction(json.dumps({**context,'facts':[row],'warnings':[]},ensure_ascii=False),pdf.pages,ticker='MVID',period=period,entity_token='М.ВИДЕО',line_items=items).facts)
  return ref,pdf,period,review,tuple(facts)
 
 

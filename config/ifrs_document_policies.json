@@ -488,6 +488,622 @@
         "13": "eec8a241eb50960f1bb441b0ca73ef653b7a44793215f8e6a77464616b3aa845",
         "14": "5336634b98ea60b735d0cbaed4b6bc934acae9626b85bf576bdec3de14db4012"
       }
+    },
+    {
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+      "ticker": "MTSS",
+      "report_start": "2021-01-01",
+      "report_end": "2021-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "3af7a7f3651207b78700c8b9efd8733425f59ee02aadc1a44b6ed1f9ef75565a",
+        "3": "f363d363e95c3f509ca6bdf51429581591002c15fc0019c1229fdeb1d3109501",
+        "18": "4b484a3c4a305a19de25dfbb867b108b69f4377ee921ef7c3e97dbb70981e9b5"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 10
+          },
+          "contains": [
+            "финансовая отчетность"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 3,
+            "start_line": 24,
+            "end_line": 24
+          },
+          "contains": [
+            "2021 года, в соответствии с Международными стандартами финансовой отчетности"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 18,
+            "start_line": 13,
+            "end_line": 13
+          },
+          "contains": [
+            "Погашение основной суммы обязательств по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ifrs_annual",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "principal_explicit",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+      "ticker": "MTSS",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "54405c4cff2c12f2f2c390b31aac19c35e1b28e240f79080d054f871b656ee36",
+        "3": "f706fbf3e8ccf6f7a98aaa5c8e5e4c2cd6934aaf94e3e56a2e9bd334eba74db9",
+        "18": "122cf735d4f37947f12ddcde5e871c5dee88b707a5e314f673cfe3bf9d60559f"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 10
+          },
+          "contains": [
+            "финансовая отчетность"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 3,
+            "start_line": 23,
+            "end_line": 23
+          },
+          "contains": [
+            "2023 года, в соответствии с Международными стандартами финансовой отчетности"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 18,
+            "start_line": 13,
+            "end_line": 13
+          },
+          "contains": [
+            "Погашение основной суммы обязательств по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ifrs_annual",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "principal_explicit",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "ticker": "MTSS",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "1c740caf9ac7d5362ea455658a54876df3d3af13b50972336e2d4c500eef1388",
+        "3": "a3a998e53a82f2e1a60e434db8fe0ad90cb52cd33485d06bfdeadbfbae940da8",
+        "15": "1fe32140726e90a462d6b9cf2d2d44d487d28618bafe380b7b8647c488e855f7"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 9
+          },
+          "contains": [
+            "финансовая отчетность"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 3,
+            "start_line": 21,
+            "end_line": 21
+          },
+          "contains": [
+            "МСФО"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 15,
+            "start_line": 15,
+            "end_line": 15
+          },
+          "contains": [
+            "Погашение основной суммы обязательств по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ifrs_annual",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "principal_explicit",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "ticker": "SGZH",
+      "report_start": "2021-01-01",
+      "report_end": "2021-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "2f34cd01f898c8807ec6d48aa52d2f80aba97df6394532892e5f8e4944e58f17",
+        "2": "30b2bc4bc5802822636e2c4c8d7198c895fc56b3f56c9940a5111e334dfa3c6b",
+        "15": "0e80b04a9d236b57515dc9f7a928f1d2adff37e6006b66244e9f77fde91359dd"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 9
+          },
+          "contains": [
+            "финансовая отчетность"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 2,
+            "start_line": 29,
+            "end_line": 29
+          },
+          "contains": [
+            "3.  Новые и пересмотренные Международные стандарты финансовой отчетности                               19"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 15,
+            "start_line": 38,
+            "end_line": 38
+          },
+          "contains": [
+            "Платежи по обязательствам по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ifrs_annual",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "ticker": "SGZH",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "cf691dbcbdc4ca3e0a1ccd93e437e93445cda88bc23779f5e54b7c39621069b3",
+        "2": "e4adc6863702dc93cbd53c3c68b532617d269d503d9fb475bf1ea2d803fd99a2",
+        "11": "71f5d7be1a999e1db722cc4f57cb638437e3080ec96c58596356c18e02ca1977"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 8,
+            "end_line": 11
+          },
+          "contains": [
+            "специального назначения"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 2,
+            "start_line": 32,
+            "end_line": 32
+          },
+          "contains": [
+            "3.  Новые и пересмотренные Международные стандарты финансовой отчетности                             14"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 11,
+            "start_line": 51,
+            "end_line": 51
+          },
+          "contains": [
+            "Платежи по обязательствам по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "special_purpose_ifrs_based",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+      "ticker": "SGZH",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "3a2054599634516a677655baaf60e156c02c011412440aa08908ab66229f1944",
+        "2": "a3a933b54ebe5cc440bdb7cbf97aa2c79a0b5dd4daf765b2cdec0edb07ff0e8c",
+        "10": "26c6156b977ecb919160007125ac65423e0b30b5d6513c8e1367a3be6d8e2a90"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 10
+          },
+          "contains": [
+            "специального назначения"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 2,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "contains": [
+            "3.  Новые и пересмотренные Международные стандарты финансовой отчетности                                13"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 10,
+            "start_line": 53,
+            "end_line": 53
+          },
+          "contains": [
+            "Платежи по обязательствам по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "special_purpose_ifrs_based",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+      "ticker": "MVID",
+      "report_start": "2023-01-01",
+      "report_end": "2023-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": false,
+      "page_text_sha256": {
+        "1": "7886c2ef0d54f336ee88adf56d35e1574ede8a50d017d93a09457d3ea453bcf7",
+        "2": "8f70efea765af9ad3c6383227542013dd30a03c7af8f0b2cc5aad0396dc24c32",
+        "13": "94796d192aa460d577011611878266ed55e018950203bb243a2a7fdbb090d96e"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 7,
+            "end_line": 10
+          },
+          "contains": [
+            "специального назначения"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 2,
+            "start_line": 29,
+            "end_line": 29
+          },
+          "contains": [
+            "МСФО"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 13,
+            "start_line": 27,
+            "end_line": 27
+          },
+          "contains": [
+            "Выплаты обязательств по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "special_purpose_ifrs_based",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
+    },
+    {
+      "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+      "ticker": "MVID",
+      "report_start": "2025-01-01",
+      "report_end": "2025-12-31",
+      "report_kind": "FY",
+      "reviewed": true,
+      "reviewer": "Codex: проверка исходных титулов/заявленной основы и подписей арендных платежей, 28.11.2026",
+      "reason": "Ограниченный обзор: подтверждены указанная основа годового выпуска и собственная подпись арендного платежа. Отсутствие записей в остальных массивах не означает отсутствия изменений политик/периметра. Полная сопоставимость не одобрена.",
+      "review_scope": [
+        "financial_reporting_basis",
+        "lease_payment_caption"
+      ],
+      "ocr_visual_review_confirmed": true,
+      "page_text_sha256": {
+        "1": "181d3ca36f148d5688c7ccdbf642757807e3b4953981c15a8925dea21f94b4c3",
+        "3": "27d591982f068c5be5672749acb61fad085f1e5fae9232bfdf8a6f9436cb6dc0",
+        "12": "9fa50a480d1a34ed70fbb2079e7eb2944072e7d50c13184b45f4fb786bdc295c"
+      },
+      "evidence": {
+        "annual_title": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 1,
+            "start_line": 5,
+            "end_line": 9
+          },
+          "contains": [
+            "финансовая отчетность"
+          ]
+        },
+        "basis_standard": {
+          "topic": "accounting_basis",
+          "address": {
+            "page": 3,
+            "start_line": 19,
+            "end_line": 19
+          },
+          "contains": [
+            "МСФО"
+          ]
+        },
+        "lease_caption": {
+          "topic": "ifrs16",
+          "address": {
+            "page": 12,
+            "start_line": 26,
+            "end_line": 26
+          },
+          "contains": [
+            "Погашение обязательств по аренде"
+          ]
+        }
+      },
+      "financial_reporting_basis": {
+        "kind": "ifrs_annual",
+        "evidence_ids": [
+          "annual_title",
+          "basis_standard"
+        ]
+      },
+      "policy_changes": [],
+      "perimeter_events": [],
+      "comparative_presentation": [],
+      "ifrs16": {
+        "lease_payment_definition": "lease_payment_unspecified",
+        "evidence_ids": [
+          "lease_caption"
+        ]
+      },
+      "ifrs18": {
+        "adoption": "not_disclosed_in_reviewed_notes",
+        "evidence_ids": [],
+        "transition_bridge_reviewed": false
+      },
+      "cash_flow_classifications": []
     }
   ]
 }

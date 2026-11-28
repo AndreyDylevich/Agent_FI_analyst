@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "ticker": "SGZH",
+  "reviewer": "Codex: визуальная транскрипция финансовых строк и проверка native-контекста, 28.11.2026",
+  "reason": "Выбранные исходные суммы независимо переписаны с оригинальных страниц и совпали с GigaChat после адресной проверки колонок/знаков/масштаба. Подтверждается точность исходного факта. Полнота раскрытий, нулевые отсутствующие компоненты, экономическая сопоставимость и завершение этапа этим не одобряются.",
+  "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+  "reference_sha256": "f54f427c0ce69485ce08c8d5f9cbcf9bd617586b3bc5e6028f3b577a9d1a2671",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "source_context_reviewed": true,
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "capex_total_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    }
+  ]
+}

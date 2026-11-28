@@ -1,0 +1,2449 @@
+{
+  "checked_date_moscow": "2026-11-28",
+  "ok": true,
+  "fresh_gigachat_acceptance": true,
+  "selected_values_count": 220,
+  "source_reports_count": 6,
+  "reported_flow_years_by_ticker": {
+    "MTSS": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "SGZH": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "years": [
+    {
+      "ticker": "MTSS",
+      "report_year": 2021,
+      "reported_flow_years": [
+        2020,
+        2021
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46030915346",
+      "source_commit": "edad71f20ebc18fbb92f46323111b5430482765e",
+      "whole_source_run_conclusion": "success",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "30ab22cc89011cac70a841cf8338494f863e04813b21d0c87a7e1efe526d499a",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 4,
+      "provider_tokens": 24582,
+      "independent_reference_check": {
+        "year": 2021,
+        "pdf_sha256": "3c60892d36b2d90d3b6de49be1b0eb1e50ec29d809edf491a2f5f7d2e5a4ccee",
+        "source_values_count": 41,
+        "stored_statuses": {
+          "не_проверено": 13,
+          "проверено_авто": 28
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_expense_control",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_expense_control",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2019-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_held_for_sale",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_after_hfs",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_after_hfs",
+              "period_end": "2020-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_closing_hfs",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "недостаточно_данных",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_closing_hfs",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_closing_hfs",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "недостаточно_данных",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_closing_hfs",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "3c01ba51e2ab74a63f07c7b8d4f327b17852869ad2ab2d963cb1bc81e1d5abc9",
+        "reference_sha256": "aae8f940e66ec4e6e97cf91d0a3688aa5c184b4d06931b65b9608616fb3c5c1e",
+        "ok": true
+      },
+      "requested_positions": 42,
+      "missing_observations": [
+        {
+          "item_id": "cf_cash_held_for_sale",
+          "period_start": null,
+          "period_end": "2021-12-31",
+          "statement": "cash_flow"
+        }
+      ]
+    },
+    {
+      "ticker": "MTSS",
+      "report_year": 2023,
+      "reported_flow_years": [
+        2022,
+        2023
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46027798833",
+      "source_commit": "060751970951183b3ceabc548a2e94ea6cf80617",
+      "whole_source_run_conclusion": "failure",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "94a65a1001fbba92c1f5e8fe063c5c0612ab16903884357edc5cd747a7b3450e",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 4,
+      "provider_tokens": 23279,
+      "independent_reference_check": {
+        "year": 2023,
+        "pdf_sha256": "8b631a3f90574c2a9b4f4b621b304969cd9e888f37f0c912d34255ec45dfb563",
+        "source_values_count": 41,
+        "stored_statuses": {
+          "не_проверено": 13,
+          "проверено_авто": 28
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_expense_control",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_expense_control",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_held_for_sale",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_after_hfs",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_after_hfs",
+              "period_end": "2022-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_closing_hfs",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "1000000",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_closing_hfs",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "недостаточно_данных",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_closing_hfs",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "1000000",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_closing_hfs",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "недостаточно_данных",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "957b25cd2877c5e4c7ea1fc688c4624be94794ea4fcf7fd971ad4e224187cee3",
+        "reference_sha256": "a799acc7b89bb297e5389285e5bb8535b9a4e496dc441299c014d62fe74acac9",
+        "ok": true
+      },
+      "requested_positions": 42,
+      "missing_observations": [
+        {
+          "item_id": "cf_cash_held_for_sale",
+          "period_start": null,
+          "period_end": "2022-12-31",
+          "statement": "cash_flow"
+        }
+      ]
+    },
+    {
+      "ticker": "MTSS",
+      "report_year": 2025,
+      "reported_flow_years": [
+        2024,
+        2025
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46027798833",
+      "source_commit": "060751970951183b3ceabc548a2e94ea6cf80617",
+      "whole_source_run_conclusion": "failure",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "94a65a1001fbba92c1f5e8fe063c5c0612ab16903884357edc5cd747a7b3450e",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 4,
+      "provider_tokens": 21995,
+      "independent_reference_check": {
+        "year": 2025,
+        "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+        "source_values_count": 40,
+        "stored_statuses": {
+          "не_проверено": 13,
+          "проверено_авто": 27
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_expense_control",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening_hfs",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening_after_hfs",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening_after_hfs",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2024-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_opening_hfs",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "недостаточно_данных",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_opening_hfs",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "недостаточно_данных",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_opening_hfs",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "недостаточно_данных",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_opening_hfs",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "6a4a5264bcc7b1710617da1c3bc0c7597bfb2d4f7d13864ac416a2a645fc3cce",
+        "reference_sha256": "561de9e2b44adc53ad6a9b0f99fdab5253d75b3d67987825ce1c6100a9145c9e",
+        "ok": true
+      },
+      "requested_positions": 42,
+      "missing_observations": [
+        {
+          "item_id": "cf_cash_opening_hfs",
+          "period_start": null,
+          "period_end": "2024-12-31",
+          "statement": "cash_flow"
+        },
+        {
+          "item_id": "income_discontinued_expense_control",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "statement": "income"
+        }
+      ]
+    },
+    {
+      "ticker": "SGZH",
+      "report_year": 2021,
+      "reported_flow_years": [
+        2020,
+        2021
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46027913014",
+      "source_commit": "060751970951183b3ceabc548a2e94ea6cf80617",
+      "whole_source_run_conclusion": "success",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "e8d0b5e8e33814a6a2c3b9245d69bac63e13ce7cb5e1ab26f1c31209c7de31bb",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 4,
+      "provider_tokens": 19628,
+      "independent_reference_check": {
+        "year": 2021,
+        "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+        "source_values_count": 34,
+        "stored_statuses": {
+          "проверено_авто": 22,
+          "не_проверено": 12
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_ppe_intangibles",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_ppe_intangibles",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_rou",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_rou",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_ppe",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_intangibles",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2020-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2019-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2020-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2020-01-01",
+            "end": "2020-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "bc4034736d55abe34e697b38f76a174eca08de9220d53788e18ccbd3fce399d7",
+        "reference_sha256": "1b2ced2f2e7b7b7347d38751ac0be6d5216a314f48e58af41257569ad688ffed",
+        "ok": true
+      },
+      "requested_positions": 34,
+      "missing_observations": []
+    },
+    {
+      "ticker": "SGZH",
+      "report_year": 2023,
+      "reported_flow_years": [
+        2022,
+        2023
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46027913014",
+      "source_commit": "060751970951183b3ceabc548a2e94ea6cf80617",
+      "whole_source_run_conclusion": "success",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "e8d0b5e8e33814a6a2c3b9245d69bac63e13ce7cb5e1ab26f1c31209c7de31bb",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 3,
+      "provider_tokens": 18318,
+      "independent_reference_check": {
+        "year": 2023,
+        "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+        "source_values_count": 34,
+        "stored_statuses": {
+          "не_проверено": 8,
+          "проверено_авто": 26
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax_benefit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_profit_continuing",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_result",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_discontinued_result",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_depreciation_all_operations",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_total_ppe_intangibles",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_total_ppe_intangibles",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2022-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2021-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2022-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_continuing_discontinued_profit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_continuing_discontinued_profit",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "70a46cecc54a63d08fdd9b4ceaff7c52e0f1e52ece6a5c2a58abc5f4b8618fa8",
+        "reference_sha256": "9acf9e3ae56583c2de166e454c7a959679410df551743ea821e81cf900f07bd3",
+        "ok": true
+      },
+      "requested_positions": 34,
+      "missing_observations": []
+    },
+    {
+      "ticker": "SGZH",
+      "report_year": 2025,
+      "reported_flow_years": [
+        2024,
+        2025
+      ],
+      "source_run_url": "https://github.com/AndreyDylevich/Agent_FI_analyst/actions/runs/46027913014",
+      "source_commit": "060751970951183b3ceabc548a2e94ea6cf80617",
+      "whole_source_run_conclusion": "success",
+      "selected_year_extraction_succeeded": true,
+      "fresh_gigachat_acceptance": true,
+      "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+      "source_pdf_downloaded_this_run": false,
+      "database_sha256": "e8d0b5e8e33814a6a2c3b9245d69bac63e13ce7cb5e1ab26f1c31209c7de31bb",
+      "database_unchanged": true,
+      "response_hashes_and_source_columns_verified": true,
+      "provider_requests": 4,
+      "provider_tokens": 19920,
+      "independent_reference_check": {
+        "year": 2025,
+        "pdf_sha256": "dfee1f58da6d1fe1468d0537aa7dbf0e52a4effceda76d69bb39d90050454664",
+        "source_values_count": 30,
+        "stored_statuses": {
+          "не_проверено": 8,
+          "проверено_авто": 22
+        },
+        "ocr_observations_count": 0,
+        "unreviewed_ocr_observations_count": 0,
+        "ocr_financial_acceptance_complete": false,
+        "reference_check": {
+          "all_selected_values_verified": true,
+          "selected_values": [
+            {
+              "item_id": "revenue",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "revenue",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "operating_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "profit_before_tax",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "income_tax_benefit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "net_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "d_and_a",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_starting_net_profit",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfo",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cfi",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cff",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_total_ppe_intangibles",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "capex_total_ppe_intangibles",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_change_before_fx",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_fx_effect",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2024-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_opening",
+              "period_end": "2023-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2025-12-31",
+              "passed": true
+            },
+            {
+              "item_id": "cf_cash_closing_gross",
+              "period_end": "2024-12-31",
+              "passed": true
+            }
+          ],
+          "checks": {},
+          "expected_checks": [
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_tax_to_profit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_net_profit_vs_cf_start",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_flow_totals",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            },
+            {
+              "rule": "annual_cash_gross_rollforward",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "status": "пройдено",
+              "delta": "0",
+              "passed": true
+            }
+          ],
+          "metrics": {},
+          "financial_audit_complete": false,
+          "ok": true
+        },
+        "reviewed_checks": [
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_tax_to_profit",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_net_profit_vs_cf_start",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_flow_totals",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          },
+          {
+            "rule": "annual_cash_gross_rollforward",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "status": "пройдено",
+            "delta": "0",
+            "passed": true
+          }
+        ],
+        "structure_plan_sha256": "ed742129085f15dcc2da51c205c0ab3ecf9fc6664a3816b8e42d0e8d4a8f62d9",
+        "reference_sha256": "f54f427c0ce69485ce08c8d5f9cbcf9bd617586b3bc5e6028f3b577a9d1a2671",
+        "ok": true
+      },
+      "requested_positions": 30,
+      "missing_observations": []
+    }
+  ],
+  "earlier_failed_fy2021_preserved": {
+    "source_run_id": 46027798833,
+    "source_date_column_failure": true,
+    "source_responses_modified": false
+  },
+  "financial_history_validated": false,
+  "comparability_approved": false,
+  "financial_audit_complete": false,
+  "stage4_complete": false,
+  "messages_sent": 0,
+  "limitation": "Приняты 220 выбранных строк годовых ОПУ/ОДДС МТС/Сегежи, не полные формы. FY2023/FY2025 МТС приняты из частично неуспешного общего run; FY2021 отдельно из успешного исправленного прогона. Сравнительные колонки разных выпусков не объявляются однородной пересчитанной историей. Непроверенные статусы и прочерки сохранены; сопоставимость и полные исторические формы ещё не приняты."
+}

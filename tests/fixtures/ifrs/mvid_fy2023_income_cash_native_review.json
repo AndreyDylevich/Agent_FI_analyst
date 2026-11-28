@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "ticker": "MVID",
+  "reviewer": "Codex: оригинальные изображения годовых форм и контекста, 28.11.2026",
+  "reason": "Независимая визуальная транскрипция совпала с исходными суммами GigaChat, точными колонками, знаками и масштабом. Принимается точность исходных наблюдений; полнота экономических мостов и сопоставимость не одобряются.",
+  "pdf_sha256": "9f5c4cddbf21bfa6ef686ece6dc94f43cb181f4b49c1e061e4d08ea2de785914",
+  "reference_sha256": "d58465aaf468f7c01e650e6ce5e0fd4fc124067d9216ddccbb88666ae3de2571",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    10,
+    12,
+    13,
+    14
+  ],
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "finance_income",
+      "statement": "income",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "finance_expense",
+      "statement": "income",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_receivables_impairment_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_inventory_markdown_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_subsidized_loan_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_other_noncash_mvid",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_ppe_disposal",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "start": "2022-01-01",
+      "end": "2022-12-31"
+    }
+  ],
+  "source_context_reviewed": true
+}

@@ -1,0 +1,148 @@
+{
+  "version": 3,
+  "ticker": "SGZH",
+  "reviewer": "Codex: визуальная транскрипция финансовых строк и проверка native-контекста, 28.11.2026",
+  "reason": "Выбранные исходные суммы независимо переписаны с оригинальных страниц и совпали с GigaChat после адресной проверки колонок/знаков/масштаба. Подтверждается точность исходного факта. Полнота раскрытий, нулевые отсутствующие компоненты, экономическая сопоставимость и завершение этапа этим не одобряются.",
+  "pdf_sha256": "807aebac1cdbb8e759314bd1873567ad714988eae1da8b72cd983dea84e0de77",
+  "reference_sha256": "1b2ced2f2e7b7b7347d38751ac0be6d5216a314f48e58af41257569ad688ffed",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+  ],
+  "source_context_reviewed": true,
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    },
+    {
+      "item_id": "cf_depreciation_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "cf_depreciation_ppe_intangibles",
+      "statement": "cash_flow",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    },
+    {
+      "item_id": "cf_depreciation_rou",
+      "statement": "cash_flow",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "cf_depreciation_rou",
+      "statement": "cash_flow",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2021-01-01",
+      "end": "2021-12-31"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2020-01-01",
+      "end": "2020-12-31"
+    }
+  ]
+}

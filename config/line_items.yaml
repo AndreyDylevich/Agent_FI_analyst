@@ -5235,3 +5235,24 @@ items:
       - Предоставление финансирования от акционеров
       en: []
     rsbu_codes: []
+
+  # IAS 7 / IFRS 18: distinct published starting points of the indirect cash-flow statement.
+  - id: cf_starting_operating_profit
+    statement: cash_flow
+    name: Операционная прибыль в начале косвенной сверки CFO
+    sign: natural
+    notes: Только явно раскрытая операционная прибыль; не чистая прибыль и не прибыль до налогообложения. База IFRS 18 не выводится из календарного года.
+    ifrs_synonyms:
+      ru: [Операционная прибыль, Операционный убыток, Прибыль от операционной деятельности]
+      en: [Operating profit, Operating loss]
+    rsbu_codes: []
+
+  - id: cf_starting_profit_before_tax
+    statement: cash_flow
+    name: Прибыль до налогообложения в начале косвенной сверки CFO
+    sign: natural
+    notes: Только явно раскрытая прибыль до налога; не заменяет чистую или операционную прибыль.
+    ifrs_synonyms:
+      ru: [Прибыль до налогообложения, Убыток до налога на прибыль]
+      en: [Profit before tax, Loss before income tax]
+    rsbu_codes: []

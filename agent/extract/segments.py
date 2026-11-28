@@ -43,13 +43,28 @@ def extract_segments(pdf, provider, *, ticker, entity_token, period, output, cat
     output.mkdir(parents=True,exist_ok=True)
     if not document.get('reviewed') or not document.get('reviewer','').strip():
         raise ValueError('Сегментная структура требует отдельного просмотра')
+    source_profile=document['source_profile']
+    if (source_profile['pdf_sha256']!=pdf.sha256 or
+            (source_profile['report_start'],source_profile['report_end'],source_profile['report_kind'])!=
+            (str(period.start),str(period.end),period.kind)):
+        raise ValueError('Сегментное раскрытие относится к другой версии/периоду')
+    by_page={p.number:p for p in pdf.pages}
+    if not source_profile.get('page_text_sha256'):
+        raise ValueError('Нет просмотренных версий страниц сегментного раскрытия')
+    for number,digest in source_profile['page_text_sha256'].items():
+        if int(number) not in by_page or hashlib.sha256(by_page[int(number)].text.encode()).hexdigest()!=digest:
+            raise ValueError('Текст/адреса сегментного раскрытия изменились')
     for evidence in document['disclosure_evidence']:
         citation(evidence,{p.number:p for p in pdf.pages},max_lines=80,max_chars=12000)
     if not document['segments']:
-        if not document.get('quantitative_table_not_disclosed'):
+        if document.get('quantitative_table_not_disclosed') is not True or document['identities']:
             raise ValueError('Пустой сегментный выпуск не является успешным извлечением')
         report = {'pdf_sha256':pdf.sha256,'ticker':ticker,'runs':[],'checks':[],
-                'quantitative_table_not_disclosed':True,'source_evidence':document['disclosure_evidence'],
+                'quantitative_table_not_disclosed':True,'single_operating_segment_reported':document.get('single_operating_segment_reported',False),
+                'source_evidence':[asdict(citation(e,{p.number:p for p in pdf.pages},max_lines=80,max_chars=12000)) for e in document['disclosure_evidence']],
+                'disclosure_reviewed':True,'financial_values_verified':False,'provider_requests':0,'selected_values_count':0,
+                'absence_means_zero':False,'comparative_basis':document['comparative_basis'],
+                'disclosure_review_sha256':hashlib.sha256(json.dumps(document,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),
                 'financial_audit_complete':False,'comparability_approved':False}
         (output/'segments_check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         return report,[]

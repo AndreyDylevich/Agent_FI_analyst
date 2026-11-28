@@ -1,0 +1,147 @@
+{
+  "checked_date_moscow": "2026-11-28",
+  "objective": "Полностью завершить этап 4 до пятичасового лимита",
+  "stage4_complete": false,
+  "requirements": [
+    {
+      "id": "financial_extraction",
+      "requirement": "Все основные формы трёх компаний через GigaChat",
+      "status": "подтверждено_с_ограничениями_охвата",
+      "verified_progress": "МТС: 166 основных чисел + отдельные свежие капитал/ОДДС/долг/аренда/проценты/связи. Сегежа: 284 суммы/300 позиций; М.Видео: 281/314. Независимые эталоны исходных сумм пройдены; полное соответствие каждой требуемой формы/колонки ещё требует итогового адресного аудита."
+    },
+    {
+      "id": "notes",
+      "requirement": "Долг, аренда, сегменты и проценты",
+      "status": "подтверждено_с_ограничениями_источника",
+      "verified_progress": "Числовые раскрытия долга/аренды/процентов трёх компаний извлечены и проверены по эталонам. Сегменты МТС/Сегежи: 131 сумма. Для М.Видео подтверждено описание единственного сегмента и отсутствие отдельной количественной таблицы в просмотренных примечаниях; нули и дубликаты групповых сумм не созданы."
+    },
+    {
+      "id": "identities",
+      "requirement": "Бухгалтерские тождества и полные составы",
+      "status": "реализовано_и_проверено",
+      "verified_progress": "Проверены полные просмотренные составы и адресные тождества. Исходные прочерки дают insufficient_data, расхождения самого PDF сохраняются. Реальные источники и тесты покрывают ошибки знака/колонки/масштаба/состава."
+    },
+    {
+      "id": "cross_forms",
+      "requirement": "Связи между формами и примечаниями",
+      "status": "реализовано_с_исходными_пробелами",
+      "verified_progress": "Между формами сверены прибыль, капитал, долг, аренда, деньги и амортизация. МТС: 120 пройдено/29 недостаточно данных/7 расхождений. Полный мост процентов/аренды/денег местами не раскрыт; отдельные семейства не объявляются успешными."
+    },
+    {
+      "id": "provenance",
+      "requirement": "Точные PDF/периоды/валюта/масштаб/цитаты и сохранение ошибок",
+      "status": "подтверждено",
+      "verified_progress": "Повторно проверены SHA256 PDF/страниц/ответов, адреса/колонки, периоды, валюта/единицы, исходные и нормализованные Decimal, SQLite и неизменность входных БД. Неуспешные прогоны и оригинальные OCR сохранены."
+    },
+    {
+      "id": "ocr",
+      "requirement": "Независимая визуальная приёмка OCR",
+      "status": "подтверждено_для_извлечённых_наборов",
+      "verified_progress": "М.Видео: 273 H1-наблюдения, прежние годовые балансы и 115 годовых ОПУ/ОДДС приняты вручную на копиях. Восемь исходных расхождений OCI остаются спорными. Цифровые исправления OCR имеют отдельный визуальный журнал."
+    },
+    {
+      "id": "accounting_basis",
+      "requirement": "Подтверждённая учётная база/исключения/пересчёты",
+      "status": "подтверждено_в_ограниченном_обзоре",
+      "verified_progress": "Адресные журналы основ трёх H1 и восьми годовых выпусков. Специальные основы Сегежи FY2023/FY2025 и М.Видео FY2023 отделены от общей IFRS. Ограниченный обзор не объявляет отсутствие всех изменений политик."
+    },
+    {
+      "id": "perimeter",
+      "requirement": "Состав группы/приобретения/выбытия/банк",
+      "status": "частично_подтверждено",
+      "verified_progress": "Изменение контроля над БИК/обратная аренда и банковский бизнес МТС, рестейтмент сегментов и ограничения периметра отражены. Полный экономический анализ годовых сравнительных окон не завершён; рост блокируется."
+    },
+    {
+      "id": "standards",
+      "requirement": "IFRS 16 и подготовка к IFRS 18",
+      "status": "реализована_подготовка",
+      "verified_progress": "IFRS16: ROU/арендные обязательства/основной долг/проценты/подпись платежа раздельны. IFRS18: источник статуса применения, защита переходных сравнений, отдельные базы CFO по net profit/operating profit/PBT. Реальные переходные данные не изобретены; М.Видео H1 явно не применяет IFRS18 досрочно."
+    },
+    {
+      "id": "references",
+      "requirement": "Эталоны МСФО H1 2026 МТС/Сегежи/М.Видео",
+      "status": "подтверждено_для_извлечённых_наборов",
+      "verified_progress": "Независимые H1-эталоны трёх компаний сверены с GigaChat и оригинальными источниками. Суммы вне полных тождеств получили отдельную ручную приёмку; исходные расхождения не повышены."
+    },
+    {
+      "id": "history",
+      "requirement": "Извлечённая и принятая история за 3–5 лет",
+      "status": "частично_подтверждено",
+      "verified_progress": "13 годовых балансов: 182 выбранные суммы. МТС/Сегежа: 220 выбранных ОПУ/ОДДС из шести выпусков, годы 2020–2025. М.Видео: 218 сумм полных денежных строк годовых ОПУ/ОДДС FY2023/FY2025, годы 2022–2025. Исторические примечания/все строки остальных форм ещё не приняты."
+    },
+    {
+      "id": "comparability",
+      "requirement": "Сопоставимость рядов и методов для автоматического расчёта",
+      "status": "защита_подтверждена_анализ_не_завершён",
+      "verified_progress": "Три H1 и восемь годовых решений insufficient_data привязаны к точным источникам/политикам. После повторного открытия SQLite YoY заблокирован. Для положительного решения нужны отдельные доказательства политики, периметра и определения каждого PDF; арифметика не одобряет сопоставимость."
+    }
+  ],
+  "verified_partial_evidence": [
+    "docs/validation/ifrs_history_balance_acceptance_check.json",
+    "docs/validation/ifrs_mvid_ocr_review_check.json",
+    "docs/validation/ifrs_mts_cross_form_after_debt_check.json",
+    "docs/validation/ifrs_sgzh_cross_form_check.json",
+    "docs/validation/ifrs_mvid_cross_form_check.json",
+    "docs/validation/ifrs_mts_source_links_fresh_check.json",
+    "docs/validation/ifrs_mts_cross_form_after_source_links_check.json",
+    "docs/validation/ifrs_sgzh_full_mixed_check.json",
+    "docs/validation/ifrs_mvid_full_mixed_check.json",
+    "docs/validation/ifrs_mvid_full_ocr_acceptance_check.json",
+    "docs/validation/ifrs_segments_fresh_check.json",
+    "docs/validation/ifrs_policy_perimeter_review_check.json",
+    "docs/validation/ifrs_mts_primary_forms_fresh_check.json",
+    "docs/validation/ifrs_mts_cross_form_after_primary_check.json",
+    "docs/validation/ifrs_native_history_forms_fresh_check.json",
+    "docs/validation/ifrs_native_source_accuracy_review_check.json",
+    "docs/validation/ifrs_annual_preparation_basis_check.json",
+    "docs/validation/ifrs_mvid_segment_disclosure_check.json",
+    "docs/validation/ifrs_mvid_annual_forms_fresh_check.json",
+    "docs/validation/ifrs_annual_comparability_guard_check.json"
+  ],
+  "current_work": "Итоговый адресный аудит охвата H1; расширение исторических форм/примечаний; проверка сохранённых ограничений и воспроизводимости в Actions.",
+  "limit_accounting": "active goal work seconds",
+  "active_time_limit_seconds": 18000,
+  "wall_deadline_is_not_user_constraint": true,
+  "evidence_sha256": {
+    "docs/validation/ifrs_history_balance_acceptance_check.json": "07e90ba8aa31f34877a4ab0343bf115970568b0af7b52728e34c631623e4cd88",
+    "docs/validation/ifrs_mvid_ocr_review_check.json": "0576c20654d8c92d496a35ea8d6879029f25636a76ef15718415c948e7c35842",
+    "docs/validation/ifrs_mts_cross_form_after_debt_check.json": "b787306a40cf8aeccf052788a097da2eadbe51e6aaefa357f8d308ead2dff75a",
+    "docs/validation/ifrs_sgzh_cross_form_check.json": "f581771aa85e2bcc791204fb9e58ba6b59a6719e0de7f4f36c7d2939437908ba",
+    "docs/validation/ifrs_mvid_cross_form_check.json": "5c68186e8614920a7e33ac3eeda5a2e1279bfe5e1ae867e3b3c4eb27857cc741",
+    "docs/validation/ifrs_mts_source_links_fresh_check.json": "de69b05acc3fdd5af69804ff4ba030226e4526c66344da11dfe387242525f3dd",
+    "docs/validation/ifrs_mts_cross_form_after_source_links_check.json": "0bbb145c6a0e94689047aa1710468995d3b4b1fbe3edcf3325d8b4fbb9ab5b7f",
+    "docs/validation/ifrs_sgzh_full_mixed_check.json": "7f26128aa539dc147c29235f8ff8799a1d63471905f9973c8576ece5fbdda4bb",
+    "docs/validation/ifrs_mvid_full_mixed_check.json": "660ff9ac7f43c4f850bbfdf3d6e189433f2379fc8f40c36b3edee96485518bb9",
+    "docs/validation/ifrs_mvid_full_ocr_acceptance_check.json": "073e1a1c38db6e6d5e142b099de1910785220eccd3f403415b3102b7c8edf117",
+    "docs/validation/ifrs_segments_fresh_check.json": "ce930fe883207a8b90363b636dbb7e6411df3a019498d5e9c27698e5cabe57c7",
+    "docs/validation/ifrs_policy_perimeter_review_check.json": "1bd637360be75f80f1c4b45d8b2ab1db131590889cd691963525859f170b7eb4",
+    "docs/validation/ifrs_mts_primary_forms_fresh_check.json": "5e856faf13295f5dfa747595700c73551e49efb88dcb62a3b97af402882c3b98",
+    "docs/validation/ifrs_mts_cross_form_after_primary_check.json": "dd83bcf063372dd8b318d6c5d75197ffc5b6beb337dc87284c75ca8c31551e38",
+    "docs/validation/ifrs_native_history_forms_fresh_check.json": "f1df4bbd6dc90da9c78a4242251fc5e44450641c89ac356938fbd3f2e68daa2b",
+    "docs/validation/ifrs_native_source_accuracy_review_check.json": "74031d195a07092c493d6c50ba7848d960ef53d1a624cad7aae831219783987a",
+    "docs/validation/ifrs_annual_preparation_basis_check.json": "bd30bcfcab68014e15a6e0f15065932d43f2343438d2ddf652162a70e8f90eda",
+    "docs/validation/ifrs_mvid_segment_disclosure_check.json": "09723f9e621de3c7d047c8b2f631a18ef24e507e27aa4e7bce550082287f6e77",
+    "docs/validation/ifrs_mvid_annual_forms_fresh_check.json": "92cf1927c3ed70877b0edaf38d2d44ed7d37314e851032fdd73292c13fbe6c22",
+    "docs/validation/ifrs_annual_comparability_guard_check.json": "55b7fc3cd0a8a105180fc4510cca5d131845056ed58bf6a9992a0e2ff99e347d"
+  },
+  "remaining_work": [
+    {
+      "id": "history_full_scope",
+      "detail": "Довести выбранную историю балансов/потоков до полного требуемого состава исторических форм и примечаний долга/аренды/процентов, не выдавая 7 балансовых итогов и core flows за полные формы."
+    },
+    {
+      "id": "source_coverage_audit",
+      "detail": "Свести охват каждого H1-источника и примечания в единую адресную матрицу: извлечено, отсутствует в источнике, исходное расхождение или ещё не покрыто."
+    },
+    {
+      "id": "historical_basis_perimeter",
+      "detail": "Завершить экономический анализ политики/периметра/определений для исторических сравнений. Неизвестное основание может остаться insufficient_data при надёжной блокировке зависимых расчётов."
+    }
+  ],
+  "latest_local_validation": {
+    "tests_passed": 999,
+    "root_seconds": "147.52",
+    "isolated_checkout_seconds": "147.37",
+    "network_used_by_tests": false
+  }
+}

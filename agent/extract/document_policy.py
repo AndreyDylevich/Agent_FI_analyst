@@ -69,6 +69,7 @@ def compile_document_policy(pdf,ticker,period:Period,catalog=None):
         required(row['evidence_ids'],{'cash_flow'})
     digest=hashlib.sha256(json.dumps(profile,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
     return {'version':1,'pdf_sha256':pdf.sha256,'ticker':ticker,'period_start':str(period.start),'period_end':str(period.end),'period_type':period.kind,
+            **({'review_scope':profile['review_scope']} if 'review_scope'in profile else {}),
             'profile_sha256':digest,'reviewer':profile['reviewer'],'reason':profile['reason'],'evidence':evidence,
             **{name:profile[name] for name in ('financial_reporting_basis','policy_changes','perimeter_events','comparative_presentation','ifrs16','ifrs18','cash_flow_classifications')},
             'source_numbers_modified':False,'source_financial_statuses_modified':False,'comparability_approved':False,

@@ -22,7 +22,7 @@ def recalculate_reviewed(conn: sqlite3.Connection, review: dict, metric_ids: lis
     if not metrics or any(metric not in REGISTRY for metric in metrics):
         raise ValueError('Нужен непустой список известных показателей для пересчёта')
     saved_review = conn.execute('SELECT value FROM meta WHERE key=?',
-                                (f"ifrs_ocr_review:{review['review_sha256']}",)).fetchone()
+                                (f"{'ifrs_source_review' if review['review']['version']==3 else 'ifrs_ocr_review'}:{review['review_sha256']}",)).fetchone()
     if not saved_review or json.loads(saved_review['value']) != review:
         raise ValueError('Нет неизменённого журнала ручной приёмки OCR')
     for change in review['changes']:
@@ -39,7 +39,7 @@ def recalculate_reviewed(conn: sqlite3.Connection, review: dict, metric_ids: lis
     snapshot = [dict(row) for row in conn.execute('SELECT * FROM source_values_current WHERE company_id=? ORDER BY id',
                                                  (review['company_id'],))]
     calculation_basis = {'metrics': {metric: REGISTRY[metric].version for metric in metrics}, 'sources': snapshot}
-    key = f"ifrs_ocr_calculations:{review['review_sha256']}:{reference_sha256(calculation_basis)}"
+    key = f"{'ifrs_source_calculations' if review['review']['version']==3 else 'ifrs_ocr_calculations'}:{review['review_sha256']}:{reference_sha256(calculation_basis)}"
     previous = conn.execute('SELECT value FROM meta WHERE key=?', (key,)).fetchone()
     if previous:
         return json.loads(previous['value'])

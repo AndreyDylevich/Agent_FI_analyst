@@ -17,7 +17,7 @@ from agent.checks.source_links import SOURCE_RULES, compile_source_links
 from agent.checks.reviewed_tables import compile_reviewed_tables
 from agent.extract.pdf_text import PDFText
 from agent.extract.ocr_review import apply_ocr_balance_review, reference_sha256
-from agent.extract.ocr_source_review import apply_ocr_source_review
+from agent.extract.ocr_source_review import apply_ocr_source_review,apply_native_source_review
 from agent.extract.restatements import original_status
 from agent.extract.schemas import Citation, ExtractedFact, citation, parse_amount
 from agent.metrics.data import normalize_money
@@ -46,14 +46,15 @@ def _verify_ocr_review(conn: sqlite3.Connection, pdf: PDFText, source_id: int, v
     """Ручной статус OCR требует существующего валидного журнала; новых решений здесь нет."""
     if verified_ids is not None and source_id in verified_ids:
         return
-    for saved in conn.execute("SELECT key,value FROM meta WHERE key LIKE 'ifrs_ocr_review:%'"):
+    for saved in conn.execute("SELECT key,value FROM meta WHERE key LIKE 'ifrs_ocr_review:%' OR key LIKE 'ifrs_source_review:%'"):
         review = json.loads(saved['value'])
         if not any(change['source_id'] == source_id for change in review['changes']):
             continue
-        if saved['key'] != f"ifrs_ocr_review:{reference_sha256(review['review'])}":
+        prefix='ifrs_source_review' if review['review'].get('version')==3 else 'ifrs_ocr_review'
+        if saved['key'] != f"{prefix}:{reference_sha256(review['review'])}":
             raise ValueError('Контрольная сумма решения о приёмке OCR не соответствует журналу')
         # Ключ уже существует: процедура только проверяет решение и возвращает его без записи.
-        procedure=apply_ocr_source_review if review['review'].get('version') == 2 else apply_ocr_balance_review
+        procedure=apply_native_source_review if review['review'].get('version')==3 else apply_ocr_source_review if review['review'].get('version') == 2 else apply_ocr_balance_review
         procedure(conn, pdf, review['reference'], review['review'])
         if verified_ids is not None:
             verified_ids.update(change['source_id'] for change in review['changes'])
@@ -110,17 +111,17 @@ def load_document(conn: sqlite3.Connection, pdf: PDFText, ticker: str) -> tuple[
             _check_citation(asdict(fact.evidence), pdf)
             _check_citation(asdict(fact.unit_evidence), pdf)
         reviewed_ocr = fact.from_ocr and row['check_status'] == 'проверено_вручную'
-        if reviewed_ocr:
+        if row['check_status']=='проверено_вручную':
             _verify_ocr_review(conn, pdf, row['id'], verified_ocr_ids)
         # OCR допускается в арифметическую диагностику, но не получает одобрения этим чтением.
         result.append((fact, {'source_id': row['id'], 'extraction_sha256': location['extraction_sha256'],
                               'stored_status': row['check_status'], 'page': fact.evidence.page,
                               'citation_rechecked_from_pdf': not fact.from_ocr,
-                              'ocr_review_verified': reviewed_ocr}))
+                              'ocr_review_verified': reviewed_ocr,'manual_source_review_verified':row['check_status']=='проверено_вручную'}))
     return document, result
 
 
-def coverage(checks: list[dict], period: Period, specification: dict, implemented_rules: set[str] = frozenset()) -> list[dict]:
+def coverage(checks: list[dict], period: Period, specification: dict, implemented_rules: set[str] = frozenset(), facts=None) -> list[dict]:
     """Проверяет каждое обязательное окно; успех текущего года не заменяет сравнительный."""
     prior = period.shift_years(-1)
     windows = {'flow': (str(period.start), str(period.end)), 'comparative_flow': (str(prior.start), str(prior.end)),
@@ -141,15 +142,26 @@ def coverage(checks: list[dict], period: Period, specification: dict, implemente
                 raise ValueError('У обязательной проверки отсутствуют периоды')
             for window in required['periods']:
                 start, end = windows[window]
-                matching = [check for check in checks if check['rule'] == required['rule']
+                selected_rule=required['rule'];declared_basis=None;basis_problem=None
+                if required.get('declared_cash_flow_base') and facts is not None:
+                    base_rules={'cf_starting_net_profit':'profit_vs_cash_flow_base',
+                                'cf_starting_operating_profit':'operating_profit_vs_cash_flow_base',
+                                'cf_starting_profit_before_tax':'profit_before_tax_vs_cash_flow_base'}
+                    bases={f.item_id for f in facts if f.item_id in base_rules and
+                           (str(f.start),str(f.end))==(start,end)}
+                    if len(bases)==1:
+                        declared_basis=next(iter(bases));selected_rule=base_rules[declared_basis]
+                    else:basis_problem='Не раскрыта/не извлечена единственная исходная база CFO' if not bases else 'Несколько исходных баз CFO требуют отдельного разбора'
+                matching = [check for check in checks if check['rule'] == selected_rule
                             and check['start'] == start and check['end'] == end]
                 states = {check['status'] for check in matching}
                 status = ('расхождение' if 'расхождение' in states else
                           'пройдено' if states == {'пройдено'} else 'недостаточно_данных')
+                if basis_problem:status='недостаточно_данных'
                 missing = sorted({item for check in matching for item in check['result']['missing']})
-                requirements.append({'rule': required['rule'], 'start': start, 'end': end, 'status': status,
-                                     'missing_inputs': missing if matching else list(RULES.get(required['rule'], {})),
-                                     'implemented': required['rule'] in RULES or required['rule']=='complete_equity_rollforward' or required['rule'] in CASH_RULES | DEBT_RULES | SOURCE_RULES.keys() | implemented_rules})
+                requirements.append({'rule': selected_rule,**({'declared_cash_flow_base':declared_basis,'basis_limitation':basis_problem} if required.get('declared_cash_flow_base') else {}), 'start': start, 'end': end, 'status': status,
+                                     'missing_inputs': missing if matching else list(RULES.get(selected_rule, {})),
+                                     'implemented': selected_rule in RULES or required['rule']=='complete_equity_rollforward' or required['rule'] in CASH_RULES | DEBT_RULES | SOURCE_RULES.keys() | implemented_rules})
         states = {check['status'] for check in requirements}
         result.append({'id': family['id'], 'name': family['name'], 'requirements': requirements,
                        'limitation': family.get('limitation'),
@@ -201,7 +213,7 @@ def reconcile_document(sources: list[tuple[str, sqlite3.Connection]], pdf: PDFTe
                                   for index in check.fact_indices]})
     specification = config.load('ifrs_cross_form_checks')
     families = coverage(output, period, specification,
-                        {c['rule'] for c in reviewed_document.identities} if reviewed_document else set())
+                        {c['rule'] for c in reviewed_document.identities} if reviewed_document else set(),facts=facts)
     complete = all(family['status'] == 'пройдено' for family in families)
     discrepancies = any(check['status'] == 'расхождение' for check in output)
     return {'ticker': ticker, 'pdf_sha256': pdf.sha256, **metadata, 'source_integrity_verified': True,

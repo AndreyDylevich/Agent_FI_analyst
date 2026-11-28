@@ -27,7 +27,7 @@ BALANCE_ITEMS=('total_assets','non_current_assets','current_assets','equity_tota
 INCOME_CASH_ITEMS=('revenue','operating_profit','net_profit','profit_before_tax','income_tax','income_tax_benefit',
                    'd_and_a','cfo','cfi','cff','capex_ppe','capex_intangibles','capex_total_ppe_intangibles',
                    'cf_cash_opening','cf_cash_closing_gross','cf_cash_change','cf_cash_change_before_fx',
-                   'cf_fx_effect','cf_starting_net_profit')
+                   'cf_fx_effect','cf_starting_net_profit','cf_starting_operating_profit','cf_starting_profit_before_tax')
 CORE_FLOW_ITEMS=('revenue','net_profit','cfo','cfi','cff')
 
 

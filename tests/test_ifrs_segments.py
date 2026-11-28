@@ -65,3 +65,24 @@ def test_adding_children_to_group_sum_detects_double_counting(tmp_path):
  report,_=extract_segments(pdf,SegmentReferenceProvider('SGZH',reference),ticker='SGZH',entity_token='СЕГЕЖА ГРУПП',period=PERIOD,output=tmp_path/'bad',catalog=catalog)
  check=next(c for c in report['checks'] if c['rule']=='group_segments_sum_revenue' and c['end']=='2026-06-30')
  assert check['result']['status']=='расхождение' and check['result']['delta']==3952000000
+
+
+def test_single_segment_narrative_never_creates_zero_or_group_as_segment_facts(tmp_path):
+ saved=json.loads((Path(__file__).parent/'fixtures/ifrs/mvid_h1_2026_policy_pages.json').read_text());pdf=PDFText(saved['pdf_sha256'],tuple(Page(**p) for p in saved['pages']))
+ class NoProvider:
+  def extract(self,*a):raise AssertionError('Качественное раскрытие не вызывает денежное извлечение')
+ report,finished=extract_segments(pdf,NoProvider(),ticker='MVID',entity_token='М.ВИДЕО',period=PERIOD,output=tmp_path/'absence')
+ assert not finished and report['quantitative_table_not_disclosed'] and report['single_operating_segment_reported']
+ assert report['provider_requests']==0 and report['selected_values_count']==0
+ assert not report['financial_values_verified'] and not report['absence_means_zero'] and report['disclosure_reviewed']
+ assert 'единственного операционного сегмента' in report['source_evidence'][0]['quote']
+
+
+@pytest.mark.parametrize('change',['text','period','unreviewed_empty'])
+def test_missing_segment_values_require_exact_reviewed_disclosure(tmp_path,change):
+ from dataclasses import replace
+ saved=json.loads((Path(__file__).parent/'fixtures/ifrs/mvid_h1_2026_policy_pages.json').read_text());pdf=PDFText(saved['pdf_sha256'],tuple(Page(**p) for p in saved['pages']));catalog=json.loads((Path(__file__).parents[1]/'config/ifrs_segments.json').read_text());period=PERIOD
+ if change=='text':pdf=replace(pdf,pages=tuple(replace(p,text=p.text+'X') if p.number==14 else p for p in pdf.pages))
+ if change=='period':period=PERIOD.shift_years(-1)
+ if change=='unreviewed_empty':next(d for d in catalog['documents'] if d['ticker']=='MVID')['quantitative_table_not_disclosed']=False
+ with pytest.raises(ValueError):extract_segments(pdf,None,ticker='MVID',entity_token='М.ВИДЕО',period=period,output=tmp_path/'bad',catalog=catalog)

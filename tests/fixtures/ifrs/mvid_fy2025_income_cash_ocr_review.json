@@ -1,0 +1,710 @@
+{
+  "version": 2,
+  "ticker": "MVID",
+  "reviewer": "Codex: оригинальные изображения годовых форм и контекста, 28.11.2026",
+  "reason": "Независимая визуальная транскрипция совпала с исходными суммами GigaChat, точными колонками, знаками и масштабом. Принимается точность исходных наблюдений; полнота экономических мостов и сопоставимость не одобряются.",
+  "pdf_sha256": "2111cfe78d10e4d26fc123db2d333f91c3a542f2d5ff9146a23063b31e0f3833",
+  "reference_sha256": "30467098834ff6bcd3da74f883e1050e1d8de500bfa2db744627a87db8eb1bc9",
+  "reviewed_pages": [
+    1,
+    3,
+    9,
+    11,
+    12
+  ],
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "revenue",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cost_of_sales",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "gross_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "gross_profit",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "selling_admin_expenses_combined",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_other_operating_income",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_other_operating_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_other_operating_expense",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_investment_property_fv",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "operating_profit",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "finance_income",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "finance_income",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "finance_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "finance_expense",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_nonoperating_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_nonoperating_expense",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "profit_before_tax",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_tax_benefit",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "net_profit",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "income_oci_revaluation",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_oci_tax",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_oci_after_tax",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_comprehensive_total",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_comprehensive_total",
+      "statement": "income",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_starting_net_profit",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_tax_benefit_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "d_and_a",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_receivables_impairment_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_receivables_impairment_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_lease_termination_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_lease_termination_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_inventory_markdown_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_inventory_markdown_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_ppe_intangible_disposal_gain_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_ppe_intangible_disposal_gain_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_interest_income_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_interest_expense_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_investment_property_fv_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_fx_adjustment",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_other_noncash_mvid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_other_noncash_mvid",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_before_working_capital",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_inventories_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_receivables_advances_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_receivables_advances_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_other_tax_prepayments_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_other_tax_prepayments_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_payables_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_other_payables_accruals_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_other_payables_accruals_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_customer_liabilities_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_customer_liabilities_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_taxes_payable_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_taxes_payable_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_other_working_capital",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_other_working_capital",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_operating_before_interest_tax",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_income_tax_paid",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "interest_paid",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cfo",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "capex_ppe",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_ppe_disposal",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_ppe_disposal",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "capex_intangibles",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_consumer_loans_issued",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_consumer_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_interest_received",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_loans_issued",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_loans_issued",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cfi",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_bonds_issued",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_bonds_repaid",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_loans_raised",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_loans_repaid",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_other_borrowings_received",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_shareholder_financing",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_lease_financing_payments",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cff",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_reported_net_cash_change",
+      "statement": "cash_flow",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_reported_net_cash_change",
+      "statement": "cash_flow",
+      "start": "2024-01-01",
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2024-12-31"
+    },
+    {
+      "item_id": "cf_cash_opening",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2023-12-31"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "cf_cash_closing_gross",
+      "statement": "cash_flow",
+      "start": null,
+      "end": "2024-12-31"
+    }
+  ],
+  "visual_review_confirmed": true
+}

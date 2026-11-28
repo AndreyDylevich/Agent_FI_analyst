@@ -14,12 +14,13 @@ from agent.metrics.data import normalize_money
 from agent.metrics.engine import Period
 
 
-def apply_ocr_source_review(conn, pdf, reference, review):
+def _apply_source_review(conn, pdf, reference, review, *, recognition, version, meta_prefix):
     """Только явное решение после просмотра PDF; арифметика не запускает эту процедуру."""
+    confirmation='visual_review_confirmed' if recognition=='ocr' else 'source_context_reviewed'
     _keys(review, {'version','ticker','reviewer','reason','pdf_sha256','reference_sha256',
-                   'reviewed_pages','visual_review_confirmed','standard','scope','selected_observations'})
-    if (type(review['version']) is not int or review['version'] != 2
-            or review['visual_review_confirmed'] is not True or review['standard'] != 'IFRS'
+                   'reviewed_pages',confirmation,'standard','scope','selected_observations'})
+    if (type(review['version']) is not int or review['version'] != version
+            or review[confirmation] is not True or review['standard'] != 'IFRS'
             or review['scope'] != 'group'
             or not all(isinstance(review[k],str) and review[k].strip() for k in ('ticker','reviewer','reason'))):
         raise ValueError('Нужно явное решение о визуальной приёмке IFRS группы')
@@ -40,8 +41,8 @@ def apply_ocr_source_review(conn, pdf, reference, review):
     document = documents[0]
     period = Period(date.fromisoformat(document['period_start']),date.fromisoformat(document['period_end']),document['period_type'])
     structure = compile_reviewed_tables(pdf,period)
-    if not structure or not all(pages[o['evidence']['page']].method=='ocr' for o in structure.observations.values()):
-        raise ValueError('Нужна отдельно просмотренная точная структура OCR-источника')
+    if not structure or not all(pages[o['evidence']['page']].method==recognition for o in structure.observations.values()):
+        raise ValueError(f'Нужна отдельно просмотренная точная структура {recognition}-источника')
     fields = ('item_id','statement','start','end')
     signature = lambda r: tuple(r[k] for k in fields)
     reference_rows = {signature(r):r for r in reference['rows']}
@@ -56,7 +57,7 @@ def apply_ocr_source_review(conn, pdf, reference, review):
         raise ValueError('Повтор выбранного наблюдения')
     if any(k not in reference_rows or reference_rows[k]['status'] != 'не_проверено' for k in keys):
         raise ValueError('Расхождение источника нельзя одобрить визуальной приёмкой OCR')
-    digest = reference_sha256(review); meta_key = f'ifrs_ocr_review:{digest}'
+    digest = reference_sha256(review); meta_key = f'{meta_prefix}:{digest}'
     saved = conn.execute('SELECT value FROM meta WHERE key=?',(meta_key,)).fetchone()
     prior = json.loads(saved['value']) if saved else None
     known_ids = {c['source_id'] for c in prior['changes']} if prior else set()
@@ -77,7 +78,7 @@ def apply_ocr_source_review(conn, pdf, reference, review):
                 continue
             if (row['company_id'] != document['company_id'] or row['standard'] != 'IFRS'
                     or row['scope'] != 'group' or row['segment_name'] is not None or row['currency'] != 'RUB'
-                    or row['superseded_by'] is not None or not fact['from_ocr'] or not run['contexts']
+                    or row['superseded_by'] is not None or fact['from_ocr'] != (recognition=='ocr') or not run['contexts']
                     or run['statuses'][index] != 'не_проверено'
                     or row['check_status'] != ('проверено_вручную' if row['id'] in known_ids else 'не_проверено')):
                 raise ValueError('Чужое решение, расхождение или неподтверждённый OCR нельзя повысить')
@@ -91,6 +92,8 @@ def apply_ocr_source_review(conn, pdf, reference, review):
                     or fact['cash_flow_section'] != row['cash_flow_section']
                     or location['page'] not in expected['pages']):
                 raise ValueError('Число/знак/масштаб/форма/состав платежа не совпадают с независимым эталоном')
+            if expected.get('evidence') and {k:fact['evidence'][k] for k in ('page','start_line','end_line')}!=expected['evidence']:
+                raise ValueError('Строка исходного наблюдения не соответствует независимому адресу')
             for field in ('evidence','unit_evidence'):
                 proof = fact[field]
                 address = ({k:proof[k] for k in ('page','start_line','end_line')} if proof.get('start_line') is not None
@@ -131,8 +134,19 @@ def apply_ocr_source_review(conn, pdf, reference, review):
             'period_start':document['period_start'],'period_end':document['period_end'],'period_type':document['period_type'],
             'reviewed_at_utc':datetime.now(timezone.utc).isoformat(),'source_numbers_modified':False,
             'comparability_approved':False,'financial_audit_complete':False,
-            'structure_basis':structure.basis,'limitation':'Подтверждена точность выбранных исходных OCR-значений. Полнота сверок, экономический смысл и сопоставимость этим решением не одобрены.'}
+            **({'source_recognition':'native'} if recognition=='native' else {}),
+            'structure_basis':structure.basis,'limitation':f'Подтверждена точность выбранных исходных {"OCR" if recognition=="ocr" else "native"}-значений. Полнота сверок, экономический смысл и сопоставимость этим решением не одобрены.'}
     for change in changes:
         conn.execute("UPDATE source_values SET check_status='проверено_вручную' WHERE id=?",(change['source_id'],))
     conn.execute('INSERT INTO meta(key,value) VALUES (?,?)',(meta_key,json.dumps(result,ensure_ascii=False,sort_keys=True)))
     return result
+
+
+def apply_ocr_source_review(conn,pdf,reference,review):
+    """Версия 2: исходные OCR-значения после просмотра изображений оригинала."""
+    return _apply_source_review(conn,pdf,reference,review,recognition='ocr',version=2,meta_prefix='ifrs_ocr_review')
+
+
+def apply_native_source_review(conn,pdf,reference,review):
+    """Версия 3: точность непроверенных native-значений, отдельно от полноты тождеств."""
+    return _apply_source_review(conn,pdf,reference,review,recognition='native',version=3,meta_prefix='ifrs_source_review')

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "ticker": "SGZH",
+  "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+  "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен. Выпуск подготовлен на специальной основе; его нельзя автоматически объединять с общей МСФО.",
+  "decision": "insufficient_data",
+  "scope": "group",
+  "segment_name": null,
+  "item_id": "revenue",
+  "accounting_basis": null,
+  "perimeter_basis": null,
+  "methodology_version": null,
+  "source_context_reviewed": true,
+  "observations": [
+    {
+      "source_id": 56,
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "normalized_value": "96875000000"
+    },
+    {
+      "source_id": 55,
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "normalized_value": "88487000000"
+    }
+  ],
+  "evidence": [
+    {
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 1,
+        "start_line": 8,
+        "end_line": 11
+      }
+    },
+    {
+      "pdf_sha256": "03c6d58c3eab45dd06652ff73a5ff8fdb43b224b0991ae499cc423f7c6f9464a",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 2,
+        "start_line": 32,
+        "end_line": 32
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "ticker": "MTSS",
+  "reviewer": "Codex: визуальная транскрипция финансовых строк и проверка native-контекста, 28.11.2026",
+  "reason": "Выбранные исходные суммы независимо переписаны с оригинальных страниц и совпали с GigaChat после адресной проверки колонок/знаков/масштаба. Подтверждается точность исходного факта. Полнота раскрытий, нулевые отсутствующие компоненты, экономическая сопоставимость и завершение этапа этим не одобряются.",
+  "pdf_sha256": "38b31368aa2c670084a7a4b8fc71c7d73157ac9d8615f285ba8bb226f3d82e16",
+  "reference_sha256": "7d93b523453b7ffca36209eb5c1dae592c3e2429200c51ab1260c7ed4d25b4c1",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "source_context_reviewed": true,
+  "standard": "IFRS",
+  "scope": "group",
+  "selected_observations": [
+    {
+      "item_id": "ppe",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_investment_property",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "right_of_use_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "goodwill",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "intangible_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_associate_investments",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_noncurrent_financial_investments",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_deferred_tax_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_noncurrent_trade_receivables",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_bank_loans_issued_noncurrent",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_noncurrent_other_financial_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "balance_other_noncurrent_assets",
+      "statement": "balance",
+      "start": null,
+      "end": "2025-12-31"
+    },
+    {
+      "item_id": "income_finance_income",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_finance_expense",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_associate_nonoperating_expense_control",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    {
+      "item_id": "income_other_nonoperating_expense_control",
+      "statement": "income",
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    }
+  ]
+}

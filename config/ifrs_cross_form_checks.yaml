@@ -1,10 +1,11 @@
 # Приёмка одного выпуска МСФО. Пройденные частичные сверки не заменяют полные мосты.
-version: 1
+version: 2
 families:
   - id: profit_cash_flow
     name: Прибыль ОПУ и база косвенной сверки CFO
     checks:
       - rule: profit_vs_cash_flow_base
+        declared_cash_flow_base: true
         periods: [flow, comparative_flow]
   - id: profit_equity
     name: Прибыль ОПУ и отчёт об изменениях капитала

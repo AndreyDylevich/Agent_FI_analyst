@@ -11,7 +11,7 @@ from agent.config import is_stock, opening_stock, source_forms
 from agent.metrics.data import UNIT_MULTIPLIERS, normalize_money
 from agent.metrics.engine import Period
 
-VERSION = 13
+VERSION = 14
 
 
 def _object(properties: dict) -> dict:
@@ -147,6 +147,18 @@ def cash_change_basis(evidence, page: Page) -> str | None:
     if len(fx)!=1:return None
     if fx[0]<first:return 'after_fx'
     if fx[0]>last:return 'before_fx'
+    return None
+
+
+def cash_flow_profit_base(name: str) -> str | None:
+    """Классифицирует только подпись исходной базы CFO, не читая финансовые числа."""
+    name=normalized_text(name).casefold()
+    if re.search(r'(?:прибыл|убыт|profit|loss).{0,35}(?:до.{0,10}(?:налог|налогооблож)|before.{0,10}(?:income.?tax|tax))',name):
+        return 'cf_starting_profit_before_tax'
+    if re.search(r'операционн.{0,12}(?:прибыл|убыт)|(?:прибыл|убыт).{0,12}от операционн|operating.{0,8}(?:profit|loss)',name):
+        return 'cf_starting_operating_profit'
+    if re.search(r'чист.{0,12}(?:прибыл|убыт)|(?:прибыл|убыт).{0,15}за (?:год|период)|net.{0,8}(?:profit|loss)|(?:profit|loss) for (?:the )?(?:period|year)',name):
+        return 'cf_starting_net_profit'
     return None
 
 
@@ -362,6 +374,8 @@ def parse_extraction(content: str, pages: tuple[Page, ...], *, ticker: str, peri
             raise ValueError('Исходный масштаб не равен рублям')
         if item_id=='interest_paid' and re.search(r'за вычетом.{0,160}(?:капитал|стоимост)|(?:net of|excluding).{0,160}capital',quote,re.I):
             raise ValueError('interest_paid: частичный платёж за вычетом капитализированных процентов нельзя считать полным; пропусти факт и укажи ограничение')
+        if item_id in ('cf_starting_net_profit','cf_starting_operating_profit','cf_starting_profit_before_tax') and cash_flow_profit_base(name)!=item_id:
+            raise ValueError(f'{item_id}: подпись не подтверждает выбранную базу CFO; чистая, операционная и доналоговая прибыль сохраняются раздельно')
         value = parse_amount(raw, row['number_format'])
         if item_id == 'income_tax' and value > 0 and not re.search(r'расход|expense|charge', name, re.I):
             raise ValueError('Положительная нейтральная строка налога не подтверждает расход; проверь налоговый доход')

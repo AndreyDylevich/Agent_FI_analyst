@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "ticker": "MTSS",
+  "reviewer": "Codex: ограниченная проверка годовой основы, 28.11.2026",
+  "reason": "Просмотрена заявленная основа годового выпуска и подпись арендного платежа. Полный анализ изменений политики, пересчёта сравнительной выручки, приобретений/выбытий и определения показателя между годами не завершён. Точная исходная сумма и одинаковая валюта не подтверждают временную сопоставимость; автоматический годовой рост не одобрен.",
+  "decision": "insufficient_data",
+  "scope": "group",
+  "segment_name": null,
+  "item_id": "revenue",
+  "accounting_basis": null,
+  "perimeter_basis": null,
+  "methodology_version": null,
+  "source_context_reviewed": true,
+  "observations": [
+    {
+      "source_id": 68,
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "normalized_value": "703741000000"
+    },
+    {
+      "source_id": 67,
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "normalized_value": "807186000000"
+    }
+  ],
+  "evidence": [
+    {
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 1,
+        "start_line": 7,
+        "end_line": 9
+      }
+    },
+    {
+      "pdf_sha256": "b29c1eae526d930a9b2c8ce8da6749bad296cf0cf1ed6744c88139918b1bc357",
+      "topic": "accounting_policy",
+      "evidence": {
+        "page": 3,
+        "start_line": 21,
+        "end_line": 21
+      }
+    }
+  ]
+}
